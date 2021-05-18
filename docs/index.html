@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="Index, Follow" />
+    <meta charset="UTF-8" />
+    <title>MetaCall Polyglot Runtime</title>
+    <!-- <link rel="preload" as="image" href="assets/preload.svg" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Documentation about MetaCall" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <style>
+      :root {
+        --theme-color: #316ddb;
+        --docsifytabs-border-color: #525252;
+        --docsifytabs-tab-highlight-color: #525252;
+        --docsifytabs-tab-color: #525252;
+        --docsifytabs-tab-color--active: #fff;
+        --docsifytabs-border-px: 2px;
+        --docsifytabs-tab-highlight-px: 37px;
+      }
+    </style>
+
+    <link rel="stylesheet" href="assets/css/vue.css" />
+  </head>
+  <body>
+    <div data-app id="app"></div>
+    <script>
+      window.$docsify = {
+        el: "#app",
+        homepage: "README.md",
+        basePath: "/",
+        name: "MetaCall Polyglot Runtime",
+        logo: "assets/logo-d.svg",
+        // repo: "https://github.com/metacall/core",
+        pagination: {
+          previousText: "Previous",
+          nextText: "Next",
+        },
+        subMaxLevel: 2,
+        tabs: {
+          persist: true,
+          sync: true,
+          theme: "classic",
+          tabComments: true,
+          tabHeadings: true,
+        },
+      };
+    </script>
+  </body>
+
+  <script src="assets/js/docsify.min.js"></script>
+  <script src="assets/js/docsify-copy-code.min.js"></script>
+  <script src="assets/js/docsify-pagination.min.js"></script>
+  <script src="assets/js/prism-bash.min.js"></script>
+  <script src="assets/js/prism-c.min.js"></script>
+  <script src="assets/js/prism-python.min.js"></script>
+  <script src="assets/js/prism-javascript.min.js"></script>
+  <script src="assets/js/prism-typescript.min.js"></script>
+  <script src="assets/js/docsify-tabs.min.js"></script>
+</html>
