@@ -1,6 +1,8 @@
+- [**Home**](README.md)
+
 ---
 
-- [**Core**](README.md)
+- [**Core**](docs.md)
 
 ---
 

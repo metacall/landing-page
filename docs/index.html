@@ -4,12 +4,12 @@
 <head>
   <meta name="robots" content="Index, Follow" />
   <meta charset="UTF-8" />
-  <title>MetaCall Polyglot Runtime</title>
-  <!-- <link rel="preload" as="image" href="assets/preload.svg" /> -->
+  <title>Documentation | MetaCall Polyglot Runtime</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Documentation about MetaCall" />
   <link rel="icon" href="assets/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
 
   <style>
     :root {
@@ -27,7 +27,14 @@
 </head>
 
 <body>
-  <div data-app id="app"></div>
+  <nav class="app-nav no-badge">
+    <ul>
+      <li><a href="http://dashboard.metacall.io" target="_blank" rel="noopener" title="Dashboard">Dashboard</a></li>
+      <li><a href="#/" title="Docs" class="active">Docs</a></li>
+      <li><a href="#/help" title="Help">Help</a></li>
+    </ul>
+  </nav>
+  <div id="app"></div>
   <script>
     window.$docsify = {
       el: "#app",
@@ -39,6 +46,7 @@
         previousText: "Previous",
         nextText: "Next",
       },
+      name: 'MetaCall',
       subMaxLevel: 2,
       tabs: {
         persist: true,
