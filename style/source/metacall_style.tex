@@ -1,0 +1,326 @@
+
+\documentclass{article}
+
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+% File tree packages
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{dirtree}
+
+\newcommand\treeicon[1]{{\color{#1}\rule{2ex}{2ex}}}
+\newcommand{\treefolder}[2]{\treeicon{#1}\ {#2}}
+
+% Source code highlighting packages
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\lstdefinestyle{cpp_lang}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	xleftmargin=\parindent,
+	language=C++,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue!40!black},
+	commentstyle=\itshape\color{green!40!black},
+	identifierstyle=\color{black},
+	stringstyle=\color{red},
+	tabsize=4,
+	numbers=left,
+	numbersep=5pt
+}
+
+\lstset{style=cpp_lang}
+
+\begin{document}
+
+% \input{metacall_style_title.tex}
+
+\title{MetaCall: C/C++ Code Requeriments \& Style Guidelines}
+
+\author{Vicente Eduardo Ferrer Garcia \\ \href{mailto:vic798@gmail.com}{vic798@gmail.com}}
+
+\maketitle
+
+%
+
+\begin{abstract}
+\noindent
+Description of code requeriments and style guidelines for MetaCall.
+\end{abstract}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+% \include{metacall_style_introduction.tex}
+
+\section{Introduction}
+
+
+
+
+%
+
+\newpage
+
+% \include{metacall_style_file_naming.tex}
+
+\section{Files \& Directory Tree}
+
+Project files are always organized in the same structure recursively.
+
+\dirtree{%
+.1 \treefolder{red}{build}.
+.1 \treefolder{red}{cmake}.
+.1 \treefolder{red}{codegeneration}.
+.1 \treefolder{red}{data}.
+.1 \treefolder{red}{deploy}.
+.2 \treefolder{red}{images}.
+.2 \treefolder{red}{packages}.
+.1 \treefolder{red}{docs}.
+%.2 \treefolder{red}{api-docs}.
+.2 \treefolder{red}{manual}.
+.2 \treefolder{red}{style}.
+.1 \treefolder{red}{source}.
+.2 \treefolder{red}{adt}.
+.2 \treefolder{red}{dynlink}.
+.2 \treefolder{red}{examples}.
+.3 \treefolder{red}{metacallcli}.
+.3 \treefolder{red}{metacallgui}.
+.3 \treefolder{red}{metacallnginx}.
+.3 \treefolder{red}{metacallweb}.
+.2 \treefolder{red}{filesystem}.
+.2 \treefolder{red}{loader}.
+.2 \treefolder{red}{log}.
+.2 \treefolder{red}{metacall}.
+.2 \treefolder{red}{loaders}.
+%.3 \treefolder{red}{c_loader}.
+%.3 \treefolder{red}{cs_loader}.
+%.3 \treefolder{red}{js_loader}.
+%.3 \treefolder{red}{jsm_loader}.
+%.3 \treefolder{red}{mock_loader}.
+%.3 \treefolder{red}{py_loader}.
+%.3 \treefolder{red}{rb_loader}.
+.2 \treefolder{red}{ports}.
+%.3 \treefolder{red}{cs_port}.
+%.3 \treefolder{red}{d_port}.
+%.3 \treefolder{red}{go_port}.
+.3 \treefolder{red}{interface}.
+%.3 \treefolder{red}{java_port}.
+%.3 \treefolder{red}{js_port}.
+%.3 \treefolder{red}{lua_port}.
+%.3 \treefolder{red}{node_port}.
+%.3 \treefolder{red}{php_port}.
+%.3 \treefolder{red}{pl_port}.
+%.3 \treefolder{red}{py_port}.
+%.3 \treefolder{red}{rb_port}.
+%.3 \treefolder{red}{r_port}.
+.2 \treefolder{red}{version}.
+.2 \treefolder{red}{format}.
+.2 \treefolder{red}{preprocessor}.
+.2 \treefolder{red}{reflect}.
+.2 \treefolder{red}{scripts}.
+.3 \treefolder{red}{c}.
+.3 \treefolder{red}{csharp}.
+.3 \treefolder{red}{java}.
+.3 \treefolder{red}{javascript}.
+.3 \treefolder{red}{python}.
+.3 \treefolder{red}{ruby}.
+.2 \treefolder{red}{tests}.
+%.3 \treefolder{red}{dyncall_test}.
+%.3 \treefolder{red}{function_test}.
+%.3 \treefolder{red}{hash_map_test}.
+%.3 \treefolder{red}{log_test}.
+%.3 \treefolder{red}{metacall_test}.
+%.3 \treefolder{red}{preprocessor_test}.
+%.3 \treefolder{red}{py_loader_test}.
+%.3 \treefolder{red}{trie_test}.
+.1 \treefolder{red}{web}.
+}
+
+%
+
+\newpage
+
+% \include{metacall_style_file_structure.tex}
+
+\section{Header \& Source Files Structure}
+
+
+
+
+%
+
+\newpage
+
+% \include{metacall_style_variable_naming.tex}
+
+\section{Naming Convention}
+
+\subsection{camelCase vs underscore\_case}
+
+There is no effective reason to choose between \textbf{camelCase} or \textbf{underscore\_case} in
+naming convention. But in order to be aligned with STL, Boost and Bjarne Stroustrup in
+"The C++ Programming Langauge", underscore case must be always used. Upper case letters must be
+avoided always except from comments or template typenames.
+
+% \lstinputlisting[language=C++]{underscore_case.cpp}
+
+\begin{lstlisting}[language=C++,label=underscore_case,caption=Underscore Case Notation]
+/* Use always lower case for variables, classes ... */
+int some_variable = 5;
+
+some_class object;
+
+/* Except from typenames in templates */
+
+template <typename T>
+constexpr T sum(const T & left, const T & right)
+{
+	return (left + right);
+}
+\end{lstlisting}
+
+\subsection{Hungarian Notation}
+
+Hungarian notation is an identifier naming convention in which the name of a variable or function
+indicates its type or intended use.
+
+In any programming language where you can define your own types like C/C++ this becomes useless. If you
+need to determine a constrait against a variable you must define your own type. The compiler and linter
+should warn against a missuse of a variable type instead of the developer by means of the variable name.
+
+By this reason, hungarian notation must be \textbf{avoided} always.
+
+\subsection{Class Members vs Constructors}
+
+In order to avoid shadowing class members with constructor parameters when both are equal, an underscore
+suffix must be placed after each shadowed parameter.
+
+% \lstinputlisting[language=C++]{shadow_class.hpp}
+
+\begin{lstlisting}[language=C++,label=shadow_class_header,caption=Member-Constructor Shadow Class Header]
+#ifndef SHADOW_CLASS_HPP
+#define SHADOW_CLASS_HPP 1
+
+/* -- Headers -- */
+
+#include <shadow/shadow_api.hpp>
+
+/* -- Namespace -- */
+
+namespace metacall_style {
+
+/* -- Class Definitions -- */
+
+/**
+*  @brief
+*    Example of shadow parameters in class constructor
+*/
+SHADOW_API class shadow_class
+{
+	public:
+		/* -- Public Methods -- */
+
+		/**
+		*  @brief
+		*    Shadow class constructor
+		*
+		*  @param[in] a_
+		*    Brief description of @a_ parameter
+		*
+		*  @param[in] b_
+		*    Brief description of @b_ parameter
+		*
+		*  @param[in] c_
+		*    Brief description of @c_ parameter
+		*/
+		shadow_class(int a_, int b_, int c_);
+
+		/**
+		*  @brief
+		*    Shadow class destructor
+		*/
+		~shadow_class(void);
+
+	private:
+		/* -- Private Member Data -- */
+
+		int a;	/**< Brief description of @a member */
+		int b;	/**< Brief description of @b member */
+		int c;	/**< Brief description of @c member */
+};
+
+} /* namespace metacall_style */
+
+#endif /* SHADOW_CLASS_HPP */
+\end{lstlisting}
+
+In order to differenciate constructor arguments from class members an underscore is placed after
+parameter constructor names. By this way shadow problems with namings are avoided and the use of
+class members remains easy and less cryptic.
+
+
+% \lstinputlisting[language=C++]{shadow_class.cpp}
+
+\begin{lstlisting}[language=C++,label=shadow_class_source,caption=Member-Constructor Shadow Class Source]
+/* -- Headers -- */
+
+#include <shadow/shadow_class.hpp>
+
+/* -- Namespace Declarations -- */
+
+using namespace metacall_style;
+
+/* -- Methods -- */
+
+shadow_class::shadow_class(int a_, int b_, int c_) : a(a_), b(b_), c(c_)
+{
+
+}
+
+shadow_class::~shadow_class()
+{
+
+}
+\end{lstlisting}
+
+%
+
+
+\newpage
+
+% \include{metacall_style_indentation.tex}
+
+\section{Indentation \& Brackets}
+
+
+
+
+%
+
+
+\newpage
+
+% \include{metacall_style_comments.tex}
+
+\section{Comments}
+
+
+
+
+%
+
+\end{document}
