@@ -28,7 +28,7 @@ jobs:
           make api-docs
       - name: Generate documentation
         run: |
-          cmake --build ${{github.workspace}}/build --target docs
+          cmake --build ./build --target docs
       
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
