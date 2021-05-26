@@ -26,13 +26,20 @@ jobs:
           mkdir core/build && cd core/build
           cmake -DOPTION_BUILD_DOCS=ON ..
           make api-docs
-      - name: Generate documentation
-        run: |
-          cmake --build ./build --target docs
+      # - name: Generate documentation
+      #   run: |
+      #     cmake --build ./build --target docs
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@v1.1.0
+        with:
+          # Path to Doxyfile
+          doxyfile-path: "docs/Doxyfile" # default is ./Doxyfile
+          # Working directory
+          working-directory: "." # default is .
       
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/docs/html/
+          publish_dir: ./docs
           # force_orphan: true
