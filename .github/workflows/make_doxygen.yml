@@ -5,8 +5,7 @@ on:
   push:
     branches:
       - master
-      - gh-pages
-
+      
 # In that case do the job 'make_and_deploy_doxygen'
 jobs:
   make_and_deploy_doxygen:
@@ -41,5 +40,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./html
           # force_orphan: true
