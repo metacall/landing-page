@@ -39,7 +39,7 @@ jobs:
       - name: Build
         working-directory: ${{github.workspace}}/build
         shell: bash
-        run: cmake --build . --target docs
+        run: cmake --build ${{github.workspace}}/docs --target docs
 
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
