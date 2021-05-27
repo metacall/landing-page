@@ -31,10 +31,10 @@ jobs:
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@v1.1.0
         with:
-          # Path to Doxyfile
-          doxfile-path: "." # default is ./Doxyfile
           # Working directory
           working-directory: "./docs" # default is .
+          # Path to Doxyfile
+          doxfile-path: "./Doxyfile" # default is ./Doxyfile
       
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
