@@ -35,7 +35,15 @@ jobs:
           working-directory: "./docs" # default is .
           # Path to Doxyfile
           doxfile-path: "./Doxyfile" # default is ./Doxyfile
-      
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          directory: "./docs"
+          force: true
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
