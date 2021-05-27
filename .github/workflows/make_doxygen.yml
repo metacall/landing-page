@@ -36,12 +36,21 @@ jobs:
           # Path to Doxyfile
           doxfile-path: "./Doxyfile" # default is ./Doxyfile
 
+      - name: Create local changes
+        run: |
+          ...
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add changes" -a
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-          directory: "./docs"
+          directory: ${{ github.events.inputs.repo }}
           force: true
 
       - name: Deploy to gh-pages
