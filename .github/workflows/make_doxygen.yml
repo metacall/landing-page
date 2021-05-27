@@ -29,9 +29,10 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1.3.1
         with:
           # Path to Doxyfile
-          doxfile-path: "./Doxyfile" # default is ./Doxyfile
+          # doxfile-path: "./Doxyfile" # default is ./Doxyfile
           # Working directory
           working-directory: "./docs" # default is .
+          enable-latex: true
 
       # - name: Build
       #   working-directory: ${{github.workspace}}/build
