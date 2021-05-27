@@ -14,7 +14,7 @@
 
 ---
 
--[API Refference](./docs/html)
+- [API Refference](html)
 
 ---
 
