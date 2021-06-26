@@ -844,7 +844,7 @@ Where `script.js` is a script contained in host folder `$HOME/metacall` that wil
 
 ## 8. License
 
-**METACALL** is licensed under **[Apache License Version 2.0](/LICENSE)**.
+**METACALL** is licensed under **[Apache License Version 2.0](/docs/LICENSE)**.
 
 > Copyright (C) 2016 - 2020 Vicente Eduardo Ferrer Garcia <<vic798@gmail.com>>
 >
