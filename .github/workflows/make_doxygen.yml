@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - gh-pages
 
 # In that case do the job 'make_and_deploy_doxygen'
 jobs:
@@ -25,23 +26,13 @@ jobs:
           mkdir core/build && cd core/build
           cmake -DOPTION_BUILD_DOCS=ON ..
           make api-docs
-      - name: Doxygen Action
-        uses: mattnotmitt/doxygen-action@v1.3.1
-        with:
-          # Working directory
-          working-directory: "./docs" # default is .
-          # Path to Doxyfile
-          doxfile-path: "./Doxyfile" # default is ./Doxyfile
-          # enable-latex: true # for latex files
+      - name: Moving Files
+        run: |
+          mv ./core/build/docs/api-docs/html ./docs/api
 
-      # - name: Build
-      #   working-directory: ${{github.workspace}}/build
-      #   shell: bash
-      #   run: cmake --build ${{github.workspace}}/docs --target docs
-
-      - name: Deploy to gh-pages
+      # Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          force_orphan: true
