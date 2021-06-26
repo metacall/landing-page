@@ -28,11 +28,11 @@ jobs:
           make api-docs
       - name: Moving Files
         run: |
-          mv ./core/build/docs/api-docs ./docs/api
+          mv ./core/build/docs/api-docs/html ./docs/api
 
       # Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./docs
