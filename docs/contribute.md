@@ -8,20 +8,20 @@ MetaCall is a large open-source organization and we have a large number of proje
 
 Here is a table that would help you to find out the currently available projects to contribute to, along with the skills needed and a specific link to their contribution guide:
 
-| Project       | Skills                                       | Repository                                                          | Documentation                         |
-| ------------- | -------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------- |
-| core          | C, C++, Python, Javascript, Typescript, Ruby | [metacall/core](https://github.com/metacall/core)                   | [docs](docs.md)                       |
-| upload        | Typescript, Javascript                       | [metacall/upload](upload)                                           | [upload](upload.md)                   |
-| install       | BASH                                         | [metacall/install](https://github.com/metacall/install)             | [install](install.md)                 |
-| dlang-port    | D                                            | [metacall/dlang-port](https://github.com/metacall/dlang-port)       | [dlang-port](dlang-port.md)           |
-| php-port      | PHP                                          | [metacall/php-port](https://github.com/metacall/php-port)           | [php-port](php-port.md)               |
-| cli           | Docker                                       | [metacall/cli](https://github.com/metacall/cli)                     | [cli](cli.md)                         |
-| guix          | Docker, BASH                                 | [metacall/guix](https://github.com/metacall/guix)                   | [guix](guix.md)                       |
-| distributable | Scheme, Docker, C                            | [metacall/distributable](https://github.com/metacall/distributable) | [distributable](distributable.md)     |
-| scala-port    | Scala                                        | [metacall/scala-port](https://github.com/metacall/scala-port)       | [scala-port](scala-port.md)           |
-| get-started   | Markdown                                     | [metacall/get-started](https://github.com/metacall/get-started)     | [Getting Started](getting-started.md) |
+| Project       | Skills                                       | Repository                                                          | Documentation                               |
+| ------------- | -------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------- |
+| core          | C, C++, Python, Javascript, Typescript, Ruby | [metacall/core](https://github.com/metacall/core)                   | [docs](/docs/docs.md)                       |
+| upload        | Typescript, Javascript                       | [metacall/upload](upload)                                           | [upload](upload.md)                         |
+| install       | BASH                                         | [metacall/install](https://github.com/metacall/install)             | [install](/docs/install.md)                 |
+| dlang-port    | D                                            | [metacall/dlang-port](https://github.com/metacall/dlang-port)       | [dlang-port](/docs/dlang-port.md)           |
+| php-port      | PHP                                          | [metacall/php-port](https://github.com/metacall/php-port)           | [php-port](/docs/php-port.md)               |
+| cli           | Docker                                       | [metacall/cli](https://github.com/metacall/cli)                     | [cli](/docs/cli.md)                         |
+| guix          | Docker, BASH                                 | [metacall/guix](https://github.com/metacall/guix)                   | [guix](/docs/guix.md)                       |
+| distributable | Scheme, Docker, C                            | [metacall/distributable](https://github.com/metacall/distributable) | [distributable](/docs/distributable.md)     |
+| scala-port    | Scala                                        | [metacall/scala-port](https://github.com/metacall/scala-port)       | [scala-port](/docs/scala-port.md)           |
+| get-started   | Markdown                                     | [metacall/get-started](https://github.com/metacall/get-started)     | [Getting Started](/docs/getting-started.md) |
 
-There are multiple ways through which you can contribute, even without knowing programming or technical writing. If you plan to get involved with user experience, support, translation or anything else that sparks your interest, do consider reaching us out on our [community channels](/community).
+There are multiple ways through which you can contribute, even without knowing programming or technical writing. If you plan to get involved with user experience, support, translation or anything else that sparks your interest, do consider reaching us out on our [community channels](/docs/community).
 
 ## Landing your first contribution
 
@@ -49,7 +49,7 @@ Making your first Issue is a holistic experience. It is because making an Issue 
 
 ### Landing your Pull Request
 
-Every Pull Request should have a corresponding Issue, unless and until it’s for a very minor fix. Making a Pull Request is a great experience, but requires specific insights to land up your code on the repository for the very first time. To make sure you land a great contribution, we would request you to follow the our [Git and GitHub workflow](Git-GitHub-Workflow.md) to know about code collaboration with GitHub. If you are not already familiar with Git, we would suggest you to follow the [official Git documentation](https://git-scm.com/doc) to have the basic understanding of the same.
+Every Pull Request should have a corresponding Issue, unless and until it’s for a very minor fix. Making a Pull Request is a great experience, but requires specific insights to land up your code on the repository for the very first time. To make sure you land a great contribution, we would request you to follow the our [Git and GitHub workflow](/docs/Git-GitHub-Workflow.md) to know about code collaboration with GitHub. If you are not already familiar with Git, we would suggest you to follow the [official Git documentation](https://git-scm.com/doc) to have the basic understanding of the same.
 
 Once you have made all the changes corresponding to the Issue you are supposed to work on, please make a commit. Once you have made a commit, go ahead and make a Pull Request. The Pull Request template gives you enough information but here are a few things that you are expected to follow:
 

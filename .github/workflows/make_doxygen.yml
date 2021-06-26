@@ -26,3 +26,13 @@ jobs:
           mkdir core/build && cd core/build
           cmake -DOPTION_BUILD_DOCS=ON ..
           make api-docs
+      - name: Moving Files
+        run: |
+          mv ./core/build/docs/api-docs ./api
+
+      # Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
