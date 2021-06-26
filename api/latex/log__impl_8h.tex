@@ -1,0 +1,116 @@
+\doxysection{log\+\_\+impl.\+h File Reference}
+\label{log__impl_8h}\index{log\_impl.h@{log\_impl.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+aspect.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+handle.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+record.\+h$>$}\newline
+Include dependency graph for log\+\_\+impl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__impl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=119pt]{log__impl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI log\+\_\+aspect\+\_\+interface \textbf{ log\+\_\+impl\+\_\+aspect\+\_\+interface} (enum \textbf{ log\+\_\+aspect\+\_\+id} aspect\+\_\+id)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} \textbf{ log\+\_\+impl\+\_\+create} (const char $\ast$name)
+\item 
+L\+O\+G\+\_\+\+A\+PI void \textbf{ log\+\_\+impl\+\_\+define} (\textbf{ log\+\_\+impl} impl, \textbf{ log\+\_\+aspect} aspect, enum \textbf{ log\+\_\+aspect\+\_\+id} aspect\+\_\+id)
+\item 
+const L\+O\+G\+\_\+\+A\+PI char $\ast$ \textbf{ log\+\_\+impl\+\_\+name} (\textbf{ log\+\_\+impl} impl)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+handle} \textbf{ log\+\_\+impl\+\_\+handle} (\textbf{ log\+\_\+impl} impl)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect} \textbf{ log\+\_\+impl\+\_\+aspect} (\textbf{ log\+\_\+impl} impl, enum \textbf{ log\+\_\+aspect\+\_\+id} aspect\+\_\+id)
+\item 
+L\+O\+G\+\_\+\+A\+PI enum \textbf{ log\+\_\+level\+\_\+id} \textbf{ log\+\_\+impl\+\_\+level} (\textbf{ log\+\_\+impl} impl)
+\item 
+L\+O\+G\+\_\+\+A\+PI void \textbf{ log\+\_\+impl\+\_\+verbosity} (\textbf{ log\+\_\+impl} impl, enum \textbf{ log\+\_\+level\+\_\+id} level)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+impl\+\_\+write} (\textbf{ log\+\_\+impl} impl, const log\+\_\+record\+\_\+ctor record\+\_\+ctor)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+impl\+\_\+clear} (\textbf{ log\+\_\+impl} impl)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+impl\+\_\+destroy} (\textbf{ log\+\_\+impl} impl)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__impl_8h_a843058659cbff8f7006646505da22353}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_aspect\_interface@{log\_impl\_aspect\_interface}}
+\index{log\_impl\_aspect\_interface@{log\_impl\_aspect\_interface}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_aspect\_interface()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+aspect\+\_\+interface log\+\_\+impl\+\_\+aspect\+\_\+interface (\begin{DoxyParamCaption}\item[{enum \textbf{ log\+\_\+aspect\+\_\+id}}]{aspect\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_a686f67a4b1b871caf3ff97a54caa8fea}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_create@{log\_impl\_create}}
+\index{log\_impl\_create@{log\_impl\_create}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_create()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} log\+\_\+impl\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_a3db9ba82cf7e9e9c57a8228b53771bb0}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_define@{log\_impl\_define}}
+\index{log\_impl\_define@{log\_impl\_define}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_define()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void log\+\_\+impl\+\_\+define (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl,  }\item[{\textbf{ log\+\_\+aspect}}]{aspect,  }\item[{enum \textbf{ log\+\_\+aspect\+\_\+id}}]{aspect\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_aa96506700f07d7b05cc36a4718241a1d}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_name@{log\_impl\_name}}
+\index{log\_impl\_name@{log\_impl\_name}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_name()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI char$\ast$ log\+\_\+impl\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_ab2eea066df7fc5c89066a27a1d11a262}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_handle@{log\_impl\_handle}}
+\index{log\_impl\_handle@{log\_impl\_handle}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_handle()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+handle} log\+\_\+impl\+\_\+handle (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_ae1806d6a6264ebb72c0a93576c6b1768}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_aspect@{log\_impl\_aspect}}
+\index{log\_impl\_aspect@{log\_impl\_aspect}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_aspect()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect} log\+\_\+impl\+\_\+aspect (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl,  }\item[{enum \textbf{ log\+\_\+aspect\+\_\+id}}]{aspect\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_ad21f4c75f5e528583403919e0ce8aea1}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_level@{log\_impl\_level}}
+\index{log\_impl\_level@{log\_impl\_level}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_level()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI enum \textbf{ log\+\_\+level\+\_\+id} log\+\_\+impl\+\_\+level (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_a61f7dcc35ebbf3340cc6d35276dee1ee}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_verbosity@{log\_impl\_verbosity}}
+\index{log\_impl\_verbosity@{log\_impl\_verbosity}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_verbosity()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void log\+\_\+impl\+\_\+verbosity (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl,  }\item[{enum \textbf{ log\+\_\+level\+\_\+id}}]{level }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_afc86f2c22bd42a9f11be1bedced846e9}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_write@{log\_impl\_write}}
+\index{log\_impl\_write@{log\_impl\_write}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_write()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+impl\+\_\+write (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl,  }\item[{const log\+\_\+record\+\_\+ctor}]{record\+\_\+ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_a11f795729c83b8316c022ed19a17ccfe}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_clear@{log\_impl\_clear}}
+\index{log\_impl\_clear@{log\_impl\_clear}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_clear()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+impl\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{log__impl_8h_ae1acea809d8010d6be0595984fa1cf09}} 
+\index{log\_impl.h@{log\_impl.h}!log\_impl\_destroy@{log\_impl\_destroy}}
+\index{log\_impl\_destroy@{log\_impl\_destroy}!log\_impl.h@{log\_impl.h}}
+\doxysubsubsection{log\_impl\_destroy()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+impl\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+

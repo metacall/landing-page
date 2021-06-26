@@ -1,0 +1,52 @@
+.TH "format_print.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+format_print.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <format/format_api\&.h>\fP
+.br
+\fC#include <format/format_specifier\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBsnprintf\fP   \fBsnprintf_impl_c89\fP"
+.br
+.ti -1c
+.RI "#define \fBvsnprintf\fP   \fBvsnprintf_impl_c89\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "FORMAT_API int \fBsnprintf_impl_c89\fP (char *s, size_t n, const char *format,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "FORMAT_API int \fBvsnprintf_impl_c89\fP (char *s, size_t n, const char *format, va_list arg)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define snprintf   \fBsnprintf_impl_c89\fP"
+
+.SS "#define vsnprintf   \fBvsnprintf_impl_c89\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "FORMAT_API int snprintf_impl_c89 (char * s, size_t n, const char * format,  \&.\&.\&.)"
+
+.SS "FORMAT_API int vsnprintf_impl_c89 (char * s, size_t n, const char * format, va_list arg)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,9 +1,9 @@
-<div align="center"> 
+<div align="center">
   <a href="https://metacall.io" target="_blank"><img src="https://raw.githubusercontent.com/metacall/core/develop/deploy/images/logo.png" alt="METACALL" style="max-width:100%; margin: 0 auto;" width="80" height="80"></a>
   <h1><b>MetaCall Polyglot Runtime</b></h1>
   <a href="https://metacall.io" {docsify-ignore}>MetaCall.io</a> |
   <a href="/#/README?id=install">Install</a> |
-  <a href="/#/docs">Docs</a>
+  <a href="/#/docs/docs">Docs</a>
 </div>
 <div id="badges" align="center">
   <a href="https://t.me/joinchat/BMSVbBatp0Vi4s5l4VgUgg" alt="Discord">
@@ -45,7 +45,7 @@ sum(3, 4); // 7
 metacall main.js
 ```
 
-**MetaCall** is a extensible, embeddable and interoperable cross-platform polyglot runtime. It supports NodeJS, Vanilla JavaScript, TypeScript, Python, Ruby, C#, Go, C, C++, Rust, D, Cobol [and more](docs.md#_2-language-support).
+**MetaCall** is a extensible, embeddable and interoperable cross-platform polyglot runtime. It supports NodeJS, Vanilla JavaScript, TypeScript, Python, Ruby, C#, Go, C, C++, Rust, D, Cobol [and more](/docs/docs.md#_2-language-support).
 
 ## Install
 
@@ -55,8 +55,8 @@ The easiest way to install **MetaCall** is the following:
 curl -sL https://raw.githubusercontent.com/metacall/install/master/install.sh | sh
 ```
 
-For more information about other install methodologies and platforms or Docker, check the [install documentation](docs.md#_41-installation).
+For more information about other install methodologies and platforms or Docker, check the [install documentation](/docs/docs.md#_41-installation).
 
 ## Examples
 
-You can find a complete [list of examples in the documentation](docs.md#_43-examples). If you are interested in submitting new examples, please [contact us in our chats](community.md#community).
+You can find a complete [list of examples in the documentation](/docs/docs.md#_43-examples). If you are interested in submitting new examples, please [contact us in our chats](/docs/community.md#community).

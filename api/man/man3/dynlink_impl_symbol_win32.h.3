@@ -1,0 +1,60 @@
+.TH "dynlink_impl_symbol_win32.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dynlink_impl_symbol_win32.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <dynlink/dynlink_api\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_concatenation\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDYNLINK_SYMBOL_PREFIX\fP"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_SYMBOL_EXPORT\fP(name)"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_SYMBOL_GET\fP(name)   name"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void(* \fBdynlink_symbol_addr_win32\fP) (void)"
+.br
+.ti -1c
+.RI "typedef \fBdynlink_symbol_addr_win32\fP \fBdynlink_symbol_addr\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DYNLINK_SYMBOL_PREFIX"
+
+.SS "#define DYNLINK_SYMBOL_EXPORT(name)"
+\fBValue:\fP
+.PP
+.nf
+    DYNLINK_NO_EXPORT struct        \
+    {                               \
+        char name;                  \
+    } PREPROCESSOR_CONCAT(dynlink_no_export_, name)
+.fi
+.SS "#define DYNLINK_SYMBOL_GET(name)   name"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void(* dynlink_symbol_addr_win32) (void)"
+
+.SS "typedef \fBdynlink_symbol_addr_win32\fP \fBdynlink_symbol_addr\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

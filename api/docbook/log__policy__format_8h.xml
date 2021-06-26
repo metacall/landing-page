@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__policy__format_8h">
+<title>log_policy_format.h File Reference</title>
+<indexterm><primary>log_policy_format.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_policy.h&gt;
+#include &lt;log/log_policy_format_binary.h&gt;
+#include &lt;log/log_policy_format_custom.h&gt;
+#include &lt;log/log_policy_format_text.h&gt;
+#include &lt;log/log_record.h&gt;
+</programlisting>Include dependency graph for log_policy_format.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__format_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__format_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structlog__policy__format__impl__type">log_policy_format_impl</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef size_t(* <link linkend="_log__policy__format_8h_1ad06077761fba85b63f827853decbf25e">log_policy_format_size</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>)</para>
+</listitem>
+            <listitem><para>typedef size_t(* <link linkend="_log__policy__format_8h_1a87302092d0188a230b5a8dddba1ab79b">log_policy_format_serialize</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>, void *, const size_t)</para>
+</listitem>
+            <listitem><para>typedef size_t(* <link linkend="_log__policy__format_8h_1a1b91e216b55c697a6b59c540d507999b">log_policy_format_deserialize</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>, const void *, const size_t)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eb">log_policy_format_id</link> { <link linkend="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636ebad4bfb6095785124149165a116a287635">LOG_POLICY_FORMAT_BINARY</link> = 0x00, 
+<link linkend="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eba938cec0dd3f640455e8edda7bfe50356">LOG_POLICY_FORMAT_TEXT</link> = 0x01, 
+<link linkend="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eba6256740be1ad8b828ff897a3bccdc84e">LOG_POLICY_FORMAT_CUSTOM</link> = 0x02, 
+<link linkend="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eba106ccc383a38891c4b9cc866b9ef967f">LOG_POLICY_FORMAT_SIZE</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API log_policy_interface <link linkend="_log__policy__format_8h_1a44e9ed63661dd5f1a32909630de81968">log_policy_format</link> (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_format_id)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__format_8h_1ad95c15ab087dc24b00de101d724462c1">log_policy_format_binary</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__format_8h_1a056c9fa86da3089f8e52955a37e95271">log_policy_format_text</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__format_8h_1a5d7ec06b267ffd3c687b3ab3d894d7aa">log_policy_format_text_flags</link> (unsigned int flags)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__format_8h_1a8b222ae0ba2e8c1062a7a2824142f7f3">log_policy_format_custom</link> (void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>, <link linkend="_log__policy__format__custom_8h_1a719a0c26ebdb7eea45b16a67ebe30243">log_policy_format_custom_size_ptr</link> format_size, <link linkend="_log__policy__format__custom_8h_1a54d4075733047339a7252d890e452f22">log_policy_format_custom_serialize_ptr</link> format_serialize, <link linkend="_log__policy__format__custom_8h_1a832db9264c0a4a03ff8ebe564450a834">log_policy_format_custom_deserialize_ptr</link> format_deserialize)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__policy__format_8h_1ad06077761fba85b63f827853decbf25e"/>    <section>
+    <title>log_policy_format_size</title>
+<indexterm><primary>log_policy_format_size</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_size</secondary></indexterm>
+<para><computeroutput>typedef size_t(* log_policy_format_size) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>)</computeroutput></para>    </section><anchor xml:id="_log__policy__format_8h_1a87302092d0188a230b5a8dddba1ab79b"/>    <section>
+    <title>log_policy_format_serialize</title>
+<indexterm><primary>log_policy_format_serialize</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_serialize</secondary></indexterm>
+<para><computeroutput>typedef size_t(* log_policy_format_serialize) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>, void *, const size_t)</computeroutput></para>    </section><anchor xml:id="_log__policy__format_8h_1a1b91e216b55c697a6b59c540d507999b"/>    <section>
+    <title>log_policy_format_deserialize</title>
+<indexterm><primary>log_policy_format_deserialize</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_deserialize</secondary></indexterm>
+<para><computeroutput>typedef size_t(* log_policy_format_deserialize) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>, const void *, const size_t)</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eb"/>    <section>
+    <title>log_policy_format_id</title>
+<indexterm><primary>log_policy_format_id</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eb">log_policy_format_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LOG_POLICY_FORMAT_BINARY</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>LOG_POLICY_FORMAT_BINARY</secondary></indexterm>
+<anchor xml:id="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636ebad4bfb6095785124149165a116a287635"/>LOG_POLICY_FORMAT_BINARY</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_FORMAT_TEXT</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>LOG_POLICY_FORMAT_TEXT</secondary></indexterm>
+<anchor xml:id="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eba938cec0dd3f640455e8edda7bfe50356"/>LOG_POLICY_FORMAT_TEXT</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_FORMAT_CUSTOM</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>LOG_POLICY_FORMAT_CUSTOM</secondary></indexterm>
+<anchor xml:id="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eba6256740be1ad8b828ff897a3bccdc84e"/>LOG_POLICY_FORMAT_CUSTOM</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_FORMAT_SIZE</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>LOG_POLICY_FORMAT_SIZE</secondary></indexterm>
+<anchor xml:id="_log__policy__format_8h_1aa9667a023d6866f32f0a15e8cea636eba106ccc383a38891c4b9cc866b9ef967f"/>LOG_POLICY_FORMAT_SIZE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__policy__format_8h_1a44e9ed63661dd5f1a32909630de81968"/>    <section>
+    <title>log_policy_format()</title>
+<indexterm><primary>log_policy_format</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format</secondary></indexterm>
+<para><computeroutput>LOG_API log_policy_interface log_policy_format (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_format_id)</computeroutput></para>    </section><anchor xml:id="_log__policy__format_8h_1ad95c15ab087dc24b00de101d724462c1"/>    <section>
+    <title>log_policy_format_binary()</title>
+<indexterm><primary>log_policy_format_binary</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_binary</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_format_binary (void )</computeroutput></para>    </section><anchor xml:id="_log__policy__format_8h_1a056c9fa86da3089f8e52955a37e95271"/>    <section>
+    <title>log_policy_format_text()</title>
+<indexterm><primary>log_policy_format_text</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_text</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_format_text (void )</computeroutput></para>    </section><anchor xml:id="_log__policy__format_8h_1a5d7ec06b267ffd3c687b3ab3d894d7aa"/>    <section>
+    <title>log_policy_format_text_flags()</title>
+<indexterm><primary>log_policy_format_text_flags</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_text_flags</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_format_text_flags (unsigned int flags)</computeroutput></para>    </section><anchor xml:id="_log__policy__format_8h_1a8b222ae0ba2e8c1062a7a2824142f7f3"/>    <section>
+    <title>log_policy_format_custom()</title>
+<indexterm><primary>log_policy_format_custom</primary><secondary>log_policy_format.h</secondary></indexterm>
+<indexterm><primary>log_policy_format.h</primary><secondary>log_policy_format_custom</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_format_custom (void * context, <link linkend="_log__policy__format__custom_8h_1a719a0c26ebdb7eea45b16a67ebe30243">log_policy_format_custom_size_ptr</link> format_size, <link linkend="_log__policy__format__custom_8h_1a54d4075733047339a7252d890e452f22">log_policy_format_custom_serialize_ptr</link> format_serialize, <link linkend="_log__policy__format__custom_8h_1a832db9264c0a4a03ff8ebe564450a834">log_policy_format_custom_deserialize_ptr</link> format_deserialize)</computeroutput></para></section>
+</section>
+</section>

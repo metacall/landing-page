@@ -1,0 +1,66 @@
+.TH "reflect_value_type_promotion.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_value_type_promotion.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+\fC#include <reflect/reflect_type_id\&.h>\fP
+.br
+\fC#include <reflect/reflect_value\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBvalue_type_promotion_integer\fP (\fBvalue\fP v, \fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBvalue_type_promotion_decimal\fP (\fBvalue\fP v, \fBtype_id\fP id)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBvalue\fP value_type_promotion_integer (\fBvalue\fP v, \fBtype_id\fP id)"
+
+.PP
+Promotes a integer value @v to new type @id\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.br
+\fIid\fP New type id of value to be promoted
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Promoted value if a valid promotion, or @v if value is already promoted, null otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API \fBvalue\fP value_type_promotion_decimal (\fBvalue\fP v, \fBtype_id\fP id)"
+
+.PP
+Promotes a decimal value @v to new type @id\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.br
+\fIid\fP New type id of value to be promoted
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Promoted value if a valid promotion, or @v if value is already promoted, null otherwhise 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

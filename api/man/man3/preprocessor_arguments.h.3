@@ -1,0 +1,138 @@
+.TH "preprocessor_arguments.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+preprocessor_arguments.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <preprocessor/preprocessor_api\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_arithmetic\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_boolean\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_comma\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_concatenation\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_empty\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_if\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_tuple\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_SIZE\fP   64"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_COUNT_SEQ_IMPL\fP()"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_COMMA_SEQ_IMPL\fP()"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_N_IMPL\fP(_1,  _2,  _3,  _4,  _5,  _6,  _7,  _8,  _9,  _10,  _11,  _12,  _13,  _14,  _15,  _16,  _17,  _18,  _19,  _20,  _21,  _22,  _23,  _24,  _25,  _26,  _27,  _28,  _29,  _30,  _31,  _32,  _33,  _34,  _35,  _36,  _37,  _38,  _39,  _40,  _41,  _42,  _43,  _44,  _45,  _46,  _47,  _48,  _49,  _50,  _51,  _52,  _53,  _54,  _55,  _56,  _57,  _58,  _59,  _60,  _61,  _62,  _63,  N, \&.\&.\&.)   N"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_FIRST\fP(first, \&.\&.\&.)   first"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_FIRST_REMOVE\fP(first, \&.\&.\&.)   __VA_ARGS__"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_SECOND\fP(first,  second, \&.\&.\&.)   second"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_SECOND_REMOVE\fP(first,  second, \&.\&.\&.)   first, __VA_ARGS__"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_NOT_EMPTY_IMPL\fP(\&.\&.\&.)   \fBPREPROCESSOR_ARGS_EMPTY\fP(__VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_NOT_EMPTY\fP(\&.\&.\&.)   \fBPREPROCESSOR_NOT\fP(\fBPREPROCESSOR_ARGS_EMPTY\fP(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_EMPTY_CASE_IMPL_0001\fP   ,"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_EMPTY_CASE\fP(_0,  _1,  _2,  _3,  _4)   _0 ## _1 ## _2 ## _3 ## _4"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_EMPTY_IMPL_I\fP(_0,  _1,  _2,  _3)   PREPROCESSOR_ARGS_COMMA(\fBPREPROCESSOR_ARGS_EMPTY_CASE\fP(PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_, _0, _1, _2, _3))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_EMPTY_IMPL\fP(_0,  _1,  _2,  _3)   \fBPREPROCESSOR_ARGS_EMPTY_IMPL_I\fP(_0, _1, _2, _3)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_ARGS_EMPTY\fP(\&.\&.\&.)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PREPROCESSOR_ARGS_SIZE   64"
+
+.SS "#define PREPROCESSOR_ARGS_COUNT_SEQ_IMPL()"
+\fBValue:\fP
+.PP
+.nf
+  63, 62, 61, 60, \
+    59, 58, 57, 56, 55, 54, 53, 52, 51, 50, \
+    49, 48, 47, 46, 45, 44, 43, 42, 41, 40, \
+    39, 38, 37, 36, 35, 34, 33, 32, 31, 30, \
+    29, 28, 27, 26, 25, 24, 23, 22, 21, 20, \
+    19, 18, 17, 16, 15, 14, 13, 12, 11, 10, \
+    9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+.fi
+.SS "#define PREPROCESSOR_ARGS_COMMA_SEQ_IMPL()"
+\fBValue:\fP
+.PP
+.nf
+  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, \
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, \
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, \
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, \
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, \
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, \
+    1, 1, 0
+.fi
+.SS "#define PREPROCESSOR_ARGS_N_IMPL(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16, _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, _28, _29, _30, _31, _32, _33, _34, _35, _36, _37, _38, _39, _40, _41, _42, _43, _44, _45, _46, _47, _48, _49, _50, _51, _52, _53, _54, _55, _56, _57, _58, _59, _60, _61, _62, _63, N,  \&.\&.\&.)   N"
+
+.SS "#define PREPROCESSOR_ARGS_FIRST(first,  \&.\&.\&.)   first"
+
+.SS "#define PREPROCESSOR_ARGS_FIRST_REMOVE(first,  \&.\&.\&.)   __VA_ARGS__"
+
+.SS "#define PREPROCESSOR_ARGS_SECOND(first, second,  \&.\&.\&.)   second"
+
+.SS "#define PREPROCESSOR_ARGS_SECOND_REMOVE(first, second,  \&.\&.\&.)   first, __VA_ARGS__"
+
+.SS "#define PREPROCESSOR_ARGS_NOT_EMPTY_IMPL( \&.\&.\&.)   \fBPREPROCESSOR_ARGS_EMPTY\fP(__VA_ARGS__)"
+
+.SS "#define PREPROCESSOR_ARGS_NOT_EMPTY( \&.\&.\&.)   \fBPREPROCESSOR_NOT\fP(\fBPREPROCESSOR_ARGS_EMPTY\fP(__VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_0001   ,"
+
+.SS "#define PREPROCESSOR_ARGS_EMPTY_CASE(_0, _1, _2, _3, _4)   _0 ## _1 ## _2 ## _3 ## _4"
+
+.SS "#define PREPROCESSOR_ARGS_EMPTY_IMPL_I(_0, _1, _2, _3)   PREPROCESSOR_ARGS_COMMA(\fBPREPROCESSOR_ARGS_EMPTY_CASE\fP(PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_, _0, _1, _2, _3))"
+
+.SS "#define PREPROCESSOR_ARGS_EMPTY_IMPL(_0, _1, _2, _3)   \fBPREPROCESSOR_ARGS_EMPTY_IMPL_I\fP(_0, _1, _2, _3)"
+
+.SS "#define PREPROCESSOR_ARGS_EMPTY( \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+    PREPROCESSOR_ARGS_EMPTY_IMPL( \
+        PREPROCESSOR_ARGS_COMMA(__VA_ARGS__), \
+        PREPROCESSOR_ARGS_COMMA(PREPROCESSOR_COMMA_VARIADIC __VA_ARGS__), \
+        PREPROCESSOR_ARGS_COMMA(__VA_ARGS__ ()), \
+        PREPROCESSOR_ARGS_COMMA(PREPROCESSOR_COMMA_VARIADIC __VA_ARGS__ ()) \
+    )
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

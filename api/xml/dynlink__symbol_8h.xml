@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dynlink__symbol_8h" kind="file" language="C++">
+    <compoundname>dynlink_symbol.h</compoundname>
+    <includes local="no">dynlink/dynlink_api.h</includes>
+    <includes refid="dynlink__type_8h" local="no">dynlink/dynlink_type.h</includes>
+    <includedby refid="dynlink_8h" local="no">dynlink.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dynlink_symbol.h</label>
+        <link refid="dynlink__symbol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dynlink/dynlink_api.h</label>
+      </node>
+      <node id="3">
+        <label>dynlink/dynlink_type.h</label>
+        <link refid="dynlink__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>loader_impl_export.h</label>
+        <link refid="loader__impl__export_8h"/>
+      </node>
+      <node id="2">
+        <label>dynlink.h</label>
+        <link refid="dynlink_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>loader_export.h</label>
+        <link refid="loader__export_8h"/>
+      </node>
+      <node id="1">
+        <label>dynlink_symbol.h</label>
+        <link refid="dynlink__symbol_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dynlink__symbol_8h_1a471330a16aaba283b9ae4f9372aca897" prot="public" static="no">
+        <name>DYNLINK_SYMBOL_NAME_SIZE</name>
+        <initializer>0xFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_symbol.h" line="36" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_symbol.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dynlink__symbol_8h_1af617edaae89009a3411e00f0b24f6f28" prot="public" static="no">
+        <type>char</type>
+        <definition>typedef char dynlink_symbol_name_man[DYNLINK_SYMBOL_NAME_SIZE]</definition>
+        <argsstring>[DYNLINK_SYMBOL_NAME_SIZE]</argsstring>
+        <name>dynlink_symbol_name_man</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_symbol.h" line="40" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_symbol.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dynlink__symbol_8h_1a8d837f4ac06c64c5d88fd54ea3370ab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DYNLINK_API int</type>
+        <definition>DYNLINK_API int dynlink_symbol_name_mangle</definition>
+        <argsstring>(dynlink_symbol_name symbol_name, dynlink_symbol_name_man symbol_mangled)</argsstring>
+        <name>dynlink_symbol_name_mangle</name>
+        <param>
+          <type><ref refid="dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41" kindref="member">dynlink_symbol_name</ref></type>
+          <declname>symbol_name</declname>
+        </param>
+        <param>
+          <type><ref refid="dynlink__symbol_8h_1af617edaae89009a3411e00f0b24f6f28" kindref="member">dynlink_symbol_name_man</ref></type>
+          <declname>symbol_mangled</declname>
+        </param>
+        <briefdescription>
+<para>Get convert a symbol to name mangled for cross-platform dynamic loading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">symbol_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to name of the of dynamically linked shared object symbol</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">symbol_mangled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to mangled name of the of dynamically linked shared object symbol</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns zero if @symbol_name was correctly mangled </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_symbol.h" line="57" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_symbol.h" declline="57" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Dynamic<sp/>Link<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>dynamic<sp/>loading<sp/>and<sp/>linking<sp/>shared<sp/>objects<sp/>at<sp/>run-time.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DYNLINK_SYMBOL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_SYMBOL_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__type_8h" kindref="compound">dynlink/dynlink_type.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="dynlink__symbol_8h_1a471330a16aaba283b9ae4f9372aca897" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_SYMBOL_NAME_SIZE<sp/>0xFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="dynlink__symbol_8h_1af617edaae89009a3411e00f0b24f6f28" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="dynlink__symbol_8h_1af617edaae89009a3411e00f0b24f6f28" kindref="member">dynlink_symbol_name_man</ref>[<ref refid="dynlink__symbol_8h_1a471330a16aaba283b9ae4f9372aca897" kindref="member">DYNLINK_SYMBOL_NAME_SIZE</ref>];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>convert<sp/>a<sp/>symbol<sp/>to<sp/>name<sp/>mangled<sp/>for<sp/>cross-platform<sp/>dynamic<sp/>loading</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>symbol_name</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>name<sp/>of<sp/>the<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>symbol</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>symbol_mangled</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>mangled<sp/>name<sp/>of<sp/>the<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>symbol</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>if<sp/>@symbol_name<sp/>was<sp/>correctly<sp/>mangled</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dynlink__symbol_8h_1a8d837f4ac06c64c5d88fd54ea3370ab0" kindref="member">dynlink_symbol_name_mangle</ref>(<ref refid="dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41" kindref="member">dynlink_symbol_name</ref><sp/>symbol_name,<sp/><ref refid="dynlink__symbol_8h_1af617edaae89009a3411e00f0b24f6f28" kindref="member">dynlink_symbol_name_man</ref><sp/>symbol_mangled);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DYNLINK_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_symbol.h"/>
+  </compounddef>
+</doxygen>

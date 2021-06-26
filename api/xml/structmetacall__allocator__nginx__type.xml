@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmetacall__allocator__nginx__type" kind="struct" language="C++" prot="public">
+    <compoundname>metacall_allocator_nginx_type</compoundname>
+    <includes refid="metacall__allocator_8h" local="no">/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmetacall__allocator__nginx__type_1a4233f7c5d85faf3b8f14611b06670972" prot="public" static="no" mutable="no">
+        <type><ref refid="metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a" kindref="member">ngx_pool_t</ref> *</type>
+        <definition>ngx_pool_t* metacall_allocator_nginx::pool</definition>
+        <argsstring></argsstring>
+        <name>pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" line="68" column="12" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmetacall__allocator__nginx__type_1a6258023c8829aa98f76b3394ec7e94d5" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* metacall_allocator_nginx::palloc) (ngx_pool_t *, size_t)</definition>
+        <argsstring>)(ngx_pool_t *, size_t)</argsstring>
+        <name>palloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" line="69" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmetacall__allocator__nginx__type_1aa3db3d99ecc61b504646c8876f195096" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* metacall_allocator_nginx::pcopy) (void *, const void *, size_t)</definition>
+        <argsstring>)(void *, const void *, size_t)</argsstring>
+        <name>pcopy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" line="70" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmetacall__allocator__nginx__type_1aca3421d413a7ba4ac811d7e36ede192e" prot="public" static="no" mutable="no">
+        <type>intptr_t(*</type>
+        <definition>intptr_t(* metacall_allocator_nginx::pfree) (ngx_pool_t *, void *)</definition>
+        <argsstring>)(ngx_pool_t *, void *)</argsstring>
+        <name>pfree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" line="71" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>void *(*)(void *, const void *, size_t)</label>
+      </node>
+      <node id="4">
+        <label>intptr_t(*)(ngx_pool_t *, void *)</label>
+      </node>
+      <node id="1">
+        <label>metacall_allocator_nginx</label>
+        <link refid="structmetacall__allocator__nginx__type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+palloc</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+pcopy</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+pfree</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+pool</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>void *(*)(ngx_pool_t *, size_t)</label>
+      </node>
+      <node id="5">
+        <label>ngx_pool_t *</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" line="67" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" bodystart="66" bodyend="72"/>
+    <listofallmembers>
+      <member refid="structmetacall__allocator__nginx__type_1a6258023c8829aa98f76b3394ec7e94d5" prot="public" virt="non-virtual"><scope>metacall_allocator_nginx_type</scope><name>palloc</name></member>
+      <member refid="structmetacall__allocator__nginx__type_1aa3db3d99ecc61b504646c8876f195096" prot="public" virt="non-virtual"><scope>metacall_allocator_nginx_type</scope><name>pcopy</name></member>
+      <member refid="structmetacall__allocator__nginx__type_1aca3421d413a7ba4ac811d7e36ede192e" prot="public" virt="non-virtual"><scope>metacall_allocator_nginx_type</scope><name>pfree</name></member>
+      <member refid="structmetacall__allocator__nginx__type_1a4233f7c5d85faf3b8f14611b06670972" prot="public" virt="non-virtual"><scope>metacall_allocator_nginx_type</scope><name>pool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

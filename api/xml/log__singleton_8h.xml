@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__singleton_8h" kind="file" language="C++">
+    <compoundname>log_singleton.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes refid="log__impl_8h" local="no">log/log_impl.h</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>stdarg.h</label>
+      </node>
+      <node id="3">
+        <label>log/log_impl.h</label>
+        <link refid="log__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>log/log_record.h</label>
+        <link refid="log__record_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="9">
+        <label>threading/threading_thread_id.h</label>
+      </node>
+      <node id="6">
+        <label>log/log_handle.h</label>
+        <link refid="log__handle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>log/log_aspect.h</label>
+        <link refid="log__aspect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>log/log_level.h</label>
+        <link refid="log__level_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>log_singleton.h</label>
+        <link refid="log__singleton_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__singleton_8h_1ac3d8e4a9fd56bf4cb322cc30fa9dc113" prot="public" static="no">
+        <type>struct log_singleton_map_bucket_type *</type>
+        <definition>typedef struct log_singleton_map_bucket_type* log_singleton_map_bucket</definition>
+        <argsstring></argsstring>
+        <name>log_singleton_map_bucket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="30" column="44" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__singleton_8h_1add5876ef6a8095fae819a849b702e62c" prot="public" static="no">
+        <type>struct log_singleton_type *</type>
+        <definition>typedef struct log_singleton_type* log_singleton</definition>
+        <argsstring></argsstring>
+        <name>log_singleton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="32" column="33" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__singleton_8h_1a342cce86e9e85dd1787718f17be9b039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__singleton_8h_1add5876ef6a8095fae819a849b702e62c" kindref="member">log_singleton</ref> *</type>
+        <definition>LOG_API log_singleton* log_singleton_instance</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_singleton_instance</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="36" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" declline="36" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="log__singleton_8h_1a13a966f52d5d743e18aac3b144c4e145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API void</type>
+        <definition>LOG_API void log_singleton_initialize</definition>
+        <argsstring>(log_singleton singleton)</argsstring>
+        <name>log_singleton_initialize</name>
+        <param>
+          <type><ref refid="log__singleton_8h_1add5876ef6a8095fae819a849b702e62c" kindref="member">log_singleton</ref></type>
+          <declname>singleton</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="38" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" declline="38" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="log__singleton_8h_1ae1ebdb863fca82b603160639c060d44c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API size_t</type>
+        <definition>LOG_API size_t log_singleton_size</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_singleton_size</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="40" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" declline="40" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="log__singleton_8h_1a0db5de81c163acaca46a8732eb6bc07f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_singleton_insert</definition>
+        <argsstring>(const char *name, log_impl impl)</argsstring>
+        <name>log_singleton_insert</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="42" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" declline="42" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__singleton_8h_1aa36402f20ac7cf37758c76d032bf8d9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref></type>
+        <definition>LOG_API log_impl log_singleton_get</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>log_singleton_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="44" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" declline="44" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="log__singleton_8h_1a6bb941872fae7ab057cb8b59edf5d43e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref></type>
+        <definition>LOG_API log_impl log_singleton_remove</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>log_singleton_remove</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="46" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" declline="46" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="log__singleton_8h_1a0fa5476886446fa42a9494ce6cc9304a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API void</type>
+        <definition>LOG_API void log_singleton_clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_singleton_clear</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" line="48" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h" declline="48" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_SINGLETON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_SINGLETON_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__impl_8h" kindref="compound">log/log_impl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_singleton_map_bucket_type;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_singleton_type;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="log__singleton_8h_1ac3d8e4a9fd56bf4cb322cc30fa9dc113" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_singleton_map_bucket_type<sp/>*<ref refid="log__singleton_8h_1ac3d8e4a9fd56bf4cb322cc30fa9dc113" kindref="member">log_singleton_map_bucket</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="log__singleton_8h_1add5876ef6a8095fae819a849b702e62c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_singleton_type<sp/>*<ref refid="log__singleton_8h_1add5876ef6a8095fae819a849b702e62c" kindref="member">log_singleton</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">LOG_API<sp/><ref refid="log__singleton_8h_1add5876ef6a8095fae819a849b702e62c" kindref="member">log_singleton</ref><sp/>*<ref refid="log__singleton_8h_1a342cce86e9e85dd1787718f17be9b039" kindref="member">log_singleton_instance</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__singleton_8h_1a13a966f52d5d743e18aac3b144c4e145" kindref="member">log_singleton_initialize</ref>(<ref refid="log__singleton_8h_1add5876ef6a8095fae819a849b702e62c" kindref="member">log_singleton</ref><sp/>singleton);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__singleton_8h_1ae1ebdb863fca82b603160639c060d44c" kindref="member">log_singleton_size</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__singleton_8h_1a0db5de81c163acaca46a8732eb6bc07f" kindref="member">log_singleton_insert</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/><ref refid="log__singleton_8h_1aa36402f20ac7cf37758c76d032bf8d9d" kindref="member">log_singleton_get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/><ref refid="log__singleton_8h_1a6bb941872fae7ab057cb8b59edf5d43e" kindref="member">log_singleton_remove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__singleton_8h_1a0fa5476886446fa42a9494ce6cc9304a" kindref="member">log_singleton_clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_SINGLETON_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_singleton.h"/>
+  </compounddef>
+</doxygen>

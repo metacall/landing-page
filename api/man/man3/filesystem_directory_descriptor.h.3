@@ -1,0 +1,136 @@
+.TH "filesystem_directory_descriptor.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+filesystem_directory_descriptor.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <filesystem/filesystem_api\&.h>\fP
+.br
+\fC#include <adt/adt_vector\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDIRECTORY_DESCRIPTOR_PATH_SIZE\fP   0x0200"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct directory_descriptor_type * \fBdirectory_descriptor\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "FILESYSTEM_API \fBdirectory_descriptor\fP \fBdirectory_descriptor_create\fP (\fBdirectory_descriptor\fP parent, const char *path)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API \fBdirectory_descriptor\fP \fBdirectory_descriptor_parent\fP (\fBdirectory_descriptor\fP d)"
+.br
+.ti -1c
+.RI "const FILESYSTEM_API char * \fBdirectory_descriptor_path\fP (\fBdirectory_descriptor\fP d)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API \fBvector\fP \fBdirectory_descriptor_files\fP (\fBdirectory_descriptor\fP d)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API void \fBdirectory_descriptor_destroy\fP (\fBdirectory_descriptor\fP d)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DIRECTORY_DESCRIPTOR_PATH_SIZE   0x0200"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct directory_descriptor_type* \fBdirectory_descriptor\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "FILESYSTEM_API \fBdirectory_descriptor\fP directory_descriptor_create (\fBdirectory_descriptor\fP parent, const char * path)"
+
+.PP
+Create a directory descriptor from specified path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent directory if any
+.br
+\fIpath\fP The path of the directory
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the directory descriptor if success, null pointer otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API \fBdirectory_descriptor\fP directory_descriptor_parent (\fBdirectory_descriptor\fP d)"
+
+.PP
+Get the parent directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Directory descriptor pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the parent directory descriptor 
+.RE
+.PP
+
+.SS "const FILESYSTEM_API char* directory_descriptor_path (\fBdirectory_descriptor\fP d)"
+
+.PP
+Get the path where directory points\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Directory descriptor pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A constant string pointer to the path of @d 
+.RE
+.PP
+
+.SS "FILESYSTEM_API \fBvector\fP directory_descriptor_files (\fBdirectory_descriptor\fP d)"
+
+.PP
+Get the files contained in a directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Directory descriptor pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A vector of files contained in directory 
+.RE
+.PP
+
+.SS "FILESYSTEM_API void directory_descriptor_destroy (\fBdirectory_descriptor\fP d)"
+
+.PP
+Destroy a directory from memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Directory descriptor pointer 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_preprocessor__for_8h">
+<title>preprocessor_for.h File Reference</title>
+<indexterm><primary>preprocessor_for.h</primary></indexterm>
+<programlisting>#include &lt;preprocessor/preprocessor_api.h&gt;
+#include &lt;preprocessor/preprocessor_arguments.h&gt;
+#include &lt;preprocessor/preprocessor_tuple.h&gt;
+</programlisting>Include dependency graph for preprocessor_for.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__for_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__for_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a328d3403ddb6cc2ed0488e4ca6ca6c3c">PREPROCESSOR_FOR_SIZE</link>   64</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(expr)   expr</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aadf9d9944c296404f0cd4a289d67db50">PREPROCESSOR_FOR_EACH_IMPL_0</link>(expr, ...)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aca03ffdf276bec2453ce6d3ea7f9c0cd">PREPROCESSOR_FOR_EACH_IMPL_1</link>(expr,  element, ...)   expr(element)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a5b0356a513b315a10777e1363369d67c">PREPROCESSOR_FOR_EACH_IMPL_2</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aca03ffdf276bec2453ce6d3ea7f9c0cd">PREPROCESSOR_FOR_EACH_IMPL_1</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aa12cdcde28749f2de2c6259df0e14e6b">PREPROCESSOR_FOR_EACH_IMPL_3</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a5b0356a513b315a10777e1363369d67c">PREPROCESSOR_FOR_EACH_IMPL_2</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a3ecad957ea754b8ff5eea245fea83de9">PREPROCESSOR_FOR_EACH_IMPL_4</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa12cdcde28749f2de2c6259df0e14e6b">PREPROCESSOR_FOR_EACH_IMPL_3</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a7191f3b5675bae2d9dbe32adfc3ed1ba">PREPROCESSOR_FOR_EACH_IMPL_5</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a3ecad957ea754b8ff5eea245fea83de9">PREPROCESSOR_FOR_EACH_IMPL_4</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ababe2f5c3d804f2e0973b0be58b43ee7">PREPROCESSOR_FOR_EACH_IMPL_6</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a7191f3b5675bae2d9dbe32adfc3ed1ba">PREPROCESSOR_FOR_EACH_IMPL_5</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1afdbffae01589b8883303b0ae46917c76">PREPROCESSOR_FOR_EACH_IMPL_7</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ababe2f5c3d804f2e0973b0be58b43ee7">PREPROCESSOR_FOR_EACH_IMPL_6</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a79da7fb744661fca993580fcb75a4abb">PREPROCESSOR_FOR_EACH_IMPL_8</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1afdbffae01589b8883303b0ae46917c76">PREPROCESSOR_FOR_EACH_IMPL_7</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aab2a6faef2d212c5b941e3ba762a5939">PREPROCESSOR_FOR_EACH_IMPL_9</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a79da7fb744661fca993580fcb75a4abb">PREPROCESSOR_FOR_EACH_IMPL_8</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a3993943864d162124541b5ae930227f6">PREPROCESSOR_FOR_EACH_IMPL_10</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aab2a6faef2d212c5b941e3ba762a5939">PREPROCESSOR_FOR_EACH_IMPL_9</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ad130c4b140663994f7df4e9df9a732f4">PREPROCESSOR_FOR_EACH_IMPL_11</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a3993943864d162124541b5ae930227f6">PREPROCESSOR_FOR_EACH_IMPL_10</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a2a3ee36721032f98f2770e0bf4c869be">PREPROCESSOR_FOR_EACH_IMPL_12</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad130c4b140663994f7df4e9df9a732f4">PREPROCESSOR_FOR_EACH_IMPL_11</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a592dd4932320910d1243eb478bd446b2">PREPROCESSOR_FOR_EACH_IMPL_13</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a2a3ee36721032f98f2770e0bf4c869be">PREPROCESSOR_FOR_EACH_IMPL_12</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a4a05dd29b987bcd5a4a5fb4a421b11c7">PREPROCESSOR_FOR_EACH_IMPL_14</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a592dd4932320910d1243eb478bd446b2">PREPROCESSOR_FOR_EACH_IMPL_13</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a47dc3039386dcc62447824515ec75ee8">PREPROCESSOR_FOR_EACH_IMPL_15</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a4a05dd29b987bcd5a4a5fb4a421b11c7">PREPROCESSOR_FOR_EACH_IMPL_14</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a673c15a2b57c321de541651c6fce75b7">PREPROCESSOR_FOR_EACH_IMPL_16</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a47dc3039386dcc62447824515ec75ee8">PREPROCESSOR_FOR_EACH_IMPL_15</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a0103da0d96344e95928d284408aefda2">PREPROCESSOR_FOR_EACH_IMPL_17</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a673c15a2b57c321de541651c6fce75b7">PREPROCESSOR_FOR_EACH_IMPL_16</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a0faf7764b0e856804063c47ce2f93144">PREPROCESSOR_FOR_EACH_IMPL_18</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0103da0d96344e95928d284408aefda2">PREPROCESSOR_FOR_EACH_IMPL_17</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aa3e2412db1f9c9a0c6da7dcc3362e000">PREPROCESSOR_FOR_EACH_IMPL_19</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0faf7764b0e856804063c47ce2f93144">PREPROCESSOR_FOR_EACH_IMPL_18</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a1870e59b52bc68be5a11afb1a2cd988a">PREPROCESSOR_FOR_EACH_IMPL_20</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa3e2412db1f9c9a0c6da7dcc3362e000">PREPROCESSOR_FOR_EACH_IMPL_19</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a1bef7e31673133471115169ef65d5095">PREPROCESSOR_FOR_EACH_IMPL_21</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a1870e59b52bc68be5a11afb1a2cd988a">PREPROCESSOR_FOR_EACH_IMPL_20</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ac42fb115e9f3f99546a49d5468ec6e9f">PREPROCESSOR_FOR_EACH_IMPL_22</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a1bef7e31673133471115169ef65d5095">PREPROCESSOR_FOR_EACH_IMPL_21</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ab11e1939afc4863e07ca7dc839e022f5">PREPROCESSOR_FOR_EACH_IMPL_23</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ac42fb115e9f3f99546a49d5468ec6e9f">PREPROCESSOR_FOR_EACH_IMPL_22</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a76f85a0b51bc3e47c3783bc18f38084d">PREPROCESSOR_FOR_EACH_IMPL_24</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ab11e1939afc4863e07ca7dc839e022f5">PREPROCESSOR_FOR_EACH_IMPL_23</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a0b7d0bfd2654c1250033c1232a041154">PREPROCESSOR_FOR_EACH_IMPL_25</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a76f85a0b51bc3e47c3783bc18f38084d">PREPROCESSOR_FOR_EACH_IMPL_24</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a526308e88f6d1f718c5e01c877b4eaf9">PREPROCESSOR_FOR_EACH_IMPL_26</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0b7d0bfd2654c1250033c1232a041154">PREPROCESSOR_FOR_EACH_IMPL_25</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ad2d800a9d9939399039c90558a73b722">PREPROCESSOR_FOR_EACH_IMPL_27</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a526308e88f6d1f718c5e01c877b4eaf9">PREPROCESSOR_FOR_EACH_IMPL_26</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a6f5419263e8f866de148b41020942195">PREPROCESSOR_FOR_EACH_IMPL_28</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad2d800a9d9939399039c90558a73b722">PREPROCESSOR_FOR_EACH_IMPL_27</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a32b5c03b56b800e428c949793098e519">PREPROCESSOR_FOR_EACH_IMPL_29</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a6f5419263e8f866de148b41020942195">PREPROCESSOR_FOR_EACH_IMPL_28</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1abd7a6bca9edd446618f68f50c37ab5ad">PREPROCESSOR_FOR_EACH_IMPL_30</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a32b5c03b56b800e428c949793098e519">PREPROCESSOR_FOR_EACH_IMPL_29</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1afe9e5a2f8f4f4add74bb94a60969f64c">PREPROCESSOR_FOR_EACH_IMPL_31</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1abd7a6bca9edd446618f68f50c37ab5ad">PREPROCESSOR_FOR_EACH_IMPL_30</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a2497ecddfd06d4036ebaa52f7c0f894c">PREPROCESSOR_FOR_EACH_IMPL_32</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1afe9e5a2f8f4f4add74bb94a60969f64c">PREPROCESSOR_FOR_EACH_IMPL_31</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a75d453e52d7d794dbb5c98b80798fb28">PREPROCESSOR_FOR_EACH_IMPL_33</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a2497ecddfd06d4036ebaa52f7c0f894c">PREPROCESSOR_FOR_EACH_IMPL_32</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ab3f830f00712a99c1726edcf72fbef91">PREPROCESSOR_FOR_EACH_IMPL_34</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a75d453e52d7d794dbb5c98b80798fb28">PREPROCESSOR_FOR_EACH_IMPL_33</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a265c3d385f346c92bbc99c5a746cdd26">PREPROCESSOR_FOR_EACH_IMPL_35</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ab3f830f00712a99c1726edcf72fbef91">PREPROCESSOR_FOR_EACH_IMPL_34</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ad30269a7e94004c01f00c3c9ac8415e0">PREPROCESSOR_FOR_EACH_IMPL_36</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a265c3d385f346c92bbc99c5a746cdd26">PREPROCESSOR_FOR_EACH_IMPL_35</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aa676bbcf7ac3440616898384ae1658ce">PREPROCESSOR_FOR_EACH_IMPL_37</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad30269a7e94004c01f00c3c9ac8415e0">PREPROCESSOR_FOR_EACH_IMPL_36</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a943dbf4b6b5c9c74b66b5fff83ca3010">PREPROCESSOR_FOR_EACH_IMPL_38</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa676bbcf7ac3440616898384ae1658ce">PREPROCESSOR_FOR_EACH_IMPL_37</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1add2ae0637b5a266535270604d5ba3e55">PREPROCESSOR_FOR_EACH_IMPL_39</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a943dbf4b6b5c9c74b66b5fff83ca3010">PREPROCESSOR_FOR_EACH_IMPL_38</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a60949168ca36b3f808134413865a6806">PREPROCESSOR_FOR_EACH_IMPL_40</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1add2ae0637b5a266535270604d5ba3e55">PREPROCESSOR_FOR_EACH_IMPL_39</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1af01a231fe4629041ce5d50889fe8c83c">PREPROCESSOR_FOR_EACH_IMPL_41</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a60949168ca36b3f808134413865a6806">PREPROCESSOR_FOR_EACH_IMPL_40</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1af244e9c927944ea5706b4bd2cb1bd77c">PREPROCESSOR_FOR_EACH_IMPL_42</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af01a231fe4629041ce5d50889fe8c83c">PREPROCESSOR_FOR_EACH_IMPL_41</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1abbdbe4b4c1f27c6a3ff3deba43be99c2">PREPROCESSOR_FOR_EACH_IMPL_43</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af244e9c927944ea5706b4bd2cb1bd77c">PREPROCESSOR_FOR_EACH_IMPL_42</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a80013f9bfc5b6beaef05cbbf0dbd5b90">PREPROCESSOR_FOR_EACH_IMPL_44</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1abbdbe4b4c1f27c6a3ff3deba43be99c2">PREPROCESSOR_FOR_EACH_IMPL_43</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a8803edc36488c861f1d53cea165d9914">PREPROCESSOR_FOR_EACH_IMPL_45</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a80013f9bfc5b6beaef05cbbf0dbd5b90">PREPROCESSOR_FOR_EACH_IMPL_44</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1ad6271cb588967a330ba7438e7d3fb255">PREPROCESSOR_FOR_EACH_IMPL_46</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a8803edc36488c861f1d53cea165d9914">PREPROCESSOR_FOR_EACH_IMPL_45</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a9e5022d5cf31f646205fae213efa638b">PREPROCESSOR_FOR_EACH_IMPL_47</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad6271cb588967a330ba7438e7d3fb255">PREPROCESSOR_FOR_EACH_IMPL_46</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a5afa1f504c30d7c32a4497bcb69ec1b8">PREPROCESSOR_FOR_EACH_IMPL_48</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a9e5022d5cf31f646205fae213efa638b">PREPROCESSOR_FOR_EACH_IMPL_47</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a6a749db2af94ec1fe1943e96a6a97bfe">PREPROCESSOR_FOR_EACH_IMPL_49</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a5afa1f504c30d7c32a4497bcb69ec1b8">PREPROCESSOR_FOR_EACH_IMPL_48</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a09212f978cf8cd6243940156a4b2f3ac">PREPROCESSOR_FOR_EACH_IMPL_50</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a6a749db2af94ec1fe1943e96a6a97bfe">PREPROCESSOR_FOR_EACH_IMPL_49</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a29aa548ed6ee1acc0005d7940488a3f2">PREPROCESSOR_FOR_EACH_IMPL_51</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a09212f978cf8cd6243940156a4b2f3ac">PREPROCESSOR_FOR_EACH_IMPL_50</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a7c0ba35e1e1f2a5b610f95370b317b04">PREPROCESSOR_FOR_EACH_IMPL_52</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a29aa548ed6ee1acc0005d7940488a3f2">PREPROCESSOR_FOR_EACH_IMPL_51</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a8f0835be396ffa94825d0951d7962d95">PREPROCESSOR_FOR_EACH_IMPL_53</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a7c0ba35e1e1f2a5b610f95370b317b04">PREPROCESSOR_FOR_EACH_IMPL_52</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aa0e1f61c402b63b29a40ef064c9d492e">PREPROCESSOR_FOR_EACH_IMPL_54</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a8f0835be396ffa94825d0951d7962d95">PREPROCESSOR_FOR_EACH_IMPL_53</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1afd7ca3dceda3ba5d8b5db94244ad4055">PREPROCESSOR_FOR_EACH_IMPL_55</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa0e1f61c402b63b29a40ef064c9d492e">PREPROCESSOR_FOR_EACH_IMPL_54</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1af93bcfe5133b2bcd057788786a9a1800">PREPROCESSOR_FOR_EACH_IMPL_56</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1afd7ca3dceda3ba5d8b5db94244ad4055">PREPROCESSOR_FOR_EACH_IMPL_55</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1aac96f7564ae389b9be6fbe31ad726539">PREPROCESSOR_FOR_EACH_IMPL_57</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af93bcfe5133b2bcd057788786a9a1800">PREPROCESSOR_FOR_EACH_IMPL_56</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1abe97497be85cd722cffc9d1c36d465a3">PREPROCESSOR_FOR_EACH_IMPL_58</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aac96f7564ae389b9be6fbe31ad726539">PREPROCESSOR_FOR_EACH_IMPL_57</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a4b7b24e36cca621280bc4d081da4bdd8">PREPROCESSOR_FOR_EACH_IMPL_59</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1abe97497be85cd722cffc9d1c36d465a3">PREPROCESSOR_FOR_EACH_IMPL_58</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a08686d22f5ba6d35ac1d3766f8795b6e">PREPROCESSOR_FOR_EACH_IMPL_60</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a4b7b24e36cca621280bc4d081da4bdd8">PREPROCESSOR_FOR_EACH_IMPL_59</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a0b8491f1f63bec4b2b83a66312fe32e7">PREPROCESSOR_FOR_EACH_IMPL_61</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a08686d22f5ba6d35ac1d3766f8795b6e">PREPROCESSOR_FOR_EACH_IMPL_60</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1af9bdb4c4e6545d613f706e4db9307b03">PREPROCESSOR_FOR_EACH_IMPL_62</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0b8491f1f63bec4b2b83a66312fe32e7">PREPROCESSOR_FOR_EACH_IMPL_61</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a8f1472adeda546db0deb3706d109068b">PREPROCESSOR_FOR_EACH_IMPL_63</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af9bdb4c4e6545d613f706e4db9307b03">PREPROCESSOR_FOR_EACH_IMPL_62</link>(expr, __VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__for_8h_1a4892348990184a5734535be38b9365ba">PREPROCESSOR_FOR_EACH_IMPL_64</link>(expr,  element, ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a8f1472adeda546db0deb3706d109068b">PREPROCESSOR_FOR_EACH_IMPL_63</link>(expr, __VA_ARGS__))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_preprocessor__for_8h_1a328d3403ddb6cc2ed0488e4ca6ca6c3c"/>    <section>
+    <title>PREPROCESSOR_FOR_SIZE</title>
+<indexterm><primary>PREPROCESSOR_FOR_SIZE</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_SIZE</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_SIZE   64</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_EVAL</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_EVAL</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_EVAL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_EVAL( expr)   expr</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aadf9d9944c296404f0cd4a289d67db50"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_0</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_0</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_0</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_0( expr,  ...)</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aca03ffdf276bec2453ce6d3ea7f9c0cd"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_1</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_1</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_1</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_1( expr,  element,  ...)   expr(element)</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a5b0356a513b315a10777e1363369d67c"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_2</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_2</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_2</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_2( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aca03ffdf276bec2453ce6d3ea7f9c0cd">PREPROCESSOR_FOR_EACH_IMPL_1</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aa12cdcde28749f2de2c6259df0e14e6b"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_3</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_3</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_3</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_3( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a5b0356a513b315a10777e1363369d67c">PREPROCESSOR_FOR_EACH_IMPL_2</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a3ecad957ea754b8ff5eea245fea83de9"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_4</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_4</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_4</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_4( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa12cdcde28749f2de2c6259df0e14e6b">PREPROCESSOR_FOR_EACH_IMPL_3</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a7191f3b5675bae2d9dbe32adfc3ed1ba"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_5</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_5</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_5</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_5( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a3ecad957ea754b8ff5eea245fea83de9">PREPROCESSOR_FOR_EACH_IMPL_4</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ababe2f5c3d804f2e0973b0be58b43ee7"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_6</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_6</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_6</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_6( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a7191f3b5675bae2d9dbe32adfc3ed1ba">PREPROCESSOR_FOR_EACH_IMPL_5</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1afdbffae01589b8883303b0ae46917c76"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_7</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_7</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_7</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_7( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ababe2f5c3d804f2e0973b0be58b43ee7">PREPROCESSOR_FOR_EACH_IMPL_6</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a79da7fb744661fca993580fcb75a4abb"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_8</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_8</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_8</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_8( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1afdbffae01589b8883303b0ae46917c76">PREPROCESSOR_FOR_EACH_IMPL_7</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aab2a6faef2d212c5b941e3ba762a5939"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_9</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_9</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_9</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_9( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a79da7fb744661fca993580fcb75a4abb">PREPROCESSOR_FOR_EACH_IMPL_8</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a3993943864d162124541b5ae930227f6"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_10</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_10</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_10</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_10( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aab2a6faef2d212c5b941e3ba762a5939">PREPROCESSOR_FOR_EACH_IMPL_9</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ad130c4b140663994f7df4e9df9a732f4"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_11</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_11</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_11</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_11( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a3993943864d162124541b5ae930227f6">PREPROCESSOR_FOR_EACH_IMPL_10</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a2a3ee36721032f98f2770e0bf4c869be"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_12</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_12</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_12</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_12( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad130c4b140663994f7df4e9df9a732f4">PREPROCESSOR_FOR_EACH_IMPL_11</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a592dd4932320910d1243eb478bd446b2"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_13</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_13</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_13</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_13( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a2a3ee36721032f98f2770e0bf4c869be">PREPROCESSOR_FOR_EACH_IMPL_12</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a4a05dd29b987bcd5a4a5fb4a421b11c7"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_14</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_14</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_14</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_14( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a592dd4932320910d1243eb478bd446b2">PREPROCESSOR_FOR_EACH_IMPL_13</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a47dc3039386dcc62447824515ec75ee8"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_15</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_15</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_15</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_15( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a4a05dd29b987bcd5a4a5fb4a421b11c7">PREPROCESSOR_FOR_EACH_IMPL_14</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a673c15a2b57c321de541651c6fce75b7"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_16</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_16</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_16</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_16( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a47dc3039386dcc62447824515ec75ee8">PREPROCESSOR_FOR_EACH_IMPL_15</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a0103da0d96344e95928d284408aefda2"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_17</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_17</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_17</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_17( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a673c15a2b57c321de541651c6fce75b7">PREPROCESSOR_FOR_EACH_IMPL_16</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a0faf7764b0e856804063c47ce2f93144"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_18</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_18</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_18</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_18( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0103da0d96344e95928d284408aefda2">PREPROCESSOR_FOR_EACH_IMPL_17</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aa3e2412db1f9c9a0c6da7dcc3362e000"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_19</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_19</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_19</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_19( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0faf7764b0e856804063c47ce2f93144">PREPROCESSOR_FOR_EACH_IMPL_18</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a1870e59b52bc68be5a11afb1a2cd988a"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_20</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_20</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_20</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_20( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa3e2412db1f9c9a0c6da7dcc3362e000">PREPROCESSOR_FOR_EACH_IMPL_19</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a1bef7e31673133471115169ef65d5095"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_21</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_21</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_21</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_21( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a1870e59b52bc68be5a11afb1a2cd988a">PREPROCESSOR_FOR_EACH_IMPL_20</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ac42fb115e9f3f99546a49d5468ec6e9f"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_22</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_22</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_22</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_22( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a1bef7e31673133471115169ef65d5095">PREPROCESSOR_FOR_EACH_IMPL_21</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ab11e1939afc4863e07ca7dc839e022f5"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_23</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_23</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_23</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_23( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ac42fb115e9f3f99546a49d5468ec6e9f">PREPROCESSOR_FOR_EACH_IMPL_22</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a76f85a0b51bc3e47c3783bc18f38084d"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_24</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_24</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_24</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_24( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ab11e1939afc4863e07ca7dc839e022f5">PREPROCESSOR_FOR_EACH_IMPL_23</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a0b7d0bfd2654c1250033c1232a041154"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_25</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_25</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_25</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_25( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a76f85a0b51bc3e47c3783bc18f38084d">PREPROCESSOR_FOR_EACH_IMPL_24</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a526308e88f6d1f718c5e01c877b4eaf9"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_26</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_26</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_26</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_26( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0b7d0bfd2654c1250033c1232a041154">PREPROCESSOR_FOR_EACH_IMPL_25</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ad2d800a9d9939399039c90558a73b722"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_27</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_27</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_27</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_27( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a526308e88f6d1f718c5e01c877b4eaf9">PREPROCESSOR_FOR_EACH_IMPL_26</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a6f5419263e8f866de148b41020942195"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_28</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_28</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_28</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_28( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad2d800a9d9939399039c90558a73b722">PREPROCESSOR_FOR_EACH_IMPL_27</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a32b5c03b56b800e428c949793098e519"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_29</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_29</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_29</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_29( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a6f5419263e8f866de148b41020942195">PREPROCESSOR_FOR_EACH_IMPL_28</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1abd7a6bca9edd446618f68f50c37ab5ad"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_30</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_30</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_30</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_30( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a32b5c03b56b800e428c949793098e519">PREPROCESSOR_FOR_EACH_IMPL_29</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1afe9e5a2f8f4f4add74bb94a60969f64c"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_31</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_31</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_31</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_31( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1abd7a6bca9edd446618f68f50c37ab5ad">PREPROCESSOR_FOR_EACH_IMPL_30</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a2497ecddfd06d4036ebaa52f7c0f894c"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_32</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_32</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_32</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_32( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1afe9e5a2f8f4f4add74bb94a60969f64c">PREPROCESSOR_FOR_EACH_IMPL_31</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a75d453e52d7d794dbb5c98b80798fb28"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_33</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_33</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_33</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_33( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a2497ecddfd06d4036ebaa52f7c0f894c">PREPROCESSOR_FOR_EACH_IMPL_32</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ab3f830f00712a99c1726edcf72fbef91"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_34</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_34</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_34</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_34( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a75d453e52d7d794dbb5c98b80798fb28">PREPROCESSOR_FOR_EACH_IMPL_33</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a265c3d385f346c92bbc99c5a746cdd26"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_35</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_35</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_35</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_35( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ab3f830f00712a99c1726edcf72fbef91">PREPROCESSOR_FOR_EACH_IMPL_34</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ad30269a7e94004c01f00c3c9ac8415e0"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_36</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_36</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_36</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_36( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a265c3d385f346c92bbc99c5a746cdd26">PREPROCESSOR_FOR_EACH_IMPL_35</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aa676bbcf7ac3440616898384ae1658ce"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_37</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_37</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_37</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_37( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad30269a7e94004c01f00c3c9ac8415e0">PREPROCESSOR_FOR_EACH_IMPL_36</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a943dbf4b6b5c9c74b66b5fff83ca3010"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_38</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_38</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_38</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_38( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa676bbcf7ac3440616898384ae1658ce">PREPROCESSOR_FOR_EACH_IMPL_37</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1add2ae0637b5a266535270604d5ba3e55"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_39</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_39</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_39</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_39( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a943dbf4b6b5c9c74b66b5fff83ca3010">PREPROCESSOR_FOR_EACH_IMPL_38</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a60949168ca36b3f808134413865a6806"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_40</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_40</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_40</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_40( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1add2ae0637b5a266535270604d5ba3e55">PREPROCESSOR_FOR_EACH_IMPL_39</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1af01a231fe4629041ce5d50889fe8c83c"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_41</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_41</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_41</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_41( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a60949168ca36b3f808134413865a6806">PREPROCESSOR_FOR_EACH_IMPL_40</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1af244e9c927944ea5706b4bd2cb1bd77c"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_42</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_42</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_42</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_42( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af01a231fe4629041ce5d50889fe8c83c">PREPROCESSOR_FOR_EACH_IMPL_41</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1abbdbe4b4c1f27c6a3ff3deba43be99c2"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_43</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_43</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_43</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_43( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af244e9c927944ea5706b4bd2cb1bd77c">PREPROCESSOR_FOR_EACH_IMPL_42</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a80013f9bfc5b6beaef05cbbf0dbd5b90"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_44</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_44</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_44</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_44( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1abbdbe4b4c1f27c6a3ff3deba43be99c2">PREPROCESSOR_FOR_EACH_IMPL_43</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a8803edc36488c861f1d53cea165d9914"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_45</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_45</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_45</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_45( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a80013f9bfc5b6beaef05cbbf0dbd5b90">PREPROCESSOR_FOR_EACH_IMPL_44</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1ad6271cb588967a330ba7438e7d3fb255"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_46</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_46</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_46</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_46( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a8803edc36488c861f1d53cea165d9914">PREPROCESSOR_FOR_EACH_IMPL_45</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a9e5022d5cf31f646205fae213efa638b"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_47</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_47</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_47</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_47( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1ad6271cb588967a330ba7438e7d3fb255">PREPROCESSOR_FOR_EACH_IMPL_46</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a5afa1f504c30d7c32a4497bcb69ec1b8"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_48</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_48</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_48</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_48( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a9e5022d5cf31f646205fae213efa638b">PREPROCESSOR_FOR_EACH_IMPL_47</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a6a749db2af94ec1fe1943e96a6a97bfe"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_49</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_49</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_49</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_49( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a5afa1f504c30d7c32a4497bcb69ec1b8">PREPROCESSOR_FOR_EACH_IMPL_48</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a09212f978cf8cd6243940156a4b2f3ac"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_50</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_50</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_50</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_50( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a6a749db2af94ec1fe1943e96a6a97bfe">PREPROCESSOR_FOR_EACH_IMPL_49</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a29aa548ed6ee1acc0005d7940488a3f2"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_51</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_51</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_51</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_51( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a09212f978cf8cd6243940156a4b2f3ac">PREPROCESSOR_FOR_EACH_IMPL_50</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a7c0ba35e1e1f2a5b610f95370b317b04"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_52</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_52</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_52</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_52( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a29aa548ed6ee1acc0005d7940488a3f2">PREPROCESSOR_FOR_EACH_IMPL_51</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a8f0835be396ffa94825d0951d7962d95"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_53</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_53</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_53</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_53( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a7c0ba35e1e1f2a5b610f95370b317b04">PREPROCESSOR_FOR_EACH_IMPL_52</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aa0e1f61c402b63b29a40ef064c9d492e"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_54</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_54</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_54</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_54( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a8f0835be396ffa94825d0951d7962d95">PREPROCESSOR_FOR_EACH_IMPL_53</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1afd7ca3dceda3ba5d8b5db94244ad4055"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_55</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_55</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_55</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_55( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aa0e1f61c402b63b29a40ef064c9d492e">PREPROCESSOR_FOR_EACH_IMPL_54</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1af93bcfe5133b2bcd057788786a9a1800"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_56</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_56</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_56</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_56( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1afd7ca3dceda3ba5d8b5db94244ad4055">PREPROCESSOR_FOR_EACH_IMPL_55</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1aac96f7564ae389b9be6fbe31ad726539"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_57</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_57</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_57</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_57( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af93bcfe5133b2bcd057788786a9a1800">PREPROCESSOR_FOR_EACH_IMPL_56</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1abe97497be85cd722cffc9d1c36d465a3"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_58</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_58</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_58</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_58( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1aac96f7564ae389b9be6fbe31ad726539">PREPROCESSOR_FOR_EACH_IMPL_57</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a4b7b24e36cca621280bc4d081da4bdd8"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_59</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_59</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_59</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_59( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1abe97497be85cd722cffc9d1c36d465a3">PREPROCESSOR_FOR_EACH_IMPL_58</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a08686d22f5ba6d35ac1d3766f8795b6e"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_60</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_60</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_60</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_60( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a4b7b24e36cca621280bc4d081da4bdd8">PREPROCESSOR_FOR_EACH_IMPL_59</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a0b8491f1f63bec4b2b83a66312fe32e7"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_61</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_61</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_61</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_61( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a08686d22f5ba6d35ac1d3766f8795b6e">PREPROCESSOR_FOR_EACH_IMPL_60</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1af9bdb4c4e6545d613f706e4db9307b03"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_62</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_62</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_62</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_62( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a0b8491f1f63bec4b2b83a66312fe32e7">PREPROCESSOR_FOR_EACH_IMPL_61</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a8f1472adeda546db0deb3706d109068b"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_63</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_63</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_63</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_63( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1af9bdb4c4e6545d613f706e4db9307b03">PREPROCESSOR_FOR_EACH_IMPL_62</link>(expr, __VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__for_8h_1a4892348990184a5734535be38b9365ba"/>    <section>
+    <title>PREPROCESSOR_FOR_EACH_IMPL_64</title>
+<indexterm><primary>PREPROCESSOR_FOR_EACH_IMPL_64</primary><secondary>preprocessor_for.h</secondary></indexterm>
+<indexterm><primary>preprocessor_for.h</primary><secondary>PREPROCESSOR_FOR_EACH_IMPL_64</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_FOR_EACH_IMPL_64( expr,  element,  ...)   expr(element) <link linkend="_preprocessor__for_8h_1a96052fd2e2b9063aecb4de6789cd2cfe">PREPROCESSOR_FOR_EACH_EVAL</link>(<link linkend="_preprocessor__for_8h_1a8f1472adeda546db0deb3706d109068b">PREPROCESSOR_FOR_EACH_IMPL_63</link>(expr, __VA_ARGS__))</computeroutput></para></section>
+</section>
+</section>

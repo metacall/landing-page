@@ -1,0 +1,1238 @@
+\doxysection{reflect\+\_\+value\+\_\+type.\+h File Reference}
+\label{reflect__value__type_8h}\index{reflect\_value\_type.h@{reflect\_value\_type.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+class.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+function.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+future.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+object.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+type\+\_\+id.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+value\+\_\+type\+\_\+cast.\+h$>$}\newline
+Include dependency graph for reflect\+\_\+value\+\_\+type.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{reflect__value__type_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{reflect__value__type_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+type\+\_\+create} (const void $\ast$data, size\+\_\+t bytes, \textbf{ type\+\_\+id} id)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+type\+\_\+copy} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ value\+\_\+type\+\_\+size} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ value\+\_\+type\+\_\+count} (void $\ast$v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+id} \textbf{ value\+\_\+type\+\_\+id} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+bool} (\textbf{ boolean} b)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+char} (char c)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+short} (short s)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+int} (int i)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+long} (long l)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+float} (float f)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+double} (double d)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+string} (const char $\ast$str, size\+\_\+t length)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+buffer} (const void $\ast$buffer, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+array} (const \textbf{ value} $\ast$values, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+map} (const \textbf{ value} $\ast$tuples, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+ptr} (const void $\ast$ptr)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+future} (\textbf{ future} f)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+function} (\textbf{ function} f)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+function\+\_\+closure} (\textbf{ function} f, void $\ast$c)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+null} (void)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+class} (\textbf{ klass} c)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+object} (\textbf{ object} o)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ boolean} \textbf{ value\+\_\+to\+\_\+bool} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char \textbf{ value\+\_\+to\+\_\+char} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI short \textbf{ value\+\_\+to\+\_\+short} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ value\+\_\+to\+\_\+int} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI long \textbf{ value\+\_\+to\+\_\+long} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI float \textbf{ value\+\_\+to\+\_\+float} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI double \textbf{ value\+\_\+to\+\_\+double} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ value\+\_\+to\+\_\+string} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+to\+\_\+buffer} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} $\ast$ \textbf{ value\+\_\+to\+\_\+array} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} $\ast$ \textbf{ value\+\_\+to\+\_\+map} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+to\+\_\+ptr} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future} \textbf{ value\+\_\+to\+\_\+future} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function} \textbf{ value\+\_\+to\+\_\+function} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+to\+\_\+null} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} \textbf{ value\+\_\+to\+\_\+class} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} \textbf{ value\+\_\+to\+\_\+object} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+bool} (\textbf{ value} v, \textbf{ boolean} b)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+char} (\textbf{ value} v, char c)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+short} (\textbf{ value} v, short s)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+int} (\textbf{ value} v, int i)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+long} (\textbf{ value} v, long l)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+float} (\textbf{ value} v, float f)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+double} (\textbf{ value} v, double d)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+string} (\textbf{ value} v, const char $\ast$str, size\+\_\+t length)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+buffer} (\textbf{ value} v, const void $\ast$buffer, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+array} (\textbf{ value} v, const \textbf{ value} $\ast$values, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+map} (\textbf{ value} v, const \textbf{ value} $\ast$tuples, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+ptr} (\textbf{ value} v, const void $\ast$ptr)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+future} (\textbf{ value} v, \textbf{ future} f)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+function} (\textbf{ value} v, \textbf{ function} f)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+null} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+class} (\textbf{ value} v, \textbf{ klass} c)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+object} (\textbf{ value} v, \textbf{ object} o)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+type\+\_\+destroy} (\textbf{ value} v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{reflect__value__type_8h_a36999459ad33806b0ec2d96e90414f6d}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_create@{value\_type\_create}}
+\index{value\_type\_create@{value\_type\_create}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_type\_create()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+type\+\_\+create (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes,  }\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Create a value type from @data with size @bytes and typeid @id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Pointer to memory block\\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes} & Size in bytes of the memory block @data\\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Type of memory block @data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a0b99b9932116ddf89db8215a174793cd}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_copy@{value\_type\_copy}}
+\index{value\_type\_copy@{value\_type\_copy}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_type\_copy()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+type\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Make a deep copy of value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value is going to be copied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy of new value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a3fd4d5d61ccf65f17788e3d78b059e54}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_size@{value\_type\_size}}
+\index{value\_type\_size@{value\_type\_size}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_type\_size()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t value\+\_\+type\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Returns the size of the value type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size in bytes of the value type 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_afc029f06c50371c1df2c770d70599564}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_count@{value\_type\_count}}
+\index{value\_type\_count@{value\_type\_count}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_type\_count()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t value\+\_\+type\+\_\+count (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Returns the amount of values this value contains. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of values @v represents 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a6c4d4bad93278bde3ba2c3b16a363724}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_id@{value\_type\_id}}
+\index{value\_type\_id@{value\_type\_id}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_type\_id()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+id} value\+\_\+type\+\_\+id (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Provide type id of value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return type id assigned to value 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ab45f977f2e73e15abffeaa7eb33fcf0b}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_bool@{value\_create\_bool}}
+\index{value\_create\_bool@{value\_create\_bool}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_bool()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
+
+
+
+Create a value from boolean {\bfseries{}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & Boolean will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a81818fab178f2f2470d882352327b819}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_char@{value\_create\_char}}
+\index{value\_create\_char@{value\_create\_char}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_char()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Create a value from char {\ttfamily }. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Character will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a85f3925e97e8227f2b6ab103da614398}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_short@{value\_create\_short}}
+\index{value\_create\_short@{value\_create\_short}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_short()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+short (\begin{DoxyParamCaption}\item[{short}]{s }\end{DoxyParamCaption})}
+
+
+
+Create a value from short @s. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & Short will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ad73c607083562c2954470960f65be9fc}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_int@{value\_create\_int}}
+\index{value\_create\_int@{value\_create\_int}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_int()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Create a value from integer @i. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & Integer will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a7b6168b6e41b802626ac2454458a9db4}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_long@{value\_create\_long}}
+\index{value\_create\_long@{value\_create\_long}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_long()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+long (\begin{DoxyParamCaption}\item[{long}]{l }\end{DoxyParamCaption})}
+
+
+
+Create a value from long @l. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em l} & Long integer will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_acf74ed0c5103f94bee6668c23e4d21c9}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_float@{value\_create\_float}}
+\index{value\_create\_float@{value\_create\_float}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_float()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+float (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Create a value from single precision floating point number @f. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Float will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a39ed34beeee7b78478de73df13184db1}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_double@{value\_create\_double}}
+\index{value\_create\_double@{value\_create\_double}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_double()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+double (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Create a value from double precision floating point number @d. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Double will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_abf8e43969ea7d7abc53746c9258f0fc9}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_string@{value\_create\_string}}
+\index{value\_create\_string@{value\_create\_string}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_string()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Create a value from a C string @str. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & Constant string will be copied into value (needs to be null terminated)\\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Length of the constant string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a047ce2c387559fcea90f4ff4ffb19455}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_buffer@{value\_create\_buffer}}
+\index{value\_create\_buffer@{value\_create\_buffer}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_buffer()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+buffer (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Create a value buffer from array @buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arr} & Constant memory block will be copied into value buffer\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size in bytes of data contained in the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a095eaed517a41a27a8bfdc157873b780}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_array@{value\_create\_array}}
+\index{value\_create\_array@{value\_create\_array}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_array()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+array (\begin{DoxyParamCaption}\item[{const \textbf{ value} $\ast$}]{values,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Create a value array from array of values @values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em values} & Constant array of values will be copied into value array\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements contained in the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ac3ddc7892c72b5ddae58525ef6982542}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_map@{value\_create\_map}}
+\index{value\_create\_map@{value\_create\_map}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_map()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+map (\begin{DoxyParamCaption}\item[{const \textbf{ value} $\ast$}]{tuples,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Create a value map from array of tuples @map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tuples} & Constant array of tuples will be copied into value map\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements contained in the map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a91573a981c6b9acf761217793f156a4a}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_ptr@{value\_create\_ptr}}
+\index{value\_create\_ptr@{value\_create\_ptr}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_ptr()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+ptr (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Create a value from pointer @ptr. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to constant data will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ae2f6507afb0f4dd0271ed4743915c894}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_future@{value\_create\_future}}
+\index{value\_create\_future@{value\_create\_future}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_future()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ future}}]{f }\end{DoxyParamCaption})}
+
+
+
+Create a value from future @f. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Pointer to future will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ab291afee66a6fa7a46ee28e07791e64e}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_function@{value\_create\_function}}
+\index{value\_create\_function@{value\_create\_function}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_function()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{f }\end{DoxyParamCaption})}
+
+
+
+Create a value from function @f. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Pointer to function will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ab621bcdb6dd27571b90ed57ff80325e4}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_function\_closure@{value\_create\_function\_closure}}
+\index{value\_create\_function\_closure@{value\_create\_function\_closure}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_function\_closure()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+function\+\_\+closure (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{f,  }\item[{void $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Create a value from function @f binding a closure {\ttfamily to} it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Pointer to constant data will be copied into value\\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Pointer to closure that will be binded into function @f\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ae7d4907b740d6548d60ad76c3b990e04}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_null@{value\_create\_null}}
+\index{value\_create\_null@{value\_create\_null}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_null()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create a value of type null. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ac4ffef9102b2fc65c4373c8e121eda09}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_class@{value\_create\_class}}
+\index{value\_create\_class@{value\_create\_class}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_class()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{c }\end{DoxyParamCaption})}
+
+
+
+Create a value from function {\ttfamily }. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Pointer to class will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ab1c0f4c5b60d48082cac78b64223f99f}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_object@{value\_create\_object}}
+\index{value\_create\_object@{value\_create\_object}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_object()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{o }\end{DoxyParamCaption})}
+
+
+
+Create a value from object @o. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em o} & Pointer to object will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a22ec3aa0f4f44e1a46fdcbdb0c702f4d}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_bool@{value\_to\_bool}}
+\index{value\_to\_bool@{value\_to\_bool}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_bool()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ boolean} value\+\_\+to\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to boolean. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to boolean 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_abdc3e144c8ee27e40027b0520fd44c1f}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_char@{value\_to\_char}}
+\index{value\_to\_char@{value\_to\_char}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_char()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char value\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to char. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to char 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_aaeb82661978bf49fd2b485d987096408}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_short@{value\_to\_short}}
+\index{value\_to\_short@{value\_to\_short}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_short()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI short value\+\_\+to\+\_\+short (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to short. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to short 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a8cca188806b0aa30cf23c8388f7f90ac}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_int@{value\_to\_int}}
+\index{value\_to\_int@{value\_to\_int}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_int()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int value\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to integer 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_aafec00703a03c2d3ccabb08d14209b02}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_long@{value\_to\_long}}
+\index{value\_to\_long@{value\_to\_long}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_long()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI long value\+\_\+to\+\_\+long (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to long integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to long integer 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a3394a32d53796fb0c9c3477d7d71b315}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_float@{value\_to\_float}}
+\index{value\_to\_float@{value\_to\_float}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_float()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI float value\+\_\+to\+\_\+float (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to single precision floating point. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to float 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a4da0ef4bafd6c864e12b0d2ba5c525c8}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_double@{value\_to\_double}}
+\index{value\_to\_double@{value\_to\_double}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_double()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI double value\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to double precision floating point. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to dobule 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_add067f870ba2c77866233fbf775a3bc9}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_string@{value\_to\_string}}
+\index{value\_to\_string@{value\_to\_string}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_string()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ value\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to a C string (null terminated) 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a6cec019e0e9cf5b34f4c8835b76eda7a}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_buffer@{value\_to\_buffer}}
+\index{value\_to\_buffer@{value\_to\_buffer}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_buffer()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to memory block 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a250d1a84fa05a0ae092a42f13d0d4977}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_array@{value\_to\_array}}
+\index{value\_to\_array@{value\_to\_array}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_array()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value}$\ast$ value\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to array of values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to array of values 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a63ee21379c5489aad97ff36162a7dca2}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_map@{value\_to\_map}}
+\index{value\_to\_map@{value\_to\_map}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_map()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value}$\ast$ value\+\_\+to\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to map (array of tuples (array of values)) 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a19258be4082fc6513ad49c70745061d4}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_ptr@{value\_to\_ptr}}
+\index{value\_to\_ptr@{value\_to\_ptr}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_ptr()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+to\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to pointer 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a5be5000928fc591de3bbe386c40b9f16}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_future@{value\_to\_future}}
+\index{value\_to\_future@{value\_to\_future}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_future()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future} value\+\_\+to\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to future. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to future 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a9689b3427d83a5f0bfcea9826660e9f3}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_function@{value\_to\_function}}
+\index{value\_to\_function@{value\_to\_function}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_function()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function} value\+\_\+to\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to function 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a9cd5c465f3cf5c12ed3da3d126bf68be}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_null@{value\_to\_null}}
+\index{value\_to\_null@{value\_to\_null}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_null()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+to\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to null. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to null 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_afd29d348dc5a3304f271b33e12256247}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_class@{value\_to\_class}}
+\index{value\_to\_class@{value\_to\_class}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_class()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} value\+\_\+to\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to class 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_aa8b462e546b78a212acd5fdbc263bd65}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_object@{value\_to\_object}}
+\index{value\_to\_object@{value\_to\_object}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_object()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} value\+\_\+to\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to object 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a4dcb4eba01ca47fbeb7a4bc19ddfe269}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_bool@{value\_from\_bool}}
+\index{value\_from\_bool@{value\_from\_bool}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_bool()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
+
+
+
+Assign boolean {\bfseries{to}} value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Boolean to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with boolean {\bfseries{assigned}} to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a06ca0261b33ca4efa103a58755f40e5f}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_char@{value\_from\_char}}
+\index{value\_from\_char@{value\_from\_char}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_char()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Assign character {\ttfamily to} value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Character to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with char {\ttfamily assigned} to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a1da4fafcc4f72985387a44a9f4463805}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_short@{value\_from\_short}}
+\index{value\_from\_short@{value\_from\_short}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_short()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+short (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{short}]{s }\end{DoxyParamCaption})}
+
+
+
+Assign short @s to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Short to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with short @s assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a383c497cf20b063e585340961caa69a9}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_int@{value\_from\_int}}
+\index{value\_from\_int@{value\_from\_int}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_int()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+int (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Assign integer @i to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & Integer to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with integer @i assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_aa4a44d96a1ee259b5de047cc152b4842}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_long@{value\_from\_long}}
+\index{value\_from\_long@{value\_from\_long}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_long()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+long (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{long}]{l }\end{DoxyParamCaption})}
+
+
+
+Assign long integer @l to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Long integer to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with long @l assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a0969a259365078cc01eeb5a6ed580f2d}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_float@{value\_from\_float}}
+\index{value\_from\_float@{value\_from\_float}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_float()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+float (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Assign single precision floating point @f to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & Float to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with float @f assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_aa5695716046334cc798a2ef020d2d98a}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_double@{value\_from\_double}}
+\index{value\_from\_double@{value\_from\_double}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_double()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+double (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Assign double precision floating point @d to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em d} & Double to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with double @d assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a9907caedcedebb719af888d8d3281894}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_string@{value\_from\_string}}
+\index{value\_from\_string@{value\_from\_string}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_string()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Assign string @str to value @v, truncates to @v size if it is smaller than @length + 1. It does not add null terminator if truncated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em str} & Constant string to be assigned to value @v (it needs to be null terminated)\\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Length of the constant string @str\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with string @str assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a6614434b3934ccd004df66cae43e573e}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_buffer@{value\_from\_buffer}}
+\index{value\_from\_buffer@{value\_from\_buffer}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_buffer()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Assign array @buffer to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & Constant byte array to be assigned to value @v\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size in bytes of data contained in @buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with array @buffer assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ab033d70d6a87f879f644adf6ee9181ae}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_array@{value\_from\_array}}
+\index{value\_from\_array@{value\_from\_array}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_array()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const \textbf{ value} $\ast$}]{values,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Assign array of values @values to value array @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Constant array of values to be assigned to value array @v\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of values contained in constant array @values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with array of values @values assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_aff64e6508d97bdc2688f1c65dee8643c}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_map@{value\_from\_map}}
+\index{value\_from\_map@{value\_from\_map}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_map()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const \textbf{ value} $\ast$}]{tuples,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Assign array of values @values to value map @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em tuples} & Constant array of tuples to be assigned to value map @v\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of values contained in constant array @tuples\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with array of tuples @tuples assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a963248403f6036e54b623152f808aa43}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_ptr@{value\_from\_ptr}}
+\index{value\_from\_ptr@{value\_from\_ptr}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_ptr()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Assign pointer reference @ptr to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with pointer @ptr assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a2cb49f3496dfa915bec90c35f9141fa6}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_future@{value\_from\_future}}
+\index{value\_from\_future@{value\_from\_future}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_future()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ future}}]{f }\end{DoxyParamCaption})}
+
+
+
+Assign future reference @f to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & Future to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with future @future assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a6afd8c70f1ea771e03401ef98c2c2416}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_function@{value\_from\_function}}
+\index{value\_from\_function@{value\_from\_function}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_function()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ function}}]{f }\end{DoxyParamCaption})}
+
+
+
+Assign function reference @f to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & Function to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with function @f assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a3457040bbc954e56559bbb39b15730c2}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_null@{value\_from\_null}}
+\index{value\_from\_null@{value\_from\_null}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_null()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Assign null to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with null assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a5f582aba1b8e8d67feac89a391c6cb34}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_class@{value\_from\_class}}
+\index{value\_from\_class@{value\_from\_class}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_class()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ klass}}]{c }\end{DoxyParamCaption})}
+
+
+
+Assign class reference {\ttfamily to} value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Class to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with class {\ttfamily assigned} to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a7f909c52ff40f670cc3c388eedd4eef4}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_object@{value\_from\_object}}
+\index{value\_from\_object@{value\_from\_object}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_object()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ object}}]{o }\end{DoxyParamCaption})}
+
+
+
+Assign object reference @o to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em o} & Object to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with object @o assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a89d30694c2d675c9d4077e9f999f95cf}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_destroy@{value\_type\_destroy}}
+\index{value\_type\_destroy@{value\_type\_destroy}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_type\_destroy()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+type\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Destroy recursively a value type @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,1620 @@
+.TH "metacall.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+metacall.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <metacall/metacall_api\&.h>\fP
+.br
+\fC#include <metacall/metacall_allocator\&.h>\fP
+.br
+\fC#include <metacall/metacall_def\&.h>\fP
+.br
+\fC#include <metacall/metacall_log\&.h>\fP
+.br
+\fC#include <metacall/metacall_value\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmetacall_initialize_configuration_type\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMETACALL_FLAGS_FORK_SAFE\fP   0x01 << 0x00"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const METACALL_API char * \fBmetacall_serial\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API void \fBmetacall_log_null\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API void \fBmetacall_flags\fP (int flags)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_initialize\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_initialize_ex\fP (struct \fBmetacall_initialize_configuration_type\fP initialize_config[])"
+.br
+.ti -1c
+.RI "METACALL_API void \fBmetacall_initialize_args\fP (int argc, char *argv[])"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_argc\fP ()"
+.br
+.ti -1c
+.RI "METACALL_API char ** \fBmetacall_argv\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_is_initialized\fP (const char *tag)"
+.br
+.ti -1c
+.RI "METACALL_API size_t \fBmetacall_args_size\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_execution_path\fP (const char *tag, const char *path)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_execution_path_s\fP (const char *tag, size_t tag_length, const char *path, size_t path_length)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_load_from_file\fP (const char *tag, const char *paths[], size_t size, void **handle)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_load_from_memory\fP (const char *tag, const char *buffer, size_t size, void **handle)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_load_from_package\fP (const char *tag, const char *path, void **handle)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_load_from_configuration\fP (const char *path, void **handle, void *allocator)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallv\fP (const char *name, void *args[])"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallv_s\fP (const char *name, void *args[], size_t size)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallhv\fP (void *handle, const char *name, void *args[])"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallhv_s\fP (void *handle, const char *name, void *args[], size_t size)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall\fP (const char *name,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallt\fP (const char *name, const enum \fBmetacall_value_id\fP ids[],\&.\&.\&.)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallt_s\fP (const char *name, const enum \fBmetacall_value_id\fP ids[], size_t size,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallht_s\fP (void *handle, const char *name, const enum \fBmetacall_value_id\fP ids[], size_t size,\&.\&.\&.)"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+Get the function by
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Function reference, null if the function does not exist 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_function\fP (const char *name)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBfrom @handle\fP"
+.br
+Get the function by
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Pointer to the handle returned by metacall_load_from_{file, memory, package}
+.br
+\fIname\fP Name of the function
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Function reference, null if the function does not exist 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_handle_function\fP (void *handle, const char *name)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_function_parameter_type\fP (void *func, size_t parameter, enum \fBmetacall_value_id\fP *id)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_function_return_type\fP (void *func, enum \fBmetacall_value_id\fP *id)"
+.br
+.ti -1c
+.RI "METACALL_API size_t \fBmetacall_function_size\fP (void *func)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_function_async\fP (void *func)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+Get the handle by
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Extension of the script
+.br
+\fIname\fP Name of the handle
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Handle reference, null if the function does not exist 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_handle\fP (const char *tag, const char *name)"
+.br
+.ti -1c
+.RI "const METACALL_API char * \fBmetacall_handle_id\fP (void *handle)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_handle_export\fP (void *handle)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfv\fP (void *func, void *args[])"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfv_s\fP (void *func, void *args[], size_t size)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallf\fP (void *func,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfs\fP (void *func, const char *buffer, size_t size, void *allocator)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfmv\fP (void *func, void *keys[], void *values[])"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfms\fP (void *func, const char *buffer, size_t size, void *allocator)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBand arguments @va_args\fP"
+.br
+Register a function by name
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.br
+\fIinvoke\fP Pointer to function invoke interface (argc, argv, data)
+.br
+\fIfunc\fP Will set the pointer to the function if the parameter is not null
+.br
+\fIreturn_type\fP Type of return value
+.br
+\fIsize\fP Number of function arguments
+.br
+\fIva_args\fP Varidic function parameter types
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "METACALL_API int \fBmetacall_register\fP (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum \fBmetacall_value_id\fP return_type, size_t size,\&.\&.\&.)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBand arguments @types\fP"
+.br
+Register a function by name
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.br
+\fIinvoke\fP Pointer to function invoke interface (argc, argv, data)
+.br
+\fIfunc\fP Will set the pointer to the function if the parameter is not null
+.br
+\fIreturn_type\fP Type of return value
+.br
+\fIsize\fP Number of function arguments
+.br
+\fItypes\fP List of parameter types
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "METACALL_API int \fBmetacall_registerv\fP (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_await\fP (const char *name, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_await_future\fP (void *f, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_await_s\fP (const char *name, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfv_await\fP (void *func, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfv_await_s\fP (void *func, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfmv_await\fP (void *func, void *keys[], void *values[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfmv_await_s\fP (void *func, void *keys[], void *values[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfs_await\fP (void *func, const char *buffer, size_t size, void *allocator, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallfms_await\fP (void *func, const char *buffer, size_t size, void *allocator, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+Get the class by
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the class
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Class reference, null if the class does not exist 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_class\fP (const char *name)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallv_class\fP (void *cls, const char *name, void *args[], size_t argc)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_class_new\fP (void *cls, const char *name, void *args[], size_t argc)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_class_static_get\fP (void *cls, const char *key)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_class_static_set\fP (void *cls, const char *key, void *v)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallv_object\fP (void *obj, const char *name, void *args[], size_t argc)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_object_get\fP (void *obj, const char *key)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_object_set\fP (void *obj, const char *key, void *v)"
+.br
+.ti -1c
+.RI "METACALL_API char * \fBmetacall_inspect\fP (size_t *size, void *allocator)"
+.br
+.ti -1c
+.RI "METACALL_API char * \fBmetacall_serialize\fP (const char *name, void *v, size_t *size, void *allocator)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_deserialize\fP (const char *name, const char *buffer, size_t size, void *allocator)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_clear\fP (void *handle)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_destroy\fP (void)"
+.br
+.ti -1c
+.RI "const METACALL_API char * \fBmetacall_print_info\fP (void)"
+.br
+.in -1c
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_null_args\fP [1]"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define METACALL_FLAGS_FORK_SAFE   0x01 << 0x00"
+
+.SH "Function Documentation"
+.PP 
+.SS "const METACALL_API char* metacall_serial (void)"
+
+.PP
+Returns default serializer used by MetaCall\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Name of the serializer to be used with serialization methods 
+.RE
+.PP
+
+.SS "METACALL_API void metacall_log_null (void)"
+
+.PP
+Disables MetaCall logs, must be called before @metacall_initialize\&. When initializing MetaCall, it initializes a default logs to stdout if none was defined\&. If you want to benchmark or simply disable this default logs, you can call to this function before @metacall_initialize\&. 
+.SS "METACALL_API void metacall_flags (int flags)"
+
+.PP
+Flags to be set in MetaCall library\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIflags\fP Combination of flags referring to definitions METACALL_FLAGS_* 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_initialize (void)"
+
+.PP
+Initialize MetaCall library\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_initialize_ex (struct \fBmetacall_initialize_configuration_type\fP initialize_config[])"
+
+.PP
+Initialize MetaCall library with configuration arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitialize_config\fP Extension of the script to be loaded in memory with data to be injected
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void metacall_initialize_args (int argc, char * argv[])"
+
+.PP
+Initialize MetaCall application arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP Number of additional parameters to be passed to the runtime when initializing
+.br
+\fIargv\fP Additional parameters to be passed to the runtime when initializing (when using MetaCall as an application) 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_argc ()"
+
+.PP
+Get the number of arguments in which MetaCall was initialized\&. 
+.PP
+\fBReturns\fP
+.RS 4
+An integer equal or greater than zero 
+.RE
+.PP
+
+.SS "METACALL_API char** metacall_argv (void)"
+
+.PP
+Get the arguments in which MetaCall was initialized\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to an array of strings with the additional arguments 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_is_initialized (const char * tag)"
+
+.PP
+Check if script context is loaded by @tag\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Extension of the script
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if context is initialized, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API size_t metacall_args_size (void)"
+
+.PP
+Amount of function call arguments supported by MetaCall\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Number of arguments suported 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_execution_path (const char * tag, const char * path)"
+
+.PP
+Set a execution path defined by @path to the extension script @tag\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Extension of the script
+.br
+\fIpath\fP Path to be loaded
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_execution_path_s (const char * tag, size_t tag_length, const char * path, size_t path_length)"
+
+.PP
+Set a execution path defined by @path to the extension script @tag with length\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Extension of the script
+.br
+\fItag_length\fP Length of the extension of the tag
+.br
+\fIpath\fP Path to be loaded
+.br
+\fIpath_length\fP Length of the path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_load_from_file (const char * tag, const char * paths[], size_t size, void ** handle)"
+
+.PP
+Loads a script from file specified by @path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Extension of the script
+.br
+\fIpaths\fP Path array of files
+.br
+\fIsize\fP Size of the array @paths
+.br
+\fIhandle\fP Optional pointer to reference of loaded handle
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_load_from_memory (const char * tag, const char * buffer, size_t size, void ** handle)"
+
+.PP
+Loads a script from memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Extension of the script
+.br
+\fIbuffer\fP Memory block representing the string of the script
+.br
+\fIsize\fP Memory block representing the string of the script
+.br
+\fIhandle\fP Optional pointer to reference of loaded handle
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_load_from_package (const char * tag, const char * path, void ** handle)"
+
+.PP
+Loads a package of scrips from file specified by @path into loader defined by @extension\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Extension of the script
+.br
+\fIpath\fP Path of the package
+.br
+\fIhandle\fP Optional pointer to reference of loaded handle
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_load_from_configuration (const char * path, void ** handle, void * allocator)"
+
+.PP
+Loads a a list of scrips from configuration specified by @path into loader with the following format: { 'language_id': '<tag>', 'path': '<path>', 'scripts': [ '<script0>', '<script1>', \&.\&.\&., '<scriptN>' ] }\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path of the configuration
+.br
+\fIhandle\fP Optional pointer to reference of loaded handle
+.br
+\fIallocator\fP Pointer to allocator will allocate the configuration
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallv (const char * name, void * args[])"
+
+.PP
+Call a function anonymously by value array @args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.br
+\fIargs\fP Array of pointers to data
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallv_s (const char * name, void * args[], size_t size)"
+
+.PP
+Call a function anonymously by value array @args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.br
+\fIargs\fP Array of pointers to data
+.br
+\fIsize\fP Number of elements of the call
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallhv (void * handle, const char * name, void * args[])"
+
+.PP
+Call a function anonymously by handle @handle value array @args This function allows to avoid name collisions when calling functions by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Handle where the function belongs
+.br
+\fIname\fP Name of the function
+.br
+\fIargs\fP Array of pointers to data
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallhv_s (void * handle, const char * name, void * args[], size_t size)"
+
+.PP
+Call a function anonymously by handle @handle value array @args This function allows to avoid name collisions when calling functions by name Includes @size in order to allow variadic arguments or safe calls\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Handle where the function belongs
+.br
+\fIname\fP Name of the function
+.br
+\fIargs\fP Array of pointers to data
+.br
+\fIsize\fP Number of elements of the call
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall (const char * name,  \&.\&.\&.)"
+
+.PP
+Call a function anonymously by variable arguments @va_args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.br
+\fIva_args\fP Varidic function parameters
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallt (const char * name, const enum \fBmetacall_value_id\fP ids[],  \&.\&.\&.)"
+
+.PP
+Call a function anonymously by type array @ids and variable arguments @va_args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.br
+\fIids\fP Array of types refered to @va_args
+.br
+\fIva_args\fP Varidic function parameters
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallt_s (const char * name, const enum \fBmetacall_value_id\fP ids[], size_t size,  \&.\&.\&.)"
+
+.PP
+Call a function anonymously by type array @ids and variable arguments @va_args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the function
+.br
+\fIids\fP Array of types refered to @va_args
+.br
+\fIsize\fP Number of elements of the call
+.br
+\fIva_args\fP Varidic function parameters
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallht_s (void * handle, const char * name, const enum \fBmetacall_value_id\fP ids[], size_t size,  \&.\&.\&.)"
+
+.PP
+Call a function anonymously by type array @ids and variable arguments @va_args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Pointer to the handle returned by metacall_load_from_{file, memory, package}
+.br
+\fIname\fP Name of the function
+.br
+\fIids\fP Array of types refered to @va_args
+.br
+\fIsize\fP Number of elements of the call
+.br
+\fIva_args\fP Varidic function parameters
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_function (const char * name)"
+
+.SS "METACALL_API void* metacall_handle_function (void * handle, const char * name)"
+
+.SS "METACALL_API int metacall_function_parameter_type (void * func, size_t parameter, enum \fBmetacall_value_id\fP * id)"
+
+.PP
+Get the function parameter type id\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP The pointer to the function obtained from metacall_function
+.br
+\fIparameter\fP The index of the parameter to be retrieved
+.br
+\fIid\fP The parameter type id that will be returned
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return 0 if the @parameter index exists and @func is valid, 1 otherwhise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_function_return_type (void * func, enum \fBmetacall_value_id\fP * id)"
+
+.PP
+Get the function return type id\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP The pointer to the function obtained from metacall_function
+.br
+\fIid\fP The value id of the return type of the function @func
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return 0 if the @func is valid, 1 otherwhise 
+.RE
+.PP
+
+.SS "METACALL_API size_t metacall_function_size (void * func)"
+
+.PP
+Get minimun mumber of arguments accepted by function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Function reference
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return mumber of arguments 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_function_async (void * func)"
+
+.PP
+Check if the function @func is asynchronous or synchronous\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Function reference
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return 0 if it is syncrhonous, 1 if it is asynchronous and -1 if the function is NULL 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_handle (const char * tag, const char * name)"
+
+.SS "const METACALL_API char* metacall_handle_id (void * handle)"
+
+.PP
+Get name of a @handle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Pointer to the handle to be retrieved
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String that references the handle 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_handle_export (void * handle)"
+
+.PP
+Return a value representing the handle as a map of functions (or values) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Reference to the handle to be described
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A value of type map on success, null otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfv (void * func, void * args[])"
+
+.PP
+Call a function anonymously by value array @args and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIargs\fP Array of pointers to data
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfv_s (void * func, void * args[], size_t size)"
+
+.PP
+Call a function anonymously by value array @args and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIargs\fP Array of pointers to data
+.br
+\fIsize\fP Number of function arguments
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallf (void * func,  \&.\&.\&.)"
+
+.PP
+Call a function anonymously by variable arguments @va_args and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfs (void * func, const char * buffer, size_t size, void * allocator)"
+
+.PP
+Call a function anonymously by function @func and serial @buffer of size @size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIbuffer\fP String representing an array to be deserialized into arguments of the function
+.br
+\fIsize\fP Size of string @buffer
+.br
+\fIallocator\fP Pointer to allocator will allocate the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfmv (void * func, void * keys[], void * values[])"
+
+.PP
+Call a function anonymously by value map (@keys -> @values) and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIkeys\fP Array of values representing argument keys
+.br
+\fIvalues\fP Array of values representing argument values data
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfms (void * func, const char * buffer, size_t size, void * allocator)"
+
+.PP
+Call a function anonymously by function @func and serial @buffer of size @size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIbuffer\fP String representing a map to be deserialized into arguments of the function
+.br
+\fIsize\fP Size of string @buffer
+.br
+\fIallocator\fP Pointer to allocator will allocate the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_register (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum \fBmetacall_value_id\fP return_type, size_t size,  \&.\&.\&.)"
+
+.SS "METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
+
+.SS "METACALL_API void* metacall_await (const char * name, void * args[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Executes an asynchronous call to the function and registers a callback to be executed when a future is resolved (it does block) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the function to be called asynchronously
+.br
+\fIargs\fP Array of pointers to the values to be passed to the function
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_await_future (void * f, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Awaits for a promise and registers a callback to be executed when a future is resolved\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The pointer to the future
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_await_s (const char * name, void * args[], size_t size, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Executes an asynchronous call to the function and registers a callback to be executed when a future is resolved (it does block) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The name of the function to be called asynchronously
+.br
+\fIargs\fP Array of pointers to the values to be passed to the function
+.br
+\fIsize\fP Number of elements of the array @args
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfv_await (void * func, void * args[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Call an asynchronous function anonymously by value array @args and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIargs\fP Array of pointers to values
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfv_await_s (void * func, void * args[], size_t size, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Call an asynchronous function anonymously by value array @args and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIargs\fP Array of pointers to values
+.br
+\fIsize\fP Number of elements of the array @args
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfmv_await (void * func, void * keys[], void * values[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Call an asynchronous function anonymously by value map (@keys -> @values) and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIkeys\fP Array of values representing argument keys
+.br
+\fIvalues\fP Array of values representing argument values data
+.br
+\fIsize\fP Number of elements of the arrays @keys and @values
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfmv_await_s (void * func, void * keys[], void * values[], size_t size, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Call an asynchronous function anonymously by value map (@keys -> @values) and function @func\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIkeys\fP Array of values representing argument keys
+.br
+\fIvalues\fP Array of values representing argument values data
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfs_await (void * func, const char * buffer, size_t size, void * allocator, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Call an asynchronous function anonymously by function @func and serial @buffer of size @size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIbuffer\fP String representing an array to be deserialized into arguments of the function
+.br
+\fIsize\fP Size of string @buffer
+.br
+\fIallocator\fP Pointer to allocator will allocate the value
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallfms_await (void * func, const char * buffer, size_t size, void * allocator, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
+
+.PP
+Call an asynchronous function anonymously by function @func and serial @buffer of size @size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIbuffer\fP String representing a map to be deserialized into arguments of the function
+.br
+\fIsize\fP Size of string @buffer
+.br
+\fIallocator\fP Pointer to allocator will allocate the value
+.br
+\fIresolve_callback\fP Pointer to function that will be executed when task completion 
+.br
+\fIvoid\fP * Value representing the result of the future resolution 
+.br
+\fIvoid\fP * A reference to @data that will be used as a closure for the chain 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIreject_callback\fP Pointer to function that will be executed when task error (signature is identical as resolve_callback)
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_class (const char * name)"
+
+.SS "METACALL_API void* metacallv_class (void * cls, const char * name, void * args[], size_t argc)"
+
+.PP
+Call a class method anonymously by value array @args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the method
+.br
+\fIcls\fP Pointer to the class
+.br
+\fIargs\fP Array of pointers to data
+.br
+\fIsize\fP Number of elements of args array
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_class_new (void * cls, const char * name, void * args[], size_t argc)"
+
+.PP
+Create a new object instance from @cls by value array @args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcls\fP Pointer to the class
+.br
+\fIname\fP Name of the new object
+.br
+\fIargs\fP Array of pointers constructor parameters
+.br
+\fIsize\fP Number of elements of constructor parameters
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the new object value instance 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_class_static_get (void * cls, const char * key)"
+
+.PP
+Get an attribute from @cls by @key name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcls\fP Pointer to the class
+.br
+\fIkey\fP Name of the attribute to get
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the class attribute value or NULL if an error occurred 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_class_static_set (void * cls, const char * key, void * v)"
+
+.PP
+Set an attribute to @cls by @key name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcls\fP Pointer to the class
+.br
+\fIkey\fP Name of the attribute to set
+.br
+\fIvalue\fP Value to set
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Non-zero integer if an error ocurred 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallv_object (void * obj, const char * name, void * args[], size_t argc)"
+
+.PP
+Call an object method anonymously by value array @args\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobj\fP Pointer to the object
+.br
+\fIname\fP Name of the method
+.br
+\fIargs\fP Array of pointers to data
+.br
+\fIsize\fP Number of elements of args array
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_object_get (void * obj, const char * key)"
+
+.PP
+Get an attribute from @obj by @key name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobj\fP Pointer to the object
+.br
+\fIkey\fP Name of the attribute to get
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the object attribute value or NULL if an error occurred 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_object_set (void * obj, const char * key, void * v)"
+
+.PP
+Set an attribute to @obj by @key name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobj\fP Pointer to the object
+.br
+\fIkey\fP Name of the attribute to set
+.br
+\fIvalue\fP Value to set
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Non-zero integer if an error ocurred 
+.RE
+.PP
+
+.SS "METACALL_API char* metacall_inspect (size_t * size, void * allocator)"
+
+.PP
+Provide information about all loaded objects\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP Size in bytes of return buffer
+.br
+\fIallocator\fP Pointer to allocator will allocate the string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String containing introspection information 
+.RE
+.PP
+
+.SS "METACALL_API char* metacall_serialize (const char * name, void * v, size_t * size, void * allocator)"
+
+.PP
+Convert the value @v to serialized string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the serial to be used
+.br
+\fIv\fP Reference to the value
+.br
+\fIsize\fP Size of new allocated string
+.br
+\fIallocator\fP Pointer to allocator will allocate the string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+New allocated string containing stringified value 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_deserialize (const char * name, const char * buffer, size_t size, void * allocator)"
+
+.PP
+Convert the string @buffer to value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the serial to be used
+.br
+\fIbuffer\fP String to be deserialized
+.br
+\fIsize\fP Size of string @buffer
+.br
+\fIallocator\fP Pointer to allocator will allocate the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+New allocated value representing the string (must be freed) 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_clear (void * handle)"
+
+.PP
+Clear handle from memory and unload related resources\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Reference to the handle to be unloaded
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_destroy (void)"
+
+.PP
+Destroy MetaCall library\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "const METACALL_API char* metacall_print_info (void)"
+
+.PP
+Provide the module information\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static string containing module information 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "METACALL_API void* metacall_null_args[1]"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,211 @@
+\doxysection{adt\+\_\+trie.\+h File Reference}
+\label{adt__trie_8h}\index{adt\_trie.h@{adt\_trie.h}}
+{\ttfamily \#include $<$adt/adt\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+comparable.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+hash.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+vector.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for adt\+\_\+trie.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adt__trie_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=97pt]{adt__trie_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct trie\+\_\+type $\ast$ \textbf{ trie}
+\item 
+typedef \textbf{ hash} \textbf{ trie\+\_\+hash}
+\item 
+typedef \textbf{ comparable} \textbf{ trie\+\_\+key}
+\item 
+typedef void $\ast$ \textbf{ trie\+\_\+value}
+\item 
+typedef void $\ast$ \textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args}
+\item 
+typedef \textbf{ hash\+\_\+callback} \textbf{ trie\+\_\+cb\+\_\+hash}
+\item 
+typedef \textbf{ comparable\+\_\+callback} \textbf{ trie\+\_\+cb\+\_\+compare}
+\item 
+typedef int($\ast$ \textbf{ trie\+\_\+cb\+\_\+iterate}) (\textbf{ trie}, \textbf{ trie\+\_\+key}, \textbf{ trie\+\_\+value}, \textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ trie} \textbf{ trie\+\_\+create} (\textbf{ trie\+\_\+cb\+\_\+hash} hash\+\_\+cb, \textbf{ trie\+\_\+cb\+\_\+compare} compare\+\_\+cb)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ trie} \textbf{ trie\+\_\+create\+\_\+reserve} (size\+\_\+t capacity, size\+\_\+t key\+\_\+limit, size\+\_\+t depth\+\_\+limit, \textbf{ trie\+\_\+cb\+\_\+hash} hash\+\_\+cb, \textbf{ trie\+\_\+cb\+\_\+compare} compare\+\_\+cb)
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ trie\+\_\+size} (\textbf{ trie} t)
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ trie\+\_\+capacity} (\textbf{ trie} t)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ trie\+\_\+insert} (\textbf{ trie} t, \textbf{ vector} keys, \textbf{ trie\+\_\+value} \textbf{ value})
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ trie\+\_\+value} \textbf{ trie\+\_\+get} (\textbf{ trie} t, \textbf{ vector} keys)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ trie\+\_\+value} \textbf{ trie\+\_\+remove} (\textbf{ trie} t, \textbf{ vector} keys)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ trie\+\_\+iterate\+\_\+recursive} (\textbf{ trie} t, \textbf{ trie\+\_\+cb\+\_\+iterate} iterate\+\_\+cb, \textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args} args)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ trie\+\_\+iterate} (\textbf{ trie} t, \textbf{ trie\+\_\+cb\+\_\+iterate} iterate\+\_\+cb, \textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args} args)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ trie\+\_\+append} (\textbf{ trie} dest, \textbf{ trie} src)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ trie\+\_\+clear} (\textbf{ trie} t)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ trie\+\_\+prefixes} (\textbf{ trie} t, \textbf{ trie\+\_\+key} key, \textbf{ vector} prefixes)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ trie} \textbf{ trie\+\_\+suffixes} (\textbf{ trie} t, \textbf{ trie\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ trie\+\_\+destroy} (\textbf{ trie} t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{adt__trie_8h_a9ec8df0516e6be2086a47876aa3c23ea}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie@{trie}}
+\index{trie@{trie}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie}
+{\footnotesize\ttfamily typedef struct trie\+\_\+type$\ast$ \textbf{ trie}}
+
+\mbox{\label{adt__trie_8h_ab8c8392df0a62886d7d670908aca7dac}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_hash@{trie\_hash}}
+\index{trie\_hash@{trie\_hash}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_hash}
+{\footnotesize\ttfamily typedef \textbf{ hash} \textbf{ trie\+\_\+hash}}
+
+\mbox{\label{adt__trie_8h_a915a87e1342541e40a567f8abea11b44}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_key@{trie\_key}}
+\index{trie\_key@{trie\_key}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_key}
+{\footnotesize\ttfamily typedef \textbf{ comparable} \textbf{ trie\+\_\+key}}
+
+\mbox{\label{adt__trie_8h_ada14186252ab60115e4dc0017ede3ce9}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_value@{trie\_value}}
+\index{trie\_value@{trie\_value}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_value}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ trie\+\_\+value}}
+
+\mbox{\label{adt__trie_8h_af24c089862b5865cee995d834accbb9a}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_cb\_iterate\_args@{trie\_cb\_iterate\_args}}
+\index{trie\_cb\_iterate\_args@{trie\_cb\_iterate\_args}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_cb\_iterate\_args}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args}}
+
+\mbox{\label{adt__trie_8h_aa74044b4a37abcba9705e137201de7a4}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_cb\_hash@{trie\_cb\_hash}}
+\index{trie\_cb\_hash@{trie\_cb\_hash}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_cb\_hash}
+{\footnotesize\ttfamily typedef \textbf{ hash\+\_\+callback} \textbf{ trie\+\_\+cb\+\_\+hash}}
+
+\mbox{\label{adt__trie_8h_a5042b2f6f945ad840719384c2f0e677f}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_cb\_compare@{trie\_cb\_compare}}
+\index{trie\_cb\_compare@{trie\_cb\_compare}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_cb\_compare}
+{\footnotesize\ttfamily typedef \textbf{ comparable\+\_\+callback} \textbf{ trie\+\_\+cb\+\_\+compare}}
+
+\mbox{\label{adt__trie_8h_adb0189e8df46e679519fe15a269e4130}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_cb\_iterate@{trie\_cb\_iterate}}
+\index{trie\_cb\_iterate@{trie\_cb\_iterate}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_cb\_iterate}
+{\footnotesize\ttfamily typedef int($\ast$ trie\+\_\+cb\+\_\+iterate) (\textbf{ trie}, \textbf{ trie\+\_\+key}, \textbf{ trie\+\_\+value}, \textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args})}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{adt__trie_8h_ace480faefba0d60a456e5488cbbe34ea}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_create@{trie\_create}}
+\index{trie\_create@{trie\_create}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_create()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ trie} trie\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ trie\+\_\+cb\+\_\+hash}}]{hash\+\_\+cb,  }\item[{\textbf{ trie\+\_\+cb\+\_\+compare}}]{compare\+\_\+cb }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_acd742e8bd78713c67222448135134e5a}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_create\_reserve@{trie\_create\_reserve}}
+\index{trie\_create\_reserve@{trie\_create\_reserve}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_create\_reserve()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ trie} trie\+\_\+create\+\_\+reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity,  }\item[{size\+\_\+t}]{key\+\_\+limit,  }\item[{size\+\_\+t}]{depth\+\_\+limit,  }\item[{\textbf{ trie\+\_\+cb\+\_\+hash}}]{hash\+\_\+cb,  }\item[{\textbf{ trie\+\_\+cb\+\_\+compare}}]{compare\+\_\+cb }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_aa459e92fd29efa3b108fd43e24ad86a9}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_size@{trie\_size}}
+\index{trie\_size@{trie\_size}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_size()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t trie\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a9e53e530c646d5036ab451d5cfe19b69}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_capacity@{trie\_capacity}}
+\index{trie\_capacity@{trie\_capacity}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_capacity()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t trie\+\_\+capacity (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_ab3a999ef9a696b8bcba287bba844df75}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_insert@{trie\_insert}}
+\index{trie\_insert@{trie\_insert}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_insert()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int trie\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t,  }\item[{\textbf{ vector}}]{keys,  }\item[{\textbf{ trie\+\_\+value}}]{value }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_af73239b8dee66757d5ecbc5ff8110d5a}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_get@{trie\_get}}
+\index{trie\_get@{trie\_get}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_get()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ trie\+\_\+value} trie\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t,  }\item[{\textbf{ vector}}]{keys }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_ab88d59d5c24291946b62c6e53f90cf4e}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_remove@{trie\_remove}}
+\index{trie\_remove@{trie\_remove}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_remove()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ trie\+\_\+value} trie\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t,  }\item[{\textbf{ vector}}]{keys }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a83ec8301fa64e2f07de788362cab315b}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_iterate\_recursive@{trie\_iterate\_recursive}}
+\index{trie\_iterate\_recursive@{trie\_iterate\_recursive}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_iterate\_recursive()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void trie\+\_\+iterate\+\_\+recursive (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t,  }\item[{\textbf{ trie\+\_\+cb\+\_\+iterate}}]{iterate\+\_\+cb,  }\item[{\textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args}}]{args }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a4780dad91d0124f849781a7c9677842b}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_iterate@{trie\_iterate}}
+\index{trie\_iterate@{trie\_iterate}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_iterate()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void trie\+\_\+iterate (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t,  }\item[{\textbf{ trie\+\_\+cb\+\_\+iterate}}]{iterate\+\_\+cb,  }\item[{\textbf{ trie\+\_\+cb\+\_\+iterate\+\_\+args}}]{args }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a96afe437e9e3f50a6b7736d2efb63781}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_append@{trie\_append}}
+\index{trie\_append@{trie\_append}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_append()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int trie\+\_\+append (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{dest,  }\item[{\textbf{ trie}}]{src }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a7b7cea299acb515f25ba560f5d9ce077}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_clear@{trie\_clear}}
+\index{trie\_clear@{trie\_clear}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_clear()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int trie\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a931493cfc03d05321988116ed51f1ef7}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_prefixes@{trie\_prefixes}}
+\index{trie\_prefixes@{trie\_prefixes}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_prefixes()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int trie\+\_\+prefixes (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t,  }\item[{\textbf{ trie\+\_\+key}}]{key,  }\item[{\textbf{ vector}}]{prefixes }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a70a6d5ed35e9bf656a677785866cddde}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_suffixes@{trie\_suffixes}}
+\index{trie\_suffixes@{trie\_suffixes}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_suffixes()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ trie} trie\+\_\+suffixes (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t,  }\item[{\textbf{ trie\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__trie_8h_a0f224cfe6db8901ab71a9992eb7a09fc}} 
+\index{adt\_trie.h@{adt\_trie.h}!trie\_destroy@{trie\_destroy}}
+\index{trie\_destroy@{trie\_destroy}!adt\_trie.h@{adt\_trie.h}}
+\doxysubsubsection{trie\_destroy()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void trie\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ trie}}]{t }\end{DoxyParamCaption})}
+

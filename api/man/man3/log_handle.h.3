@@ -1,0 +1,85 @@
+.TH "log_handle.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_handle.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <log/log_record\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct log_handle_type * \fBlog_handle\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOG_API \fBlog_handle\fP \fBlog_handle_create\fP (void)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_handle\fP \fBlog_handle_initialize\fP (\fBlog_handle\fP handle)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_record\fP \fBlog_handle_get\fP (\fBlog_handle\fP handle, const size_t record_id)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_record\fP \fBlog_handle_set\fP (\fBlog_handle\fP handle, const size_t record_id, const log_record_ctor record_ctor)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_record\fP \fBlog_handle_push\fP (\fBlog_handle\fP handle, const log_record_ctor record_ctor)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_record\fP \fBlog_handle_pop\fP (\fBlog_handle\fP handle)"
+.br
+.ti -1c
+.RI "LOG_API size_t \fBlog_handle_count\fP (\fBlog_handle\fP handle)"
+.br
+.ti -1c
+.RI "LOG_API size_t \fBlog_handle_size\fP (\fBlog_handle\fP handle)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_handle_clear\fP (\fBlog_handle\fP handle)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_handle_destroy\fP (\fBlog_handle\fP handle)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct log_handle_type* \fBlog_handle\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "LOG_API \fBlog_handle\fP log_handle_create (void)"
+
+.SS "LOG_API \fBlog_handle\fP log_handle_initialize (\fBlog_handle\fP handle)"
+
+.SS "LOG_API \fBlog_record\fP log_handle_get (\fBlog_handle\fP handle, const size_t record_id)"
+
+.SS "LOG_API \fBlog_record\fP log_handle_set (\fBlog_handle\fP handle, const size_t record_id, const log_record_ctor record_ctor)"
+
+.SS "LOG_API \fBlog_record\fP log_handle_push (\fBlog_handle\fP handle, const log_record_ctor record_ctor)"
+
+.SS "LOG_API \fBlog_record\fP log_handle_pop (\fBlog_handle\fP handle)"
+
+.SS "LOG_API size_t log_handle_count (\fBlog_handle\fP handle)"
+
+.SS "LOG_API size_t log_handle_size (\fBlog_handle\fP handle)"
+
+.SS "LOG_API int log_handle_clear (\fBlog_handle\fP handle)"
+
+.SS "LOG_API int log_handle_destroy (\fBlog_handle\fP handle)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

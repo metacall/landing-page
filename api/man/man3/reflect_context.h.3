@@ -1,0 +1,68 @@
+.TH "reflect_context.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_context.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+\fC#include <reflect/reflect_scope\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct context_type * \fBcontext\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBcontext\fP \fBcontext_create\fP (const char *name)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBcontext_name\fP (\fBcontext\fP ctx)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBscope\fP \fBcontext_scope\fP (\fBcontext\fP ctx)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBcontext_append\fP (\fBcontext\fP dest, \fBcontext\fP src)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBcontext_contains\fP (\fBcontext\fP dest, \fBcontext\fP src)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBcontext_remove\fP (\fBcontext\fP dest, \fBcontext\fP src)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBcontext_destroy\fP (\fBcontext\fP ctx)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct context_type* \fBcontext\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBcontext\fP context_create (const char * name)"
+
+.SS "const REFLECT_API char* context_name (\fBcontext\fP ctx)"
+
+.SS "REFLECT_API \fBscope\fP context_scope (\fBcontext\fP ctx)"
+
+.SS "REFLECT_API int context_append (\fBcontext\fP dest, \fBcontext\fP src)"
+
+.SS "REFLECT_API int context_contains (\fBcontext\fP dest, \fBcontext\fP src)"
+
+.SS "REFLECT_API int context_remove (\fBcontext\fP dest, \fBcontext\fP src)"
+
+.SS "REFLECT_API void context_destroy (\fBcontext\fP ctx)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

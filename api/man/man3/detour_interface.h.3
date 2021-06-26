@@ -1,0 +1,54 @@
+.TH "detour_interface.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+detour_interface.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <detour/detour_api\&.h>\fP
+.br
+\fC#include <detour/detour_impl_handle\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBdetour_interface\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBdetour_impl_handle\fP(* \fBdetour_interface_initialize\fP) (void)"
+.br
+.ti -1c
+.RI "typedef int(* \fBdetour_interface_install\fP) (\fBdetour_impl_handle\fP, void(**) (void), void(*) (void))"
+.br
+.ti -1c
+.RI "typedef int(* \fBdetour_interface_uninstall\fP) (\fBdetour_impl_handle\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBdetour_interface_destroy\fP) (\fBdetour_impl_handle\fP)"
+.br
+.ti -1c
+.RI "typedef detour_interface(* \fBdetour_interface_singleton\fP) (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBdetour_impl_handle\fP(* detour_interface_initialize) (void)"
+
+.SS "typedef int(* detour_interface_install) (\fBdetour_impl_handle\fP, void(**)(void), void(*)(void))"
+
+.SS "typedef int(* detour_interface_uninstall) (\fBdetour_impl_handle\fP)"
+
+.SS "typedef int(* detour_interface_destroy) (\fBdetour_impl_handle\fP)"
+
+.SS "typedef detour_interface(* detour_interface_singleton) (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

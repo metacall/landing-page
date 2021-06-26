@@ -1,0 +1,79 @@
+\doxysection{loader\+\_\+impl\+\_\+export.\+h File Reference}
+\label{loader__impl__export_8h}\index{loader\_impl\_export.h@{loader\_impl\_export.h}}
+{\ttfamily \#include $<$loader/loader\+\_\+impl\+\_\+descriptor.\+h$>$}\newline
+{\ttfamily \#include $<$loader/loader\+\_\+impl\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$loader/loader\+\_\+impl\+\_\+print.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink.\+h$>$}\newline
+Include dependency graph for loader\+\_\+impl\+\_\+export.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{loader__impl__export_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ loader\+\_\+impl\+\_\+export}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+O\+A\+D\+E\+R\+\_\+\+I\+M\+P\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+T\+AG}~\+\_\+\+\_\+loader\+\_\+impl\+\_\+export\+\_\+tag
+\item 
+\#define \textbf{ L\+O\+A\+D\+E\+R\+\_\+\+I\+M\+P\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE}(api)
+\item 
+\#define \textbf{ L\+O\+A\+D\+E\+R\+\_\+\+I\+M\+P\+L\+\_\+\+E\+X\+P\+O\+RT}(export\+\_\+singleton)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef loader\+\_\+impl\+\_\+export($\ast$ \textbf{ loader\+\_\+impl\+\_\+export\+\_\+singleton}) (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{loader__impl__export_8h_a8ca7ab7b476a1b7ef8ddb719e8dfc761}} 
+\index{loader\_impl\_export.h@{loader\_impl\_export.h}!LOADER\_IMPL\_EXPORT\_TAG@{LOADER\_IMPL\_EXPORT\_TAG}}
+\index{LOADER\_IMPL\_EXPORT\_TAG@{LOADER\_IMPL\_EXPORT\_TAG}!loader\_impl\_export.h@{loader\_impl\_export.h}}
+\doxysubsubsection{LOADER\_IMPL\_EXPORT\_TAG}
+{\footnotesize\ttfamily \#define L\+O\+A\+D\+E\+R\+\_\+\+I\+M\+P\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+T\+AG~\+\_\+\+\_\+loader\+\_\+impl\+\_\+export\+\_\+tag}
+
+\mbox{\label{loader__impl__export_8h_a1a5117dd97313473e4aac4f1fc593ddc}} 
+\index{loader\_impl\_export.h@{loader\_impl\_export.h}!LOADER\_IMPL\_EXPORT\_INTERFACE@{LOADER\_IMPL\_EXPORT\_INTERFACE}}
+\index{LOADER\_IMPL\_EXPORT\_INTERFACE@{LOADER\_IMPL\_EXPORT\_INTERFACE}!loader\_impl\_export.h@{loader\_impl\_export.h}}
+\doxysubsubsection{LOADER\_IMPL\_EXPORT\_INTERFACE}
+{\footnotesize\ttfamily \#define L\+O\+A\+D\+E\+R\+\_\+\+I\+M\+P\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+CE(\begin{DoxyParamCaption}\item[{}]{api }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    api loader\_impl\_export LOADER\_IMPL\_EXPORT\_TAG(\textcolor{keywordtype}{void}); \(\backslash\)}
+\DoxyCodeLine{    DYNLINK\_SYMBOL\_EXPORT(LOADER\_IMPL\_EXPORT\_TAG)}
+
+\end{DoxyCode}
+\mbox{\label{loader__impl__export_8h_aa80480728e83b41c896fb5eaa1ab7551}} 
+\index{loader\_impl\_export.h@{loader\_impl\_export.h}!LOADER\_IMPL\_EXPORT@{LOADER\_IMPL\_EXPORT}}
+\index{LOADER\_IMPL\_EXPORT@{LOADER\_IMPL\_EXPORT}!loader\_impl\_export.h@{loader\_impl\_export.h}}
+\doxysubsubsection{LOADER\_IMPL\_EXPORT}
+{\footnotesize\ttfamily \#define L\+O\+A\+D\+E\+R\+\_\+\+I\+M\+P\+L\+\_\+\+E\+X\+P\+O\+RT(\begin{DoxyParamCaption}\item[{}]{export\+\_\+singleton }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    loader\_impl\_export LOADER\_IMPL\_EXPORT\_TAG()      \(\backslash\)}
+\DoxyCodeLine{    \{                                                \(\backslash\)}
+\DoxyCodeLine{        loader\_impl\_export exp = export\_singleton(); \(\backslash\)}
+\DoxyCodeLine{                                                     \(\backslash\)}
+\DoxyCodeLine{        return exp;                                  \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{loader__impl__export_8h_a63a06ca0a1570f4ce8230ecef88cd78c}} 
+\index{loader\_impl\_export.h@{loader\_impl\_export.h}!loader\_impl\_export\_singleton@{loader\_impl\_export\_singleton}}
+\index{loader\_impl\_export\_singleton@{loader\_impl\_export\_singleton}!loader\_impl\_export.h@{loader\_impl\_export.h}}
+\doxysubsubsection{loader\_impl\_export\_singleton}
+{\footnotesize\ttfamily typedef loader\+\_\+impl\+\_\+export($\ast$ loader\+\_\+impl\+\_\+export\+\_\+singleton) (void)}
+

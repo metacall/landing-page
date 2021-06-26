@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__handle_8h" kind="file" language="C++">
+    <compoundname>log_handle.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes refid="log__record_8h" local="no">log/log_record.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includedby refid="log__aspect__stream_8h" local="no">log_aspect_stream.h</includedby>
+    <includedby refid="log__impl_8h" local="no">log_impl.h</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>stdarg.h</label>
+      </node>
+      <node id="3">
+        <label>log/log_record.h</label>
+        <link refid="log__record_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="6">
+        <label>threading/threading_thread_id.h</label>
+      </node>
+      <node id="1">
+        <label>log_handle.h</label>
+        <link refid="log__handle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>log/log_level.h</label>
+        <link refid="log__level_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>log_impl.h</label>
+        <link refid="log__impl_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>log_aspect_stream.h</label>
+        <link refid="log__aspect__stream_8h"/>
+      </node>
+      <node id="1">
+        <label>log_handle.h</label>
+        <link refid="log__handle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>log_singleton.h</label>
+        <link refid="log__singleton_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" prot="public" static="no">
+        <type>struct log_handle_type *</type>
+        <definition>typedef struct log_handle_type* log_handle</definition>
+        <argsstring></argsstring>
+        <name>log_handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="44" column="30" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__handle_8h_1a1c7536699daf407eee8bb67c2eab49a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+        <definition>LOG_API log_handle log_handle_create</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_handle_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="48" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="48" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1ada2c7f76bc8fc22016695e565d9dda58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+        <definition>LOG_API log_handle log_handle_initialize</definition>
+        <argsstring>(log_handle handle)</argsstring>
+        <name>log_handle_initialize</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="50" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="50" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1ac4fdad18d31bb340f4402a310653e9f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref></type>
+        <definition>LOG_API log_record log_handle_get</definition>
+        <argsstring>(log_handle handle, const size_t record_id)</argsstring>
+        <name>log_handle_get</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>record_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="52" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="52" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1a88b5f466d448bf7920f3e8c51e2a2fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref></type>
+        <definition>LOG_API log_record log_handle_set</definition>
+        <argsstring>(log_handle handle, const size_t record_id, const log_record_ctor record_ctor)</argsstring>
+        <name>log_handle_set</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>record_id</declname>
+        </param>
+        <param>
+          <type>const log_record_ctor</type>
+          <declname>record_ctor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="54" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="54" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1ad5f63af9ffd0089b6067d0d69dcc5da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref></type>
+        <definition>LOG_API log_record log_handle_push</definition>
+        <argsstring>(log_handle handle, const log_record_ctor record_ctor)</argsstring>
+        <name>log_handle_push</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>const log_record_ctor</type>
+          <declname>record_ctor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="56" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="56" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1a9d91a0795de60f11cf95f30f435c54ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref></type>
+        <definition>LOG_API log_record log_handle_pop</definition>
+        <argsstring>(log_handle handle)</argsstring>
+        <name>log_handle_pop</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="58" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="58" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1a040aea6a0005846bda846f9421364a05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API size_t</type>
+        <definition>LOG_API size_t log_handle_count</definition>
+        <argsstring>(log_handle handle)</argsstring>
+        <name>log_handle_count</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="60" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="60" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1afe1a4a6076ec5daa3f0de58635a8645d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API size_t</type>
+        <definition>LOG_API size_t log_handle_size</definition>
+        <argsstring>(log_handle handle)</argsstring>
+        <name>log_handle_size</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="62" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="62" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1aeeec8968a604c55c679d082946d08fe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_handle_clear</definition>
+        <argsstring>(log_handle handle)</argsstring>
+        <name>log_handle_clear</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="64" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="64" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__handle_8h_1a3433a4e193067930721505471faf5159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_handle_destroy</definition>
+        <argsstring>(log_handle handle)</argsstring>
+        <name>log_handle_destroy</name>
+        <param>
+          <type><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" line="66" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h" declline="66" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_HANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_HANDLER_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__record_8h" kindref="compound">log/log_record.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_handle_type;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_handle_type<sp/>*<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">LOG_API<sp/><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/><ref refid="log__handle_8h_1a1c7536699daf407eee8bb67c2eab49a1" kindref="member">log_handle_create</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">LOG_API<sp/><ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/><ref refid="log__handle_8h_1ada2c7f76bc8fc22016695e565d9dda58" kindref="member">log_handle_initialize</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">LOG_API<sp/><ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref><sp/><ref refid="log__handle_8h_1ac4fdad18d31bb340f4402a310653e9f1" kindref="member">log_handle_get</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>record_id);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">LOG_API<sp/><ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref><sp/><ref refid="log__handle_8h_1a88b5f466d448bf7920f3e8c51e2a2fd6" kindref="member">log_handle_set</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>record_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_record_ctor<sp/>record_ctor);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">LOG_API<sp/><ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref><sp/><ref refid="log__handle_8h_1ad5f63af9ffd0089b6067d0d69dcc5da5" kindref="member">log_handle_push</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_record_ctor<sp/>record_ctor);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">LOG_API<sp/><ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref><sp/><ref refid="log__handle_8h_1a9d91a0795de60f11cf95f30f435c54ab" kindref="member">log_handle_pop</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__handle_8h_1a040aea6a0005846bda846f9421364a05" kindref="member">log_handle_count</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__handle_8h_1afe1a4a6076ec5daa3f0de58635a8645d" kindref="member">log_handle_size</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__handle_8h_1aeeec8968a604c55c679d082946d08fe0" kindref="member">log_handle_clear</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__handle_8h_1a3433a4e193067930721505471faf5159" kindref="member">log_handle_destroy</ref>(<ref refid="log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6" kindref="member">log_handle</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_HANDLER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_handle.h"/>
+  </compounddef>
+</doxygen>

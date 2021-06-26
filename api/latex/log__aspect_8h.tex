@@ -1,0 +1,272 @@
+\doxysection{log\+\_\+aspect.\+h File Reference}
+\label{log__aspect_8h}\index{log\_aspect.h@{log\_aspect.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for log\+\_\+aspect.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{log__aspect_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__aspect_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ log\+\_\+aspect\+\_\+interface}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct log\+\_\+policy\+\_\+type $\ast$ \textbf{ log\+\_\+policy}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+aspect\+\_\+impl}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+aspect\+\_\+data}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+aspect\+\_\+ctor}
+\item 
+typedef struct log\+\_\+aspect\+\_\+type $\ast$ \textbf{ log\+\_\+aspect}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data}
+\item 
+typedef struct log\+\_\+impl\+\_\+type $\ast$ \textbf{ log\+\_\+impl}
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+aspect\+\_\+restrict\+\_\+cb}) (\textbf{ log\+\_\+aspect}, \textbf{ log\+\_\+policy})
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+cb}) (\textbf{ log\+\_\+aspect}, \textbf{ log\+\_\+policy}, \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data})
+\item 
+typedef \textbf{ log\+\_\+aspect\+\_\+data}($\ast$ \textbf{ log\+\_\+aspect\+\_\+impl\+\_\+create}) (\textbf{ log\+\_\+aspect}, const \textbf{ log\+\_\+aspect\+\_\+ctor})
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+aspect\+\_\+impl\+\_\+destroy}) (\textbf{ log\+\_\+aspect})
+\item 
+typedef log\+\_\+aspect\+\_\+interface($\ast$ \textbf{ log\+\_\+aspect\+\_\+singleton}) (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ log\+\_\+aspect\+\_\+id} \{ \newline
+\textbf{ L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+F\+O\+R\+M\+AT} = 0x00, 
+\textbf{ L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+C\+H\+E\+D\+U\+LE} = 0x01, 
+\textbf{ L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+T\+O\+R\+A\+GE} = 0x02, 
+\textbf{ L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+T\+R\+E\+AM} = 0x03, 
+\newline
+\textbf{ L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+I\+ZE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect} \textbf{ log\+\_\+aspect\+\_\+create} (\textbf{ log\+\_\+impl} impl, const log\+\_\+aspect\+\_\+interface iface, const \textbf{ log\+\_\+aspect\+\_\+ctor} ctor)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+aspect\+\_\+reserve} (\textbf{ log\+\_\+aspect} aspect, size\+\_\+t size)
+\item 
+L\+O\+G\+\_\+\+A\+PI void \textbf{ log\+\_\+aspect\+\_\+restrict} (\textbf{ log\+\_\+aspect} aspect, \textbf{ log\+\_\+aspect\+\_\+restrict\+\_\+cb} restrict\+\_\+cb)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect\+\_\+data} \textbf{ log\+\_\+aspect\+\_\+instance} (\textbf{ log\+\_\+aspect} aspect)
+\item 
+L\+O\+G\+\_\+\+A\+PI log\+\_\+aspect\+\_\+interface \textbf{ log\+\_\+aspect\+\_\+behavior} (\textbf{ log\+\_\+aspect} aspect)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} \textbf{ log\+\_\+aspect\+\_\+parent} (\textbf{ log\+\_\+aspect} aspect)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect\+\_\+impl} \textbf{ log\+\_\+aspect\+\_\+derived} (\textbf{ log\+\_\+aspect} aspect)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+aspect\+\_\+attach} (\textbf{ log\+\_\+aspect} aspect, \textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+first} (\textbf{ log\+\_\+aspect} aspect, \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+cb} notify\+\_\+cb, \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data} notify\+\_\+data)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+all} (\textbf{ log\+\_\+aspect} aspect, \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+cb} notify\+\_\+cb, \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data} notify\+\_\+data)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+aspect\+\_\+detach} (\textbf{ log\+\_\+aspect} aspect, \textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+aspect\+\_\+destroy} (\textbf{ log\+\_\+aspect} aspect)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{log__aspect_8h_aefc5ba1d88f16647657e9a4416b1abfe}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_policy@{log\_policy}}
+\index{log\_policy@{log\_policy}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_policy}
+{\footnotesize\ttfamily typedef struct log\+\_\+policy\+\_\+type$\ast$ \textbf{ log\+\_\+policy}}
+
+\mbox{\label{log__aspect_8h_ab74307bef83ff8a9391a258ddb183def}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_impl@{log\_aspect\_impl}}
+\index{log\_aspect\_impl@{log\_aspect\_impl}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_impl}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+aspect\+\_\+impl}}
+
+\mbox{\label{log__aspect_8h_abe9000f019615c7ea241c590d8514f57}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_data@{log\_aspect\_data}}
+\index{log\_aspect\_data@{log\_aspect\_data}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_data}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+aspect\+\_\+data}}
+
+\mbox{\label{log__aspect_8h_a71010ae4f140fb5bb5fe69a7c6e6f53e}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_ctor@{log\_aspect\_ctor}}
+\index{log\_aspect\_ctor@{log\_aspect\_ctor}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_ctor}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+aspect\+\_\+ctor}}
+
+\mbox{\label{log__aspect_8h_ae7e032134723b129bce39846005c1bf6}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect@{log\_aspect}}
+\index{log\_aspect@{log\_aspect}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect}
+{\footnotesize\ttfamily typedef struct log\+\_\+aspect\+\_\+type$\ast$ \textbf{ log\+\_\+aspect}}
+
+\mbox{\label{log__aspect_8h_a76a6607ceaf40594a794165de892acba}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_notify\_data@{log\_aspect\_notify\_data}}
+\index{log\_aspect\_notify\_data@{log\_aspect\_notify\_data}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_notify\_data}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data}}
+
+\mbox{\label{log__aspect_8h_ab9a2ed7ee9bb2e4a0350d50e2e03e265}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_impl@{log\_impl}}
+\index{log\_impl@{log\_impl}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_impl}
+{\footnotesize\ttfamily typedef struct log\+\_\+impl\+\_\+type$\ast$ \textbf{ log\+\_\+impl}}
+
+\mbox{\label{log__aspect_8h_a5ffd8f83f6b35a305950757c809eeb53}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_restrict\_cb@{log\_aspect\_restrict\_cb}}
+\index{log\_aspect\_restrict\_cb@{log\_aspect\_restrict\_cb}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_restrict\_cb}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+aspect\+\_\+restrict\+\_\+cb) (\textbf{ log\+\_\+aspect}, \textbf{ log\+\_\+policy})}
+
+\mbox{\label{log__aspect_8h_a898ea5b3111c3ff8d726b2b3ba4b254e}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_notify\_cb@{log\_aspect\_notify\_cb}}
+\index{log\_aspect\_notify\_cb@{log\_aspect\_notify\_cb}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_notify\_cb}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+aspect\+\_\+notify\+\_\+cb) (\textbf{ log\+\_\+aspect}, \textbf{ log\+\_\+policy}, \textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data})}
+
+\mbox{\label{log__aspect_8h_aad7fb7f87b60842d5593838cdc1c9bfd}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_impl\_create@{log\_aspect\_impl\_create}}
+\index{log\_aspect\_impl\_create@{log\_aspect\_impl\_create}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_impl\_create}
+{\footnotesize\ttfamily typedef \textbf{ log\+\_\+aspect\+\_\+data}($\ast$ log\+\_\+aspect\+\_\+impl\+\_\+create) (\textbf{ log\+\_\+aspect}, const \textbf{ log\+\_\+aspect\+\_\+ctor})}
+
+\mbox{\label{log__aspect_8h_af445703b027dc7055f6bd76e856d1357}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_impl\_destroy@{log\_aspect\_impl\_destroy}}
+\index{log\_aspect\_impl\_destroy@{log\_aspect\_impl\_destroy}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_impl\_destroy}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+aspect\+\_\+impl\+\_\+destroy) (\textbf{ log\+\_\+aspect})}
+
+\mbox{\label{log__aspect_8h_ab67dada17f8fbc73e2bce122469af278}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_singleton@{log\_aspect\_singleton}}
+\index{log\_aspect\_singleton@{log\_aspect\_singleton}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_singleton}
+{\footnotesize\ttfamily typedef log\+\_\+aspect\+\_\+interface($\ast$ log\+\_\+aspect\+\_\+singleton) (void)}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{log__aspect_8h_aa56e037326e6848386c348d0596ba319}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_id@{log\_aspect\_id}}
+\index{log\_aspect\_id@{log\_aspect\_id}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_id}
+{\footnotesize\ttfamily enum \textbf{ log\+\_\+aspect\+\_\+id}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_ASPECT\_FORMAT@{LOG\_ASPECT\_FORMAT}!log\_aspect.h@{log\_aspect.h}}\index{log\_aspect.h@{log\_aspect.h}!LOG\_ASPECT\_FORMAT@{LOG\_ASPECT\_FORMAT}}}\mbox{\label{log__aspect_8h_aa56e037326e6848386c348d0596ba319a6cd1cea2305e0697b7c9f604f5e40446}} 
+L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+F\+O\+R\+M\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_ASPECT\_SCHEDULE@{LOG\_ASPECT\_SCHEDULE}!log\_aspect.h@{log\_aspect.h}}\index{log\_aspect.h@{log\_aspect.h}!LOG\_ASPECT\_SCHEDULE@{LOG\_ASPECT\_SCHEDULE}}}\mbox{\label{log__aspect_8h_aa56e037326e6848386c348d0596ba319ac0cda2b1be0ad928a3dd6b1284f1af27}} 
+L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+C\+H\+E\+D\+U\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_ASPECT\_STORAGE@{LOG\_ASPECT\_STORAGE}!log\_aspect.h@{log\_aspect.h}}\index{log\_aspect.h@{log\_aspect.h}!LOG\_ASPECT\_STORAGE@{LOG\_ASPECT\_STORAGE}}}\mbox{\label{log__aspect_8h_aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795}} 
+L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+T\+O\+R\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_ASPECT\_STREAM@{LOG\_ASPECT\_STREAM}!log\_aspect.h@{log\_aspect.h}}\index{log\_aspect.h@{log\_aspect.h}!LOG\_ASPECT\_STREAM@{LOG\_ASPECT\_STREAM}}}\mbox{\label{log__aspect_8h_aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49}} 
+L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+T\+R\+E\+AM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_ASPECT\_SIZE@{LOG\_ASPECT\_SIZE}!log\_aspect.h@{log\_aspect.h}}\index{log\_aspect.h@{log\_aspect.h}!LOG\_ASPECT\_SIZE@{LOG\_ASPECT\_SIZE}}}\mbox{\label{log__aspect_8h_aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a}} 
+L\+O\+G\+\_\+\+A\+S\+P\+E\+C\+T\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__aspect_8h_a750966e98b30e53f100dc0df28450f3c}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_create@{log\_aspect\_create}}
+\index{log\_aspect\_create@{log\_aspect\_create}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_create()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect} log\+\_\+aspect\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+impl}}]{impl,  }\item[{const log\+\_\+aspect\+\_\+interface}]{iface,  }\item[{const \textbf{ log\+\_\+aspect\+\_\+ctor}}]{ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_ab96281d08b293b8cccdccb8d8447496e}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_reserve@{log\_aspect\_reserve}}
+\index{log\_aspect\_reserve@{log\_aspect\_reserve}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_reserve()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+aspect\+\_\+reserve (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_ac726a21fe89be520fbe8bdabf2fae75d}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_restrict@{log\_aspect\_restrict}}
+\index{log\_aspect\_restrict@{log\_aspect\_restrict}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_restrict()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void log\+\_\+aspect\+\_\+restrict (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect,  }\item[{\textbf{ log\+\_\+aspect\+\_\+restrict\+\_\+cb}}]{restrict\+\_\+cb }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a6d0d1689b238560ed1bd76f45e4c4244}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_instance@{log\_aspect\_instance}}
+\index{log\_aspect\_instance@{log\_aspect\_instance}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_instance()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect\+\_\+data} log\+\_\+aspect\+\_\+instance (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a2df568ec2954b0d7f26e354d9df825a5}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_behavior@{log\_aspect\_behavior}}
+\index{log\_aspect\_behavior@{log\_aspect\_behavior}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_behavior()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+aspect\+\_\+interface log\+\_\+aspect\+\_\+behavior (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_ab2450eed6d6b6424b757c11820cededc}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_parent@{log\_aspect\_parent}}
+\index{log\_aspect\_parent@{log\_aspect\_parent}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_parent()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} log\+\_\+aspect\+\_\+parent (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a730839e0b6a6eefd2ea4e9786bf58981}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_derived@{log\_aspect\_derived}}
+\index{log\_aspect\_derived@{log\_aspect\_derived}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_derived()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect\+\_\+impl} log\+\_\+aspect\+\_\+derived (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a458957aaa98f5048fc2a963744c5e4d2}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_attach@{log\_aspect\_attach}}
+\index{log\_aspect\_attach@{log\_aspect\_attach}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_attach()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+aspect\+\_\+attach (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect,  }\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a7b6e8b6850a7423a54979e97a110a9ed}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_notify\_first@{log\_aspect\_notify\_first}}
+\index{log\_aspect\_notify\_first@{log\_aspect\_notify\_first}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_notify\_first()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+aspect\+\_\+notify\+\_\+first (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect,  }\item[{\textbf{ log\+\_\+aspect\+\_\+notify\+\_\+cb}}]{notify\+\_\+cb,  }\item[{\textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data}}]{notify\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a2d04670ab049a9f7afe09a76f837e94f}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_notify\_all@{log\_aspect\_notify\_all}}
+\index{log\_aspect\_notify\_all@{log\_aspect\_notify\_all}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_notify\_all()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+aspect\+\_\+notify\+\_\+all (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect,  }\item[{\textbf{ log\+\_\+aspect\+\_\+notify\+\_\+cb}}]{notify\+\_\+cb,  }\item[{\textbf{ log\+\_\+aspect\+\_\+notify\+\_\+data}}]{notify\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a1d6f908bead87827c72185748bfa54d5}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_detach@{log\_aspect\_detach}}
+\index{log\_aspect\_detach@{log\_aspect\_detach}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_detach()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+aspect\+\_\+detach (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect,  }\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log__aspect_8h_a1cf48dca81a16598c732e9221eca66e0}} 
+\index{log\_aspect.h@{log\_aspect.h}!log\_aspect\_destroy@{log\_aspect\_destroy}}
+\index{log\_aspect\_destroy@{log\_aspect\_destroy}!log\_aspect.h@{log\_aspect.h}}
+\doxysubsubsection{log\_aspect\_destroy()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+aspect\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+aspect}}]{aspect }\end{DoxyParamCaption})}
+

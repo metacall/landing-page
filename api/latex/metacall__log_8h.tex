@@ -1,0 +1,115 @@
+\doxysection{metacall\+\_\+log.\+h File Reference}
+\label{metacall__log_8h}\index{metacall\_log.h@{metacall\_log.h}}
+{\ttfamily \#include $<$metacall/metacall\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for metacall\+\_\+log.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{metacall__log_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=118pt]{metacall__log_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ metacall\+\_\+log\+\_\+stdio}
+\item 
+struct \textbf{ metacall\+\_\+log\+\_\+file}
+\item 
+struct \textbf{ metacall\+\_\+log\+\_\+socket}
+\item 
+struct \textbf{ metacall\+\_\+log\+\_\+syslog}
+\item 
+struct \textbf{ metacall\+\_\+log\+\_\+nginx}
+\item 
+struct \textbf{ metacall\+\_\+log\+\_\+custom\+\_\+va\+\_\+list}
+\item 
+struct \textbf{ metacall\+\_\+log\+\_\+custom}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ metacall\+\_\+log\+\_\+id} \{ \newline
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+S\+T\+D\+IO}, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+F\+I\+LE}, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+S\+O\+C\+K\+ET}, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+S\+Y\+S\+L\+OG}, 
+\newline
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+N\+G\+I\+NX}, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+C\+U\+S\+T\+OM}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+log} (enum \textbf{ metacall\+\_\+log\+\_\+id} log\+\_\+id, void $\ast$ctx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{metacall__log_8h_ada49b79c00cfc03c7c6efd80243322e7}} 
+\index{metacall\_log.h@{metacall\_log.h}!metacall\_log\_id@{metacall\_log\_id}}
+\index{metacall\_log\_id@{metacall\_log\_id}!metacall\_log.h@{metacall\_log.h}}
+\doxysubsubsection{metacall\_log\_id}
+{\footnotesize\ttfamily enum \textbf{ metacall\+\_\+log\+\_\+id}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_LOG\_STDIO@{METACALL\_LOG\_STDIO}!metacall\_log.h@{metacall\_log.h}}\index{metacall\_log.h@{metacall\_log.h}!METACALL\_LOG\_STDIO@{METACALL\_LOG\_STDIO}}}\mbox{\label{metacall__log_8h_ada49b79c00cfc03c7c6efd80243322e7a6357e4ecfdf3d9f96f9207af06b1d002}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+S\+T\+D\+IO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_LOG\_FILE@{METACALL\_LOG\_FILE}!metacall\_log.h@{metacall\_log.h}}\index{metacall\_log.h@{metacall\_log.h}!METACALL\_LOG\_FILE@{METACALL\_LOG\_FILE}}}\mbox{\label{metacall__log_8h_ada49b79c00cfc03c7c6efd80243322e7a0051a8d3f261458446db0fa240b37af8}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+F\+I\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_LOG\_SOCKET@{METACALL\_LOG\_SOCKET}!metacall\_log.h@{metacall\_log.h}}\index{metacall\_log.h@{metacall\_log.h}!METACALL\_LOG\_SOCKET@{METACALL\_LOG\_SOCKET}}}\mbox{\label{metacall__log_8h_ada49b79c00cfc03c7c6efd80243322e7a659dd67075b0d382d8cb6013047ac69f}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+S\+O\+C\+K\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_LOG\_SYSLOG@{METACALL\_LOG\_SYSLOG}!metacall\_log.h@{metacall\_log.h}}\index{metacall\_log.h@{metacall\_log.h}!METACALL\_LOG\_SYSLOG@{METACALL\_LOG\_SYSLOG}}}\mbox{\label{metacall__log_8h_ada49b79c00cfc03c7c6efd80243322e7a055db1261857d95be30c586cc52240e8}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+S\+Y\+S\+L\+OG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_LOG\_NGINX@{METACALL\_LOG\_NGINX}!metacall\_log.h@{metacall\_log.h}}\index{metacall\_log.h@{metacall\_log.h}!METACALL\_LOG\_NGINX@{METACALL\_LOG\_NGINX}}}\mbox{\label{metacall__log_8h_ada49b79c00cfc03c7c6efd80243322e7a070d1a0618197fe7df1a7d315958cc6b}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+N\+G\+I\+NX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_LOG\_CUSTOM@{METACALL\_LOG\_CUSTOM}!metacall\_log.h@{metacall\_log.h}}\index{metacall\_log.h@{metacall\_log.h}!METACALL\_LOG\_CUSTOM@{METACALL\_LOG\_CUSTOM}}}\mbox{\label{metacall__log_8h_ada49b79c00cfc03c7c6efd80243322e7a42d7f5a9da887616c7c5f0fdc95d358a}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+G\+\_\+\+C\+U\+S\+T\+OM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{metacall__log_8h_a2e92c228a8b23152bb8aeecb05047b5b}} 
+\index{metacall\_log.h@{metacall\_log.h}!metacall\_log@{metacall\_log}}
+\index{metacall\_log@{metacall\_log}!metacall\_log.h@{metacall\_log.h}}
+\doxysubsubsection{metacall\_log()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+log (\begin{DoxyParamCaption}\item[{enum \textbf{ metacall\+\_\+log\+\_\+id}}]{log\+\_\+id,  }\item[{void $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Create a log instance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em log\+\_\+id} & Type of log to be created\\
+\hline
+\mbox{\texttt{ in}}  & {\em ctx} & Context of the log (a pointer to metacall\+\_\+log\+\_\+\{stdio, file, socket, syslog, nginx, custom\}\+\_\+type)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}

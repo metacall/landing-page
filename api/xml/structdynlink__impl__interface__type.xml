@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdynlink__impl__interface__type" kind="struct" language="C++" prot="public">
+    <compoundname>dynlink_impl_interface_type</compoundname>
+    <includes refid="dynlink__impl__interface_8h" local="no">/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdynlink__impl__interface__type_1ac46a0c862aae9427569633c6398f92f4" prot="public" static="no" mutable="no">
+        <type><ref refid="dynlink__impl__interface_8h_1a22af984583c224b4b5996c7ad6f94fa7" kindref="member">dynlink_impl_interface_extension</ref></type>
+        <definition>dynlink_impl_interface_extension dynlink_impl_interface::extension</definition>
+        <argsstring></argsstring>
+        <name>extension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="44" column="34" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdynlink__impl__interface__type_1a698d01a172ce9891cb59afb9ec5fda67" prot="public" static="no" mutable="no">
+        <type><ref refid="dynlink__impl__interface_8h_1a830e6cbd1f246ffc55445c07b4bf3c75" kindref="member">dynlink_impl_interface_load</ref></type>
+        <definition>dynlink_impl_interface_load dynlink_impl_interface::load</definition>
+        <argsstring></argsstring>
+        <name>load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="45" column="29" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdynlink__impl__interface__type_1a7f826d29ec293c69985e86b34066d742" prot="public" static="no" mutable="no">
+        <type><ref refid="dynlink__impl__interface_8h_1a4c684797f95e6c2a751c6ee315dee6c4" kindref="member">dynlink_impl_interface_symbol</ref></type>
+        <definition>dynlink_impl_interface_symbol dynlink_impl_interface::symbol</definition>
+        <argsstring></argsstring>
+        <name>symbol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="46" column="31" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdynlink__impl__interface__type_1afa6b8f501ce50e73db4279b87bd6de25" prot="public" static="no" mutable="no">
+        <type><ref refid="dynlink__impl__interface_8h_1ac3977092576cd5ab38b0663726f6a4b8" kindref="member">dynlink_impl_interface_unload</ref></type>
+        <definition>dynlink_impl_interface_unload dynlink_impl_interface::unload</definition>
+        <argsstring></argsstring>
+        <name>unload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="47" column="31" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>int(*)(dynlink, dynlink_impl)</label>
+      </node>
+      <node id="5">
+        <label>dynlink_impl(*)(dynlink)</label>
+      </node>
+      <node id="3">
+        <label>dynlink_impl_interface_extension</label>
+      </node>
+      <node id="2">
+        <label>int(*)(dynlink, dynlink_impl, dynlink_symbol_name, dynlink_symbol_addr *)</label>
+      </node>
+      <node id="1">
+        <label>dynlink_impl_interface</label>
+        <link refid="structdynlink__impl__interface__type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+symbol</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+extension</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+unload</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+load</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="43" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="42" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structdynlink__impl__interface__type_1ac46a0c862aae9427569633c6398f92f4" prot="public" virt="non-virtual"><scope>dynlink_impl_interface_type</scope><name>extension</name></member>
+      <member refid="structdynlink__impl__interface__type_1a698d01a172ce9891cb59afb9ec5fda67" prot="public" virt="non-virtual"><scope>dynlink_impl_interface_type</scope><name>load</name></member>
+      <member refid="structdynlink__impl__interface__type_1a7f826d29ec293c69985e86b34066d742" prot="public" virt="non-virtual"><scope>dynlink_impl_interface_type</scope><name>symbol</name></member>
+      <member refid="structdynlink__impl__interface__type_1afa6b8f501ce50e73db4279b87bd6de25" prot="public" virt="non-virtual"><scope>dynlink_impl_interface_type</scope><name>unload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

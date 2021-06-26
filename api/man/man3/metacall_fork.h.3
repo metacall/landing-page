@@ -1,0 +1,80 @@
+.TH "metacall_fork.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+metacall_fork.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <metacall/metacall_api\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef int(* \fBmetacall_pre_fork_callback_ptr\fP) (void *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBmetacall_post_fork_callback_ptr\fP) (metacall_pid, void *)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "METACALL_API int \fBmetacall_fork_initialize\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API void \fBmetacall_fork\fP (\fBmetacall_pre_fork_callback_ptr\fP pre_callback, \fBmetacall_post_fork_callback_ptr\fP post_callback)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_fork_destroy\fP (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef int(* metacall_pre_fork_callback_ptr) (void *)"
+
+.SS "typedef int(* metacall_post_fork_callback_ptr) (metacall_pid, void *)"
+
+.SH "Function Documentation"
+.PP 
+.SS "METACALL_API int metacall_fork_initialize (void)"
+
+.PP
+Initialize fork detours and allocate shared memory\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void metacall_fork (\fBmetacall_pre_fork_callback_ptr\fP pre_callback, \fBmetacall_post_fork_callback_ptr\fP post_callback)"
+
+.PP
+Set fork hook callback\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpre_callback\fP Callback to be called before fork detour is executed
+.br
+\fIpost_callback\fP Callback to be called after fork detour is executed 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_fork_destroy (void)"
+
+.PP
+Unregister fork detours and destroy shared memory\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,127 @@
+.TH "log_record.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_record.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <log/log_level\&.h>\fP
+.br
+\fC#include <threading/threading_thread_id\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog_record_va_list_type\fP"
+.br
+.ti -1c
+.RI "struct \fBlog_record_ctor\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG_RECORD_FUNCTION_UNKNOWN_IMPL\fP   1"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct log_record_type * \fBlog_record\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const LOG_API char * \fB__log_record_unknown_function__\fP (void)"
+.br
+.ti -1c
+.RI "LOG_NO_EXPORT size_t \fBlog_record_size\fP (void)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_record\fP \fBlog_record_create\fP (const log_record_ctor record_ctor)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_record\fP \fBlog_record_initialize\fP (\fBlog_record\fP record, const log_record_ctor record_ctor)"
+.br
+.ti -1c
+.RI "const LOG_API time_t * \fBlog_record_time\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "LOG_API uint64_t \fBlog_record_thread_id\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "LOG_API size_t \fBlog_record_line\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "const LOG_API char * \fBlog_record_func\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "const LOG_API char * \fBlog_record_file\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "LOG_API enum \fBlog_level_id\fP \fBlog_record_level\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "const LOG_API char * \fBlog_record_message\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "LOG_API struct \fBlog_record_va_list_type\fP * \fBlog_record_variable_args\fP (\fBlog_record\fP record)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_record_destroy\fP (\fBlog_record\fP record)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG_RECORD_FUNCTION_UNKNOWN_IMPL   1"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct log_record_type* \fBlog_record\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "const LOG_API char* __log_record_unknown_function__ (void)"
+
+.SS "LOG_NO_EXPORT size_t log_record_size (void)"
+
+.SS "LOG_API \fBlog_record\fP log_record_create (const log_record_ctor record_ctor)"
+
+.SS "LOG_API \fBlog_record\fP log_record_initialize (\fBlog_record\fP record, const log_record_ctor record_ctor)"
+
+.SS "const LOG_API time_t* log_record_time (\fBlog_record\fP record)"
+
+.SS "LOG_API uint64_t log_record_thread_id (\fBlog_record\fP record)"
+
+.SS "LOG_API size_t log_record_line (\fBlog_record\fP record)"
+
+.SS "const LOG_API char* log_record_func (\fBlog_record\fP record)"
+
+.SS "const LOG_API char* log_record_file (\fBlog_record\fP record)"
+
+.SS "LOG_API enum \fBlog_level_id\fP log_record_level (\fBlog_record\fP record)"
+
+.SS "const LOG_API char* log_record_message (\fBlog_record\fP record)"
+
+.SS "LOG_API struct \fBlog_record_va_list_type\fP* log_record_variable_args (\fBlog_record\fP record)"
+
+.SS "LOG_API int log_record_destroy (\fBlog_record\fP record)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

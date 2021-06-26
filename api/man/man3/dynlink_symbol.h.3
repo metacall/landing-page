@@ -1,0 +1,65 @@
+.TH "dynlink_symbol.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dynlink_symbol.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <dynlink/dynlink_api\&.h>\fP
+.br
+\fC#include <dynlink/dynlink_type\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDYNLINK_SYMBOL_NAME_SIZE\fP   0xFF"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef char \fBdynlink_symbol_name_man\fP[\fBDYNLINK_SYMBOL_NAME_SIZE\fP]"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DYNLINK_API int \fBdynlink_symbol_name_mangle\fP (\fBdynlink_symbol_name\fP symbol_name, \fBdynlink_symbol_name_man\fP symbol_mangled)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DYNLINK_SYMBOL_NAME_SIZE   0xFF"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef char dynlink_symbol_name_man[\fBDYNLINK_SYMBOL_NAME_SIZE\fP]"
+
+.SH "Function Documentation"
+.PP 
+.SS "DYNLINK_API int dynlink_symbol_name_mangle (\fBdynlink_symbol_name\fP symbol_name, \fBdynlink_symbol_name_man\fP symbol_mangled)"
+
+.PP
+Get convert a symbol to name mangled for cross-platform dynamic loading\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsymbol_name\fP Reference to name of the of dynamically linked shared object symbol
+.br
+\fIsymbol_mangled\fP Reference to mangled name of the of dynamically linked shared object symbol
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if @symbol_name was correctly mangled 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

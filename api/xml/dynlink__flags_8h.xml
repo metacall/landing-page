@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dynlink__flags_8h" kind="file" language="C++">
+    <compoundname>dynlink_flags.h</compoundname>
+    <includes local="no">dynlink/dynlink_api.h</includes>
+    <includedby refid="dynlink_8h" local="no">dynlink.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dynlink_flags.h</label>
+        <link refid="dynlink__flags_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dynlink/dynlink_api.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>loader_impl_export.h</label>
+        <link refid="loader__impl__export_8h"/>
+      </node>
+      <node id="2">
+        <label>dynlink.h</label>
+        <link refid="dynlink_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dynlink_flags.h</label>
+        <link refid="dynlink__flags_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>loader_export.h</label>
+        <link refid="loader__export_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dynlink__flags_8h_1ac0e790b80cfe3dd7f790bc4640331afb" prot="public" static="no">
+        <name>DYNLINK_FLAGS_BIND_NOW</name>
+        <initializer>(0x01 &lt;&lt; 0x00)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inmediate loading bind flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="34" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dynlink__flags_8h_1a449177169d6ff1874519b8ceed479897" prot="public" static="no">
+        <name>DYNLINK_FLAGS_BIND_LAZY</name>
+        <initializer>(0x01 &lt;&lt; 0x01)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lazy loading bind flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="35" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dynlink__flags_8h_1a1e033f06d637a4a18724a99b8184801a" prot="public" static="no">
+        <name>DYNLINK_FLAGS_BIND_LOCAL</name>
+        <initializer>(0x01 &lt;&lt; 0x02)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private visibility bind flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="36" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dynlink__flags_8h_1adc7e26f520321d22f1ca107b213b2c0e" prot="public" static="no">
+        <name>DYNLINK_FLAGS_BIND_GLOBAL</name>
+        <initializer>(0x01 &lt;&lt; 0x03)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Public visibility bind flag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="37" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dynlink__flags_8h_1a401a42b6fe8623f6324835789f2edd18" prot="public" static="no">
+        <name>DYNLINK_FLAGS_SET</name>
+        <param><defname>flags</defname></param>
+        <param><defname>flag</defname></param>
+        <initializer>	do                                 \
+	{                                  \
+		flags = (flag);                \
+	} while (0)</initializer>
+        <briefdescription>
+<para>Assign to the left operator the right literal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Using flag as a 0 resets the flags. Combined flags can be passed to the macro and they will be assigned correctly too. It can be used for generic and implementation flags.</para>
+<para><ref refid="dynlink__flags_8h_1a401a42b6fe8623f6324835789f2edd18" kindref="member">DYNLINK_FLAGS_SET(flags, 0)</ref>; DYNLINK_FLAGS_SET(flags, DYNLINK_FLAGS_BIND_LAZY | DYNLINK_FLAGS_BIND_GLOBAL); DYNLINK_FLAGS_SET(flags_impl, RTLD_LAZY | RTLD_GLOBAL);</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operator that will be overwritten</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right literal input parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="60" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dynlink__flags_8h_1aa06b14c8f8aeb5e56ba4d8d6dd621506" prot="public" static="no">
+        <name>DYNLINK_FLAGS_ADD</name>
+        <param><defname>flags</defname></param>
+        <param><defname>flag</defname></param>
+        <initializer>	do                                 \
+	{                                  \
+		flags |= (flag);               \
+	} while (0)</initializer>
+        <briefdescription>
+<para>Append to the left operator the right literal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Using flag as a 0 does nothing. Combined flags can be passed to the macro and they will be added correctly too. It can be used for generic and implementation flags.</para>
+<para><ref refid="dynlink__flags_8h_1aa06b14c8f8aeb5e56ba4d8d6dd621506" kindref="member">DYNLINK_FLAGS_ADD(nothing, 0)</ref>; DYNLINK_FLAGS_ADD(flags, DYNLINK_FLAGS_BIND_LAZY | DYNLINK_FLAGS_BIND_GLOBAL); DYNLINK_FLAGS_ADD(flags_impl, RTLD_LAZY | RTLD_GLOBAL);</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operator that will be added</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The literal input parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="85" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dynlink__flags_8h_1aa829809c84d157f62cbeefcd23146091" prot="public" static="no">
+        <name>DYNLINK_FLAGS_CHECK</name>
+        <param><defname>flags</defname></param>
+        <param><defname>flag</defname></param>
+        <initializer>(((flags) &amp; (flag)) != 0)</initializer>
+        <briefdescription>
+<para>Check flags operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro must be used as a conditional guard. Using flag as a 0 never enters to the guard. Combined flags can be passed to the macro. It can be used for generic and implementation flags.</para>
+<para>if (<ref refid="dynlink__flags_8h_1aa829809c84d157f62cbeefcd23146091" kindref="member">DYNLINK_FLAGS_CHECK(flags, DYNLINK_FLAGS_BIND_LAZY)</ref>) { ... }</para>
+<para>if (DYNLINK_FLAGS_CHECK(flags_impl, RTLD_LAZY | RTLD_GLOBAL)) { ... }</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operator that will be check against the literal</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The literal input parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="117" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int dynlink_flags</definition>
+        <argsstring></argsstring>
+        <name>dynlink_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dynamically linked shared object flags </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" line="122" column="13" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Dynamic<sp/>Link<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>dynamic<sp/>loading<sp/>and<sp/>linking<sp/>shared<sp/>objects<sp/>at<sp/>run-time.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DYNLINK_FLAGS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="dynlink__flags_8h_1ac0e790b80cfe3dd7f790bc4640331afb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_BIND_NOW<sp/><sp/><sp/><sp/>(0x01<sp/>&lt;&lt;<sp/>0x00)<sp/></highlight><highlight class="comment">/**&lt;<sp/>Inmediate<sp/>loading<sp/>bind<sp/>flag<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="dynlink__flags_8h_1a449177169d6ff1874519b8ceed479897" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_BIND_LAZY<sp/><sp/><sp/>(0x01<sp/>&lt;&lt;<sp/>0x01)<sp/></highlight><highlight class="comment">/**&lt;<sp/>Lazy<sp/>loading<sp/>bind<sp/>flag<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="dynlink__flags_8h_1a1e033f06d637a4a18724a99b8184801a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_BIND_LOCAL<sp/><sp/>(0x01<sp/>&lt;&lt;<sp/>0x02)<sp/></highlight><highlight class="comment">/**&lt;<sp/>Private<sp/>visibility<sp/>bind<sp/>flag<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="dynlink__flags_8h_1adc7e26f520321d22f1ca107b213b2c0e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_BIND_GLOBAL<sp/>(0x01<sp/>&lt;&lt;<sp/>0x03)<sp/></highlight><highlight class="comment">/**&lt;<sp/>Public<sp/>visibility<sp/>bind<sp/>flag<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Macros<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*<sp/><sp/><sp/><sp/>Assign<sp/>to<sp/>the<sp/>left<sp/>operator<sp/>the<sp/>right<sp/>literal</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*<sp/><sp/>Using<sp/>flag<sp/>as<sp/>a<sp/>0<sp/>resets<sp/>the<sp/>flags.<sp/>Combined<sp/>flags<sp/>can</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/><sp/>be<sp/>passed<sp/>to<sp/>the<sp/>macro<sp/>and<sp/>they<sp/>will<sp/>be<sp/>assigned<sp/>correctly<sp/>too.</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*<sp/><sp/>It<sp/>can<sp/>be<sp/>used<sp/>for<sp/>generic<sp/>and<sp/>implementation<sp/>flags.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*<sp/><sp/>DYNLINK_FLAGS_SET(flags,<sp/>0);</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*<sp/><sp/>DYNLINK_FLAGS_SET(flags,<sp/>DYNLINK_FLAGS_BIND_LAZY<sp/>|<sp/>DYNLINK_FLAGS_BIND_GLOBAL);</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*<sp/><sp/>DYNLINK_FLAGS_SET(flags_impl,<sp/>RTLD_LAZY<sp/>|<sp/>RTLD_GLOBAL);</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>flags</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*<sp/><sp/><sp/><sp/>The<sp/>left<sp/>operator<sp/>that<sp/>will<sp/>be<sp/>overwritten</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>flag</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">*<sp/><sp/><sp/><sp/>The<sp/>right<sp/>literal<sp/>input<sp/>parameter</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="dynlink__flags_8h_1a401a42b6fe8623f6324835789f2edd18" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_SET(flags,<sp/>flag)<sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>(flag);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="66"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">*<sp/><sp/><sp/><sp/>Append<sp/>to<sp/>the<sp/>left<sp/>operator<sp/>the<sp/>right<sp/>literal</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*<sp/><sp/>Using<sp/>flag<sp/>as<sp/>a<sp/>0<sp/>does<sp/>nothing.<sp/>Combined<sp/>flags<sp/>can</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">*<sp/><sp/>be<sp/>passed<sp/>to<sp/>the<sp/>macro<sp/>and<sp/>they<sp/>will<sp/>be<sp/>added<sp/>correctly<sp/>too.</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">*<sp/><sp/>It<sp/>can<sp/>be<sp/>used<sp/>for<sp/>generic<sp/>and<sp/>implementation<sp/>flags.</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">*<sp/><sp/>DYNLINK_FLAGS_ADD(nothing,<sp/>0);<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="comment">*<sp/><sp/>DYNLINK_FLAGS_ADD(flags,<sp/>DYNLINK_FLAGS_BIND_LAZY<sp/>|<sp/>DYNLINK_FLAGS_BIND_GLOBAL);</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">*<sp/><sp/>DYNLINK_FLAGS_ADD(flags_impl,<sp/>RTLD_LAZY<sp/>|<sp/>RTLD_GLOBAL);</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>flags</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">*<sp/><sp/><sp/><sp/>The<sp/>left<sp/>operator<sp/>that<sp/>will<sp/>be<sp/>added</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>flag</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">*<sp/><sp/><sp/><sp/>The<sp/>literal<sp/>input<sp/>parameter</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="dynlink__flags_8h_1aa06b14c8f8aeb5e56ba4d8d6dd621506" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_ADD(flags,<sp/>flag)<sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>|=<sp/>(flag);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="91"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">*<sp/><sp/><sp/><sp/>Check<sp/>flags<sp/>operator</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">*<sp/><sp/>This<sp/>macro<sp/>must<sp/>be<sp/>used<sp/>as<sp/>a<sp/>conditional<sp/>guard.</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">*<sp/><sp/>Using<sp/>flag<sp/>as<sp/>a<sp/>0<sp/>never<sp/>enters<sp/>to<sp/>the<sp/>guard.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">*<sp/><sp/>Combined<sp/>flags<sp/>can<sp/>be<sp/>passed<sp/>to<sp/>the<sp/>macro.</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">*<sp/><sp/>It<sp/>can<sp/>be<sp/>used<sp/>for<sp/>generic<sp/>and<sp/>implementation<sp/>flags.</highlight></codeline>
+<codeline lineno="99"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">*<sp/><sp/>if<sp/>(DYNLINK_FLAGS_CHECK(flags,<sp/>DYNLINK_FLAGS_BIND_LAZY))</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">*<sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">*<sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">*<sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">*<sp/><sp/>if<sp/>(DYNLINK_FLAGS_CHECK(flags_impl,<sp/>RTLD_LAZY<sp/>|<sp/>RTLD_GLOBAL))</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">*<sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">*<sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline lineno="108"><highlight class="comment">*<sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="110"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>flags</highlight></codeline>
+<codeline lineno="111"><highlight class="comment">*<sp/><sp/><sp/><sp/>The<sp/>left<sp/>operator<sp/>that<sp/>will<sp/>be<sp/>check<sp/>against<sp/>the<sp/>literal</highlight></codeline>
+<codeline lineno="112"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>flag</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">*<sp/><sp/><sp/><sp/>The<sp/>literal<sp/>input<sp/>parameter</highlight></codeline>
+<codeline lineno="115"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="116"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="dynlink__flags_8h_1aa829809c84d157f62cbeefcd23146091" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_FLAGS_CHECK(flags,<sp/>flag)<sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((flags)<sp/>&amp;<sp/>(flag))<sp/>!=<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648" kindref="member">dynlink_flags</ref>;<sp/></highlight><highlight class="comment">/**&lt;<sp/>Dynamically<sp/>linked<sp/>shared<sp/>object<sp/>flags<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DYNLINK_FLAGS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_flags.h"/>
+  </compounddef>
+</doxygen>

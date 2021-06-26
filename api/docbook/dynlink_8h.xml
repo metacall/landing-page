@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dynlink_8h">
+<title>dynlink.h File Reference</title>
+<indexterm><primary>dynlink.h</primary></indexterm>
+<programlisting>#include &lt;dynlink/dynlink_api.h&gt;
+#include &lt;dynlink/dynlink_flags.h&gt;
+#include &lt;dynlink/dynlink_interface.h&gt;
+#include &lt;dynlink/dynlink_symbol.h&gt;
+#include &lt;dynlink/dynlink_type.h&gt;
+</programlisting>Include dependency graph for dynlink.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dynlink_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dynlink_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>const DYNLINK_API char * <link linkend="_dynlink_8h_1aec6120fac988249b0a6e4a537b6f97e0">dynlink_extension</link> (void)</para>
+</listitem>
+            <listitem><para>DYNLINK_API <link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> <link linkend="_dynlink_8h_1a914187cf2ab8243349c6c1e3615624c6">dynlink_load</link> (<link linkend="_dynlink__type_8h_1a4899e4ca7a9b827fdba6383a6031c01c">dynlink_path</link> path, <link linkend="_dynlink__type_8h_1a43fbb8bab83aba1c3a01ff0369613d3e">dynlink_name</link> name, <link linkend="_dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648">dynlink_flags</link> flags)</para>
+</listitem>
+            <listitem><para>DYNLINK_API <link linkend="_dynlink__type_8h_1a43fbb8bab83aba1c3a01ff0369613d3e">dynlink_name</link> <link linkend="_dynlink_8h_1aff22375c0da8b77fe21b8692de33b319">dynlink_get_name</link> (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</para>
+</listitem>
+            <listitem><para>DYNLINK_API <link linkend="_dynlink__type_8h_1a43fbb8bab83aba1c3a01ff0369613d3e">dynlink_name</link> <link linkend="_dynlink_8h_1ad70c135891290391e7bb100a5278a3e7">dynlink_get_name_impl</link> (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</para>
+</listitem>
+            <listitem><para>DYNLINK_API <link linkend="_dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648">dynlink_flags</link> <link linkend="_dynlink_8h_1af28e4096eecb9b3215779e8a636cb6e3">dynlink_get_flags</link> (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</para>
+</listitem>
+            <listitem><para>DYNLINK_API int <link linkend="_dynlink_8h_1a18a6b5308d1b292c32a0a1f19ae38a5f">dynlink_symbol</link> (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle, <link linkend="_dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41">dynlink_symbol_name</link> symbol_name, <link linkend="_dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf">dynlink_symbol_addr</link> *symbol_address)</para>
+</listitem>
+            <listitem><para>DYNLINK_API void <link linkend="_dynlink_8h_1abb108f7bc002ff0de09f992501a722d4">dynlink_unload</link> (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</para>
+</listitem>
+            <listitem><para>const DYNLINK_API char * <link linkend="_dynlink_8h_1a9c59d2b884ec3456b35fd263c0dcecb6">dynlink_print_info</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_dynlink_8h_1aec6120fac988249b0a6e4a537b6f97e0"/>    <section>
+    <title>dynlink_extension()</title>
+<indexterm><primary>dynlink_extension</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_extension</secondary></indexterm>
+<para><computeroutput>const DYNLINK_API char* dynlink_extension (void )</computeroutput></para><para>
+
+<para>Get the library extension for specified platform. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A constant string pointer to the platform extension </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_dynlink_8h_1a914187cf2ab8243349c6c1e3615624c6"/>    <section>
+    <title>dynlink_load()</title>
+<indexterm><primary>dynlink_load</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_load</secondary></indexterm>
+<para><computeroutput>DYNLINK_API <link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> dynlink_load (<link linkend="_dynlink__type_8h_1a4899e4ca7a9b827fdba6383a6031c01c">dynlink_path</link> path, <link linkend="_dynlink__type_8h_1a43fbb8bab83aba1c3a01ff0369613d3e">dynlink_name</link> name, <link linkend="_dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648">dynlink_flags</link> flags)</computeroutput></para><para>
+
+<para>Load a dynamically linked shared object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Path where is located the shared object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name identifier of the shared object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>flags</entry>
+                                <entry>
+<para>Dynamic linking flags</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A handle to the dynamically linked shared object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_dynlink_8h_1aff22375c0da8b77fe21b8692de33b319"/>    <section>
+    <title>dynlink_get_name()</title>
+<indexterm><primary>dynlink_get_name</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_get_name</secondary></indexterm>
+<para><computeroutput>DYNLINK_API <link linkend="_dynlink__type_8h_1a43fbb8bab83aba1c3a01ff0369613d3e">dynlink_name</link> dynlink_get_name (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</computeroutput></para><para>
+
+<para>Retreive the name of the dynamically linked shared object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Handle of dynamically linked shared object</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Reference to the name of the dynamically linked shared object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_dynlink_8h_1ad70c135891290391e7bb100a5278a3e7"/>    <section>
+    <title>dynlink_get_name_impl()</title>
+<indexterm><primary>dynlink_get_name_impl</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_get_name_impl</secondary></indexterm>
+<para><computeroutput>DYNLINK_API <link linkend="_dynlink__type_8h_1a43fbb8bab83aba1c3a01ff0369613d3e">dynlink_name</link> dynlink_get_name_impl (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</computeroutput></para><para>
+
+<para>Retreive the file name of the dynamically linked shared object handle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Handle of dynamically linked shared object</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Reference to the file name of the dynamically linked shared object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_dynlink_8h_1af28e4096eecb9b3215779e8a636cb6e3"/>    <section>
+    <title>dynlink_get_flags()</title>
+<indexterm><primary>dynlink_get_flags</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_get_flags</secondary></indexterm>
+<para><computeroutput>DYNLINK_API <link linkend="_dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648">dynlink_flags</link> dynlink_get_flags (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</computeroutput></para><para>
+
+<para>Retreive the linking flags of the dynamically linked shared object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Handle of dynamically linked shared object</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Linking flags of dynamically linked shared object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_dynlink_8h_1a18a6b5308d1b292c32a0a1f19ae38a5f"/>    <section>
+    <title>dynlink_symbol()</title>
+<indexterm><primary>dynlink_symbol</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_symbol</secondary></indexterm>
+<para><computeroutput>DYNLINK_API int dynlink_symbol (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle, <link linkend="_dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41">dynlink_symbol_name</link> symbol_name, <link linkend="_dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf">dynlink_symbol_addr</link> * symbol_address)</computeroutput></para><para>
+
+<para>Get a symbol address of dynamically linked shared object by name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Handle of dynamically linked shared object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>symbol_name</entry>
+                                <entry>
+<para>Name of the of dynamically linked shared object symbol</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>symbol_address</entry>
+                                <entry>
+<para>Pointer to the address of the of dynamically linked shared object symbol</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero on correct dynamic linking, distinct from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_dynlink_8h_1abb108f7bc002ff0de09f992501a722d4"/>    <section>
+    <title>dynlink_unload()</title>
+<indexterm><primary>dynlink_unload</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_unload</secondary></indexterm>
+<para><computeroutput>DYNLINK_API void dynlink_unload (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link> handle)</computeroutput></para><para>
+
+<para>Unloads a dynamically linked shared object by its handle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Handle of dynamically linked shared object </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_dynlink_8h_1a9c59d2b884ec3456b35fd263c0dcecb6"/>    <section>
+    <title>dynlink_print_info()</title>
+<indexterm><primary>dynlink_print_info</primary><secondary>dynlink.h</secondary></indexterm>
+<indexterm><primary>dynlink.h</primary><secondary>dynlink_print_info</secondary></indexterm>
+<para><computeroutput>const DYNLINK_API char* dynlink_print_info (void )</computeroutput></para><para>
+
+<para>Provide the module information. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Static string containing module information </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

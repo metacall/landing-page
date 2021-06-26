@@ -1,0 +1,61 @@
+.TH "reflect_exception.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_exception.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct exception_type * \fBexception\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBexception\fP \fBexception_create\fP (const char *message, const char *label, int code, const char *stacktrace)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBexception_message\fP (\fBexception\fP ex)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBexception_label\fP (\fBexception\fP ex)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBexception_code\fP (\fBexception\fP ex)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBexception_stacktrace\fP (\fBexception\fP ex)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBexception_destroy\fP (\fBexception\fP ex)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct exception_type* \fBexception\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBexception\fP exception_create (const char * message, const char * label, int code, const char * stacktrace)"
+
+.SS "const REFLECT_API char* exception_message (\fBexception\fP ex)"
+
+.SS "const REFLECT_API char* exception_label (\fBexception\fP ex)"
+
+.SS "REFLECT_API int exception_code (\fBexception\fP ex)"
+
+.SS "const REFLECT_API char* exception_stacktrace (\fBexception\fP ex)"
+
+.SS "REFLECT_API void exception_destroy (\fBexception\fP ex)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

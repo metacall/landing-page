@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_filesystem__file__descriptor_8h">
+<title>filesystem_file_descriptor.h File Reference</title>
+<indexterm><primary>filesystem_file_descriptor.h</primary></indexterm>
+<programlisting>#include &lt;filesystem/filesystem_api.h&gt;
+#include &lt;filesystem/filesystem_directory_descriptor.h&gt;
+</programlisting>Include dependency graph for filesystem_file_descriptor.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="filesystem__file__descriptor_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_filesystem__file__descriptor_8h_1a6d02dc06d441043948a60e1924a0b4d0">FILE_DESCRIPTOR_NAME_SIZE</link>   0x0100</para>
+</listitem>
+            <listitem><para>#define <link linkend="_filesystem__file__descriptor_8h_1ac2d2dec43cef4d05fbdb3642b0148388">FILE_DESCRIPTOR_EXTENSION_SIZE</link>   0x0012</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct file_descriptor_type * <link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>FILESYSTEM_API <link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> <link linkend="_filesystem__file__descriptor_8h_1a113b6cd06f0121d6a9e0036f956ba0ca">file_descriptor_create</link> (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> owner, const char *name)</para>
+</listitem>
+            <listitem><para>FILESYSTEM_API <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> <link linkend="_filesystem__file__descriptor_8h_1ac13ff124ec2b4a56daa46cefa3da7719">file_descriptor_owner</link> (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</para>
+</listitem>
+            <listitem><para>const FILESYSTEM_API char * <link linkend="_filesystem__file__descriptor_8h_1a51eab67fad9edc7d9a842095058f26c7">file_descriptor_name</link> (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</para>
+</listitem>
+            <listitem><para>const FILESYSTEM_API char * <link linkend="_filesystem__file__descriptor_8h_1ad988efd001c0f2dfadbe8ade27c2e41f">file_descriptor_extension</link> (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</para>
+</listitem>
+            <listitem><para>FILESYSTEM_API void <link linkend="_filesystem__file__descriptor_8h_1a710db92c6d2c230996b1b456cd80a610">file_descriptor_destroy</link> (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_filesystem__file__descriptor_8h_1a6d02dc06d441043948a60e1924a0b4d0"/>    <section>
+    <title>FILE_DESCRIPTOR_NAME_SIZE</title>
+<indexterm><primary>FILE_DESCRIPTOR_NAME_SIZE</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>FILE_DESCRIPTOR_NAME_SIZE</secondary></indexterm>
+<para><computeroutput>#define FILE_DESCRIPTOR_NAME_SIZE   0x0100</computeroutput></para>    </section><anchor xml:id="_filesystem__file__descriptor_8h_1ac2d2dec43cef4d05fbdb3642b0148388"/>    <section>
+    <title>FILE_DESCRIPTOR_EXTENSION_SIZE</title>
+<indexterm><primary>FILE_DESCRIPTOR_EXTENSION_SIZE</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>FILE_DESCRIPTOR_EXTENSION_SIZE</secondary></indexterm>
+<para><computeroutput>#define FILE_DESCRIPTOR_EXTENSION_SIZE   0x0012</computeroutput></para></section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872"/>    <section>
+    <title>file_descriptor</title>
+<indexterm><primary>file_descriptor</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>file_descriptor</secondary></indexterm>
+<para><computeroutput>typedef struct file_descriptor_type* <link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_filesystem__file__descriptor_8h_1a113b6cd06f0121d6a9e0036f956ba0ca"/>    <section>
+    <title>file_descriptor_create()</title>
+<indexterm><primary>file_descriptor_create</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>file_descriptor_create</secondary></indexterm>
+<para><computeroutput>FILESYSTEM_API <link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> file_descriptor_create (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> owner, const char * name)</computeroutput></para><para>
+
+<para>Create a file descriptor from specified directory and name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>owner</entry>
+                                <entry>
+<para>Directory which file belongs to</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>The name of the file</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the file descriptor if success, null pointer otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__file__descriptor_8h_1ac13ff124ec2b4a56daa46cefa3da7719"/>    <section>
+    <title>file_descriptor_owner()</title>
+<indexterm><primary>file_descriptor_owner</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>file_descriptor_owner</secondary></indexterm>
+<para><computeroutput>FILESYSTEM_API <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> file_descriptor_owner (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</computeroutput></para><para>
+
+<para>Get the owner directory where is the file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>File descriptor pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to directory descriptor which owns the file </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__file__descriptor_8h_1a51eab67fad9edc7d9a842095058f26c7"/>    <section>
+    <title>file_descriptor_name()</title>
+<indexterm><primary>file_descriptor_name</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>file_descriptor_name</secondary></indexterm>
+<para><computeroutput>const FILESYSTEM_API char* file_descriptor_name (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</computeroutput></para><para>
+
+<para>Get the file name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>File descriptor pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A constant string pointer to the name of @f </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__file__descriptor_8h_1ad988efd001c0f2dfadbe8ade27c2e41f"/>    <section>
+    <title>file_descriptor_extension()</title>
+<indexterm><primary>file_descriptor_extension</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>file_descriptor_extension</secondary></indexterm>
+<para><computeroutput>const FILESYSTEM_API char* file_descriptor_extension (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</computeroutput></para><para>
+
+<para>Get the file extension. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>File descriptor pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A constant string pointer to the extension of @f </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__file__descriptor_8h_1a710db92c6d2c230996b1b456cd80a610"/>    <section>
+    <title>file_descriptor_destroy()</title>
+<indexterm><primary>file_descriptor_destroy</primary><secondary>filesystem_file_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_file_descriptor.h</primary><secondary>file_descriptor_destroy</secondary></indexterm>
+<para><computeroutput>FILESYSTEM_API void file_descriptor_destroy (<link linkend="_filesystem__file__descriptor_8h_1a0d3377dee4624512c2324d75fba3d872">file_descriptor</link> f)</computeroutput></para><para>
+
+<para>Destroy a file from memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>File descriptor pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

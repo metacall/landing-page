@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log_8h">
+<title>log.h File Reference</title>
+<indexterm><primary>log.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_level.h&gt;
+#include &lt;log/log_policy.h&gt;
+#include &lt;log/log_policy_format.h&gt;
+#include &lt;log/log_policy_schedule.h&gt;
+#include &lt;log/log_policy_storage.h&gt;
+#include &lt;log/log_policy_stream.h&gt;
+#include &lt;log/log_preprocessor.h&gt;
+#include &lt;log/log_record.h&gt;
+#include &lt;format/format_specifier.h&gt;
+#include &lt;stdarg.h&gt;
+</programlisting>Include dependency graph for log.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API void * <link linkend="_log_8h_1a7d7b6e62eb6fa8f84a1a6989eb096d0c">log_instance</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API size_t <link linkend="_log_8h_1a1f784322e19c24bccab759b41ba93ce9">log_size</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1aa07cf0aadf62887d2490157a26d11d20">log_create</link> (const char *name)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1adf34dd59ed3263c6e6aa0bbb500335ef">log_define</link> (const char *name, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1a3bbe4b78b618932e6f0b73cce1e80e7c">log_configure_impl</link> (const char *name, size_t size,...)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1a80fdc25f4e548aca64af76272f18736c">log_level</link> (const char *name, const char *level, size_t length)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1a406197a270523baeb61bf60e5a2a7ed7">log_write_impl</link> (const char *name, const size_t line, const char *func, const char *<link linkend="_filesystem_8h_1a1fea2a4514fa0a01c4fa0fe2d0f014de">file</link>, const enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> level, const char *message)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1a97b582a8278d4a7e95476b0ad55dceda">log_write_impl_va</link> (const char *name, const size_t line, const char *func, const char *<link linkend="_filesystem_8h_1a1fea2a4514fa0a01c4fa0fe2d0f014de">file</link>, const enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> level, const char *message,...)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1a8b92d3bba63810079cef6856a9109107">log_clear</link> (const char *name)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log_8h_1a82ac8dc9916b60ee74fecdaafac95984">log_delete</link> (const char *name)</para>
+</listitem>
+            <listitem><para>const LOG_API char * <link linkend="_log_8h_1a120ac5f32a2a356fbf28f297cb15a5bc">log_print_info</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log_8h_1a7d7b6e62eb6fa8f84a1a6989eb096d0c"/>    <section>
+    <title>log_instance()</title>
+<indexterm><primary>log_instance</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_instance</secondary></indexterm>
+<para><computeroutput>LOG_API void* log_instance (void )</computeroutput></para>    </section><anchor xml:id="_log_8h_1a1f784322e19c24bccab759b41ba93ce9"/>    <section>
+    <title>log_size()</title>
+<indexterm><primary>log_size</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_size</secondary></indexterm>
+<para><computeroutput>LOG_API size_t log_size (void )</computeroutput></para>    </section><anchor xml:id="_log_8h_1aa07cf0aadf62887d2490157a26d11d20"/>    <section>
+    <title>log_create()</title>
+<indexterm><primary>log_create</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_create</secondary></indexterm>
+<para><computeroutput>LOG_API int log_create (const char * name)</computeroutput></para>    </section><anchor xml:id="_log_8h_1adf34dd59ed3263c6e6aa0bbb500335ef"/>    <section>
+    <title>log_define()</title>
+<indexterm><primary>log_define</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_define</secondary></indexterm>
+<para><computeroutput>LOG_API int log_define (const char * name, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log_8h_1a3bbe4b78b618932e6f0b73cce1e80e7c"/>    <section>
+    <title>log_configure_impl()</title>
+<indexterm><primary>log_configure_impl</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_configure_impl</secondary></indexterm>
+<para><computeroutput>LOG_API int log_configure_impl (const char * name, size_t size,  ...)</computeroutput></para>    </section><anchor xml:id="_log_8h_1a80fdc25f4e548aca64af76272f18736c"/>    <section>
+    <title>log_level()</title>
+<indexterm><primary>log_level</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_level</secondary></indexterm>
+<para><computeroutput>LOG_API int log_level (const char * name, const char * level, size_t length)</computeroutput></para>    </section><anchor xml:id="_log_8h_1a406197a270523baeb61bf60e5a2a7ed7"/>    <section>
+    <title>log_write_impl()</title>
+<indexterm><primary>log_write_impl</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_write_impl</secondary></indexterm>
+<para><computeroutput>LOG_API int log_write_impl (const char * name, const size_t line, const char * func, const char * file, const enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> level, const char * message)</computeroutput></para>    </section><anchor xml:id="_log_8h_1a97b582a8278d4a7e95476b0ad55dceda"/>    <section>
+    <title>log_write_impl_va()</title>
+<indexterm><primary>log_write_impl_va</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_write_impl_va</secondary></indexterm>
+<para><computeroutput>LOG_API int log_write_impl_va (const char * name, const size_t line, const char * func, const char * file, const enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> level, const char * message,  ...)</computeroutput></para>    </section><anchor xml:id="_log_8h_1a8b92d3bba63810079cef6856a9109107"/>    <section>
+    <title>log_clear()</title>
+<indexterm><primary>log_clear</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_clear</secondary></indexterm>
+<para><computeroutput>LOG_API int log_clear (const char * name)</computeroutput></para>    </section><anchor xml:id="_log_8h_1a82ac8dc9916b60ee74fecdaafac95984"/>    <section>
+    <title>log_delete()</title>
+<indexterm><primary>log_delete</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_delete</secondary></indexterm>
+<para><computeroutput>LOG_API int log_delete (const char * name)</computeroutput></para>    </section><anchor xml:id="_log_8h_1a120ac5f32a2a356fbf28f297cb15a5bc"/>    <section>
+    <title>log_print_info()</title>
+<indexterm><primary>log_print_info</primary><secondary>log.h</secondary></indexterm>
+<indexterm><primary>log.h</primary><secondary>log_print_info</secondary></indexterm>
+<para><computeroutput>const LOG_API char* log_print_info (void )</computeroutput></para></section>
+</section>
+</section>

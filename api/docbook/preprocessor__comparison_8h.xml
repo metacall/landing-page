@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_preprocessor__comparison_8h">
+<title>preprocessor_comparison.h File Reference</title>
+<indexterm><primary>preprocessor_comparison.h</primary></indexterm>
+<programlisting>#include &lt;preprocessor/preprocessor_api.h&gt;
+#include &lt;preprocessor/preprocessor_bit.h&gt;
+#include &lt;preprocessor/preprocessor_concatenation.h&gt;
+#include &lt;preprocessor/preprocessor_detection.h&gt;
+#include &lt;preprocessor/preprocessor_empty.h&gt;
+#include &lt;preprocessor/preprocessor_if.h&gt;
+</programlisting>Include dependency graph for preprocessor_comparison.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__comparison_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__comparison_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_preprocessor__comparison_8h_1a8370815c87834af662ec2100e9f1f69f">PREPROCESSOR_COMPARE_IMPL</link>(left,  right)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__comparison_8h_1a9f5a5a9a7532c55879c0f837309b94bc">PREPROCESSOR_NOT_EQUAL</link>(left,  right)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__comparison_8h_1a7eb481391763f36fadaa40a3677a3850">PREPROCESSOR_EQUAL</link>(left,  right)   <link linkend="_preprocessor__complement_8h_1a212fd60a641472f300516d4e6c5a0b93">PREPROCESSOR_COMPL</link>(<link linkend="_preprocessor__comparison_8h_1a9f5a5a9a7532c55879c0f837309b94bc">PREPROCESSOR_NOT_EQUAL</link>(left, right))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_preprocessor__comparison_8h_1a8370815c87834af662ec2100e9f1f69f"/>    <section>
+    <title>PREPROCESSOR_COMPARE_IMPL</title>
+<indexterm><primary>PREPROCESSOR_COMPARE_IMPL</primary><secondary>preprocessor_comparison.h</secondary></indexterm>
+<indexterm><primary>preprocessor_comparison.h</primary><secondary>PREPROCESSOR_COMPARE_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_COMPARE_IMPL( left,  right)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<link linkend="_preprocessor__detection_8h_1aefbe29817f8314429b13eff6e9a0c00f">PREPROCESSOR_DETECT_PARENTHESIS</link>(&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PREPROCESSOR_COMPARE_##left(PREPROCESSOR_COMPARE_##right)(()))
+</programlisting>    </section><anchor xml:id="_preprocessor__comparison_8h_1a9f5a5a9a7532c55879c0f837309b94bc"/>    <section>
+    <title>PREPROCESSOR_NOT_EQUAL</title>
+<indexterm><primary>PREPROCESSOR_NOT_EQUAL</primary><secondary>preprocessor_comparison.h</secondary></indexterm>
+<indexterm><primary>preprocessor_comparison.h</primary><secondary>PREPROCESSOR_NOT_EQUAL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_NOT_EQUAL( left,  right)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;PREPROCESSOR_IF_IMPL(&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_preprocessor__bit_8h_1a55834402a1a98ff9ebc87c3a511a7dc8">PREPROCESSOR_BIT_AND</link>(<link linkend="_preprocessor__detection_8h_1a8c19ab290bcd5b8af62c72675512f40a">PREPROCESSOR_DETECT_COMPARABLE</link>(left))(<link linkend="_preprocessor__detection_8h_1a8c19ab290bcd5b8af62c72675512f40a">PREPROCESSOR_DETECT_COMPARABLE</link>(right)),&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_preprocessor__comparison_8h_1a8370815c87834af662ec2100e9f1f69f">PREPROCESSOR_COMPARE_IMPL</link>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1&#32;<link linkend="_preprocessor__empty_8h_1aec8d0fefdff76520eb386522b5c7e4ed">PREPROCESSOR_EMPTY_EXPANSION_VARIADIC</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;(left,&#32;right)
+</programlisting>    </section><anchor xml:id="_preprocessor__comparison_8h_1a7eb481391763f36fadaa40a3677a3850"/>    <section>
+    <title>PREPROCESSOR_EQUAL</title>
+<indexterm><primary>PREPROCESSOR_EQUAL</primary><secondary>preprocessor_comparison.h</secondary></indexterm>
+<indexterm><primary>preprocessor_comparison.h</primary><secondary>PREPROCESSOR_EQUAL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_EQUAL( left,  right)   <link linkend="_preprocessor__complement_8h_1a212fd60a641472f300516d4e6c5a0b93">PREPROCESSOR_COMPL</link>(<link linkend="_preprocessor__comparison_8h_1a9f5a5a9a7532c55879c0f837309b94bc">PREPROCESSOR_NOT_EQUAL</link>(left, right))</computeroutput></para></section>
+</section>
+</section>

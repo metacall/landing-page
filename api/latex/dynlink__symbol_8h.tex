@@ -1,0 +1,76 @@
+\doxysection{dynlink\+\_\+symbol.\+h File Reference}
+\label{dynlink__symbol_8h}\index{dynlink\_symbol.h@{dynlink\_symbol.h}}
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+type.\+h$>$}\newline
+Include dependency graph for dynlink\+\_\+symbol.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{dynlink__symbol_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{dynlink__symbol_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}~0x\+FF
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man}[\textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}]
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+mangle} (\textbf{ dynlink\+\_\+symbol\+\_\+name} symbol\+\_\+name, \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man} symbol\+\_\+mangled)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{dynlink__symbol_8h_a471330a16aaba283b9ae4f9372aca897}} 
+\index{dynlink\_symbol.h@{dynlink\_symbol.h}!DYNLINK\_SYMBOL\_NAME\_SIZE@{DYNLINK\_SYMBOL\_NAME\_SIZE}}
+\index{DYNLINK\_SYMBOL\_NAME\_SIZE@{DYNLINK\_SYMBOL\_NAME\_SIZE}!dynlink\_symbol.h@{dynlink\_symbol.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_NAME\_SIZE}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE~0x\+FF}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{dynlink__symbol_8h_af617edaae89009a3411e00f0b24f6f28}} 
+\index{dynlink\_symbol.h@{dynlink\_symbol.h}!dynlink\_symbol\_name\_man@{dynlink\_symbol\_name\_man}}
+\index{dynlink\_symbol\_name\_man@{dynlink\_symbol\_name\_man}!dynlink\_symbol.h@{dynlink\_symbol.h}}
+\doxysubsubsection{dynlink\_symbol\_name\_man}
+{\footnotesize\ttfamily typedef char dynlink\+\_\+symbol\+\_\+name\+\_\+man[\textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}]}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{dynlink__symbol_8h_a8d837f4ac06c64c5d88fd54ea3370ab0}} 
+\index{dynlink\_symbol.h@{dynlink\_symbol.h}!dynlink\_symbol\_name\_mangle@{dynlink\_symbol\_name\_mangle}}
+\index{dynlink\_symbol\_name\_mangle@{dynlink\_symbol\_name\_mangle}!dynlink\_symbol.h@{dynlink\_symbol.h}}
+\doxysubsubsection{dynlink\_symbol\_name\_mangle()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int dynlink\+\_\+symbol\+\_\+name\+\_\+mangle (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name}}]{symbol\+\_\+name,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man}}]{symbol\+\_\+mangled }\end{DoxyParamCaption})}
+
+
+
+Get convert a symbol to name mangled for cross-\/platform dynamic loading. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em symbol\+\_\+name} & Reference to name of the of dynamically linked shared object symbol\\
+\hline
+\mbox{\texttt{ out}}  & {\em symbol\+\_\+mangled} & Reference to mangled name of the of dynamically linked shared object symbol\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero if @symbol\+\_\+name was correctly mangled 
+\end{DoxyReturn}

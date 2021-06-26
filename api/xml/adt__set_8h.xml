@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="adt__set_8h" kind="file" language="C++">
+    <compoundname>adt_set.h</compoundname>
+    <includes local="no">adt/adt_api.h</includes>
+    <includes refid="adt__comparable_8h" local="no">adt/adt_comparable.h</includes>
+    <includes refid="adt__hash_8h" local="no">adt/adt_hash.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includedby refid="filesystem_8h" local="no">filesystem.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>adt/adt_hash.h</label>
+        <link refid="adt__hash_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>adt/adt_comparable.h</label>
+        <link refid="adt__comparable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>adt_set.h</label>
+        <link refid="adt__set_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>adt/adt_api.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>filesystem.h</label>
+        <link refid="filesystem_8h"/>
+      </node>
+      <node id="1">
+        <label>adt_set.h</label>
+        <link refid="adt__set_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" prot="public" static="no">
+        <type>struct set_type *</type>
+        <definition>typedef struct set_type* set</definition>
+        <argsstring></argsstring>
+        <name>set</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="35" column="23" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1ada139513d97afc81c35f9f89a634e985" prot="public" static="no">
+        <type><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref></type>
+        <definition>typedef hash set_hash</definition>
+        <argsstring></argsstring>
+        <name>set_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="37" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" prot="public" static="no">
+        <type><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref></type>
+        <definition>typedef comparable set_key</definition>
+        <argsstring></argsstring>
+        <name>set_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="39" column="20" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* set_value</definition>
+        <argsstring></argsstring>
+        <name>set_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="41" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1a8cb0ced0c0b60a7bd5577b825adb877a" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* set_cb_iterate_args</definition>
+        <argsstring></argsstring>
+        <name>set_cb_iterate_args</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="43" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1ae30b448653dfdd1ac0e74255f17557a2" prot="public" static="no">
+        <type><ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref></type>
+        <definition>typedef hash_callback set_cb_hash</definition>
+        <argsstring></argsstring>
+        <name>set_cb_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="45" column="23" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1a3faae05d7487ec909547ae7f665305a7" prot="public" static="no">
+        <type><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref></type>
+        <definition>typedef comparable_callback set_cb_compare</definition>
+        <argsstring></argsstring>
+        <name>set_cb_compare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="47" column="29" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1a8fd872ed5a89c8eb6108690330486742" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* set_cb_iterate) (set, set_key, set_value, set_cb_iterate_args)</definition>
+        <argsstring>)(set, set_key, set_value, set_cb_iterate_args)</argsstring>
+        <name>set_cb_iterate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="49" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" prot="public" static="no">
+        <type>struct set_iterator_type *</type>
+        <definition>typedef struct set_iterator_type* set_iterator</definition>
+        <argsstring></argsstring>
+        <name>set_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="51" column="32" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adt__set_8h_1ac1d78cd72fa2a82e4e330626b04e937d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+        <definition>ADT_API set set_create</definition>
+        <argsstring>(set_cb_hash hash_cb, set_cb_compare compare_cb)</argsstring>
+        <name>set_create</name>
+        <param>
+          <type><ref refid="adt__set_8h_1ae30b448653dfdd1ac0e74255f17557a2" kindref="member">set_cb_hash</ref></type>
+          <declname>hash_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1a3faae05d7487ec909547ae7f665305a7" kindref="member">set_cb_compare</ref></type>
+          <declname>compare_cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="55" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="55" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a59d124567260a15aa705f77ff9796c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API size_t</type>
+        <definition>ADT_API size_t set_size</definition>
+        <argsstring>(set s)</argsstring>
+        <name>set_size</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="57" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="57" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1aed6c098ba7ac8d9d3261581e344dfc96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_insert</definition>
+        <argsstring>(set s, set_key key, set_value value)</argsstring>
+        <name>set_insert</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="59" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="59" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1ab024cd240fae7f3d1b9a8e9d218bcba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_insert_array</definition>
+        <argsstring>(set s, set_key keys[], set_value values[], size_t size)</argsstring>
+        <name>set_insert_array</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref></type>
+          <declname>keys</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref></type>
+          <declname>values</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="61" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="61" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a433e5474d3de9012a2e08ff6356cdf39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref></type>
+        <definition>ADT_API set_value set_get</definition>
+        <argsstring>(set s, set_key key)</argsstring>
+        <name>set_get</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="63" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="63" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1ab45546fa9c240ed7bf3fa92939901cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_contains</definition>
+        <argsstring>(set s, set_key key)</argsstring>
+        <name>set_contains</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="65" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="65" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1af6867d7bf575465b8d56be1619b3a519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_contains_any</definition>
+        <argsstring>(set dest, set src)</argsstring>
+        <name>set_contains_any</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="67" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="67" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a7f2210acc45518622a8f642817c2cdf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref></type>
+        <definition>ADT_API set_value set_remove</definition>
+        <argsstring>(set s, set_key key)</argsstring>
+        <name>set_remove</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="69" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="69" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1ac719326a2dfbd15ad9597b501d465379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void set_iterate</definition>
+        <argsstring>(set s, set_cb_iterate iterate_cb, set_cb_iterate_args args)</argsstring>
+        <name>set_iterate</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1a8fd872ed5a89c8eb6108690330486742" kindref="member">set_cb_iterate</ref></type>
+          <declname>iterate_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1a8cb0ced0c0b60a7bd5577b825adb877a" kindref="member">set_cb_iterate_args</ref></type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="71" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="71" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a5e4ba95e5fc0a19f8ea5972ce5ac1c15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_append</definition>
+        <argsstring>(set dest, set src)</argsstring>
+        <name>set_append</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="73" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="73" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a7feb072e87833cf309de0498c8e34abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_disjoint</definition>
+        <argsstring>(set dest, set src)</argsstring>
+        <name>set_disjoint</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="75" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="75" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a71928f9d2bdb535e9d8fb6bdb2dc479f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_clear</definition>
+        <argsstring>(set s)</argsstring>
+        <name>set_clear</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="77" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="77" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a4c7beae1b15da99376f4fc6f5acb0ebe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void set_destroy</definition>
+        <argsstring>(set s)</argsstring>
+        <name>set_destroy</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="79" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="79" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1a28f0e86e46788f17d6fc9f93ba1ad217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref></type>
+        <definition>ADT_API set_iterator set_iterator_begin</definition>
+        <argsstring>(set s)</argsstring>
+        <name>set_iterator_begin</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="81" column="22" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="81" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1af4489b2c6634f1ca21a0e6725c0afa1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref></type>
+        <definition>ADT_API set_key set_iterator_get_key</definition>
+        <argsstring>(set_iterator it)</argsstring>
+        <name>set_iterator_get_key</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref></type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="83" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="83" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1abca4386a64fa2dbf5c101b30b8c55aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref></type>
+        <definition>ADT_API set_value set_iterator_get_value</definition>
+        <argsstring>(set_iterator it)</argsstring>
+        <name>set_iterator_get_value</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref></type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="85" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="85" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1aa2d12e07e3cf7533789d566a4fc2bd8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void set_iterator_next</definition>
+        <argsstring>(set_iterator it)</argsstring>
+        <name>set_iterator_next</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref></type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="87" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="87" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__set_8h_1ad1f48b3840d8addfd1c0faf23124d225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int set_iterator_end</definition>
+        <argsstring>(set_iterator *it)</argsstring>
+        <name>set_iterator_end</name>
+        <param>
+          <type><ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref> *</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" line="89" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h" declline="89" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADT_SET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADT_SET_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;adt/adt_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__comparable_8h" kindref="compound">adt/adt_comparable.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__hash_8h" kindref="compound">adt/adt_hash.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">set_type;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">set_iterator_type;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">set_type<sp/>*<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="adt__set_8h_1ada139513d97afc81c35f9f89a634e985" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref><sp/><ref refid="adt__set_8h_1ada139513d97afc81c35f9f89a634e985" kindref="member">set_hash</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="adt__set_8h_1a8cb0ced0c0b60a7bd5577b825adb877a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__set_8h_1a8cb0ced0c0b60a7bd5577b825adb877a" kindref="member">set_cb_iterate_args</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="adt__set_8h_1ae30b448653dfdd1ac0e74255f17557a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref><sp/><ref refid="adt__set_8h_1ae30b448653dfdd1ac0e74255f17557a2" kindref="member">set_cb_hash</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="adt__set_8h_1a3faae05d7487ec909547ae7f665305a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref><sp/><ref refid="adt__set_8h_1a3faae05d7487ec909547ae7f665305a7" kindref="member">set_cb_compare</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="adt__set_8h_1a8fd872ed5a89c8eb6108690330486742" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="adt__set_8h_1a8fd872ed5a89c8eb6108690330486742" kindref="member">set_cb_iterate</ref>)(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref>,<sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref>,<sp/><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref>,<sp/><ref refid="adt__set_8h_1a8cb0ced0c0b60a7bd5577b825adb877a" kindref="member">set_cb_iterate_args</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">set_iterator_type<sp/>*<ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">ADT_API<sp/><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/><ref refid="adt__set_8h_1ac1d78cd72fa2a82e4e330626b04e937d" kindref="member">set_create</ref>(<ref refid="adt__set_8h_1ae30b448653dfdd1ac0e74255f17557a2" kindref="member">set_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__set_8h_1a3faae05d7487ec909547ae7f665305a7" kindref="member">set_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1a59d124567260a15aa705f77ff9796c50" kindref="member">set_size</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1aed6c098ba7ac8d9d3261581e344dfc96" kindref="member">set_insert</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s,<sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref><sp/>key,<sp/><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1ab024cd240fae7f3d1b9a8e9d218bcba5" kindref="member">set_insert_array</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s,<sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref><sp/>keys[],<sp/><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref><sp/>values[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">ADT_API<sp/><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref><sp/><ref refid="adt__set_8h_1a433e5474d3de9012a2e08ff6356cdf39" kindref="member">set_get</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s,<sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1ab45546fa9c240ed7bf3fa92939901cd1" kindref="member">set_contains</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s,<sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1af6867d7bf575465b8d56be1619b3a519" kindref="member">set_contains_any</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>dest,<sp/><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>src);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">ADT_API<sp/><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref><sp/><ref refid="adt__set_8h_1a7f2210acc45518622a8f642817c2cdf5" kindref="member">set_remove</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s,<sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1ac719326a2dfbd15ad9597b501d465379" kindref="member">set_iterate</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s,<sp/><ref refid="adt__set_8h_1a8fd872ed5a89c8eb6108690330486742" kindref="member">set_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__set_8h_1a8cb0ced0c0b60a7bd5577b825adb877a" kindref="member">set_cb_iterate_args</ref><sp/>args);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1a5e4ba95e5fc0a19f8ea5972ce5ac1c15" kindref="member">set_append</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>dest,<sp/><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>src);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1a7feb072e87833cf309de0498c8e34abc" kindref="member">set_disjoint</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>dest,<sp/><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>src);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1a71928f9d2bdb535e9d8fb6bdb2dc479f" kindref="member">set_clear</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1a4c7beae1b15da99376f4fc6f5acb0ebe" kindref="member">set_destroy</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">ADT_API<sp/><ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref><sp/><ref refid="adt__set_8h_1a28f0e86e46788f17d6fc9f93ba1ad217" kindref="member">set_iterator_begin</ref>(<ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>s);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">ADT_API<sp/><ref refid="adt__set_8h_1ab8483b59585c6662d52bc57b3dd61c09" kindref="member">set_key</ref><sp/><ref refid="adt__set_8h_1af4489b2c6634f1ca21a0e6725c0afa1f" kindref="member">set_iterator_get_key</ref>(<ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">ADT_API<sp/><ref refid="adt__set_8h_1a68280a448bd2011e8d88f45c8a4f8dde" kindref="member">set_value</ref><sp/><ref refid="adt__set_8h_1abca4386a64fa2dbf5c101b30b8c55aae" kindref="member">set_iterator_get_value</ref>(<ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1aa2d12e07e3cf7533789d566a4fc2bd8c" kindref="member">set_iterator_next</ref>(<ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__set_8h_1ad1f48b3840d8addfd1c0faf23124d225" kindref="member">set_iterator_end</ref>(<ref refid="adt__set_8h_1af6d1ce700940d7e3fcc6f656ca546c8b" kindref="member">set_iterator</ref><sp/>*it);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ADT_SET_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_set.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,93 @@
+.TH "reflect_future.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_future.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_value\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBfuture_interface\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBfuture_impl\fP"
+.br
+.ti -1c
+.RI "typedef struct future_type * \fBfuture\fP"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP \fBfuture_return\fP"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBfuture_resolve_callback\fP) (\fBvalue\fP, void *)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBfuture_reject_callback\fP) (\fBvalue\fP, void *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBfuture_impl_interface_create\fP) (\fBfuture\fP, \fBfuture_impl\fP)"
+.br
+.ti -1c
+.RI "typedef \fBfuture_return\fP(* \fBfuture_impl_interface_await\fP) (\fBfuture\fP, \fBfuture_impl\fP, \fBfuture_resolve_callback\fP, \fBfuture_reject_callback\fP, void *)"
+.br
+.ti -1c
+.RI "typedef void(* \fBfuture_impl_interface_destroy\fP) (\fBfuture\fP, \fBfuture_impl\fP)"
+.br
+.ti -1c
+.RI "typedef future_interface(* \fBfuture_impl_interface_singleton\fP) (void)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBfuture\fP \fBfuture_create\fP (\fBfuture_impl\fP impl, \fBfuture_impl_interface_singleton\fP singleton)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBfuture_return\fP \fBfuture_await\fP (\fBfuture\fP f, \fBfuture_resolve_callback\fP resolve_callback, \fBfuture_reject_callback\fP reject_callback, void *\fBcontext\fP)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBfuture_destroy\fP (\fBfuture\fP f)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void* \fBfuture_impl\fP"
+
+.SS "typedef struct future_type* \fBfuture\fP"
+
+.SS "typedef \fBvalue\fP \fBfuture_return\fP"
+
+.SS "typedef \fBvalue\fP(* future_resolve_callback) (\fBvalue\fP, void *)"
+
+.SS "typedef \fBvalue\fP(* future_reject_callback) (\fBvalue\fP, void *)"
+
+.SS "typedef int(* future_impl_interface_create) (\fBfuture\fP, \fBfuture_impl\fP)"
+
+.SS "typedef \fBfuture_return\fP(* future_impl_interface_await) (\fBfuture\fP, \fBfuture_impl\fP, \fBfuture_resolve_callback\fP, \fBfuture_reject_callback\fP, void *)"
+
+.SS "typedef void(* future_impl_interface_destroy) (\fBfuture\fP, \fBfuture_impl\fP)"
+
+.SS "typedef future_interface(* future_impl_interface_singleton) (void)"
+
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBfuture\fP future_create (\fBfuture_impl\fP impl, \fBfuture_impl_interface_singleton\fP singleton)"
+
+.SS "REFLECT_API \fBfuture_return\fP future_await (\fBfuture\fP f, \fBfuture_resolve_callback\fP resolve_callback, \fBfuture_reject_callback\fP reject_callback, void * context)"
+
+.SS "REFLECT_API void future_destroy (\fBfuture\fP f)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

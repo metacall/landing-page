@@ -1,0 +1,153 @@
+\doxysection{filesystem\+\_\+file\+\_\+descriptor.\+h File Reference}
+\label{filesystem__file__descriptor_8h}\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+{\ttfamily \#include $<$filesystem/filesystem\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem/filesystem\+\_\+directory\+\_\+descriptor.\+h$>$}\newline
+Include dependency graph for filesystem\+\_\+file\+\_\+descriptor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{filesystem__file__descriptor_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}~0x0100
+\item 
+\#define \textbf{ F\+I\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+S\+I\+ZE}~0x0012
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct file\+\_\+descriptor\+\_\+type $\ast$ \textbf{ file\+\_\+descriptor}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ file\+\_\+descriptor} \textbf{ file\+\_\+descriptor\+\_\+create} (\textbf{ directory\+\_\+descriptor} owner, const char $\ast$name)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} \textbf{ file\+\_\+descriptor\+\_\+owner} (\textbf{ file\+\_\+descriptor} f)
+\item 
+const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char $\ast$ \textbf{ file\+\_\+descriptor\+\_\+name} (\textbf{ file\+\_\+descriptor} f)
+\item 
+const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char $\ast$ \textbf{ file\+\_\+descriptor\+\_\+extension} (\textbf{ file\+\_\+descriptor} f)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void \textbf{ file\+\_\+descriptor\+\_\+destroy} (\textbf{ file\+\_\+descriptor} f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{filesystem__file__descriptor_8h_a6d02dc06d441043948a60e1924a0b4d0}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!FILE\_DESCRIPTOR\_NAME\_SIZE@{FILE\_DESCRIPTOR\_NAME\_SIZE}}
+\index{FILE\_DESCRIPTOR\_NAME\_SIZE@{FILE\_DESCRIPTOR\_NAME\_SIZE}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{FILE\_DESCRIPTOR\_NAME\_SIZE}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE~0x0100}
+
+\mbox{\label{filesystem__file__descriptor_8h_ac2d2dec43cef4d05fbdb3642b0148388}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!FILE\_DESCRIPTOR\_EXTENSION\_SIZE@{FILE\_DESCRIPTOR\_EXTENSION\_SIZE}}
+\index{FILE\_DESCRIPTOR\_EXTENSION\_SIZE@{FILE\_DESCRIPTOR\_EXTENSION\_SIZE}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{FILE\_DESCRIPTOR\_EXTENSION\_SIZE}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+S\+I\+ZE~0x0012}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{filesystem__file__descriptor_8h_a0d3377dee4624512c2324d75fba3d872}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!file\_descriptor@{file\_descriptor}}
+\index{file\_descriptor@{file\_descriptor}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{file\_descriptor}
+{\footnotesize\ttfamily typedef struct file\+\_\+descriptor\+\_\+type$\ast$ \textbf{ file\+\_\+descriptor}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{filesystem__file__descriptor_8h_a113b6cd06f0121d6a9e0036f956ba0ca}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!file\_descriptor\_create@{file\_descriptor\_create}}
+\index{file\_descriptor\_create@{file\_descriptor\_create}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{file\_descriptor\_create()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ file\+\_\+descriptor} file\+\_\+descriptor\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{owner,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Create a file descriptor from specified directory and name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em owner} & Directory which file belongs to\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & The name of the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the file descriptor if success, null pointer otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem__file__descriptor_8h_ac13ff124ec2b4a56daa46cefa3da7719}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!file\_descriptor\_owner@{file\_descriptor\_owner}}
+\index{file\_descriptor\_owner@{file\_descriptor\_owner}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{file\_descriptor\_owner()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} file\+\_\+descriptor\+\_\+owner (\begin{DoxyParamCaption}\item[{\textbf{ file\+\_\+descriptor}}]{f }\end{DoxyParamCaption})}
+
+
+
+Get the owner directory where is the file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & File descriptor pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to directory descriptor which owns the file 
+\end{DoxyReturn}
+\mbox{\label{filesystem__file__descriptor_8h_a51eab67fad9edc7d9a842095058f26c7}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!file\_descriptor\_name@{file\_descriptor\_name}}
+\index{file\_descriptor\_name@{file\_descriptor\_name}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{file\_descriptor\_name()}
+{\footnotesize\ttfamily const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char$\ast$ file\+\_\+descriptor\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ file\+\_\+descriptor}}]{f }\end{DoxyParamCaption})}
+
+
+
+Get the file name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & File descriptor pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A constant string pointer to the name of @f 
+\end{DoxyReturn}
+\mbox{\label{filesystem__file__descriptor_8h_ad988efd001c0f2dfadbe8ade27c2e41f}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!file\_descriptor\_extension@{file\_descriptor\_extension}}
+\index{file\_descriptor\_extension@{file\_descriptor\_extension}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{file\_descriptor\_extension()}
+{\footnotesize\ttfamily const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char$\ast$ file\+\_\+descriptor\+\_\+extension (\begin{DoxyParamCaption}\item[{\textbf{ file\+\_\+descriptor}}]{f }\end{DoxyParamCaption})}
+
+
+
+Get the file extension. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & File descriptor pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A constant string pointer to the extension of @f 
+\end{DoxyReturn}
+\mbox{\label{filesystem__file__descriptor_8h_a710db92c6d2c230996b1b456cd80a610}} 
+\index{filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}!file\_descriptor\_destroy@{file\_descriptor\_destroy}}
+\index{file\_descriptor\_destroy@{file\_descriptor\_destroy}!filesystem\_file\_descriptor.h@{filesystem\_file\_descriptor.h}}
+\doxysubsubsection{file\_descriptor\_destroy()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void file\+\_\+descriptor\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ file\+\_\+descriptor}}]{f }\end{DoxyParamCaption})}
+
+
+
+Destroy a file from memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & File descriptor pointer \\
+\hline
+\end{DoxyParams}

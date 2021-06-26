@@ -1,0 +1,153 @@
+\doxysection{filesystem\+\_\+directory\+\_\+descriptor.\+h File Reference}
+\label{filesystem__directory__descriptor_8h}\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+{\ttfamily \#include $<$filesystem/filesystem\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+vector.\+h$>$}\newline
+Include dependency graph for filesystem\+\_\+directory\+\_\+descriptor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{filesystem__directory__descriptor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{filesystem__directory__descriptor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE}~0x0200
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct directory\+\_\+descriptor\+\_\+type $\ast$ \textbf{ directory\+\_\+descriptor}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} \textbf{ directory\+\_\+descriptor\+\_\+create} (\textbf{ directory\+\_\+descriptor} parent, const char $\ast$path)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} \textbf{ directory\+\_\+descriptor\+\_\+parent} (\textbf{ directory\+\_\+descriptor} d)
+\item 
+const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char $\ast$ \textbf{ directory\+\_\+descriptor\+\_\+path} (\textbf{ directory\+\_\+descriptor} d)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ vector} \textbf{ directory\+\_\+descriptor\+\_\+files} (\textbf{ directory\+\_\+descriptor} d)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void \textbf{ directory\+\_\+descriptor\+\_\+destroy} (\textbf{ directory\+\_\+descriptor} d)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{filesystem__directory__descriptor_8h_ac5513253d61293e9df7a79157ea38dc6}} 
+\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!DIRECTORY\_DESCRIPTOR\_PATH\_SIZE@{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE}}
+\index{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE@{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+\doxysubsubsection{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE}
+{\footnotesize\ttfamily \#define D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE~0x0200}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{filesystem__directory__descriptor_8h_a3340a9d3762e6ed7fac9818f8826173e}} 
+\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor@{directory\_descriptor}}
+\index{directory\_descriptor@{directory\_descriptor}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+\doxysubsubsection{directory\_descriptor}
+{\footnotesize\ttfamily typedef struct directory\+\_\+descriptor\+\_\+type$\ast$ \textbf{ directory\+\_\+descriptor}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{filesystem__directory__descriptor_8h_a4f7c6af766261f44627e5098ccfd5533}} 
+\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_create@{directory\_descriptor\_create}}
+\index{directory\_descriptor\_create@{directory\_descriptor\_create}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+\doxysubsubsection{directory\_descriptor\_create()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} directory\+\_\+descriptor\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{parent,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Create a directory descriptor from specified path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em parent} & Parent directory if any\\
+\hline
+\mbox{\texttt{ in}}  & {\em path} & The path of the directory\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the directory descriptor if success, null pointer otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem__directory__descriptor_8h_ac9746dc9cf7d645915f5cef94618585b}} 
+\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_parent@{directory\_descriptor\_parent}}
+\index{directory\_descriptor\_parent@{directory\_descriptor\_parent}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+\doxysubsubsection{directory\_descriptor\_parent()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} directory\+\_\+descriptor\+\_\+parent (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+
+
+
+Get the parent directory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Directory descriptor pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the parent directory descriptor 
+\end{DoxyReturn}
+\mbox{\label{filesystem__directory__descriptor_8h_afc994cff2bc1f4a946dc3ef02a5c5b26}} 
+\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_path@{directory\_descriptor\_path}}
+\index{directory\_descriptor\_path@{directory\_descriptor\_path}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+\doxysubsubsection{directory\_descriptor\_path()}
+{\footnotesize\ttfamily const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char$\ast$ directory\+\_\+descriptor\+\_\+path (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+
+
+
+Get the path where directory points. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Directory descriptor pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A constant string pointer to the path of @d 
+\end{DoxyReturn}
+\mbox{\label{filesystem__directory__descriptor_8h_a9310f300f28e09ae18f4f2c1aac1348a}} 
+\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_files@{directory\_descriptor\_files}}
+\index{directory\_descriptor\_files@{directory\_descriptor\_files}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+\doxysubsubsection{directory\_descriptor\_files()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ vector} directory\+\_\+descriptor\+\_\+files (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+
+
+
+Get the files contained in a directory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Directory descriptor pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of files contained in directory 
+\end{DoxyReturn}
+\mbox{\label{filesystem__directory__descriptor_8h_a34876220eb5e5c1307702684eb678ce0}} 
+\index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_destroy@{directory\_descriptor\_destroy}}
+\index{directory\_descriptor\_destroy@{directory\_descriptor\_destroy}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
+\doxysubsubsection{directory\_descriptor\_destroy()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void directory\+\_\+descriptor\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+
+
+
+Destroy a directory from memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Directory descriptor pointer \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_preprocessor__if_8h">
+<title>preprocessor_if.h File Reference</title>
+<indexterm><primary>preprocessor_if.h</primary></indexterm>
+<programlisting>#include &lt;preprocessor/preprocessor_api.h&gt;
+#include &lt;preprocessor/preprocessor_boolean.h&gt;
+</programlisting>Include dependency graph for preprocessor_if.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__if_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__if_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_preprocessor__if_8h_1a9d67ef498d03ce8c5f3e69b916ccd7e1">PREPROCESSOR_IIF_IMPL_0</link>(true_expr,  false_expr)   false_expr</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__if_8h_1af5e2316cae61eea69caa0af7dcfbe7e0">PREPROCESSOR_IIF_IMPL_1</link>(true_expr,  false_expr)   true_expr</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__if_8h_1afeeadcecd7e438a36ffc8b6273ceb980">PREPROCESSOR_IIF_IMPL</link>(<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>,  true_expr,  false_expr)   PREPROCESSOR_IIF_IMPL_##<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(true_expr, false_expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__if_8h_1a847441b9d01481a1286936f52a508ce3">PREPROCESSOR_IIF</link>(<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>,  true_expr,  false_expr)   <link linkend="_preprocessor__if_8h_1afeeadcecd7e438a36ffc8b6273ceb980">PREPROCESSOR_IIF_IMPL</link>(<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, true_expr, false_expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__if_8h_1aec1ff7c94271c1198ca5a2c2d3ff75a9">PREPROCESSOR_IF</link>(condition,  true_expr,  false_expr)   <link linkend="_preprocessor__if_8h_1a847441b9d01481a1286936f52a508ce3">PREPROCESSOR_IIF</link>(<link linkend="_preprocessor__boolean_8h_1afecbb990f64de5941e902a04701c7f95">PREPROCESSOR_BOOL</link>(condition), true_expr, false_expr)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_preprocessor__if_8h_1a9d67ef498d03ce8c5f3e69b916ccd7e1"/>    <section>
+    <title>PREPROCESSOR_IIF_IMPL_0</title>
+<indexterm><primary>PREPROCESSOR_IIF_IMPL_0</primary><secondary>preprocessor_if.h</secondary></indexterm>
+<indexterm><primary>preprocessor_if.h</primary><secondary>PREPROCESSOR_IIF_IMPL_0</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_IIF_IMPL_0( true_expr,  false_expr)   false_expr</computeroutput></para>    </section><anchor xml:id="_preprocessor__if_8h_1af5e2316cae61eea69caa0af7dcfbe7e0"/>    <section>
+    <title>PREPROCESSOR_IIF_IMPL_1</title>
+<indexterm><primary>PREPROCESSOR_IIF_IMPL_1</primary><secondary>preprocessor_if.h</secondary></indexterm>
+<indexterm><primary>preprocessor_if.h</primary><secondary>PREPROCESSOR_IIF_IMPL_1</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_IIF_IMPL_1( true_expr,  false_expr)   true_expr</computeroutput></para>    </section><anchor xml:id="_preprocessor__if_8h_1afeeadcecd7e438a36ffc8b6273ceb980"/>    <section>
+    <title>PREPROCESSOR_IIF_IMPL</title>
+<indexterm><primary>PREPROCESSOR_IIF_IMPL</primary><secondary>preprocessor_if.h</secondary></indexterm>
+<indexterm><primary>preprocessor_if.h</primary><secondary>PREPROCESSOR_IIF_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_IIF_IMPL( <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>,  true_expr,  false_expr)   PREPROCESSOR_IIF_IMPL_##<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(true_expr, false_expr)</computeroutput></para>    </section><anchor xml:id="_preprocessor__if_8h_1a847441b9d01481a1286936f52a508ce3"/>    <section>
+    <title>PREPROCESSOR_IIF</title>
+<indexterm><primary>PREPROCESSOR_IIF</primary><secondary>preprocessor_if.h</secondary></indexterm>
+<indexterm><primary>preprocessor_if.h</primary><secondary>PREPROCESSOR_IIF</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_IIF( <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>,  true_expr,  false_expr)   <link linkend="_preprocessor__if_8h_1afeeadcecd7e438a36ffc8b6273ceb980">PREPROCESSOR_IIF_IMPL</link>(<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, true_expr, false_expr)</computeroutput></para>    </section><anchor xml:id="_preprocessor__if_8h_1aec1ff7c94271c1198ca5a2c2d3ff75a9"/>    <section>
+    <title>PREPROCESSOR_IF</title>
+<indexterm><primary>PREPROCESSOR_IF</primary><secondary>preprocessor_if.h</secondary></indexterm>
+<indexterm><primary>preprocessor_if.h</primary><secondary>PREPROCESSOR_IF</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_IF( condition,  true_expr,  false_expr)   <link linkend="_preprocessor__if_8h_1a847441b9d01481a1286936f52a508ce3">PREPROCESSOR_IIF</link>(<link linkend="_preprocessor__boolean_8h_1afecbb990f64de5941e902a04701c7f95">PREPROCESSOR_BOOL</link>(condition), true_expr, false_expr)</computeroutput></para></section>
+</section>
+</section>

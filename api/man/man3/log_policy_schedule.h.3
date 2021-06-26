@@ -1,0 +1,95 @@
+.TH "log_policy_schedule.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_policy_schedule.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <log/log_policy\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog_policy_schedule_impl\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBlog_policy_schedule_data\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_policy_schedule_execute_cb\fP) (\fBlog_policy\fP, \fBlog_policy_schedule_data\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_policy_schedule_lock\fP) (\fBlog_policy\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_policy_schedule_execute\fP) (\fBlog_policy\fP, \fBlog_policy_schedule_execute_cb\fP, \fBlog_policy_schedule_data\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_policy_schedule_unlock\fP) (\fBlog_policy\fP)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBlog_policy_schedule_id\fP { \fBLOG_POLICY_SCHEDULE_ASYNC\fP = 0x00, \fBLOG_POLICY_SCHEDULE_SYNC\fP = 0x01, \fBLOG_POLICY_SCHEDULE_SIZE\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOG_API log_policy_interface \fBlog_policy_schedule\fP (const \fBlog_policy_id\fP policy_schedule_id)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_policy\fP \fBlog_policy_schedule_async\fP (void)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_policy\fP \fBlog_policy_schedule_sync\fP (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void* \fBlog_policy_schedule_data\fP"
+
+.SS "typedef int(* log_policy_schedule_execute_cb) (\fBlog_policy\fP, \fBlog_policy_schedule_data\fP)"
+
+.SS "typedef int(* log_policy_schedule_lock) (\fBlog_policy\fP)"
+
+.SS "typedef int(* log_policy_schedule_execute) (\fBlog_policy\fP, \fBlog_policy_schedule_execute_cb\fP, \fBlog_policy_schedule_data\fP)"
+
+.SS "typedef int(* log_policy_schedule_unlock) (\fBlog_policy\fP)"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBlog_policy_schedule_id\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILOG_POLICY_SCHEDULE_ASYNC \fP\fP
+.TP
+\fB\fILOG_POLICY_SCHEDULE_SYNC \fP\fP
+.TP
+\fB\fILOG_POLICY_SCHEDULE_SIZE \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "LOG_API log_policy_interface log_policy_schedule (const \fBlog_policy_id\fP policy_schedule_id)"
+
+.SS "LOG_API \fBlog_policy\fP log_policy_schedule_async (void)"
+
+.SS "LOG_API \fBlog_policy\fP log_policy_schedule_sync (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

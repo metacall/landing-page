@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="filesystem__directory__descriptor_8h" kind="file" language="C++">
+    <compoundname>filesystem_directory_descriptor.h</compoundname>
+    <includes local="no">filesystem/filesystem_api.h</includes>
+    <includes refid="adt__vector_8h" local="no">adt/adt_vector.h</includes>
+    <includedby refid="filesystem__file__descriptor_8h" local="no">filesystem_file_descriptor.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>filesystem/filesystem_api.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>adt/adt_api.h</label>
+      </node>
+      <node id="1">
+        <label>filesystem_directory_descriptor.h</label>
+        <link refid="filesystem__directory__descriptor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>adt/adt_vector.h</label>
+        <link refid="adt__vector_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>filesystem_file_descriptor.h</label>
+        <link refid="filesystem__file__descriptor_8h"/>
+      </node>
+      <node id="1">
+        <label>filesystem_directory_descriptor.h</label>
+        <link refid="filesystem__directory__descriptor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="filesystem__directory__descriptor_8h_1ac5513253d61293e9df7a79157ea38dc6" prot="public" static="no">
+        <name>DIRECTORY_DESCRIPTOR_PATH_SIZE</name>
+        <initializer>0x0200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" line="36" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" prot="public" static="no">
+        <type>struct directory_descriptor_type *</type>
+        <definition>typedef struct directory_descriptor_type* directory_descriptor</definition>
+        <argsstring></argsstring>
+        <name>directory_descriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" line="44" column="40" bodyfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="filesystem__directory__descriptor_8h_1a4f7c6af766261f44627e5098ccfd5533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILESYSTEM_API <ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref></type>
+        <definition>FILESYSTEM_API directory_descriptor directory_descriptor_create</definition>
+        <argsstring>(directory_descriptor parent, const char *path)</argsstring>
+        <name>directory_descriptor_create</name>
+        <param>
+          <type><ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Create a directory descriptor from specified path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parent directory if any</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the directory</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the directory descriptor if success, null pointer otherwhise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" line="61" column="37" declfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" declline="61" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="filesystem__directory__descriptor_8h_1ac9746dc9cf7d645915f5cef94618585b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILESYSTEM_API <ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref></type>
+        <definition>FILESYSTEM_API directory_descriptor directory_descriptor_parent</definition>
+        <argsstring>(directory_descriptor d)</argsstring>
+        <name>directory_descriptor_parent</name>
+        <param>
+          <type><ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Get the parent directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Directory descriptor pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the parent directory descriptor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" line="73" column="37" declfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" declline="73" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="filesystem__directory__descriptor_8h_1afc994cff2bc1f4a946dc3ef02a5c5b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const FILESYSTEM_API char *</type>
+        <definition>const FILESYSTEM_API char* directory_descriptor_path</definition>
+        <argsstring>(directory_descriptor d)</argsstring>
+        <name>directory_descriptor_path</name>
+        <param>
+          <type><ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Get the path where directory points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Directory descriptor pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A constant string pointer to the path of @d </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" line="85" column="27" declfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" declline="85" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="filesystem__directory__descriptor_8h_1a9310f300f28e09ae18f4f2c1aac1348a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILESYSTEM_API <ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+        <definition>FILESYSTEM_API vector directory_descriptor_files</definition>
+        <argsstring>(directory_descriptor d)</argsstring>
+        <name>directory_descriptor_files</name>
+        <param>
+          <type><ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Get the files contained in a directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Directory descriptor pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of files contained in directory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" line="97" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" declline="97" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="filesystem__directory__descriptor_8h_1a34876220eb5e5c1307702684eb678ce0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILESYSTEM_API void</type>
+        <definition>FILESYSTEM_API void directory_descriptor_destroy</definition>
+        <argsstring>(directory_descriptor d)</argsstring>
+        <name>directory_descriptor_destroy</name>
+        <param>
+          <type><ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Destroy a directory from memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Directory descriptor pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" line="106" column="21" declfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h" declline="106" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>File<sp/>System<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>cross-platform<sp/>library<sp/>for<sp/>managing<sp/>file<sp/>system,<sp/>paths<sp/>and<sp/>files.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FILESYSTEM_DIRECTORY_DESCRIPTOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILESYSTEM_DIRECTORY_DESCRIPTOR_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem/filesystem_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__vector_8h" kindref="compound">adt/adt_vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="filesystem__directory__descriptor_8h_1ac5513253d61293e9df7a79157ea38dc6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECTORY_DESCRIPTOR_PATH_SIZE<sp/>0x0200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">directory_descriptor_type;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">directory_descriptor_type<sp/>*<ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*<sp/><sp/><sp/><sp/>Create<sp/>a<sp/>directory<sp/>descriptor<sp/>from<sp/>specified<sp/>path</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>parent</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*<sp/><sp/><sp/><sp/>Parent<sp/>directory<sp/>if<sp/>any</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>path</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*<sp/><sp/><sp/><sp/>The<sp/>path<sp/>of<sp/>the<sp/>directory</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>pointer<sp/>to<sp/>the<sp/>directory<sp/>descriptor<sp/>if<sp/>success,<sp/>null<sp/>pointer<sp/>otherwhise</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">FILESYSTEM_API<sp/><ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref><sp/><ref refid="filesystem__directory__descriptor_8h_1a4f7c6af766261f44627e5098ccfd5533" kindref="member">directory_descriptor_create</ref>(<ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref><sp/>parent,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="63"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>the<sp/>parent<sp/>directory</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">*<sp/><sp/><sp/><sp/>Directory<sp/>descriptor<sp/>pointer</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>pointer<sp/>to<sp/>the<sp/>parent<sp/>directory<sp/>descriptor</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">FILESYSTEM_API<sp/><ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref><sp/><ref refid="filesystem__directory__descriptor_8h_1ac9746dc9cf7d645915f5cef94618585b" kindref="member">directory_descriptor_parent</ref>(<ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref><sp/>d);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="75"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>the<sp/>path<sp/>where<sp/>directory<sp/>points</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">*<sp/><sp/><sp/><sp/>Directory<sp/>descriptor<sp/>pointer</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>constant<sp/>string<sp/>pointer<sp/>to<sp/>the<sp/>path<sp/>of<sp/>@d</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="filesystem__directory__descriptor_8h_1afc994cff2bc1f4a946dc3ef02a5c5b26" kindref="member">directory_descriptor_path</ref>(<ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref><sp/>d);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="87"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>the<sp/>files<sp/>contained<sp/>in<sp/>a<sp/>directory</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">*<sp/><sp/><sp/><sp/>Directory<sp/>descriptor<sp/>pointer</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>vector<sp/>of<sp/>files<sp/>contained<sp/>in<sp/>directory</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">FILESYSTEM_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="filesystem__directory__descriptor_8h_1a9310f300f28e09ae18f4f2c1aac1348a" kindref="member">directory_descriptor_files</ref>(<ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref><sp/>d);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="99"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>a<sp/>directory<sp/>from<sp/>memory</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*<sp/><sp/><sp/><sp/>Directory<sp/>descriptor<sp/>pointer</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="filesystem__directory__descriptor_8h_1a34876220eb5e5c1307702684eb678ce0" kindref="member">directory_descriptor_destroy</ref>(<ref refid="filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e" kindref="member">directory_descriptor</ref><sp/>d);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>FILESYSTEM_DIRECTORY_DESCRIPTOR_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem_directory_descriptor.h"/>
+  </compounddef>
+</doxygen>

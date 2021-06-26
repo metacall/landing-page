@@ -1,0 +1,94 @@
+.TH "reflect_type.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_type.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+\fC#include <reflect/reflect_type_id\&.h>\fP
+.br
+\fC#include <reflect/reflect_value\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtype_interface\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct type_type * \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBtype_impl\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBtype_impl_interface_create\fP) (\fBtype\fP, \fBtype_impl\fP)"
+.br
+.ti -1c
+.RI "typedef void(* \fBtype_impl_interface_destroy\fP) (\fBtype\fP, \fBtype_impl\fP)"
+.br
+.ti -1c
+.RI "typedef type_interface(* \fBtype_impl_interface_singleton\fP) (void)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBtype\fP \fBtype_create\fP (\fBtype_id\fP id, const char *name, \fBtype_impl\fP impl, \fBtype_impl_interface_singleton\fP singleton)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBtype_id\fP \fBtype_index\fP (\fBtype\fP t)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBtype_name\fP (\fBtype\fP t)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBtype_impl\fP \fBtype_derived\fP (\fBtype\fP t)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBtype_metadata\fP (\fBtype\fP t)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBtype_destroy\fP (\fBtype\fP t)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct type_type* \fBtype\fP"
+
+.SS "typedef void* \fBtype_impl\fP"
+
+.SS "typedef int(* type_impl_interface_create) (\fBtype\fP, \fBtype_impl\fP)"
+
+.SS "typedef void(* type_impl_interface_destroy) (\fBtype\fP, \fBtype_impl\fP)"
+
+.SS "typedef type_interface(* type_impl_interface_singleton) (void)"
+
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBtype\fP type_create (\fBtype_id\fP id, const char * name, \fBtype_impl\fP impl, \fBtype_impl_interface_singleton\fP singleton)"
+
+.SS "REFLECT_API \fBtype_id\fP type_index (\fBtype\fP t)"
+
+.SS "const REFLECT_API char* type_name (\fBtype\fP t)"
+
+.SS "REFLECT_API \fBtype_impl\fP type_derived (\fBtype\fP t)"
+
+.SS "REFLECT_API \fBvalue\fP type_metadata (\fBtype\fP t)"
+
+.SS "REFLECT_API void type_destroy (\fBtype\fP t)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

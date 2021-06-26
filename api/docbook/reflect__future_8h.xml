@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__future_8h">
+<title>reflect_future.h File Reference</title>
+<indexterm><primary>reflect_future.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_value.h&gt;
+</programlisting>Include dependency graph for reflect_future.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__future_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__future_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structfuture__interface__type">future_interface</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef void * <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link></para>
+</listitem>
+            <listitem><para>typedef struct future_type * <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8">future_return</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__future_8h_1ab044ff8f96557d985696052b7789bf14">future_resolve_callback</link>) (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, void *)</para>
+</listitem>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0">future_reject_callback</link>) (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, void *)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_reflect__future_8h_1a79a8b73073b19643eb63ab926b8d27cf">future_impl_interface_create</link>) (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link>, <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link>)</para>
+</listitem>
+            <listitem><para>typedef <link linkend="_reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8">future_return</link>(* <link linkend="_reflect__future_8h_1a14fdd6ae715e477c620bfd21578a2983">future_impl_interface_await</link>) (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link>, <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link>, <link linkend="_reflect__future_8h_1ab044ff8f96557d985696052b7789bf14">future_resolve_callback</link>, <link linkend="_reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0">future_reject_callback</link>, void *)</para>
+</listitem>
+            <listitem><para>typedef void(* <link linkend="_reflect__future_8h_1ae84f54969d27d1f564229345ab7fdf7a">future_impl_interface_destroy</link>) (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link>, <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link>)</para>
+</listitem>
+            <listitem><para>typedef future_interface(* <link linkend="_reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83">future_impl_interface_singleton</link>) (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>REFLECT_API <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> <link linkend="_reflect__future_8h_1af11e513c084e86bc3560cbccca13aa88">future_create</link> (<link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link> impl, <link linkend="_reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83">future_impl_interface_singleton</link> singleton)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8">future_return</link> <link linkend="_reflect__future_8h_1a4c6bfdb1bc35c541b76f92784d352071">future_await</link> (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f, <link linkend="_reflect__future_8h_1ab044ff8f96557d985696052b7789bf14">future_resolve_callback</link> resolve_callback, <link linkend="_reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0">future_reject_callback</link> reject_callback, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__future_8h_1a637314f3ee2db826324fedb25f84db7e">future_destroy</link> (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87"/>    <section>
+    <title>future_impl</title>
+<indexterm><primary>future_impl</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_impl</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link></computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919"/>    <section>
+    <title>future</title>
+<indexterm><primary>future</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future</secondary></indexterm>
+<para><computeroutput>typedef struct future_type* <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link></computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8"/>    <section>
+    <title>future_return</title>
+<indexterm><primary>future_return</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_return</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8">future_return</link></computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1ab044ff8f96557d985696052b7789bf14"/>    <section>
+    <title>future_resolve_callback</title>
+<indexterm><primary>future_resolve_callback</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_resolve_callback</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* future_resolve_callback) (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, void *)</computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0"/>    <section>
+    <title>future_reject_callback</title>
+<indexterm><primary>future_reject_callback</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_reject_callback</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* future_reject_callback) (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, void *)</computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1a79a8b73073b19643eb63ab926b8d27cf"/>    <section>
+    <title>future_impl_interface_create</title>
+<indexterm><primary>future_impl_interface_create</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_impl_interface_create</secondary></indexterm>
+<para><computeroutput>typedef int(* future_impl_interface_create) (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link>, <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1a14fdd6ae715e477c620bfd21578a2983"/>    <section>
+    <title>future_impl_interface_await</title>
+<indexterm><primary>future_impl_interface_await</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_impl_interface_await</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8">future_return</link>(* future_impl_interface_await) (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link>, <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link>, <link linkend="_reflect__future_8h_1ab044ff8f96557d985696052b7789bf14">future_resolve_callback</link>, <link linkend="_reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0">future_reject_callback</link>, void *)</computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1ae84f54969d27d1f564229345ab7fdf7a"/>    <section>
+    <title>future_impl_interface_destroy</title>
+<indexterm><primary>future_impl_interface_destroy</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_impl_interface_destroy</secondary></indexterm>
+<para><computeroutput>typedef void(* future_impl_interface_destroy) (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link>, <link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83"/>    <section>
+    <title>future_impl_interface_singleton</title>
+<indexterm><primary>future_impl_interface_singleton</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_impl_interface_singleton</secondary></indexterm>
+<para><computeroutput>typedef future_interface(* future_impl_interface_singleton) (void)</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__future_8h_1af11e513c084e86bc3560cbccca13aa88"/>    <section>
+    <title>future_create()</title>
+<indexterm><primary>future_create</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_create</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> future_create (<link linkend="_reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87">future_impl</link> impl, <link linkend="_reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83">future_impl_interface_singleton</link> singleton)</computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1a4c6bfdb1bc35c541b76f92784d352071"/>    <section>
+    <title>future_await()</title>
+<indexterm><primary>future_await</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_await</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8">future_return</link> future_await (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f, <link linkend="_reflect__future_8h_1ab044ff8f96557d985696052b7789bf14">future_resolve_callback</link> resolve_callback, <link linkend="_reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0">future_reject_callback</link> reject_callback, void * context)</computeroutput></para>    </section><anchor xml:id="_reflect__future_8h_1a637314f3ee2db826324fedb25f84db7e"/>    <section>
+    <title>future_destroy()</title>
+<indexterm><primary>future_destroy</primary><secondary>reflect_future.h</secondary></indexterm>
+<indexterm><primary>reflect_future.h</primary><secondary>future_destroy</secondary></indexterm>
+<para><computeroutput>REFLECT_API void future_destroy (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f)</computeroutput></para></section>
+</section>
+</section>

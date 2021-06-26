@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__aspect__storage_8h" kind="file" language="C++">
+    <compoundname>log_aspect_storage.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes refid="log__aspect_8h" local="no">log/log_aspect.h</includes>
+    <includes refid="log__record_8h" local="no">log/log_record.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>stdarg.h</label>
+      </node>
+      <node id="5">
+        <label>log/log_record.h</label>
+        <link refid="log__record_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="7">
+        <label>threading/threading_thread_id.h</label>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>log/log_aspect.h</label>
+        <link refid="log__aspect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>log_aspect_storage.h</label>
+        <link refid="log__aspect__storage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>log/log_level.h</label>
+        <link refid="log__level_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structlog__aspect__storage__impl__type" prot="public">log_aspect_storage_impl_type</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__aspect__storage_8h_1a26f6cb3155ede184ba3bcff7c57a6752" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_aspect_storage_append) (log_aspect, const log_record)</definition>
+        <argsstring>)(log_aspect, const log_record)</argsstring>
+        <name>log_aspect_storage_append</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect_storage.h" line="31" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect_storage.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect__storage_8h_1aa6d75126a93314d5d6d3c5475ace222c" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_aspect_storage_flush) (log_aspect)</definition>
+        <argsstring>)(log_aspect)</argsstring>
+        <name>log_aspect_storage_flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect_storage.h" line="32" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect_storage.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__aspect__storage_8h_1abefefaf82db5dfb619f9c2aef80f1c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API log_aspect_interface</type>
+        <definition>LOG_API log_aspect_interface log_aspect_storage_interface</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_aspect_storage_interface</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect_storage.h" line="44" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect_storage.h" declline="44" declcolumn="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_ASPECT_STORAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_ASPECT_STORAGE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__aspect_8h" kindref="compound">log/log_aspect.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__record_8h" kindref="compound">log/log_record.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__aspect__storage__impl__type" kindref="compound">log_aspect_storage_impl_type</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__aspect__storage__impl__type" kindref="compound">log_aspect_storage_impl_type</ref><sp/>*log_aspect_storage_impl;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="log__aspect__storage_8h_1a26f6cb3155ede184ba3bcff7c57a6752" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__aspect__storage_8h_1a26f6cb3155ede184ba3bcff7c57a6752" kindref="member">log_aspect_storage_append</ref>)(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref>);</highlight></codeline>
+<codeline lineno="32" refid="log__aspect__storage_8h_1aa6d75126a93314d5d6d3c5475ace222c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__aspect__storage_8h_1aa6d75126a93314d5d6d3c5475ace222c" kindref="member">log_aspect_storage_flush</ref>)(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structlog__aspect__storage__impl__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__aspect__storage__impl__type" kindref="compound">log_aspect_storage_impl_type</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="structlog__aspect__storage__impl__type_1a7984f141c958e3e59379fb1a9280186c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect__storage_8h_1a26f6cb3155ede184ba3bcff7c57a6752" kindref="member">log_aspect_storage_append</ref><sp/><ref refid="structlog__aspect__storage__impl__type_1a7984f141c958e3e59379fb1a9280186c" kindref="member">append</ref>;</highlight></codeline>
+<codeline lineno="39" refid="structlog__aspect__storage__impl__type_1a8bdafaa7a060618b4c51315962bc95be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect__storage_8h_1aa6d75126a93314d5d6d3c5475ace222c" kindref="member">log_aspect_storage_flush</ref><sp/><ref refid="structlog__aspect__storage__impl__type_1a8bdafaa7a060618b4c51315962bc95be" kindref="member">flush</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">LOG_API<sp/>log_aspect_interface<sp/><ref refid="log__aspect__storage_8h_1abefefaf82db5dfb619f9c2aef80f1c70" kindref="member">log_aspect_storage_interface</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_ASPECT_STORAGE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect_storage.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,160 @@
+.TH "reflect_class.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_class.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_value\&.h>\fP
+.br
+\fC#include <reflect/reflect_object\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBclass_interface\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBclass_impl\fP"
+.br
+.ti -1c
+.RI "typedef struct class_type * \fBklass\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBclass_args\fP[]"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBclass_resolve_callback\fP) (\fBvalue\fP, void *)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBclass_reject_callback\fP) (\fBvalue\fP, void *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBclass_impl_interface_create\fP) (\fBklass\fP, \fBclass_impl\fP)"
+.br
+.ti -1c
+.RI "typedef \fBobject\fP(* \fBclass_impl_interface_constructor\fP) (\fBklass\fP, \fBclass_impl\fP, const char *name, \fBclass_args\fP, size_t)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBclass_impl_interface_static_get\fP) (\fBklass\fP, \fBclass_impl\fP, const char *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBclass_impl_interface_static_set\fP) (\fBklass\fP, \fBclass_impl\fP, const char *, \fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBclass_impl_interface_static_invoke\fP) (\fBklass\fP, \fBclass_impl\fP, const char *, \fBclass_args\fP, size_t)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBclass_impl_interface_static_await\fP) (\fBklass\fP, \fBclass_impl\fP, const char *, \fBclass_args\fP, size_t, \fBclass_resolve_callback\fP, \fBclass_reject_callback\fP, void *)"
+.br
+.ti -1c
+.RI "typedef void(* \fBclass_impl_interface_destroy\fP) (\fBklass\fP, \fBclass_impl\fP)"
+.br
+.ti -1c
+.RI "typedef class_interface(* \fBclass_impl_interface_singleton\fP) (void)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBklass\fP \fBclass_create\fP (const char *name, \fBclass_impl\fP impl, \fBclass_impl_interface_singleton\fP singleton)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBclass_increment_reference\fP (\fBklass\fP cls)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBclass_decrement_reference\fP (\fBklass\fP cls)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBclass_impl\fP \fBclass_impl_get\fP (\fBklass\fP cls)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBobject\fP \fBclass_new\fP (\fBklass\fP cls, const char *name, \fBclass_args\fP args, size_t argc)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBclass_static_get\fP (\fBklass\fP cls, const char *key)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBclass_static_set\fP (\fBklass\fP cls, const char *key, \fBvalue\fP v)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBclass_static_call\fP (\fBklass\fP cls, const char *name, \fBclass_args\fP args, size_t size)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBclass_static_await\fP (\fBklass\fP cls, const char *name, \fBclass_args\fP args, size_t size, \fBclass_resolve_callback\fP resolve_callback, \fBclass_reject_callback\fP reject_callback, void *\fBcontext\fP)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBclass_name\fP (\fBklass\fP cls)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBclass_metadata\fP (\fBklass\fP cls)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBclass_destroy\fP (\fBklass\fP cls)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void* \fBclass_impl\fP"
+
+.SS "typedef struct class_type* \fBklass\fP"
+
+.SS "typedef void* class_args[]"
+
+.SS "typedef \fBvalue\fP(* class_resolve_callback) (\fBvalue\fP, void *)"
+
+.SS "typedef \fBvalue\fP(* class_reject_callback) (\fBvalue\fP, void *)"
+
+.SS "typedef int(* class_impl_interface_create) (\fBklass\fP, \fBclass_impl\fP)"
+
+.SS "typedef \fBobject\fP(* class_impl_interface_constructor) (\fBklass\fP, \fBclass_impl\fP, const char *name, \fBclass_args\fP, size_t)"
+
+.SS "typedef \fBvalue\fP(* class_impl_interface_static_get) (\fBklass\fP, \fBclass_impl\fP, const char *)"
+
+.SS "typedef int(* class_impl_interface_static_set) (\fBklass\fP, \fBclass_impl\fP, const char *, \fBvalue\fP)"
+
+.SS "typedef \fBvalue\fP(* class_impl_interface_static_invoke) (\fBklass\fP, \fBclass_impl\fP, const char *, \fBclass_args\fP, size_t)"
+
+.SS "typedef \fBvalue\fP(* class_impl_interface_static_await) (\fBklass\fP, \fBclass_impl\fP, const char *, \fBclass_args\fP, size_t, \fBclass_resolve_callback\fP, \fBclass_reject_callback\fP, void *)"
+
+.SS "typedef void(* class_impl_interface_destroy) (\fBklass\fP, \fBclass_impl\fP)"
+
+.SS "typedef class_interface(* class_impl_interface_singleton) (void)"
+
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBklass\fP class_create (const char * name, \fBclass_impl\fP impl, \fBclass_impl_interface_singleton\fP singleton)"
+
+.SS "REFLECT_API int class_increment_reference (\fBklass\fP cls)"
+
+.SS "REFLECT_API int class_decrement_reference (\fBklass\fP cls)"
+
+.SS "REFLECT_API \fBclass_impl\fP class_impl_get (\fBklass\fP cls)"
+
+.SS "REFLECT_API \fBobject\fP class_new (\fBklass\fP cls, const char * name, \fBclass_args\fP args, size_t argc)"
+
+.SS "REFLECT_API \fBvalue\fP class_static_get (\fBklass\fP cls, const char * key)"
+
+.SS "REFLECT_API int class_static_set (\fBklass\fP cls, const char * key, \fBvalue\fP v)"
+
+.SS "REFLECT_API \fBvalue\fP class_static_call (\fBklass\fP cls, const char * name, \fBclass_args\fP args, size_t size)"
+
+.SS "REFLECT_API \fBvalue\fP class_static_await (\fBklass\fP cls, const char * name, \fBclass_args\fP args, size_t size, \fBclass_resolve_callback\fP resolve_callback, \fBclass_reject_callback\fP reject_callback, void * context)"
+
+.SS "const REFLECT_API char* class_name (\fBklass\fP cls)"
+
+.SS "REFLECT_API \fBvalue\fP class_metadata (\fBklass\fP cls)"
+
+.SS "REFLECT_API void class_destroy (\fBklass\fP cls)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

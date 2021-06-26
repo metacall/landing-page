@@ -1,0 +1,157 @@
+\doxysection{detour\+\_\+impl.\+h File Reference}
+\label{detour__impl_8h}\index{detour\_impl.h@{detour\_impl.h}}
+{\ttfamily \#include $<$detour/detour\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$detour/detour\+\_\+impl\+\_\+handle.\+h$>$}\newline
+Include dependency graph for detour\+\_\+impl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{detour__impl_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct detour\+\_\+impl\+\_\+type $\ast$ \textbf{ detour\+\_\+impl}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+impl} \textbf{ detour\+\_\+impl\+\_\+create} (void)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+impl\+\_\+load} (\textbf{ detour\+\_\+impl} impl, const char $\ast$path, const char $\ast$name)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+impl\+\_\+handle} \textbf{ detour\+\_\+impl\+\_\+install} (\textbf{ detour\+\_\+impl} impl, void($\ast$$\ast$target)(void), void($\ast$hook)(void))
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+impl\+\_\+uninstall} (\textbf{ detour\+\_\+impl} impl, \textbf{ detour\+\_\+impl\+\_\+handle} handle)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+impl\+\_\+unload} (\textbf{ detour\+\_\+impl} impl)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+impl\+\_\+destroy} (\textbf{ detour\+\_\+impl} impl)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{detour__impl_8h_afe7980c03ad3af986914e70c84b1fc27}} 
+\index{detour\_impl.h@{detour\_impl.h}!detour\_impl@{detour\_impl}}
+\index{detour\_impl@{detour\_impl}!detour\_impl.h@{detour\_impl.h}}
+\doxysubsubsection{detour\_impl}
+{\footnotesize\ttfamily typedef struct detour\+\_\+impl\+\_\+type$\ast$ \textbf{ detour\+\_\+impl}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{detour__impl_8h_afa470a63d48af285c6f5fd14abab95b9}} 
+\index{detour\_impl.h@{detour\_impl.h}!detour\_impl\_create@{detour\_impl\_create}}
+\index{detour\_impl\_create@{detour\_impl\_create}!detour\_impl.h@{detour\_impl.h}}
+\doxysubsubsection{detour\_impl\_create()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+impl} detour\+\_\+impl\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create detour implementation. 
+
+\begin{DoxyReturn}{Returns}
+Returns pointer to detour implementation correct creation, null otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__impl_8h_a8ef406f31f59a7a1a07c82499a88a6cb}} 
+\index{detour\_impl.h@{detour\_impl.h}!detour\_impl\_load@{detour\_impl\_load}}
+\index{detour\_impl\_load@{detour\_impl\_load}!detour\_impl.h@{detour\_impl.h}}
+\doxysubsubsection{detour\_impl\_load()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+impl\+\_\+load (\begin{DoxyParamCaption}\item[{\textbf{ detour\+\_\+impl}}]{impl,  }\item[{const char $\ast$}]{path,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Load detour implementation @impl. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em impl} & Pointer to the detour implementation to be loaded\\
+\hline
+\mbox{\texttt{ in}}  & {\em path} & Path where dependency is located\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Dependency name to be injected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on correct loading, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__impl_8h_aec39d9bce79bd6cb2fb3dfa092473401}} 
+\index{detour\_impl.h@{detour\_impl.h}!detour\_impl\_install@{detour\_impl\_install}}
+\index{detour\_impl\_install@{detour\_impl\_install}!detour\_impl.h@{detour\_impl.h}}
+\doxysubsubsection{detour\_impl\_install()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+impl\+\_\+handle} detour\+\_\+impl\+\_\+install (\begin{DoxyParamCaption}\item[{\textbf{ detour\+\_\+impl}}]{impl,  }\item[{void($\ast$$\ast$)(void)}]{target,  }\item[{void($\ast$)(void)}]{hook }\end{DoxyParamCaption})}
+
+
+
+Install detour implementation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em impl} & Pointer to the detour hook implementation\\
+\hline
+\mbox{\texttt{ in}}  & {\em target} & Pointer to the function to be intercepted\\
+\hline
+\mbox{\texttt{ in}}  & {\em hook} & Function will be called instead of target\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return pointer to the detour handle on success, null otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__impl_8h_a2d7f976fc35ddb443ff9e3e34ebf81ef}} 
+\index{detour\_impl.h@{detour\_impl.h}!detour\_impl\_uninstall@{detour\_impl\_uninstall}}
+\index{detour\_impl\_uninstall@{detour\_impl\_uninstall}!detour\_impl.h@{detour\_impl.h}}
+\doxysubsubsection{detour\_impl\_uninstall()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+impl\+\_\+uninstall (\begin{DoxyParamCaption}\item[{\textbf{ detour\+\_\+impl}}]{impl,  }\item[{\textbf{ detour\+\_\+impl\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Uninstall detour implementation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em impl} & Pointer to the detour hook implementation\\
+\hline
+\mbox{\texttt{ in}}  & {\em handle} & Pointer to the detour hook handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return zero on success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__impl_8h_ae3a54c63c40319f5609b0d5fa4168dba}} 
+\index{detour\_impl.h@{detour\_impl.h}!detour\_impl\_unload@{detour\_impl\_unload}}
+\index{detour\_impl\_unload@{detour\_impl\_unload}!detour\_impl.h@{detour\_impl.h}}
+\doxysubsubsection{detour\_impl\_unload()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+impl\+\_\+unload (\begin{DoxyParamCaption}\item[{\textbf{ detour\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+
+
+Unload detour implementation @impl. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em impl} & Pointer to the detour implementation to be unloaded\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on correct unloading, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__impl_8h_aa2fa10d7be12a9dbc32353c16593f442}} 
+\index{detour\_impl.h@{detour\_impl.h}!detour\_impl\_destroy@{detour\_impl\_destroy}}
+\index{detour\_impl\_destroy@{detour\_impl\_destroy}!detour\_impl.h@{detour\_impl.h}}
+\doxysubsubsection{detour\_impl\_destroy()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+impl\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ detour\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+
+
+Destroy detour implementation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em impl} & Pointer to the detour implementation to be destroyed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on correct destruction, distinct from zero otherwise 
+\end{DoxyReturn}

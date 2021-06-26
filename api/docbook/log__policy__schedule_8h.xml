@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__policy__schedule_8h">
+<title>log_policy_schedule.h File Reference</title>
+<indexterm><primary>log_policy_schedule.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_policy.h&gt;
+</programlisting>Include dependency graph for log_policy_schedule.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__schedule_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__schedule_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structlog__policy__schedule__impl__type">log_policy_schedule_impl</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef void * <link linkend="_log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048">log_policy_schedule_data</link></para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf">log_policy_schedule_execute_cb</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048">log_policy_schedule_data</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy__schedule_8h_1a4f84ef0771c429ff4b0ae461afdba6cb">log_policy_schedule_lock</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy__schedule_8h_1a38b092b7b8d24b57a6d0eaf3d7240161">log_policy_schedule_execute</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf">log_policy_schedule_execute_cb</link>, <link linkend="_log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048">log_policy_schedule_data</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy__schedule_8h_1a3f7d2f72b5a3cf81553696e8ffb98b5f">log_policy_schedule_unlock</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25">log_policy_schedule_id</link> { <link linkend="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b">LOG_POLICY_SCHEDULE_ASYNC</link> = 0x00, 
+<link linkend="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a">LOG_POLICY_SCHEDULE_SYNC</link> = 0x01, 
+<link linkend="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db">LOG_POLICY_SCHEDULE_SIZE</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API log_policy_interface <link linkend="_log__policy__schedule_8h_1a1a457f64ce52cef20969cf64198642e3">log_policy_schedule</link> (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_schedule_id)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__schedule_8h_1ac9f8ff2ec3264e0b2271dbf22a4eb782">log_policy_schedule_async</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__schedule_8h_1a238989dd68646f238ee7ce2337bfe971">log_policy_schedule_sync</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048"/>    <section>
+    <title>log_policy_schedule_data</title>
+<indexterm><primary>log_policy_schedule_data</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_data</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048">log_policy_schedule_data</link></computeroutput></para>    </section><anchor xml:id="_log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf"/>    <section>
+    <title>log_policy_schedule_execute_cb</title>
+<indexterm><primary>log_policy_schedule_execute_cb</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_execute_cb</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_schedule_execute_cb) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048">log_policy_schedule_data</link>)</computeroutput></para>    </section><anchor xml:id="_log__policy__schedule_8h_1a4f84ef0771c429ff4b0ae461afdba6cb"/>    <section>
+    <title>log_policy_schedule_lock</title>
+<indexterm><primary>log_policy_schedule_lock</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_lock</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_schedule_lock) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</computeroutput></para>    </section><anchor xml:id="_log__policy__schedule_8h_1a38b092b7b8d24b57a6d0eaf3d7240161"/>    <section>
+    <title>log_policy_schedule_execute</title>
+<indexterm><primary>log_policy_schedule_execute</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_execute</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_schedule_execute) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf">log_policy_schedule_execute_cb</link>, <link linkend="_log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048">log_policy_schedule_data</link>)</computeroutput></para>    </section><anchor xml:id="_log__policy__schedule_8h_1a3f7d2f72b5a3cf81553696e8ffb98b5f"/>    <section>
+    <title>log_policy_schedule_unlock</title>
+<indexterm><primary>log_policy_schedule_unlock</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_unlock</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_schedule_unlock) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25"/>    <section>
+    <title>log_policy_schedule_id</title>
+<indexterm><primary>log_policy_schedule_id</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25">log_policy_schedule_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LOG_POLICY_SCHEDULE_ASYNC</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>LOG_POLICY_SCHEDULE_ASYNC</secondary></indexterm>
+<anchor xml:id="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b"/>LOG_POLICY_SCHEDULE_ASYNC</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_SCHEDULE_SYNC</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>LOG_POLICY_SCHEDULE_SYNC</secondary></indexterm>
+<anchor xml:id="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a"/>LOG_POLICY_SCHEDULE_SYNC</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_SCHEDULE_SIZE</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>LOG_POLICY_SCHEDULE_SIZE</secondary></indexterm>
+<anchor xml:id="_log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db"/>LOG_POLICY_SCHEDULE_SIZE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__policy__schedule_8h_1a1a457f64ce52cef20969cf64198642e3"/>    <section>
+    <title>log_policy_schedule()</title>
+<indexterm><primary>log_policy_schedule</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule</secondary></indexterm>
+<para><computeroutput>LOG_API log_policy_interface log_policy_schedule (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_schedule_id)</computeroutput></para>    </section><anchor xml:id="_log__policy__schedule_8h_1ac9f8ff2ec3264e0b2271dbf22a4eb782"/>    <section>
+    <title>log_policy_schedule_async()</title>
+<indexterm><primary>log_policy_schedule_async</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_async</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_schedule_async (void )</computeroutput></para>    </section><anchor xml:id="_log__policy__schedule_8h_1a238989dd68646f238ee7ce2337bfe971"/>    <section>
+    <title>log_policy_schedule_sync()</title>
+<indexterm><primary>log_policy_schedule_sync</primary><secondary>log_policy_schedule.h</secondary></indexterm>
+<indexterm><primary>log_policy_schedule.h</primary><secondary>log_policy_schedule_sync</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_schedule_sync (void )</computeroutput></para></section>
+</section>
+</section>

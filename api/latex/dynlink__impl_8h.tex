@@ -1,0 +1,129 @@
+\doxysection{dynlink\+\_\+impl.\+h File Reference}
+\label{dynlink__impl_8h}\index{dynlink\_impl.h@{dynlink\_impl.h}}
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+type.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+impl\+\_\+name.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+impl\+\_\+type.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for dynlink\+\_\+impl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dynlink__impl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{dynlink__impl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char $\ast$ \textbf{ dynlink\+\_\+impl\+\_\+extension} (void)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void \textbf{ dynlink\+\_\+impl\+\_\+get\+\_\+name} (\textbf{ dynlink} handle, \textbf{ dynlink\+\_\+name\+\_\+impl} name\+\_\+impl, size\+\_\+t length)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+impl} \textbf{ dynlink\+\_\+impl\+\_\+load} (\textbf{ dynlink} handle)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int \textbf{ dynlink\+\_\+impl\+\_\+symbol} (\textbf{ dynlink} handle, \textbf{ dynlink\+\_\+impl} impl, \textbf{ dynlink\+\_\+symbol\+\_\+name} symbol\+\_\+name, \textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$symbol\+\_\+address)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void \textbf{ dynlink\+\_\+impl\+\_\+unload} (\textbf{ dynlink} handle, \textbf{ dynlink\+\_\+impl} impl)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{dynlink__impl_8h_a52d2acf03830ce9be2fabeef54cbd0a3}} 
+\index{dynlink\_impl.h@{dynlink\_impl.h}!dynlink\_impl\_extension@{dynlink\_impl\_extension}}
+\index{dynlink\_impl\_extension@{dynlink\_impl\_extension}!dynlink\_impl.h@{dynlink\_impl.h}}
+\doxysubsubsection{dynlink\_impl\_extension()}
+{\footnotesize\ttfamily const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char$\ast$ dynlink\+\_\+impl\+\_\+extension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Dynamically linked shared object handle extension implementation. 
+
+\begin{DoxyReturn}{Returns}
+A const string reference to the extension depending on the OS implementation 
+\end{DoxyReturn}
+\mbox{\label{dynlink__impl_8h_a1bbeb8591d79107a1e16e45c3b844ac3}} 
+\index{dynlink\_impl.h@{dynlink\_impl.h}!dynlink\_impl\_get\_name@{dynlink\_impl\_get\_name}}
+\index{dynlink\_impl\_get\_name@{dynlink\_impl\_get\_name}!dynlink\_impl.h@{dynlink\_impl.h}}
+\doxysubsubsection{dynlink\_impl\_get\_name()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void dynlink\+\_\+impl\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle,  }\item[{\textbf{ dynlink\+\_\+name\+\_\+impl}}]{name\+\_\+impl,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Consturct the file name of dynamically linked shared object implementation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object\\
+\hline
+\mbox{\texttt{ out}}  & {\em name\+\_\+impl} & Pointer to the dynamically linked shared object handle \\
+\hline
+\end{DoxyParams}
+\mbox{\label{dynlink__impl_8h_a9d497586d3460b347dc3f0e8ed9a63b2}} 
+\index{dynlink\_impl.h@{dynlink\_impl.h}!dynlink\_impl\_load@{dynlink\_impl\_load}}
+\index{dynlink\_impl\_load@{dynlink\_impl\_load}!dynlink\_impl.h@{dynlink\_impl.h}}
+\doxysubsubsection{dynlink\_impl\_load()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+impl} dynlink\+\_\+impl\+\_\+load (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Load a dynamically linked shared object implementation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Pointer to the dynamically linked shared object handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the dynamically linked shared object implementation 
+\end{DoxyReturn}
+\mbox{\label{dynlink__impl_8h_a7b9bd81c58d0d3ac45fadb8ef6c33ac8}} 
+\index{dynlink\_impl.h@{dynlink\_impl.h}!dynlink\_impl\_symbol@{dynlink\_impl\_symbol}}
+\index{dynlink\_impl\_symbol@{dynlink\_impl\_symbol}!dynlink\_impl.h@{dynlink\_impl.h}}
+\doxysubsubsection{dynlink\_impl\_symbol()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int dynlink\+\_\+impl\+\_\+symbol (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle,  }\item[{\textbf{ dynlink\+\_\+impl}}]{impl,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name}}]{symbol\+\_\+name,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$}]{symbol\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Get a symbol address of dynamically linked shared object by name implementation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object\\
+\hline
+\mbox{\texttt{ in}}  & {\em impl} & Pointer to the dynamically linked shared object implementation\\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol\+\_\+name} & Name of the of dynamically linked shared object symbol\\
+\hline
+\mbox{\texttt{ out}}  & {\em symbol\+\_\+address} & Pointer to the address of the of dynamically linked shared object symbol\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on correct dynamic linking, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{dynlink__impl_8h_a2848bcd835206e7cb89c59b4b154ffe8}} 
+\index{dynlink\_impl.h@{dynlink\_impl.h}!dynlink\_impl\_unload@{dynlink\_impl\_unload}}
+\index{dynlink\_impl\_unload@{dynlink\_impl\_unload}!dynlink\_impl.h@{dynlink\_impl.h}}
+\doxysubsubsection{dynlink\_impl\_unload()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void dynlink\+\_\+impl\+\_\+unload (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle,  }\item[{\textbf{ dynlink\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+
+
+Unloads a dynamically linked shared object implementation by reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object\\
+\hline
+\mbox{\texttt{ in}}  & {\em impl} & Pointer to the dynamically linked shared object implementation \\
+\hline
+\end{DoxyParams}

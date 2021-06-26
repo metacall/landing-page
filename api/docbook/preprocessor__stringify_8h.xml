@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_preprocessor__stringify_8h">
+<title>preprocessor_stringify.h File Reference</title>
+<indexterm><primary>preprocessor_stringify.h</primary></indexterm>
+<programlisting>#include &lt;preprocessor/preprocessor_api.h&gt;
+#include &lt;preprocessor/preprocessor_for.h&gt;
+</programlisting>Include dependency graph for preprocessor_stringify.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__stringify_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__stringify_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_preprocessor__stringify_8h_1a2f6594312f3e4352cea43f3cbd3ac098">PREPROCESSOR_STRINGIFY_IMPL</link>(expr)   #expr</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</link>(expr)   <link linkend="_preprocessor__stringify_8h_1a2f6594312f3e4352cea43f3cbd3ac098">PREPROCESSOR_STRINGIFY_IMPL</link>(expr)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__stringify_8h_1a7e0a8927e7cbacb2bf75f782ffe25610">PREPROCESSOR_STRINGIFY_VARIADIC</link>(...)   PREPROCESSOR_FOR_EACH(<link linkend="_preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</link>, __VA_ARGS__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_preprocessor__stringify_8h_1a2f6594312f3e4352cea43f3cbd3ac098"/>    <section>
+    <title>PREPROCESSOR_STRINGIFY_IMPL</title>
+<indexterm><primary>PREPROCESSOR_STRINGIFY_IMPL</primary><secondary>preprocessor_stringify.h</secondary></indexterm>
+<indexterm><primary>preprocessor_stringify.h</primary><secondary>PREPROCESSOR_STRINGIFY_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_STRINGIFY_IMPL( expr)   #expr</computeroutput></para>    </section><anchor xml:id="_preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b"/>    <section>
+    <title>PREPROCESSOR_STRINGIFY</title>
+<indexterm><primary>PREPROCESSOR_STRINGIFY</primary><secondary>preprocessor_stringify.h</secondary></indexterm>
+<indexterm><primary>preprocessor_stringify.h</primary><secondary>PREPROCESSOR_STRINGIFY</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_STRINGIFY( expr)   <link linkend="_preprocessor__stringify_8h_1a2f6594312f3e4352cea43f3cbd3ac098">PREPROCESSOR_STRINGIFY_IMPL</link>(expr)</computeroutput></para>    </section><anchor xml:id="_preprocessor__stringify_8h_1a7e0a8927e7cbacb2bf75f782ffe25610"/>    <section>
+    <title>PREPROCESSOR_STRINGIFY_VARIADIC</title>
+<indexterm><primary>PREPROCESSOR_STRINGIFY_VARIADIC</primary><secondary>preprocessor_stringify.h</secondary></indexterm>
+<indexterm><primary>preprocessor_stringify.h</primary><secondary>PREPROCESSOR_STRINGIFY_VARIADIC</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_STRINGIFY_VARIADIC( ...)   PREPROCESSOR_FOR_EACH(<link linkend="_preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</link>, __VA_ARGS__)</computeroutput></para></section>
+</section>
+</section>

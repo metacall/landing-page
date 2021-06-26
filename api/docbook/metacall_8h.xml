@@ -1,0 +1,3361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall_8h">
+<title>metacall.h File Reference</title>
+<indexterm><primary>metacall.h</primary></indexterm>
+<programlisting>#include &lt;metacall/metacall_api.h&gt;
+#include &lt;metacall/metacall_allocator.h&gt;
+#include &lt;metacall/metacall_def.h&gt;
+#include &lt;metacall/metacall_log.h&gt;
+#include &lt;metacall/metacall_value.h&gt;
+#include &lt;stdarg.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for metacall.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structmetacall__initialize__configuration__type">metacall_initialize_configuration_type</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_metacall_8h_1a9c8f9f1a02aa8b7f11203f473ad45a0c">METACALL_FLAGS_FORK_SAFE</link>   0x01 &lt;&lt; 0x00</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>const METACALL_API char * <link linkend="_metacall_8h_1a4aa530f2d57ee74faec5152ab59cfd2c">metacall_serial</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall_8h_1a7359cf8608ee329433d129f74621f6b7">metacall_log_null</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall_8h_1a59ae3eea97bc40256b292aea7f36b61c">metacall_flags</link> (int flags)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1aef066c5638c4e049288d98911e1a799f">metacall_initialize</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a9c70099ab9944bc953ff0998fa92f97e">metacall_initialize_ex</link> (struct <link linkend="_structmetacall__initialize__configuration__type">metacall_initialize_configuration_type</link> initialize_config[])</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall_8h_1ab2759ffd9206401b14fb75d53bf35987">metacall_initialize_args</link> (int argc, char *argv[])</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1acadaee23ccbd4d29087d617b07e1a346">metacall_argc</link> ()</para>
+</listitem>
+            <listitem><para>METACALL_API char ** <link linkend="_metacall_8h_1a9c0bd7df095d9a4db05204f04fa657a3">metacall_argv</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a6e9924c55b771ae7f80d6b153ad412d3">metacall_is_initialized</link> (const char *tag)</para>
+</listitem>
+            <listitem><para>METACALL_API size_t <link linkend="_metacall_8h_1af773258f002ae5ea241b945ae4315d49">metacall_args_size</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a14bbd56502b7bdd53fdbe42b46aceb16">metacall_execution_path</link> (const char *tag, const char *path)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ab6fd858391d840206fe14725c2b695e2">metacall_execution_path_s</link> (const char *tag, size_t tag_length, const char *path, size_t path_length)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a4cf8160c6bdd7c5c2614b40be31ce887">metacall_load_from_file</link> (const char *tag, const char *paths[], size_t size, void **handle)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1aa202ac4aeb04129ab475099af696b7b8">metacall_load_from_memory</link> (const char *tag, const char *buffer, size_t size, void **handle)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ae62d509141fe85874f1865f61b4075af">metacall_load_from_package</link> (const char *tag, const char *path, void **handle)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a00a0cad16a66aaaab0f2e523ee390be3">metacall_load_from_configuration</link> (const char *path, void **handle, void *allocator)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1afc2c0d0a24b9f6e4908bbac36d98954b">metacallv</link> (const char *name, void *args[])</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ad934b33c0c04c424d7080735d86a240c">metacallv_s</link> (const char *name, void *args[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1abaa8b58b55e753ebcb2c6ca7221261fe">metacallhv</link> (void *handle, const char *name, void *args[])</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a0973f34ae8081817abbcc84e54b09fcc">metacallhv_s</link> (void *handle, const char *name, void *args[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a927b07b0d76019322c9a84a768333be7">metacall</link> (const char *name,...)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a3d6052ad320dd2bb83d6c39d7bac3a1e">metacallt</link> (const char *name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ids[],...)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a93e003693bcf043424e5bd77255ef629">metacallt_s</link> (const char *name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ids[], size_t size,...)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a020d72d3ec5fac1ef707e57e356ef0ea">metacallht_s</link> (void *handle, const char *name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ids[], size_t size,...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+
+<para>Get the function by</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Function reference, null if the function does not exist </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a137dbf351f620ac5c1daebf1564f099b">metacall_function</link> (const char *name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title>from @handle</title>
+
+<para>Get the function by</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Pointer to the handle returned by metacall_load_from_{file, memory, package}</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Function reference, null if the function does not exist </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a0733570d83d6daf0e421e3e414547566">metacall_handle_function</link> (void *handle, const char *name)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a26ff10520ec45fc6dc56e6b731f7cd98">metacall_function_parameter_type</link> (void *func, size_t parameter, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> *id)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a391f6f382c453d8903889a910f59bf4c">metacall_function_return_type</link> (void *func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> *id)</para>
+</listitem>
+            <listitem><para>METACALL_API size_t <link linkend="_metacall_8h_1ae41ffa4531b7819e7f0d1c580ef508c5">metacall_function_size</link> (void *func)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a42f7b6d24d91f6aa2b1a1bf773a2be3b">metacall_function_async</link> (void *func)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+
+<para>Get the handle by</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Extension of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the handle</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Handle reference, null if the function does not exist </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a579d699c4407cc27e94d216303f152aa">metacall_handle</link> (const char *tag, const char *name)</para>
+</listitem>
+            <listitem><para>const METACALL_API char * <link linkend="_metacall_8h_1af1a1d52c74b30adba3e328eafb77cf3c">metacall_handle_id</link> (void *handle)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ad69cc4988cf490c58d1c5d72ce7a3f95">metacall_handle_export</link> (void *handle)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a7029ce54bb2a8fb4516415e42d6d986b">metacallfv</link> (void *func, void *args[])</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1afcaf2d96cbe7e899e9f5450be7d7d1c4">metacallfv_s</link> (void *func, void *args[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ae523e9a658d5ea11bde72660df84df95">metacallf</link> (void *func,...)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a6de5e0d836963404a27918bfade98cad">metacallfs</link> (void *func, const char *buffer, size_t size, void *allocator)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ac1ecf16f1985cecee777d9e84c70d79a">metacallfmv</link> (void *func, void *keys[], void *values[])</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ae381876c35f6b194c96c19a9b808e313">metacallfms</link> (void *func, const char *buffer, size_t size, void *allocator)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title>and arguments @va_args</title>
+
+<para>Register a function by name</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>invoke</entry>
+                                <entry>
+<para>Pointer to function invoke interface (argc, argv, data)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Will set the pointer to the function if the parameter is not null</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>return_type</entry>
+                                <entry>
+<para>Type of return value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of function arguments</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>va_args</entry>
+                                <entry>
+<para>Varidic function parameter types</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a810ca74b8efef842df8ea7baf2b87e67">metacall_register</link> (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size,...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title>and arguments @types</title>
+
+<para>Register a function by name</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>invoke</entry>
+                                <entry>
+<para>Pointer to function invoke interface (argc, argv, data)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Will set the pointer to the function if the parameter is not null</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>return_type</entry>
+                                <entry>
+<para>Type of return value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of function arguments</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>types</entry>
+                                <entry>
+<para>List of parameter types</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ae0f575287847cd57f5a549b2b211db1d">metacall_registerv</link> (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b">metacall_await</link> (const char *name, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a5f24de215645b2728c80e20685cb5525">metacall_await_future</link> (void *f, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a698f9b1a031af836302d2634e3194f75">metacall_await_s</link> (const char *name, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a4aae2677499d7bc7992840e90d754d83">metacallfv_await</link> (void *func, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a9c5ead1f1aa559e58a65f69ae51972cb">metacallfv_await_s</link> (void *func, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a806b1dda95f596de33a9527123fed8e4">metacallfmv_await</link> (void *func, void *keys[], void *values[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a4c8d0fa0f6b7c3607bd92524a11f3c5c">metacallfmv_await_s</link> (void *func, void *keys[], void *values[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1addd2e38b4966b41bc2473c172d52147d">metacallfs_await</link> (void *func, const char *buffer, size_t size, void *allocator, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a6111e7af53fb3dcf04018aa7a06b01e3">metacallfms_await</link> (void *func, const char *buffer, size_t size, void *allocator, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+
+<para>Get the class by</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the class</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Class reference, null if the class does not exist </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a62422ba9010c261547585dc014f5f71f">metacall_class</link> (const char *name)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a9a59bb8134aa3243a995d871262f5085">metacallv_class</link> (void *cls, const char *name, void *args[], size_t argc)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a3fb7a043355dd7fd9974cea54ff93814">metacall_class_new</link> (void *cls, const char *name, void *args[], size_t argc)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a70337e2f826dab637d640337404831cf">metacall_class_static_get</link> (void *cls, const char *key)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ad69032d3eec3834b36d907141f32332a">metacall_class_static_set</link> (void *cls, const char *key, void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a84679047389d04a406f1e3a91fa00e1d">metacallv_object</link> (void *obj, const char *name, void *args[], size_t argc)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1abf765af19df6abca9ef981ed56db6b92">metacall_object_get</link> (void *obj, const char *key)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a567cbdd3c398e4bcfab8e07ff76de06b">metacall_object_set</link> (void *obj, const char *key, void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API char * <link linkend="_metacall_8h_1ab9d6a8fa4d186f14741ef15015798eb0">metacall_inspect</link> (size_t *size, void *allocator)</para>
+</listitem>
+            <listitem><para>METACALL_API char * <link linkend="_metacall_8h_1acdcbeeeafdc83e9b69937265a0da53c3">metacall_serialize</link> (const char *name, void *v, size_t *size, void *allocator)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a0d45c99a4491e8bbad9d66aa8e719e54">metacall_deserialize</link> (const char *name, const char *buffer, size_t size, void *allocator)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ae1f35c9c5cd2b375e8fb00b9d8c5890c">metacall_clear</link> (void *handle)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1aca8745a9f261bc3d37ee9156b991296f">metacall_destroy</link> (void)</para>
+</listitem>
+            <listitem><para>const METACALL_API char * <link linkend="_metacall_8h_1a1e8b06591a5564cfa4f1209e84ad5e78">metacall_print_info</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ad50602b5115964e06b18483807ba1e11">metacall_null_args</link> [1]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_metacall_8h_1a9c8f9f1a02aa8b7f11203f473ad45a0c"/>    <section>
+    <title>METACALL_FLAGS_FORK_SAFE</title>
+<indexterm><primary>METACALL_FLAGS_FORK_SAFE</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>METACALL_FLAGS_FORK_SAFE</secondary></indexterm>
+<para><computeroutput>#define METACALL_FLAGS_FORK_SAFE   0x01 &lt;&lt; 0x00</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_metacall_8h_1a4aa530f2d57ee74faec5152ab59cfd2c"/>    <section>
+    <title>metacall_serial()</title>
+<indexterm><primary>metacall_serial</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_serial</secondary></indexterm>
+<para><computeroutput>const METACALL_API char* metacall_serial (void )</computeroutput></para><para>
+
+<para>Returns default serializer used by MetaCall. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Name of the serializer to be used with serialization methods </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a7359cf8608ee329433d129f74621f6b7"/>    <section>
+    <title>metacall_log_null()</title>
+<indexterm><primary>metacall_log_null</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_log_null</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_log_null (void )</computeroutput></para><para>
+
+<para>Disables MetaCall logs, must be called before @metacall_initialize. </para>
+</para>
+
+<para>When initializing MetaCall, it initializes a default logs to stdout if none was defined. If you want to benchmark or simply disable this default logs, you can call to this function before @metacall_initialize. </para>
+    </section><anchor xml:id="_metacall_8h_1a59ae3eea97bc40256b292aea7f36b61c"/>    <section>
+    <title>metacall_flags()</title>
+<indexterm><primary>metacall_flags</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_flags</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_flags (int flags)</computeroutput></para><para>
+
+<para>Flags to be set in MetaCall library. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>flags</entry>
+                                <entry>
+<para>Combination of flags referring to definitions METACALL_FLAGS_* </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_metacall_8h_1aef066c5638c4e049288d98911e1a799f"/>    <section>
+    <title>metacall_initialize()</title>
+<indexterm><primary>metacall_initialize</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_initialize</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_initialize (void )</computeroutput></para><para>
+
+<para>Initialize MetaCall library. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a9c70099ab9944bc953ff0998fa92f97e"/>    <section>
+    <title>metacall_initialize_ex()</title>
+<indexterm><primary>metacall_initialize_ex</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_initialize_ex</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_initialize_ex (struct <link linkend="_structmetacall__initialize__configuration__type">metacall_initialize_configuration_type</link> initialize_config[])</computeroutput></para><para>
+
+<para>Initialize MetaCall library with configuration arguments. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>initialize_config</entry>
+                                <entry>
+<para>Extension of the script to be loaded in memory with data to be injected</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ab2759ffd9206401b14fb75d53bf35987"/>    <section>
+    <title>metacall_initialize_args()</title>
+<indexterm><primary>metacall_initialize_args</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_initialize_args</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_initialize_args (int argc, char * argv[])</computeroutput></para><para>
+
+<para>Initialize MetaCall application arguments. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>argc</entry>
+                                <entry>
+<para>Number of additional parameters to be passed to the runtime when initializing</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>argv</entry>
+                                <entry>
+<para>Additional parameters to be passed to the runtime when initializing (when using MetaCall as an application) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_metacall_8h_1acadaee23ccbd4d29087d617b07e1a346"/>    <section>
+    <title>metacall_argc()</title>
+<indexterm><primary>metacall_argc</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_argc</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_argc ( )</computeroutput></para><para>
+
+<para>Get the number of arguments in which MetaCall was initialized. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>An integer equal or greater than zero </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a9c0bd7df095d9a4db05204f04fa657a3"/>    <section>
+    <title>metacall_argv()</title>
+<indexterm><primary>metacall_argv</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_argv</secondary></indexterm>
+<para><computeroutput>METACALL_API char** metacall_argv (void )</computeroutput></para><para>
+
+<para>Get the arguments in which MetaCall was initialized. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to an array of strings with the additional arguments </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a6e9924c55b771ae7f80d6b153ad412d3"/>    <section>
+    <title>metacall_is_initialized()</title>
+<indexterm><primary>metacall_is_initialized</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_is_initialized</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_is_initialized (const char * tag)</computeroutput></para><para>
+
+<para>Check if script context is loaded by @tag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Extension of the script</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if context is initialized, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1af773258f002ae5ea241b945ae4315d49"/>    <section>
+    <title>metacall_args_size()</title>
+<indexterm><primary>metacall_args_size</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_args_size</secondary></indexterm>
+<para><computeroutput>METACALL_API size_t metacall_args_size (void )</computeroutput></para><para>
+
+<para>Amount of function call arguments supported by MetaCall. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Number of arguments suported </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a14bbd56502b7bdd53fdbe42b46aceb16"/>    <section>
+    <title>metacall_execution_path()</title>
+<indexterm><primary>metacall_execution_path</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_execution_path</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_execution_path (const char * tag, const char * path)</computeroutput></para><para>
+
+<para>Set a execution path defined by @path to the extension script @tag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Extension of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Path to be loaded</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ab6fd858391d840206fe14725c2b695e2"/>    <section>
+    <title>metacall_execution_path_s()</title>
+<indexterm><primary>metacall_execution_path_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_execution_path_s</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_execution_path_s (const char * tag, size_t tag_length, const char * path, size_t path_length)</computeroutput></para><para>
+
+<para>Set a execution path defined by @path to the extension script @tag with length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Extension of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag_length</entry>
+                                <entry>
+<para>Length of the extension of the tag</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Path to be loaded</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path_length</entry>
+                                <entry>
+<para>Length of the path</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a4cf8160c6bdd7c5c2614b40be31ce887"/>    <section>
+    <title>metacall_load_from_file()</title>
+<indexterm><primary>metacall_load_from_file</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_load_from_file</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_load_from_file (const char * tag, const char * paths[], size_t size, void ** handle)</computeroutput></para><para>
+
+<para>Loads a script from file specified by @path. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Extension of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>paths</entry>
+                                <entry>
+<para>Path array of files</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size of the array @paths</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Optional pointer to reference of loaded handle</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1aa202ac4aeb04129ab475099af696b7b8"/>    <section>
+    <title>metacall_load_from_memory()</title>
+<indexterm><primary>metacall_load_from_memory</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_load_from_memory</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_load_from_memory (const char * tag, const char * buffer, size_t size, void ** handle)</computeroutput></para><para>
+
+<para>Loads a script from memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Extension of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>Memory block representing the string of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Memory block representing the string of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Optional pointer to reference of loaded handle</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ae62d509141fe85874f1865f61b4075af"/>    <section>
+    <title>metacall_load_from_package()</title>
+<indexterm><primary>metacall_load_from_package</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_load_from_package</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_load_from_package (const char * tag, const char * path, void ** handle)</computeroutput></para><para>
+
+<para>Loads a package of scrips from file specified by @path into loader defined by @extension. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Extension of the script</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Path of the package</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Optional pointer to reference of loaded handle</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a00a0cad16a66aaaab0f2e523ee390be3"/>    <section>
+    <title>metacall_load_from_configuration()</title>
+<indexterm><primary>metacall_load_from_configuration</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_load_from_configuration</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_load_from_configuration (const char * path, void ** handle, void * allocator)</computeroutput></para><para>
+
+<para>Loads a a list of scrips from configuration specified by @path into loader with the following format: { &quot;language_id&quot;: &quot;&lt;tag&gt;&quot;, &quot;path&quot;: &quot;&lt;path&gt;&quot;, &quot;scripts&quot;: [ &quot;&lt;script0&gt;&quot;, &quot;&lt;script1&gt;&quot;, ..., &quot;&lt;scriptN&gt;&quot; ] }. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>Path of the configuration</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Optional pointer to reference of loaded handle</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the configuration</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1afc2c0d0a24b9f6e4908bbac36d98954b"/>    <section>
+    <title>metacallv()</title>
+<indexterm><primary>metacallv</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallv</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallv (const char * name, void * args[])</computeroutput></para><para>
+
+<para>Call a function anonymously by value array @args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ad934b33c0c04c424d7080735d86a240c"/>    <section>
+    <title>metacallv_s()</title>
+<indexterm><primary>metacallv_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallv_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallv_s (const char * name, void * args[], size_t size)</computeroutput></para><para>
+
+<para>Call a function anonymously by value array @args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the call</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1abaa8b58b55e753ebcb2c6ca7221261fe"/>    <section>
+    <title>metacallhv()</title>
+<indexterm><primary>metacallhv</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallhv</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallhv (void * handle, const char * name, void * args[])</computeroutput></para><para>
+
+<para>Call a function anonymously by handle @handle value array @args This function allows to avoid name collisions when calling functions by name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Handle where the function belongs</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a0973f34ae8081817abbcc84e54b09fcc"/>    <section>
+    <title>metacallhv_s()</title>
+<indexterm><primary>metacallhv_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallhv_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallhv_s (void * handle, const char * name, void * args[], size_t size)</computeroutput></para><para>
+
+<para>Call a function anonymously by handle @handle value array @args This function allows to avoid name collisions when calling functions by name Includes @size in order to allow variadic arguments or safe calls. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Handle where the function belongs</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the call</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a927b07b0d76019322c9a84a768333be7"/>    <section>
+    <title>metacall()</title>
+<indexterm><primary>metacall</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall (const char * name,  ...)</computeroutput></para><para>
+
+<para>Call a function anonymously by variable arguments @va_args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>va_args</entry>
+                                <entry>
+<para>Varidic function parameters</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a3d6052ad320dd2bb83d6c39d7bac3a1e"/>    <section>
+    <title>metacallt()</title>
+<indexterm><primary>metacallt</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallt</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallt (const char * name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ids[],  ...)</computeroutput></para><para>
+
+<para>Call a function anonymously by type array @ids and variable arguments @va_args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ids</entry>
+                                <entry>
+<para>Array of types refered to @va_args</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>va_args</entry>
+                                <entry>
+<para>Varidic function parameters</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a93e003693bcf043424e5bd77255ef629"/>    <section>
+    <title>metacallt_s()</title>
+<indexterm><primary>metacallt_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallt_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallt_s (const char * name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ids[], size_t size,  ...)</computeroutput></para><para>
+
+<para>Call a function anonymously by type array @ids and variable arguments @va_args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ids</entry>
+                                <entry>
+<para>Array of types refered to @va_args</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the call</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>va_args</entry>
+                                <entry>
+<para>Varidic function parameters</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a020d72d3ec5fac1ef707e57e356ef0ea"/>    <section>
+    <title>metacallht_s()</title>
+<indexterm><primary>metacallht_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallht_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallht_s (void * handle, const char * name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ids[], size_t size,  ...)</computeroutput></para><para>
+
+<para>Call a function anonymously by type array @ids and variable arguments @va_args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Pointer to the handle returned by metacall_load_from_{file, memory, package}</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ids</entry>
+                                <entry>
+<para>Array of types refered to @va_args</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the call</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>va_args</entry>
+                                <entry>
+<para>Varidic function parameters</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a137dbf351f620ac5c1daebf1564f099b"/>    <section>
+    <title>metacall_function()</title>
+<indexterm><primary>metacall_function</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_function</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_function (const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a0733570d83d6daf0e421e3e414547566"/>    <section>
+    <title>metacall_handle_function()</title>
+<indexterm><primary>metacall_handle_function</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_handle_function</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_handle_function (void * handle, const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a26ff10520ec45fc6dc56e6b731f7cd98"/>    <section>
+    <title>metacall_function_parameter_type()</title>
+<indexterm><primary>metacall_function_parameter_type</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_function_parameter_type</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_function_parameter_type (void * func, size_t parameter, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> * id)</computeroutput></para><para>
+
+<para>Get the function parameter type id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>The pointer to the function obtained from metacall_function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>parameter</entry>
+                                <entry>
+<para>The index of the parameter to be retrieved</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>The parameter type id that will be returned</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return 0 if the @parameter index exists and @func is valid, 1 otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a391f6f382c453d8903889a910f59bf4c"/>    <section>
+    <title>metacall_function_return_type()</title>
+<indexterm><primary>metacall_function_return_type</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_function_return_type</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_function_return_type (void * func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> * id)</computeroutput></para><para>
+
+<para>Get the function return type id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>The pointer to the function obtained from metacall_function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>The value id of the return type of the function @func</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return 0 if the @func is valid, 1 otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ae41ffa4531b7819e7f0d1c580ef508c5"/>    <section>
+    <title>metacall_function_size()</title>
+<indexterm><primary>metacall_function_size</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_function_size</secondary></indexterm>
+<para><computeroutput>METACALL_API size_t metacall_function_size (void * func)</computeroutput></para><para>
+
+<para>Get minimun mumber of arguments accepted by function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Function reference</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return mumber of arguments </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a42f7b6d24d91f6aa2b1a1bf773a2be3b"/>    <section>
+    <title>metacall_function_async()</title>
+<indexterm><primary>metacall_function_async</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_function_async</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_function_async (void * func)</computeroutput></para><para>
+
+<para>Check if the function @func is asynchronous or synchronous. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Function reference</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return 0 if it is syncrhonous, 1 if it is asynchronous and -1 if the function is NULL </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a579d699c4407cc27e94d216303f152aa"/>    <section>
+    <title>metacall_handle()</title>
+<indexterm><primary>metacall_handle</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_handle</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_handle (const char * tag, const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1af1a1d52c74b30adba3e328eafb77cf3c"/>    <section>
+    <title>metacall_handle_id()</title>
+<indexterm><primary>metacall_handle_id</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_handle_id</secondary></indexterm>
+<para><computeroutput>const METACALL_API char* metacall_handle_id (void * handle)</computeroutput></para><para>
+
+<para>Get name of a @handle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Pointer to the handle to be retrieved</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String that references the handle </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ad69cc4988cf490c58d1c5d72ce7a3f95"/>    <section>
+    <title>metacall_handle_export()</title>
+<indexterm><primary>metacall_handle_export</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_handle_export</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_handle_export (void * handle)</computeroutput></para><para>
+
+<para>Return a value representing the handle as a map of functions (or values) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Reference to the handle to be described</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A value of type map on success, null otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a7029ce54bb2a8fb4516415e42d6d986b"/>    <section>
+    <title>metacallfv()</title>
+<indexterm><primary>metacallfv</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfv</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfv (void * func, void * args[])</computeroutput></para><para>
+
+<para>Call a function anonymously by value array @args and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1afcaf2d96cbe7e899e9f5450be7d7d1c4"/>    <section>
+    <title>metacallfv_s()</title>
+<indexterm><primary>metacallfv_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfv_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfv_s (void * func, void * args[], size_t size)</computeroutput></para><para>
+
+<para>Call a function anonymously by value array @args and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of function arguments</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ae523e9a658d5ea11bde72660df84df95"/>    <section>
+    <title>metacallf()</title>
+<indexterm><primary>metacallf</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallf</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallf (void * func,  ...)</computeroutput></para><para>
+
+<para>Call a function anonymously by variable arguments @va_args and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a6de5e0d836963404a27918bfade98cad"/>    <section>
+    <title>metacallfs()</title>
+<indexterm><primary>metacallfs</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfs</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfs (void * func, const char * buffer, size_t size, void * allocator)</computeroutput></para><para>
+
+<para>Call a function anonymously by function @func and serial @buffer of size @size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>String representing an array to be deserialized into arguments of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size of string @buffer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ac1ecf16f1985cecee777d9e84c70d79a"/>    <section>
+    <title>metacallfmv()</title>
+<indexterm><primary>metacallfmv</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfmv</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfmv (void * func, void * keys[], void * values[])</computeroutput></para><para>
+
+<para>Call a function anonymously by value map (@keys -&gt; @values) and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>keys</entry>
+                                <entry>
+<para>Array of values representing argument keys</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>values</entry>
+                                <entry>
+<para>Array of values representing argument values data</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ae381876c35f6b194c96c19a9b808e313"/>    <section>
+    <title>metacallfms()</title>
+<indexterm><primary>metacallfms</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfms</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfms (void * func, const char * buffer, size_t size, void * allocator)</computeroutput></para><para>
+
+<para>Call a function anonymously by function @func and serial @buffer of size @size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>String representing a map to be deserialized into arguments of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size of string @buffer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a810ca74b8efef842df8ea7baf2b87e67"/>    <section>
+    <title>metacall_register()</title>
+<indexterm><primary>metacall_register</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_register</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_register (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size,  ...)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1ae0f575287847cd57f5a549b2b211db1d"/>    <section>
+    <title>metacall_registerv()</title>
+<indexterm><primary>metacall_registerv</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_registerv</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b"/>    <section>
+    <title>metacall_await()</title>
+<indexterm><primary>metacall_await</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_await</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_await (const char * name, void * args[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Executes an asynchronous call to the function and registers a callback to be executed when a future is resolved (it does block) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>The name of the function to be called asynchronously</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to the values to be passed to the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a5f24de215645b2728c80e20685cb5525"/>    <section>
+    <title>metacall_await_future()</title>
+<indexterm><primary>metacall_await_future</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_await_future</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_await_future (void * f, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Awaits for a promise and registers a callback to be executed when a future is resolved. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>The pointer to the future</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a698f9b1a031af836302d2634e3194f75"/>    <section>
+    <title>metacall_await_s()</title>
+<indexterm><primary>metacall_await_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_await_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_await_s (const char * name, void * args[], size_t size, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Executes an asynchronous call to the function and registers a callback to be executed when a future is resolved (it does block) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>The name of the function to be called asynchronously</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to the values to be passed to the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the array @args</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a4aae2677499d7bc7992840e90d754d83"/>    <section>
+    <title>metacallfv_await()</title>
+<indexterm><primary>metacallfv_await</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfv_await</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfv_await (void * func, void * args[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Call an asynchronous function anonymously by value array @args and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to values</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a9c5ead1f1aa559e58a65f69ae51972cb"/>    <section>
+    <title>metacallfv_await_s()</title>
+<indexterm><primary>metacallfv_await_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfv_await_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfv_await_s (void * func, void * args[], size_t size, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Call an asynchronous function anonymously by value array @args and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to values</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the array @args</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a806b1dda95f596de33a9527123fed8e4"/>    <section>
+    <title>metacallfmv_await()</title>
+<indexterm><primary>metacallfmv_await</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfmv_await</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfmv_await (void * func, void * keys[], void * values[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Call an asynchronous function anonymously by value map (@keys -&gt; @values) and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>keys</entry>
+                                <entry>
+<para>Array of values representing argument keys</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>values</entry>
+                                <entry>
+<para>Array of values representing argument values data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the arrays @keys and @values</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a4c8d0fa0f6b7c3607bd92524a11f3c5c"/>    <section>
+    <title>metacallfmv_await_s()</title>
+<indexterm><primary>metacallfmv_await_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfmv_await_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfmv_await_s (void * func, void * keys[], void * values[], size_t size, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Call an asynchronous function anonymously by value map (@keys -&gt; @values) and function @func. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>keys</entry>
+                                <entry>
+<para>Array of values representing argument keys</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>values</entry>
+                                <entry>
+<para>Array of values representing argument values data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1addd2e38b4966b41bc2473c172d52147d"/>    <section>
+    <title>metacallfs_await()</title>
+<indexterm><primary>metacallfs_await</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfs_await</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfs_await (void * func, const char * buffer, size_t size, void * allocator, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Call an asynchronous function anonymously by function @func and serial @buffer of size @size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>String representing an array to be deserialized into arguments of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size of string @buffer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a6111e7af53fb3dcf04018aa7a06b01e3"/>    <section>
+    <title>metacallfms_await()</title>
+<indexterm><primary>metacallfms_await</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfms_await</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfms_await (void * func, const char * buffer, size_t size, void * allocator, void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)</computeroutput></para><para>
+
+<para>Call an asynchronous function anonymously by function @func and serial @buffer of size @size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>String representing a map to be deserialized into arguments of the function</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size of string @buffer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>resolve_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task completion </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* Value representing the result of the future resolution </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>void</entry>
+                                <entry>
+<para>* A reference to @data that will be used as a closure for the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function</para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>reject_callback</entry>
+                                <entry>
+<para>Pointer to function that will be executed when task error (signature is identical as resolve_callback)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a62422ba9010c261547585dc014f5f71f"/>    <section>
+    <title>metacall_class()</title>
+<indexterm><primary>metacall_class</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_class</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_class (const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a9a59bb8134aa3243a995d871262f5085"/>    <section>
+    <title>metacallv_class()</title>
+<indexterm><primary>metacallv_class</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallv_class</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallv_class (void * cls, const char * name, void * args[], size_t argc)</computeroutput></para><para>
+
+<para>Call a class method anonymously by value array @args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the method</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>cls</entry>
+                                <entry>
+<para>Pointer to the class</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of args array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a3fb7a043355dd7fd9974cea54ff93814"/>    <section>
+    <title>metacall_class_new()</title>
+<indexterm><primary>metacall_class_new</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_class_new</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_class_new (void * cls, const char * name, void * args[], size_t argc)</computeroutput></para><para>
+
+<para>Create a new object instance from @cls by value array @args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>cls</entry>
+                                <entry>
+<para>Pointer to the class</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the new object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers constructor parameters</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of constructor parameters</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the new object value instance </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a70337e2f826dab637d640337404831cf"/>    <section>
+    <title>metacall_class_static_get()</title>
+<indexterm><primary>metacall_class_static_get</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_class_static_get</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_class_static_get (void * cls, const char * key)</computeroutput></para><para>
+
+<para>Get an attribute from @cls by @key name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>cls</entry>
+                                <entry>
+<para>Pointer to the class</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>key</entry>
+                                <entry>
+<para>Name of the attribute to get</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the class attribute value or NULL if an error occurred </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ad69032d3eec3834b36d907141f32332a"/>    <section>
+    <title>metacall_class_static_set()</title>
+<indexterm><primary>metacall_class_static_set</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_class_static_set</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_class_static_set (void * cls, const char * key, void * v)</computeroutput></para><para>
+
+<para>Set an attribute to @cls by @key name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>cls</entry>
+                                <entry>
+<para>Pointer to the class</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>key</entry>
+                                <entry>
+<para>Name of the attribute to set</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value to set</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Non-zero integer if an error ocurred </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a84679047389d04a406f1e3a91fa00e1d"/>    <section>
+    <title>metacallv_object()</title>
+<indexterm><primary>metacallv_object</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallv_object</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallv_object (void * obj, const char * name, void * args[], size_t argc)</computeroutput></para><para>
+
+<para>Call an object method anonymously by value array @args. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>obj</entry>
+                                <entry>
+<para>Pointer to the object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the method</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of args array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1abf765af19df6abca9ef981ed56db6b92"/>    <section>
+    <title>metacall_object_get()</title>
+<indexterm><primary>metacall_object_get</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_object_get</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_object_get (void * obj, const char * key)</computeroutput></para><para>
+
+<para>Get an attribute from @obj by @key name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>obj</entry>
+                                <entry>
+<para>Pointer to the object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>key</entry>
+                                <entry>
+<para>Name of the attribute to get</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the object attribute value or NULL if an error occurred </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a567cbdd3c398e4bcfab8e07ff76de06b"/>    <section>
+    <title>metacall_object_set()</title>
+<indexterm><primary>metacall_object_set</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_object_set</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_object_set (void * obj, const char * key, void * v)</computeroutput></para><para>
+
+<para>Set an attribute to @obj by @key name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>obj</entry>
+                                <entry>
+<para>Pointer to the object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>key</entry>
+                                <entry>
+<para>Name of the attribute to set</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>value</entry>
+                                <entry>
+<para>Value to set</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Non-zero integer if an error ocurred </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ab9d6a8fa4d186f14741ef15015798eb0"/>    <section>
+    <title>metacall_inspect()</title>
+<indexterm><primary>metacall_inspect</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_inspect</secondary></indexterm>
+<para><computeroutput>METACALL_API char* metacall_inspect (size_t * size, void * allocator)</computeroutput></para><para>
+
+<para>Provide information about all loaded objects. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size in bytes of return buffer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the string</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String containing introspection information </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1acdcbeeeafdc83e9b69937265a0da53c3"/>    <section>
+    <title>metacall_serialize()</title>
+<indexterm><primary>metacall_serialize</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_serialize</secondary></indexterm>
+<para><computeroutput>METACALL_API char* metacall_serialize (const char * name, void * v, size_t * size, void * allocator)</computeroutput></para><para>
+
+<para>Convert the value @v to serialized string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the serial to be used</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size of new allocated string</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the string</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>New allocated string containing stringified value </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a0d45c99a4491e8bbad9d66aa8e719e54"/>    <section>
+    <title>metacall_deserialize()</title>
+<indexterm><primary>metacall_deserialize</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_deserialize</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_deserialize (const char * name, const char * buffer, size_t size, void * allocator)</computeroutput></para><para>
+
+<para>Convert the string @buffer to value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the serial to be used</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>String to be deserialized</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size of string @buffer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator will allocate the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>New allocated value representing the string (must be freed) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ae1f35c9c5cd2b375e8fb00b9d8c5890c"/>    <section>
+    <title>metacall_clear()</title>
+<indexterm><primary>metacall_clear</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_clear</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_clear (void * handle)</computeroutput></para><para>
+
+<para>Clear handle from memory and unload related resources. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle</entry>
+                                <entry>
+<para>Reference to the handle to be unloaded</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1aca8745a9f261bc3d37ee9156b991296f"/>    <section>
+    <title>metacall_destroy()</title>
+<indexterm><primary>metacall_destroy</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_destroy</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_destroy (void )</computeroutput></para><para>
+
+<para>Destroy MetaCall library. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a1e8b06591a5564cfa4f1209e84ad5e78"/>    <section>
+    <title>metacall_print_info()</title>
+<indexterm><primary>metacall_print_info</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_print_info</secondary></indexterm>
+<para><computeroutput>const METACALL_API char* metacall_print_info (void )</computeroutput></para><para>
+
+<para>Provide the module information. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Static string containing module information </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_metacall_8h_1ad50602b5115964e06b18483807ba1e11"/>    <section>
+    <title>metacall_null_args</title>
+<indexterm><primary>metacall_null_args</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_null_args</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_null_args[1]</computeroutput></para></section>
+</section>
+</section>

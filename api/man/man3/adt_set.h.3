@@ -1,0 +1,167 @@
+.TH "adt_set.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+adt_set.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <adt/adt_api\&.h>\fP
+.br
+\fC#include <adt/adt_comparable\&.h>\fP
+.br
+\fC#include <adt/adt_hash\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct set_type * \fBset\fP"
+.br
+.ti -1c
+.RI "typedef \fBhash\fP \fBset_hash\fP"
+.br
+.ti -1c
+.RI "typedef \fBcomparable\fP \fBset_key\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBset_value\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBset_cb_iterate_args\fP"
+.br
+.ti -1c
+.RI "typedef \fBhash_callback\fP \fBset_cb_hash\fP"
+.br
+.ti -1c
+.RI "typedef \fBcomparable_callback\fP \fBset_cb_compare\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBset_cb_iterate\fP) (\fBset\fP, \fBset_key\fP, \fBset_value\fP, \fBset_cb_iterate_args\fP)"
+.br
+.ti -1c
+.RI "typedef struct set_iterator_type * \fBset_iterator\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "ADT_API \fBset\fP \fBset_create\fP (\fBset_cb_hash\fP hash_cb, \fBset_cb_compare\fP compare_cb)"
+.br
+.ti -1c
+.RI "ADT_API size_t \fBset_size\fP (\fBset\fP s)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_insert\fP (\fBset\fP s, \fBset_key\fP key, \fBset_value\fP \fBvalue\fP)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_insert_array\fP (\fBset\fP s, \fBset_key\fP keys[], \fBset_value\fP values[], size_t size)"
+.br
+.ti -1c
+.RI "ADT_API \fBset_value\fP \fBset_get\fP (\fBset\fP s, \fBset_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_contains\fP (\fBset\fP s, \fBset_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_contains_any\fP (\fBset\fP dest, \fBset\fP src)"
+.br
+.ti -1c
+.RI "ADT_API \fBset_value\fP \fBset_remove\fP (\fBset\fP s, \fBset_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API void \fBset_iterate\fP (\fBset\fP s, \fBset_cb_iterate\fP iterate_cb, \fBset_cb_iterate_args\fP args)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_append\fP (\fBset\fP dest, \fBset\fP src)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_disjoint\fP (\fBset\fP dest, \fBset\fP src)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_clear\fP (\fBset\fP s)"
+.br
+.ti -1c
+.RI "ADT_API void \fBset_destroy\fP (\fBset\fP s)"
+.br
+.ti -1c
+.RI "ADT_API \fBset_iterator\fP \fBset_iterator_begin\fP (\fBset\fP s)"
+.br
+.ti -1c
+.RI "ADT_API \fBset_key\fP \fBset_iterator_get_key\fP (\fBset_iterator\fP it)"
+.br
+.ti -1c
+.RI "ADT_API \fBset_value\fP \fBset_iterator_get_value\fP (\fBset_iterator\fP it)"
+.br
+.ti -1c
+.RI "ADT_API void \fBset_iterator_next\fP (\fBset_iterator\fP it)"
+.br
+.ti -1c
+.RI "ADT_API int \fBset_iterator_end\fP (\fBset_iterator\fP *it)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct set_type* \fBset\fP"
+
+.SS "typedef \fBhash\fP \fBset_hash\fP"
+
+.SS "typedef \fBcomparable\fP \fBset_key\fP"
+
+.SS "typedef void* \fBset_value\fP"
+
+.SS "typedef void* \fBset_cb_iterate_args\fP"
+
+.SS "typedef \fBhash_callback\fP \fBset_cb_hash\fP"
+
+.SS "typedef \fBcomparable_callback\fP \fBset_cb_compare\fP"
+
+.SS "typedef int(* set_cb_iterate) (\fBset\fP, \fBset_key\fP, \fBset_value\fP, \fBset_cb_iterate_args\fP)"
+
+.SS "typedef struct set_iterator_type* \fBset_iterator\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "ADT_API \fBset\fP set_create (\fBset_cb_hash\fP hash_cb, \fBset_cb_compare\fP compare_cb)"
+
+.SS "ADT_API size_t set_size (\fBset\fP s)"
+
+.SS "ADT_API int set_insert (\fBset\fP s, \fBset_key\fP key, \fBset_value\fP value)"
+
+.SS "ADT_API int set_insert_array (\fBset\fP s, \fBset_key\fP keys[], \fBset_value\fP values[], size_t size)"
+
+.SS "ADT_API \fBset_value\fP set_get (\fBset\fP s, \fBset_key\fP key)"
+
+.SS "ADT_API int set_contains (\fBset\fP s, \fBset_key\fP key)"
+
+.SS "ADT_API int set_contains_any (\fBset\fP dest, \fBset\fP src)"
+
+.SS "ADT_API \fBset_value\fP set_remove (\fBset\fP s, \fBset_key\fP key)"
+
+.SS "ADT_API void set_iterate (\fBset\fP s, \fBset_cb_iterate\fP iterate_cb, \fBset_cb_iterate_args\fP args)"
+
+.SS "ADT_API int set_append (\fBset\fP dest, \fBset\fP src)"
+
+.SS "ADT_API int set_disjoint (\fBset\fP dest, \fBset\fP src)"
+
+.SS "ADT_API int set_clear (\fBset\fP s)"
+
+.SS "ADT_API void set_destroy (\fBset\fP s)"
+
+.SS "ADT_API \fBset_iterator\fP set_iterator_begin (\fBset\fP s)"
+
+.SS "ADT_API \fBset_key\fP set_iterator_get_key (\fBset_iterator\fP it)"
+
+.SS "ADT_API \fBset_value\fP set_iterator_get_value (\fBset_iterator\fP it)"
+
+.SS "ADT_API void set_iterator_next (\fBset_iterator\fP it)"
+
+.SS "ADT_API int set_iterator_end (\fBset_iterator\fP * it)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

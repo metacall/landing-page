@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dynlink__flags_8h">
+<title>dynlink_flags.h File Reference</title>
+<indexterm><primary>dynlink_flags.h</primary></indexterm>
+<programlisting>#include &lt;dynlink/dynlink_api.h&gt;
+</programlisting>Include dependency graph for dynlink_flags.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dynlink__flags_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dynlink__flags_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_dynlink__flags_8h_1ac0e790b80cfe3dd7f790bc4640331afb">DYNLINK_FLAGS_BIND_NOW</link>   (0x01 &lt;&lt; 0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__flags_8h_1a449177169d6ff1874519b8ceed479897">DYNLINK_FLAGS_BIND_LAZY</link>   (0x01 &lt;&lt; 0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__flags_8h_1a1e033f06d637a4a18724a99b8184801a">DYNLINK_FLAGS_BIND_LOCAL</link>   (0x01 &lt;&lt; 0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__flags_8h_1adc7e26f520321d22f1ca107b213b2c0e">DYNLINK_FLAGS_BIND_GLOBAL</link>   (0x01 &lt;&lt; 0x03)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__flags_8h_1a401a42b6fe8623f6324835789f2edd18">DYNLINK_FLAGS_SET</link>(flags,  flag)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__flags_8h_1aa06b14c8f8aeb5e56ba4d8d6dd621506">DYNLINK_FLAGS_ADD</link>(flags,  flag)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__flags_8h_1aa829809c84d157f62cbeefcd23146091">DYNLINK_FLAGS_CHECK</link>(flags,  flag)   (((flags) &amp; (flag)) != 0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef int <link linkend="_dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648">dynlink_flags</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_dynlink__flags_8h_1ac0e790b80cfe3dd7f790bc4640331afb"/>    <section>
+    <title>DYNLINK_FLAGS_BIND_NOW</title>
+<indexterm><primary>DYNLINK_FLAGS_BIND_NOW</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>DYNLINK_FLAGS_BIND_NOW</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_FLAGS_BIND_NOW   (0x01 &lt;&lt; 0x00)</computeroutput></para>
+<para>Inmediate loading bind flag </para>
+    </section><anchor xml:id="_dynlink__flags_8h_1a449177169d6ff1874519b8ceed479897"/>    <section>
+    <title>DYNLINK_FLAGS_BIND_LAZY</title>
+<indexterm><primary>DYNLINK_FLAGS_BIND_LAZY</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>DYNLINK_FLAGS_BIND_LAZY</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_FLAGS_BIND_LAZY   (0x01 &lt;&lt; 0x01)</computeroutput></para>
+<para>Lazy loading bind flag </para>
+    </section><anchor xml:id="_dynlink__flags_8h_1a1e033f06d637a4a18724a99b8184801a"/>    <section>
+    <title>DYNLINK_FLAGS_BIND_LOCAL</title>
+<indexterm><primary>DYNLINK_FLAGS_BIND_LOCAL</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>DYNLINK_FLAGS_BIND_LOCAL</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_FLAGS_BIND_LOCAL   (0x01 &lt;&lt; 0x02)</computeroutput></para>
+<para>Private visibility bind flag </para>
+    </section><anchor xml:id="_dynlink__flags_8h_1adc7e26f520321d22f1ca107b213b2c0e"/>    <section>
+    <title>DYNLINK_FLAGS_BIND_GLOBAL</title>
+<indexterm><primary>DYNLINK_FLAGS_BIND_GLOBAL</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>DYNLINK_FLAGS_BIND_GLOBAL</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_FLAGS_BIND_GLOBAL   (0x01 &lt;&lt; 0x03)</computeroutput></para>
+<para>Public visibility bind flag </para>
+    </section><anchor xml:id="_dynlink__flags_8h_1a401a42b6fe8623f6324835789f2edd18"/>    <section>
+    <title>DYNLINK_FLAGS_SET</title>
+<indexterm><primary>DYNLINK_FLAGS_SET</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>DYNLINK_FLAGS_SET</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_FLAGS_SET( flags,  flag)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;flags&#32;=&#32;(flag);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(0)
+</programlisting><para>
+
+<para>Assign to the left operator the right literal. </para>
+</para>
+
+<para>Using flag as a 0 resets the flags. Combined flags can be passed to the macro and they will be assigned correctly too. It can be used for generic and implementation flags.</para>
+
+<para><link linkend="_dynlink__flags_8h_1a401a42b6fe8623f6324835789f2edd18">DYNLINK_FLAGS_SET(flags, 0)</link>; DYNLINK_FLAGS_SET(flags, DYNLINK_FLAGS_BIND_LAZY | DYNLINK_FLAGS_BIND_GLOBAL); DYNLINK_FLAGS_SET(flags_impl, RTLD_LAZY | RTLD_GLOBAL);</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>flags</entry>
+                                <entry>
+<para>The left operator that will be overwritten</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>flag</entry>
+                                <entry>
+<para>The right literal input parameter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_dynlink__flags_8h_1aa06b14c8f8aeb5e56ba4d8d6dd621506"/>    <section>
+    <title>DYNLINK_FLAGS_ADD</title>
+<indexterm><primary>DYNLINK_FLAGS_ADD</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>DYNLINK_FLAGS_ADD</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_FLAGS_ADD( flags,  flag)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;flags&#32;|=&#32;(flag);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(0)
+</programlisting><para>
+
+<para>Append to the left operator the right literal. </para>
+</para>
+
+<para>Using flag as a 0 does nothing. Combined flags can be passed to the macro and they will be added correctly too. It can be used for generic and implementation flags.</para>
+
+<para><link linkend="_dynlink__flags_8h_1aa06b14c8f8aeb5e56ba4d8d6dd621506">DYNLINK_FLAGS_ADD(nothing, 0)</link>; DYNLINK_FLAGS_ADD(flags, DYNLINK_FLAGS_BIND_LAZY | DYNLINK_FLAGS_BIND_GLOBAL); DYNLINK_FLAGS_ADD(flags_impl, RTLD_LAZY | RTLD_GLOBAL);</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>flags</entry>
+                                <entry>
+<para>The left operator that will be added</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>flag</entry>
+                                <entry>
+<para>The literal input parameter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_dynlink__flags_8h_1aa829809c84d157f62cbeefcd23146091"/>    <section>
+    <title>DYNLINK_FLAGS_CHECK</title>
+<indexterm><primary>DYNLINK_FLAGS_CHECK</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>DYNLINK_FLAGS_CHECK</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_FLAGS_CHECK( flags,  flag)   (((flags) &amp; (flag)) != 0)</computeroutput></para><para>
+
+<para>Check flags operator. </para>
+</para>
+
+<para>This macro must be used as a conditional guard. Using flag as a 0 never enters to the guard. Combined flags can be passed to the macro. It can be used for generic and implementation flags.</para>
+
+<para>if (<link linkend="_dynlink__flags_8h_1aa829809c84d157f62cbeefcd23146091">DYNLINK_FLAGS_CHECK(flags, DYNLINK_FLAGS_BIND_LAZY)</link>) { ... }</para>
+
+<para>if (DYNLINK_FLAGS_CHECK(flags_impl, RTLD_LAZY | RTLD_GLOBAL)) { ... }</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>flags</entry>
+                                <entry>
+<para>The left operator that will be check against the literal</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>flag</entry>
+                                <entry>
+<para>The literal input parameter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648"/>    <section>
+    <title>dynlink_flags</title>
+<indexterm><primary>dynlink_flags</primary><secondary>dynlink_flags.h</secondary></indexterm>
+<indexterm><primary>dynlink_flags.h</primary><secondary>dynlink_flags</secondary></indexterm>
+<para><computeroutput>typedef int <link linkend="_dynlink__flags_8h_1a5eb7c21c7f6671d1b1d25092ba3b0648">dynlink_flags</link></computeroutput></para>
+<para>Dynamically linked shared object flags </para>
+</section>
+</section>
+</section>

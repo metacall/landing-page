@@ -1,0 +1,220 @@
+\doxysection{detour.\+h File Reference}
+\label{detour_8h}\index{detour.h@{detour.h}}
+{\ttfamily \#include $<$detour/detour\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$memory/memory.\+h$>$}\newline
+Include dependency graph for detour.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{detour_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=131pt]{detour_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct detour\+\_\+type $\ast$ \textbf{ detour}
+\item 
+typedef struct detour\+\_\+handle\+\_\+type $\ast$ \textbf{ detour\+\_\+handle}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+initialize} (void)
+\end{DoxyCompactItemize}
+\label{_amgrp01747264fe7bf50731df0522c351974e}%
+Create detour by
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Plugin will be used to detourize and detourize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to detour on correct initialization, null otherwise 
+\end{DoxyReturn}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI void($\ast$)(void) \textbf{ detour\+\_\+trampoline} (\textbf{ detour\+\_\+handle} handle)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour} \textbf{ detour\+\_\+create} (const char $\ast$name)
+\item 
+const D\+E\+T\+O\+U\+R\+\_\+\+A\+PI char $\ast$ \textbf{ detour\+\_\+name} (\textbf{ detour} d)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+handle} \textbf{ detour\+\_\+install} (\textbf{ detour} d, void($\ast$target)(void), void($\ast$hook)(void))
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+uninstall} (\textbf{ detour} d, \textbf{ detour\+\_\+handle} handle)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+clear} (\textbf{ detour} d)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI void \textbf{ detour\+\_\+destroy} (void)
+\item 
+const D\+E\+T\+O\+U\+R\+\_\+\+A\+PI char $\ast$ \textbf{ detour\+\_\+print\+\_\+info} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{detour_8h_a98b044d8fd6bb0343802eefe9ce75591}} 
+\index{detour.h@{detour.h}!detour@{detour}}
+\index{detour@{detour}!detour.h@{detour.h}}
+\doxysubsubsection{detour}
+{\footnotesize\ttfamily typedef struct detour\+\_\+type$\ast$ \textbf{ detour}}
+
+\mbox{\label{detour_8h_a4e5a5235d50ce87e1b46d0ef72ea0f59}} 
+\index{detour.h@{detour.h}!detour\_handle@{detour\_handle}}
+\index{detour\_handle@{detour\_handle}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_handle}
+{\footnotesize\ttfamily typedef struct detour\+\_\+handle\+\_\+type$\ast$ \textbf{ detour\+\_\+handle}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{detour_8h_a7774df25f012aa74dd2eb720f3dda3da}} 
+\index{detour.h@{detour.h}!detour\_initialize@{detour\_initialize}}
+\index{detour\_initialize@{detour\_initialize}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_initialize()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize detour module. 
+
+\begin{DoxyReturn}{Returns}
+Return zero correct initialization, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour_8h_aeb1aa814616739364742a8821a89fe42}} 
+\index{detour.h@{detour.h}!detour\_create@{detour\_create}}
+\index{detour\_create@{detour\_create}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_create()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour} detour\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{detour_8h_ab98755191ec5000f8b546cf37669446b}} 
+\index{detour.h@{detour.h}!detour\_name@{detour\_name}}
+\index{detour\_name@{detour\_name}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_name()}
+{\footnotesize\ttfamily const D\+E\+T\+O\+U\+R\+\_\+\+A\+PI char$\ast$ detour\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ detour}}]{d }\end{DoxyParamCaption})}
+
+
+
+Get name of detour. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Reference to the detour\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Static const string with detour name 
+\end{DoxyReturn}
+\mbox{\label{detour_8h_abd6884b0274d91b4d150d4a41d9ff435}} 
+\index{detour.h@{detour.h}!detour\_install@{detour\_install}}
+\index{detour\_install@{detour\_install}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_install()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+handle} detour\+\_\+install (\begin{DoxyParamCaption}\item[{\textbf{ detour}}]{d,  }\item[{void($\ast$)(void)}]{target,  }\item[{void($\ast$)(void)}]{hook }\end{DoxyParamCaption})}
+
+
+
+Install detour from @target to @hook. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Reference to the detour\\
+\hline
+\mbox{\texttt{ in}}  & {\em target} & Reference to the function to be hooked\\
+\hline
+\mbox{\texttt{ in}}  & {\em hook} & Reference to the function will be called instead of @target\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the detour handle 
+\end{DoxyReturn}
+\mbox{\label{detour_8h_ae71c2cec478b01c0c159f3aaefe8176f}} 
+\index{detour.h@{detour.h}!detour\_uninstall@{detour\_uninstall}}
+\index{detour\_uninstall@{detour\_uninstall}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_uninstall()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+uninstall (\begin{DoxyParamCaption}\item[{\textbf{ detour}}]{d,  }\item[{\textbf{ detour\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Install detour from @target to @hook. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Reference to the detour\\
+\hline
+\mbox{\texttt{ in}}  & {\em handle} & Reference to the detour handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour_8h_a5a685867fbcf4276c4643162f60ba4be}} 
+\index{detour.h@{detour.h}!detour\_clear@{detour\_clear}}
+\index{detour\_clear@{detour\_clear}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_clear()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ detour}}]{d }\end{DoxyParamCaption})}
+
+
+
+Destroy detour by handle @d. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Reference to the detour\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return zero on correct destruction, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour_8h_a2620b95d56350cb422c32b33d20dc8b7}} 
+\index{detour.h@{detour.h}!detour\_destroy@{detour\_destroy}}
+\index{detour\_destroy@{detour\_destroy}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_destroy()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI void detour\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destroy all detours. 
+
+\mbox{\label{detour_8h_ae7a5f70dc469322ad7807fe4c1ae661d}} 
+\index{detour.h@{detour.h}!detour\_print\_info@{detour\_print\_info}}
+\index{detour\_print\_info@{detour\_print\_info}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_print\_info()}
+{\footnotesize\ttfamily const D\+E\+T\+O\+U\+R\+\_\+\+A\+PI char$\ast$ detour\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module information. 
+
+\begin{DoxyReturn}{Returns}
+Static string containing module information 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{detour_8h_a499d7044cff90872c46201c25f1d1636}} 
+\index{detour.h@{detour.h}!detour\_trampoline@{detour\_trampoline}}
+\index{detour\_trampoline@{detour\_trampoline}!detour.h@{detour.h}}
+\doxysubsubsection{detour\_trampoline}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI void($\ast$)(void) detour\+\_\+trampoline(\textbf{ detour\+\_\+handle} handle)}
+
+
+
+Get trampoline of the detour. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Reference to the detour handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the trampoline function 
+\end{DoxyReturn}

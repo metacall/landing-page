@@ -1,0 +1,83 @@
+\doxysection{dynlink\+\_\+impl\+\_\+symbol\+\_\+unix.\+h File Reference}
+\label{dynlink__impl__symbol__unix_8h}\index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+Include dependency graph for dynlink\+\_\+impl\+\_\+symbol\+\_\+unix.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{dynlink__impl__symbol__unix_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{dynlink__impl__symbol__unix_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+unix}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX}~dynlink\+\_\+symbol\+\_\+
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT}(name)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET}(name)~((dynlink\+\_\+symbol\+\_\+addr\+\_\+unix)(name))-\/$>$symbol
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+unix\+\_\+impl}) (void)
+\item 
+typedef dynlink\+\_\+symbol\+\_\+addr\+\_\+unix \textbf{ dynlink\+\_\+symbol\+\_\+addr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{dynlink__impl__symbol__unix_8h_ac5d66723717583b0efbc7c23f9ccd059}} 
+\index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}}
+\index{DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_PREFIX}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX~dynlink\+\_\+symbol\+\_\+}
+
+\mbox{\label{dynlink__impl__symbol__unix_8h_ac7c2e3794ef31f11c7743643f55000e6}} 
+\index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}}
+\index{DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_EXPORT}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    DYNLINK\_API \textcolor{keyword}{struct }dynlink\_symbol\_addr\_unix\_type DYNLINK\_SYMBOL\_NAME(name) = \{ \(\backslash\)}
+\DoxyCodeLine{        (dynlink\_symbol\_addr\_unix\_impl)\&name                                       \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\label{dynlink__impl__symbol__unix_8h_a2103b1d11c0227b698826a7a7b2eb844}} 
+\index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}}
+\index{DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_GET}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~((dynlink\+\_\+symbol\+\_\+addr\+\_\+unix)(name))-\/$>$symbol}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{dynlink__impl__symbol__unix_8h_a5a2f66cc5f6deb576e5319c52a804472}} 
+\index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!dynlink\_symbol\_addr\_unix\_impl@{dynlink\_symbol\_addr\_unix\_impl}}
+\index{dynlink\_symbol\_addr\_unix\_impl@{dynlink\_symbol\_addr\_unix\_impl}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
+\doxysubsubsection{dynlink\_symbol\_addr\_unix\_impl}
+{\footnotesize\ttfamily typedef void($\ast$ dynlink\+\_\+symbol\+\_\+addr\+\_\+unix\+\_\+impl) (void)}
+
+\mbox{\label{dynlink__impl__symbol__unix_8h_ae89a381cb9c4a6553098ea701693a2d2}} 
+\index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!dynlink\_symbol\_addr@{dynlink\_symbol\_addr}}
+\index{dynlink\_symbol\_addr@{dynlink\_symbol\_addr}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
+\doxysubsubsection{dynlink\_symbol\_addr}
+{\footnotesize\ttfamily typedef dynlink\+\_\+symbol\+\_\+addr\+\_\+unix \textbf{ dynlink\+\_\+symbol\+\_\+addr}}
+

@@ -1,0 +1,742 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__type__id_8h">
+<title>reflect_type_id.h File Reference</title>
+<indexterm><primary>reflect_type_id.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+</programlisting>Include dependency graph for reflect_type_id.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__type__id_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__type__id_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef int <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaae">type_primitive_id</link> { 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea3e0f738756c5205d71c69d955603f46c">TYPE_BOOL</link> = 0, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea2c8735de6cf799483eefed0e90a386f5">TYPE_CHAR</link> = 1, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea054c36101e4cd86983d1683871e65dd1">TYPE_SHORT</link> = 2, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea4fcd4421533bb21c827865bdbac4fef9">TYPE_INT</link> = 3, 
+
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea4ae533852f8003c3e6e568a79cc35388">TYPE_LONG</link> = 4, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea19a0a402d33a2e049e91ea9e37e90c2f">TYPE_FLOAT</link> = 5, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea019d94f7c571e36215cc1a41e825de0c">TYPE_DOUBLE</link> = 6, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeaddb4be6b1cc25112defabef75f73427a">TYPE_STRING</link> = 7, 
+
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea723ecdbb4295e88f08e7594fa8f1afac">TYPE_BUFFER</link> = 8, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaead189c0a53681ec74eeea1f56d08d741f">TYPE_ARRAY</link> = 9, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaead2aa4ac68ee62f30544d0f7c9d16a027">TYPE_MAP</link> = 10, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea311715f465e358409d513be004f82b2f">TYPE_PTR</link> = 11, 
+
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea3db131537bcaa214a88f6013458eae22">TYPE_FUTURE</link> = 12, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeae40264fa7bcc3bc4091d70ddd42bd542">TYPE_FUNCTION</link> = 13, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea174c14bf485cb83d7bb06493dc9c4eef">TYPE_NULL</link> = 14, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeae3c05d01e5713b8e32e46fb33c279e62">TYPE_CLASS</link> = 15, 
+
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea43aef6302e2b8ee4efdd9ca87636d7c8">TYPE_OBJECT</link> = 16, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea616b31034d047757e1c557b7dbd0f63f">TYPE_SIZE</link>, 
+<link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeafeec3d92b10ebeaa68bbb56e4d08691c">TYPE_INVALID</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>const REFLECT_API char * <link linkend="_reflect__type__id_8h_1a20c74beaf5431ebfa2767a1e537be21f">type_id_name</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a519d07501fb589ea0570fa4df20f9333">type_id_boolean</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1ab280e1aba12fab895a28ac1ac6b81c9d">type_id_char</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1ae3bed631492421ecc855b2c18aab5ebe">type_id_integer</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a14d796fa6e1f318f817223e58251872f">type_id_decimal</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1aca0570987b53ecfdf6b0377d4ea7059c">type_id_string</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a88072fb199a034f1baa58fe70d2e653b">type_id_buffer</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1aa3d7117c366bc6a799489b02c0e8ee03">type_id_array</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1ac5a3619e7125685a5f902bd96de1f119">type_id_map</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a42604e0515d0e9338dbf481e5646e78a">type_id_ptr</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a4f603ae6633c5ecdfdf5fed6c78e267c">type_id_future</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a4c5a9df79f792dd718ff8fd5068bd66f">type_id_function</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a5c0cc84d028d219ff2a5a566919cfd93">type_id_null</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a0c7710b09d98a37d7f88ce1e6557c741">type_id_class</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a05f4a4aeedcdb1df98b0e58bd1b4bb0b">type_id_object</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__type__id_8h_1a68be2eac98b9db19a21d4f2d71e56659">type_id_invalid</link> (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950"/>    <section>
+    <title>type_id</title>
+<indexterm><primary>type_id</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id</secondary></indexterm>
+<para><computeroutput>typedef int <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link></computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaae"/>    <section>
+    <title>type_primitive_id</title>
+<indexterm><primary>type_primitive_id</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_primitive_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaae">type_primitive_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TYPE_BOOL</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_BOOL</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea3e0f738756c5205d71c69d955603f46c"/>TYPE_BOOL</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_CHAR</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_CHAR</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea2c8735de6cf799483eefed0e90a386f5"/>TYPE_CHAR</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_SHORT</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_SHORT</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea054c36101e4cd86983d1683871e65dd1"/>TYPE_SHORT</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_INT</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_INT</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea4fcd4421533bb21c827865bdbac4fef9"/>TYPE_INT</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_LONG</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_LONG</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea4ae533852f8003c3e6e568a79cc35388"/>TYPE_LONG</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_FLOAT</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_FLOAT</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea19a0a402d33a2e049e91ea9e37e90c2f"/>TYPE_FLOAT</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_DOUBLE</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_DOUBLE</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea019d94f7c571e36215cc1a41e825de0c"/>TYPE_DOUBLE</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_STRING</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_STRING</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeaddb4be6b1cc25112defabef75f73427a"/>TYPE_STRING</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_BUFFER</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_BUFFER</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea723ecdbb4295e88f08e7594fa8f1afac"/>TYPE_BUFFER</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_ARRAY</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_ARRAY</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaead189c0a53681ec74eeea1f56d08d741f"/>TYPE_ARRAY</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_MAP</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_MAP</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaead2aa4ac68ee62f30544d0f7c9d16a027"/>TYPE_MAP</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_PTR</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_PTR</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea311715f465e358409d513be004f82b2f"/>TYPE_PTR</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_FUTURE</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_FUTURE</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea3db131537bcaa214a88f6013458eae22"/>TYPE_FUTURE</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_FUNCTION</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_FUNCTION</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeae40264fa7bcc3bc4091d70ddd42bd542"/>TYPE_FUNCTION</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_NULL</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_NULL</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea174c14bf485cb83d7bb06493dc9c4eef"/>TYPE_NULL</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_CLASS</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_CLASS</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeae3c05d01e5713b8e32e46fb33c279e62"/>TYPE_CLASS</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_OBJECT</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_OBJECT</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea43aef6302e2b8ee4efdd9ca87636d7c8"/>TYPE_OBJECT</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_SIZE</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_SIZE</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaea616b31034d047757e1c557b7dbd0f63f"/>TYPE_SIZE</entry><entry></entry></row><row><entry><indexterm><primary>TYPE_INVALID</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>TYPE_INVALID</secondary></indexterm>
+<anchor xml:id="_reflect__type__id_8h_1aac3b36ca5262794cb8accfef6a2bcaaeafeec3d92b10ebeaa68bbb56e4d08691c"/>TYPE_INVALID</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__type__id_8h_1a20c74beaf5431ebfa2767a1e537be21f"/>    <section>
+    <title>type_id_name()</title>
+<indexterm><primary>type_id_name</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_name</secondary></indexterm>
+<para><computeroutput>const REFLECT_API char* type_id_name (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Obtain a human readable form of the type id @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be converted into string</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>String representing a readable name for @id </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a519d07501fb589ea0570fa4df20f9333"/>    <section>
+    <title>type_id_boolean()</title>
+<indexterm><primary>type_id_boolean</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_boolean</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_boolean (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is boolean value (bool) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is integer, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1ab280e1aba12fab895a28ac1ac6b81c9d"/>    <section>
+    <title>type_id_char()</title>
+<indexterm><primary>type_id_char</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_char</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_char (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is char value (char) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is char, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1ae3bed631492421ecc855b2c18aab5ebe"/>    <section>
+    <title>type_id_integer()</title>
+<indexterm><primary>type_id_integer</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_integer</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_integer (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is integer value (bool, char, short, int, long) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is integer, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a14d796fa6e1f318f817223e58251872f"/>    <section>
+    <title>type_id_decimal()</title>
+<indexterm><primary>type_id_decimal</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_decimal</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_decimal (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is decimal value (float, double) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is decimal, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1aca0570987b53ecfdf6b0377d4ea7059c"/>    <section>
+    <title>type_id_string()</title>
+<indexterm><primary>type_id_string</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_string</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_string (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is string value (char *) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is string, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a88072fb199a034f1baa58fe70d2e653b"/>    <section>
+    <title>type_id_buffer()</title>
+<indexterm><primary>type_id_buffer</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_buffer</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_buffer (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is buffer value (void *) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is buffer, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1aa3d7117c366bc6a799489b02c0e8ee03"/>    <section>
+    <title>type_id_array()</title>
+<indexterm><primary>type_id_array</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_array</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_array (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is array of values (value *) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is array, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1ac5a3619e7125685a5f902bd96de1f119"/>    <section>
+    <title>type_id_map()</title>
+<indexterm><primary>type_id_map</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_map</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_map (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is map of values (string -&gt; value) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is map, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a42604e0515d0e9338dbf481e5646e78a"/>    <section>
+    <title>type_id_ptr()</title>
+<indexterm><primary>type_id_ptr</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_ptr</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_ptr (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is pointer value (void *) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is pointer, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a4f603ae6633c5ecdfdf5fed6c78e267c"/>    <section>
+    <title>type_id_future()</title>
+<indexterm><primary>type_id_future</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_future</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_future (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is future value (future) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is future, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a4c5a9df79f792dd718ff8fd5068bd66f"/>    <section>
+    <title>type_id_function()</title>
+<indexterm><primary>type_id_function</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_function</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_function (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is function value (function) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is function, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a5c0cc84d028d219ff2a5a566919cfd93"/>    <section>
+    <title>type_id_null()</title>
+<indexterm><primary>type_id_null</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_null</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_null (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is pointer value NULL. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is null, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a0c7710b09d98a37d7f88ce1e6557c741"/>    <section>
+    <title>type_id_class()</title>
+<indexterm><primary>type_id_class</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_class</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_class (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is class value (class) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is class, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a05f4a4aeedcdb1df98b0e58bd1b4bb0b"/>    <section>
+    <title>type_id_object()</title>
+<indexterm><primary>type_id_object</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_object</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_object (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is object value (object) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is object, different from zero otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__type__id_8h_1a68be2eac98b9db19a21d4f2d71e56659"/>    <section>
+    <title>type_id_invalid()</title>
+<indexterm><primary>type_id_invalid</primary><secondary>reflect_type_id.h</secondary></indexterm>
+<indexterm><primary>reflect_type_id.h</primary><secondary>type_id_invalid</secondary></indexterm>
+<para><computeroutput>REFLECT_API int type_id_invalid (<link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Check if type id is invalid. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type id to be checked</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero if type is invalid, different from zero otherwhise </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

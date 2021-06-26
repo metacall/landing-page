@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__preprocessor_8h">
+<title>log_preprocessor.h File Reference</title>
+<indexterm><primary>log_preprocessor.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;preprocessor/preprocessor_arguments.h&gt;
+#include &lt;preprocessor/preprocessor_if.h&gt;
+</programlisting>Include dependency graph for log_preprocessor.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__preprocessor_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__preprocessor_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_log__preprocessor_8h_1ac4202a88f4a0df2f3b80fb3d5acf695a">LOG_PREPROCESSOR_LINE</link>   ((size_t)__LINE__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log__preprocessor_8h_1a1048d0fda7cab4c7376311257da9f5f2">log_configure</link>(name, ...)   <link linkend="_log_8h_1a3bbe4b78b618932e6f0b73cce1e80e7c">log_configure_impl</link>(name, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), __VA_ARGS__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_log__preprocessor_8h_1acd881977fd7c7e2d7b6cbef677084348">log_write</link>(name,  level,  message, ...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_log__preprocessor_8h_1ac4202a88f4a0df2f3b80fb3d5acf695a"/>    <section>
+    <title>LOG_PREPROCESSOR_LINE</title>
+<indexterm><primary>LOG_PREPROCESSOR_LINE</primary><secondary>log_preprocessor.h</secondary></indexterm>
+<indexterm><primary>log_preprocessor.h</primary><secondary>LOG_PREPROCESSOR_LINE</secondary></indexterm>
+<para><computeroutput>#define LOG_PREPROCESSOR_LINE   ((size_t)__LINE__)</computeroutput></para>    </section><anchor xml:id="_log__preprocessor_8h_1a1048d0fda7cab4c7376311257da9f5f2"/>    <section>
+    <title>log_configure</title>
+<indexterm><primary>log_configure</primary><secondary>log_preprocessor.h</secondary></indexterm>
+<indexterm><primary>log_preprocessor.h</primary><secondary>log_configure</secondary></indexterm>
+<para><computeroutput>#define log_configure( name,  ...)   <link linkend="_log_8h_1a3bbe4b78b618932e6f0b73cce1e80e7c">log_configure_impl</link>(name, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), __VA_ARGS__)</computeroutput></para>    </section><anchor xml:id="_log__preprocessor_8h_1acd881977fd7c7e2d7b6cbef677084348"/>    <section>
+    <title>log_write</title>
+<indexterm><primary>log_write</primary><secondary>log_preprocessor.h</secondary></indexterm>
+<indexterm><primary>log_preprocessor.h</primary><secondary>log_write</secondary></indexterm>
+<para><computeroutput>#define log_write( name,  level,  message,  ...)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_preprocessor__if_8h_1aec1ff7c94271c1198ca5a2c2d3ff75a9">PREPROCESSOR_IF</link>(<link linkend="_preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949">PREPROCESSOR_ARGS_EMPTY</link>(__VA_ARGS__),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_log_8h_1a406197a270523baeb61bf60e5a2a7ed7">log_write_impl</link>(name,&#32;<link linkend="_log__preprocessor_8h_1ac4202a88f4a0df2f3b80fb3d5acf695a">LOG_PREPROCESSOR_LINE</link>,&#32;log_record_function(),&#32;__FILE__,&#32;level,&#32;message),&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_log_8h_1a97b582a8278d4a7e95476b0ad55dceda">log_write_impl_va</link>(name,&#32;<link linkend="_log__preprocessor_8h_1ac4202a88f4a0df2f3b80fb3d5acf695a">LOG_PREPROCESSOR_LINE</link>,&#32;log_record_function(),&#32;__FILE__,&#32;level,&#32;message,&#32;__VA_ARGS__))
+</programlisting></section>
+</section>
+</section>

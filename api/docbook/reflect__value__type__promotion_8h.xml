@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__value__type__promotion_8h">
+<title>reflect_value_type_promotion.h File Reference</title>
+<indexterm><primary>reflect_value_type_promotion.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_type_id.h&gt;
+#include &lt;reflect/reflect_value.h&gt;
+</programlisting>Include dependency graph for reflect_value_type_promotion.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__value__type__promotion_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__value__type__promotion_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type__promotion_8h_1a543bee6c54c94a130e0b6959372ab869">value_type_promotion_integer</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type__promotion_8h_1afed9bead222cdaecdf7b1dfefca0e01f">value_type_promotion_decimal</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__value__type__promotion_8h_1a543bee6c54c94a130e0b6959372ab869"/>    <section>
+    <title>value_type_promotion_integer()</title>
+<indexterm><primary>value_type_promotion_integer</primary><secondary>reflect_value_type_promotion.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type_promotion.h</primary><secondary>value_type_promotion_integer</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_type_promotion_integer (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Promotes a integer value @v to new type @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>New type id of value to be promoted</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Promoted value if a valid promotion, or @v if value is already promoted, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type__promotion_8h_1afed9bead222cdaecdf7b1dfefca0e01f"/>    <section>
+    <title>value_type_promotion_decimal()</title>
+<indexterm><primary>value_type_promotion_decimal</primary><secondary>reflect_value_type_promotion.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type_promotion.h</primary><secondary>value_type_promotion_decimal</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_type_promotion_decimal (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Promotes a decimal value @v to new type @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>New type id of value to be promoted</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Promoted value if a valid promotion, or @v if value is already promoted, null otherwhise </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,346 @@
+\doxysection{filesystem.\+h File Reference}
+\label{filesystem_8h}\index{filesystem.h@{filesystem.h}}
+{\ttfamily \#include $<$filesystem/filesystem\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+set.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+vector.\+h$>$}\newline
+Include dependency graph for filesystem.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{filesystem_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct file\+\_\+type $\ast$ \textbf{ file}
+\item 
+typedef struct directory\+\_\+type $\ast$ \textbf{ directory}
+\item 
+typedef struct filesystem\+\_\+type $\ast$ \textbf{ filesystem}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ filesystem\+\_\+flags\+\_\+enumeration} \{ \newline
+\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+N\+O\+NE} = 0x00, 
+\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A\+ZY} = 0x01 $<$$<$ 0x00, 
+\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+A\+T\+C\+H\+\_\+\+S\+Y\+NC} = 0x01 $<$$<$ 0x01, 
+\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+R\+E\+A\+D\+A\+B\+LE} = 0x01 $<$$<$ 0x02, 
+\newline
+\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+R\+I\+T\+E\+A\+B\+LE} = 0x01 $<$$<$ 0x03
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ filesystem} \textbf{ filesystem\+\_\+create} (const char $\ast$root, filesystem\+\_\+flags flags)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+add\+\_\+file} (\textbf{ filesystem} fs, const char $\ast$file\+\_\+path)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+add\+\_\+directory} (\textbf{ filesystem} fs, const char $\ast$directory\+\_\+path)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+remove\+\_\+file} (\textbf{ filesystem} fs, const char $\ast$file\+\_\+path)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+remove\+\_\+directory} (\textbf{ filesystem} fs, const char $\ast$directory\+\_\+path)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+list\+\_\+files} (\textbf{ filesystem} fs, \textbf{ vector} files)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+list\+\_\+files\+\_\+by\+\_\+extension} (\textbf{ filesystem} fs, \textbf{ set} files)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+list\+\_\+directories} (\textbf{ filesystem} fs, \textbf{ vector} directories)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+file} (\textbf{ filesystem} fs, \textbf{ file} f, \textbf{ vector} path)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+directory} (\textbf{ filesystem} fs, \textbf{ directory} d, \textbf{ vector} path)
+\item 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void \textbf{ filesystem\+\_\+destroy} (\textbf{ filesystem} fs)
+\item 
+const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char $\ast$ \textbf{ filesystem\+\_\+print\+\_\+info} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{filesystem_8h_a1fea2a4514fa0a01c4fa0fe2d0f014de}} 
+\index{filesystem.h@{filesystem.h}!file@{file}}
+\index{file@{file}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{file}
+{\footnotesize\ttfamily typedef struct file\+\_\+type$\ast$ \textbf{ file}}
+
+\mbox{\label{filesystem_8h_a2391b569a0e8ef3688d7ae5845ff1bc4}} 
+\index{filesystem.h@{filesystem.h}!directory@{directory}}
+\index{directory@{directory}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{directory}
+{\footnotesize\ttfamily typedef struct directory\+\_\+type$\ast$ \textbf{ directory}}
+
+\mbox{\label{filesystem_8h_a81965a0147f5428b8d298f395157f49b}} 
+\index{filesystem.h@{filesystem.h}!filesystem@{filesystem}}
+\index{filesystem@{filesystem}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem}
+{\footnotesize\ttfamily typedef struct filesystem\+\_\+type$\ast$ \textbf{ filesystem}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cc}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_flags\_enumeration@{filesystem\_flags\_enumeration}}
+\index{filesystem\_flags\_enumeration@{filesystem\_flags\_enumeration}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_flags\_enumeration}
+{\footnotesize\ttfamily enum \textbf{ filesystem\+\_\+flags\+\_\+enumeration}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_NONE@{FILESYSTEM\_FLAGS\_NONE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_NONE@{FILESYSTEM\_FLAGS\_NONE}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca5b7524837d6643f9725091842d013520}} 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_LOAD\_LAZY@{FILESYSTEM\_FLAGS\_LOAD\_LAZY}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_LOAD\_LAZY@{FILESYSTEM\_FLAGS\_LOAD\_LAZY}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92ccaca618ec1fd26cf4f747ac04be6ca3589}} 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A\+ZY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_WATCH\_SYNC@{FILESYSTEM\_FLAGS\_WATCH\_SYNC}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_WATCH\_SYNC@{FILESYSTEM\_FLAGS\_WATCH\_SYNC}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca2cd5b792a29402c7bc2f980cd3e183d1}} 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+A\+T\+C\+H\+\_\+\+S\+Y\+NC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_READABLE@{FILESYSTEM\_FLAGS\_READABLE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_READABLE@{FILESYSTEM\_FLAGS\_READABLE}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca6f83a80620d031da43eaa0e3160c0156}} 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+R\+E\+A\+D\+A\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_WRITEABLE@{FILESYSTEM\_FLAGS\_WRITEABLE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_WRITEABLE@{FILESYSTEM\_FLAGS\_WRITEABLE}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca33d09e1cac2bf4ea77ca65184d740778}} 
+F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+R\+I\+T\+E\+A\+B\+LE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{filesystem_8h_ab013cf437b8dd8b6c3029ddf68fd8dd2}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_create@{filesystem\_create}}
+\index{filesystem\_create@{filesystem\_create}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_create()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ filesystem} filesystem\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{root,  }\item[{filesystem\+\_\+flags}]{flags }\end{DoxyParamCaption})}
+
+
+
+Creates a new file system based on a @root path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em root} & String path where file system will be virtually mounted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle to file system if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_ab04b8eb7b70e7a906f56acb13c376343}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_add\_file@{filesystem\_add\_file}}
+\index{filesystem\_add\_file@{filesystem\_add\_file}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_add\_file()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+add\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Add a file into the file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+path} & Absolute path to the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_a6964dfeb817f5cd400556e9678a93362}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_add\_directory@{filesystem\_add\_directory}}
+\index{filesystem\_add\_directory@{filesystem\_add\_directory}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_add\_directory()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+add\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Add a directory into the file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ in}}  & {\em directory\+\_\+path} & Absolute path to the directory\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_a271263e0bf36bc664631ce3e2d14cbec}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_remove\_file@{filesystem\_remove\_file}}
+\index{filesystem\_remove\_file@{filesystem\_remove\_file}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_remove\_file()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+remove\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Add a file into the file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+path} & Absolute path to the file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_a707fdba44e6f96d0473449ff99edf523}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_remove\_directory@{filesystem\_remove\_directory}}
+\index{filesystem\_remove\_directory@{filesystem\_remove\_directory}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_remove\_directory()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+remove\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Remove a directory from the file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ in}}  & {\em directory\+\_\+path} & Absolute path to the directory\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_a1a45af96aa3c4d270d076a0fdded8bf9}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_list\_files@{filesystem\_list\_files}}
+\index{filesystem\_list\_files@{filesystem\_list\_files}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_list\_files()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+list\+\_\+files (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ vector}}]{files }\end{DoxyParamCaption})}
+
+
+
+List all files contained in a file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ out}}  & {\em files} & Vector containing all files inside the file system\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_acbace5df0b7256ac18f0b1ca8b20e2ee}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_list\_files\_by\_extension@{filesystem\_list\_files\_by\_extension}}
+\index{filesystem\_list\_files\_by\_extension@{filesystem\_list\_files\_by\_extension}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_list\_files\_by\_extension()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+list\+\_\+files\+\_\+by\+\_\+extension (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ set}}]{files }\end{DoxyParamCaption})}
+
+
+
+List all files contained in a file system sorted by extension. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ out}}  & {\em files} & Set containing vectors of files sorted by extension\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_aaa4abaf100ec7d27218cba801de14a11}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_list\_directories@{filesystem\_list\_directories}}
+\index{filesystem\_list\_directories@{filesystem\_list\_directories}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_list\_directories()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+list\+\_\+directories (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ vector}}]{directories }\end{DoxyParamCaption})}
+
+
+
+List all directories contained in a file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ out}}  & {\em directories} & Vector containing all directories inside the file system\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_a5422eb105a55772c70a11188479536ff}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_cannonical\_path\_from\_file@{filesystem\_cannonical\_path\_from\_file}}
+\index{filesystem\_cannonical\_path\_from\_file@{filesystem\_cannonical\_path\_from\_file}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_cannonical\_path\_from\_file()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ file}}]{f,  }\item[{\textbf{ vector}}]{path }\end{DoxyParamCaption})}
+
+
+
+Generates the cannonical path of a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ in}}  & {\em file} & Pointer reference to the file to be cannonicalized\\
+\hline
+\mbox{\texttt{ out}}  & {\em path} & Vector of strings containing the cannonical path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_a56786810f2431c262a1ac561b5e23f34}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_cannonical\_path\_from\_directory@{filesystem\_cannonical\_path\_from\_directory}}
+\index{filesystem\_cannonical\_path\_from\_directory@{filesystem\_cannonical\_path\_from\_directory}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_cannonical\_path\_from\_directory()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ directory}}]{d,  }\item[{\textbf{ vector}}]{path }\end{DoxyParamCaption})}
+
+
+
+Generates the cannonical path of a directory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & A handle to the file system\\
+\hline
+\mbox{\texttt{ in}}  & {\em directory} & Pointer reference to the directory to be cannonicalized\\
+\hline
+\mbox{\texttt{ out}}  & {\em path} & Vector of strings containing the cannonical path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on success, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{filesystem_8h_a696de751ede975d955d6be29ecdbb736}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_destroy@{filesystem\_destroy}}
+\index{filesystem\_destroy@{filesystem\_destroy}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_destroy()}
+{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void filesystem\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs }\end{DoxyParamCaption})}
+
+
+
+Unmounts the virtual file system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fs} & Handle referencing the file system \\
+\hline
+\end{DoxyParams}
+\mbox{\label{filesystem_8h_a1298c6453dadaef5b73efcc3f1d1235a}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_print\_info@{filesystem\_print\_info}}
+\index{filesystem\_print\_info@{filesystem\_print\_info}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_print\_info()}
+{\footnotesize\ttfamily const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char$\ast$ filesystem\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module information. 
+
+\begin{DoxyReturn}{Returns}
+Static string containing module information 
+\end{DoxyReturn}

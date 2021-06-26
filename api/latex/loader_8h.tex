@@ -1,0 +1,251 @@
+\doxysection{loader.\+h File Reference}
+\label{loader_8h}\index{loader.h@{loader.h}}
+{\ttfamily \#include $<$loader/loader\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$loader/loader\+\_\+impl.\+h$>$}\newline
+{\ttfamily \#include $<$loader/loader\+\_\+impl\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$loader/loader\+\_\+naming.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for loader.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{loader_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \textbf{ value}($\ast$ \textbf{ loader\+\_\+register\+\_\+invoke}) (size\+\_\+t, void $\ast$[$\,$], void $\ast$)
+\item 
+typedef void $\ast$ \textbf{ loader\+\_\+data}
+\item 
+typedef struct loader\+\_\+type $\ast$ \textbf{ loader}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader} \textbf{ loader\+\_\+singleton} (void)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+initialization\+\_\+register} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+initialize} (void)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+is\+\_\+initialized} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+register} (const char $\ast$name, \textbf{ loader\+\_\+register\+\_\+invoke} invoke, \textbf{ function} $\ast$func, \textbf{ type\+\_\+id} return\+\_\+type, size\+\_\+t arg\+\_\+size, \textbf{ type\+\_\+id} args\+\_\+type\+\_\+id[$\,$])
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+load\+\_\+path} (const \textbf{ loader\+\_\+naming\+\_\+path} path)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+execution\+\_\+path} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag, const \textbf{ loader\+\_\+naming\+\_\+path} path)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+load\+\_\+from\+\_\+file} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag, const \textbf{ loader\+\_\+naming\+\_\+path} paths[$\,$], size\+\_\+t size, void $\ast$$\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+load\+\_\+from\+\_\+memory} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag, const char $\ast$buffer, size\+\_\+t size, void $\ast$$\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+load\+\_\+from\+\_\+package} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag, const \textbf{ loader\+\_\+naming\+\_\+path} path, void $\ast$$\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+load\+\_\+from\+\_\+configuration} (const \textbf{ loader\+\_\+naming\+\_\+path} path, void $\ast$$\ast$handle, void $\ast$allocator)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl} \textbf{ loader\+\_\+get\+\_\+impl} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+data} \textbf{ loader\+\_\+get} (const char $\ast$name)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void $\ast$ \textbf{ loader\+\_\+get\+\_\+handle} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag, const char $\ast$name)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+set\+\_\+options} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag, void $\ast$options)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void $\ast$ \textbf{ loader\+\_\+get\+\_\+options} (const \textbf{ loader\+\_\+naming\+\_\+tag} tag)
+\item 
+const L\+O\+A\+D\+E\+R\+\_\+\+A\+PI char $\ast$ \textbf{ loader\+\_\+handle\+\_\+id} (void $\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void $\ast$ \textbf{ loader\+\_\+handle\+\_\+export} (void $\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+data} \textbf{ loader\+\_\+handle\+\_\+get} (void $\ast$handle, const char $\ast$name)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ value} \textbf{ loader\+\_\+metadata} (void)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+clear} (void $\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+unload\+\_\+children} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+unload} (void)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+destroy} (void)
+\item 
+const L\+O\+A\+D\+E\+R\+\_\+\+A\+PI char $\ast$ \textbf{ loader\+\_\+print\+\_\+info} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{loader_8h_a0c56e5ef778aefaa4587573667a35945}} 
+\index{loader.h@{loader.h}!loader\_register\_invoke@{loader\_register\_invoke}}
+\index{loader\_register\_invoke@{loader\_register\_invoke}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_register\_invoke}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ loader\+\_\+register\+\_\+invoke) (size\+\_\+t, void $\ast$[$\,$], void $\ast$)}
+
+\mbox{\label{loader_8h_a23baef561ce24e04bc23d02fa16656a6}} 
+\index{loader.h@{loader.h}!loader\_data@{loader\_data}}
+\index{loader\_data@{loader\_data}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_data}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ loader\+\_\+data}}
+
+\mbox{\label{loader_8h_ae460ed5a03319c8ef3c08f3cd7ecc9d5}} 
+\index{loader.h@{loader.h}!loader@{loader}}
+\index{loader@{loader}!loader.h@{loader.h}}
+\doxysubsubsection{loader}
+{\footnotesize\ttfamily typedef struct loader\+\_\+type$\ast$ \textbf{ loader}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{loader_8h_a93d450b68df4ddb9aa57383b6930839c}} 
+\index{loader.h@{loader.h}!loader\_singleton@{loader\_singleton}}
+\index{loader\_singleton@{loader\_singleton}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_singleton()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader} loader\+\_\+singleton (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a7c6926c94ce1b9a7edd78931f081dd5b}} 
+\index{loader.h@{loader.h}!loader\_initialization\_register@{loader\_initialization\_register}}
+\index{loader\_initialization\_register@{loader\_initialization\_register}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_initialization\_register()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+initialization\+\_\+register (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a295fe19eb38401793c7feaa24160f223}} 
+\index{loader.h@{loader.h}!loader\_initialize@{loader\_initialize}}
+\index{loader\_initialize@{loader\_initialize}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_initialize()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a7ed3017240e5db05e1323fa97b3da2d1}} 
+\index{loader.h@{loader.h}!loader\_is\_initialized@{loader\_is\_initialized}}
+\index{loader\_is\_initialized@{loader\_is\_initialized}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_is\_initialized()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+is\+\_\+initialized (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a42860cc3bb2c50fac1424579e158a83b}} 
+\index{loader.h@{loader.h}!loader\_register@{loader\_register}}
+\index{loader\_register@{loader\_register}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_register()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+register (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\textbf{ loader\+\_\+register\+\_\+invoke}}]{invoke,  }\item[{\textbf{ function} $\ast$}]{func,  }\item[{\textbf{ type\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{arg\+\_\+size,  }\item[{\textbf{ type\+\_\+id}}]{args\+\_\+type\+\_\+id[$\,$] }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a647d1eec2ce01f45485d35cd69c6eac6}} 
+\index{loader.h@{loader.h}!loader\_load\_path@{loader\_load\_path}}
+\index{loader\_load\_path@{loader\_load\_path}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_load\_path()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+load\+\_\+path (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{path }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a4739ee3ed07e62a6410379b9fed2a7f1}} 
+\index{loader.h@{loader.h}!loader\_execution\_path@{loader\_execution\_path}}
+\index{loader\_execution\_path@{loader\_execution\_path}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_execution\_path()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+execution\+\_\+path (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag,  }\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{path }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a25d7854cec594b64371f17ea60711c77}} 
+\index{loader.h@{loader.h}!loader\_load\_from\_file@{loader\_load\_from\_file}}
+\index{loader\_load\_from\_file@{loader\_load\_from\_file}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_load\_from\_file()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+load\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag,  }\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{paths[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_ac36c522839c545113037a64ce69feedf}} 
+\index{loader.h@{loader.h}!loader\_load\_from\_memory@{loader\_load\_from\_memory}}
+\index{loader\_load\_from\_memory@{loader\_load\_from\_memory}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_load\_from\_memory()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+load\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_aba20f1b7bf897e6531a7580fadf66a72}} 
+\index{loader.h@{loader.h}!loader\_load\_from\_package@{loader\_load\_from\_package}}
+\index{loader\_load\_from\_package@{loader\_load\_from\_package}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_load\_from\_package()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+load\+\_\+from\+\_\+package (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag,  }\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{path,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a16d3a4792b9f55b4a22bf662832c8e03}} 
+\index{loader.h@{loader.h}!loader\_load\_from\_configuration@{loader\_load\_from\_configuration}}
+\index{loader\_load\_from\_configuration@{loader\_load\_from\_configuration}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_load\_from\_configuration()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+load\+\_\+from\+\_\+configuration (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{path,  }\item[{void $\ast$$\ast$}]{handle,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a2f50c4778d1534eace279c7b182e2dc3}} 
+\index{loader.h@{loader.h}!loader\_get\_impl@{loader\_get\_impl}}
+\index{loader\_get\_impl@{loader\_get\_impl}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_get\_impl()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl} loader\+\_\+get\+\_\+impl (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_ae325c8a6eb9cc688d3f8b995fe5eeef1}} 
+\index{loader.h@{loader.h}!loader\_get@{loader\_get}}
+\index{loader\_get@{loader\_get}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_get()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+data} loader\+\_\+get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a7ebee7a40e35b8286d9bfcaa4eaaf08c}} 
+\index{loader.h@{loader.h}!loader\_get\_handle@{loader\_get\_handle}}
+\index{loader\_get\_handle@{loader\_get\_handle}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_get\_handle()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void$\ast$ loader\+\_\+get\+\_\+handle (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_aff80b88574c4ecd9bd5bcb4b549c1059}} 
+\index{loader.h@{loader.h}!loader\_set\_options@{loader\_set\_options}}
+\index{loader\_set\_options@{loader\_set\_options}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_set\_options()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+set\+\_\+options (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag,  }\item[{void $\ast$}]{options }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a057eb44bd3132e88416f1a90e4b7b5b2}} 
+\index{loader.h@{loader.h}!loader\_get\_options@{loader\_get\_options}}
+\index{loader\_get\_options@{loader\_get\_options}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_get\_options()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void$\ast$ loader\+\_\+get\+\_\+options (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a4bad4c3d55fc7534694b049194bbcd90}} 
+\index{loader.h@{loader.h}!loader\_handle\_id@{loader\_handle\_id}}
+\index{loader\_handle\_id@{loader\_handle\_id}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_handle\_id()}
+{\footnotesize\ttfamily const L\+O\+A\+D\+E\+R\+\_\+\+A\+PI char$\ast$ loader\+\_\+handle\+\_\+id (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a3dd119a750e2f56d2198270bb29ec0ff}} 
+\index{loader.h@{loader.h}!loader\_handle\_export@{loader\_handle\_export}}
+\index{loader\_handle\_export@{loader\_handle\_export}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_handle\_export()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void$\ast$ loader\+\_\+handle\+\_\+export (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a945db9c2048ac8d35c9b9e9d028c83de}} 
+\index{loader.h@{loader.h}!loader\_handle\_get@{loader\_handle\_get}}
+\index{loader\_handle\_get@{loader\_handle\_get}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_handle\_get()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+data} loader\+\_\+handle\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_af0267882166a3ab6e011e9e9c4c8826a}} 
+\index{loader.h@{loader.h}!loader\_metadata@{loader\_metadata}}
+\index{loader\_metadata@{loader\_metadata}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_metadata()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ value} loader\+\_\+metadata (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a50281bf1571a363c0b9b198c4e3e3a6e}} 
+\index{loader.h@{loader.h}!loader\_clear@{loader\_clear}}
+\index{loader\_clear@{loader\_clear}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_clear()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+clear (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_aae52d09e532fd966f933d4573ee97fbf}} 
+\index{loader.h@{loader.h}!loader\_unload\_children@{loader\_unload\_children}}
+\index{loader\_unload\_children@{loader\_unload\_children}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_unload\_children()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+unload\+\_\+children (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_ac4f17dddef9935d0b1b727271f5e2308}} 
+\index{loader.h@{loader.h}!loader\_unload@{loader\_unload}}
+\index{loader\_unload@{loader\_unload}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_unload()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+unload (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a34fe0f770a93b0213274d076ed655216}} 
+\index{loader.h@{loader.h}!loader\_destroy@{loader\_destroy}}
+\index{loader\_destroy@{loader\_destroy}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_destroy()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a5e4b95a22a0fc84007b5ab97e3a8efdb}} 
+\index{loader.h@{loader.h}!loader\_print\_info@{loader\_print\_info}}
+\index{loader\_print\_info@{loader\_print\_info}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_print\_info()}
+{\footnotesize\ttfamily const L\+O\+A\+D\+E\+R\+\_\+\+A\+PI char$\ast$ loader\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

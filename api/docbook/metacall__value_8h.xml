@@ -1,0 +1,3155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall__value_8h">
+<title>metacall_value.h File Reference</title>
+<indexterm><primary>metacall_value.h</primary></indexterm>
+<programlisting>#include &lt;metacall/metacall_api.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for metacall_value.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__value_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__value_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link>   unsigned char</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> { 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daf1ed7cdddf10345db76d2e8b73a850f1">METACALL_BOOL</link> = 0, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daf6e9581ae5631d2652a537bee5af5c1a">METACALL_CHAR</link> = 1, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da1948334102ccd6a6e290013b763cceb3">METACALL_SHORT</link> = 2, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dae4e777421eadce7ec1ce67ace7bbbbf7">METACALL_INT</link> = 3, 
+
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dad85bf5663269cb2888c9bfe1122d8543">METACALL_LONG</link> = 4, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da93d58d60961738ec4660caa4e5c4be93">METACALL_FLOAT</link> = 5, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da85d4639f77c06eeefa84a580a0941bcb">METACALL_DOUBLE</link> = 6, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daf59cd94d876a398fe6409fb0c8144426">METACALL_STRING</link> = 7, 
+
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da88c93c6ae8e4583eee58214d03653e6a">METACALL_BUFFER</link> = 8, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daaa4fc2878287b6df005db5169f6eab98">METACALL_ARRAY</link> = 9, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dac329d13cc2b8ccbd454f2a2bb3dea879">METACALL_MAP</link> = 10, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da147232ca7f32a6c8814055e241bc2bca">METACALL_PTR</link> = 11, 
+
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dabdac5ec837a51d2c205ecd8604115d82">METACALL_FUTURE</link> = 12, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da329cf92d5a2f59884bcf4a7c8e8e3e2a">METACALL_FUNCTION</link> = 13, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da6b806e6b61f3bcebaf4bbe7ae5b92648">METACALL_NULL</link> = 14, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da739dddbb88729e1b5bf407e38c3152df">METACALL_CLASS</link> = 15, 
+
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dac9e5a1a2942a283bd955b894c906259d">METACALL_OBJECT</link> = 16, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dacb39937884a2344522421bd1cf21f2e5">METACALL_SIZE</link>, 
+<link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da12e465aff45a6098cb0402d16ff7634a">METACALL_INVALID</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a45b44d263ff22525f0dfbf8f231cbe3b">metacall_value_create_bool</link> (<link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a1bb0b8962324b56efbe6507b0f6059e0">metacall_value_create_char</link> (char c)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a5c3e6d9ec081bf4d9e529315d487d880">metacall_value_create_short</link> (short s)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a2f9276cc43e790ff6b11676f75387697">metacall_value_create_int</link> (int i)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a23d27061663c3bdb1739764049d34a54">metacall_value_create_long</link> (long l)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ab81f77c2f3afd42ee90dc662667083ae">metacall_value_create_float</link> (float f)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1aeb4f3bceb1c5fbaf0907b77ddb4eaf54">metacall_value_create_double</link> (double d)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a25dd31dc304ede5d1fb1d634e1c73813">metacall_value_create_string</link> (const char *str, size_t length)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a9041629e37f7713b0a84bf8ab39ff80c">metacall_value_create_buffer</link> (const void *buffer, size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a4128bdc47c985c39ecbbbf038ebafba8">metacall_value_create_array</link> (const void *values[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a2beb1da0d657f001433a9a407d6366ee">metacall_value_create_map</link> (const void *tuples[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a6862e70d8de61d1c8e2e3f5f99d440a5">metacall_value_create_ptr</link> (const void *ptr)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a3845cedd950e060d7484d0026a9788ea">metacall_value_create_future</link> (void *f)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1aaa343d4d8fd0a1658bb7d342f97d1988">metacall_value_create_function</link> (void *f)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1aca9f1f1342ec81e4459f51f4c2fa2898">metacall_value_create_function_closure</link> (void *f, void *c)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ad4e2dd190da30deed2c633d089659841">metacall_value_create_null</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1aa354cdc11462daeebc943ae2c9d5b19c">metacall_value_create_class</link> (void *c)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ae17566399a49d2cbcb475d82785d5784">metacall_value_create_object</link> (void *o)</para>
+</listitem>
+            <listitem><para>METACALL_API size_t <link linkend="_metacall__value_8h_1a9082ce571ae07afffafdaadb5f491bea">metacall_value_size</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API size_t <link linkend="_metacall__value_8h_1a6fd4a52154e8f47a1795087e87682402">metacall_value_count</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> <link linkend="_metacall__value_8h_1a2638568cb16a6e2af896c5117f4583d1">metacall_value_id</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1aab341c484fb53670d74dc4d83c46d087">metacall_value_copy</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall__value_8h_1aaee82fc2175e42f9d7ba7ba6bb6932c5">metacall_value_move</link> (void *src, void *dest)</para>
+</listitem>
+            <listitem><para>METACALL_API <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> <link linkend="_metacall__value_8h_1a44462c581e795e19717be8ba59d18d54">metacall_value_to_bool</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API char <link linkend="_metacall__value_8h_1a649f3838667db1acedec1d3718d9a963">metacall_value_to_char</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API short <link linkend="_metacall__value_8h_1a8dfeaff12f2b7184868b6baf7857cb8e">metacall_value_to_short</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall__value_8h_1afb2d5f17cc3fd938cbda60f1ba958005">metacall_value_to_int</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API long <link linkend="_metacall__value_8h_1a10bba9906d6a4eb1f66e5df66b7eacf8">metacall_value_to_long</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API float <link linkend="_metacall__value_8h_1a4858c8c4029961b1c7ac341adc71c29a">metacall_value_to_float</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API double <link linkend="_metacall__value_8h_1afda80c2e30da04650c2bdc02f69f6b4d">metacall_value_to_double</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API char * <link linkend="_metacall__value_8h_1a28751668dd118354642834b221e06888">metacall_value_to_string</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1afca305bd3361f24162dbc6e3b5c9df72">metacall_value_to_buffer</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void ** <link linkend="_metacall__value_8h_1a737470aa802a5ed4d798b3f2deb14395">metacall_value_to_array</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void ** <link linkend="_metacall__value_8h_1aa4a788e12ee1cc5b82470b92858e892c">metacall_value_to_map</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a91408213de351f7d7edf2f007ba70bf7">metacall_value_to_ptr</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ae4a80a4df26c9ecb79e513b2cd086338">metacall_value_to_future</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a6d3dfd990c32fec2e105284bfba777cf">metacall_value_to_function</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a7dbc4343e6ffeb5a8d3b57b3ac366f09">metacall_value_to_null</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a61ef3dc638c1dc6057020c9416a5a320">metacall_value_to_class</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a259e938167701e245d5d77e7c696b679">metacall_value_to_object</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a3d4cc16b27769288accd67187c5a3baf">metacall_value_from_bool</link> (void *v, <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1aef00ad2af4d2ba1981e27d493dfbaf6b">metacall_value_from_char</link> (void *v, char c)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a3ff58c02042e7593eb1d2a3c6c83311f">metacall_value_from_short</link> (void *v, short s)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a1a773f11c7c6609c80575cde7ea568ad">metacall_value_from_int</link> (void *v, int i)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a679120509747a6f994695c68e9f5229f">metacall_value_from_long</link> (void *v, long l)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a5e23e67a26546f7d43126fe32b69889a">metacall_value_from_float</link> (void *v, float f)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ac343bdea2db4d805255fd9a73c256f38">metacall_value_from_double</link> (void *v, double d)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ad9e41dca2659e74184359817fd8252db">metacall_value_from_string</link> (void *v, const char *str, size_t length)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a968633f1ee578fcf88789cf846c5126a">metacall_value_from_buffer</link> (void *v, const void *buffer, size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ac8c5e6f3245ce8235b0d13eb4ef2888e">metacall_value_from_array</link> (void *v, const void *values[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1adc61d4d19be29fdcf70d4e3284d6dedf">metacall_value_from_map</link> (void *v, const void *tuples[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a4b7a109c7cf63b937249e1342ac6f654">metacall_value_from_ptr</link> (void *v, const void *ptr)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1abb974bed7ddaa97880cbe7198a9d32fa">metacall_value_from_future</link> (void *v, void *f)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a8020261ff5293006dc450772f7dfbfd6">metacall_value_from_function</link> (void *v, void *f)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a2fdc79ca9786293f2d9b1d91b2740851">metacall_value_from_null</link> (void *v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1ae3ef2331c52bf1a27f84228b59bedb69">metacall_value_from_class</link> (void *v, void *c)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a51e678472b1244e9c761b8855fe596dc">metacall_value_from_object</link> (void *v, void *o)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a039e12d103757050bf6d533a1676a0c2">metacall_value_cast</link> (void *v, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> id)</para>
+</listitem>
+            <listitem><para>METACALL_API <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> <link linkend="_metacall__value_8h_1a5cbe3be84788ca24f8f2d63418a787e1">metacall_value_cast_bool</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API char <link linkend="_metacall__value_8h_1a61b7edbdf1dce20e342b6245c02bf9b9">metacall_value_cast_char</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API short <link linkend="_metacall__value_8h_1a50de88e8919f108e922741720d35a732">metacall_value_cast_short</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall__value_8h_1a6d8d1269a465b428561b8c79c739e579">metacall_value_cast_int</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API long <link linkend="_metacall__value_8h_1a1fbbd7b9a350cc60d74e6ba4a9871289">metacall_value_cast_long</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API float <link linkend="_metacall__value_8h_1aaf2783171b3c3eeec0120577257f717e">metacall_value_cast_float</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API double <link linkend="_metacall__value_8h_1a537d9af0da5be7cfb975aed99aa1303f">metacall_value_cast_double</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API char * <link linkend="_metacall__value_8h_1af16e83924c61fb79b458c287ff976773">metacall_value_cast_string</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a8dbab928a9fa8107b561515a4374d69e">metacall_value_cast_buffer</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void ** <link linkend="_metacall__value_8h_1a5573d502e127580e1509eb4eceec5e32">metacall_value_cast_array</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a824d7c75b9ad0217086ce21dee4af067">metacall_value_cast_map</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a4600b6fffd9af1aba6237c57b3af57b5">metacall_value_cast_ptr</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a7b8519fed5dcd787faad32b78acd4500">metacall_value_cast_future</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a134e434ff538d4fbe68b57f5724b01be">metacall_value_cast_function</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a18dfc06126de47d9eea60fc1b5d3144f">metacall_value_cast_null</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1aeee04f68d085d94e87085f1c1d5124f0">metacall_value_cast_class</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__value_8h_1a9758b8fe022d4bec41da0a6e2589567d">metacall_value_cast_object</link> (void **v)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall__value_8h_1a200101b204c58a5a99342af65b6026bd">metacall_value_destroy</link> (void *v)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6"/>    <section>
+    <title>boolean</title>
+<indexterm><primary>boolean</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>boolean</secondary></indexterm>
+<para><computeroutput>#define boolean   unsigned char</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d"/>    <section>
+    <title>metacall_value_id</title>
+<indexterm><primary>metacall_value_id</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>METACALL_BOOL</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_BOOL</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daf1ed7cdddf10345db76d2e8b73a850f1"/>METACALL_BOOL</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_CHAR</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_CHAR</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daf6e9581ae5631d2652a537bee5af5c1a"/>METACALL_CHAR</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_SHORT</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_SHORT</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da1948334102ccd6a6e290013b763cceb3"/>METACALL_SHORT</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_INT</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_INT</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dae4e777421eadce7ec1ce67ace7bbbbf7"/>METACALL_INT</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_LONG</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_LONG</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dad85bf5663269cb2888c9bfe1122d8543"/>METACALL_LONG</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_FLOAT</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_FLOAT</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da93d58d60961738ec4660caa4e5c4be93"/>METACALL_FLOAT</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_DOUBLE</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_DOUBLE</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da85d4639f77c06eeefa84a580a0941bcb"/>METACALL_DOUBLE</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_STRING</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_STRING</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daf59cd94d876a398fe6409fb0c8144426"/>METACALL_STRING</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_BUFFER</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_BUFFER</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da88c93c6ae8e4583eee58214d03653e6a"/>METACALL_BUFFER</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_ARRAY</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_ARRAY</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34daaa4fc2878287b6df005db5169f6eab98"/>METACALL_ARRAY</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_MAP</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_MAP</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dac329d13cc2b8ccbd454f2a2bb3dea879"/>METACALL_MAP</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_PTR</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_PTR</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da147232ca7f32a6c8814055e241bc2bca"/>METACALL_PTR</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_FUTURE</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_FUTURE</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dabdac5ec837a51d2c205ecd8604115d82"/>METACALL_FUTURE</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_FUNCTION</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_FUNCTION</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da329cf92d5a2f59884bcf4a7c8e8e3e2a"/>METACALL_FUNCTION</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_NULL</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_NULL</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da6b806e6b61f3bcebaf4bbe7ae5b92648"/>METACALL_NULL</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_CLASS</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_CLASS</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da739dddbb88729e1b5bf407e38c3152df"/>METACALL_CLASS</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_OBJECT</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_OBJECT</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dac9e5a1a2942a283bd955b894c906259d"/>METACALL_OBJECT</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_SIZE</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_SIZE</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34dacb39937884a2344522421bd1cf21f2e5"/>METACALL_SIZE</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_INVALID</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>METACALL_INVALID</secondary></indexterm>
+<anchor xml:id="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34da12e465aff45a6098cb0402d16ff7634a"/>METACALL_INVALID</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_metacall__value_8h_1a45b44d263ff22525f0dfbf8f231cbe3b"/>    <section>
+    <title>metacall_value_create_bool()</title>
+<indexterm><primary>metacall_value_create_bool</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_bool</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_bool (<link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</computeroutput></para><para>
+
+<para>Create a value from boolean <emphasis role="bold"></emphasis>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>b</entry>
+                                <entry>
+<para>Boolean will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a1bb0b8962324b56efbe6507b0f6059e0"/>    <section>
+    <title>metacall_value_create_char()</title>
+<indexterm><primary>metacall_value_create_char</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_char</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_char (char c)</computeroutput></para><para>
+
+<para>Create a value from char <computeroutput></computeroutput>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Character will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a5c3e6d9ec081bf4d9e529315d487d880"/>    <section>
+    <title>metacall_value_create_short()</title>
+<indexterm><primary>metacall_value_create_short</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_short</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_short (short s)</computeroutput></para><para>
+
+<para>Create a value from short @s. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>Short will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a2f9276cc43e790ff6b11676f75387697"/>    <section>
+    <title>metacall_value_create_int()</title>
+<indexterm><primary>metacall_value_create_int</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_int</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_int (int i)</computeroutput></para><para>
+
+<para>Create a value from integer @i. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>i</entry>
+                                <entry>
+<para>Integer will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a23d27061663c3bdb1739764049d34a54"/>    <section>
+    <title>metacall_value_create_long()</title>
+<indexterm><primary>metacall_value_create_long</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_long</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_long (long l)</computeroutput></para><para>
+
+<para>Create a value from long @l. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>l</entry>
+                                <entry>
+<para>Long integer will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ab81f77c2f3afd42ee90dc662667083ae"/>    <section>
+    <title>metacall_value_create_float()</title>
+<indexterm><primary>metacall_value_create_float</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_float</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_float (float f)</computeroutput></para><para>
+
+<para>Create a value from single precision floating point number @f. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Float will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aeb4f3bceb1c5fbaf0907b77ddb4eaf54"/>    <section>
+    <title>metacall_value_create_double()</title>
+<indexterm><primary>metacall_value_create_double</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_double</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_double (double d)</computeroutput></para><para>
+
+<para>Create a value from double precision floating point number @d. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Double will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a25dd31dc304ede5d1fb1d634e1c73813"/>    <section>
+    <title>metacall_value_create_string()</title>
+<indexterm><primary>metacall_value_create_string</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_string</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_string (const char * str, size_t length)</computeroutput></para><para>
+
+<para>Create a value from a C string @str. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>str</entry>
+                                <entry>
+<para>Constant string will be copied into value (needs to be null terminated)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>length</entry>
+                                <entry>
+<para>Length of the constant string</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a9041629e37f7713b0a84bf8ab39ff80c"/>    <section>
+    <title>metacall_value_create_buffer()</title>
+<indexterm><primary>metacall_value_create_buffer</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_buffer</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_buffer (const void * buffer, size_t size)</computeroutput></para><para>
+
+<para>Create a value buffer from array @buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>Constant memory block will be copied into value array</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size in bytes of data contained in the array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a4128bdc47c985c39ecbbbf038ebafba8"/>    <section>
+    <title>metacall_value_create_array()</title>
+<indexterm><primary>metacall_value_create_array</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_array</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_array (const void * values[], size_t size)</computeroutput></para><para>
+
+<para>Create a value array from array of values @values. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>values</entry>
+                                <entry>
+<para>Constant array of values will be copied into value list</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements contained in the array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a2beb1da0d657f001433a9a407d6366ee"/>    <section>
+    <title>metacall_value_create_map()</title>
+<indexterm><primary>metacall_value_create_map</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_map</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_map (const void * tuples[], size_t size)</computeroutput></para><para>
+
+<para>Create a value map from array of tuples @map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tuples</entry>
+                                <entry>
+<para>Constant array of tuples will be copied into value map</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements contained in the map</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a6862e70d8de61d1c8e2e3f5f99d440a5"/>    <section>
+    <title>metacall_value_create_ptr()</title>
+<indexterm><primary>metacall_value_create_ptr</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_ptr</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_ptr (const void * ptr)</computeroutput></para><para>
+
+<para>Create a value from pointer @ptr. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a3845cedd950e060d7484d0026a9788ea"/>    <section>
+    <title>metacall_value_create_future()</title>
+<indexterm><primary>metacall_value_create_future</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_future</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_future (void * f)</computeroutput></para><para>
+
+<para>Create a value from future @f. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aaa343d4d8fd0a1658bb7d342f97d1988"/>    <section>
+    <title>metacall_value_create_function()</title>
+<indexterm><primary>metacall_value_create_function</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_function</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_function (void * f)</computeroutput></para><para>
+
+<para>Create a value from function @f. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aca9f1f1342ec81e4459f51f4c2fa2898"/>    <section>
+    <title>metacall_value_create_function_closure()</title>
+<indexterm><primary>metacall_value_create_function_closure</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_function_closure</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_function_closure (void * f, void * c)</computeroutput></para><para>
+
+<para>Create a value from function @f binding a closure <computeroutput>to</computeroutput> it. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Pointer to closure that will be binded into function @f</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ad4e2dd190da30deed2c633d089659841"/>    <section>
+    <title>metacall_value_create_null()</title>
+<indexterm><primary>metacall_value_create_null</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_null</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_null (void )</computeroutput></para><para>
+
+<para>Create a value of type null. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aa354cdc11462daeebc943ae2c9d5b19c"/>    <section>
+    <title>metacall_value_create_class()</title>
+<indexterm><primary>metacall_value_create_class</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_class</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_class (void * c)</computeroutput></para><para>
+
+<para>Create a value from class <computeroutput></computeroutput>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ae17566399a49d2cbcb475d82785d5784"/>    <section>
+    <title>metacall_value_create_object()</title>
+<indexterm><primary>metacall_value_create_object</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_create_object</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_create_object (void * o)</computeroutput></para><para>
+
+<para>Create a value from object @o. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>o</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a9082ce571ae07afffafdaadb5f491bea"/>    <section>
+    <title>metacall_value_size()</title>
+<indexterm><primary>metacall_value_size</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_size</secondary></indexterm>
+<para><computeroutput>METACALL_API size_t metacall_value_size (void * v)</computeroutput></para><para>
+
+<para>Returns the size of the value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Size in bytes of the value </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a6fd4a52154e8f47a1795087e87682402"/>    <section>
+    <title>metacall_value_count()</title>
+<indexterm><primary>metacall_value_count</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_count</secondary></indexterm>
+<para><computeroutput>METACALL_API size_t metacall_value_count (void * v)</computeroutput></para><para>
+
+<para>Returns the amount of values this value contains. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Number of values @v represents </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a2638568cb16a6e2af896c5117f4583d1"/>    <section>
+    <title>metacall_value_id()</title>
+<indexterm><primary>metacall_value_id</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_id</secondary></indexterm>
+<para><computeroutput>METACALL_API enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> (void * v)</computeroutput></para><para>
+
+<para>Provide type id of value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return type id assigned to value </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aab341c484fb53670d74dc4d83c46d087"/>    <section>
+    <title>metacall_value_copy()</title>
+<indexterm><primary>metacall_value_copy</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_copy</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_copy (void * v)</computeroutput></para><para>
+
+<para>Deep copies the value @v, the result copy resets the reference counter and ownership, including the finalizer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value to be copied</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Copy of the value @v on success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aaee82fc2175e42f9d7ba7ba6bb6932c5"/>    <section>
+    <title>metacall_value_move()</title>
+<indexterm><primary>metacall_value_move</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_move</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_value_move (void * src, void * dest)</computeroutput></para><para>
+
+<para>Copies the ownership from @src to @dst, including the finalizer, and resets the owner and finalizer of @src. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>src</entry>
+                                <entry>
+<para>Source value which will lose the ownership</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>dst</entry>
+                                <entry>
+<para>Destination value which will recieve the ownership </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_metacall__value_8h_1a44462c581e795e19717be8ba59d18d54"/>    <section>
+    <title>metacall_value_to_bool()</title>
+<indexterm><primary>metacall_value_to_bool</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_bool</secondary></indexterm>
+<para><computeroutput>METACALL_API <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> metacall_value_to_bool (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to boolean. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to boolean </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a649f3838667db1acedec1d3718d9a963"/>    <section>
+    <title>metacall_value_to_char()</title>
+<indexterm><primary>metacall_value_to_char</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_char</secondary></indexterm>
+<para><computeroutput>METACALL_API char metacall_value_to_char (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to char. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to char </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a8dfeaff12f2b7184868b6baf7857cb8e"/>    <section>
+    <title>metacall_value_to_short()</title>
+<indexterm><primary>metacall_value_to_short</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_short</secondary></indexterm>
+<para><computeroutput>METACALL_API short metacall_value_to_short (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to short. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to short </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1afb2d5f17cc3fd938cbda60f1ba958005"/>    <section>
+    <title>metacall_value_to_int()</title>
+<indexterm><primary>metacall_value_to_int</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_int</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_value_to_int (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to integer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to integer </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a10bba9906d6a4eb1f66e5df66b7eacf8"/>    <section>
+    <title>metacall_value_to_long()</title>
+<indexterm><primary>metacall_value_to_long</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_long</secondary></indexterm>
+<para><computeroutput>METACALL_API long metacall_value_to_long (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to long integer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to long integer </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a4858c8c4029961b1c7ac341adc71c29a"/>    <section>
+    <title>metacall_value_to_float()</title>
+<indexterm><primary>metacall_value_to_float</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_float</secondary></indexterm>
+<para><computeroutput>METACALL_API float metacall_value_to_float (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to single precision floating point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to float </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1afda80c2e30da04650c2bdc02f69f6b4d"/>    <section>
+    <title>metacall_value_to_double()</title>
+<indexterm><primary>metacall_value_to_double</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_double</secondary></indexterm>
+<para><computeroutput>METACALL_API double metacall_value_to_double (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to double precision floating point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to dobule </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a28751668dd118354642834b221e06888"/>    <section>
+    <title>metacall_value_to_string()</title>
+<indexterm><primary>metacall_value_to_string</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_string</secondary></indexterm>
+<para><computeroutput>METACALL_API char* metacall_value_to_string (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to C string (null terminated) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1afca305bd3361f24162dbc6e3b5c9df72"/>    <section>
+    <title>metacall_value_to_buffer()</title>
+<indexterm><primary>metacall_value_to_buffer</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_buffer</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_to_buffer (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to memory block </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a737470aa802a5ed4d798b3f2deb14395"/>    <section>
+    <title>metacall_value_to_array()</title>
+<indexterm><primary>metacall_value_to_array</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_array</secondary></indexterm>
+<para><computeroutput>METACALL_API void** metacall_value_to_array (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to array of values. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to array of values </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aa4a788e12ee1cc5b82470b92858e892c"/>    <section>
+    <title>metacall_value_to_map()</title>
+<indexterm><primary>metacall_value_to_map</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_map</secondary></indexterm>
+<para><computeroutput>METACALL_API void** metacall_value_to_map (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to map (array of tuples (array of values)) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a91408213de351f7d7edf2f007ba70bf7"/>    <section>
+    <title>metacall_value_to_ptr()</title>
+<indexterm><primary>metacall_value_to_ptr</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_ptr</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_to_ptr (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to pointer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to pointer </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ae4a80a4df26c9ecb79e513b2cd086338"/>    <section>
+    <title>metacall_value_to_future()</title>
+<indexterm><primary>metacall_value_to_future</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_future</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_to_future (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to future. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a6d3dfd990c32fec2e105284bfba777cf"/>    <section>
+    <title>metacall_value_to_function()</title>
+<indexterm><primary>metacall_value_to_function</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_function</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_to_function (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to function </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a7dbc4343e6ffeb5a8d3b57b3ac366f09"/>    <section>
+    <title>metacall_value_to_null()</title>
+<indexterm><primary>metacall_value_to_null</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_null</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_to_null (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to null. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to null </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a61ef3dc638c1dc6057020c9416a5a320"/>    <section>
+    <title>metacall_value_to_class()</title>
+<indexterm><primary>metacall_value_to_class</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_class</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_to_class (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to class </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a259e938167701e245d5d77e7c696b679"/>    <section>
+    <title>metacall_value_to_object()</title>
+<indexterm><primary>metacall_value_to_object</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_to_object</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_to_object (void * v)</computeroutput></para><para>
+
+<para>Convert value @v to object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a3d4cc16b27769288accd67187c5a3baf"/>    <section>
+    <title>metacall_value_from_bool()</title>
+<indexterm><primary>metacall_value_from_bool</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_bool</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_bool (void * v, <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</computeroutput></para><para>
+
+<para>Assign boolean <emphasis role="bold">to</emphasis> value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>b</entry>
+                                <entry>
+<para>Boolean to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with boolean <emphasis role="bold">assigned</emphasis> to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aef00ad2af4d2ba1981e27d493dfbaf6b"/>    <section>
+    <title>metacall_value_from_char()</title>
+<indexterm><primary>metacall_value_from_char</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_char</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_char (void * v, char c)</computeroutput></para><para>
+
+<para>Assign character <computeroutput>to</computeroutput> value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Character to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with char <computeroutput>assigned</computeroutput> to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a3ff58c02042e7593eb1d2a3c6c83311f"/>    <section>
+    <title>metacall_value_from_short()</title>
+<indexterm><primary>metacall_value_from_short</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_short</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_short (void * v, short s)</computeroutput></para><para>
+
+<para>Assign short @s to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>Short to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with short @s assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a1a773f11c7c6609c80575cde7ea568ad"/>    <section>
+    <title>metacall_value_from_int()</title>
+<indexterm><primary>metacall_value_from_int</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_int</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_int (void * v, int i)</computeroutput></para><para>
+
+<para>Assign integer @i to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>i</entry>
+                                <entry>
+<para>Integer to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with integer @i assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a679120509747a6f994695c68e9f5229f"/>    <section>
+    <title>metacall_value_from_long()</title>
+<indexterm><primary>metacall_value_from_long</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_long</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_long (void * v, long l)</computeroutput></para><para>
+
+<para>Assign long integer @l to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>l</entry>
+                                <entry>
+<para>Long integer to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with long @l assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a5e23e67a26546f7d43126fe32b69889a"/>    <section>
+    <title>metacall_value_from_float()</title>
+<indexterm><primary>metacall_value_from_float</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_float</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_float (void * v, float f)</computeroutput></para><para>
+
+<para>Assign single precision floating point @f to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Float to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with float @f assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ac343bdea2db4d805255fd9a73c256f38"/>    <section>
+    <title>metacall_value_from_double()</title>
+<indexterm><primary>metacall_value_from_double</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_double</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_double (void * v, double d)</computeroutput></para><para>
+
+<para>Assign double precision floating point @d to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Double to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with double @d assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ad9e41dca2659e74184359817fd8252db"/>    <section>
+    <title>metacall_value_from_string()</title>
+<indexterm><primary>metacall_value_from_string</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_string</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_string (void * v, const char * str, size_t length)</computeroutput></para><para>
+
+<para>Assign string @str to value @v, truncates to @v size if it is smaller than @length + 1. It does not add null terminator if truncated. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>str</entry>
+                                <entry>
+<para>Constant string to be assigned to value @v (it needs to be null terminated)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>length</entry>
+                                <entry>
+<para>Length of the constant string @str</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with string @str assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a968633f1ee578fcf88789cf846c5126a"/>    <section>
+    <title>metacall_value_from_buffer()</title>
+<indexterm><primary>metacall_value_from_buffer</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_buffer</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_buffer (void * v, const void * buffer, size_t size)</computeroutput></para><para>
+
+<para>Assign array @buffer to value buffer @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>Constant array to be assigned to value @v</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements contained in @buffer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with array @buffer assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ac8c5e6f3245ce8235b0d13eb4ef2888e"/>    <section>
+    <title>metacall_value_from_array()</title>
+<indexterm><primary>metacall_value_from_array</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_array</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_array (void * v, const void * values[], size_t size)</computeroutput></para><para>
+
+<para>Assign array of values @values to value array @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>values</entry>
+                                <entry>
+<para>Constant array of values to be assigned to value array @v</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of values contained in constant array @values</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with array of values @values assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1adc61d4d19be29fdcf70d4e3284d6dedf"/>    <section>
+    <title>metacall_value_from_map()</title>
+<indexterm><primary>metacall_value_from_map</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_map</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_map (void * v, const void * tuples[], size_t size)</computeroutput></para><para>
+
+<para>Assign array of values @values to value map @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tuples</entry>
+                                <entry>
+<para>Constant array of tuples to be assigned to value map @v</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of values contained in constant array @tuples</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with array of tuples @tuples assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a4b7a109c7cf63b937249e1342ac6f654"/>    <section>
+    <title>metacall_value_from_ptr()</title>
+<indexterm><primary>metacall_value_from_ptr</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_ptr</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_ptr (void * v, const void * ptr)</computeroutput></para><para>
+
+<para>Assign pointer reference @ptr to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>Pointer to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with pointer @ptr assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1abb974bed7ddaa97880cbe7198a9d32fa"/>    <section>
+    <title>metacall_value_from_future()</title>
+<indexterm><primary>metacall_value_from_future</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_future</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_future (void * v, void * f)</computeroutput></para><para>
+
+<para>Assign future @f to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Future to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with future @f assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a8020261ff5293006dc450772f7dfbfd6"/>    <section>
+    <title>metacall_value_from_function()</title>
+<indexterm><primary>metacall_value_from_function</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_function</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_function (void * v, void * f)</computeroutput></para><para>
+
+<para>Assign function @f to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Function to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with function @f assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a2fdc79ca9786293f2d9b1d91b2740851"/>    <section>
+    <title>metacall_value_from_null()</title>
+<indexterm><primary>metacall_value_from_null</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_null</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_null (void * v)</computeroutput></para><para>
+
+<para>Assign null to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with null assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1ae3ef2331c52bf1a27f84228b59bedb69"/>    <section>
+    <title>metacall_value_from_class()</title>
+<indexterm><primary>metacall_value_from_class</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_class</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_class (void * v, void * c)</computeroutput></para><para>
+
+<para>Assign class <computeroutput>to</computeroutput> value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Class to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with class <computeroutput>assigned</computeroutput> to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a51e678472b1244e9c761b8855fe596dc"/>    <section>
+    <title>metacall_value_from_object()</title>
+<indexterm><primary>metacall_value_from_object</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_from_object</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_from_object (void * v, void * o)</computeroutput></para><para>
+
+<para>Assign object @o to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>o</entry>
+                                <entry>
+<para>Object to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with object <computeroutput>assigned</computeroutput> to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a039e12d103757050bf6d533a1676a0c2"/>    <section>
+    <title>metacall_value_cast()</title>
+<indexterm><primary>metacall_value_cast</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast (void * v, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> id)</computeroutput></para><para>
+
+<para>Casts a value to a new type @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>New type id of value to be casted</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Casted value or reference to @v if casting is between equivalent types </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a5cbe3be84788ca24f8f2d63418a787e1"/>    <section>
+    <title>metacall_value_cast_bool()</title>
+<indexterm><primary>metacall_value_cast_bool</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_bool</secondary></indexterm>
+<para><computeroutput>METACALL_API <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> metacall_value_cast_bool (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to boolean. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to boolean </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a61b7edbdf1dce20e342b6245c02bf9b9"/>    <section>
+    <title>metacall_value_cast_char()</title>
+<indexterm><primary>metacall_value_cast_char</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_char</secondary></indexterm>
+<para><computeroutput>METACALL_API char metacall_value_cast_char (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to char. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to char </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a50de88e8919f108e922741720d35a732"/>    <section>
+    <title>metacall_value_cast_short()</title>
+<indexterm><primary>metacall_value_cast_short</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_short</secondary></indexterm>
+<para><computeroutput>METACALL_API short metacall_value_cast_short (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to short. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to short </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a6d8d1269a465b428561b8c79c739e579"/>    <section>
+    <title>metacall_value_cast_int()</title>
+<indexterm><primary>metacall_value_cast_int</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_int</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_value_cast_int (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to int. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to int </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a1fbbd7b9a350cc60d74e6ba4a9871289"/>    <section>
+    <title>metacall_value_cast_long()</title>
+<indexterm><primary>metacall_value_cast_long</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_long</secondary></indexterm>
+<para><computeroutput>METACALL_API long metacall_value_cast_long (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to long. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to long </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aaf2783171b3c3eeec0120577257f717e"/>    <section>
+    <title>metacall_value_cast_float()</title>
+<indexterm><primary>metacall_value_cast_float</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_float</secondary></indexterm>
+<para><computeroutput>METACALL_API float metacall_value_cast_float (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to float. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to float </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a537d9af0da5be7cfb975aed99aa1303f"/>    <section>
+    <title>metacall_value_cast_double()</title>
+<indexterm><primary>metacall_value_cast_double</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_double</secondary></indexterm>
+<para><computeroutput>METACALL_API double metacall_value_cast_double (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to double. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to double </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1af16e83924c61fb79b458c287ff976773"/>    <section>
+    <title>metacall_value_cast_string()</title>
+<indexterm><primary>metacall_value_cast_string</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_string</secondary></indexterm>
+<para><computeroutput>METACALL_API char* metacall_value_cast_string (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to a C string (null terminated) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a8dbab928a9fa8107b561515a4374d69e"/>    <section>
+    <title>metacall_value_cast_buffer()</title>
+<indexterm><primary>metacall_value_cast_buffer</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_buffer</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_buffer (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to buffer </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a5573d502e127580e1509eb4eceec5e32"/>    <section>
+    <title>metacall_value_cast_array()</title>
+<indexterm><primary>metacall_value_cast_array</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_array</secondary></indexterm>
+<para><computeroutput>METACALL_API void** metacall_value_cast_array (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to array of values </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a824d7c75b9ad0217086ce21dee4af067"/>    <section>
+    <title>metacall_value_cast_map()</title>
+<indexterm><primary>metacall_value_cast_map</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_map</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_map (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to map </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a4600b6fffd9af1aba6237c57b3af57b5"/>    <section>
+    <title>metacall_value_cast_ptr()</title>
+<indexterm><primary>metacall_value_cast_ptr</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_ptr</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_ptr (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to ptr. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to ptr </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a7b8519fed5dcd787faad32b78acd4500"/>    <section>
+    <title>metacall_value_cast_future()</title>
+<indexterm><primary>metacall_value_cast_future</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_future</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_future (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to future. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a134e434ff538d4fbe68b57f5724b01be"/>    <section>
+    <title>metacall_value_cast_function()</title>
+<indexterm><primary>metacall_value_cast_function</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_function</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_function (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to function </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a18dfc06126de47d9eea60fc1b5d3144f"/>    <section>
+    <title>metacall_value_cast_null()</title>
+<indexterm><primary>metacall_value_cast_null</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_null</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_null (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to null. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to null </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1aeee04f68d085d94e87085f1c1d5124f0"/>    <section>
+    <title>metacall_value_cast_class()</title>
+<indexterm><primary>metacall_value_cast_class</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_class</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_class (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to class </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a9758b8fe022d4bec41da0a6e2589567d"/>    <section>
+    <title>metacall_value_cast_object()</title>
+<indexterm><primary>metacall_value_cast_object</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_cast_object</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_value_cast_object (void ** v)</computeroutput></para><para>
+
+<para>Convert value @v implicitly to object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the reference of the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__value_8h_1a200101b204c58a5a99342af65b6026bd"/>    <section>
+    <title>metacall_value_destroy()</title>
+<indexterm><primary>metacall_value_destroy</primary><secondary>metacall_value.h</secondary></indexterm>
+<indexterm><primary>metacall_value.h</primary><secondary>metacall_value_destroy</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_value_destroy (void * v)</computeroutput></para><para>
+
+<para>Destroy a value from scope stack. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

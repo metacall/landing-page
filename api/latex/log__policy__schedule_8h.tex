@@ -1,0 +1,132 @@
+\doxysection{log\+\_\+policy\+\_\+schedule.\+h File Reference}
+\label{log__policy__schedule_8h}\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+policy.\+h$>$}\newline
+Include dependency graph for log\+\_\+policy\+\_\+schedule.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{log__policy__schedule_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{log__policy__schedule_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+impl}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+data}
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+execute\+\_\+cb}) (\textbf{ log\+\_\+policy}, \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+data})
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+lock}) (\textbf{ log\+\_\+policy})
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+execute}) (\textbf{ log\+\_\+policy}, \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+execute\+\_\+cb}, \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+data})
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+unlock}) (\textbf{ log\+\_\+policy})
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+id} \{ \textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+A\+S\+Y\+NC} = 0x00, 
+\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+S\+Y\+NC} = 0x01, 
+\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+S\+I\+ZE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+schedule} (const \textbf{ log\+\_\+policy\+\_\+id} policy\+\_\+schedule\+\_\+id)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+async} (void)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+sync} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{log__policy__schedule_8h_aa49e60de567bd4ed16bc904a046cb048}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_data@{log\_policy\_schedule\_data}}
+\index{log\_policy\_schedule\_data@{log\_policy\_schedule\_data}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_data}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+data}}
+
+\mbox{\label{log__policy__schedule_8h_a3d29f502383737fedbd083dcf673f7bf}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_execute\_cb@{log\_policy\_schedule\_execute\_cb}}
+\index{log\_policy\_schedule\_execute\_cb@{log\_policy\_schedule\_execute\_cb}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_execute\_cb}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+policy\+\_\+schedule\+\_\+execute\+\_\+cb) (\textbf{ log\+\_\+policy}, \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+data})}
+
+\mbox{\label{log__policy__schedule_8h_a4f84ef0771c429ff4b0ae461afdba6cb}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_lock@{log\_policy\_schedule\_lock}}
+\index{log\_policy\_schedule\_lock@{log\_policy\_schedule\_lock}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_lock}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+policy\+\_\+schedule\+\_\+lock) (\textbf{ log\+\_\+policy})}
+
+\mbox{\label{log__policy__schedule_8h_a38b092b7b8d24b57a6d0eaf3d7240161}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_execute@{log\_policy\_schedule\_execute}}
+\index{log\_policy\_schedule\_execute@{log\_policy\_schedule\_execute}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_execute}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+policy\+\_\+schedule\+\_\+execute) (\textbf{ log\+\_\+policy}, \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+execute\+\_\+cb}, \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+data})}
+
+\mbox{\label{log__policy__schedule_8h_a3f7d2f72b5a3cf81553696e8ffb98b5f}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_unlock@{log\_policy\_schedule\_unlock}}
+\index{log\_policy\_schedule\_unlock@{log\_policy\_schedule\_unlock}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_unlock}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+policy\+\_\+schedule\+\_\+unlock) (\textbf{ log\+\_\+policy})}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{log__policy__schedule_8h_a422def7d895a6043d9758d0e27e1ac25}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_id@{log\_policy\_schedule\_id}}
+\index{log\_policy\_schedule\_id@{log\_policy\_schedule\_id}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_id}
+{\footnotesize\ttfamily enum \textbf{ log\+\_\+policy\+\_\+schedule\+\_\+id}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_SCHEDULE\_ASYNC@{LOG\_POLICY\_SCHEDULE\_ASYNC}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!LOG\_POLICY\_SCHEDULE\_ASYNC@{LOG\_POLICY\_SCHEDULE\_ASYNC}}}\mbox{\label{log__policy__schedule_8h_a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b}} 
+L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+A\+S\+Y\+NC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_SCHEDULE\_SYNC@{LOG\_POLICY\_SCHEDULE\_SYNC}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!LOG\_POLICY\_SCHEDULE\_SYNC@{LOG\_POLICY\_SCHEDULE\_SYNC}}}\mbox{\label{log__policy__schedule_8h_a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a}} 
+L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+S\+Y\+NC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_SCHEDULE\_SIZE@{LOG\_POLICY\_SCHEDULE\_SIZE}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!LOG\_POLICY\_SCHEDULE\_SIZE@{LOG\_POLICY\_SCHEDULE\_SIZE}}}\mbox{\label{log__policy__schedule_8h_a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db}} 
+L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__policy__schedule_8h_a1a457f64ce52cef20969cf64198642e3}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule@{log\_policy\_schedule}}
+\index{log\_policy\_schedule@{log\_policy\_schedule}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+schedule (\begin{DoxyParamCaption}\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{policy\+\_\+schedule\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy__schedule_8h_ac9f8ff2ec3264e0b2271dbf22a4eb782}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_async@{log\_policy\_schedule\_async}}
+\index{log\_policy\_schedule\_async@{log\_policy\_schedule\_async}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_async()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+schedule\+\_\+async (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy__schedule_8h_a238989dd68646f238ee7ce2337bfe971}} 
+\index{log\_policy\_schedule.h@{log\_policy\_schedule.h}!log\_policy\_schedule\_sync@{log\_policy\_schedule\_sync}}
+\index{log\_policy\_schedule\_sync@{log\_policy\_schedule\_sync}!log\_policy\_schedule.h@{log\_policy\_schedule.h}}
+\doxysubsubsection{log\_policy\_schedule\_sync()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+schedule\+\_\+sync (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

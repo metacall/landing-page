@@ -1,0 +1,81 @@
+.TH "log_impl.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_impl.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <log/log_aspect\&.h>\fP
+.br
+\fC#include <log/log_handle\&.h>\fP
+.br
+\fC#include <log/log_record\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOG_API log_aspect_interface \fBlog_impl_aspect_interface\fP (enum \fBlog_aspect_id\fP aspect_id)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_impl\fP \fBlog_impl_create\fP (const char *name)"
+.br
+.ti -1c
+.RI "LOG_API void \fBlog_impl_define\fP (\fBlog_impl\fP impl, \fBlog_aspect\fP aspect, enum \fBlog_aspect_id\fP aspect_id)"
+.br
+.ti -1c
+.RI "const LOG_API char * \fBlog_impl_name\fP (\fBlog_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_handle\fP \fBlog_impl_handle\fP (\fBlog_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_aspect\fP \fBlog_impl_aspect\fP (\fBlog_impl\fP impl, enum \fBlog_aspect_id\fP aspect_id)"
+.br
+.ti -1c
+.RI "LOG_API enum \fBlog_level_id\fP \fBlog_impl_level\fP (\fBlog_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOG_API void \fBlog_impl_verbosity\fP (\fBlog_impl\fP impl, enum \fBlog_level_id\fP level)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_impl_write\fP (\fBlog_impl\fP impl, const log_record_ctor record_ctor)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_impl_clear\fP (\fBlog_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_impl_destroy\fP (\fBlog_impl\fP impl)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "LOG_API log_aspect_interface log_impl_aspect_interface (enum \fBlog_aspect_id\fP aspect_id)"
+
+.SS "LOG_API \fBlog_impl\fP log_impl_create (const char * name)"
+
+.SS "LOG_API void log_impl_define (\fBlog_impl\fP impl, \fBlog_aspect\fP aspect, enum \fBlog_aspect_id\fP aspect_id)"
+
+.SS "const LOG_API char* log_impl_name (\fBlog_impl\fP impl)"
+
+.SS "LOG_API \fBlog_handle\fP log_impl_handle (\fBlog_impl\fP impl)"
+
+.SS "LOG_API \fBlog_aspect\fP log_impl_aspect (\fBlog_impl\fP impl, enum \fBlog_aspect_id\fP aspect_id)"
+
+.SS "LOG_API enum \fBlog_level_id\fP log_impl_level (\fBlog_impl\fP impl)"
+
+.SS "LOG_API void log_impl_verbosity (\fBlog_impl\fP impl, enum \fBlog_level_id\fP level)"
+
+.SS "LOG_API int log_impl_write (\fBlog_impl\fP impl, const log_record_ctor record_ctor)"
+
+.SS "LOG_API int log_impl_clear (\fBlog_impl\fP impl)"
+
+.SS "LOG_API int log_impl_destroy (\fBlog_impl\fP impl)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

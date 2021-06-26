@@ -1,0 +1,309 @@
+.TH "filesystem.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+filesystem.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <filesystem/filesystem_api\&.h>\fP
+.br
+\fC#include <adt/adt_set\&.h>\fP
+.br
+\fC#include <adt/adt_vector\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct file_type * \fBfile\fP"
+.br
+.ti -1c
+.RI "typedef struct directory_type * \fBdirectory\fP"
+.br
+.ti -1c
+.RI "typedef struct filesystem_type * \fBfilesystem\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBfilesystem_flags_enumeration\fP { \fBFILESYSTEM_FLAGS_NONE\fP = 0x00, \fBFILESYSTEM_FLAGS_LOAD_LAZY\fP = 0x01 << 0x00, \fBFILESYSTEM_FLAGS_WATCH_SYNC\fP = 0x01 << 0x01, \fBFILESYSTEM_FLAGS_READABLE\fP = 0x01 << 0x02, \fBFILESYSTEM_FLAGS_WRITEABLE\fP = 0x01 << 0x03 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "FILESYSTEM_API \fBfilesystem\fP \fBfilesystem_create\fP (const char *root, filesystem_flags flags)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_add_file\fP (\fBfilesystem\fP fs, const char *file_path)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_add_directory\fP (\fBfilesystem\fP fs, const char *directory_path)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_remove_file\fP (\fBfilesystem\fP fs, const char *file_path)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_remove_directory\fP (\fBfilesystem\fP fs, const char *directory_path)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_list_files\fP (\fBfilesystem\fP fs, \fBvector\fP files)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_list_files_by_extension\fP (\fBfilesystem\fP fs, \fBset\fP files)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_list_directories\fP (\fBfilesystem\fP fs, \fBvector\fP directories)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_cannonical_path_from_file\fP (\fBfilesystem\fP fs, \fBfile\fP f, \fBvector\fP path)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API int \fBfilesystem_cannonical_path_from_directory\fP (\fBfilesystem\fP fs, \fBdirectory\fP d, \fBvector\fP path)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API void \fBfilesystem_destroy\fP (\fBfilesystem\fP fs)"
+.br
+.ti -1c
+.RI "const FILESYSTEM_API char * \fBfilesystem_print_info\fP (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct file_type* \fBfile\fP"
+
+.SS "typedef struct directory_type* \fBdirectory\fP"
+
+.SS "typedef struct filesystem_type* \fBfilesystem\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBfilesystem_flags_enumeration\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFILESYSTEM_FLAGS_NONE \fP\fP
+.TP
+\fB\fIFILESYSTEM_FLAGS_LOAD_LAZY \fP\fP
+.TP
+\fB\fIFILESYSTEM_FLAGS_WATCH_SYNC \fP\fP
+.TP
+\fB\fIFILESYSTEM_FLAGS_READABLE \fP\fP
+.TP
+\fB\fIFILESYSTEM_FLAGS_WRITEABLE \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "FILESYSTEM_API \fBfilesystem\fP filesystem_create (const char * root, filesystem_flags flags)"
+
+.PP
+Creates a new file system based on a @root path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIroot\fP String path where file system will be virtually mounted
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A handle to file system if success, null otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_add_file (\fBfilesystem\fP fs, const char * file_path)"
+
+.PP
+Add a file into the file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIfile_path\fP Absolute path to the file
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_add_directory (\fBfilesystem\fP fs, const char * directory_path)"
+
+.PP
+Add a directory into the file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIdirectory_path\fP Absolute path to the directory
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_remove_file (\fBfilesystem\fP fs, const char * file_path)"
+
+.PP
+Add a file into the file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIfile_path\fP Absolute path to the file
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_remove_directory (\fBfilesystem\fP fs, const char * directory_path)"
+
+.PP
+Remove a directory from the file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIdirectory_path\fP Absolute path to the directory
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_list_files (\fBfilesystem\fP fs, \fBvector\fP files)"
+
+.PP
+List all files contained in a file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIfiles\fP Vector containing all files inside the file system
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_list_files_by_extension (\fBfilesystem\fP fs, \fBset\fP files)"
+
+.PP
+List all files contained in a file system sorted by extension\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIfiles\fP Set containing vectors of files sorted by extension
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_list_directories (\fBfilesystem\fP fs, \fBvector\fP directories)"
+
+.PP
+List all directories contained in a file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIdirectories\fP Vector containing all directories inside the file system
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_cannonical_path_from_file (\fBfilesystem\fP fs, \fBfile\fP f, \fBvector\fP path)"
+
+.PP
+Generates the cannonical path of a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIfile\fP Pointer reference to the file to be cannonicalized
+.br
+\fIpath\fP Vector of strings containing the cannonical path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API int filesystem_cannonical_path_from_directory (\fBfilesystem\fP fs, \fBdirectory\fP d, \fBvector\fP path)"
+
+.PP
+Generates the cannonical path of a directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP A handle to the file system
+.br
+\fIdirectory\fP Pointer reference to the directory to be cannonicalized
+.br
+\fIpath\fP Vector of strings containing the cannonical path
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on success, different from zero otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API void filesystem_destroy (\fBfilesystem\fP fs)"
+
+.PP
+Unmounts the virtual file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfs\fP Handle referencing the file system 
+.RE
+.PP
+
+.SS "const FILESYSTEM_API char* filesystem_print_info (void)"
+
+.PP
+Provide the module information\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static string containing module information 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

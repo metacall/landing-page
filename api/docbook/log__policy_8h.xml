@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__policy_8h">
+<title>log_policy.h File Reference</title>
+<indexterm><primary>log_policy.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_aspect.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for log_policy.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structlog__policy__interface__type">log_policy_interface</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef size_t <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500">log_policy_impl</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c">log_policy_data</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032">log_policy_ctor</link></para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy_8h_1a58277154fdc39d2de449b5a3dfada9ce">log_policy_interface_create</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032">log_policy_ctor</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy_8h_1aa57bdfdfb18fe2d24d20daa432d8457c">log_policy_interface_destroy</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</para>
+</listitem>
+            <listitem><para>typedef log_policy_interface(* <link linkend="_log__policy_8h_1aaaf2f7fae9adcaba2987cef30770c7ae">log_policy_singleton</link>) (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy_8h_1a06e277a564eb91c8f30b76c08c3df620">log_policy_create</link> (enum <link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319">log_aspect_id</link> aspect_id, const log_policy_interface iface, const <link linkend="_log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032">log_policy_ctor</link> ctor)</para>
+</listitem>
+            <listitem><para>LOG_API void <link linkend="_log__policy_8h_1a661c84de7ecb775f1e06aea04fe9a18c">log_policy_instantiate</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy, <link linkend="_log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c">log_policy_data</link> instance, const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> id)</para>
+</listitem>
+            <listitem><para>LOG_API void <link linkend="_log__policy_8h_1af271500926e9eff385ef898bc6b9d781">log_policy_classify</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy, <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> <link linkend="_log__policy_8h_1adf778f88ede0fe6bedfab994e9c809b3">log_policy_aspect</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API enum <link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319">log_aspect_id</link> <link linkend="_log__policy_8h_1a1d301f7f7996670937ef91463255a7ec">log_policy_aspect_id</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c">log_policy_data</link> <link linkend="_log__policy_8h_1a5459b90dff8c00665a3adb85fe326ce1">log_policy_instance</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API log_policy_interface <link linkend="_log__policy_8h_1a7666fd97f984b9c168ce93181771c53e">log_policy_behavior</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500">log_policy_impl</link> <link linkend="_log__policy_8h_1a6ec05522403aca58a1376d5fec8f1d87">log_policy_derived</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__policy_8h_1a81b1ef0f90352c0f143d276ce1d9058e">log_policy_destroy</link> (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5"/>    <section>
+    <title>log_policy_id</title>
+<indexterm><primary>log_policy_id</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_id</secondary></indexterm>
+<para><computeroutput>typedef size_t <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link></computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500"/>    <section>
+    <title>log_policy_impl</title>
+<indexterm><primary>log_policy_impl</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_impl</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500">log_policy_impl</link></computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c"/>    <section>
+    <title>log_policy_data</title>
+<indexterm><primary>log_policy_data</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_data</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c">log_policy_data</link></computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032"/>    <section>
+    <title>log_policy_ctor</title>
+<indexterm><primary>log_policy_ctor</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_ctor</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032">log_policy_ctor</link></computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a58277154fdc39d2de449b5a3dfada9ce"/>    <section>
+    <title>log_policy_interface_create</title>
+<indexterm><primary>log_policy_interface_create</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_interface_create</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_interface_create) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032">log_policy_ctor</link>)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1aa57bdfdfb18fe2d24d20daa432d8457c"/>    <section>
+    <title>log_policy_interface_destroy</title>
+<indexterm><primary>log_policy_interface_destroy</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_interface_destroy</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_interface_destroy) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1aaaf2f7fae9adcaba2987cef30770c7ae"/>    <section>
+    <title>log_policy_singleton</title>
+<indexterm><primary>log_policy_singleton</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_singleton</secondary></indexterm>
+<para><computeroutput>typedef log_policy_interface(* log_policy_singleton) (void)</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__policy_8h_1a06e277a564eb91c8f30b76c08c3df620"/>    <section>
+    <title>log_policy_create()</title>
+<indexterm><primary>log_policy_create</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_create</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_create (enum <link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319">log_aspect_id</link> aspect_id, const log_policy_interface iface, const <link linkend="_log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032">log_policy_ctor</link> ctor)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a661c84de7ecb775f1e06aea04fe9a18c"/>    <section>
+    <title>log_policy_instantiate()</title>
+<indexterm><primary>log_policy_instantiate</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_instantiate</secondary></indexterm>
+<para><computeroutput>LOG_API void log_policy_instantiate (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy, <link linkend="_log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c">log_policy_data</link> instance, const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> id)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1af271500926e9eff385ef898bc6b9d781"/>    <section>
+    <title>log_policy_classify()</title>
+<indexterm><primary>log_policy_classify</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_classify</secondary></indexterm>
+<para><computeroutput>LOG_API void log_policy_classify (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy, <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1adf778f88ede0fe6bedfab994e9c809b3"/>    <section>
+    <title>log_policy_aspect()</title>
+<indexterm><primary>log_policy_aspect</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_aspect</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> log_policy_aspect (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a1d301f7f7996670937ef91463255a7ec"/>    <section>
+    <title>log_policy_aspect_id()</title>
+<indexterm><primary>log_policy_aspect_id</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_aspect_id</secondary></indexterm>
+<para><computeroutput>LOG_API enum <link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319">log_aspect_id</link> log_policy_aspect_id (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a5459b90dff8c00665a3adb85fe326ce1"/>    <section>
+    <title>log_policy_instance()</title>
+<indexterm><primary>log_policy_instance</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_instance</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c">log_policy_data</link> log_policy_instance (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a7666fd97f984b9c168ce93181771c53e"/>    <section>
+    <title>log_policy_behavior()</title>
+<indexterm><primary>log_policy_behavior</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_behavior</secondary></indexterm>
+<para><computeroutput>LOG_API log_policy_interface log_policy_behavior (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a6ec05522403aca58a1376d5fec8f1d87"/>    <section>
+    <title>log_policy_derived()</title>
+<indexterm><primary>log_policy_derived</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_derived</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500">log_policy_impl</link> log_policy_derived (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log__policy_8h_1a81b1ef0f90352c0f143d276ce1d9058e"/>    <section>
+    <title>log_policy_destroy()</title>
+<indexterm><primary>log_policy_destroy</primary><secondary>log_policy.h</secondary></indexterm>
+<indexterm><primary>log_policy.h</primary><secondary>log_policy_destroy</secondary></indexterm>
+<para><computeroutput>LOG_API int log_policy_destroy (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structlog__policy__stream__custom__ctor__type" kind="struct" language="C++" prot="public">
+    <compoundname>log_policy_stream_custom_ctor_type</compoundname>
+    <includes refid="log__policy__stream__custom_8h" local="no">/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlog__policy__stream__custom__ctor__type_1ab0e67fe74d5158dc1a1194c027c54765" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* log_policy_stream_custom_ctor::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" line="38" column="6" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlog__policy__stream__custom__ctor__type_1a936e1a577a14ea6aa8fd39cf6b4d6f2a" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* log_policy_stream_custom_ctor::stream_write) (void *, const char *, const size_t)</definition>
+        <argsstring>)(void *, const char *, const size_t)</argsstring>
+        <name>stream_write</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" line="39" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlog__policy__stream__custom__ctor__type_1a4c7f0ed8c486671eb05a572f867c8641" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* log_policy_stream_custom_ctor::stream_flush) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>stream_flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" line="40" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>int(*)(void *, const char *, const size_t)</label>
+      </node>
+      <node id="4">
+        <label>void *</label>
+      </node>
+      <node id="2">
+        <label>int(*)(void *)</label>
+      </node>
+      <node id="1">
+        <label>log_policy_stream_custom_ctor</label>
+        <link refid="structlog__policy__stream__custom__ctor__type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+stream_flush</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+stream_write</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+context</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" line="37" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_stream_custom.h" bodystart="36" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structlog__policy__stream__custom__ctor__type_1ab0e67fe74d5158dc1a1194c027c54765" prot="public" virt="non-virtual"><scope>log_policy_stream_custom_ctor_type</scope><name>context</name></member>
+      <member refid="structlog__policy__stream__custom__ctor__type_1a4c7f0ed8c486671eb05a572f867c8641" prot="public" virt="non-virtual"><scope>log_policy_stream_custom_ctor_type</scope><name>stream_flush</name></member>
+      <member refid="structlog__policy__stream__custom__ctor__type_1a936e1a577a14ea6aa8fd39cf6b4d6f2a" prot="public" virt="non-virtual"><scope>log_policy_stream_custom_ctor_type</scope><name>stream_write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

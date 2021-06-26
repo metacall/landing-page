@@ -2,19 +2,23 @@
 
 ---
 
-- [**Core**](docs.md)
+- [**Core**](/docs/docs.md)
 
 ---
 
-- [**Getting Started**](getting-started.md)
+- [**Getting Started**](/docs/getting-started.md)
 
 ---
 
-- [**Contribute to MetaCall**](contribute.md)
+- [**Contribute to MetaCall**](/docs/contribute.md)
 
 ---
 
-- [Community](community.md)
+- <a href="api/html/index.html" title="Reference API">Reference API</a>
+
+---
+
+- [Community](/docs/community.md)
 
 <!-- ---
 

@@ -1,0 +1,300 @@
+\doxysection{reflect\+\_\+value.\+h File Reference}
+\label{reflect__value_8h}\index{reflect\_value.h@{reflect\_value.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for reflect\+\_\+value.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{reflect__value_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{reflect__value_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ boolean}~unsigned char
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \textbf{ value}
+\item 
+typedef void($\ast$ \textbf{ value\+\_\+finalizer\+\_\+cb}) (\textbf{ value}, void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+alloc} (size\+\_\+t bytes)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create} (const void $\ast$data, size\+\_\+t bytes)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+copy} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+move} (\textbf{ value} src, \textbf{ value} dst)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ value\+\_\+size} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+ref\+\_\+inc} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+ref\+\_\+dec} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+finalizer} (\textbf{ value} v, \textbf{ value\+\_\+finalizer\+\_\+cb} finalizer, void $\ast$finalizer\+\_\+data)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+data} (\textbf{ value} v)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+to} (\textbf{ value} v, void $\ast$data, size\+\_\+t bytes)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from} (\textbf{ value} v, const void $\ast$data, size\+\_\+t bytes)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+destroy} (\textbf{ value} v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{reflect__value_8h_a9201c1178e191a87a38dd59c7fc36ff6}} 
+\index{reflect\_value.h@{reflect\_value.h}!boolean@{boolean}}
+\index{boolean@{boolean}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{boolean}
+{\footnotesize\ttfamily \#define boolean~unsigned char}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{reflect__value_8h_a54c528809d1b8a4d229f655f96b2433a}} 
+\index{reflect\_value.h@{reflect\_value.h}!value@{value}}
+\index{value@{value}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ value}}
+
+\mbox{\label{reflect__value_8h_a9261a95d255b026c814b6cfbbd3f1e19}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_finalizer\_cb@{value\_finalizer\_cb}}
+\index{value\_finalizer\_cb@{value\_finalizer\_cb}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_finalizer\_cb}
+{\footnotesize\ttfamily typedef void($\ast$ value\+\_\+finalizer\+\_\+cb) (\textbf{ value}, void $\ast$)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{reflect__value_8h_ae21bf2663228ad09c7aaba7acf397285}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_alloc@{value\_alloc}}
+\index{value\_alloc@{value\_alloc}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_alloc()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Reserve memory for a value with size @bytes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bytes} & Size in bytes to be allocated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to uninitialized value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value_8h_ad54de5d34e19dff84a6798f20d5c68ad}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_create@{value\_create}}
+\index{value\_create@{value\_create}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_create()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Create a value from @data with size @bytes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & Pointer to memory block\\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes} & Size in bytes of the memory block @data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value_8h_a797b2f8ba4f572bc05c1d86d69a2179d}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_copy@{value\_copy}}
+\index{value\_copy@{value\_copy}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_copy()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Copy a value from @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference of value to be copied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to new value copied from @v 
+\end{DoxyReturn}
+\mbox{\label{reflect__value_8h_af5d25763b65c455048fb2d7468000c73}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_move@{value\_move}}
+\index{value\_move@{value\_move}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_move()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+move (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{src,  }\item[{\textbf{ value}}]{dst }\end{DoxyParamCaption})}
+
+
+
+Copies the ownership from @src to @dst, including the finalizer, and resets the owner and finalizer of @src. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em src} & Source value which will lose the ownership\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst} & Destination value which will recieve the ownership \\
+\hline
+\end{DoxyParams}
+\mbox{\label{reflect__value_8h_a7ae2174cfa62b082dffbbded72900077}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_size@{value\_size}}
+\index{value\_size@{value\_size}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_size()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t value\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Returns the size of the value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size in bytes of the value 
+\end{DoxyReturn}
+\mbox{\label{reflect__value_8h_ac47ec011aa4afe1c51591d42bb5b2dde}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_ref\_inc@{value\_ref\_inc}}
+\index{value\_ref\_inc@{value\_ref\_inc}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_ref\_inc()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+ref\+\_\+inc (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Increment reference count of a value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value \\
+\hline
+\end{DoxyParams}
+\mbox{\label{reflect__value_8h_a8762facffefdc699ff3a6d005d0bdb94}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_ref\_dec@{value\_ref\_dec}}
+\index{value\_ref\_dec@{value\_ref\_dec}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_ref\_dec()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+ref\+\_\+dec (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Decrement reference count of a value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value \\
+\hline
+\end{DoxyParams}
+\mbox{\label{reflect__value_8h_a22b46168601daaacd8dca5186d60d6bd}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_finalizer@{value\_finalizer}}
+\index{value\_finalizer@{value\_finalizer}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_finalizer()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+finalizer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ value\+\_\+finalizer\+\_\+cb}}]{finalizer,  }\item[{void $\ast$}]{finalizer\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Set up the value finalizer, a callback that will be executed when the value life ends. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em finalizer} & Reference to the callback\\
+\hline
+\mbox{\texttt{ in}}  & {\em finalizer\+\_\+data} & Reference to additional data to be passed when the finalizer is called \\
+\hline
+\end{DoxyParams}
+\mbox{\label{reflect__value_8h_a0e1a0503a81542c577c7086ffd269f2c}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_data@{value\_data}}
+\index{value\_data@{value\_data}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_data()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+data (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Get pointer reference to value data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to writeable memory block of value @v 
+\end{DoxyReturn}
+\mbox{\label{reflect__value_8h_a0edca2b892c9757981a3418032f368d0}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_to@{value\_to}}
+\index{value\_to@{value\_to}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_to()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+to (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to memory block @data. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to memory block where value will be stored\\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes} & Size in bytes of the memory block @data \\
+\hline
+\end{DoxyParams}
+\mbox{\label{reflect__value_8h_a06da8b687648cf10e92587cfbd22fa91}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_from@{value\_from}}
+\index{value\_from@{value\_from}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_from()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Assing memory block @data to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to memory block to be copied into @v\\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes} & Size in bytes of the memory block @data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with @data of size @bytes assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value_8h_a75c11678a7edb92bbae645d6a9a65ef1}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_destroy@{value\_destroy}}
+\index{value\_destroy@{value\_destroy}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_destroy()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Destroy a value from scope stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value \\
+\hline
+\end{DoxyParams}

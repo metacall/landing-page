@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall__log_8h">
+<title>metacall_log.h File Reference</title>
+<indexterm><primary>metacall_log.h</primary></indexterm>
+<programlisting>#include &lt;metacall/metacall_api.h&gt;
+#include &lt;stdarg.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdio.h&gt;
+</programlisting>Include dependency graph for metacall_log.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__log_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__log_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structmetacall__log__stdio__type">metacall_log_stdio</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__log__file__type">metacall_log_file</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__log__socket__type">metacall_log_socket</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__log__syslog__type">metacall_log_syslog</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__log__nginx__type">metacall_log_nginx</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__log__custom__va__list__type">metacall_log_custom_va_list</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__log__custom__type">metacall_log_custom</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7">metacall_log_id</link> { 
+<link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a6357e4ecfdf3d9f96f9207af06b1d002">METACALL_LOG_STDIO</link>, 
+<link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a0051a8d3f261458446db0fa240b37af8">METACALL_LOG_FILE</link>, 
+<link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a659dd67075b0d382d8cb6013047ac69f">METACALL_LOG_SOCKET</link>, 
+<link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a055db1261857d95be30c586cc52240e8">METACALL_LOG_SYSLOG</link>, 
+
+<link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a070d1a0618197fe7df1a7d315958cc6b">METACALL_LOG_NGINX</link>, 
+<link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a42d7f5a9da887616c7c5f0fdc95d358a">METACALL_LOG_CUSTOM</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>METACALL_API int <link linkend="_metacall__log_8h_1a2e92c228a8b23152bb8aeecb05047b5b">metacall_log</link> (enum <link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7">metacall_log_id</link> log_id, void *ctx)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7"/>    <section>
+    <title>metacall_log_id</title>
+<indexterm><primary>metacall_log_id</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>metacall_log_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7">metacall_log_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>METACALL_LOG_STDIO</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>METACALL_LOG_STDIO</secondary></indexterm>
+<anchor xml:id="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a6357e4ecfdf3d9f96f9207af06b1d002"/>METACALL_LOG_STDIO</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_LOG_FILE</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>METACALL_LOG_FILE</secondary></indexterm>
+<anchor xml:id="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a0051a8d3f261458446db0fa240b37af8"/>METACALL_LOG_FILE</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_LOG_SOCKET</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>METACALL_LOG_SOCKET</secondary></indexterm>
+<anchor xml:id="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a659dd67075b0d382d8cb6013047ac69f"/>METACALL_LOG_SOCKET</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_LOG_SYSLOG</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>METACALL_LOG_SYSLOG</secondary></indexterm>
+<anchor xml:id="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a055db1261857d95be30c586cc52240e8"/>METACALL_LOG_SYSLOG</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_LOG_NGINX</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>METACALL_LOG_NGINX</secondary></indexterm>
+<anchor xml:id="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a070d1a0618197fe7df1a7d315958cc6b"/>METACALL_LOG_NGINX</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_LOG_CUSTOM</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>METACALL_LOG_CUSTOM</secondary></indexterm>
+<anchor xml:id="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a42d7f5a9da887616c7c5f0fdc95d358a"/>METACALL_LOG_CUSTOM</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_metacall__log_8h_1a2e92c228a8b23152bb8aeecb05047b5b"/>    <section>
+    <title>metacall_log()</title>
+<indexterm><primary>metacall_log</primary><secondary>metacall_log.h</secondary></indexterm>
+<indexterm><primary>metacall_log.h</primary><secondary>metacall_log</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_log (enum <link linkend="_metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7">metacall_log_id</link> log_id, void * ctx)</computeroutput></para><para>
+
+<para>Create a log instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>log_id</entry>
+                                <entry>
+<para>Type of log to be created</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ctx</entry>
+                                <entry>
+<para>Context of the log (a pointer to metacall_log_{stdio, file, socket, syslog, nginx, custom}_type)</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

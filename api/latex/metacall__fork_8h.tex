@@ -1,0 +1,88 @@
+\doxysection{metacall\+\_\+fork.\+h File Reference}
+\label{metacall__fork_8h}\index{metacall\_fork.h@{metacall\_fork.h}}
+{\ttfamily \#include $<$metacall/metacall\+\_\+api.\+h$>$}\newline
+Include dependency graph for metacall\+\_\+fork.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{metacall__fork_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \textbf{ metacall\+\_\+pre\+\_\+fork\+\_\+callback\+\_\+ptr}) (void $\ast$)
+\item 
+typedef int($\ast$ \textbf{ metacall\+\_\+post\+\_\+fork\+\_\+callback\+\_\+ptr}) (metacall\+\_\+pid, void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+fork\+\_\+initialize} (void)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+fork} (\textbf{ metacall\+\_\+pre\+\_\+fork\+\_\+callback\+\_\+ptr} pre\+\_\+callback, \textbf{ metacall\+\_\+post\+\_\+fork\+\_\+callback\+\_\+ptr} post\+\_\+callback)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+fork\+\_\+destroy} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{metacall__fork_8h_a08d637d91639b7d99f67ecb5bb4fe8f3}} 
+\index{metacall\_fork.h@{metacall\_fork.h}!metacall\_pre\_fork\_callback\_ptr@{metacall\_pre\_fork\_callback\_ptr}}
+\index{metacall\_pre\_fork\_callback\_ptr@{metacall\_pre\_fork\_callback\_ptr}!metacall\_fork.h@{metacall\_fork.h}}
+\doxysubsubsection{metacall\_pre\_fork\_callback\_ptr}
+{\footnotesize\ttfamily typedef int($\ast$ metacall\+\_\+pre\+\_\+fork\+\_\+callback\+\_\+ptr) (void $\ast$)}
+
+\mbox{\label{metacall__fork_8h_af7ebd3032b9a59f483098feb6055ca54}} 
+\index{metacall\_fork.h@{metacall\_fork.h}!metacall\_post\_fork\_callback\_ptr@{metacall\_post\_fork\_callback\_ptr}}
+\index{metacall\_post\_fork\_callback\_ptr@{metacall\_post\_fork\_callback\_ptr}!metacall\_fork.h@{metacall\_fork.h}}
+\doxysubsubsection{metacall\_post\_fork\_callback\_ptr}
+{\footnotesize\ttfamily typedef int($\ast$ metacall\+\_\+post\+\_\+fork\+\_\+callback\+\_\+ptr) (metacall\+\_\+pid, void $\ast$)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{metacall__fork_8h_a2ddac237388f8543cfdf7343df7270ed}} 
+\index{metacall\_fork.h@{metacall\_fork.h}!metacall\_fork\_initialize@{metacall\_fork\_initialize}}
+\index{metacall\_fork\_initialize@{metacall\_fork\_initialize}!metacall\_fork.h@{metacall\_fork.h}}
+\doxysubsubsection{metacall\_fork\_initialize()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+fork\+\_\+initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize fork detours and allocate shared memory. 
+
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall__fork_8h_af3ee5698e71e05e892a64c2c0ba66d3a}} 
+\index{metacall\_fork.h@{metacall\_fork.h}!metacall\_fork@{metacall\_fork}}
+\index{metacall\_fork@{metacall\_fork}!metacall\_fork.h@{metacall\_fork.h}}
+\doxysubsubsection{metacall\_fork()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+fork (\begin{DoxyParamCaption}\item[{\textbf{ metacall\+\_\+pre\+\_\+fork\+\_\+callback\+\_\+ptr}}]{pre\+\_\+callback,  }\item[{\textbf{ metacall\+\_\+post\+\_\+fork\+\_\+callback\+\_\+ptr}}]{post\+\_\+callback }\end{DoxyParamCaption})}
+
+
+
+Set fork hook callback. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pre\+\_\+callback} & Callback to be called before fork detour is executed\\
+\hline
+\mbox{\texttt{ in}}  & {\em post\+\_\+callback} & Callback to be called after fork detour is executed \\
+\hline
+\end{DoxyParams}
+\mbox{\label{metacall__fork_8h_ada8919e4e89d7933277c197b47be5271}} 
+\index{metacall\_fork.h@{metacall\_fork.h}!metacall\_fork\_destroy@{metacall\_fork\_destroy}}
+\index{metacall\_fork\_destroy@{metacall\_fork\_destroy}!metacall\_fork.h@{metacall\_fork.h}}
+\doxysubsubsection{metacall\_fork\_destroy()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+fork\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Unregister fork detours and destroy shared memory. 
+
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}

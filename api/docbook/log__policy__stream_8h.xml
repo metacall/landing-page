@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__policy__stream_8h">
+<title>log_policy_stream.h File Reference</title>
+<indexterm><primary>log_policy_stream.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_policy.h&gt;
+#include &lt;log/log_policy_stream_custom.h&gt;
+#include &lt;log/log_policy_stream_file.h&gt;
+#include &lt;log/log_policy_stream_nginx.h&gt;
+#include &lt;log/log_policy_stream_socket.h&gt;
+#include &lt;log/log_policy_stream_stdio.h&gt;
+#include &lt;log/log_policy_stream_syslog.h&gt;
+</programlisting>Include dependency graph for log_policy_stream.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__stream_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__stream_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structlog__policy__stream__impl__type">log_policy_stream_impl</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef int(* <link linkend="_log__policy__stream_8h_1ac479b6c374d4c959d0c86f707585acb3">log_policy_stream_write</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const void *, const size_t)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy__stream_8h_1aa772c066e1212d7dabd1394a85f3e1ca">log_policy_stream_flush</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471">log_policy_stream_id</link> { 
+<link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a869135cbc9e7e3abdad3a384a74a2140">LOG_POLICY_STREAM_FILE</link> = 0x00, 
+<link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a4169b88ca67bce89fc74d3c5dba356f1">LOG_POLICY_STREAM_NGINX</link> = 0x01, 
+<link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471aefe72199e3046c572f62ddafcfc6a3a3">LOG_POLICY_STREAM_SOCKET</link> = 0x02, 
+<link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a56c93ad706604b4b86b24a35c0318677">LOG_POLICY_STREAM_STDIO</link> = 0x03, 
+
+<link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a79b2c6abb13c1d12d55fe7b263b1c071">LOG_POLICY_STREAM_SYSLOG</link> = 0x04, 
+<link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a3e85ea5a72c2d9ad9a245e0a844c012b">LOG_POLICY_STREAM_CUSTOM</link> = 0x05, 
+<link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471ac3ef5a0b5d4057eb88afc04a76f03bf2">LOG_POLICY_STREAM_SIZE</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API log_policy_interface <link linkend="_log__policy__stream_8h_1a6ee12bc4a0fe41c624ff4330ca596f31">log_policy_stream</link> (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_stream_id)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__stream_8h_1aa6f119bf6d8c99a0dc8cea500bbd78c0">log_policy_stream_file</link> (const char *file_name, const char *mode)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__stream_8h_1a24e6abd5e2a37bc91d9619f39b859338">log_policy_stream_nginx</link> (<link linkend="_log__policy__stream__nginx_8h_1ab7b6ae6d28d18567a127387302fa88c9">ngx_log_t</link> *ngx_log_ptr, void(*ngx_error_ptr)(), uint16_t ngx_log_level)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__stream_8h_1a4b3fcc5ec7f59b7543e247dba2c0fae0">log_policy_stream_socket</link> (const char *ip, uint16_t port)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__stream_8h_1a4160d9d860af6eed0af334091305cb65">log_policy_stream_stdio</link> (FILE *stream)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__stream_8h_1a5fa6dd78edfe0a559501f90b3fdefba7">log_policy_stream_syslog</link> (const char *name)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__stream_8h_1ac0f8549ea7e00ba0eb2798d938696af7">log_policy_stream_custom</link> (void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>, int(*stream_write)(void *, const char *, const size_t), int(*stream_flush)(void *))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__policy__stream_8h_1ac479b6c374d4c959d0c86f707585acb3"/>    <section>
+    <title>log_policy_stream_write</title>
+<indexterm><primary>log_policy_stream_write</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_write</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_stream_write) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const void *, const size_t)</computeroutput></para>    </section><anchor xml:id="_log__policy__stream_8h_1aa772c066e1212d7dabd1394a85f3e1ca"/>    <section>
+    <title>log_policy_stream_flush</title>
+<indexterm><primary>log_policy_stream_flush</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_flush</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_stream_flush) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471"/>    <section>
+    <title>log_policy_stream_id</title>
+<indexterm><primary>log_policy_stream_id</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471">log_policy_stream_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LOG_POLICY_STREAM_FILE</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>LOG_POLICY_STREAM_FILE</secondary></indexterm>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a869135cbc9e7e3abdad3a384a74a2140"/>LOG_POLICY_STREAM_FILE</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STREAM_NGINX</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>LOG_POLICY_STREAM_NGINX</secondary></indexterm>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a4169b88ca67bce89fc74d3c5dba356f1"/>LOG_POLICY_STREAM_NGINX</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STREAM_SOCKET</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>LOG_POLICY_STREAM_SOCKET</secondary></indexterm>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471aefe72199e3046c572f62ddafcfc6a3a3"/>LOG_POLICY_STREAM_SOCKET</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STREAM_STDIO</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>LOG_POLICY_STREAM_STDIO</secondary></indexterm>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a56c93ad706604b4b86b24a35c0318677"/>LOG_POLICY_STREAM_STDIO</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STREAM_SYSLOG</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>LOG_POLICY_STREAM_SYSLOG</secondary></indexterm>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a79b2c6abb13c1d12d55fe7b263b1c071"/>LOG_POLICY_STREAM_SYSLOG</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STREAM_CUSTOM</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>LOG_POLICY_STREAM_CUSTOM</secondary></indexterm>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471a3e85ea5a72c2d9ad9a245e0a844c012b"/>LOG_POLICY_STREAM_CUSTOM</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STREAM_SIZE</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>LOG_POLICY_STREAM_SIZE</secondary></indexterm>
+<anchor xml:id="_log__policy__stream_8h_1a26c02086d4e3a6d66e33071814e7a471ac3ef5a0b5d4057eb88afc04a76f03bf2"/>LOG_POLICY_STREAM_SIZE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__policy__stream_8h_1a6ee12bc4a0fe41c624ff4330ca596f31"/>    <section>
+    <title>log_policy_stream()</title>
+<indexterm><primary>log_policy_stream</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream</secondary></indexterm>
+<para><computeroutput>LOG_API log_policy_interface log_policy_stream (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_stream_id)</computeroutput></para>    </section><anchor xml:id="_log__policy__stream_8h_1aa6f119bf6d8c99a0dc8cea500bbd78c0"/>    <section>
+    <title>log_policy_stream_file()</title>
+<indexterm><primary>log_policy_stream_file</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_file</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_stream_file (const char * file_name, const char * mode)</computeroutput></para>    </section><anchor xml:id="_log__policy__stream_8h_1a24e6abd5e2a37bc91d9619f39b859338"/>    <section>
+    <title>log_policy_stream_nginx()</title>
+<indexterm><primary>log_policy_stream_nginx</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_nginx</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_stream_nginx (<link linkend="_log__policy__stream__nginx_8h_1ab7b6ae6d28d18567a127387302fa88c9">ngx_log_t</link> * ngx_log_ptr, void(*)() ngx_error_ptr, uint16_t ngx_log_level)</computeroutput></para>    </section><anchor xml:id="_log__policy__stream_8h_1a4b3fcc5ec7f59b7543e247dba2c0fae0"/>    <section>
+    <title>log_policy_stream_socket()</title>
+<indexterm><primary>log_policy_stream_socket</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_socket</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_stream_socket (const char * ip, uint16_t port)</computeroutput></para>    </section><anchor xml:id="_log__policy__stream_8h_1a4160d9d860af6eed0af334091305cb65"/>    <section>
+    <title>log_policy_stream_stdio()</title>
+<indexterm><primary>log_policy_stream_stdio</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_stdio</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_stream_stdio (FILE * stream)</computeroutput></para>    </section><anchor xml:id="_log__policy__stream_8h_1a5fa6dd78edfe0a559501f90b3fdefba7"/>    <section>
+    <title>log_policy_stream_syslog()</title>
+<indexterm><primary>log_policy_stream_syslog</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_syslog</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_stream_syslog (const char * name)</computeroutput></para>    </section><anchor xml:id="_log__policy__stream_8h_1ac0f8549ea7e00ba0eb2798d938696af7"/>    <section>
+    <title>log_policy_stream_custom()</title>
+<indexterm><primary>log_policy_stream_custom</primary><secondary>log_policy_stream.h</secondary></indexterm>
+<indexterm><primary>log_policy_stream.h</primary><secondary>log_policy_stream_custom</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_stream_custom (void * context, int(*)(void *, const char *, const size_t) stream_write, int(*)(void *) stream_flush)</computeroutput></para></section>
+</section>
+</section>

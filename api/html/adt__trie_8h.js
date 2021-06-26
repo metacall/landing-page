@@ -1,0 +1,25 @@
+var adt__trie_8h =
+[
+    [ "trie", "adt__trie_8h.html#a9ec8df0516e6be2086a47876aa3c23ea", null ],
+    [ "trie_hash", "adt__trie_8h.html#ab8c8392df0a62886d7d670908aca7dac", null ],
+    [ "trie_key", "adt__trie_8h.html#a915a87e1342541e40a567f8abea11b44", null ],
+    [ "trie_value", "adt__trie_8h.html#ada14186252ab60115e4dc0017ede3ce9", null ],
+    [ "trie_cb_iterate_args", "adt__trie_8h.html#af24c089862b5865cee995d834accbb9a", null ],
+    [ "trie_cb_hash", "adt__trie_8h.html#aa74044b4a37abcba9705e137201de7a4", null ],
+    [ "trie_cb_compare", "adt__trie_8h.html#a5042b2f6f945ad840719384c2f0e677f", null ],
+    [ "trie_cb_iterate", "adt__trie_8h.html#adb0189e8df46e679519fe15a269e4130", null ],
+    [ "trie_create", "adt__trie_8h.html#ace480faefba0d60a456e5488cbbe34ea", null ],
+    [ "trie_create_reserve", "adt__trie_8h.html#acd742e8bd78713c67222448135134e5a", null ],
+    [ "trie_size", "adt__trie_8h.html#aa459e92fd29efa3b108fd43e24ad86a9", null ],
+    [ "trie_capacity", "adt__trie_8h.html#a9e53e530c646d5036ab451d5cfe19b69", null ],
+    [ "trie_insert", "adt__trie_8h.html#ab3a999ef9a696b8bcba287bba844df75", null ],
+    [ "trie_get", "adt__trie_8h.html#af73239b8dee66757d5ecbc5ff8110d5a", null ],
+    [ "trie_remove", "adt__trie_8h.html#ab88d59d5c24291946b62c6e53f90cf4e", null ],
+    [ "trie_iterate_recursive", "adt__trie_8h.html#a83ec8301fa64e2f07de788362cab315b", null ],
+    [ "trie_iterate", "adt__trie_8h.html#a4780dad91d0124f849781a7c9677842b", null ],
+    [ "trie_append", "adt__trie_8h.html#a96afe437e9e3f50a6b7736d2efb63781", null ],
+    [ "trie_clear", "adt__trie_8h.html#a7b7cea299acb515f25ba560f5d9ce077", null ],
+    [ "trie_prefixes", "adt__trie_8h.html#a931493cfc03d05321988116ed51f1ef7", null ],
+    [ "trie_suffixes", "adt__trie_8h.html#a70a6d5ed35e9bf656a677785866cddde", null ],
+    [ "trie_destroy", "adt__trie_8h.html#a0f224cfe6db8901ab71a9992eb7a09fc", null ]
+];

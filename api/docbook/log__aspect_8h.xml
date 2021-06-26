@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__aspect_8h">
+<title>log_aspect.h File Reference</title>
+<indexterm><primary>log_aspect.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for log_aspect.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__aspect_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__aspect_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structlog__aspect__interface__type">log_aspect_interface</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct log_policy_type * <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def">log_aspect_impl</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_log__aspect_8h_1abe9000f019615c7ea241c590d8514f57">log_aspect_data</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e">log_aspect_ctor</link></para>
+</listitem>
+            <listitem><para>typedef struct log_aspect_type * <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link></para>
+</listitem>
+            <listitem><para>typedef struct log_impl_type * <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link></para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53">log_aspect_restrict_cb</link>) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e">log_aspect_notify_cb</link>) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link>)</para>
+</listitem>
+            <listitem><para>typedef <link linkend="_log__aspect_8h_1abe9000f019615c7ea241c590d8514f57">log_aspect_data</link>(* <link linkend="_log__aspect_8h_1aad7fb7f87b60842d5593838cdc1c9bfd">log_aspect_impl_create</link>) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>, const <link linkend="_log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e">log_aspect_ctor</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__aspect_8h_1af445703b027dc7055f6bd76e856d1357">log_aspect_impl_destroy</link>) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>)</para>
+</listitem>
+            <listitem><para>typedef log_aspect_interface(* <link linkend="_log__aspect_8h_1ab67dada17f8fbc73e2bce122469af278">log_aspect_singleton</link>) (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319">log_aspect_id</link> { 
+<link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319a6cd1cea2305e0697b7c9f604f5e40446">LOG_ASPECT_FORMAT</link> = 0x00, 
+<link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319ac0cda2b1be0ad928a3dd6b1284f1af27">LOG_ASPECT_SCHEDULE</link> = 0x01, 
+<link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795">LOG_ASPECT_STORAGE</link> = 0x02, 
+<link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49">LOG_ASPECT_STREAM</link> = 0x03, 
+
+<link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a">LOG_ASPECT_SIZE</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> <link linkend="_log__aspect_8h_1a750966e98b30e53f100dc0df28450f3c">log_aspect_create</link> (<link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> impl, const log_aspect_interface iface, const <link linkend="_log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e">log_aspect_ctor</link> ctor)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__aspect_8h_1ab96281d08b293b8cccdccb8d8447496e">log_aspect_reserve</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, size_t size)</para>
+</listitem>
+            <listitem><para>LOG_API void <link linkend="_log__aspect_8h_1ac726a21fe89be520fbe8bdabf2fae75d">log_aspect_restrict</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53">log_aspect_restrict_cb</link> restrict_cb)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1abe9000f019615c7ea241c590d8514f57">log_aspect_data</link> <link linkend="_log__aspect_8h_1a6d0d1689b238560ed1bd76f45e4c4244">log_aspect_instance</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</para>
+</listitem>
+            <listitem><para>LOG_API log_aspect_interface <link linkend="_log__aspect_8h_1a2df568ec2954b0d7f26e354d9df825a5">log_aspect_behavior</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> <link linkend="_log__aspect_8h_1ab2450eed6d6b6424b757c11820cededc">log_aspect_parent</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def">log_aspect_impl</link> <link linkend="_log__aspect_8h_1a730839e0b6a6eefd2ea4e9786bf58981">log_aspect_derived</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__aspect_8h_1a458957aaa98f5048fc2a963744c5e4d2">log_aspect_attach</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__aspect_8h_1a7b6e8b6850a7423a54979e97a110a9ed">log_aspect_notify_first</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e">log_aspect_notify_cb</link> notify_cb, <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link> notify_data)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__aspect_8h_1a2d04670ab049a9f7afe09a76f837e94f">log_aspect_notify_all</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e">log_aspect_notify_cb</link> notify_cb, <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link> notify_data)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__aspect_8h_1a1d6f908bead87827c72185748bfa54d5">log_aspect_detach</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__aspect_8h_1a1cf48dca81a16598c732e9221eca66e0">log_aspect_destroy</link> (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe"/>    <section>
+    <title>log_policy</title>
+<indexterm><primary>log_policy</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_policy</secondary></indexterm>
+<para><computeroutput>typedef struct log_policy_type* <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link></computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def"/>    <section>
+    <title>log_aspect_impl</title>
+<indexterm><primary>log_aspect_impl</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_impl</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def">log_aspect_impl</link></computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1abe9000f019615c7ea241c590d8514f57"/>    <section>
+    <title>log_aspect_data</title>
+<indexterm><primary>log_aspect_data</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_data</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__aspect_8h_1abe9000f019615c7ea241c590d8514f57">log_aspect_data</link></computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e"/>    <section>
+    <title>log_aspect_ctor</title>
+<indexterm><primary>log_aspect_ctor</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_ctor</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e">log_aspect_ctor</link></computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6"/>    <section>
+    <title>log_aspect</title>
+<indexterm><primary>log_aspect</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect</secondary></indexterm>
+<para><computeroutput>typedef struct log_aspect_type* <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link></computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba"/>    <section>
+    <title>log_aspect_notify_data</title>
+<indexterm><primary>log_aspect_notify_data</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_notify_data</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link></computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265"/>    <section>
+    <title>log_impl</title>
+<indexterm><primary>log_impl</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_impl</secondary></indexterm>
+<para><computeroutput>typedef struct log_impl_type* <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link></computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53"/>    <section>
+    <title>log_aspect_restrict_cb</title>
+<indexterm><primary>log_aspect_restrict_cb</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_restrict_cb</secondary></indexterm>
+<para><computeroutput>typedef int(* log_aspect_restrict_cb) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e"/>    <section>
+    <title>log_aspect_notify_cb</title>
+<indexterm><primary>log_aspect_notify_cb</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_notify_cb</secondary></indexterm>
+<para><computeroutput>typedef int(* log_aspect_notify_cb) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link>)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1aad7fb7f87b60842d5593838cdc1c9bfd"/>    <section>
+    <title>log_aspect_impl_create</title>
+<indexterm><primary>log_aspect_impl_create</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_impl_create</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_log__aspect_8h_1abe9000f019615c7ea241c590d8514f57">log_aspect_data</link>(* log_aspect_impl_create) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>, const <link linkend="_log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e">log_aspect_ctor</link>)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1af445703b027dc7055f6bd76e856d1357"/>    <section>
+    <title>log_aspect_impl_destroy</title>
+<indexterm><primary>log_aspect_impl_destroy</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_impl_destroy</secondary></indexterm>
+<para><computeroutput>typedef int(* log_aspect_impl_destroy) (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link>)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1ab67dada17f8fbc73e2bce122469af278"/>    <section>
+    <title>log_aspect_singleton</title>
+<indexterm><primary>log_aspect_singleton</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_singleton</secondary></indexterm>
+<para><computeroutput>typedef log_aspect_interface(* log_aspect_singleton) (void)</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319"/>    <section>
+    <title>log_aspect_id</title>
+<indexterm><primary>log_aspect_id</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319">log_aspect_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LOG_ASPECT_FORMAT</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>LOG_ASPECT_FORMAT</secondary></indexterm>
+<anchor xml:id="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319a6cd1cea2305e0697b7c9f604f5e40446"/>LOG_ASPECT_FORMAT</entry><entry></entry></row><row><entry><indexterm><primary>LOG_ASPECT_SCHEDULE</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>LOG_ASPECT_SCHEDULE</secondary></indexterm>
+<anchor xml:id="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319ac0cda2b1be0ad928a3dd6b1284f1af27"/>LOG_ASPECT_SCHEDULE</entry><entry></entry></row><row><entry><indexterm><primary>LOG_ASPECT_STORAGE</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>LOG_ASPECT_STORAGE</secondary></indexterm>
+<anchor xml:id="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795"/>LOG_ASPECT_STORAGE</entry><entry></entry></row><row><entry><indexterm><primary>LOG_ASPECT_STREAM</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>LOG_ASPECT_STREAM</secondary></indexterm>
+<anchor xml:id="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49"/>LOG_ASPECT_STREAM</entry><entry></entry></row><row><entry><indexterm><primary>LOG_ASPECT_SIZE</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>LOG_ASPECT_SIZE</secondary></indexterm>
+<anchor xml:id="_log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a"/>LOG_ASPECT_SIZE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__aspect_8h_1a750966e98b30e53f100dc0df28450f3c"/>    <section>
+    <title>log_aspect_create()</title>
+<indexterm><primary>log_aspect_create</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_create</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> log_aspect_create (<link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> impl, const log_aspect_interface iface, const <link linkend="_log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e">log_aspect_ctor</link> ctor)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1ab96281d08b293b8cccdccb8d8447496e"/>    <section>
+    <title>log_aspect_reserve()</title>
+<indexterm><primary>log_aspect_reserve</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_reserve</secondary></indexterm>
+<para><computeroutput>LOG_API int log_aspect_reserve (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, size_t size)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1ac726a21fe89be520fbe8bdabf2fae75d"/>    <section>
+    <title>log_aspect_restrict()</title>
+<indexterm><primary>log_aspect_restrict</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_restrict</secondary></indexterm>
+<para><computeroutput>LOG_API void log_aspect_restrict (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53">log_aspect_restrict_cb</link> restrict_cb)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a6d0d1689b238560ed1bd76f45e4c4244"/>    <section>
+    <title>log_aspect_instance()</title>
+<indexterm><primary>log_aspect_instance</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_instance</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1abe9000f019615c7ea241c590d8514f57">log_aspect_data</link> log_aspect_instance (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a2df568ec2954b0d7f26e354d9df825a5"/>    <section>
+    <title>log_aspect_behavior()</title>
+<indexterm><primary>log_aspect_behavior</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_behavior</secondary></indexterm>
+<para><computeroutput>LOG_API log_aspect_interface log_aspect_behavior (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1ab2450eed6d6b6424b757c11820cededc"/>    <section>
+    <title>log_aspect_parent()</title>
+<indexterm><primary>log_aspect_parent</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_parent</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> log_aspect_parent (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a730839e0b6a6eefd2ea4e9786bf58981"/>    <section>
+    <title>log_aspect_derived()</title>
+<indexterm><primary>log_aspect_derived</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_derived</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def">log_aspect_impl</link> log_aspect_derived (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a458957aaa98f5048fc2a963744c5e4d2"/>    <section>
+    <title>log_aspect_attach()</title>
+<indexterm><primary>log_aspect_attach</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_attach</secondary></indexterm>
+<para><computeroutput>LOG_API int log_aspect_attach (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a7b6e8b6850a7423a54979e97a110a9ed"/>    <section>
+    <title>log_aspect_notify_first()</title>
+<indexterm><primary>log_aspect_notify_first</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_notify_first</secondary></indexterm>
+<para><computeroutput>LOG_API int log_aspect_notify_first (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e">log_aspect_notify_cb</link> notify_cb, <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link> notify_data)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a2d04670ab049a9f7afe09a76f837e94f"/>    <section>
+    <title>log_aspect_notify_all()</title>
+<indexterm><primary>log_aspect_notify_all</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_notify_all</secondary></indexterm>
+<para><computeroutput>LOG_API int log_aspect_notify_all (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e">log_aspect_notify_cb</link> notify_cb, <link linkend="_log__aspect_8h_1a76a6607ceaf40594a794165de892acba">log_aspect_notify_data</link> notify_data)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a1d6f908bead87827c72185748bfa54d5"/>    <section>
+    <title>log_aspect_detach()</title>
+<indexterm><primary>log_aspect_detach</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_detach</secondary></indexterm>
+<para><computeroutput>LOG_API int log_aspect_detach (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect, <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> policy)</computeroutput></para>    </section><anchor xml:id="_log__aspect_8h_1a1cf48dca81a16598c732e9221eca66e0"/>    <section>
+    <title>log_aspect_destroy()</title>
+<indexterm><primary>log_aspect_destroy</primary><secondary>log_aspect.h</secondary></indexterm>
+<indexterm><primary>log_aspect.h</primary><secondary>log_aspect_destroy</secondary></indexterm>
+<para><computeroutput>LOG_API int log_aspect_destroy (<link linkend="_log__aspect_8h_1ae7e032134723b129bce39846005c1bf6">log_aspect</link> aspect)</computeroutput></para></section>
+</section>
+</section>

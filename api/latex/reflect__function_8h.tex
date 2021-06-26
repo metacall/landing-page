@@ -1,0 +1,255 @@
+\doxysection{reflect\+\_\+function.\+h File Reference}
+\label{reflect__function_8h}\index{reflect\_function.h@{reflect\_function.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+signature.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
+Include dependency graph for reflect\+\_\+function.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{reflect__function_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{reflect__function_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ function\+\_\+interface}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \textbf{ function\+\_\+impl}
+\item 
+typedef struct function\+\_\+type $\ast$ \textbf{ function}
+\item 
+typedef void $\ast$ \textbf{ function\+\_\+args}[$\,$]
+\item 
+typedef \textbf{ value} \textbf{ function\+\_\+return}
+\item 
+typedef \textbf{ value}($\ast$ \textbf{ function\+\_\+resolve\+\_\+callback}) (\textbf{ value}, void $\ast$)
+\item 
+typedef \textbf{ value}($\ast$ \textbf{ function\+\_\+reject\+\_\+callback}) (\textbf{ value}, void $\ast$)
+\item 
+typedef int($\ast$ \textbf{ function\+\_\+impl\+\_\+interface\+\_\+create}) (\textbf{ function}, \textbf{ function\+\_\+impl})
+\item 
+typedef \textbf{ function\+\_\+return}($\ast$ \textbf{ function\+\_\+impl\+\_\+interface\+\_\+invoke}) (\textbf{ function}, \textbf{ function\+\_\+impl}, \textbf{ function\+\_\+args}, size\+\_\+t)
+\item 
+typedef \textbf{ function\+\_\+return}($\ast$ \textbf{ function\+\_\+impl\+\_\+interface\+\_\+await}) (\textbf{ function}, \textbf{ function\+\_\+impl}, \textbf{ function\+\_\+args}, size\+\_\+t, \textbf{ function\+\_\+resolve\+\_\+callback}, \textbf{ function\+\_\+reject\+\_\+callback}, void $\ast$)
+\item 
+typedef void($\ast$ \textbf{ function\+\_\+impl\+\_\+interface\+\_\+destroy}) (\textbf{ function}, \textbf{ function\+\_\+impl})
+\item 
+typedef function\+\_\+interface($\ast$ \textbf{ function\+\_\+impl\+\_\+interface\+\_\+singleton}) (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ function\+\_\+async\+\_\+id} \{ \textbf{ F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+Y\+NC} = 0, 
+\textbf{ F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+S\+Y\+NC} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function} \textbf{ function\+\_\+create} (const char $\ast$name, size\+\_\+t args\+\_\+count, \textbf{ function\+\_\+impl} impl, \textbf{ function\+\_\+impl\+\_\+interface\+\_\+singleton} singleton)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ function\+\_\+increment\+\_\+reference} (\textbf{ function} func)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ function\+\_\+decrement\+\_\+reference} (\textbf{ function} func)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+async} (\textbf{ function} func, enum \textbf{ function\+\_\+async\+\_\+id} async)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI enum \textbf{ function\+\_\+async\+\_\+id} \textbf{ function\+\_\+async\+\_\+id} (\textbf{ function} func)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+bind} (\textbf{ function} func, void $\ast$data)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ function\+\_\+closure} (\textbf{ function} func)
+\item 
+const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ function\+\_\+name} (\textbf{ function} func)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ signature} \textbf{ function\+\_\+signature} (\textbf{ function} func)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ function\+\_\+metadata} (\textbf{ function} func)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function\+\_\+return} \textbf{ function\+\_\+call} (\textbf{ function} func, \textbf{ function\+\_\+args} args, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function\+\_\+return} \textbf{ function\+\_\+await} (\textbf{ function} func, \textbf{ function\+\_\+args} args, size\+\_\+t size, \textbf{ function\+\_\+resolve\+\_\+callback} resolve\+\_\+callback, \textbf{ function\+\_\+reject\+\_\+callback} reject\+\_\+callback, void $\ast$\textbf{ context})
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+destroy} (\textbf{ function} func)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{reflect__function_8h_a12e83b3665a651995433eec50acdcf89}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_impl@{function\_impl}}
+\index{function\_impl@{function\_impl}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_impl}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ function\+\_\+impl}}
+
+\mbox{\label{reflect__function_8h_a953b9b92e7e0b17b663e13f2e92177aa}} 
+\index{reflect\_function.h@{reflect\_function.h}!function@{function}}
+\index{function@{function}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function}
+{\footnotesize\ttfamily typedef struct function\+\_\+type$\ast$ \textbf{ function}}
+
+\mbox{\label{reflect__function_8h_ac0b514567378b0111b64c4df8c77a220}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_args@{function\_args}}
+\index{function\_args@{function\_args}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_args}
+{\footnotesize\ttfamily typedef void$\ast$ function\+\_\+args[$\,$]}
+
+\mbox{\label{reflect__function_8h_ab0c2bc43f379e346cc9693892bccfea1}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_return@{function\_return}}
+\index{function\_return@{function\_return}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_return}
+{\footnotesize\ttfamily typedef \textbf{ value} \textbf{ function\+\_\+return}}
+
+\mbox{\label{reflect__function_8h_a18231033bc347c9868e9e27983fd06c5}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_resolve\_callback@{function\_resolve\_callback}}
+\index{function\_resolve\_callback@{function\_resolve\_callback}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_resolve\_callback}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ function\+\_\+resolve\+\_\+callback) (\textbf{ value}, void $\ast$)}
+
+\mbox{\label{reflect__function_8h_a7b5b3717fa4870e36a787047398f68ec}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_reject\_callback@{function\_reject\_callback}}
+\index{function\_reject\_callback@{function\_reject\_callback}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_reject\_callback}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ function\+\_\+reject\+\_\+callback) (\textbf{ value}, void $\ast$)}
+
+\mbox{\label{reflect__function_8h_ae64966150dd1d74eea1c434d558d8cfd}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_impl\_interface\_create@{function\_impl\_interface\_create}}
+\index{function\_impl\_interface\_create@{function\_impl\_interface\_create}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_impl\_interface\_create}
+{\footnotesize\ttfamily typedef int($\ast$ function\+\_\+impl\+\_\+interface\+\_\+create) (\textbf{ function}, \textbf{ function\+\_\+impl})}
+
+\mbox{\label{reflect__function_8h_a16be39ef3fdd557661a85fee4f5d54b1}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_impl\_interface\_invoke@{function\_impl\_interface\_invoke}}
+\index{function\_impl\_interface\_invoke@{function\_impl\_interface\_invoke}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_impl\_interface\_invoke}
+{\footnotesize\ttfamily typedef \textbf{ function\+\_\+return}($\ast$ function\+\_\+impl\+\_\+interface\+\_\+invoke) (\textbf{ function}, \textbf{ function\+\_\+impl}, \textbf{ function\+\_\+args}, size\+\_\+t)}
+
+\mbox{\label{reflect__function_8h_ad5fee2d03c9d6a4fea8f9a8097ef0339}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_impl\_interface\_await@{function\_impl\_interface\_await}}
+\index{function\_impl\_interface\_await@{function\_impl\_interface\_await}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_impl\_interface\_await}
+{\footnotesize\ttfamily typedef \textbf{ function\+\_\+return}($\ast$ function\+\_\+impl\+\_\+interface\+\_\+await) (\textbf{ function}, \textbf{ function\+\_\+impl}, \textbf{ function\+\_\+args}, size\+\_\+t, \textbf{ function\+\_\+resolve\+\_\+callback}, \textbf{ function\+\_\+reject\+\_\+callback}, void $\ast$)}
+
+\mbox{\label{reflect__function_8h_aefd4a5abb695deff8cb131f873232ae8}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_impl\_interface\_destroy@{function\_impl\_interface\_destroy}}
+\index{function\_impl\_interface\_destroy@{function\_impl\_interface\_destroy}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_impl\_interface\_destroy}
+{\footnotesize\ttfamily typedef void($\ast$ function\+\_\+impl\+\_\+interface\+\_\+destroy) (\textbf{ function}, \textbf{ function\+\_\+impl})}
+
+\mbox{\label{reflect__function_8h_a6cc96ba0bf4a09fffea8c09de6af63af}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_impl\_interface\_singleton@{function\_impl\_interface\_singleton}}
+\index{function\_impl\_interface\_singleton@{function\_impl\_interface\_singleton}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_impl\_interface\_singleton}
+{\footnotesize\ttfamily typedef function\+\_\+interface($\ast$ function\+\_\+impl\+\_\+interface\+\_\+singleton) (void)}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{reflect__function_8h_ab5d5a2179fc6a44b98705c25b6995795}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_async\_id@{function\_async\_id}}
+\index{function\_async\_id@{function\_async\_id}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_async\_id}
+{\footnotesize\ttfamily enum \textbf{ function\+\_\+async\+\_\+id}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCTION\_SYNC@{FUNCTION\_SYNC}!reflect\_function.h@{reflect\_function.h}}\index{reflect\_function.h@{reflect\_function.h}!FUNCTION\_SYNC@{FUNCTION\_SYNC}}}\mbox{\label{reflect__function_8h_ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28}} 
+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+Y\+NC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCTION\_ASYNC@{FUNCTION\_ASYNC}!reflect\_function.h@{reflect\_function.h}}\index{reflect\_function.h@{reflect\_function.h}!FUNCTION\_ASYNC@{FUNCTION\_ASYNC}}}\mbox{\label{reflect__function_8h_ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28}} 
+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+S\+Y\+NC&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{reflect__function_8h_a6aa2df1f3525beb9952a226ba4176131}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_create@{function\_create}}
+\index{function\_create@{function\_create}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_create()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function} function\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{size\+\_\+t}]{args\+\_\+count,  }\item[{\textbf{ function\+\_\+impl}}]{impl,  }\item[{\textbf{ function\+\_\+impl\+\_\+interface\+\_\+singleton}}]{singleton }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_ad3b35f9baa70a446cff0fac71b40db2e}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_increment\_reference@{function\_increment\_reference}}
+\index{function\_increment\_reference@{function\_increment\_reference}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_increment\_reference()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int function\+\_\+increment\+\_\+reference (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_ad3c51bbe31aba3fbeefbbcea568e4685}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_decrement\_reference@{function\_decrement\_reference}}
+\index{function\_decrement\_reference@{function\_decrement\_reference}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_decrement\_reference()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int function\+\_\+decrement\+\_\+reference (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_add4836a9d458071f05ae742e6addb8a6}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_async@{function\_async}}
+\index{function\_async@{function\_async}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_async()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void function\+\_\+async (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func,  }\item[{enum \textbf{ function\+\_\+async\+\_\+id}}]{async }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a55ff4f4a26bf8c92378c3f608e913e42}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_async\_id@{function\_async\_id}}
+\index{function\_async\_id@{function\_async\_id}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_async\_id()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI enum \textbf{ function\+\_\+async\+\_\+id} \textbf{ function\+\_\+async\+\_\+id} (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a5b279b5c18645cff4b54eb55e22053b4}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_bind@{function\_bind}}
+\index{function\_bind@{function\_bind}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_bind()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void function\+\_\+bind (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a050920384e8f96c443dc11242ac421ba}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_closure@{function\_closure}}
+\index{function\_closure@{function\_closure}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_closure()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ function\+\_\+closure (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_af75cac62bcca3a43ce45507b528fc290}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_name@{function\_name}}
+\index{function\_name@{function\_name}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_name()}
+{\footnotesize\ttfamily const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ function\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a9ff1a7f5a167c79be8eeffe8acf356a4}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_signature@{function\_signature}}
+\index{function\_signature@{function\_signature}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_signature()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ signature} function\+\_\+signature (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_ac437dd533263274b9fcb1d6fb10b71cc}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_metadata@{function\_metadata}}
+\index{function\_metadata@{function\_metadata}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_metadata()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} function\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a55f786badbc8f796b72a8bc87c653fcb}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_call@{function\_call}}
+\index{function\_call@{function\_call}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_call()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function\+\_\+return} function\+\_\+call (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func,  }\item[{\textbf{ function\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a63391dc688728a94873fd4e6176031ca}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_await@{function\_await}}
+\index{function\_await@{function\_await}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_await()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function\+\_\+return} function\+\_\+await (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func,  }\item[{\textbf{ function\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size,  }\item[{\textbf{ function\+\_\+resolve\+\_\+callback}}]{resolve\+\_\+callback,  }\item[{\textbf{ function\+\_\+reject\+\_\+callback}}]{reject\+\_\+callback,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a3ef49cc819e4515b1f0222cc7f3dd6dc}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_destroy@{function\_destroy}}
+\index{function\_destroy@{function\_destroy}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_destroy()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void function\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+

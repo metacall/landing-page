@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="preprocessor__tuple_8h" kind="file" language="C++">
+    <compoundname>preprocessor_tuple.h</compoundname>
+    <includes local="no">preprocessor/preprocessor_api.h</includes>
+    <includedby refid="preprocessor_8h" local="no">preprocessor.h</includedby>
+    <includedby refid="preprocessor__arguments_8h" local="no">preprocessor_arguments.h</includedby>
+    <includedby refid="preprocessor__for_8h" local="no">preprocessor_for.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>preprocessor/preprocessor_api.h</label>
+      </node>
+      <node id="1">
+        <label>preprocessor_tuple.h</label>
+        <link refid="preprocessor__tuple_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>log.h</label>
+        <link refid="log_8h"/>
+      </node>
+      <node id="4">
+        <label>preprocessor_detection.h</label>
+        <link refid="preprocessor__detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>preprocessor.h</label>
+        <link refid="preprocessor_8h"/>
+      </node>
+      <node id="7">
+        <label>preprocessor_stringify.h</label>
+        <link refid="preprocessor__stringify_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>preprocessor_comparison.h</label>
+        <link refid="preprocessor__comparison_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>preprocessor_arguments.h</label>
+        <link refid="preprocessor__arguments_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>preprocessor_for.h</label>
+        <link refid="preprocessor__for_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>preprocessor_tuple.h</label>
+        <link refid="preprocessor__tuple_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>log_preprocessor.h</label>
+        <link refid="log__preprocessor_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="preprocessor__tuple_8h_1a5138dcf58655a270d76c6b5bc7bc7faf" prot="public" static="no">
+        <name>PREPROCESSOR_TUPLE_EXPAND_MACRO</name>
+        <param><defname>macro</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>macro __VA_ARGS__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" line="34" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" prot="public" static="no">
+        <name>PREPROCESSOR_TUPLE_EXPAND</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" kindref="member">PREPROCESSOR_TUPLE_EXPAND_IMPL</ref> __VA_ARGS__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" line="37" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" prot="public" static="no">
+        <name>PREPROCESSOR_TUPLE_MAKE</name>
+        <param><defname>...</defname></param>
+        <initializer>(<ref refid="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" kindref="member">PREPROCESSOR_TUPLE_EXPAND_IMPL</ref>(__VA_ARGS__))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" line="40" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" prot="public" static="no">
+        <name>PREPROCESSOR_TUPLE_EXPAND_IMPL</name>
+        <param><defname>...</defname></param>
+        <initializer>__VA_ARGS__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" line="43" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="preprocessor__tuple_8h_1a1b917beb9180ed907c5059e80f4cad22" prot="public" static="no">
+        <name>PREPROCESSOR_TUPLE_PREPEND</name>
+        <param><defname>expr</defname></param>
+        <param><defname>tuple</defname></param>
+        <initializer><ref refid="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" kindref="member">PREPROCESSOR_TUPLE_MAKE</ref>(expr, <ref refid="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" kindref="member">PREPROCESSOR_TUPLE_EXPAND</ref>(tuple))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" line="45" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="preprocessor__tuple_8h_1a43f977fd541dee44fba93bb8f1bfc6ed" prot="public" static="no">
+        <name>PREPROCESSOR_TUPLE_APPEND</name>
+        <param><defname>expr</defname></param>
+        <param><defname>tuple</defname></param>
+        <initializer><ref refid="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" kindref="member">PREPROCESSOR_TUPLE_MAKE</ref>(<ref refid="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" kindref="member">PREPROCESSOR_TUPLE_EXPAND</ref>(tuple), expr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" line="48" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Preprocessor<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>header-only<sp/>preprocessor<sp/>metaprogramming<sp/>library.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PREPROCESSOR_TUPLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREPROCESSOR_TUPLE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;preprocessor/preprocessor_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Macros<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="preprocessor__tuple_8h_1a5138dcf58655a270d76c6b5bc7bc7faf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREPROCESSOR_TUPLE_EXPAND_MACRO(macro,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>macro<sp/>__VA_ARGS__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREPROCESSOR_TUPLE_EXPAND(...)<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>PREPROCESSOR_TUPLE_EXPAND_IMPL<sp/>__VA_ARGS__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREPROCESSOR_TUPLE_MAKE(...)<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(PREPROCESSOR_TUPLE_EXPAND_IMPL(__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREPROCESSOR_TUPLE_EXPAND_IMPL(...)<sp/>__VA_ARGS__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="preprocessor__tuple_8h_1a1b917beb9180ed907c5059e80f4cad22" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREPROCESSOR_TUPLE_PREPEND(expr,<sp/>tuple)<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>PREPROCESSOR_TUPLE_MAKE(expr,<sp/>PREPROCESSOR_TUPLE_EXPAND(tuple))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="preprocessor__tuple_8h_1a43f977fd541dee44fba93bb8f1bfc6ed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREPROCESSOR_TUPLE_APPEND(expr,<sp/>tuple)<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>PREPROCESSOR_TUPLE_MAKE(PREPROCESSOR_TUPLE_EXPAND(tuple),<sp/>expr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PREPROCESSOR_TUPLE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/preprocessor/include/preprocessor/preprocessor_tuple.h"/>
+  </compounddef>
+</doxygen>

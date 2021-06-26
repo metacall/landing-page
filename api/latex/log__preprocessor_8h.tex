@@ -1,0 +1,58 @@
+\doxysection{log\+\_\+preprocessor.\+h File Reference}
+\label{log__preprocessor_8h}\index{log\_preprocessor.h@{log\_preprocessor.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+arguments.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+if.\+h$>$}\newline
+Include dependency graph for log\+\_\+preprocessor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__preprocessor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{log__preprocessor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+O\+G\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+L\+I\+NE}~((size\+\_\+t)\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)
+\item 
+\#define \textbf{ log\+\_\+configure}(name, ...)~\textbf{ log\+\_\+configure\+\_\+impl}(name, P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+A\+R\+G\+S\+\_\+\+C\+O\+U\+NT(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+), \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \textbf{ log\+\_\+write}(name,  level,  message, ...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{log__preprocessor_8h_ac4202a88f4a0df2f3b80fb3d5acf695a}} 
+\index{log\_preprocessor.h@{log\_preprocessor.h}!LOG\_PREPROCESSOR\_LINE@{LOG\_PREPROCESSOR\_LINE}}
+\index{LOG\_PREPROCESSOR\_LINE@{LOG\_PREPROCESSOR\_LINE}!log\_preprocessor.h@{log\_preprocessor.h}}
+\doxysubsubsection{LOG\_PREPROCESSOR\_LINE}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+L\+I\+NE~((size\+\_\+t)\+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+)}
+
+\mbox{\label{log__preprocessor_8h_a1048d0fda7cab4c7376311257da9f5f2}} 
+\index{log\_preprocessor.h@{log\_preprocessor.h}!log\_configure@{log\_configure}}
+\index{log\_configure@{log\_configure}!log\_preprocessor.h@{log\_preprocessor.h}}
+\doxysubsubsection{log\_configure}
+{\footnotesize\ttfamily \#define log\+\_\+configure(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})~\textbf{ log\+\_\+configure\+\_\+impl}(name, P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+A\+R\+G\+S\+\_\+\+C\+O\+U\+NT(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+), \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+\mbox{\label{log__preprocessor_8h_acd881977fd7c7e2d7b6cbef677084348}} 
+\index{log\_preprocessor.h@{log\_preprocessor.h}!log\_write@{log\_write}}
+\index{log\_write@{log\_write}!log\_preprocessor.h@{log\_preprocessor.h}}
+\doxysubsubsection{log\_write}
+{\footnotesize\ttfamily \#define log\+\_\+write(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{level,  }\item[{}]{message,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        PREPROCESSOR\_IF(PREPROCESSOR\_ARGS\_EMPTY(\_\_VA\_ARGS\_\_),                                             \(\backslash\)}
+\DoxyCodeLine{            log\_write\_impl(name, LOG\_PREPROCESSOR\_LINE, log\_record\_function(), \_\_FILE\_\_, level, message), \(\backslash\)}
+\DoxyCodeLine{            log\_write\_impl\_va(name, LOG\_PREPROCESSOR\_LINE, log\_record\_function(), \_\_FILE\_\_, level, message, \_\_VA\_ARGS\_\_))}
+
+\end{DoxyCode}

@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="metacall__log_8h" kind="file" language="C++">
+    <compoundname>metacall_log.h</compoundname>
+    <includes local="no">metacall/metacall_api.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includedby refid="metacall_8h" local="no">metacall.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>metacall/metacall_api.h</label>
+      </node>
+      <node id="3">
+        <label>stdarg.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="1">
+        <label>metacall_log.h</label>
+        <link refid="metacall__log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>metacall_log.h</label>
+        <link refid="metacall__log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metacall.h</label>
+        <link refid="metacall_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmetacall__log__stdio__type" prot="public">metacall_log_stdio_type</innerclass>
+    <innerclass refid="structmetacall__log__file__type" prot="public">metacall_log_file_type</innerclass>
+    <innerclass refid="structmetacall__log__socket__type" prot="public">metacall_log_socket_type</innerclass>
+    <innerclass refid="structmetacall__log__syslog__type" prot="public">metacall_log_syslog_type</innerclass>
+    <innerclass refid="structmetacall__log__nginx__type" prot="public">metacall_log_nginx_type</innerclass>
+    <innerclass refid="structmetacall__log__custom__va__list__type" prot="public">metacall_log_custom_va_list_type</innerclass>
+    <innerclass refid="structmetacall__log__custom__type" prot="public">metacall_log_custom_type</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7" prot="public" static="no" strong="no">
+        <type></type>
+        <name>metacall_log_id</name>
+        <enumvalue id="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a6357e4ecfdf3d9f96f9207af06b1d002" prot="public">
+          <name>METACALL_LOG_STDIO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a0051a8d3f261458446db0fa240b37af8" prot="public">
+          <name>METACALL_LOG_FILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a659dd67075b0d382d8cb6013047ac69f" prot="public">
+          <name>METACALL_LOG_SOCKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a055db1261857d95be30c586cc52240e8" prot="public">
+          <name>METACALL_LOG_SYSLOG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a070d1a0618197fe7df1a7d315958cc6b" prot="public">
+          <name>METACALL_LOG_NGINX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a42d7f5a9da887616c7c5f0fdc95d358a" prot="public">
+          <name>METACALL_LOG_CUSTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" line="41" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" bodystart="40" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="metacall__log_8h_1a2e92c228a8b23152bb8aeecb05047b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>METACALL_API int</type>
+        <definition>METACALL_API int metacall_log</definition>
+        <argsstring>(enum metacall_log_id log_id, void *ctx)</argsstring>
+        <name>metacall_log</name>
+        <param>
+          <type>enum <ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7" kindref="member">metacall_log_id</ref></type>
+          <declname>log_id</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Create a log instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">log_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of log to be created</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context of the log (a pointer to metacall_log_{stdio, file, socket, syslog, nginx, custom}_type)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if success, different from zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" line="143" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" declline="143" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>MetaCall<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>providing<sp/>a<sp/>foreign<sp/>function<sp/>interface<sp/>calls.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>METACALL_LOG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>METACALL_LOG_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;metacall/metacall_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Enumerations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7" kindref="member">metacall_log_id</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42" refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a6357e4ecfdf3d9f96f9207af06b1d002" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a6357e4ecfdf3d9f96f9207af06b1d002" kindref="member">METACALL_LOG_STDIO</ref>,</highlight></codeline>
+<codeline lineno="43" refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a0051a8d3f261458446db0fa240b37af8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a0051a8d3f261458446db0fa240b37af8" kindref="member">METACALL_LOG_FILE</ref>,</highlight></codeline>
+<codeline lineno="44" refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a659dd67075b0d382d8cb6013047ac69f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a659dd67075b0d382d8cb6013047ac69f" kindref="member">METACALL_LOG_SOCKET</ref>,</highlight></codeline>
+<codeline lineno="45" refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a055db1261857d95be30c586cc52240e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a055db1261857d95be30c586cc52240e8" kindref="member">METACALL_LOG_SYSLOG</ref>,</highlight></codeline>
+<codeline lineno="46" refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a070d1a0618197fe7df1a7d315958cc6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a070d1a0618197fe7df1a7d315958cc6b" kindref="member">METACALL_LOG_NGINX</ref>,</highlight></codeline>
+<codeline lineno="47" refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a42d7f5a9da887616c7c5f0fdc95d358a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7a42d7f5a9da887616c7c5f0fdc95d358a" kindref="member">METACALL_LOG_CUSTOM</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__stdio__type" kindref="compound">metacall_log_stdio_type</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__file__type" kindref="compound">metacall_log_file_type</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__socket__type" kindref="compound">metacall_log_socket_type</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__syslog__type" kindref="compound">metacall_log_syslog_type</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__nginx__type" kindref="compound">metacall_log_nginx_type</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__custom__va__list__type" kindref="compound">metacall_log_custom_va_list_type</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__custom__type" kindref="compound">metacall_log_custom_type</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__stdio__type" kindref="compound">metacall_log_stdio_type</ref><sp/>*metacall_log_stdio;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__file__type" kindref="compound">metacall_log_file_type</ref><sp/>*metacall_log_file;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__socket__type" kindref="compound">metacall_log_socket_type</ref><sp/>*metacall_log_socket;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__syslog__type" kindref="compound">metacall_log_syslog_type</ref><sp/>*metacall_log_syslog;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__nginx__type" kindref="compound">metacall_log_nginx_type</ref><sp/>*metacall_log_nginx;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__custom__va__list__type" kindref="compound">metacall_log_custom_va_list_type</ref><sp/>*metacall_log_custom_va_list;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__custom__type" kindref="compound">metacall_log_custom_type</ref><sp/>*metacall_log_custom;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="structmetacall__log__stdio__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__stdio__type" kindref="compound">metacall_log_stdio_type</ref></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86" refid="structmetacall__log__stdio__type_1a8d17ffca28855e59d4611cf1f497305f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*<ref refid="structmetacall__log__stdio__type_1a8d17ffca28855e59d4611cf1f497305f" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="structmetacall__log__file__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__file__type" kindref="compound">metacall_log_file_type</ref></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91" refid="structmetacall__log__file__type_1ae7a12a39764501d55ee28a3459a406f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmetacall__log__file__type_1ae7a12a39764501d55ee28a3459a406f0" kindref="member">file_name</ref>;</highlight></codeline>
+<codeline lineno="92" refid="structmetacall__log__file__type_1abadb09c56ef58319744fb83c57b009c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmetacall__log__file__type_1abadb09c56ef58319744fb83c57b009c7" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structmetacall__log__socket__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__socket__type" kindref="compound">metacall_log_socket_type</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97" refid="structmetacall__log__socket__type_1a4dab0b7fa1d4cb15472fdd73dbf5f035" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmetacall__log__socket__type_1a4dab0b7fa1d4cb15472fdd73dbf5f035" kindref="member">ip</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structmetacall__log__socket__type_1a17be91c7a2e108cd44cb9614c9209dd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structmetacall__log__socket__type_1a17be91c7a2e108cd44cb9614c9209dd6" kindref="member">port</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structmetacall__log__syslog__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__syslog__type" kindref="compound">metacall_log_syslog_type</ref></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103" refid="structmetacall__log__syslog__type_1a5792e3220c97a11f143aebe47b9ced82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmetacall__log__syslog__type_1a5792e3220c97a11f143aebe47b9ced82" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="structmetacall__log__nginx__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__nginx__type" kindref="compound">metacall_log_nginx_type</ref></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108" refid="structmetacall__log__nginx__type_1a9b68702d5329f491a219008ba8378381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structmetacall__log__nginx__type_1a9b68702d5329f491a219008ba8378381" kindref="member">log</ref>;</highlight></codeline>
+<codeline lineno="109" refid="structmetacall__log__nginx__type_1a72d66211c892f4f39d02a244f0f58fc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structmetacall__log__nginx__type_1a72d66211c892f4f39d02a244f0f58fc2" kindref="member">log_error</ref>)(void);</highlight></codeline>
+<codeline lineno="110" refid="structmetacall__log__nginx__type_1a72373bb24078b87d5c510b09b04270ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structmetacall__log__nginx__type_1a72373bb24078b87d5c510b09b04270ca" kindref="member">log_level</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structmetacall__log__custom__va__list__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__custom__va__list__type" kindref="compound">metacall_log_custom_va_list_type</ref></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115" refid="structmetacall__log__custom__va__list__type_1ada4ef6a5aad6f28594fb6d4bdaa36a8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/><ref refid="structmetacall__log__custom__va__list__type_1ada4ef6a5aad6f28594fb6d4bdaa36a8b" kindref="member">va</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="structmetacall__log__custom__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__log__custom__type" kindref="compound">metacall_log_custom_type</ref></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120" refid="structmetacall__log__custom__type_1a8f7934d10447d2c13557ccd3c8b70dc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structmetacall__log__custom__type_1a8f7934d10447d2c13557ccd3c8b70dc0" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="121" refid="structmetacall__log__custom__type_1a816d8616abfad31cca4d94e2feed5bca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>(*<ref refid="structmetacall__log__custom__type_1a816d8616abfad31cca4d94e2feed5bca" kindref="member">format_size</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>metacall_log_custom_va_list);</highlight></codeline>
+<codeline lineno="122" refid="structmetacall__log__custom__type_1ae038a92b1ba54e50a332b5386753be05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>(*<ref refid="structmetacall__log__custom__type_1ae038a92b1ba54e50a332b5386753be05" kindref="member">format_serialize</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>metacall_log_custom_va_list);</highlight></codeline>
+<codeline lineno="123" refid="structmetacall__log__custom__type_1af14b93bac186689152bbf9168a1df864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>(*<ref refid="structmetacall__log__custom__type_1af14b93bac186689152bbf9168a1df864" kindref="member">format_deserialize</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>metacall_log_custom_va_list);</highlight></codeline>
+<codeline lineno="124" refid="structmetacall__log__custom__type_1a18a9acf920af36aab3a375fe9a9bef69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structmetacall__log__custom__type_1a18a9acf920af36aab3a375fe9a9bef69" kindref="member">stream_write</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>size_t);</highlight></codeline>
+<codeline lineno="125" refid="structmetacall__log__custom__type_1af32bca8ec9096645211d24c1eac89117" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structmetacall__log__custom__type_1af32bca8ec9096645211d24c1eac89117" kindref="member">stream_flush</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="130"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="131"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="132"><highlight class="comment">*<sp/><sp/><sp/><sp/>Create<sp/>a<sp/>log<sp/>instance</highlight></codeline>
+<codeline lineno="133"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>log_id</highlight></codeline>
+<codeline lineno="135"><highlight class="comment">*<sp/><sp/><sp/><sp/>Type<sp/>of<sp/>log<sp/>to<sp/>be<sp/>created</highlight></codeline>
+<codeline lineno="136"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>ctx</highlight></codeline>
+<codeline lineno="138"><highlight class="comment">*<sp/><sp/><sp/><sp/>Context<sp/>of<sp/>the<sp/>log<sp/>(a<sp/>pointer<sp/>to<sp/>metacall_log_{stdio,<sp/>file,<sp/>socket,<sp/>syslog,<sp/>nginx,<sp/>custom}_type)</highlight></codeline>
+<codeline lineno="139"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="140"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="141"><highlight class="comment">*<sp/><sp/><sp/><sp/>Zero<sp/>if<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
+<codeline lineno="142"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="metacall__log_8h_1a2e92c228a8b23152bb8aeecb05047b5b" kindref="member">metacall_log</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="metacall__log_8h_1ada49b79c00cfc03c7c6efd80243322e7" kindref="member">metacall_log_id</ref><sp/>log_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>METACALL_LOG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,141 @@
+.TH "filesystem_file_descriptor.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+filesystem_file_descriptor.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <filesystem/filesystem_api\&.h>\fP
+.br
+\fC#include <filesystem/filesystem_directory_descriptor\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFILE_DESCRIPTOR_NAME_SIZE\fP   0x0100"
+.br
+.ti -1c
+.RI "#define \fBFILE_DESCRIPTOR_EXTENSION_SIZE\fP   0x0012"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct file_descriptor_type * \fBfile_descriptor\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "FILESYSTEM_API \fBfile_descriptor\fP \fBfile_descriptor_create\fP (\fBdirectory_descriptor\fP owner, const char *name)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API \fBdirectory_descriptor\fP \fBfile_descriptor_owner\fP (\fBfile_descriptor\fP f)"
+.br
+.ti -1c
+.RI "const FILESYSTEM_API char * \fBfile_descriptor_name\fP (\fBfile_descriptor\fP f)"
+.br
+.ti -1c
+.RI "const FILESYSTEM_API char * \fBfile_descriptor_extension\fP (\fBfile_descriptor\fP f)"
+.br
+.ti -1c
+.RI "FILESYSTEM_API void \fBfile_descriptor_destroy\fP (\fBfile_descriptor\fP f)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FILE_DESCRIPTOR_NAME_SIZE   0x0100"
+
+.SS "#define FILE_DESCRIPTOR_EXTENSION_SIZE   0x0012"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct file_descriptor_type* \fBfile_descriptor\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "FILESYSTEM_API \fBfile_descriptor\fP file_descriptor_create (\fBdirectory_descriptor\fP owner, const char * name)"
+
+.PP
+Create a file descriptor from specified directory and name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIowner\fP Directory which file belongs to
+.br
+\fIname\fP The name of the file
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the file descriptor if success, null pointer otherwhise 
+.RE
+.PP
+
+.SS "FILESYSTEM_API \fBdirectory_descriptor\fP file_descriptor_owner (\fBfile_descriptor\fP f)"
+
+.PP
+Get the owner directory where is the file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP File descriptor pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to directory descriptor which owns the file 
+.RE
+.PP
+
+.SS "const FILESYSTEM_API char* file_descriptor_name (\fBfile_descriptor\fP f)"
+
+.PP
+Get the file name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP File descriptor pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A constant string pointer to the name of @f 
+.RE
+.PP
+
+.SS "const FILESYSTEM_API char* file_descriptor_extension (\fBfile_descriptor\fP f)"
+
+.PP
+Get the file extension\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP File descriptor pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A constant string pointer to the extension of @f 
+.RE
+.PP
+
+.SS "FILESYSTEM_API void file_descriptor_destroy (\fBfile_descriptor\fP f)"
+
+.PP
+Destroy a file from memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP File descriptor pointer 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

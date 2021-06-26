@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__level_8h">
+<title>log_level.h File Reference</title>
+<indexterm><primary>log_level.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for log_level.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__level_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__level_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> { 
+<link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa538b2b6e011479d408ecd2be0f6d6177">LOG_LEVEL_DEBUG</link> = 0x00, 
+<link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaaedee1e3159bfe7d918b6e29873c5aee4">LOG_LEVEL_INFO</link> = 0x01, 
+<link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b4dd81b4dc7eefbc55ba03415c627ef">LOG_LEVEL_WARNING</link> = 0x02, 
+<link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</link> = 0x03, 
+
+<link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa0f747790672fa5c82fd781222463c35f">LOG_LEVEL_CRITICAL</link> = 0x04, 
+<link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa84b2a1f01d4286c3f8dbede3993f6f54">LOG_LEVEL_SIZE</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>const LOG_API char * <link linkend="_log__level_8h_1a158abbda2c04d95eb409bffacb928e62">log_level_to_string</link> (enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> level)</para>
+</listitem>
+            <listitem><para>LOG_API enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> <link linkend="_log__level_8h_1aac323543088c0ad535c4a11588a42718">log_level_to_enum</link> (const char *level, size_t length)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda"/>    <section>
+    <title>log_level_id</title>
+<indexterm><primary>log_level_id</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>log_level_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LOG_LEVEL_DEBUG</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>LOG_LEVEL_DEBUG</secondary></indexterm>
+<anchor xml:id="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa538b2b6e011479d408ecd2be0f6d6177"/>LOG_LEVEL_DEBUG</entry><entry></entry></row><row><entry><indexterm><primary>LOG_LEVEL_INFO</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>LOG_LEVEL_INFO</secondary></indexterm>
+<anchor xml:id="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaaedee1e3159bfe7d918b6e29873c5aee4"/>LOG_LEVEL_INFO</entry><entry></entry></row><row><entry><indexterm><primary>LOG_LEVEL_WARNING</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>LOG_LEVEL_WARNING</secondary></indexterm>
+<anchor xml:id="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b4dd81b4dc7eefbc55ba03415c627ef"/>LOG_LEVEL_WARNING</entry><entry></entry></row><row><entry><indexterm><primary>LOG_LEVEL_ERROR</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>LOG_LEVEL_ERROR</secondary></indexterm>
+<anchor xml:id="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f"/>LOG_LEVEL_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>LOG_LEVEL_CRITICAL</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>LOG_LEVEL_CRITICAL</secondary></indexterm>
+<anchor xml:id="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa0f747790672fa5c82fd781222463c35f"/>LOG_LEVEL_CRITICAL</entry><entry></entry></row><row><entry><indexterm><primary>LOG_LEVEL_SIZE</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>LOG_LEVEL_SIZE</secondary></indexterm>
+<anchor xml:id="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa84b2a1f01d4286c3f8dbede3993f6f54"/>LOG_LEVEL_SIZE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__level_8h_1a158abbda2c04d95eb409bffacb928e62"/>    <section>
+    <title>log_level_to_string()</title>
+<indexterm><primary>log_level_to_string</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>log_level_to_string</secondary></indexterm>
+<para><computeroutput>const LOG_API char* log_level_to_string (enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> level)</computeroutput></para>    </section><anchor xml:id="_log__level_8h_1aac323543088c0ad535c4a11588a42718"/>    <section>
+    <title>log_level_to_enum()</title>
+<indexterm><primary>log_level_to_enum</primary><secondary>log_level.h</secondary></indexterm>
+<indexterm><primary>log_level.h</primary><secondary>log_level_to_enum</secondary></indexterm>
+<para><computeroutput>LOG_API enum <link linkend="_log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda">log_level_id</link> log_level_to_enum (const char * level, size_t length)</computeroutput></para></section>
+</section>
+</section>

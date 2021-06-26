@@ -1,0 +1,119 @@
+.TH "log_map.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_map.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG_MAP_MIN_SIZE\fP   ((size_t)0x00000100)"
+.br
+.ti -1c
+.RI "#define \fBLOG_MAP_MAX_SIZE\fP   ((size_t)0x00010000)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct log_map_type * \fBlog_map\fP"
+.br
+.ti -1c
+.RI "typedef struct log_map_iterator_type * \fBlog_map_iterator\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOG_API \fBlog_map\fP \fBlog_map_create\fP (size_t size)"
+.br
+.ti -1c
+.RI "LOG_API size_t \fBlog_map_size\fP (\fBlog_map\fP map)"
+.br
+.ti -1c
+.RI "LOG_API size_t \fBlog_map_collisions\fP (\fBlog_map\fP map)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_map_insert\fP (\fBlog_map\fP map, const char *key, const void *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "const LOG_API void * \fBlog_map_get\fP (\fBlog_map\fP map, const char *key)"
+.br
+.ti -1c
+.RI "const LOG_API void * \fBlog_map_remove\fP (\fBlog_map\fP map, const char *key)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_map_clear\fP (\fBlog_map\fP map)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_map_destroy\fP (\fBlog_map\fP map)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_map_iterator\fP \fBlog_map_iterator_begin\fP (\fBlog_map\fP map)"
+.br
+.ti -1c
+.RI "const LOG_API char * \fBlog_map_iterator_key\fP (\fBlog_map_iterator\fP iterator)"
+.br
+.ti -1c
+.RI "const LOG_API void * \fBlog_map_iterator_value\fP (\fBlog_map_iterator\fP iterator)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_map_iterator_next\fP (\fBlog_map_iterator\fP iterator)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_map_iterator_end\fP (\fBlog_map_iterator\fP iterator)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG_MAP_MIN_SIZE   ((size_t)0x00000100)"
+
+.SS "#define LOG_MAP_MAX_SIZE   ((size_t)0x00010000)"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct log_map_type* \fBlog_map\fP"
+
+.SS "typedef struct log_map_iterator_type* \fBlog_map_iterator\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "LOG_API \fBlog_map\fP log_map_create (size_t size)"
+
+.SS "LOG_API size_t log_map_size (\fBlog_map\fP map)"
+
+.SS "LOG_API size_t log_map_collisions (\fBlog_map\fP map)"
+
+.SS "LOG_API int log_map_insert (\fBlog_map\fP map, const char * key, const void * value)"
+
+.SS "const LOG_API void* log_map_get (\fBlog_map\fP map, const char * key)"
+
+.SS "const LOG_API void* log_map_remove (\fBlog_map\fP map, const char * key)"
+
+.SS "LOG_API int log_map_clear (\fBlog_map\fP map)"
+
+.SS "LOG_API int log_map_destroy (\fBlog_map\fP map)"
+
+.SS "LOG_API \fBlog_map_iterator\fP log_map_iterator_begin (\fBlog_map\fP map)"
+
+.SS "const LOG_API char* log_map_iterator_key (\fBlog_map_iterator\fP iterator)"
+
+.SS "const LOG_API void* log_map_iterator_value (\fBlog_map_iterator\fP iterator)"
+
+.SS "LOG_API int log_map_iterator_next (\fBlog_map_iterator\fP iterator)"
+
+.SS "LOG_API int log_map_iterator_end (\fBlog_map_iterator\fP iterator)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

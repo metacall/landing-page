@@ -1,0 +1,519 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.43.0 (0)
+%%Title: log_policy_format_custom_ctor
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 570 260
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 534 224 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Node1
+gsave
+0 0 0.74902 nodecolor
+newpath 269.5 .5 moveto
+269.5 54.5 lineto
+409.5 54.5 lineto
+409.5 .5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 269.5 .5 moveto
+269.5 54.5 lineto
+409.5 54.5 lineto
+409.5 .5 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+277.5 43.3 moveto 124 (log_policy_format_custom_ctor) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 269.5 36.5 moveto
+409.5 36.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+338 25.3 moveto 3 ( ) alignedtext
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 269.5 18.5 moveto
+409.5 18.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+338 7.3 moveto 3 ( ) alignedtext
+grestore
+% Node2
+gsave
+0 0 1 nodecolor
+newpath 0 106.5 moveto
+0 210.5 lineto
+185 210.5 lineto
+185 106.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 0 106.5 moveto
+0 210.5 lineto
+185 210.5 lineto
+185 106.5 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+8 199.3 moveto 84 (size_t\(*\)\(void *, const) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+8 189.3 moveto 78 ( void *, const size_t,) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+8 179.3 moveto 79 ( const char *, size_t,) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+8 169.3 moveto 101 ( size_t, const char *, const) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+8 159.3 moveto 101 ( char *, const char *, const) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+8 149.3 moveto 169 ( char *, log_policy_format_custom_va_list\)) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 0 142.5 moveto
+185 142.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+91 131.3 moveto 3 ( ) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 0 124.5 moveto
+185 124.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+91 113.3 moveto 3 ( ) alignedtext
+grestore
+% Node2->Node1
+gsave
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 166.7039 106.3378 moveto
+185.1666 94.6398 205.2069 82.7836 224.5 73 curveto
+235.1683 67.59 246.6581 62.4217 258.1025 57.6473 curveto
+stroke
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 258.3845 57.5326 moveto
+262.4345 51.5662 lineto
+269.4996 53.0099 lineto
+265.4497 58.9763 lineto
+closepath stroke
+0 0 0 edgecolor
+9 /FreeSans set_font
+224.5 75.8 moveto 81 ( +format_deserialize) alignedtext
+grestore
+% Node3
+gsave
+0 0 1 nodecolor
+newpath 203 101.5 moveto
+203 215.5 lineto
+334 215.5 lineto
+334 101.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 203 101.5 moveto
+203 215.5 lineto
+334 215.5 lineto
+334 101.5 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+211 204.3 moveto 80 (size_t\(*\)\(void *, void) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+211 194.3 moveto 82 ( *, const size_t, const) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+211 184.3 moveto 84 ( char *, size_t, size_t,) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+211 174.3 moveto 93 ( const char *, const char) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+211 164.3 moveto 101 ( *, const char *, const char) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+211 154.3 moveto 115 ( *, log_policy_format_custom) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+251 144.3 moveto 35 (_va_list\)) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 203 137.5 moveto
+334 137.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+267 126.3 moveto 3 ( ) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 203 119.5 moveto
+334 119.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+267 108.3 moveto 3 ( ) alignedtext
+grestore
+% Node3->Node1
+gsave
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 299.4351 101.294 moveto
+306.1616 89.0727 313.1103 76.4474 319.2938 65.2127 curveto
+stroke
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 319.3993 65.0209 moveto
+318.7881 57.8358 lineto
+325.1855 54.5081 lineto
+325.7967 61.6932 lineto
+closepath stroke
+0 0 0 edgecolor
+9 /FreeSans set_font
+314.5 75.8 moveto 71 ( +format_serialize) alignedtext
+grestore
+% Node4
+gsave
+0 0 1 nodecolor
+newpath 352 106.5 moveto
+352 210.5 lineto
+469 210.5 lineto
+469 106.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 352 106.5 moveto
+352 210.5 lineto
+469 210.5 lineto
+469 106.5 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+360 199.3 moveto 84 (size_t\(*\)\(void *, const) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+360 189.3 moveto 74 ( char *, size_t, size) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+360 179.3 moveto 83 (_t, const char *, const) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+360 169.3 moveto 101 ( char *, const char *, const) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+360 159.3 moveto 101 ( char *, log_policy_format) alignedtext
+0 0 0 nodecolor
+9 /FreeSans set_font
+376.5 149.3 moveto 68 (_custom_va_list\)) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 352 142.5 moveto
+469 142.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+409 131.3 moveto 3 ( ) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 352 124.5 moveto
+469 124.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+409 113.3 moveto 3 ( ) alignedtext
+grestore
+% Node4->Node1
+gsave
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 402.2599 106.4264 moveto
+399.054 94.9131 394.6207 83.1167 388.5 73 curveto
+386.5695 69.8092 384.341 66.7122 381.9211 63.7366 curveto
+stroke
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 381.7518 63.5507 moveto
+374.7542 61.8087 lineto
+373.6708 54.6795 lineto
+380.6684 56.4214 lineto
+closepath stroke
+0 0 0 edgecolor
+9 /FreeSans set_font
+392.5 75.8 moveto 54 ( +format_size) alignedtext
+grestore
+% Node5
+gsave
+0 0 1 nodecolor
+newpath 487 131.5 moveto
+487 185.5 lineto
+526 185.5 lineto
+526 131.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 487 131.5 moveto
+487 185.5 lineto
+526 185.5 lineto
+526 131.5 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+495 174.3 moveto 23 (void *) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 487 167.5 moveto
+526 167.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+505 156.3 moveto 3 ( ) alignedtext
+1 setlinewidth
+filled
+0 0 0.74902 nodecolor
+newpath 487 149.5 moveto
+526 149.5 lineto
+stroke
+0 0 0 nodecolor
+9 /FreeSans set_font
+505 138.3 moveto 3 ( ) alignedtext
+grestore
+% Node5->Node1
+gsave
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 495.7651 131.4632 moveto
+491.1197 121.5197 485.2046 110.337 478.5 101 curveto
+468.235 86.7046 465.1887 82.6939 450.5 73 curveto
+441.3376 66.9533 431.2249 61.506 420.9451 56.6685 curveto
+stroke
+1 setlinewidth
+solid
+0 0 0.25098 edgecolor
+newpath 420.7136 56.5648 moveto
+413.6026 57.7624 lineto
+409.7621 51.6591 lineto
+416.8731 50.4615 lineto
+closepath stroke
+0 0 0 edgecolor
+9 /FreeSans set_font
+463.5 75.8 moveto 35 ( +context) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 570 260
+end
+restore
+%%EOF

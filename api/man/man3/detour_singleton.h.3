@@ -1,0 +1,146 @@
+.TH "detour_singleton.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+detour_singleton.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <detour/detour_api\&.h>\fP
+.br
+\fC#include <detour/detour\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct detour_singleton_type * \fBdetour_singleton\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DETOUR_API int \fBdetour_singleton_initialize\fP ()"
+.br
+.ti -1c
+.RI "DETOUR_API \fBdetour_singleton\fP \fBdetour_singleton_instance\fP (void)"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_singleton_register\fP (\fBdetour\fP d)"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+Retrieve detour from detours map by
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Index which references the detour to be retrieved
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns pointer to detour if exists, null otherwise 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DETOUR_API \fBdetour\fP \fBdetour_singleton_get\fP (const char *name)"
+.br
+.ti -1c
+.RI "const DETOUR_API char * \fBdetour_singleton_path\fP (void)"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_singleton_clear\fP (\fBdetour\fP d)"
+.br
+.ti -1c
+.RI "DETOUR_API void \fBdetour_singleton_destroy\fP (void)"
+.br
+.in -1c
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct detour_singleton_type* \fBdetour_singleton\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "DETOUR_API int detour_singleton_initialize ()"
+
+.PP
+Initialize detour singleton\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on correct detour singleton initialization, distinct from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API \fBdetour_singleton\fP detour_singleton_instance (void)"
+
+.PP
+Wrapper of detour singleton instance\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to detour singleton instance 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_singleton_register (\fBdetour\fP d)"
+
+.PP
+Register detour into detours map\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Pointer to detour
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on correct detour singleton insertion, distinct from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API \fBdetour\fP detour_singleton_get (const char * name)"
+
+.SS "const DETOUR_API char* detour_singleton_path (void)"
+
+.PP
+Retrieve detour library path where detours are located\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Returns constant string representing detours library path 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_singleton_clear (\fBdetour\fP d)"
+
+.PP
+Remove detour from detours map\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Pointer to detour
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on correct detour singleton removing, distinct from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API void detour_singleton_destroy (void)"
+
+.PP
+Destroy detour singleton\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

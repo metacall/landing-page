@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__singleton_8h">
+<title>log_singleton.h File Reference</title>
+<indexterm><primary>log_singleton.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_impl.h&gt;
+</programlisting>Include dependency graph for log_singleton.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__singleton_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct log_singleton_map_bucket_type * <link linkend="_log__singleton_8h_1ac3d8e4a9fd56bf4cb322cc30fa9dc113">log_singleton_map_bucket</link></para>
+</listitem>
+            <listitem><para>typedef struct log_singleton_type * <link linkend="_log__singleton_8h_1add5876ef6a8095fae819a849b702e62c">log_singleton</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API <link linkend="_log__singleton_8h_1add5876ef6a8095fae819a849b702e62c">log_singleton</link> * <link linkend="_log__singleton_8h_1a342cce86e9e85dd1787718f17be9b039">log_singleton_instance</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API void <link linkend="_log__singleton_8h_1a13a966f52d5d743e18aac3b144c4e145">log_singleton_initialize</link> (<link linkend="_log__singleton_8h_1add5876ef6a8095fae819a849b702e62c">log_singleton</link> singleton)</para>
+</listitem>
+            <listitem><para>LOG_API size_t <link linkend="_log__singleton_8h_1ae1ebdb863fca82b603160639c060d44c">log_singleton_size</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__singleton_8h_1a0db5de81c163acaca46a8732eb6bc07f">log_singleton_insert</link> (const char *name, <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> impl)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> <link linkend="_log__singleton_8h_1aa36402f20ac7cf37758c76d032bf8d9d">log_singleton_get</link> (const char *name)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> <link linkend="_log__singleton_8h_1a6bb941872fae7ab057cb8b59edf5d43e">log_singleton_remove</link> (const char *name)</para>
+</listitem>
+            <listitem><para>LOG_API void <link linkend="_log__singleton_8h_1a0fa5476886446fa42a9494ce6cc9304a">log_singleton_clear</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__singleton_8h_1ac3d8e4a9fd56bf4cb322cc30fa9dc113"/>    <section>
+    <title>log_singleton_map_bucket</title>
+<indexterm><primary>log_singleton_map_bucket</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_map_bucket</secondary></indexterm>
+<para><computeroutput>typedef struct log_singleton_map_bucket_type* <link linkend="_log__singleton_8h_1ac3d8e4a9fd56bf4cb322cc30fa9dc113">log_singleton_map_bucket</link></computeroutput></para>    </section><anchor xml:id="_log__singleton_8h_1add5876ef6a8095fae819a849b702e62c"/>    <section>
+    <title>log_singleton</title>
+<indexterm><primary>log_singleton</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton</secondary></indexterm>
+<para><computeroutput>typedef struct log_singleton_type* <link linkend="_log__singleton_8h_1add5876ef6a8095fae819a849b702e62c">log_singleton</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__singleton_8h_1a342cce86e9e85dd1787718f17be9b039"/>    <section>
+    <title>log_singleton_instance()</title>
+<indexterm><primary>log_singleton_instance</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_instance</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__singleton_8h_1add5876ef6a8095fae819a849b702e62c">log_singleton</link>* log_singleton_instance (void )</computeroutput></para>    </section><anchor xml:id="_log__singleton_8h_1a13a966f52d5d743e18aac3b144c4e145"/>    <section>
+    <title>log_singleton_initialize()</title>
+<indexterm><primary>log_singleton_initialize</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_initialize</secondary></indexterm>
+<para><computeroutput>LOG_API void log_singleton_initialize (<link linkend="_log__singleton_8h_1add5876ef6a8095fae819a849b702e62c">log_singleton</link> singleton)</computeroutput></para>    </section><anchor xml:id="_log__singleton_8h_1ae1ebdb863fca82b603160639c060d44c"/>    <section>
+    <title>log_singleton_size()</title>
+<indexterm><primary>log_singleton_size</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_size</secondary></indexterm>
+<para><computeroutput>LOG_API size_t log_singleton_size (void )</computeroutput></para>    </section><anchor xml:id="_log__singleton_8h_1a0db5de81c163acaca46a8732eb6bc07f"/>    <section>
+    <title>log_singleton_insert()</title>
+<indexterm><primary>log_singleton_insert</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_insert</secondary></indexterm>
+<para><computeroutput>LOG_API int log_singleton_insert (const char * name, <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_log__singleton_8h_1aa36402f20ac7cf37758c76d032bf8d9d"/>    <section>
+    <title>log_singleton_get()</title>
+<indexterm><primary>log_singleton_get</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_get</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> log_singleton_get (const char * name)</computeroutput></para>    </section><anchor xml:id="_log__singleton_8h_1a6bb941872fae7ab057cb8b59edf5d43e"/>    <section>
+    <title>log_singleton_remove()</title>
+<indexterm><primary>log_singleton_remove</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_remove</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265">log_impl</link> log_singleton_remove (const char * name)</computeroutput></para>    </section><anchor xml:id="_log__singleton_8h_1a0fa5476886446fa42a9494ce6cc9304a"/>    <section>
+    <title>log_singleton_clear()</title>
+<indexterm><primary>log_singleton_clear</primary><secondary>log_singleton.h</secondary></indexterm>
+<indexterm><primary>log_singleton.h</primary><secondary>log_singleton_clear</secondary></indexterm>
+<para><computeroutput>LOG_API void log_singleton_clear (void )</computeroutput></para></section>
+</section>
+</section>

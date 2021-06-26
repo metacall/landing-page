@@ -1,0 +1,132 @@
+\doxysection{reflect\+\_\+future.\+h File Reference}
+\label{reflect__future_8h}\index{reflect\_future.h@{reflect\_future.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
+Include dependency graph for reflect\+\_\+future.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{reflect__future_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{reflect__future_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ future\+\_\+interface}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \textbf{ future\+\_\+impl}
+\item 
+typedef struct future\+\_\+type $\ast$ \textbf{ future}
+\item 
+typedef \textbf{ value} \textbf{ future\+\_\+return}
+\item 
+typedef \textbf{ value}($\ast$ \textbf{ future\+\_\+resolve\+\_\+callback}) (\textbf{ value}, void $\ast$)
+\item 
+typedef \textbf{ value}($\ast$ \textbf{ future\+\_\+reject\+\_\+callback}) (\textbf{ value}, void $\ast$)
+\item 
+typedef int($\ast$ \textbf{ future\+\_\+impl\+\_\+interface\+\_\+create}) (\textbf{ future}, \textbf{ future\+\_\+impl})
+\item 
+typedef \textbf{ future\+\_\+return}($\ast$ \textbf{ future\+\_\+impl\+\_\+interface\+\_\+await}) (\textbf{ future}, \textbf{ future\+\_\+impl}, \textbf{ future\+\_\+resolve\+\_\+callback}, \textbf{ future\+\_\+reject\+\_\+callback}, void $\ast$)
+\item 
+typedef void($\ast$ \textbf{ future\+\_\+impl\+\_\+interface\+\_\+destroy}) (\textbf{ future}, \textbf{ future\+\_\+impl})
+\item 
+typedef future\+\_\+interface($\ast$ \textbf{ future\+\_\+impl\+\_\+interface\+\_\+singleton}) (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future} \textbf{ future\+\_\+create} (\textbf{ future\+\_\+impl} impl, \textbf{ future\+\_\+impl\+\_\+interface\+\_\+singleton} singleton)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future\+\_\+return} \textbf{ future\+\_\+await} (\textbf{ future} f, \textbf{ future\+\_\+resolve\+\_\+callback} resolve\+\_\+callback, \textbf{ future\+\_\+reject\+\_\+callback} reject\+\_\+callback, void $\ast$\textbf{ context})
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ future\+\_\+destroy} (\textbf{ future} f)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{reflect__future_8h_a3a2d290a78fc88dba9171e3c44c99e87}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_impl@{future\_impl}}
+\index{future\_impl@{future\_impl}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_impl}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ future\+\_\+impl}}
+
+\mbox{\label{reflect__future_8h_affb5f2dd6b9a45543e4c516cf243c919}} 
+\index{reflect\_future.h@{reflect\_future.h}!future@{future}}
+\index{future@{future}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future}
+{\footnotesize\ttfamily typedef struct future\+\_\+type$\ast$ \textbf{ future}}
+
+\mbox{\label{reflect__future_8h_adaf6af65439e8fcc4a9683f03399c3a8}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_return@{future\_return}}
+\index{future\_return@{future\_return}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_return}
+{\footnotesize\ttfamily typedef \textbf{ value} \textbf{ future\+\_\+return}}
+
+\mbox{\label{reflect__future_8h_ab044ff8f96557d985696052b7789bf14}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_resolve\_callback@{future\_resolve\_callback}}
+\index{future\_resolve\_callback@{future\_resolve\_callback}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_resolve\_callback}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ future\+\_\+resolve\+\_\+callback) (\textbf{ value}, void $\ast$)}
+
+\mbox{\label{reflect__future_8h_a5ad595667e827b7fd6b51f9fbddce7c0}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_reject\_callback@{future\_reject\_callback}}
+\index{future\_reject\_callback@{future\_reject\_callback}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_reject\_callback}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ future\+\_\+reject\+\_\+callback) (\textbf{ value}, void $\ast$)}
+
+\mbox{\label{reflect__future_8h_a79a8b73073b19643eb63ab926b8d27cf}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_impl\_interface\_create@{future\_impl\_interface\_create}}
+\index{future\_impl\_interface\_create@{future\_impl\_interface\_create}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_impl\_interface\_create}
+{\footnotesize\ttfamily typedef int($\ast$ future\+\_\+impl\+\_\+interface\+\_\+create) (\textbf{ future}, \textbf{ future\+\_\+impl})}
+
+\mbox{\label{reflect__future_8h_a14fdd6ae715e477c620bfd21578a2983}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_impl\_interface\_await@{future\_impl\_interface\_await}}
+\index{future\_impl\_interface\_await@{future\_impl\_interface\_await}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_impl\_interface\_await}
+{\footnotesize\ttfamily typedef \textbf{ future\+\_\+return}($\ast$ future\+\_\+impl\+\_\+interface\+\_\+await) (\textbf{ future}, \textbf{ future\+\_\+impl}, \textbf{ future\+\_\+resolve\+\_\+callback}, \textbf{ future\+\_\+reject\+\_\+callback}, void $\ast$)}
+
+\mbox{\label{reflect__future_8h_ae84f54969d27d1f564229345ab7fdf7a}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_impl\_interface\_destroy@{future\_impl\_interface\_destroy}}
+\index{future\_impl\_interface\_destroy@{future\_impl\_interface\_destroy}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_impl\_interface\_destroy}
+{\footnotesize\ttfamily typedef void($\ast$ future\+\_\+impl\+\_\+interface\+\_\+destroy) (\textbf{ future}, \textbf{ future\+\_\+impl})}
+
+\mbox{\label{reflect__future_8h_ab19bb006a90b0bef6a3fda98e29fdc83}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_impl\_interface\_singleton@{future\_impl\_interface\_singleton}}
+\index{future\_impl\_interface\_singleton@{future\_impl\_interface\_singleton}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_impl\_interface\_singleton}
+{\footnotesize\ttfamily typedef future\+\_\+interface($\ast$ future\+\_\+impl\+\_\+interface\+\_\+singleton) (void)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{reflect__future_8h_af11e513c084e86bc3560cbccca13aa88}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_create@{future\_create}}
+\index{future\_create@{future\_create}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_create()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future} future\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ future\+\_\+impl}}]{impl,  }\item[{\textbf{ future\+\_\+impl\+\_\+interface\+\_\+singleton}}]{singleton }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__future_8h_a4c6bfdb1bc35c541b76f92784d352071}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_await@{future\_await}}
+\index{future\_await@{future\_await}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_await()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future\+\_\+return} future\+\_\+await (\begin{DoxyParamCaption}\item[{\textbf{ future}}]{f,  }\item[{\textbf{ future\+\_\+resolve\+\_\+callback}}]{resolve\+\_\+callback,  }\item[{\textbf{ future\+\_\+reject\+\_\+callback}}]{reject\+\_\+callback,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__future_8h_a637314f3ee2db826324fedb25f84db7e}} 
+\index{reflect\_future.h@{reflect\_future.h}!future\_destroy@{future\_destroy}}
+\index{future\_destroy@{future\_destroy}!reflect\_future.h@{reflect\_future.h}}
+\doxysubsubsection{future\_destroy()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void future\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ future}}]{f }\end{DoxyParamCaption})}
+

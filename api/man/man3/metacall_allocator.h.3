@@ -1,0 +1,160 @@
+.TH "metacall_allocator.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+metacall_allocator.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <metacall/metacall_api\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmetacall_allocator_std\fP"
+.br
+.ti -1c
+.RI "struct \fBmetacall_allocator_nginx\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct ngx_pool_s \fBngx_pool_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBmetacall_allocator_id\fP { \fBMETACALL_ALLOCATOR_STD\fP, \fBMETACALL_ALLOCATOR_NGINX\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_allocator_create\fP (enum \fBmetacall_allocator_id\fP allocator_id, void *ctx)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_allocator_alloc\fP (void *allocator, size_t size)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_allocator_realloc\fP (void *allocator, void *data, size_t size, size_t new_size)"
+.br
+.ti -1c
+.RI "METACALL_API void \fBmetacall_allocator_free\fP (void *allocator, void *data)"
+.br
+.ti -1c
+.RI "METACALL_API void \fBmetacall_allocator_destroy\fP (void *allocator)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct ngx_pool_s \fBngx_pool_t\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBmetacall_allocator_id\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMETACALL_ALLOCATOR_STD \fP\fP
+.TP
+\fB\fIMETACALL_ALLOCATOR_NGINX \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "METACALL_API void* metacall_allocator_create (enum \fBmetacall_allocator_id\fP allocator_id, void * ctx)"
+
+.PP
+Create an allocator instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIallocator_id\fP Type of allocator to be created
+.br
+\fIctx\fP Context of the allocator
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to allocator if success, null otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_allocator_alloc (void * allocator, size_t size)"
+
+.PP
+Reserve memory from an allocator instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIallocator\fP Pointer to allocator instance
+.br
+\fIsize\fP Size in bytes to be allocated
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to allocated data on success, null otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_allocator_realloc (void * allocator, void * data, size_t size, size_t new_size)"
+
+.PP
+Reallocate memory from an allocator instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIallocator\fP Pointer to allocator instance
+.br
+\fIdata\fP Original pointer to data
+.br
+\fIsize\fP Original size in bytes
+.br
+\fInew_size\fP New size in bytes to be reallocated
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to new reallocated data on success, null otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void metacall_allocator_free (void * allocator, void * data)"
+
+.PP
+Free memory from an allocator instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIallocator\fP Pointer to allocator instance
+.br
+\fIdata\fP Pointer to data to be freed 
+.RE
+.PP
+
+.SS "METACALL_API void metacall_allocator_destroy (void * allocator)"
+
+.PP
+Destroy an allocator instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIallocator\fP Pointer to allocator instance 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

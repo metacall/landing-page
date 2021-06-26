@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__scope_8h">
+<title>reflect_scope.h File Reference</title>
+<indexterm><primary>reflect_scope.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_function.h&gt;
+#include &lt;reflect/reflect_type.h&gt;
+</programlisting>Include dependency graph for reflect_scope.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__scope_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__scope_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef size_t <link linkend="_reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d">scope_stack_ptr</link></para>
+</listitem>
+            <listitem><para>typedef struct scope_type * <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>REFLECT_API <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> <link linkend="_reflect__scope_8h_1adef5f947f919b3ff69a01542d3f3deeb">scope_create</link> (const char *name)</para>
+</listitem>
+            <listitem><para>REFLECT_API size_t <link linkend="_reflect__scope_8h_1a8db2b76c0120e768fbcd8897beac921b">scope_size</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__scope_8h_1acb69c1e8c0fbebf6380ffada174ffae1">scope_define</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, const char *key, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> obj)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__scope_8h_1a41ebf1db1ed72d90642220ecf207592d">scope_metadata</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__scope_8h_1a6940f950718ce6aff233bd31554ab6d4">scope_export</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__scope_8h_1a62a31f3ad2165a12bbdcc05e10523bd1">scope_get</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, const char *key)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__scope_8h_1a00928bfb641d3bcf921796e8be6d499d">scope_undef</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, const char *key)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae">scope_append</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> dest, <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> src)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__scope_8h_1a7ae749919eed062fa9f9aec307210903">scope_contains</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> dest, <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> src)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc">scope_remove</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> dest, <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> src)</para>
+</listitem>
+            <listitem><para>REFLECT_API size_t * <link linkend="_reflect__scope_8h_1a43523b505351dc8055fe0415f954464b">scope_stack_return</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d">scope_stack_ptr</link> <link linkend="_reflect__scope_8h_1ab3649f84906f0db25ecaf94a875e9c01">scope_stack_push</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, size_t bytes)</para>
+</listitem>
+            <listitem><para>REFLECT_API void * <link linkend="_reflect__scope_8h_1a2771b27118b4eb1cda14626a89fd4a67">scope_stack_get</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, <link linkend="_reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d">scope_stack_ptr</link> stack_ptr)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__scope_8h_1a729e7daa1a92497c2aa02a2f102f6a0d">scope_stack_pop</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__scope_8h_1a76de6b055280509d8009a65dc2f5a5dd">scope_destroy</link> (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d"/>    <section>
+    <title>scope_stack_ptr</title>
+<indexterm><primary>scope_stack_ptr</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_stack_ptr</secondary></indexterm>
+<para><computeroutput>typedef size_t <link linkend="_reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d">scope_stack_ptr</link></computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b"/>    <section>
+    <title>scope</title>
+<indexterm><primary>scope</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope</secondary></indexterm>
+<para><computeroutput>typedef struct scope_type* <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__scope_8h_1adef5f947f919b3ff69a01542d3f3deeb"/>    <section>
+    <title>scope_create()</title>
+<indexterm><primary>scope_create</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_create</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> scope_create (const char * name)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a8db2b76c0120e768fbcd8897beac921b"/>    <section>
+    <title>scope_size()</title>
+<indexterm><primary>scope_size</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_size</secondary></indexterm>
+<para><computeroutput>REFLECT_API size_t scope_size (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1acb69c1e8c0fbebf6380ffada174ffae1"/>    <section>
+    <title>scope_define()</title>
+<indexterm><primary>scope_define</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_define</secondary></indexterm>
+<para><computeroutput>REFLECT_API int scope_define (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, const char * key, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> obj)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a41ebf1db1ed72d90642220ecf207592d"/>    <section>
+    <title>scope_metadata()</title>
+<indexterm><primary>scope_metadata</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_metadata</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> scope_metadata (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a6940f950718ce6aff233bd31554ab6d4"/>    <section>
+    <title>scope_export()</title>
+<indexterm><primary>scope_export</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_export</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> scope_export (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a62a31f3ad2165a12bbdcc05e10523bd1"/>    <section>
+    <title>scope_get()</title>
+<indexterm><primary>scope_get</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_get</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> scope_get (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a00928bfb641d3bcf921796e8be6d499d"/>    <section>
+    <title>scope_undef()</title>
+<indexterm><primary>scope_undef</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_undef</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> scope_undef (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae"/>    <section>
+    <title>scope_append()</title>
+<indexterm><primary>scope_append</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_append</secondary></indexterm>
+<para><computeroutput>REFLECT_API int scope_append (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> dest, <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> src)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a7ae749919eed062fa9f9aec307210903"/>    <section>
+    <title>scope_contains()</title>
+<indexterm><primary>scope_contains</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_contains</secondary></indexterm>
+<para><computeroutput>REFLECT_API int scope_contains (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> dest, <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> src)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc"/>    <section>
+    <title>scope_remove()</title>
+<indexterm><primary>scope_remove</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_remove</secondary></indexterm>
+<para><computeroutput>REFLECT_API int scope_remove (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> dest, <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> src)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a43523b505351dc8055fe0415f954464b"/>    <section>
+    <title>scope_stack_return()</title>
+<indexterm><primary>scope_stack_return</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_stack_return</secondary></indexterm>
+<para><computeroutput>REFLECT_API size_t* scope_stack_return (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1ab3649f84906f0db25ecaf94a875e9c01"/>    <section>
+    <title>scope_stack_push()</title>
+<indexterm><primary>scope_stack_push</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_stack_push</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d">scope_stack_ptr</link> scope_stack_push (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, size_t bytes)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a2771b27118b4eb1cda14626a89fd4a67"/>    <section>
+    <title>scope_stack_get()</title>
+<indexterm><primary>scope_stack_get</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_stack_get</secondary></indexterm>
+<para><computeroutput>REFLECT_API void* scope_stack_get (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp, <link linkend="_reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d">scope_stack_ptr</link> stack_ptr)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a729e7daa1a92497c2aa02a2f102f6a0d"/>    <section>
+    <title>scope_stack_pop()</title>
+<indexterm><primary>scope_stack_pop</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_stack_pop</secondary></indexterm>
+<para><computeroutput>REFLECT_API int scope_stack_pop (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</computeroutput></para>    </section><anchor xml:id="_reflect__scope_8h_1a76de6b055280509d8009a65dc2f5a5dd"/>    <section>
+    <title>scope_destroy()</title>
+<indexterm><primary>scope_destroy</primary><secondary>reflect_scope.h</secondary></indexterm>
+<indexterm><primary>reflect_scope.h</primary><secondary>scope_destroy</secondary></indexterm>
+<para><computeroutput>REFLECT_API void scope_destroy (<link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> sp)</computeroutput></para></section>
+</section>
+</section>

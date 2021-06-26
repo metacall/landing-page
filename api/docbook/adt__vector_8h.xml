@@ -1,0 +1,1600 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_adt__vector_8h">
+<title>adt_vector.h File Reference</title>
+<indexterm><primary>adt_vector.h</primary></indexterm>
+<programlisting>#include &lt;adt/adt_api.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for adt_vector.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="adt__vector_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="adt__vector_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a946b6ec8932c7d60139f2e289c74a36b">vector_create_type</link>(<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   <link linkend="_adt__vector_8h_1aa5fda1f32a04c497a47c35c4887b4ef7">vector_create</link>(sizeof(<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a7d8a3fb5278ed9df33d2bb8599331e06">vector_create_reserve_type</link>(<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>,  capacity)   <link linkend="_adt__vector_8h_1a84986aef46e65945a8b908049cefc1dc">vector_create_reserve</link>(sizeof(<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>), capacity)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a7f11f0092036be5fc72c8129f6a90d21">vector_front_type</link>(v,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   (*((<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link> *)<link linkend="_adt__vector_8h_1aa117c0fcc822d4cf87442204f98f0cdd">vector_front</link>(v)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a0ee15fe71f9082d4bcea90a56a6f38da">vector_back_type</link>(v,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   (*((<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link> *)<link linkend="_adt__vector_8h_1a63ca9ed28901e46249cf49a578803f06">vector_back</link>(v)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a8955efed1b07820a1da1c2b71f4449b1">vector_at_type</link>(v,  position,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   (*((<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link> *)<link linkend="_adt__vector_8h_1af81ce1fcedbe109b25134a321806738d">vector_at</link>(v, position)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a37183e73995259f522d6925e52989078">vector_set_var</link>(v,  position,  variable)   <link linkend="_adt__vector_8h_1a5eba77703e9efc9f8f4aa7487040ba60">vector_set</link>(v, position, &amp;variable)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a06322aeaa2dd1a50a20919d3e13aa0f0">vector_push_back_var</link>(v,  variable)   <link linkend="_adt__vector_8h_1a115b74cee82e62489f7648011563837a">vector_push_back</link>(v, &amp;variable)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a112671f6edc461b2f62d275bd1add3e3">vector_push_front_var</link>(v,  variable)   <link linkend="_adt__vector_8h_1adce797d3b63b3b204b4f76c3cb5896e5">vector_push_front</link>(v, &amp;variable)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1af0e7e14e0926c31055b09d958a2a4b92">vector_insert_var</link>(v,  position,  variable)   <link linkend="_adt__vector_8h_1af0331e41caf5c4e352fc15ab55e9cf99">vector_insert</link>(v, position, &amp;variable)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1a5af8eacbf4a90ebcd66fefaf5fdaf46c">vector_set_const</link>(v,  position,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1ad4167623ce19909adc0a66d73276c014">vector_push_back_const</link>(v,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1ac8c9e1a390f31c2fac3d6c7d11ee95ab">vector_push_front_const</link>(v,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_adt__vector_8h_1aa8ae3ac32fd2c80f25e922a4f95bcb21">vector_insert_const</link>(v,  position,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct vector_type * <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_adt__vector_8h_1aa5fda1f32a04c497a47c35c4887b4ef7">vector_create</link> (size_t type_size)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_adt__vector_8h_1a84986aef46e65945a8b908049cefc1dc">vector_create_reserve</link> (size_t type_size, size_t capacity)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_adt__vector_8h_1a953d027f445c44cba0ca5b3a0887c69e">vector_copy</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__vector_8h_1a98a7e70a5b4fef06bc7c707e0d6a3716">vector_reserve</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t capacity)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__vector_8h_1a7b182ac37ab3c2a523353d283322867e">vector_resize</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t size)</para>
+</listitem>
+            <listitem><para>ADT_API size_t <link linkend="_adt__vector_8h_1a13e1f1a3bed60f1d41d8f984cfea5f34">vector_capacity</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API size_t <link linkend="_adt__vector_8h_1a39330e3a432d5512e18e3ed851099240">vector_size</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API size_t <link linkend="_adt__vector_8h_1a17fda1719686f75abcb047a7cab98535">vector_type_size</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void * <link linkend="_adt__vector_8h_1aa117c0fcc822d4cf87442204f98f0cdd">vector_front</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void * <link linkend="_adt__vector_8h_1a63ca9ed28901e46249cf49a578803f06">vector_back</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void * <link linkend="_adt__vector_8h_1af81ce1fcedbe109b25134a321806738d">vector_at</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1a5eba77703e9efc9f8f4aa7487040ba60">vector_set</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position, void *element)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1a0d06e0b81b9cc09e5db0e42588521a56">vector_push_back_empty</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1a115b74cee82e62489f7648011563837a">vector_push_back</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, void *element)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1a4e259834c8bfbb6298b81d8d0d2fe039">vector_pop_back</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1a324cb2548f536dba78139508e0cd7c86">vector_push_front_empty</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1adce797d3b63b3b204b4f76c3cb5896e5">vector_push_front</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, void *element)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1a896e85d1017183c0703fa5215f51d799">vector_pop_front</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1ab563b1e38cc93fda623dc3e720e2eaf4">vector_insert_empty</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1af0331e41caf5c4e352fc15ab55e9cf99">vector_insert</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position, void *element)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1a75406763e0f7bd429502f2f0cdc88107">vector_erase</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__vector_8h_1af1ab05486b73a8d81ef36597422e175c">vector_clear</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__vector_8h_1ab25378e57451406a042071ffa0d03e3d">vector_destroy</link> (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_adt__vector_8h_1a946b6ec8932c7d60139f2e289c74a36b"/>    <section>
+    <title>vector_create_type</title>
+<indexterm><primary>vector_create_type</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_create_type</secondary></indexterm>
+<para><computeroutput>#define vector_create_type( <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   <link linkend="_adt__vector_8h_1aa5fda1f32a04c497a47c35c4887b4ef7">vector_create</link>(sizeof(<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>))</computeroutput></para><para>
+
+<para>Create a vector in memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of each element of the vector</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the vector memory block </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a7d8a3fb5278ed9df33d2bb8599331e06"/>    <section>
+    <title>vector_create_reserve_type</title>
+<indexterm><primary>vector_create_reserve_type</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_create_reserve_type</secondary></indexterm>
+<para><computeroutput>#define vector_create_reserve_type( <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>,  capacity)   <link linkend="_adt__vector_8h_1a84986aef46e65945a8b908049cefc1dc">vector_create_reserve</link>(sizeof(<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>), capacity)</computeroutput></para><para>
+
+<para>Create a vector with @capacity elements preallocated. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of each element of the vector</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>capacity</entry>
+                                <entry>
+<para>Preallocated elements of the vector</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the vector memory block </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a7f11f0092036be5fc72c8129f6a90d21"/>    <section>
+    <title>vector_front_type</title>
+<indexterm><primary>vector_front_type</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_front_type</secondary></indexterm>
+<para><computeroutput>#define vector_front_type( v,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   (*((<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link> *)<link linkend="_adt__vector_8h_1aa117c0fcc822d4cf87442204f98f0cdd">vector_front</link>(v)))</computeroutput></para><para>
+
+<para>Access to the first element in vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be accessed</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the first element </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a0ee15fe71f9082d4bcea90a56a6f38da"/>    <section>
+    <title>vector_back_type</title>
+<indexterm><primary>vector_back_type</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_back_type</secondary></indexterm>
+<para><computeroutput>#define vector_back_type( v,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   (*((<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link> *)<link linkend="_adt__vector_8h_1a63ca9ed28901e46249cf49a578803f06">vector_back</link>(v)))</computeroutput></para><para>
+
+<para>Access to the last element in vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be accessed</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the last element </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a8955efed1b07820a1da1c2b71f4449b1"/>    <section>
+    <title>vector_at_type</title>
+<indexterm><primary>vector_at_type</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_at_type</secondary></indexterm>
+<para><computeroutput>#define vector_at_type( v,  position,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)   (*((<link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link> *)<link linkend="_adt__vector_8h_1af81ce1fcedbe109b25134a321806738d">vector_at</link>(v, position)))</computeroutput></para><para>
+
+<para>Access to object at @position where: [0 &lt;= @position &lt;= vector_size(v) - 1 ]. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be accessed</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be accessed</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the element at @position </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a37183e73995259f522d6925e52989078"/>    <section>
+    <title>vector_set_var</title>
+<indexterm><primary>vector_set_var</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_set_var</secondary></indexterm>
+<para><computeroutput>#define vector_set_var( v,  position,  variable)   <link linkend="_adt__vector_8h_1a5eba77703e9efc9f8f4aa7487040ba60">vector_set</link>(v, position, &amp;variable)</computeroutput></para><para>
+
+<para>Sets a variable object at @position to the same object pointed by @element. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be modified</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>variable</entry>
+                                <entry>
+<para>Variable element to be modified</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be modified </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a06322aeaa2dd1a50a20919d3e13aa0f0"/>    <section>
+    <title>vector_push_back_var</title>
+<indexterm><primary>vector_push_back_var</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_back_var</secondary></indexterm>
+<para><computeroutput>#define vector_push_back_var( v,  variable)   <link linkend="_adt__vector_8h_1a115b74cee82e62489f7648011563837a">vector_push_back</link>(v, &amp;variable)</computeroutput></para><para>
+
+<para>Adds a variable object at the end of vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>variable</entry>
+                                <entry>
+<para>Variable element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a112671f6edc461b2f62d275bd1add3e3"/>    <section>
+    <title>vector_push_front_var</title>
+<indexterm><primary>vector_push_front_var</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_front_var</secondary></indexterm>
+<para><computeroutput>#define vector_push_front_var( v,  variable)   <link linkend="_adt__vector_8h_1adce797d3b63b3b204b4f76c3cb5896e5">vector_push_front</link>(v, &amp;variable)</computeroutput></para><para>
+
+<para>Adds a variable object in first position of vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>variable</entry>
+                                <entry>
+<para>Variable element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1af0e7e14e0926c31055b09d958a2a4b92"/>    <section>
+    <title>vector_insert_var</title>
+<indexterm><primary>vector_insert_var</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_insert_var</secondary></indexterm>
+<para><computeroutput>#define vector_insert_var( v,  position,  variable)   <link linkend="_adt__vector_8h_1af0331e41caf5c4e352fc15ab55e9cf99">vector_insert</link>(v, position, &amp;variable)</computeroutput></para><para>
+
+<para>Adds a variable object in @position where: [ 0 &lt;= @position &lt;= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>variable</entry>
+                                <entry>
+<para>Variable element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a5af8eacbf4a90ebcd66fefaf5fdaf46c"/>    <section>
+    <title>vector_set_const</title>
+<indexterm><primary>vector_set_const</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_set_const</secondary></indexterm>
+<para><computeroutput>#define vector_set_const( v,  position,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;type_name&#32;macro_vector_type_const_to_var&#32;=&#32;constant;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_adt__vector_8h_1a5eba77703e9efc9f8f4aa7487040ba60">\</link>
+<link linkend="_adt__vector_8h_1a5eba77703e9efc9f8f4aa7487040ba60">                                                                  \</link>
+<link linkend="_adt__vector_8h_1a5eba77703e9efc9f8f4aa7487040ba60">		vector_set</link>(v,&#32;position,&#32;&amp;macro_vector_type_const_to_var);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(0)
+</programlisting><para>
+
+<para>Sets a constant object at @position to the same object pointed by @element. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be modified</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>constant</entry>
+                                <entry>
+<para>Constant element to be modified</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be modified </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1ad4167623ce19909adc0a66d73276c014"/>    <section>
+    <title>vector_push_back_const</title>
+<indexterm><primary>vector_push_back_const</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_back_const</secondary></indexterm>
+<para><computeroutput>#define vector_push_back_const( v,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;type_name&#32;macro_vector_type_const_to_var&#32;=&#32;constant;&#32;&#32;<link linkend="_adt__vector_8h_1a115b74cee82e62489f7648011563837a">\</link>
+<link linkend="_adt__vector_8h_1a115b74cee82e62489f7648011563837a">                                                              \</link>
+<link linkend="_adt__vector_8h_1a115b74cee82e62489f7648011563837a">		vector_push_back</link>(v,&#32;&amp;macro_vector_type_const_to_var);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(0)
+</programlisting><para>
+
+<para>Adds a constant object at the end of vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>constant</entry>
+                                <entry>
+<para>Constant element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1ac8c9e1a390f31c2fac3d6c7d11ee95ab"/>    <section>
+    <title>vector_push_front_const</title>
+<indexterm><primary>vector_push_front_const</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_front_const</secondary></indexterm>
+<para><computeroutput>#define vector_push_front_const( v,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;type_name&#32;macro_vector_type_const_to_var&#32;=&#32;constant;&#32;&#32;&#32;<link linkend="_adt__vector_8h_1adce797d3b63b3b204b4f76c3cb5896e5">\</link>
+<link linkend="_adt__vector_8h_1adce797d3b63b3b204b4f76c3cb5896e5">                                                               \</link>
+<link linkend="_adt__vector_8h_1adce797d3b63b3b204b4f76c3cb5896e5">		vector_push_front</link>(v,&#32;&amp;macro_vector_type_const_to_var);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(0)
+</programlisting><para>
+
+<para>Adds a constant object in first position of vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>constant</entry>
+                                <entry>
+<para>Constant element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1aa8ae3ac32fd2c80f25e922a4f95bcb21"/>    <section>
+    <title>vector_insert_const</title>
+<indexterm><primary>vector_insert_const</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_insert_const</secondary></indexterm>
+<para><computeroutput>#define vector_insert_const( v,  position,  constant,  <link linkend="_reflect__type_8h_1a5427879e0f27f7cac779fe6cefb94623">type_name</link>)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;type_name&#32;macro_vector_type_const_to_var&#32;=&#32;constant;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_adt__vector_8h_1af0331e41caf5c4e352fc15ab55e9cf99">\</link>
+<link linkend="_adt__vector_8h_1af0331e41caf5c4e352fc15ab55e9cf99">                                                                     \</link>
+<link linkend="_adt__vector_8h_1af0331e41caf5c4e352fc15ab55e9cf99">		vector_insert</link>(v,&#32;position,&#32;&amp;macro_vector_type_const_to_var);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(0)
+</programlisting><para>
+
+<para>Adds a constant object in @position where: [ 0 &lt;= @position &lt;= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>constant</entry>
+                                <entry>
+<para>Constant element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_name</entry>
+                                <entry>
+<para>Type of element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f"/>    <section>
+    <title>vector</title>
+<indexterm><primary>vector</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector</secondary></indexterm>
+<para><computeroutput>typedef struct vector_type* <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_adt__vector_8h_1aa5fda1f32a04c497a47c35c4887b4ef7"/>    <section>
+    <title>vector_create()</title>
+<indexterm><primary>vector_create</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_create</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> vector_create (size_t type_size)</computeroutput></para><para>
+
+<para>Create a vector in memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_size</entry>
+                                <entry>
+<para>Size of the element type vector will allocate</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the vector memory block </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a84986aef46e65945a8b908049cefc1dc"/>    <section>
+    <title>vector_create_reserve()</title>
+<indexterm><primary>vector_create_reserve</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_create_reserve</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> vector_create_reserve (size_t type_size, size_t capacity)</computeroutput></para><para>
+
+<para>Create a vector with @capacity elements preallocated. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>type_size</entry>
+                                <entry>
+<para>Size of the element type vector will allocate</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>capacity</entry>
+                                <entry>
+<para>Preallocated elements of the vector</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the vector memory block </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a953d027f445c44cba0ca5b3a0887c69e"/>    <section>
+    <title>vector_copy()</title>
+<indexterm><primary>vector_copy</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_copy</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> vector_copy (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Copy a vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Source vector to be copied</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to a vector memory block copy </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a98a7e70a5b4fef06bc7c707e0d6a3716"/>    <section>
+    <title>vector_reserve()</title>
+<indexterm><primary>vector_reserve</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_reserve</secondary></indexterm>
+<para><computeroutput>ADT_API int vector_reserve (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t capacity)</computeroutput></para><para>
+
+<para>Request a change in vector capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>capacity</entry>
+                                <entry>
+<para>New capacity of vector</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Positive number on error, zero on success </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a7b182ac37ab3c2a523353d283322867e"/>    <section>
+    <title>vector_resize()</title>
+<indexterm><primary>vector_resize</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_resize</secondary></indexterm>
+<para><computeroutput>ADT_API int vector_resize (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t size)</computeroutput></para><para>
+
+<para>Resizes container so that it contains @size elements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>New size of vector</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Positive number on error, zero on success </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a13e1f1a3bed60f1d41d8f984cfea5f34"/>    <section>
+    <title>vector_capacity()</title>
+<indexterm><primary>vector_capacity</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_capacity</secondary></indexterm>
+<para><computeroutput>ADT_API size_t vector_capacity (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Retreive amount of objects can be stored with current allocated memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Capacity of vector </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a39330e3a432d5512e18e3ed851099240"/>    <section>
+    <title>vector_size()</title>
+<indexterm><primary>vector_size</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_size</secondary></indexterm>
+<para><computeroutput>ADT_API size_t vector_size (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Retreive amount of current elements in vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Current elements in vector </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a17fda1719686f75abcb047a7cab98535"/>    <section>
+    <title>vector_type_size()</title>
+<indexterm><primary>vector_type_size</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_type_size</secondary></indexterm>
+<para><computeroutput>ADT_API size_t vector_type_size (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Retreive size of element type of vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Size of element type </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1aa117c0fcc822d4cf87442204f98f0cdd"/>    <section>
+    <title>vector_front()</title>
+<indexterm><primary>vector_front</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_front</secondary></indexterm>
+<para><computeroutput>ADT_API void* vector_front (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Access to the first element in vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the first element </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a63ca9ed28901e46249cf49a578803f06"/>    <section>
+    <title>vector_back()</title>
+<indexterm><primary>vector_back</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_back</secondary></indexterm>
+<para><computeroutput>ADT_API void* vector_back (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Access to the last element in vector. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the last element </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1af81ce1fcedbe109b25134a321806738d"/>    <section>
+    <title>vector_at()</title>
+<indexterm><primary>vector_at</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_at</secondary></indexterm>
+<para><computeroutput>ADT_API void* vector_at (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position)</computeroutput></para><para>
+
+<para>Access to object at @position where: [0 &lt;= @position &lt;= vector_size(v) - 1 ]. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be accessed</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the element at @position </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1a5eba77703e9efc9f8f4aa7487040ba60"/>    <section>
+    <title>vector_set()</title>
+<indexterm><primary>vector_set</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_set</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_set (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position, void * element)</computeroutput></para><para>
+
+<para>Sets the object at @position to the same object pointed by @element. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be modified</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>element</entry>
+                                <entry>
+<para>Element to be copied at @position </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a0d06e0b81b9cc09e5db0e42588521a56"/>    <section>
+    <title>vector_push_back_empty()</title>
+<indexterm><primary>vector_push_back_empty</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_back_empty</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_push_back_empty (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Adds an object at the end of vector without initializing it, all objects be moved (increments allocated memory if neccessary; new element could contain garbage) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a115b74cee82e62489f7648011563837a"/>    <section>
+    <title>vector_push_back()</title>
+<indexterm><primary>vector_push_back</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_back</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_push_back (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, void * element)</computeroutput></para><para>
+
+<para>Adds an object at the end of vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>element</entry>
+                                <entry>
+<para>Element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a4e259834c8bfbb6298b81d8d0d2fe039"/>    <section>
+    <title>vector_pop_back()</title>
+<indexterm><primary>vector_pop_back</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_pop_back</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_pop_back (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Deletes the last object in vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a324cb2548f536dba78139508e0cd7c86"/>    <section>
+    <title>vector_push_front_empty()</title>
+<indexterm><primary>vector_push_front_empty</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_front_empty</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_push_front_empty (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Adds an object in first position without initializing it, all objects be moved (increments allocated memory if neccessary; new element could contain garbage) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1adce797d3b63b3b204b4f76c3cb5896e5"/>    <section>
+    <title>vector_push_front()</title>
+<indexterm><primary>vector_push_front</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_push_front</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_push_front (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, void * element)</computeroutput></para><para>
+
+<para>Adds an object in first position of vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>element</entry>
+                                <entry>
+<para>Element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a896e85d1017183c0703fa5215f51d799"/>    <section>
+    <title>vector_pop_front()</title>
+<indexterm><primary>vector_pop_front</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_pop_front</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_pop_front (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Deletes the first object in vector (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1ab563b1e38cc93fda623dc3e720e2eaf4"/>    <section>
+    <title>vector_insert_empty()</title>
+<indexterm><primary>vector_insert_empty</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_insert_empty</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_insert_empty (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position)</computeroutput></para><para>
+
+<para>Adds an object in @position without initializing it where: [ 0 &lt;= @position &lt;= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary; new element could contain garbage) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1af0331e41caf5c4e352fc15ab55e9cf99"/>    <section>
+    <title>vector_insert()</title>
+<indexterm><primary>vector_insert</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_insert</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_insert (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position, void * element)</computeroutput></para><para>
+
+<para>Adds an object in @position where: [ 0 &lt;= @position &lt;= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be inserted</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>element</entry>
+                                <entry>
+<para>Reference to the element to be inserted </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1a75406763e0f7bd429502f2f0cdc88107"/>    <section>
+    <title>vector_erase()</title>
+<indexterm><primary>vector_erase</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_erase</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_erase (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v, size_t position)</computeroutput></para><para>
+
+<para>Deletes an object in @position (decrements allocated memory if neccessary) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>position</entry>
+                                <entry>
+<para>Position of element to be erased </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_adt__vector_8h_1af1ab05486b73a8d81ef36597422e175c"/>    <section>
+    <title>vector_clear()</title>
+<indexterm><primary>vector_clear</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_clear</secondary></indexterm>
+<para><computeroutput>ADT_API int vector_clear (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Clear internal data of the vector and set size to zero. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Positive number on error, zero on success </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_adt__vector_8h_1ab25378e57451406a042071ffa0d03e3d"/>    <section>
+    <title>vector_destroy()</title>
+<indexterm><primary>vector_destroy</primary><secondary>adt_vector.h</secondary></indexterm>
+<indexterm><primary>adt_vector.h</primary><secondary>vector_destroy</secondary></indexterm>
+<para><computeroutput>ADT_API void vector_destroy (<link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> v)</computeroutput></para><para>
+
+<para>Destroy a vector from memory (do not apply same operation twice over same object) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Vector pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

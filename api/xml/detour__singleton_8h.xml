@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="detour__singleton_8h" kind="file" language="C++">
+    <compoundname>detour_singleton.h</compoundname>
+    <includes local="no">detour/detour_api.h</includes>
+    <includes refid="detour_8h" local="no">detour/detour.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>detour/detour.h</label>
+        <link refid="detour_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>detour/detour_api.h</label>
+      </node>
+      <node id="1">
+        <label>detour_singleton.h</label>
+        <link refid="detour__singleton_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>memory/memory.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="user-defined">
+      <description><para>Retrieve detour from detours map by</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index which references the detour to be retrieved</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns pointer to detour if exists, null otherwise </para>
+</simplesect>
+</para>
+</description>
+      <memberdef kind="function" id="detour__singleton_8h_1aa86b7e9be82dd751464294cdacd59dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API <ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+        <definition>DETOUR_API detour detour_singleton_get</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>detour_singleton_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="76" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" declline="76" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="detour__singleton_8h_1a3beb5f13a01e22019c28774960f896bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const DETOUR_API char *</type>
+        <definition>const DETOUR_API char* detour_singleton_path</definition>
+        <argsstring>(void)</argsstring>
+        <name>detour_singleton_path</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Retrieve detour library path where detours are located. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns constant string representing detours library path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="86" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" declline="86" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="detour__singleton_8h_1a6a4c4b4103701e2bb9f99542f464f528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API int</type>
+        <definition>DETOUR_API int detour_singleton_clear</definition>
+        <argsstring>(detour d)</argsstring>
+        <name>detour_singleton_clear</name>
+        <param>
+          <type><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Remove detour from detours map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to detour</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns zero on correct detour singleton removing, distinct from zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="99" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" declline="99" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="detour__singleton_8h_1afef5bdebd544d6b9fd88f5f3bcb662b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API void</type>
+        <definition>DETOUR_API void detour_singleton_destroy</definition>
+        <argsstring>(void)</argsstring>
+        <name>detour_singleton_destroy</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destroy detour singleton. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="106" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" declline="106" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954" prot="public" static="no">
+        <type>struct detour_singleton_type *</type>
+        <definition>typedef struct detour_singleton_type* detour_singleton</definition>
+        <argsstring></argsstring>
+        <name>detour_singleton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="28" column="36" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="detour__singleton_8h_1ab6308d3e842fbf42b7ed620d08ee7fd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API int</type>
+        <definition>DETOUR_API int detour_singleton_initialize</definition>
+        <argsstring>()</argsstring>
+        <name>detour_singleton_initialize</name>
+        <briefdescription>
+<para>Initialize detour singleton. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns zero on correct detour singleton initialization, distinct from zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="40" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" declline="40" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="detour__singleton_8h_1a95bc055fdebf2873f3903d86af3393c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API <ref refid="detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954" kindref="member">detour_singleton</ref></type>
+        <definition>DETOUR_API detour_singleton detour_singleton_instance</definition>
+        <argsstring>(void)</argsstring>
+        <name>detour_singleton_instance</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Wrapper of detour singleton instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to detour singleton instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="50" column="29" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" declline="50" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="detour__singleton_8h_1ae4fac28fa2ed1a289fe9757058a1e55b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API int</type>
+        <definition>DETOUR_API int detour_singleton_register</definition>
+        <argsstring>(detour d)</argsstring>
+        <name>detour_singleton_register</name>
+        <param>
+          <type><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Register detour into detours map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to detour</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns zero on correct detour singleton insertion, distinct from zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" line="63" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h" declline="63" declcolumn="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Detour<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>cross-platform<sp/>library<sp/>providing<sp/>detours,<sp/>function<sp/>hooks<sp/>and<sp/>trampolines.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DETOUR_SINGLETON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DETOUR_SINGLETON_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;detour/detour_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="detour_8h" kindref="compound">detour/detour.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detour_singleton_type;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detour_singleton_type<sp/>*<ref refid="detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954" kindref="member">detour_singleton</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*<sp/><sp/><sp/><sp/>Initialize<sp/>detour<sp/>singleton</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>correct<sp/>detour<sp/>singleton<sp/>initialization,<sp/>distinct<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour__singleton_8h_1ab6308d3e842fbf42b7ed620d08ee7fd9" kindref="member">detour_singleton_initialize</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*<sp/><sp/><sp/><sp/>Wrapper<sp/>of<sp/>detour<sp/>singleton<sp/>instance</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>detour<sp/>singleton<sp/>instance</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">DETOUR_API<sp/><ref refid="detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954" kindref="member">detour_singleton</ref><sp/><ref refid="detour__singleton_8h_1a95bc055fdebf2873f3903d86af3393c1" kindref="member">detour_singleton_instance</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="52"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*<sp/><sp/><sp/><sp/>Register<sp/>detour<sp/>into<sp/>detours<sp/>map</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>detour</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>correct<sp/>detour<sp/>singleton<sp/>insertion,<sp/>distinct<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour__singleton_8h_1ae4fac28fa2ed1a289fe9757058a1e55b" kindref="member">detour_singleton_register</ref>(<ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/>d);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="65"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">*<sp/><sp/><sp/><sp/>Retrieve<sp/>detour<sp/>from<sp/>detours<sp/>map<sp/>by<sp/>@name</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>name</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*<sp/><sp/><sp/><sp/>Index<sp/>which<sp/>references<sp/>the<sp/>detour<sp/>to<sp/>be<sp/>retrieved</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>pointer<sp/>to<sp/>detour<sp/>if<sp/>exists,<sp/>null<sp/>otherwise</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">DETOUR_API<sp/><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/><ref refid="detour__singleton_8h_1aa86b7e9be82dd751464294cdacd59dd2" kindref="member">detour_singleton_get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="78"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">*<sp/><sp/><sp/><sp/>Retrieve<sp/>detour<sp/>library<sp/>path<sp/>where<sp/>detours<sp/>are<sp/>located</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>constant<sp/>string<sp/>representing<sp/>detours<sp/>library<sp/>path</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="detour__singleton_8h_1a3beb5f13a01e22019c28774960f896bb" kindref="member">detour_singleton_path</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="88"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">*<sp/><sp/><sp/><sp/>Remove<sp/>detour<sp/>from<sp/>detours<sp/>map</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>detour</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>correct<sp/>detour<sp/>singleton<sp/>removing,<sp/>distinct<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour__singleton_8h_1a6a4c4b4103701e2bb9f99542f464f528" kindref="member">detour_singleton_clear</ref>(<ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/>d);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="101"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>detour<sp/>singleton</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="detour__singleton_8h_1afef5bdebd544d6b9fd88f5f3bcb662b4" kindref="member">detour_singleton_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DETOUR_SINGLETON_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_singleton.h"/>
+  </compounddef>
+</doxygen>

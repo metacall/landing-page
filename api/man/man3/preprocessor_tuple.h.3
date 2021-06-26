@@ -1,0 +1,50 @@
+.TH "preprocessor_tuple.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+preprocessor_tuple.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <preprocessor/preprocessor_api\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPREPROCESSOR_TUPLE_EXPAND_MACRO\fP(macro, \&.\&.\&.)   macro __VA_ARGS__"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_TUPLE_EXPAND\fP(\&.\&.\&.)   \fBPREPROCESSOR_TUPLE_EXPAND_IMPL\fP __VA_ARGS__"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_TUPLE_MAKE\fP(\&.\&.\&.)   (\fBPREPROCESSOR_TUPLE_EXPAND_IMPL\fP(__VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_TUPLE_EXPAND_IMPL\fP(\&.\&.\&.)   __VA_ARGS__"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_TUPLE_PREPEND\fP(expr,  tuple)   \fBPREPROCESSOR_TUPLE_MAKE\fP(expr, \fBPREPROCESSOR_TUPLE_EXPAND\fP(tuple))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_TUPLE_APPEND\fP(expr,  tuple)   \fBPREPROCESSOR_TUPLE_MAKE\fP(\fBPREPROCESSOR_TUPLE_EXPAND\fP(tuple), expr)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PREPROCESSOR_TUPLE_EXPAND_MACRO(macro,  \&.\&.\&.)   macro __VA_ARGS__"
+
+.SS "#define PREPROCESSOR_TUPLE_EXPAND( \&.\&.\&.)   \fBPREPROCESSOR_TUPLE_EXPAND_IMPL\fP __VA_ARGS__"
+
+.SS "#define PREPROCESSOR_TUPLE_MAKE( \&.\&.\&.)   (\fBPREPROCESSOR_TUPLE_EXPAND_IMPL\fP(__VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_TUPLE_EXPAND_IMPL( \&.\&.\&.)   __VA_ARGS__"
+
+.SS "#define PREPROCESSOR_TUPLE_PREPEND(expr, tuple)   \fBPREPROCESSOR_TUPLE_MAKE\fP(expr, \fBPREPROCESSOR_TUPLE_EXPAND\fP(tuple))"
+
+.SS "#define PREPROCESSOR_TUPLE_APPEND(expr, tuple)   \fBPREPROCESSOR_TUPLE_MAKE\fP(\fBPREPROCESSOR_TUPLE_EXPAND\fP(tuple), expr)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__policy__storage_8h" kind="file" language="C++">
+    <compoundname>log_policy_storage.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes refid="log__policy_8h" local="no">log/log_policy.h</includes>
+    <includes refid="log__record_8h" local="no">log/log_record.h</includes>
+    <includedby refid="log_8h" local="no">log.h</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>stdarg.h</label>
+      </node>
+      <node id="6">
+        <label>log/log_record.h</label>
+        <link refid="log__record_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="8">
+        <label>threading/threading_thread_id.h</label>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>log/log_aspect.h</label>
+        <link refid="log__aspect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>log_policy_storage.h</label>
+        <link refid="log__policy__storage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>log/log_policy.h</label>
+        <link refid="log__policy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>log/log_level.h</label>
+        <link refid="log__level_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>log.h</label>
+        <link refid="log_8h"/>
+      </node>
+      <node id="1">
+        <label>log_policy_storage.h</label>
+        <link refid="log__policy__storage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlog__policy__storage__impl__type" prot="public">log_policy_storage_impl_type</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>log_policy_storage_id</name>
+        <enumvalue id="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a9e2608dafb91195744b546e8dd362ecc" prot="public">
+          <name>LOG_POLICY_STORAGE_BATCH</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4ad84649b3132132f59e5cb53af7856ef6" prot="public">
+          <name>LOG_POLICY_STORAGE_SEQUENTIAL</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a7019f5508ab5da9834ffb6f43077da92" prot="public">
+          <name>LOG_POLICY_STORAGE_SIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" line="26" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" bodystart="25" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__policy__storage_8h_1a866c51f6d0e11a3b5a0052f27bc8bdef" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_storage_append) (log_policy, const log_record)</definition>
+        <argsstring>)(log_policy, const log_record)</argsstring>
+        <name>log_policy_storage_append</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" line="41" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy__storage_8h_1aa379a2d51fc9d33fd85eebc396c1339d" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_storage_flush) (log_policy)</definition>
+        <argsstring>)(log_policy)</argsstring>
+        <name>log_policy_storage_flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" line="42" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__policy__storage_8h_1abc89599ffe2cf66077aa92bd080af6b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API log_policy_interface</type>
+        <definition>LOG_API log_policy_interface log_policy_storage</definition>
+        <argsstring>(const log_policy_id policy_storage_id)</argsstring>
+        <name>log_policy_storage</name>
+        <param>
+          <type>const <ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref></type>
+          <declname>policy_storage_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" line="54" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" declline="54" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy__storage_8h_1a6d679df8c30bd998a4930e4a18f9975d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+        <definition>LOG_API log_policy log_policy_storage_batch</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>log_policy_storage_batch</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" line="56" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" declline="56" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy__storage_8h_1aa4ce9fd36df28f1598ea32b02915f0aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+        <definition>LOG_API log_policy log_policy_storage_sequential</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_policy_storage_sequential</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" line="58" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h" declline="58" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_POLICY_STORAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_POLICY_STORAGE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__policy_8h" kindref="compound">log/log_policy.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__record_8h" kindref="compound">log/log_record.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4" kindref="member">log_policy_storage_id</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a9e2608dafb91195744b546e8dd362ecc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a9e2608dafb91195744b546e8dd362ecc" kindref="member">LOG_POLICY_STORAGE_BATCH</ref><sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="28" refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4ad84649b3132132f59e5cb53af7856ef6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4ad84649b3132132f59e5cb53af7856ef6" kindref="member">LOG_POLICY_STORAGE_SEQUENTIAL</ref><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a7019f5508ab5da9834ffb6f43077da92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a7019f5508ab5da9834ffb6f43077da92" kindref="member">LOG_POLICY_STORAGE_SIZE</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__storage__impl__type" kindref="compound">log_policy_storage_impl_type</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__storage__impl__type" kindref="compound">log_policy_storage_impl_type</ref><sp/>*log_policy_storage_impl;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="log__policy__storage_8h_1a866c51f6d0e11a3b5a0052f27bc8bdef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy__storage_8h_1a866c51f6d0e11a3b5a0052f27bc8bdef" kindref="member">log_policy_storage_append</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4" kindref="member">log_record</ref>);</highlight></codeline>
+<codeline lineno="42" refid="log__policy__storage_8h_1aa379a2d51fc9d33fd85eebc396c1339d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy__storage_8h_1aa379a2d51fc9d33fd85eebc396c1339d" kindref="member">log_policy_storage_flush</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structlog__policy__storage__impl__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__storage__impl__type" kindref="compound">log_policy_storage_impl_type</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="structlog__policy__storage__impl__type_1a424797be9f09646d3ffa741e7e6856ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__storage_8h_1a866c51f6d0e11a3b5a0052f27bc8bdef" kindref="member">log_policy_storage_append</ref><sp/><ref refid="structlog__policy__storage__impl__type_1a424797be9f09646d3ffa741e7e6856ef" kindref="member">append</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structlog__policy__storage__impl__type_1a55f1d3a18dd2f56f5fad001a9e9d2d48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__storage_8h_1aa379a2d51fc9d33fd85eebc396c1339d" kindref="member">log_policy_storage_flush</ref><sp/><ref refid="structlog__policy__storage__impl__type_1a55f1d3a18dd2f56f5fad001a9e9d2d48" kindref="member">flush</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__storage_8h_1abc89599ffe2cf66077aa92bd080af6b0" kindref="member">log_policy_storage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref><sp/>policy_storage_id);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__storage_8h_1a6d679df8c30bd998a4930e4a18f9975d" kindref="member">log_policy_storage_batch</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__storage_8h_1aa4ce9fd36df28f1598ea32b02915f0aa" kindref="member">log_policy_storage_sequential</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_POLICY_STORAGE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_storage.h"/>
+  </compounddef>
+</doxygen>

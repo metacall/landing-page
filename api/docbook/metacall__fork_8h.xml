@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall__fork_8h">
+<title>metacall_fork.h File Reference</title>
+<indexterm><primary>metacall_fork.h</primary></indexterm>
+<programlisting>#include &lt;metacall/metacall_api.h&gt;
+</programlisting>Include dependency graph for metacall_fork.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__fork_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef int(* <link linkend="_metacall__fork_8h_1a08d637d91639b7d99f67ecb5bb4fe8f3">metacall_pre_fork_callback_ptr</link>) (void *)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_metacall__fork_8h_1af7ebd3032b9a59f483098feb6055ca54">metacall_post_fork_callback_ptr</link>) (metacall_pid, void *)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>METACALL_API int <link linkend="_metacall__fork_8h_1a2ddac237388f8543cfdf7343df7270ed">metacall_fork_initialize</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall__fork_8h_1af3ee5698e71e05e892a64c2c0ba66d3a">metacall_fork</link> (<link linkend="_metacall__fork_8h_1a08d637d91639b7d99f67ecb5bb4fe8f3">metacall_pre_fork_callback_ptr</link> pre_callback, <link linkend="_metacall__fork_8h_1af7ebd3032b9a59f483098feb6055ca54">metacall_post_fork_callback_ptr</link> post_callback)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall__fork_8h_1ada8919e4e89d7933277c197b47be5271">metacall_fork_destroy</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_metacall__fork_8h_1a08d637d91639b7d99f67ecb5bb4fe8f3"/>    <section>
+    <title>metacall_pre_fork_callback_ptr</title>
+<indexterm><primary>metacall_pre_fork_callback_ptr</primary><secondary>metacall_fork.h</secondary></indexterm>
+<indexterm><primary>metacall_fork.h</primary><secondary>metacall_pre_fork_callback_ptr</secondary></indexterm>
+<para><computeroutput>typedef int(* metacall_pre_fork_callback_ptr) (void *)</computeroutput></para>    </section><anchor xml:id="_metacall__fork_8h_1af7ebd3032b9a59f483098feb6055ca54"/>    <section>
+    <title>metacall_post_fork_callback_ptr</title>
+<indexterm><primary>metacall_post_fork_callback_ptr</primary><secondary>metacall_fork.h</secondary></indexterm>
+<indexterm><primary>metacall_fork.h</primary><secondary>metacall_post_fork_callback_ptr</secondary></indexterm>
+<para><computeroutput>typedef int(* metacall_post_fork_callback_ptr) (metacall_pid, void *)</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_metacall__fork_8h_1a2ddac237388f8543cfdf7343df7270ed"/>    <section>
+    <title>metacall_fork_initialize()</title>
+<indexterm><primary>metacall_fork_initialize</primary><secondary>metacall_fork.h</secondary></indexterm>
+<indexterm><primary>metacall_fork.h</primary><secondary>metacall_fork_initialize</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_fork_initialize (void )</computeroutput></para><para>
+
+<para>Initialize fork detours and allocate shared memory. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__fork_8h_1af3ee5698e71e05e892a64c2c0ba66d3a"/>    <section>
+    <title>metacall_fork()</title>
+<indexterm><primary>metacall_fork</primary><secondary>metacall_fork.h</secondary></indexterm>
+<indexterm><primary>metacall_fork.h</primary><secondary>metacall_fork</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_fork (<link linkend="_metacall__fork_8h_1a08d637d91639b7d99f67ecb5bb4fe8f3">metacall_pre_fork_callback_ptr</link> pre_callback, <link linkend="_metacall__fork_8h_1af7ebd3032b9a59f483098feb6055ca54">metacall_post_fork_callback_ptr</link> post_callback)</computeroutput></para><para>
+
+<para>Set fork hook callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>pre_callback</entry>
+                                <entry>
+<para>Callback to be called before fork detour is executed</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>post_callback</entry>
+                                <entry>
+<para>Callback to be called after fork detour is executed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_metacall__fork_8h_1ada8919e4e89d7933277c197b47be5271"/>    <section>
+    <title>metacall_fork_destroy()</title>
+<indexterm><primary>metacall_fork_destroy</primary><secondary>metacall_fork.h</secondary></indexterm>
+<indexterm><primary>metacall_fork.h</primary><secondary>metacall_fork_destroy</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_fork_destroy (void )</computeroutput></para><para>
+
+<para>Unregister fork detours and destroy shared memory. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

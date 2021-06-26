@@ -1,0 +1,2380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__value__type_8h">
+<title>reflect_value_type.h File Reference</title>
+<indexterm><primary>reflect_value_type.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_class.h&gt;
+#include &lt;reflect/reflect_function.h&gt;
+#include &lt;reflect/reflect_future.h&gt;
+#include &lt;reflect/reflect_object.h&gt;
+#include &lt;reflect/reflect_type_id.h&gt;
+#include &lt;reflect/reflect_value.h&gt;
+#include &lt;reflect/reflect_value_type_cast.h&gt;
+</programlisting>Include dependency graph for reflect_value_type.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__value__type_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__value__type_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a36999459ad33806b0ec2d96e90414f6d">value_type_create</link> (const void *data, size_t bytes, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a0b99b9932116ddf89db8215a174793cd">value_type_copy</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API size_t <link linkend="_reflect__value__type_8h_1a3fd4d5d61ccf65f17788e3d78b059e54">value_type_size</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API size_t <link linkend="_reflect__value__type_8h_1afc029f06c50371c1df2c770d70599564">value_type_count</link> (void *v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> <link linkend="_reflect__value__type_8h_1a6c4d4bad93278bde3ba2c3b16a363724">value_type_id</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ab45f977f2e73e15abffeaa7eb33fcf0b">value_create_bool</link> (<link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a81818fab178f2f2470d882352327b819">value_create_char</link> (char c)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a85f3925e97e8227f2b6ab103da614398">value_create_short</link> (short s)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ad73c607083562c2954470960f65be9fc">value_create_int</link> (int i)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a7b6168b6e41b802626ac2454458a9db4">value_create_long</link> (long l)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1acf74ed0c5103f94bee6668c23e4d21c9">value_create_float</link> (float f)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a39ed34beeee7b78478de73df13184db1">value_create_double</link> (double d)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1abf8e43969ea7d7abc53746c9258f0fc9">value_create_string</link> (const char *str, size_t length)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a047ce2c387559fcea90f4ff4ffb19455">value_create_buffer</link> (const void *buffer, size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a095eaed517a41a27a8bfdc157873b780">value_create_array</link> (const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> *values, size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ac3ddc7892c72b5ddae58525ef6982542">value_create_map</link> (const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> *tuples, size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a91573a981c6b9acf761217793f156a4a">value_create_ptr</link> (const void *ptr)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ae2f6507afb0f4dd0271ed4743915c894">value_create_future</link> (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ab291afee66a6fa7a46ee28e07791e64e">value_create_function</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> f)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ab621bcdb6dd27571b90ed57ff80325e4">value_create_function_closure</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> f, void *c)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ae7d4907b740d6548d60ad76c3b990e04">value_create_null</link> (void)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ac4ffef9102b2fc65c4373c8e121eda09">value_create_class</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> c)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ab1c0f4c5b60d48082cac78b64223f99f">value_create_object</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> o)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> <link linkend="_reflect__value__type_8h_1a22ec3aa0f4f44e1a46fdcbdb0c702f4d">value_to_bool</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API char <link linkend="_reflect__value__type_8h_1abdc3e144c8ee27e40027b0520fd44c1f">value_to_char</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API short <link linkend="_reflect__value__type_8h_1aaeb82661978bf49fd2b485d987096408">value_to_short</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__value__type_8h_1a8cca188806b0aa30cf23c8388f7f90ac">value_to_int</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API long <link linkend="_reflect__value__type_8h_1aafec00703a03c2d3ccabb08d14209b02">value_to_long</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API float <link linkend="_reflect__value__type_8h_1a3394a32d53796fb0c9c3477d7d71b315">value_to_float</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API double <link linkend="_reflect__value__type_8h_1a4da0ef4bafd6c864e12b0d2ba5c525c8">value_to_double</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API char * <link linkend="_reflect__value__type_8h_1add067f870ba2c77866233fbf775a3bc9">value_to_string</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API void * <link linkend="_reflect__value__type_8h_1a6cec019e0e9cf5b34f4c8835b76eda7a">value_to_buffer</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> * <link linkend="_reflect__value__type_8h_1a250d1a84fa05a0ae092a42f13d0d4977">value_to_array</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> * <link linkend="_reflect__value__type_8h_1a63ee21379c5489aad97ff36162a7dca2">value_to_map</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API void * <link linkend="_reflect__value__type_8h_1a19258be4082fc6513ad49c70745061d4">value_to_ptr</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> <link linkend="_reflect__value__type_8h_1a5be5000928fc591de3bbe386c40b9f16">value_to_future</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> <link linkend="_reflect__value__type_8h_1a9689b3427d83a5f0bfcea9826660e9f3">value_to_function</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API void * <link linkend="_reflect__value__type_8h_1a9cd5c465f3cf5c12ed3da3d126bf68be">value_to_null</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> <link linkend="_reflect__value__type_8h_1afd29d348dc5a3304f271b33e12256247">value_to_class</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> <link linkend="_reflect__value__type_8h_1aa8b462e546b78a212acd5fdbc263bd65">value_to_object</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a4dcb4eba01ca47fbeb7a4bc19ddfe269">value_from_bool</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a06ca0261b33ca4efa103a58755f40e5f">value_from_char</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, char c)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a1da4fafcc4f72985387a44a9f4463805">value_from_short</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, short s)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a383c497cf20b063e585340961caa69a9">value_from_int</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, int i)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1aa4a44d96a1ee259b5de047cc152b4842">value_from_long</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, long l)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a0969a259365078cc01eeb5a6ed580f2d">value_from_float</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, float f)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1aa5695716046334cc798a2ef020d2d98a">value_from_double</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, double d)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a9907caedcedebb719af888d8d3281894">value_from_string</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const char *str, size_t length)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a6614434b3934ccd004df66cae43e573e">value_from_buffer</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const void *buffer, size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1ab033d70d6a87f879f644adf6ee9181ae">value_from_array</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> *values, size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1aff64e6508d97bdc2688f1c65dee8643c">value_from_map</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> *tuples, size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a963248403f6036e54b623152f808aa43">value_from_ptr</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const void *ptr)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a2cb49f3496dfa915bec90c35f9141fa6">value_from_future</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a6afd8c70f1ea771e03401ef98c2c2416">value_from_function</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> f)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a3457040bbc954e56559bbb39b15730c2">value_from_null</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a5f582aba1b8e8d67feac89a391c6cb34">value_from_class</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> c)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type_8h_1a7f909c52ff40f670cc3c388eedd4eef4">value_from_object</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> o)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__value__type_8h_1a89d30694c2d675c9d4077e9f999f95cf">value_type_destroy</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__value__type_8h_1a36999459ad33806b0ec2d96e90414f6d"/>    <section>
+    <title>value_type_create()</title>
+<indexterm><primary>value_type_create</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_type_create</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_type_create (const void * data, size_t bytes, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Create a value type from @data with size @bytes and typeid @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to memory block</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>bytes</entry>
+                                <entry>
+<para>Size in bytes of the memory block @data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>Type of memory block @data</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a0b99b9932116ddf89db8215a174793cd"/>    <section>
+    <title>value_type_copy()</title>
+<indexterm><primary>value_type_copy</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_type_copy</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_type_copy (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Make a deep copy of value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value is going to be copied</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to a deep copy of new value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a3fd4d5d61ccf65f17788e3d78b059e54"/>    <section>
+    <title>value_type_size()</title>
+<indexterm><primary>value_type_size</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_type_size</secondary></indexterm>
+<para><computeroutput>REFLECT_API size_t value_type_size (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Returns the size of the value type. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Size in bytes of the value type </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1afc029f06c50371c1df2c770d70599564"/>    <section>
+    <title>value_type_count()</title>
+<indexterm><primary>value_type_count</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_type_count</secondary></indexterm>
+<para><computeroutput>REFLECT_API size_t value_type_count (void * v)</computeroutput></para><para>
+
+<para>Returns the amount of values this value contains. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Number of values @v represents </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a6c4d4bad93278bde3ba2c3b16a363724"/>    <section>
+    <title>value_type_id()</title>
+<indexterm><primary>value_type_id</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_type_id</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> value_type_id (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Provide type id of value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return type id assigned to value </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ab45f977f2e73e15abffeaa7eb33fcf0b"/>    <section>
+    <title>value_create_bool()</title>
+<indexterm><primary>value_create_bool</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_bool</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_bool (<link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</computeroutput></para><para>
+
+<para>Create a value from boolean <emphasis role="bold"></emphasis>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>b</entry>
+                                <entry>
+<para>Boolean will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a81818fab178f2f2470d882352327b819"/>    <section>
+    <title>value_create_char()</title>
+<indexterm><primary>value_create_char</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_char</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_char (char c)</computeroutput></para><para>
+
+<para>Create a value from char <computeroutput></computeroutput>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Character will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a85f3925e97e8227f2b6ab103da614398"/>    <section>
+    <title>value_create_short()</title>
+<indexterm><primary>value_create_short</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_short</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_short (short s)</computeroutput></para><para>
+
+<para>Create a value from short @s. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>Short will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ad73c607083562c2954470960f65be9fc"/>    <section>
+    <title>value_create_int()</title>
+<indexterm><primary>value_create_int</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_int</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_int (int i)</computeroutput></para><para>
+
+<para>Create a value from integer @i. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>i</entry>
+                                <entry>
+<para>Integer will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a7b6168b6e41b802626ac2454458a9db4"/>    <section>
+    <title>value_create_long()</title>
+<indexterm><primary>value_create_long</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_long</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_long (long l)</computeroutput></para><para>
+
+<para>Create a value from long @l. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>l</entry>
+                                <entry>
+<para>Long integer will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1acf74ed0c5103f94bee6668c23e4d21c9"/>    <section>
+    <title>value_create_float()</title>
+<indexterm><primary>value_create_float</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_float</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_float (float f)</computeroutput></para><para>
+
+<para>Create a value from single precision floating point number @f. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Float will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a39ed34beeee7b78478de73df13184db1"/>    <section>
+    <title>value_create_double()</title>
+<indexterm><primary>value_create_double</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_double</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_double (double d)</computeroutput></para><para>
+
+<para>Create a value from double precision floating point number @d. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Double will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1abf8e43969ea7d7abc53746c9258f0fc9"/>    <section>
+    <title>value_create_string()</title>
+<indexterm><primary>value_create_string</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_string</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_string (const char * str, size_t length)</computeroutput></para><para>
+
+<para>Create a value from a C string @str. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>str</entry>
+                                <entry>
+<para>Constant string will be copied into value (needs to be null terminated)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>length</entry>
+                                <entry>
+<para>Length of the constant string</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a047ce2c387559fcea90f4ff4ffb19455"/>    <section>
+    <title>value_create_buffer()</title>
+<indexterm><primary>value_create_buffer</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_buffer</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_buffer (const void * buffer, size_t size)</computeroutput></para><para>
+
+<para>Create a value buffer from array @buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>arr</entry>
+                                <entry>
+<para>Constant memory block will be copied into value buffer</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size in bytes of data contained in the array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a095eaed517a41a27a8bfdc157873b780"/>    <section>
+    <title>value_create_array()</title>
+<indexterm><primary>value_create_array</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_array</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_array (const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> * values, size_t size)</computeroutput></para><para>
+
+<para>Create a value array from array of values @values. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>values</entry>
+                                <entry>
+<para>Constant array of values will be copied into value array</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements contained in the array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ac3ddc7892c72b5ddae58525ef6982542"/>    <section>
+    <title>value_create_map()</title>
+<indexterm><primary>value_create_map</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_map</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_map (const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> * tuples, size_t size)</computeroutput></para><para>
+
+<para>Create a value map from array of tuples @map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tuples</entry>
+                                <entry>
+<para>Constant array of tuples will be copied into value map</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements contained in the map</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a91573a981c6b9acf761217793f156a4a"/>    <section>
+    <title>value_create_ptr()</title>
+<indexterm><primary>value_create_ptr</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_ptr</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_ptr (const void * ptr)</computeroutput></para><para>
+
+<para>Create a value from pointer @ptr. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ae2f6507afb0f4dd0271ed4743915c894"/>    <section>
+    <title>value_create_future()</title>
+<indexterm><primary>value_create_future</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_future</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_future (<link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f)</computeroutput></para><para>
+
+<para>Create a value from future @f. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Pointer to future will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ab291afee66a6fa7a46ee28e07791e64e"/>    <section>
+    <title>value_create_function()</title>
+<indexterm><primary>value_create_function</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_function</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_function (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> f)</computeroutput></para><para>
+
+<para>Create a value from function @f. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Pointer to function will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ab621bcdb6dd27571b90ed57ff80325e4"/>    <section>
+    <title>value_create_function_closure()</title>
+<indexterm><primary>value_create_function_closure</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_function_closure</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_function_closure (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> f, void * c)</computeroutput></para><para>
+
+<para>Create a value from function @f binding a closure <computeroutput>to</computeroutput> it. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Pointer to constant data will be copied into value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Pointer to closure that will be binded into function @f</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ae7d4907b740d6548d60ad76c3b990e04"/>    <section>
+    <title>value_create_null()</title>
+<indexterm><primary>value_create_null</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_null</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_null (void )</computeroutput></para><para>
+
+<para>Create a value of type null. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ac4ffef9102b2fc65c4373c8e121eda09"/>    <section>
+    <title>value_create_class()</title>
+<indexterm><primary>value_create_class</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_class</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_class (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> c)</computeroutput></para><para>
+
+<para>Create a value from function <computeroutput></computeroutput>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Pointer to class will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ab1c0f4c5b60d48082cac78b64223f99f"/>    <section>
+    <title>value_create_object()</title>
+<indexterm><primary>value_create_object</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_create_object</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_create_object (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> o)</computeroutput></para><para>
+
+<para>Create a value from object @o. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>o</entry>
+                                <entry>
+<para>Pointer to object will be copied into value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value if success, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a22ec3aa0f4f44e1a46fdcbdb0c702f4d"/>    <section>
+    <title>value_to_bool()</title>
+<indexterm><primary>value_to_bool</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_bool</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> value_to_bool (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to boolean. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to boolean </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1abdc3e144c8ee27e40027b0520fd44c1f"/>    <section>
+    <title>value_to_char()</title>
+<indexterm><primary>value_to_char</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_char</secondary></indexterm>
+<para><computeroutput>REFLECT_API char value_to_char (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to char. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to char </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1aaeb82661978bf49fd2b485d987096408"/>    <section>
+    <title>value_to_short()</title>
+<indexterm><primary>value_to_short</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_short</secondary></indexterm>
+<para><computeroutput>REFLECT_API short value_to_short (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to short. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to short </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a8cca188806b0aa30cf23c8388f7f90ac"/>    <section>
+    <title>value_to_int()</title>
+<indexterm><primary>value_to_int</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_int</secondary></indexterm>
+<para><computeroutput>REFLECT_API int value_to_int (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to integer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to integer </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1aafec00703a03c2d3ccabb08d14209b02"/>    <section>
+    <title>value_to_long()</title>
+<indexterm><primary>value_to_long</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_long</secondary></indexterm>
+<para><computeroutput>REFLECT_API long value_to_long (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to long integer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to long integer </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a3394a32d53796fb0c9c3477d7d71b315"/>    <section>
+    <title>value_to_float()</title>
+<indexterm><primary>value_to_float</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_float</secondary></indexterm>
+<para><computeroutput>REFLECT_API float value_to_float (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to single precision floating point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to float </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a4da0ef4bafd6c864e12b0d2ba5c525c8"/>    <section>
+    <title>value_to_double()</title>
+<indexterm><primary>value_to_double</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_double</secondary></indexterm>
+<para><computeroutput>REFLECT_API double value_to_double (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to double precision floating point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to dobule </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1add067f870ba2c77866233fbf775a3bc9"/>    <section>
+    <title>value_to_string()</title>
+<indexterm><primary>value_to_string</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_string</secondary></indexterm>
+<para><computeroutput>REFLECT_API char* value_to_string (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to a C string (null terminated) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a6cec019e0e9cf5b34f4c8835b76eda7a"/>    <section>
+    <title>value_to_buffer()</title>
+<indexterm><primary>value_to_buffer</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_buffer</secondary></indexterm>
+<para><computeroutput>REFLECT_API void* value_to_buffer (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to memory block </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a250d1a84fa05a0ae092a42f13d0d4977"/>    <section>
+    <title>value_to_array()</title>
+<indexterm><primary>value_to_array</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_array</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>* value_to_array (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to array of values. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to array of values </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a63ee21379c5489aad97ff36162a7dca2"/>    <section>
+    <title>value_to_map()</title>
+<indexterm><primary>value_to_map</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_map</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>* value_to_map (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to map (array of tuples (array of values)) </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a19258be4082fc6513ad49c70745061d4"/>    <section>
+    <title>value_to_ptr()</title>
+<indexterm><primary>value_to_ptr</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_ptr</secondary></indexterm>
+<para><computeroutput>REFLECT_API void* value_to_ptr (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to pointer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to pointer </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a5be5000928fc591de3bbe386c40b9f16"/>    <section>
+    <title>value_to_future()</title>
+<indexterm><primary>value_to_future</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_future</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> value_to_future (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to future. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to future </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a9689b3427d83a5f0bfcea9826660e9f3"/>    <section>
+    <title>value_to_function()</title>
+<indexterm><primary>value_to_function</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_function</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> value_to_function (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to function </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a9cd5c465f3cf5c12ed3da3d126bf68be"/>    <section>
+    <title>value_to_null()</title>
+<indexterm><primary>value_to_null</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_null</secondary></indexterm>
+<para><computeroutput>REFLECT_API void* value_to_null (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to null. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to null </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1afd29d348dc5a3304f271b33e12256247"/>    <section>
+    <title>value_to_class()</title>
+<indexterm><primary>value_to_class</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_class</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> value_to_class (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to class </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1aa8b462e546b78a212acd5fdbc263bd65"/>    <section>
+    <title>value_to_object()</title>
+<indexterm><primary>value_to_object</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_to_object</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> value_to_object (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Convert value @v to object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value converted to object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a4dcb4eba01ca47fbeb7a4bc19ddfe269"/>    <section>
+    <title>value_from_bool()</title>
+<indexterm><primary>value_from_bool</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_bool</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_bool (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_metacall__value_8h_1a9201c1178e191a87a38dd59c7fc36ff6">boolean</link> b)</computeroutput></para><para>
+
+<para>Assign boolean <emphasis role="bold">to</emphasis> value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>b</entry>
+                                <entry>
+<para>Boolean to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with boolean <emphasis role="bold">assigned</emphasis> to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a06ca0261b33ca4efa103a58755f40e5f"/>    <section>
+    <title>value_from_char()</title>
+<indexterm><primary>value_from_char</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_char</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_char (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, char c)</computeroutput></para><para>
+
+<para>Assign character <computeroutput>to</computeroutput> value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Character to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with char <computeroutput>assigned</computeroutput> to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a1da4fafcc4f72985387a44a9f4463805"/>    <section>
+    <title>value_from_short()</title>
+<indexterm><primary>value_from_short</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_short</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_short (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, short s)</computeroutput></para><para>
+
+<para>Assign short @s to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s</entry>
+                                <entry>
+<para>Short to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with short @s assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a383c497cf20b063e585340961caa69a9"/>    <section>
+    <title>value_from_int()</title>
+<indexterm><primary>value_from_int</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_int</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_int (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, int i)</computeroutput></para><para>
+
+<para>Assign integer @i to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>i</entry>
+                                <entry>
+<para>Integer to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with integer @i assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1aa4a44d96a1ee259b5de047cc152b4842"/>    <section>
+    <title>value_from_long()</title>
+<indexterm><primary>value_from_long</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_long</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_long (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, long l)</computeroutput></para><para>
+
+<para>Assign long integer @l to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>l</entry>
+                                <entry>
+<para>Long integer to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with long @l assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a0969a259365078cc01eeb5a6ed580f2d"/>    <section>
+    <title>value_from_float()</title>
+<indexterm><primary>value_from_float</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_float</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_float (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, float f)</computeroutput></para><para>
+
+<para>Assign single precision floating point @f to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Float to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with float @f assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1aa5695716046334cc798a2ef020d2d98a"/>    <section>
+    <title>value_from_double()</title>
+<indexterm><primary>value_from_double</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_double</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_double (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, double d)</computeroutput></para><para>
+
+<para>Assign double precision floating point @d to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Double to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with double @d assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a9907caedcedebb719af888d8d3281894"/>    <section>
+    <title>value_from_string()</title>
+<indexterm><primary>value_from_string</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_string</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_string (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const char * str, size_t length)</computeroutput></para><para>
+
+<para>Assign string @str to value @v, truncates to @v size if it is smaller than @length + 1. It does not add null terminator if truncated. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>str</entry>
+                                <entry>
+<para>Constant string to be assigned to value @v (it needs to be null terminated)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>length</entry>
+                                <entry>
+<para>Length of the constant string @str</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with string @str assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a6614434b3934ccd004df66cae43e573e"/>    <section>
+    <title>value_from_buffer()</title>
+<indexterm><primary>value_from_buffer</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_buffer</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_buffer (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const void * buffer, size_t size)</computeroutput></para><para>
+
+<para>Assign array @buffer to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>buffer</entry>
+                                <entry>
+<para>Constant byte array to be assigned to value @v</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size in bytes of data contained in @buffer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with array @buffer assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1ab033d70d6a87f879f644adf6ee9181ae"/>    <section>
+    <title>value_from_array()</title>
+<indexterm><primary>value_from_array</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_array</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_array (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> * values, size_t size)</computeroutput></para><para>
+
+<para>Assign array of values @values to value array @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>values</entry>
+                                <entry>
+<para>Constant array of values to be assigned to value array @v</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of values contained in constant array @values</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with array of values @values assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1aff64e6508d97bdc2688f1c65dee8643c"/>    <section>
+    <title>value_from_map()</title>
+<indexterm><primary>value_from_map</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_map</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_map (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> * tuples, size_t size)</computeroutput></para><para>
+
+<para>Assign array of values @values to value map @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tuples</entry>
+                                <entry>
+<para>Constant array of tuples to be assigned to value map @v</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of values contained in constant array @tuples</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with array of tuples @tuples assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a963248403f6036e54b623152f808aa43"/>    <section>
+    <title>value_from_ptr()</title>
+<indexterm><primary>value_from_ptr</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_ptr</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_ptr (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, const void * ptr)</computeroutput></para><para>
+
+<para>Assign pointer reference @ptr to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ptr</entry>
+                                <entry>
+<para>Pointer to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with pointer @ptr assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a2cb49f3496dfa915bec90c35f9141fa6"/>    <section>
+    <title>value_from_future()</title>
+<indexterm><primary>value_from_future</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_future</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_future (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919">future</link> f)</computeroutput></para><para>
+
+<para>Assign future reference @f to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Future to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with future @future assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a6afd8c70f1ea771e03401ef98c2c2416"/>    <section>
+    <title>value_from_function()</title>
+<indexterm><primary>value_from_function</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_function</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_function (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> f)</computeroutput></para><para>
+
+<para>Assign function reference @f to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>f</entry>
+                                <entry>
+<para>Function to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with function @f assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a3457040bbc954e56559bbb39b15730c2"/>    <section>
+    <title>value_from_null()</title>
+<indexterm><primary>value_from_null</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_null</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_null (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Assign null to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with null assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a5f582aba1b8e8d67feac89a391c6cb34"/>    <section>
+    <title>value_from_class()</title>
+<indexterm><primary>value_from_class</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_class</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_class (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> c)</computeroutput></para><para>
+
+<para>Assign class reference <computeroutput>to</computeroutput> value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>c</entry>
+                                <entry>
+<para>Class to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with class <computeroutput>assigned</computeroutput> to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a7f909c52ff40f670cc3c388eedd4eef4"/>    <section>
+    <title>value_from_object()</title>
+<indexterm><primary>value_from_object</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_from_object</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_from_object (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> o)</computeroutput></para><para>
+
+<para>Assign object reference @o to value @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>o</entry>
+                                <entry>
+<para>Object to be assigned to value @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Value with object @o assigned to it </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type_8h_1a89d30694c2d675c9d4077e9f999f95cf"/>    <section>
+    <title>value_type_destroy()</title>
+<indexterm><primary>value_type_destroy</primary><secondary>reflect_value_type.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type.h</primary><secondary>value_type_destroy</secondary></indexterm>
+<para><computeroutput>REFLECT_API void value_type_destroy (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para><para>
+
+<para>Destroy recursively a value type @v. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

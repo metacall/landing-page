@@ -1,0 +1,80 @@
+\doxysection{dynlink\+\_\+impl\+\_\+symbol\+\_\+win32.\+h File Reference}
+\label{dynlink__impl__symbol__win32_8h}\index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+concatenation.\+h$>$}\newline
+Include dependency graph for dynlink\+\_\+impl\+\_\+symbol\+\_\+win32.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{dynlink__impl__symbol__win32_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{dynlink__impl__symbol__win32_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX}
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT}(name)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET}(name)~name
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+win32}) (void)
+\item 
+typedef \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+win32} \textbf{ dynlink\+\_\+symbol\+\_\+addr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{dynlink__impl__symbol__win32_8h_ac5d66723717583b0efbc7c23f9ccd059}} 
+\index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}}
+\index{DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_PREFIX}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX}
+
+\mbox{\label{dynlink__impl__symbol__win32_8h_ac7c2e3794ef31f11c7743643f55000e6}} 
+\index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}}
+\index{DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_EXPORT}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    DYNLINK\_NO\_EXPORT \textcolor{keyword}{struct        }\(\backslash\)}
+\DoxyCodeLine{    \{                               \(\backslash\)}
+\DoxyCodeLine{        char name;                  \(\backslash\)}
+\DoxyCodeLine{    \} PREPROCESSOR\_CONCAT(dynlink\_no\_export\_, name)}
+
+\end{DoxyCode}
+\mbox{\label{dynlink__impl__symbol__win32_8h_a2103b1d11c0227b698826a7a7b2eb844}} 
+\index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}}
+\index{DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_GET}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~name}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{dynlink__impl__symbol__win32_8h_aba90ac516e82054be6efab5886df3a3e}} 
+\index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!dynlink\_symbol\_addr\_win32@{dynlink\_symbol\_addr\_win32}}
+\index{dynlink\_symbol\_addr\_win32@{dynlink\_symbol\_addr\_win32}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
+\doxysubsubsection{dynlink\_symbol\_addr\_win32}
+{\footnotesize\ttfamily typedef void($\ast$ dynlink\+\_\+symbol\+\_\+addr\+\_\+win32) (void)}
+
+\mbox{\label{dynlink__impl__symbol__win32_8h_a4d504c6b325ead6af4305487514a9e92}} 
+\index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!dynlink\_symbol\_addr@{dynlink\_symbol\_addr}}
+\index{dynlink\_symbol\_addr@{dynlink\_symbol\_addr}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
+\doxysubsubsection{dynlink\_symbol\_addr}
+{\footnotesize\ttfamily typedef \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+win32} \textbf{ dynlink\+\_\+symbol\+\_\+addr}}
+

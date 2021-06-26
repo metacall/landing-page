@@ -1,0 +1,179 @@
+.TH "log_aspect.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_aspect.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog_aspect_interface\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct log_policy_type * \fBlog_policy\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBlog_aspect_impl\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBlog_aspect_data\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBlog_aspect_ctor\fP"
+.br
+.ti -1c
+.RI "typedef struct log_aspect_type * \fBlog_aspect\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBlog_aspect_notify_data\fP"
+.br
+.ti -1c
+.RI "typedef struct log_impl_type * \fBlog_impl\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_aspect_restrict_cb\fP) (\fBlog_aspect\fP, \fBlog_policy\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_aspect_notify_cb\fP) (\fBlog_aspect\fP, \fBlog_policy\fP, \fBlog_aspect_notify_data\fP)"
+.br
+.ti -1c
+.RI "typedef \fBlog_aspect_data\fP(* \fBlog_aspect_impl_create\fP) (\fBlog_aspect\fP, const \fBlog_aspect_ctor\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_aspect_impl_destroy\fP) (\fBlog_aspect\fP)"
+.br
+.ti -1c
+.RI "typedef log_aspect_interface(* \fBlog_aspect_singleton\fP) (void)"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBlog_aspect_id\fP { \fBLOG_ASPECT_FORMAT\fP = 0x00, \fBLOG_ASPECT_SCHEDULE\fP = 0x01, \fBLOG_ASPECT_STORAGE\fP = 0x02, \fBLOG_ASPECT_STREAM\fP = 0x03, \fBLOG_ASPECT_SIZE\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOG_API \fBlog_aspect\fP \fBlog_aspect_create\fP (\fBlog_impl\fP impl, const log_aspect_interface iface, const \fBlog_aspect_ctor\fP ctor)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_aspect_reserve\fP (\fBlog_aspect\fP aspect, size_t size)"
+.br
+.ti -1c
+.RI "LOG_API void \fBlog_aspect_restrict\fP (\fBlog_aspect\fP aspect, \fBlog_aspect_restrict_cb\fP restrict_cb)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_aspect_data\fP \fBlog_aspect_instance\fP (\fBlog_aspect\fP aspect)"
+.br
+.ti -1c
+.RI "LOG_API log_aspect_interface \fBlog_aspect_behavior\fP (\fBlog_aspect\fP aspect)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_impl\fP \fBlog_aspect_parent\fP (\fBlog_aspect\fP aspect)"
+.br
+.ti -1c
+.RI "LOG_API \fBlog_aspect_impl\fP \fBlog_aspect_derived\fP (\fBlog_aspect\fP aspect)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_aspect_attach\fP (\fBlog_aspect\fP aspect, \fBlog_policy\fP policy)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_aspect_notify_first\fP (\fBlog_aspect\fP aspect, \fBlog_aspect_notify_cb\fP notify_cb, \fBlog_aspect_notify_data\fP notify_data)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_aspect_notify_all\fP (\fBlog_aspect\fP aspect, \fBlog_aspect_notify_cb\fP notify_cb, \fBlog_aspect_notify_data\fP notify_data)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_aspect_detach\fP (\fBlog_aspect\fP aspect, \fBlog_policy\fP policy)"
+.br
+.ti -1c
+.RI "LOG_API int \fBlog_aspect_destroy\fP (\fBlog_aspect\fP aspect)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct log_policy_type* \fBlog_policy\fP"
+
+.SS "typedef void* \fBlog_aspect_impl\fP"
+
+.SS "typedef void* \fBlog_aspect_data\fP"
+
+.SS "typedef void* \fBlog_aspect_ctor\fP"
+
+.SS "typedef struct log_aspect_type* \fBlog_aspect\fP"
+
+.SS "typedef void* \fBlog_aspect_notify_data\fP"
+
+.SS "typedef struct log_impl_type* \fBlog_impl\fP"
+
+.SS "typedef int(* log_aspect_restrict_cb) (\fBlog_aspect\fP, \fBlog_policy\fP)"
+
+.SS "typedef int(* log_aspect_notify_cb) (\fBlog_aspect\fP, \fBlog_policy\fP, \fBlog_aspect_notify_data\fP)"
+
+.SS "typedef \fBlog_aspect_data\fP(* log_aspect_impl_create) (\fBlog_aspect\fP, const \fBlog_aspect_ctor\fP)"
+
+.SS "typedef int(* log_aspect_impl_destroy) (\fBlog_aspect\fP)"
+
+.SS "typedef log_aspect_interface(* log_aspect_singleton) (void)"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBlog_aspect_id\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILOG_ASPECT_FORMAT \fP\fP
+.TP
+\fB\fILOG_ASPECT_SCHEDULE \fP\fP
+.TP
+\fB\fILOG_ASPECT_STORAGE \fP\fP
+.TP
+\fB\fILOG_ASPECT_STREAM \fP\fP
+.TP
+\fB\fILOG_ASPECT_SIZE \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "LOG_API \fBlog_aspect\fP log_aspect_create (\fBlog_impl\fP impl, const log_aspect_interface iface, const \fBlog_aspect_ctor\fP ctor)"
+
+.SS "LOG_API int log_aspect_reserve (\fBlog_aspect\fP aspect, size_t size)"
+
+.SS "LOG_API void log_aspect_restrict (\fBlog_aspect\fP aspect, \fBlog_aspect_restrict_cb\fP restrict_cb)"
+
+.SS "LOG_API \fBlog_aspect_data\fP log_aspect_instance (\fBlog_aspect\fP aspect)"
+
+.SS "LOG_API log_aspect_interface log_aspect_behavior (\fBlog_aspect\fP aspect)"
+
+.SS "LOG_API \fBlog_impl\fP log_aspect_parent (\fBlog_aspect\fP aspect)"
+
+.SS "LOG_API \fBlog_aspect_impl\fP log_aspect_derived (\fBlog_aspect\fP aspect)"
+
+.SS "LOG_API int log_aspect_attach (\fBlog_aspect\fP aspect, \fBlog_policy\fP policy)"
+
+.SS "LOG_API int log_aspect_notify_first (\fBlog_aspect\fP aspect, \fBlog_aspect_notify_cb\fP notify_cb, \fBlog_aspect_notify_data\fP notify_data)"
+
+.SS "LOG_API int log_aspect_notify_all (\fBlog_aspect\fP aspect, \fBlog_aspect_notify_cb\fP notify_cb, \fBlog_aspect_notify_data\fP notify_data)"
+
+.SS "LOG_API int log_aspect_detach (\fBlog_aspect\fP aspect, \fBlog_policy\fP policy)"
+
+.SS "LOG_API int log_aspect_destroy (\fBlog_aspect\fP aspect)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

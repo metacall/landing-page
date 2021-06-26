@@ -1,0 +1,160 @@
+.TH "reflect_object.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_object.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_value\&.h>\fP
+.br
+\fC#include <reflect/reflect_class\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBobject_interface\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBobject_impl\fP"
+.br
+.ti -1c
+.RI "typedef struct object_type * \fBobject\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBobject_args\fP[]"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBobject_resolve_callback\fP) (\fBvalue\fP, void *)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBobject_reject_callback\fP) (\fBvalue\fP, void *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBobject_impl_interface_create\fP) (\fBobject\fP, \fBobject_impl\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBobject_impl_interface_get\fP) (\fBobject\fP, \fBobject_impl\fP, const char *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBobject_impl_interface_set\fP) (\fBobject\fP, \fBobject_impl\fP, const char *, \fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBobject_impl_interface_method_invoke\fP) (\fBobject\fP, \fBobject_impl\fP, const char *, \fBobject_args\fP, size_t)"
+.br
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBobject_impl_interface_method_await\fP) (\fBobject\fP, \fBobject_impl\fP, const char *, \fBobject_args\fP, size_t, \fBobject_resolve_callback\fP, \fBobject_reject_callback\fP, void *)"
+.br
+.ti -1c
+.RI "typedef int(* \fBobject_impl_interface_destructor\fP) (\fBobject\fP, \fBobject_impl\fP)"
+.br
+.ti -1c
+.RI "typedef void(* \fBobject_impl_interface_destroy\fP) (\fBobject\fP, \fBobject_impl\fP)"
+.br
+.ti -1c
+.RI "typedef object_interface(* \fBobject_impl_interface_singleton\fP) (void)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBobject\fP \fBobject_create\fP (const char *name, \fBobject_impl\fP impl, \fBobject_impl_interface_singleton\fP singleton, \fBklass\fP cls)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBobject_increment_reference\fP (\fBobject\fP obj)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBobject_decrement_reference\fP (\fBobject\fP obj)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBobject_impl\fP \fBobject_impl_get\fP (\fBobject\fP obj)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBobject_set\fP (\fBobject\fP obj, const char *key, \fBvalue\fP v)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBobject_get\fP (\fBobject\fP obj, const char *key)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBobject_call\fP (\fBobject\fP obj, const char *name, \fBobject_args\fP args, size_t size)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBobject_await\fP (\fBobject\fP obj, const char *name, \fBobject_args\fP args, size_t size, \fBobject_resolve_callback\fP resolve_callback, \fBobject_reject_callback\fP reject_callback, void *\fBcontext\fP)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBobject_name\fP (\fBobject\fP obj)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBobject_metadata\fP (\fBobject\fP obj)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBobject_delete\fP (\fBobject\fP obj)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBobject_destroy\fP (\fBobject\fP obj)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void* \fBobject_impl\fP"
+
+.SS "typedef struct object_type* \fBobject\fP"
+
+.SS "typedef void* object_args[]"
+
+.SS "typedef \fBvalue\fP(* object_resolve_callback) (\fBvalue\fP, void *)"
+
+.SS "typedef \fBvalue\fP(* object_reject_callback) (\fBvalue\fP, void *)"
+
+.SS "typedef int(* object_impl_interface_create) (\fBobject\fP, \fBobject_impl\fP)"
+
+.SS "typedef \fBvalue\fP(* object_impl_interface_get) (\fBobject\fP, \fBobject_impl\fP, const char *)"
+
+.SS "typedef int(* object_impl_interface_set) (\fBobject\fP, \fBobject_impl\fP, const char *, \fBvalue\fP)"
+
+.SS "typedef \fBvalue\fP(* object_impl_interface_method_invoke) (\fBobject\fP, \fBobject_impl\fP, const char *, \fBobject_args\fP, size_t)"
+
+.SS "typedef \fBvalue\fP(* object_impl_interface_method_await) (\fBobject\fP, \fBobject_impl\fP, const char *, \fBobject_args\fP, size_t, \fBobject_resolve_callback\fP, \fBobject_reject_callback\fP, void *)"
+
+.SS "typedef int(* object_impl_interface_destructor) (\fBobject\fP, \fBobject_impl\fP)"
+
+.SS "typedef void(* object_impl_interface_destroy) (\fBobject\fP, \fBobject_impl\fP)"
+
+.SS "typedef object_interface(* object_impl_interface_singleton) (void)"
+
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBobject\fP object_create (const char * name, \fBobject_impl\fP impl, \fBobject_impl_interface_singleton\fP singleton, \fBklass\fP cls)"
+
+.SS "REFLECT_API int object_increment_reference (\fBobject\fP obj)"
+
+.SS "REFLECT_API int object_decrement_reference (\fBobject\fP obj)"
+
+.SS "REFLECT_API \fBobject_impl\fP object_impl_get (\fBobject\fP obj)"
+
+.SS "REFLECT_API int object_set (\fBobject\fP obj, const char * key, \fBvalue\fP v)"
+
+.SS "REFLECT_API \fBvalue\fP object_get (\fBobject\fP obj, const char * key)"
+
+.SS "REFLECT_API \fBvalue\fP object_call (\fBobject\fP obj, const char * name, \fBobject_args\fP args, size_t size)"
+
+.SS "REFLECT_API \fBvalue\fP object_await (\fBobject\fP obj, const char * name, \fBobject_args\fP args, size_t size, \fBobject_resolve_callback\fP resolve_callback, \fBobject_reject_callback\fP reject_callback, void * context)"
+
+.SS "const REFLECT_API char* object_name (\fBobject\fP obj)"
+
+.SS "REFLECT_API \fBvalue\fP object_metadata (\fBobject\fP obj)"
+
+.SS "REFLECT_API int object_delete (\fBobject\fP obj)"
+
+.SS "REFLECT_API void object_destroy (\fBobject\fP obj)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

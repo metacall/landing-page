@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="reflect__scope_8h" kind="file" language="C++">
+    <compoundname>reflect_scope.h</compoundname>
+    <includes local="no">reflect/reflect_api.h</includes>
+    <includes refid="reflect__function_8h" local="no">reflect/reflect_function.h</includes>
+    <includes refid="reflect__type_8h" local="no">reflect/reflect_type.h</includes>
+    <includedby refid="reflect_8h" local="no">reflect.h</includedby>
+    <includedby refid="reflect__context_8h" local="no">reflect_context.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>reflect/reflect_function.h</label>
+        <link refid="reflect__function_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>reflect_scope.h</label>
+        <link refid="reflect__scope_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>reflect/reflect_type.h</label>
+        <link refid="reflect__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>reflect/reflect_type_id.h</label>
+        <link refid="reflect__type__id_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>reflect/reflect_value.h</label>
+        <link refid="reflect__value_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>reflect/reflect_api.h</label>
+      </node>
+      <node id="4">
+        <label>reflect/reflect_signature.h</label>
+        <link refid="reflect__signature_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>loader_impl_function.h</label>
+        <link refid="loader__impl__function_8h"/>
+      </node>
+      <node id="10">
+        <label>loader_impl_export.h</label>
+        <link refid="loader__impl__export_8h"/>
+      </node>
+      <node id="4">
+        <label>loader_impl_interface.h</label>
+        <link refid="loader__impl__interface_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>reflect_scope.h</label>
+        <link refid="reflect__scope_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>loader_export.h</label>
+        <link refid="loader__export_8h"/>
+      </node>
+      <node id="9">
+        <label>loader_impl_handle.h</label>
+        <link refid="loader__impl__handle_8h"/>
+      </node>
+      <node id="7">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>loader.h</label>
+        <link refid="loader_8h"/>
+      </node>
+      <node id="3">
+        <label>reflect_context.h</label>
+        <link refid="reflect__context_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>reflect.h</label>
+        <link refid="reflect_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t scope_stack_ptr</definition>
+        <argsstring></argsstring>
+        <name>scope_stack_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="35" column="16" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" prot="public" static="no">
+        <type>struct scope_type *</type>
+        <definition>typedef struct scope_type* scope</definition>
+        <argsstring></argsstring>
+        <name>scope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="37" column="25" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="reflect__scope_8h_1adef5f947f919b3ff69a01542d3f3deeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+        <definition>REFLECT_API scope scope_create</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>scope_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="39" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="39" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a8db2b76c0120e768fbcd8897beac921b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API size_t</type>
+        <definition>REFLECT_API size_t scope_size</definition>
+        <argsstring>(scope sp)</argsstring>
+        <name>scope_size</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="41" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="41" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1acb69c1e8c0fbebf6380ffada174ffae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int scope_define</definition>
+        <argsstring>(scope sp, const char *key, value obj)</argsstring>
+        <name>scope_define</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="43" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="43" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a41ebf1db1ed72d90642220ecf207592d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>REFLECT_API value scope_metadata</definition>
+        <argsstring>(scope sp)</argsstring>
+        <name>scope_metadata</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="45" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="45" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a6940f950718ce6aff233bd31554ab6d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>REFLECT_API value scope_export</definition>
+        <argsstring>(scope sp)</argsstring>
+        <name>scope_export</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="47" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="47" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a62a31f3ad2165a12bbdcc05e10523bd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>REFLECT_API value scope_get</definition>
+        <argsstring>(scope sp, const char *key)</argsstring>
+        <name>scope_get</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="49" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="49" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a00928bfb641d3bcf921796e8be6d499d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>REFLECT_API value scope_undef</definition>
+        <argsstring>(scope sp, const char *key)</argsstring>
+        <name>scope_undef</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="51" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="51" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int scope_append</definition>
+        <argsstring>(scope dest, scope src)</argsstring>
+        <name>scope_append</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="53" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="53" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a7ae749919eed062fa9f9aec307210903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int scope_contains</definition>
+        <argsstring>(scope dest, scope src)</argsstring>
+        <name>scope_contains</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="55" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="55" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int scope_remove</definition>
+        <argsstring>(scope dest, scope src)</argsstring>
+        <name>scope_remove</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="57" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="57" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a43523b505351dc8055fe0415f954464b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API size_t *</type>
+        <definition>REFLECT_API size_t* scope_stack_return</definition>
+        <argsstring>(scope sp)</argsstring>
+        <name>scope_stack_return</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="59" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="59" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1ab3649f84906f0db25ecaf94a875e9c01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref></type>
+        <definition>REFLECT_API scope_stack_ptr scope_stack_push</definition>
+        <argsstring>(scope sp, size_t bytes)</argsstring>
+        <name>scope_stack_push</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="61" column="29" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="61" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a2771b27118b4eb1cda14626a89fd4a67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API void *</type>
+        <definition>REFLECT_API void* scope_stack_get</definition>
+        <argsstring>(scope sp, scope_stack_ptr stack_ptr)</argsstring>
+        <name>scope_stack_get</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref></type>
+          <declname>stack_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="63" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="63" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a729e7daa1a92497c2aa02a2f102f6a0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int scope_stack_pop</definition>
+        <argsstring>(scope sp)</argsstring>
+        <name>scope_stack_pop</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="65" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="65" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__scope_8h_1a76de6b055280509d8009a65dc2f5a5dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API void</type>
+        <definition>REFLECT_API void scope_destroy</definition>
+        <argsstring>(scope sp)</argsstring>
+        <name>scope_destroy</name>
+        <param>
+          <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="67" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="67" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REFLECT_SCOPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REFLECT_SCOPE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;reflect/reflect_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__function_8h" kindref="compound">reflect/reflect_function.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__type_8h" kindref="compound">reflect/reflect_type.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scope_type;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scope_type<sp/>*<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/><ref refid="reflect__scope_8h_1adef5f947f919b3ff69a01542d3f3deeb" kindref="member">scope_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a8db2b76c0120e768fbcd8897beac921b" kindref="member">scope_size</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1acb69c1e8c0fbebf6380ffada174ffae1" kindref="member">scope_define</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>obj);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a41ebf1db1ed72d90642220ecf207592d" kindref="member">scope_metadata</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a6940f950718ce6aff233bd31554ab6d4" kindref="member">scope_export</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a62a31f3ad2165a12bbdcc05e10523bd1" kindref="member">scope_get</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a00928bfb641d3bcf921796e8be6d499d" kindref="member">scope_undef</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae" kindref="member">scope_append</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a7ae749919eed062fa9f9aec307210903" kindref="member">scope_contains</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc" kindref="member">scope_remove</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*<ref refid="reflect__scope_8h_1a43523b505351dc8055fe0415f954464b" kindref="member">scope_stack_return</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref><sp/><ref refid="reflect__scope_8h_1ab3649f84906f0db25ecaf94a875e9c01" kindref="member">scope_stack_push</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__scope_8h_1a2771b27118b4eb1cda14626a89fd4a67" kindref="member">scope_stack_get</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref><sp/>stack_ptr);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a729e7daa1a92497c2aa02a2f102f6a0d" kindref="member">scope_stack_pop</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a76de6b055280509d8009a65dc2f5a5dd" kindref="member">scope_destroy</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_SCOPE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h"/>
+  </compounddef>
+</doxygen>

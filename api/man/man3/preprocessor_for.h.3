@@ -1,0 +1,359 @@
+.TH "preprocessor_for.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+preprocessor_for.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <preprocessor/preprocessor_api\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_arguments\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_tuple\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_SIZE\fP   64"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_EVAL\fP(expr)   expr"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_0\fP(expr, \&.\&.\&.)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr,  element, \&.\&.\&.)   expr(element)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_2\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_3\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_2\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_4\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_3\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_5\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_4\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_6\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_5\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_7\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_6\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_8\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_7\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_9\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_8\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_10\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_9\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_11\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_10\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_12\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_11\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_13\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_12\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_14\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_13\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_15\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_14\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_16\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_15\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_17\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_16\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_18\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_17\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_19\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_18\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_20\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_19\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_21\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_20\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_22\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_21\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_23\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_22\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_24\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_23\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_25\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_24\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_26\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_25\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_27\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_26\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_28\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_27\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_29\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_28\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_30\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_29\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_31\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_30\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_32\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_31\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_33\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_32\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_34\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_33\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_35\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_34\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_36\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_35\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_37\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_36\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_38\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_37\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_39\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_38\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_40\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_39\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_41\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_40\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_42\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_41\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_43\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_42\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_44\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_43\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_45\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_44\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_46\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_45\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_47\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_46\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_48\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_47\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_49\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_48\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_50\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_49\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_51\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_50\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_52\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_51\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_53\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_52\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_54\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_53\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_55\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_54\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_56\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_55\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_57\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_56\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_58\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_57\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_59\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_58\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_60\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_59\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_61\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_60\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_62\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_61\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_63\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_62\fP(expr, __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_64\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_63\fP(expr, __VA_ARGS__))"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PREPROCESSOR_FOR_SIZE   64"
+
+.SS "#define PREPROCESSOR_FOR_EACH_EVAL(expr)   expr"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_0(expr,  \&.\&.\&.)"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_1(expr, element,  \&.\&.\&.)   expr(element)"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_2(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_3(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_2\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_4(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_3\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_5(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_4\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_6(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_5\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_7(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_6\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_8(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_7\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_9(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_8\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_10(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_9\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_11(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_10\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_12(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_11\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_13(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_12\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_14(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_13\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_15(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_14\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_16(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_15\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_17(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_16\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_18(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_17\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_19(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_18\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_20(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_19\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_21(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_20\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_22(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_21\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_23(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_22\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_24(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_23\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_25(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_24\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_26(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_25\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_27(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_26\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_28(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_27\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_29(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_28\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_30(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_29\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_31(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_30\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_32(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_31\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_33(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_32\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_34(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_33\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_35(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_34\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_36(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_35\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_37(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_36\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_38(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_37\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_39(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_38\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_40(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_39\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_41(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_40\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_42(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_41\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_43(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_42\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_44(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_43\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_45(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_44\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_46(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_45\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_47(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_46\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_48(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_47\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_49(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_48\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_50(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_49\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_51(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_50\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_52(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_51\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_53(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_52\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_54(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_53\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_55(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_54\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_56(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_55\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_57(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_56\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_58(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_57\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_59(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_58\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_60(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_59\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_61(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_60\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_62(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_61\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_63(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_62\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_64(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_63\fP(expr, __VA_ARGS__))"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

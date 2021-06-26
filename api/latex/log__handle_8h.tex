@@ -1,0 +1,121 @@
+\doxysection{log\+\_\+handle.\+h File Reference}
+\label{log__handle_8h}\index{log\_handle.h@{log\_handle.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+record.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for log\+\_\+handle.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__handle_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{log__handle_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct log\+\_\+handle\+\_\+type $\ast$ \textbf{ log\+\_\+handle}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+handle} \textbf{ log\+\_\+handle\+\_\+create} (void)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+handle} \textbf{ log\+\_\+handle\+\_\+initialize} (\textbf{ log\+\_\+handle} handle)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} \textbf{ log\+\_\+handle\+\_\+get} (\textbf{ log\+\_\+handle} handle, const size\+\_\+t record\+\_\+id)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} \textbf{ log\+\_\+handle\+\_\+set} (\textbf{ log\+\_\+handle} handle, const size\+\_\+t record\+\_\+id, const log\+\_\+record\+\_\+ctor record\+\_\+ctor)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} \textbf{ log\+\_\+handle\+\_\+push} (\textbf{ log\+\_\+handle} handle, const log\+\_\+record\+\_\+ctor record\+\_\+ctor)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} \textbf{ log\+\_\+handle\+\_\+pop} (\textbf{ log\+\_\+handle} handle)
+\item 
+L\+O\+G\+\_\+\+A\+PI size\+\_\+t \textbf{ log\+\_\+handle\+\_\+count} (\textbf{ log\+\_\+handle} handle)
+\item 
+L\+O\+G\+\_\+\+A\+PI size\+\_\+t \textbf{ log\+\_\+handle\+\_\+size} (\textbf{ log\+\_\+handle} handle)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+handle\+\_\+clear} (\textbf{ log\+\_\+handle} handle)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+handle\+\_\+destroy} (\textbf{ log\+\_\+handle} handle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{log__handle_8h_a2c6e87df6b97a24b71d5a6ef9a8722c6}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle@{log\_handle}}
+\index{log\_handle@{log\_handle}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle}
+{\footnotesize\ttfamily typedef struct log\+\_\+handle\+\_\+type$\ast$ \textbf{ log\+\_\+handle}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__handle_8h_a1c7536699daf407eee8bb67c2eab49a1}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_create@{log\_handle\_create}}
+\index{log\_handle\_create@{log\_handle\_create}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_create()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+handle} log\+\_\+handle\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_ada2c7f76bc8fc22016695e565d9dda58}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_initialize@{log\_handle\_initialize}}
+\index{log\_handle\_initialize@{log\_handle\_initialize}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_initialize()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+handle} log\+\_\+handle\+\_\+initialize (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_ac4fdad18d31bb340f4402a310653e9f1}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_get@{log\_handle\_get}}
+\index{log\_handle\_get@{log\_handle\_get}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_get()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} log\+\_\+handle\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle,  }\item[{const size\+\_\+t}]{record\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_a88b5f466d448bf7920f3e8c51e2a2fd6}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_set@{log\_handle\_set}}
+\index{log\_handle\_set@{log\_handle\_set}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_set()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} log\+\_\+handle\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle,  }\item[{const size\+\_\+t}]{record\+\_\+id,  }\item[{const log\+\_\+record\+\_\+ctor}]{record\+\_\+ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_ad5f63af9ffd0089b6067d0d69dcc5da5}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_push@{log\_handle\_push}}
+\index{log\_handle\_push@{log\_handle\_push}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_push()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} log\+\_\+handle\+\_\+push (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle,  }\item[{const log\+\_\+record\+\_\+ctor}]{record\+\_\+ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_a9d91a0795de60f11cf95f30f435c54ab}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_pop@{log\_handle\_pop}}
+\index{log\_handle\_pop@{log\_handle\_pop}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_pop()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} log\+\_\+handle\+\_\+pop (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_a040aea6a0005846bda846f9421364a05}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_count@{log\_handle\_count}}
+\index{log\_handle\_count@{log\_handle\_count}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_count()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI size\+\_\+t log\+\_\+handle\+\_\+count (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_afe1a4a6076ec5daa3f0de58635a8645d}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_size@{log\_handle\_size}}
+\index{log\_handle\_size@{log\_handle\_size}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_size()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI size\+\_\+t log\+\_\+handle\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_aeeec8968a604c55c679d082946d08fe0}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_clear@{log\_handle\_clear}}
+\index{log\_handle\_clear@{log\_handle\_clear}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_clear()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+handle\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{log__handle_8h_a3433a4e193067930721505471faf5159}} 
+\index{log\_handle.h@{log\_handle.h}!log\_handle\_destroy@{log\_handle\_destroy}}
+\index{log\_handle\_destroy@{log\_handle\_destroy}!log\_handle.h@{log\_handle.h}}
+\doxysubsubsection{log\_handle\_destroy()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+handle\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+handle}}]{handle }\end{DoxyParamCaption})}
+

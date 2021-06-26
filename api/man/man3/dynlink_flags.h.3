@@ -1,0 +1,121 @@
+.TH "dynlink_flags.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dynlink_flags.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <dynlink/dynlink_api\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDYNLINK_FLAGS_BIND_NOW\fP   (0x01 << 0x00)"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_FLAGS_BIND_LAZY\fP   (0x01 << 0x01)"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_FLAGS_BIND_LOCAL\fP   (0x01 << 0x02)"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_FLAGS_BIND_GLOBAL\fP   (0x01 << 0x03)"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_FLAGS_SET\fP(flags,  flag)"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_FLAGS_ADD\fP(flags,  flag)"
+.br
+.ti -1c
+.RI "#define \fBDYNLINK_FLAGS_CHECK\fP(flags,  flag)   (((flags) & (flag)) != 0)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef int \fBdynlink_flags\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DYNLINK_FLAGS_BIND_NOW   (0x01 << 0x00)"
+Inmediate loading bind flag 
+.SS "#define DYNLINK_FLAGS_BIND_LAZY   (0x01 << 0x01)"
+Lazy loading bind flag 
+.SS "#define DYNLINK_FLAGS_BIND_LOCAL   (0x01 << 0x02)"
+Private visibility bind flag 
+.SS "#define DYNLINK_FLAGS_BIND_GLOBAL   (0x01 << 0x03)"
+Public visibility bind flag 
+.SS "#define DYNLINK_FLAGS_SET(flags, flag)"
+\fBValue:\fP
+.PP
+.nf
+    do                                 \
+    {                                  \
+        flags = (flag);                \
+    } while (0)
+.fi
+.PP
+Assign to the left operator the right literal\&. Using flag as a 0 resets the flags\&. Combined flags can be passed to the macro and they will be assigned correctly too\&. It can be used for generic and implementation flags\&.
+.PP
+\fBDYNLINK_FLAGS_SET(flags, 0)\fP; DYNLINK_FLAGS_SET(flags, DYNLINK_FLAGS_BIND_LAZY | DYNLINK_FLAGS_BIND_GLOBAL); DYNLINK_FLAGS_SET(flags_impl, RTLD_LAZY | RTLD_GLOBAL);
+.PP
+\fBParameters\fP
+.RS 4
+\fIflags\fP The left operator that will be overwritten
+.br
+\fIflag\fP The right literal input parameter 
+.RE
+.PP
+
+.SS "#define DYNLINK_FLAGS_ADD(flags, flag)"
+\fBValue:\fP
+.PP
+.nf
+  do                                 \
+    {                                  \
+        flags |= (flag);               \
+    } while (0)
+.fi
+.PP
+Append to the left operator the right literal\&. Using flag as a 0 does nothing\&. Combined flags can be passed to the macro and they will be added correctly too\&. It can be used for generic and implementation flags\&.
+.PP
+\fBDYNLINK_FLAGS_ADD(nothing, 0)\fP; DYNLINK_FLAGS_ADD(flags, DYNLINK_FLAGS_BIND_LAZY | DYNLINK_FLAGS_BIND_GLOBAL); DYNLINK_FLAGS_ADD(flags_impl, RTLD_LAZY | RTLD_GLOBAL);
+.PP
+\fBParameters\fP
+.RS 4
+\fIflags\fP The left operator that will be added
+.br
+\fIflag\fP The literal input parameter 
+.RE
+.PP
+
+.SS "#define DYNLINK_FLAGS_CHECK(flags, flag)   (((flags) & (flag)) != 0)"
+
+.PP
+Check flags operator\&. This macro must be used as a conditional guard\&. Using flag as a 0 never enters to the guard\&. Combined flags can be passed to the macro\&. It can be used for generic and implementation flags\&.
+.PP
+if (\fBDYNLINK_FLAGS_CHECK(flags, DYNLINK_FLAGS_BIND_LAZY)\fP) { \&.\&.\&. }
+.PP
+if (DYNLINK_FLAGS_CHECK(flags_impl, RTLD_LAZY | RTLD_GLOBAL)) { \&.\&.\&. }
+.PP
+\fBParameters\fP
+.RS 4
+\fIflags\fP The left operator that will be check against the literal
+.br
+\fIflag\fP The literal input parameter 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef int \fBdynlink_flags\fP"
+Dynamically linked shared object flags 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

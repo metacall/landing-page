@@ -1,0 +1,169 @@
+\doxysection{log\+\_\+record.\+h File Reference}
+\label{log__record_8h}\index{log\_record.h@{log\_record.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+level.\+h$>$}\newline
+{\ttfamily \#include $<$threading/threading\+\_\+thread\+\_\+id.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for log\+\_\+record.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__record_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__record_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ log\+\_\+record\+\_\+va\+\_\+list\+\_\+type}
+\item 
+struct \textbf{ log\+\_\+record\+\_\+ctor}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+O\+G\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+M\+PL}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct log\+\_\+record\+\_\+type $\ast$ \textbf{ log\+\_\+record}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const L\+O\+G\+\_\+\+A\+PI char $\ast$ \textbf{ \+\_\+\+\_\+log\+\_\+record\+\_\+unknown\+\_\+function\+\_\+\+\_\+} (void)
+\item 
+L\+O\+G\+\_\+\+N\+O\+\_\+\+E\+X\+P\+O\+RT size\+\_\+t \textbf{ log\+\_\+record\+\_\+size} (void)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} \textbf{ log\+\_\+record\+\_\+create} (const log\+\_\+record\+\_\+ctor record\+\_\+ctor)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} \textbf{ log\+\_\+record\+\_\+initialize} (\textbf{ log\+\_\+record} record, const log\+\_\+record\+\_\+ctor record\+\_\+ctor)
+\item 
+const L\+O\+G\+\_\+\+A\+PI time\+\_\+t $\ast$ \textbf{ log\+\_\+record\+\_\+time} (\textbf{ log\+\_\+record} record)
+\item 
+L\+O\+G\+\_\+\+A\+PI uint64\+\_\+t \textbf{ log\+\_\+record\+\_\+thread\+\_\+id} (\textbf{ log\+\_\+record} record)
+\item 
+L\+O\+G\+\_\+\+A\+PI size\+\_\+t \textbf{ log\+\_\+record\+\_\+line} (\textbf{ log\+\_\+record} record)
+\item 
+const L\+O\+G\+\_\+\+A\+PI char $\ast$ \textbf{ log\+\_\+record\+\_\+func} (\textbf{ log\+\_\+record} record)
+\item 
+const L\+O\+G\+\_\+\+A\+PI char $\ast$ \textbf{ log\+\_\+record\+\_\+file} (\textbf{ log\+\_\+record} record)
+\item 
+L\+O\+G\+\_\+\+A\+PI enum \textbf{ log\+\_\+level\+\_\+id} \textbf{ log\+\_\+record\+\_\+level} (\textbf{ log\+\_\+record} record)
+\item 
+const L\+O\+G\+\_\+\+A\+PI char $\ast$ \textbf{ log\+\_\+record\+\_\+message} (\textbf{ log\+\_\+record} record)
+\item 
+L\+O\+G\+\_\+\+A\+PI struct \textbf{ log\+\_\+record\+\_\+va\+\_\+list\+\_\+type} $\ast$ \textbf{ log\+\_\+record\+\_\+variable\+\_\+args} (\textbf{ log\+\_\+record} record)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+record\+\_\+destroy} (\textbf{ log\+\_\+record} record)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{log__record_8h_a912eef83ad75354f52e26d710f7bc43a}} 
+\index{log\_record.h@{log\_record.h}!LOG\_RECORD\_FUNCTION\_UNKNOWN\_IMPL@{LOG\_RECORD\_FUNCTION\_UNKNOWN\_IMPL}}
+\index{LOG\_RECORD\_FUNCTION\_UNKNOWN\_IMPL@{LOG\_RECORD\_FUNCTION\_UNKNOWN\_IMPL}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{LOG\_RECORD\_FUNCTION\_UNKNOWN\_IMPL}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+M\+PL~1}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{log__record_8h_ad23af9c6a5830213a2b0bf0c9a4ec2e4}} 
+\index{log\_record.h@{log\_record.h}!log\_record@{log\_record}}
+\index{log\_record@{log\_record}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record}
+{\footnotesize\ttfamily typedef struct log\+\_\+record\+\_\+type$\ast$ \textbf{ log\+\_\+record}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__record_8h_a24b05a308bf8e72e6be791a43aa5a15a}} 
+\index{log\_record.h@{log\_record.h}!\_\_log\_record\_unknown\_function\_\_@{\_\_log\_record\_unknown\_function\_\_}}
+\index{\_\_log\_record\_unknown\_function\_\_@{\_\_log\_record\_unknown\_function\_\_}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{\_\_log\_record\_unknown\_function\_\_()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI char$\ast$ \+\_\+\+\_\+log\+\_\+record\+\_\+unknown\+\_\+function\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_ad91e5d7e72970923d185eb53dacbe349}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_size@{log\_record\_size}}
+\index{log\_record\_size@{log\_record\_size}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_size()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+N\+O\+\_\+\+E\+X\+P\+O\+RT size\+\_\+t log\+\_\+record\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_a86b4d223a095eec3010624bc2e00838f}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_create@{log\_record\_create}}
+\index{log\_record\_create@{log\_record\_create}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_create()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} log\+\_\+record\+\_\+create (\begin{DoxyParamCaption}\item[{const log\+\_\+record\+\_\+ctor}]{record\+\_\+ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_ac132a60a1d97562bbd90a2563cc945ed}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_initialize@{log\_record\_initialize}}
+\index{log\_record\_initialize@{log\_record\_initialize}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_initialize()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+record} log\+\_\+record\+\_\+initialize (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record,  }\item[{const log\+\_\+record\+\_\+ctor}]{record\+\_\+ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_a455176a78aaf40b0d5af5aca3f19e1f2}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_time@{log\_record\_time}}
+\index{log\_record\_time@{log\_record\_time}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_time()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI time\+\_\+t$\ast$ log\+\_\+record\+\_\+time (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_ac5a1cb1adf9fd171cf59ec67131968e0}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_thread\_id@{log\_record\_thread\_id}}
+\index{log\_record\_thread\_id@{log\_record\_thread\_id}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_thread\_id()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI uint64\+\_\+t log\+\_\+record\+\_\+thread\+\_\+id (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_a647124e80b23ba774e70479aef4e790a}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_line@{log\_record\_line}}
+\index{log\_record\_line@{log\_record\_line}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_line()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI size\+\_\+t log\+\_\+record\+\_\+line (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_ac5294b47aa1efa5f5ba8cbbb28edeb6b}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_func@{log\_record\_func}}
+\index{log\_record\_func@{log\_record\_func}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_func()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI char$\ast$ log\+\_\+record\+\_\+func (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_a24ae153ba98779837e24ef1897c42c0f}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_file@{log\_record\_file}}
+\index{log\_record\_file@{log\_record\_file}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_file()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI char$\ast$ log\+\_\+record\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_ac72e864808b4c2adddeb6868ad7e3772}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_level@{log\_record\_level}}
+\index{log\_record\_level@{log\_record\_level}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_level()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI enum \textbf{ log\+\_\+level\+\_\+id} log\+\_\+record\+\_\+level (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_a65ebd90f680cb41099cfc98458b6a63f}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_message@{log\_record\_message}}
+\index{log\_record\_message@{log\_record\_message}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_message()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI char$\ast$ log\+\_\+record\+\_\+message (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_ad9e26e51b9c20a572a0a7b206a693434}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_variable\_args@{log\_record\_variable\_args}}
+\index{log\_record\_variable\_args@{log\_record\_variable\_args}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_variable\_args()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI struct \textbf{ log\+\_\+record\+\_\+va\+\_\+list\+\_\+type}$\ast$ log\+\_\+record\+\_\+variable\+\_\+args (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+
+\mbox{\label{log__record_8h_a95fbb739602731dc6cbd1ed4f1a7d6ff}} 
+\index{log\_record.h@{log\_record.h}!log\_record\_destroy@{log\_record\_destroy}}
+\index{log\_record\_destroy@{log\_record\_destroy}!log\_record.h@{log\_record.h}}
+\doxysubsubsection{log\_record\_destroy()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+record\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+record}}]{record }\end{DoxyParamCaption})}
+

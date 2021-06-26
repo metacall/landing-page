@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_filesystem__directory__descriptor_8h">
+<title>filesystem_directory_descriptor.h File Reference</title>
+<indexterm><primary>filesystem_directory_descriptor.h</primary></indexterm>
+<programlisting>#include &lt;filesystem/filesystem_api.h&gt;
+#include &lt;adt/adt_vector.h&gt;
+</programlisting>Include dependency graph for filesystem_directory_descriptor.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="filesystem__directory__descriptor_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="filesystem__directory__descriptor_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_filesystem__directory__descriptor_8h_1ac5513253d61293e9df7a79157ea38dc6">DIRECTORY_DESCRIPTOR_PATH_SIZE</link>   0x0200</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct directory_descriptor_type * <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>FILESYSTEM_API <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> <link linkend="_filesystem__directory__descriptor_8h_1a4f7c6af766261f44627e5098ccfd5533">directory_descriptor_create</link> (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> parent, const char *path)</para>
+</listitem>
+            <listitem><para>FILESYSTEM_API <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> <link linkend="_filesystem__directory__descriptor_8h_1ac9746dc9cf7d645915f5cef94618585b">directory_descriptor_parent</link> (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</para>
+</listitem>
+            <listitem><para>const FILESYSTEM_API char * <link linkend="_filesystem__directory__descriptor_8h_1afc994cff2bc1f4a946dc3ef02a5c5b26">directory_descriptor_path</link> (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</para>
+</listitem>
+            <listitem><para>FILESYSTEM_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_filesystem__directory__descriptor_8h_1a9310f300f28e09ae18f4f2c1aac1348a">directory_descriptor_files</link> (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</para>
+</listitem>
+            <listitem><para>FILESYSTEM_API void <link linkend="_filesystem__directory__descriptor_8h_1a34876220eb5e5c1307702684eb678ce0">directory_descriptor_destroy</link> (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_filesystem__directory__descriptor_8h_1ac5513253d61293e9df7a79157ea38dc6"/>    <section>
+    <title>DIRECTORY_DESCRIPTOR_PATH_SIZE</title>
+<indexterm><primary>DIRECTORY_DESCRIPTOR_PATH_SIZE</primary><secondary>filesystem_directory_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_directory_descriptor.h</primary><secondary>DIRECTORY_DESCRIPTOR_PATH_SIZE</secondary></indexterm>
+<para><computeroutput>#define DIRECTORY_DESCRIPTOR_PATH_SIZE   0x0200</computeroutput></para></section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e"/>    <section>
+    <title>directory_descriptor</title>
+<indexterm><primary>directory_descriptor</primary><secondary>filesystem_directory_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_directory_descriptor.h</primary><secondary>directory_descriptor</secondary></indexterm>
+<para><computeroutput>typedef struct directory_descriptor_type* <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_filesystem__directory__descriptor_8h_1a4f7c6af766261f44627e5098ccfd5533"/>    <section>
+    <title>directory_descriptor_create()</title>
+<indexterm><primary>directory_descriptor_create</primary><secondary>filesystem_directory_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_directory_descriptor.h</primary><secondary>directory_descriptor_create</secondary></indexterm>
+<para><computeroutput>FILESYSTEM_API <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> directory_descriptor_create (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> parent, const char * path)</computeroutput></para><para>
+
+<para>Create a directory descriptor from specified path. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>parent</entry>
+                                <entry>
+<para>Parent directory if any</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>path</entry>
+                                <entry>
+<para>The path of the directory</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the directory descriptor if success, null pointer otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__directory__descriptor_8h_1ac9746dc9cf7d645915f5cef94618585b"/>    <section>
+    <title>directory_descriptor_parent()</title>
+<indexterm><primary>directory_descriptor_parent</primary><secondary>filesystem_directory_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_directory_descriptor.h</primary><secondary>directory_descriptor_parent</secondary></indexterm>
+<para><computeroutput>FILESYSTEM_API <link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> directory_descriptor_parent (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</computeroutput></para><para>
+
+<para>Get the parent directory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Directory descriptor pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the parent directory descriptor </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__directory__descriptor_8h_1afc994cff2bc1f4a946dc3ef02a5c5b26"/>    <section>
+    <title>directory_descriptor_path()</title>
+<indexterm><primary>directory_descriptor_path</primary><secondary>filesystem_directory_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_directory_descriptor.h</primary><secondary>directory_descriptor_path</secondary></indexterm>
+<para><computeroutput>const FILESYSTEM_API char* directory_descriptor_path (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</computeroutput></para><para>
+
+<para>Get the path where directory points. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Directory descriptor pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A constant string pointer to the path of @d </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__directory__descriptor_8h_1a9310f300f28e09ae18f4f2c1aac1348a"/>    <section>
+    <title>directory_descriptor_files()</title>
+<indexterm><primary>directory_descriptor_files</primary><secondary>filesystem_directory_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_directory_descriptor.h</primary><secondary>directory_descriptor_files</secondary></indexterm>
+<para><computeroutput>FILESYSTEM_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> directory_descriptor_files (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</computeroutput></para><para>
+
+<para>Get the files contained in a directory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Directory descriptor pointer</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of files contained in directory </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_filesystem__directory__descriptor_8h_1a34876220eb5e5c1307702684eb678ce0"/>    <section>
+    <title>directory_descriptor_destroy()</title>
+<indexterm><primary>directory_descriptor_destroy</primary><secondary>filesystem_directory_descriptor.h</secondary></indexterm>
+<indexterm><primary>filesystem_directory_descriptor.h</primary><secondary>directory_descriptor_destroy</secondary></indexterm>
+<para><computeroutput>FILESYSTEM_API void directory_descriptor_destroy (<link linkend="_filesystem__directory__descriptor_8h_1a3340a9d3762e6ed7fac9818f8826173e">directory_descriptor</link> d)</computeroutput></para><para>
+
+<para>Destroy a directory from memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Directory descriptor pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

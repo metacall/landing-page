@@ -1,0 +1,166 @@
+\doxysection{log\+\_\+policy.\+h File Reference}
+\label{log__policy_8h}\index{log\_policy.h@{log\_policy.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+aspect.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for log\+\_\+policy.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{log__policy_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__policy_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ log\+\_\+policy\+\_\+interface}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t \textbf{ log\+\_\+policy\+\_\+id}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+policy\+\_\+impl}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+policy\+\_\+data}
+\item 
+typedef void $\ast$ \textbf{ log\+\_\+policy\+\_\+ctor}
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+interface\+\_\+create}) (\textbf{ log\+\_\+policy}, const \textbf{ log\+\_\+policy\+\_\+ctor})
+\item 
+typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+interface\+\_\+destroy}) (\textbf{ log\+\_\+policy})
+\item 
+typedef log\+\_\+policy\+\_\+interface($\ast$ \textbf{ log\+\_\+policy\+\_\+singleton}) (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+create} (enum \textbf{ log\+\_\+aspect\+\_\+id} aspect\+\_\+id, const log\+\_\+policy\+\_\+interface iface, const \textbf{ log\+\_\+policy\+\_\+ctor} ctor)
+\item 
+L\+O\+G\+\_\+\+A\+PI void \textbf{ log\+\_\+policy\+\_\+instantiate} (\textbf{ log\+\_\+policy} policy, \textbf{ log\+\_\+policy\+\_\+data} instance, const \textbf{ log\+\_\+policy\+\_\+id} id)
+\item 
+L\+O\+G\+\_\+\+A\+PI void \textbf{ log\+\_\+policy\+\_\+classify} (\textbf{ log\+\_\+policy} policy, \textbf{ log\+\_\+aspect} aspect)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect} \textbf{ log\+\_\+policy\+\_\+aspect} (\textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI enum \textbf{ log\+\_\+aspect\+\_\+id} \textbf{ log\+\_\+policy\+\_\+aspect\+\_\+id} (\textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy\+\_\+data} \textbf{ log\+\_\+policy\+\_\+instance} (\textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+behavior} (\textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy\+\_\+impl} \textbf{ log\+\_\+policy\+\_\+derived} (\textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+policy\+\_\+destroy} (\textbf{ log\+\_\+policy} policy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{log__policy_8h_a06c1e2a7cedb11c0772c1802d1685eb5}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_id@{log\_policy\_id}}
+\index{log\_policy\_id@{log\_policy\_id}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_id}
+{\footnotesize\ttfamily typedef size\+\_\+t \textbf{ log\+\_\+policy\+\_\+id}}
+
+\mbox{\label{log__policy_8h_a91fb13a5ab0e538aa1b1e5e1dc0da500}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_impl@{log\_policy\_impl}}
+\index{log\_policy\_impl@{log\_policy\_impl}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_impl}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+policy\+\_\+impl}}
+
+\mbox{\label{log__policy_8h_a6de8f72b8d19eb3d6cd9a78cde34b57c}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_data@{log\_policy\_data}}
+\index{log\_policy\_data@{log\_policy\_data}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_data}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+policy\+\_\+data}}
+
+\mbox{\label{log__policy_8h_a8a5a40982780ee7ed6f051ee283f3032}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_ctor@{log\_policy\_ctor}}
+\index{log\_policy\_ctor@{log\_policy\_ctor}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_ctor}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ log\+\_\+policy\+\_\+ctor}}
+
+\mbox{\label{log__policy_8h_a58277154fdc39d2de449b5a3dfada9ce}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_interface\_create@{log\_policy\_interface\_create}}
+\index{log\_policy\_interface\_create@{log\_policy\_interface\_create}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_interface\_create}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+policy\+\_\+interface\+\_\+create) (\textbf{ log\+\_\+policy}, const \textbf{ log\+\_\+policy\+\_\+ctor})}
+
+\mbox{\label{log__policy_8h_aa57bdfdfb18fe2d24d20daa432d8457c}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_interface\_destroy@{log\_policy\_interface\_destroy}}
+\index{log\_policy\_interface\_destroy@{log\_policy\_interface\_destroy}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_interface\_destroy}
+{\footnotesize\ttfamily typedef int($\ast$ log\+\_\+policy\+\_\+interface\+\_\+destroy) (\textbf{ log\+\_\+policy})}
+
+\mbox{\label{log__policy_8h_aaaf2f7fae9adcaba2987cef30770c7ae}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_singleton@{log\_policy\_singleton}}
+\index{log\_policy\_singleton@{log\_policy\_singleton}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_singleton}
+{\footnotesize\ttfamily typedef log\+\_\+policy\+\_\+interface($\ast$ log\+\_\+policy\+\_\+singleton) (void)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__policy_8h_a06e277a564eb91c8f30b76c08c3df620}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_create@{log\_policy\_create}}
+\index{log\_policy\_create@{log\_policy\_create}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_create()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+create (\begin{DoxyParamCaption}\item[{enum \textbf{ log\+\_\+aspect\+\_\+id}}]{aspect\+\_\+id,  }\item[{const log\+\_\+policy\+\_\+interface}]{iface,  }\item[{const \textbf{ log\+\_\+policy\+\_\+ctor}}]{ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_a661c84de7ecb775f1e06aea04fe9a18c}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_instantiate@{log\_policy\_instantiate}}
+\index{log\_policy\_instantiate@{log\_policy\_instantiate}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_instantiate()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void log\+\_\+policy\+\_\+instantiate (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy,  }\item[{\textbf{ log\+\_\+policy\+\_\+data}}]{instance,  }\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{id }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_af271500926e9eff385ef898bc6b9d781}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_classify@{log\_policy\_classify}}
+\index{log\_policy\_classify@{log\_policy\_classify}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_classify()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void log\+\_\+policy\+\_\+classify (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy,  }\item[{\textbf{ log\+\_\+aspect}}]{aspect }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_adf778f88ede0fe6bedfab994e9c809b3}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_aspect@{log\_policy\_aspect}}
+\index{log\_policy\_aspect@{log\_policy\_aspect}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_aspect()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+aspect} log\+\_\+policy\+\_\+aspect (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_a1d301f7f7996670937ef91463255a7ec}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_aspect\_id@{log\_policy\_aspect\_id}}
+\index{log\_policy\_aspect\_id@{log\_policy\_aspect\_id}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_aspect\_id()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI enum \textbf{ log\+\_\+aspect\+\_\+id} log\+\_\+policy\+\_\+aspect\+\_\+id (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_a5459b90dff8c00665a3adb85fe326ce1}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_instance@{log\_policy\_instance}}
+\index{log\_policy\_instance@{log\_policy\_instance}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_instance()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy\+\_\+data} log\+\_\+policy\+\_\+instance (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_a7666fd97f984b9c168ce93181771c53e}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_behavior@{log\_policy\_behavior}}
+\index{log\_policy\_behavior@{log\_policy\_behavior}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_behavior()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+behavior (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_a6ec05522403aca58a1376d5fec8f1d87}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_derived@{log\_policy\_derived}}
+\index{log\_policy\_derived@{log\_policy\_derived}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_derived()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy\+\_\+impl} log\+\_\+policy\+\_\+derived (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log__policy_8h_a81b1ef0f90352c0f143d276ce1d9058e}} 
+\index{log\_policy.h@{log\_policy.h}!log\_policy\_destroy@{log\_policy\_destroy}}
+\index{log\_policy\_destroy@{log\_policy\_destroy}!log\_policy.h@{log\_policy.h}}
+\doxysubsubsection{log\_policy\_destroy()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+policy\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_detour__interface_8h">
+<title>detour_interface.h File Reference</title>
+<indexterm><primary>detour_interface.h</primary></indexterm>
+<programlisting>#include &lt;detour/detour_api.h&gt;
+#include &lt;detour/detour_impl_handle.h&gt;
+</programlisting>Include dependency graph for detour_interface.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="detour__interface_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structdetour__interface__type">detour_interface</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>(* <link linkend="_detour__interface_8h_1a6ddded9b6d631882337980989b87df4a">detour_interface_initialize</link>) (void)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_detour__interface_8h_1a0955afd4a99bf8893395709276d6ce35">detour_interface_install</link>) (<link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>, void(**) (void), void(*) (void))</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_detour__interface_8h_1a38c4b08bd20ed0d0027a5645c5775cc3">detour_interface_uninstall</link>) (<link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_detour__interface_8h_1a5f6bafd4dc6c0ae7653e06e54fb21ae2">detour_interface_destroy</link>) (<link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>)</para>
+</listitem>
+            <listitem><para>typedef detour_interface(* <link linkend="_detour__interface_8h_1a6d17e1020d1e50d5028e2320cdfd196b">detour_interface_singleton</link>) (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_detour__interface_8h_1a6ddded9b6d631882337980989b87df4a"/>    <section>
+    <title>detour_interface_initialize</title>
+<indexterm><primary>detour_interface_initialize</primary><secondary>detour_interface.h</secondary></indexterm>
+<indexterm><primary>detour_interface.h</primary><secondary>detour_interface_initialize</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>(* detour_interface_initialize) (void)</computeroutput></para>    </section><anchor xml:id="_detour__interface_8h_1a0955afd4a99bf8893395709276d6ce35"/>    <section>
+    <title>detour_interface_install</title>
+<indexterm><primary>detour_interface_install</primary><secondary>detour_interface.h</secondary></indexterm>
+<indexterm><primary>detour_interface.h</primary><secondary>detour_interface_install</secondary></indexterm>
+<para><computeroutput>typedef int(* detour_interface_install) (<link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>, void(**)(void), void(*)(void))</computeroutput></para>    </section><anchor xml:id="_detour__interface_8h_1a38c4b08bd20ed0d0027a5645c5775cc3"/>    <section>
+    <title>detour_interface_uninstall</title>
+<indexterm><primary>detour_interface_uninstall</primary><secondary>detour_interface.h</secondary></indexterm>
+<indexterm><primary>detour_interface.h</primary><secondary>detour_interface_uninstall</secondary></indexterm>
+<para><computeroutput>typedef int(* detour_interface_uninstall) (<link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>)</computeroutput></para>    </section><anchor xml:id="_detour__interface_8h_1a5f6bafd4dc6c0ae7653e06e54fb21ae2"/>    <section>
+    <title>detour_interface_destroy</title>
+<indexterm><primary>detour_interface_destroy</primary><secondary>detour_interface.h</secondary></indexterm>
+<indexterm><primary>detour_interface.h</primary><secondary>detour_interface_destroy</secondary></indexterm>
+<para><computeroutput>typedef int(* detour_interface_destroy) (<link linkend="_detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3">detour_impl_handle</link>)</computeroutput></para>    </section><anchor xml:id="_detour__interface_8h_1a6d17e1020d1e50d5028e2320cdfd196b"/>    <section>
+    <title>detour_interface_singleton</title>
+<indexterm><primary>detour_interface_singleton</primary><secondary>detour_interface.h</secondary></indexterm>
+<indexterm><primary>detour_interface.h</primary><secondary>detour_interface_singleton</secondary></indexterm>
+<para><computeroutput>typedef detour_interface(* detour_interface_singleton) (void)</computeroutput></para></section>
+</section>
+</section>

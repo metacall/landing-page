@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_preprocessor__arguments_8h">
+<title>preprocessor_arguments.h File Reference</title>
+<indexterm><primary>preprocessor_arguments.h</primary></indexterm>
+<programlisting>#include &lt;preprocessor/preprocessor_api.h&gt;
+#include &lt;preprocessor/preprocessor_arithmetic.h&gt;
+#include &lt;preprocessor/preprocessor_boolean.h&gt;
+#include &lt;preprocessor/preprocessor_comma.h&gt;
+#include &lt;preprocessor/preprocessor_concatenation.h&gt;
+#include &lt;preprocessor/preprocessor_empty.h&gt;
+#include &lt;preprocessor/preprocessor_if.h&gt;
+#include &lt;preprocessor/preprocessor_tuple.h&gt;
+</programlisting>Include dependency graph for preprocessor_arguments.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__arguments_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__arguments_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1aed8dba301d6f51b3af69960427deb2f3">PREPROCESSOR_ARGS_SIZE</link>   64</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1afe944f0bcdfb0fe525c58e1acd7dbb4d">PREPROCESSOR_ARGS_COUNT_SEQ_IMPL</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a26f1a283a724e5fd9e21ae9d218aaf82">PREPROCESSOR_ARGS_COMMA_SEQ_IMPL</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a2a80981f1dfebb26107f033e8f0efa00">PREPROCESSOR_ARGS_N_IMPL</link>(_1,  _2,  _3,  _4,  _5,  _6,  _7,  _8,  _9,  _10,  _11,  _12,  _13,  _14,  _15,  _16,  _17,  _18,  _19,  _20,  _21,  _22,  _23,  _24,  _25,  _26,  _27,  _28,  _29,  _30,  _31,  _32,  _33,  _34,  _35,  _36,  _37,  _38,  _39,  _40,  _41,  _42,  _43,  _44,  _45,  _46,  _47,  _48,  _49,  _50,  _51,  _52,  _53,  _54,  _55,  _56,  _57,  _58,  _59,  _60,  _61,  _62,  _63,  N, ...)   N</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a7877a238abd31e6a5bf1a5eccb553824">PREPROCESSOR_ARGS_FIRST</link>(first, ...)   first</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a5634937376d5ce72e46ed58860d31c7b">PREPROCESSOR_ARGS_FIRST_REMOVE</link>(first, ...)   __VA_ARGS__</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1aad28a181cd413d82df83327d39095241">PREPROCESSOR_ARGS_SECOND</link>(first,  second, ...)   second</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a26b6570f6a16dc003ddc7528c38bdb5b">PREPROCESSOR_ARGS_SECOND_REMOVE</link>(first,  second, ...)   first, __VA_ARGS__</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1aa37b728025c5926b9460c0de9b442188">PREPROCESSOR_ARGS_NOT_EMPTY_IMPL</link>(...)   <link linkend="_preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949">PREPROCESSOR_ARGS_EMPTY</link>(__VA_ARGS__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1ae64e56c0edc8929c963355428b6a7d05">PREPROCESSOR_ARGS_NOT_EMPTY</link>(...)   <link linkend="_preprocessor__boolean_8h_1a0fafbd8f5118311b9b879df31eaa3a32">PREPROCESSOR_NOT</link>(<link linkend="_preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949">PREPROCESSOR_ARGS_EMPTY</link>(__VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1ab6359d4bb6e996f338dd00f1ba96d869">PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_0001</link>   ,</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a1bd669a52a1eb4d3be63a86e1ccd0158">PREPROCESSOR_ARGS_EMPTY_CASE</link>(_0,  _1,  _2,  _3,  _4)   _0 ## _1 ## _2 ## _3 ## _4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a634223e93424935af82e07ca2e6a85a6">PREPROCESSOR_ARGS_EMPTY_IMPL_I</link>(_0,  _1,  _2,  _3)   PREPROCESSOR_ARGS_COMMA(<link linkend="_preprocessor__arguments_8h_1a1bd669a52a1eb4d3be63a86e1ccd0158">PREPROCESSOR_ARGS_EMPTY_CASE</link>(PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_, _0, _1, _2, _3))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1a39cdf4e7e81f0dc2852ea23ab5d159b7">PREPROCESSOR_ARGS_EMPTY_IMPL</link>(_0,  _1,  _2,  _3)   <link linkend="_preprocessor__arguments_8h_1a634223e93424935af82e07ca2e6a85a6">PREPROCESSOR_ARGS_EMPTY_IMPL_I</link>(_0, _1, _2, _3)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949">PREPROCESSOR_ARGS_EMPTY</link>(...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_preprocessor__arguments_8h_1aed8dba301d6f51b3af69960427deb2f3"/>    <section>
+    <title>PREPROCESSOR_ARGS_SIZE</title>
+<indexterm><primary>PREPROCESSOR_ARGS_SIZE</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_SIZE</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_SIZE   64</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1afe944f0bcdfb0fe525c58e1acd7dbb4d"/>    <section>
+    <title>PREPROCESSOR_ARGS_COUNT_SEQ_IMPL</title>
+<indexterm><primary>PREPROCESSOR_ARGS_COUNT_SEQ_IMPL</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_COUNT_SEQ_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_COUNT_SEQ_IMPL( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;63,&#32;62,&#32;61,&#32;60,&#32;\
+&#32;&#32;&#32;&#32;59,&#32;58,&#32;57,&#32;56,&#32;55,&#32;54,&#32;53,&#32;52,&#32;51,&#32;50,&#32;\
+&#32;&#32;&#32;&#32;49,&#32;48,&#32;47,&#32;46,&#32;45,&#32;44,&#32;43,&#32;42,&#32;41,&#32;40,&#32;\
+&#32;&#32;&#32;&#32;39,&#32;38,&#32;37,&#32;36,&#32;35,&#32;34,&#32;33,&#32;32,&#32;31,&#32;30,&#32;\
+&#32;&#32;&#32;&#32;29,&#32;28,&#32;27,&#32;26,&#32;25,&#32;24,&#32;23,&#32;22,&#32;21,&#32;20,&#32;\
+&#32;&#32;&#32;&#32;19,&#32;18,&#32;17,&#32;16,&#32;15,&#32;14,&#32;13,&#32;12,&#32;11,&#32;10,&#32;\
+&#32;&#32;&#32;&#32;9,&#32;8,&#32;7,&#32;6,&#32;5,&#32;4,&#32;3,&#32;2,&#32;1,&#32;0
+</programlisting>    </section><anchor xml:id="_preprocessor__arguments_8h_1a26f1a283a724e5fd9e21ae9d218aaf82"/>    <section>
+    <title>PREPROCESSOR_ARGS_COMMA_SEQ_IMPL</title>
+<indexterm><primary>PREPROCESSOR_ARGS_COMMA_SEQ_IMPL</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_COMMA_SEQ_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_COMMA_SEQ_IMPL( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;\
+&#32;&#32;&#32;&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;\
+&#32;&#32;&#32;&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;\
+&#32;&#32;&#32;&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;\
+&#32;&#32;&#32;&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;\
+&#32;&#32;&#32;&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;1,&#32;\
+&#32;&#32;&#32;&#32;1,&#32;1,&#32;0
+</programlisting>    </section><anchor xml:id="_preprocessor__arguments_8h_1a2a80981f1dfebb26107f033e8f0efa00"/>    <section>
+    <title>PREPROCESSOR_ARGS_N_IMPL</title>
+<indexterm><primary>PREPROCESSOR_ARGS_N_IMPL</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_N_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_N_IMPL( _1,  _2,  _3,  _4,  _5,  _6,  _7,  _8,  _9,  _10,  _11,  _12,  _13,  _14,  _15,  _16,  _17,  _18,  _19,  _20,  _21,  _22,  _23,  _24,  _25,  _26,  _27,  _28,  _29,  _30,  _31,  _32,  _33,  _34,  _35,  _36,  _37,  _38,  _39,  _40,  _41,  _42,  _43,  _44,  _45,  _46,  _47,  _48,  _49,  _50,  _51,  _52,  _53,  _54,  _55,  _56,  _57,  _58,  _59,  _60,  _61,  _62,  _63,  N,  ...)   N</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1a7877a238abd31e6a5bf1a5eccb553824"/>    <section>
+    <title>PREPROCESSOR_ARGS_FIRST</title>
+<indexterm><primary>PREPROCESSOR_ARGS_FIRST</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_FIRST</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_FIRST( first,  ...)   first</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1a5634937376d5ce72e46ed58860d31c7b"/>    <section>
+    <title>PREPROCESSOR_ARGS_FIRST_REMOVE</title>
+<indexterm><primary>PREPROCESSOR_ARGS_FIRST_REMOVE</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_FIRST_REMOVE</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_FIRST_REMOVE( first,  ...)   __VA_ARGS__</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1aad28a181cd413d82df83327d39095241"/>    <section>
+    <title>PREPROCESSOR_ARGS_SECOND</title>
+<indexterm><primary>PREPROCESSOR_ARGS_SECOND</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_SECOND</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_SECOND( first,  second,  ...)   second</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1a26b6570f6a16dc003ddc7528c38bdb5b"/>    <section>
+    <title>PREPROCESSOR_ARGS_SECOND_REMOVE</title>
+<indexterm><primary>PREPROCESSOR_ARGS_SECOND_REMOVE</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_SECOND_REMOVE</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_SECOND_REMOVE( first,  second,  ...)   first, __VA_ARGS__</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1aa37b728025c5926b9460c0de9b442188"/>    <section>
+    <title>PREPROCESSOR_ARGS_NOT_EMPTY_IMPL</title>
+<indexterm><primary>PREPROCESSOR_ARGS_NOT_EMPTY_IMPL</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_NOT_EMPTY_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_NOT_EMPTY_IMPL( ...)   <link linkend="_preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949">PREPROCESSOR_ARGS_EMPTY</link>(__VA_ARGS__)</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1ae64e56c0edc8929c963355428b6a7d05"/>    <section>
+    <title>PREPROCESSOR_ARGS_NOT_EMPTY</title>
+<indexterm><primary>PREPROCESSOR_ARGS_NOT_EMPTY</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_NOT_EMPTY</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_NOT_EMPTY( ...)   <link linkend="_preprocessor__boolean_8h_1a0fafbd8f5118311b9b879df31eaa3a32">PREPROCESSOR_NOT</link>(<link linkend="_preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949">PREPROCESSOR_ARGS_EMPTY</link>(__VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1ab6359d4bb6e996f338dd00f1ba96d869"/>    <section>
+    <title>PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_0001</title>
+<indexterm><primary>PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_0001</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_0001</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_0001   ,</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1a1bd669a52a1eb4d3be63a86e1ccd0158"/>    <section>
+    <title>PREPROCESSOR_ARGS_EMPTY_CASE</title>
+<indexterm><primary>PREPROCESSOR_ARGS_EMPTY_CASE</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_EMPTY_CASE</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_EMPTY_CASE( _0,  _1,  _2,  _3,  _4)   _0 ## _1 ## _2 ## _3 ## _4</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1a634223e93424935af82e07ca2e6a85a6"/>    <section>
+    <title>PREPROCESSOR_ARGS_EMPTY_IMPL_I</title>
+<indexterm><primary>PREPROCESSOR_ARGS_EMPTY_IMPL_I</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_EMPTY_IMPL_I</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_EMPTY_IMPL_I( _0,  _1,  _2,  _3)   PREPROCESSOR_ARGS_COMMA(<link linkend="_preprocessor__arguments_8h_1a1bd669a52a1eb4d3be63a86e1ccd0158">PREPROCESSOR_ARGS_EMPTY_CASE</link>(PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_, _0, _1, _2, _3))</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1a39cdf4e7e81f0dc2852ea23ab5d159b7"/>    <section>
+    <title>PREPROCESSOR_ARGS_EMPTY_IMPL</title>
+<indexterm><primary>PREPROCESSOR_ARGS_EMPTY_IMPL</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_EMPTY_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_EMPTY_IMPL( _0,  _1,  _2,  _3)   <link linkend="_preprocessor__arguments_8h_1a634223e93424935af82e07ca2e6a85a6">PREPROCESSOR_ARGS_EMPTY_IMPL_I</link>(_0, _1, _2, _3)</computeroutput></para>    </section><anchor xml:id="_preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949"/>    <section>
+    <title>PREPROCESSOR_ARGS_EMPTY</title>
+<indexterm><primary>PREPROCESSOR_ARGS_EMPTY</primary><secondary>preprocessor_arguments.h</secondary></indexterm>
+<indexterm><primary>preprocessor_arguments.h</primary><secondary>PREPROCESSOR_ARGS_EMPTY</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_ARGS_EMPTY( ...)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<link linkend="_preprocessor__arguments_8h_1a39cdf4e7e81f0dc2852ea23ab5d159b7">PREPROCESSOR_ARGS_EMPTY_IMPL</link>(&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PREPROCESSOR_ARGS_COMMA(__VA_ARGS__),&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PREPROCESSOR_ARGS_COMMA(<link linkend="_preprocessor__comma_8h_1a01cb7303cfe59a8897a91863bc9ce212">PREPROCESSOR_COMMA_VARIADIC</link>&#32;__VA_ARGS__),&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PREPROCESSOR_ARGS_COMMA(__VA_ARGS__&#32;()),&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PREPROCESSOR_ARGS_COMMA(<link linkend="_preprocessor__comma_8h_1a01cb7303cfe59a8897a91863bc9ce212">PREPROCESSOR_COMMA_VARIADIC</link>&#32;__VA_ARGS__&#32;())&#32;\
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+</section>
+</section>

@@ -1,0 +1,1639 @@
+\doxysection{metacall.\+h File Reference}
+\label{metacall_8h}\index{metacall.h@{metacall.h}}
+{\ttfamily \#include $<$metacall/metacall\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$metacall/metacall\+\_\+allocator.\+h$>$}\newline
+{\ttfamily \#include $<$metacall/metacall\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$metacall/metacall\+\_\+log.\+h$>$}\newline
+{\ttfamily \#include $<$metacall/metacall\+\_\+value.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for metacall.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{metacall_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+\+F\+O\+R\+K\+\_\+\+S\+A\+FE}~0x01 $<$$<$ 0x00
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+serial} (void)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+log\+\_\+null} (void)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+flags} (int flags)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+initialize} (void)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+initialize\+\_\+ex} (struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type} initialize\+\_\+config[$\,$])
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+initialize\+\_\+args} (int argc, char $\ast$argv[$\,$])
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+argc} ()
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$$\ast$ \textbf{ metacall\+\_\+argv} (void)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+is\+\_\+initialized} (const char $\ast$tag)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t \textbf{ metacall\+\_\+args\+\_\+size} (void)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+execution\+\_\+path} (const char $\ast$tag, const char $\ast$path)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+execution\+\_\+path\+\_\+s} (const char $\ast$tag, size\+\_\+t tag\+\_\+length, const char $\ast$path, size\+\_\+t path\+\_\+length)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+file} (const char $\ast$tag, const char $\ast$paths[$\,$], size\+\_\+t size, void $\ast$$\ast$handle)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+memory} (const char $\ast$tag, const char $\ast$buffer, size\+\_\+t size, void $\ast$$\ast$handle)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+package} (const char $\ast$tag, const char $\ast$path, void $\ast$$\ast$handle)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+configuration} (const char $\ast$path, void $\ast$$\ast$handle, void $\ast$allocator)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv} (const char $\ast$name, void $\ast$args[$\,$])
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+s} (const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallhv} (void $\ast$handle, const char $\ast$name, void $\ast$args[$\,$])
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallhv\+\_\+s} (void $\ast$handle, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall} (const char $\ast$name,...)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt} (const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$],...)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt\+\_\+s} (const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$], size\+\_\+t size,...)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallht\+\_\+s} (void $\ast$handle, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$], size\+\_\+t size,...)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+{\em Get the function by
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function reference, null if the function does not exist 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+function} (const char $\ast$name)
+\end{DoxyCompactItemize}
+
+\begin{Indent}\textbf{ from @handle}\par
+{\em Get the function by
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Pointer to the handle returned by metacall\+\_\+load\+\_\+from\+\_\+\{file, memory, package\}\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function reference, null if the function does not exist 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+handle\+\_\+function} (void $\ast$handle, const char $\ast$name)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+function\+\_\+parameter\+\_\+type} (void $\ast$func, size\+\_\+t parameter, enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$id)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+function\+\_\+return\+\_\+type} (void $\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$id)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t \textbf{ metacall\+\_\+function\+\_\+size} (void $\ast$func)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+function\+\_\+async} (void $\ast$func)
+\end{DoxyCompactItemize}
+\end{Indent}
+\textbf{ }\par
+{\em Get the handle by
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle reference, null if the function does not exist 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+handle} (const char $\ast$tag, const char $\ast$name)
+\item 
+const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+handle\+\_\+id} (void $\ast$handle)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+handle\+\_\+export} (void $\ast$handle)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv} (void $\ast$func, void $\ast$args[$\,$])
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallf} (void $\ast$func,...)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfs} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$])
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfms} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
+\end{DoxyCompactItemize}
+
+\begin{Indent}\textbf{ and arguments @va\+\_\+args}\par
+{\em Register a function by name
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em invoke} & Pointer to function invoke interface (argc, argv, data)\\
+\hline
+\mbox{\texttt{ out}}  & {\em func} & Will set the pointer to the function if the parameter is not null\\
+\hline
+\mbox{\texttt{ in}}  & {\em return\+\_\+type} & Type of return value\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of function arguments\\
+\hline
+\mbox{\texttt{ in}}  & {\em va\+\_\+args} & Varidic function parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+register} (const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), void $\ast$$\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size,...)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ and arguments @types}\par
+{\em Register a function by name
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em invoke} & Pointer to function invoke interface (argc, argv, data)\\
+\hline
+\mbox{\texttt{ out}}  & {\em func} & Will set the pointer to the function if the parameter is not null\\
+\hline
+\mbox{\texttt{ in}}  & {\em return\+\_\+type} & Type of return value\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of function arguments\\
+\hline
+\mbox{\texttt{ in}}  & {\em types} & List of parameter types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+registerv} (const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), void $\ast$$\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size, enum \textbf{ metacall\+\_\+value\+\_\+id} types[$\,$])
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+await} (const char $\ast$name, void $\ast$args[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+await\+\_\+future} (void $\ast$f, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+await\+\_\+s} (const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await} (void $\ast$func, void $\ast$args[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv\+\_\+await} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfs\+\_\+await} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfms\+\_\+await} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\end{DoxyCompactItemize}
+\end{Indent}
+\textbf{ }\par
+{\em Get the class by
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Class reference, null if the class does not exist 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class} (const char $\ast$name)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+class} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t argc)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class\+\_\+new} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t argc)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class\+\_\+static\+\_\+get} (void $\ast$cls, const char $\ast$key)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+class\+\_\+static\+\_\+set} (void $\ast$cls, const char $\ast$key, void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+object} (void $\ast$obj, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t argc)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+object\+\_\+get} (void $\ast$obj, const char $\ast$key)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+object\+\_\+set} (void $\ast$obj, const char $\ast$key, void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+inspect} (size\+\_\+t $\ast$size, void $\ast$allocator)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+serialize} (const char $\ast$name, void $\ast$v, size\+\_\+t $\ast$size, void $\ast$allocator)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+deserialize} (const char $\ast$name, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+clear} (void $\ast$handle)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+destroy} (void)
+\item 
+const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+print\+\_\+info} (void)
+\end{DoxyCompactItemize}
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+null\+\_\+args} [1]
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{metacall_8h_a9c8f9f1a02aa8b7f11203f473ad45a0c}} 
+\index{metacall.h@{metacall.h}!METACALL\_FLAGS\_FORK\_SAFE@{METACALL\_FLAGS\_FORK\_SAFE}}
+\index{METACALL\_FLAGS\_FORK\_SAFE@{METACALL\_FLAGS\_FORK\_SAFE}!metacall.h@{metacall.h}}
+\doxysubsubsection{METACALL\_FLAGS\_FORK\_SAFE}
+{\footnotesize\ttfamily \#define M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+\+F\+O\+R\+K\+\_\+\+S\+A\+FE~0x01 $<$$<$ 0x00}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{metacall_8h_a4aa530f2d57ee74faec5152ab59cfd2c}} 
+\index{metacall.h@{metacall.h}!metacall\_serial@{metacall\_serial}}
+\index{metacall\_serial@{metacall\_serial}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_serial()}
+{\footnotesize\ttfamily const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+serial (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns default serializer used by Meta\+Call. 
+
+\begin{DoxyReturn}{Returns}
+Name of the serializer to be used with serialization methods 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a7359cf8608ee329433d129f74621f6b7}} 
+\index{metacall.h@{metacall.h}!metacall\_log\_null@{metacall\_log\_null}}
+\index{metacall\_log\_null@{metacall\_log\_null}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_log\_null()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+log\+\_\+null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables Meta\+Call logs, must be called before @metacall\+\_\+initialize. 
+
+When initializing Meta\+Call, it initializes a default logs to stdout if none was defined. If you want to benchmark or simply disable this default logs, you can call to this function before @metacall\+\_\+initialize. \mbox{\label{metacall_8h_a59ae3eea97bc40256b292aea7f36b61c}} 
+\index{metacall.h@{metacall.h}!metacall\_flags@{metacall\_flags}}
+\index{metacall\_flags@{metacall\_flags}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_flags()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+flags (\begin{DoxyParamCaption}\item[{int}]{flags }\end{DoxyParamCaption})}
+
+
+
+Flags to be set in Meta\+Call library. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em flags} & Combination of flags referring to definitions M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+$\ast$ \\
+\hline
+\end{DoxyParams}
+\mbox{\label{metacall_8h_aef066c5638c4e049288d98911e1a799f}} 
+\index{metacall.h@{metacall.h}!metacall\_initialize@{metacall\_initialize}}
+\index{metacall\_initialize@{metacall\_initialize}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_initialize()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Meta\+Call library. 
+
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a9c70099ab9944bc953ff0998fa92f97e}} 
+\index{metacall.h@{metacall.h}!metacall\_initialize\_ex@{metacall\_initialize\_ex}}
+\index{metacall\_initialize\_ex@{metacall\_initialize\_ex}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_initialize\_ex()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+initialize\+\_\+ex (\begin{DoxyParamCaption}\item[{struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type}}]{initialize\+\_\+config[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Initialize Meta\+Call library with configuration arguments. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em initialize\+\_\+config} & Extension of the script to be loaded in memory with data to be injected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ab2759ffd9206401b14fb75d53bf35987}} 
+\index{metacall.h@{metacall.h}!metacall\_initialize\_args@{metacall\_initialize\_args}}
+\index{metacall\_initialize\_args@{metacall\_initialize\_args}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_initialize\_args()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+initialize\+\_\+args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Initialize Meta\+Call application arguments. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & Number of additional parameters to be passed to the runtime when initializing\\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & Additional parameters to be passed to the runtime when initializing (when using Meta\+Call as an application) \\
+\hline
+\end{DoxyParams}
+\mbox{\label{metacall_8h_acadaee23ccbd4d29087d617b07e1a346}} 
+\index{metacall.h@{metacall.h}!metacall\_argc@{metacall\_argc}}
+\index{metacall\_argc@{metacall\_argc}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_argc()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+argc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of arguments in which Meta\+Call was initialized. 
+
+\begin{DoxyReturn}{Returns}
+An integer equal or greater than zero 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a9c0bd7df095d9a4db05204f04fa657a3}} 
+\index{metacall.h@{metacall.h}!metacall\_argv@{metacall\_argv}}
+\index{metacall\_argv@{metacall\_argv}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_argv()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$$\ast$ metacall\+\_\+argv (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the arguments in which Meta\+Call was initialized. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to an array of strings with the additional arguments 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a6e9924c55b771ae7f80d6b153ad412d3}} 
+\index{metacall.h@{metacall.h}!metacall\_is\_initialized@{metacall\_is\_initialized}}
+\index{metacall\_is\_initialized@{metacall\_is\_initialized}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_is\_initialized()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+is\+\_\+initialized (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag }\end{DoxyParamCaption})}
+
+
+
+Check if script context is loaded by @tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if context is initialized, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_af773258f002ae5ea241b945ae4315d49}} 
+\index{metacall.h@{metacall.h}!metacall\_args\_size@{metacall\_args\_size}}
+\index{metacall\_args\_size@{metacall\_args\_size}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_args\_size()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t metacall\+\_\+args\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Amount of function call arguments supported by Meta\+Call. 
+
+\begin{DoxyReturn}{Returns}
+Number of arguments suported 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a14bbd56502b7bdd53fdbe42b46aceb16}} 
+\index{metacall.h@{metacall.h}!metacall\_execution\_path@{metacall\_execution\_path}}
+\index{metacall\_execution\_path@{metacall\_execution\_path}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_execution\_path()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+execution\+\_\+path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Set a execution path defined by @path to the extension script @tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\hline
+\mbox{\texttt{ in}}  & {\em path} & Path to be loaded\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ab6fd858391d840206fe14725c2b695e2}} 
+\index{metacall.h@{metacall.h}!metacall\_execution\_path\_s@{metacall\_execution\_path\_s}}
+\index{metacall\_execution\_path\_s@{metacall\_execution\_path\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_execution\_path\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+execution\+\_\+path\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{size\+\_\+t}]{tag\+\_\+length,  }\item[{const char $\ast$}]{path,  }\item[{size\+\_\+t}]{path\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Set a execution path defined by @path to the extension script @tag with length. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\hline
+\mbox{\texttt{ in}}  & {\em tag\+\_\+length} & Length of the extension of the tag\\
+\hline
+\mbox{\texttt{ in}}  & {\em path} & Path to be loaded\\
+\hline
+\mbox{\texttt{ in}}  & {\em path\+\_\+length} & Length of the path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a4cf8160c6bdd7c5c2614b40be31ce887}} 
+\index{metacall.h@{metacall.h}!metacall\_load\_from\_file@{metacall\_load\_from\_file}}
+\index{metacall\_load\_from\_file@{metacall\_load\_from\_file}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_load\_from\_file()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{paths[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Loads a script from file specified by @path. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\hline
+\mbox{\texttt{ in}}  & {\em paths} & Path array of files\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of the array @paths\\
+\hline
+\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_aa202ac4aeb04129ab475099af696b7b8}} 
+\index{metacall.h@{metacall.h}!metacall\_load\_from\_memory@{metacall\_load\_from\_memory}}
+\index{metacall\_load\_from\_memory@{metacall\_load\_from\_memory}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_load\_from\_memory()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Loads a script from memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & Memory block representing the string of the script\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Memory block representing the string of the script\\
+\hline
+\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ae62d509141fe85874f1865f61b4075af}} 
+\index{metacall.h@{metacall.h}!metacall\_load\_from\_package@{metacall\_load\_from\_package}}
+\index{metacall\_load\_from\_package@{metacall\_load\_from\_package}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_load\_from\_package()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+package (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{path,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Loads a package of scrips from file specified by @path into loader defined by @extension. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\hline
+\mbox{\texttt{ in}}  & {\em path} & Path of the package\\
+\hline
+\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a00a0cad16a66aaaab0f2e523ee390be3}} 
+\index{metacall.h@{metacall.h}!metacall\_load\_from\_configuration@{metacall\_load\_from\_configuration}}
+\index{metacall\_load\_from\_configuration@{metacall\_load\_from\_configuration}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_load\_from\_configuration()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+configuration (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{void $\ast$$\ast$}]{handle,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Loads a a list of scrips from configuration specified by @path into loader with the following format\+: \{ \char`\"{}language\+\_\+id\char`\"{}\+: \char`\"{}$<$tag$>$\char`\"{}, \char`\"{}path\char`\"{}\+: \char`\"{}$<$path$>$\char`\"{}, \char`\"{}scripts\char`\"{}\+: [ \char`\"{}$<$script0$>$\char`\"{}, \char`\"{}$<$script1$>$\char`\"{}, ..., \char`\"{}$<$script\+N$>$\char`\"{} ] \}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & Path of the configuration\\
+\hline
+\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_afc2c0d0a24b9f6e4908bbac36d98954b}} 
+\index{metacall.h@{metacall.h}!metacallv@{metacallv}}
+\index{metacallv@{metacallv}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallv()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by value array @args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ad934b33c0c04c424d7080735d86a240c}} 
+\index{metacall.h@{metacall.h}!metacallv\_s@{metacallv\_s}}
+\index{metacallv\_s@{metacallv\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallv\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by value array @args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the call\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_abaa8b58b55e753ebcb2c6ca7221261fe}} 
+\index{metacall.h@{metacall.h}!metacallhv@{metacallhv}}
+\index{metacallhv@{metacallhv}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallhv()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallhv (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by handle @handle value array @args This function allows to avoid name collisions when calling functions by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle where the function belongs\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a0973f34ae8081817abbcc84e54b09fcc}} 
+\index{metacall.h@{metacall.h}!metacallhv\_s@{metacallhv\_s}}
+\index{metacallhv\_s@{metacallhv\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallhv\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallhv\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by handle @handle value array @args This function allows to avoid name collisions when calling functions by name Includes @size in order to allow variadic arguments or safe calls. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle where the function belongs\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the call\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a927b07b0d76019322c9a84a768333be7}} 
+\index{metacall.h@{metacall.h}!metacall@{metacall}}
+\index{metacall@{metacall}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by variable arguments @va\+\_\+args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em va\+\_\+args} & Varidic function parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a3d6052ad320dd2bb83d6c39d7bac3a1e}} 
+\index{metacall.h@{metacall.h}!metacallt@{metacallt}}
+\index{metacallt@{metacallt}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallt()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by type array @ids and variable arguments @va\+\_\+args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em ids} & Array of types refered to @va\+\_\+args\\
+\hline
+\mbox{\texttt{ in}}  & {\em va\+\_\+args} & Varidic function parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a93e003693bcf043424e5bd77255ef629}} 
+\index{metacall.h@{metacall.h}!metacallt\_s@{metacallt\_s}}
+\index{metacallt\_s@{metacallt\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallt\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by type array @ids and variable arguments @va\+\_\+args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em ids} & Array of types refered to @va\+\_\+args\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the call\\
+\hline
+\mbox{\texttt{ in}}  & {\em va\+\_\+args} & Varidic function parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a020d72d3ec5fac1ef707e57e356ef0ea}} 
+\index{metacall.h@{metacall.h}!metacallht\_s@{metacallht\_s}}
+\index{metacallht\_s@{metacallht\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallht\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallht\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by type array @ids and variable arguments @va\+\_\+args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Pointer to the handle returned by metacall\+\_\+load\+\_\+from\+\_\+\{file, memory, package\}\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em ids} & Array of types refered to @va\+\_\+args\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the call\\
+\hline
+\mbox{\texttt{ in}}  & {\em va\+\_\+args} & Varidic function parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a137dbf351f620ac5c1daebf1564f099b}} 
+\index{metacall.h@{metacall.h}!metacall\_function@{metacall\_function}}
+\index{metacall\_function@{metacall\_function}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_function()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+function (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_a0733570d83d6daf0e421e3e414547566}} 
+\index{metacall.h@{metacall.h}!metacall\_handle\_function@{metacall\_handle\_function}}
+\index{metacall\_handle\_function@{metacall\_handle\_function}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_handle\_function()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+handle\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_a26ff10520ec45fc6dc56e6b731f7cd98}} 
+\index{metacall.h@{metacall.h}!metacall\_function\_parameter\_type@{metacall\_function\_parameter\_type}}
+\index{metacall\_function\_parameter\_type@{metacall\_function\_parameter\_type}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_function\_parameter\_type()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+function\+\_\+parameter\+\_\+type (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{size\+\_\+t}]{parameter,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$}]{id }\end{DoxyParamCaption})}
+
+
+
+Get the function parameter type id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & The pointer to the function obtained from metacall\+\_\+function\\
+\hline
+\mbox{\texttt{ in}}  & {\em parameter} & The index of the parameter to be retrieved\\
+\hline
+\mbox{\texttt{ out}}  & {\em id} & The parameter type id that will be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if the @parameter index exists and @func is valid, 1 otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a391f6f382c453d8903889a910f59bf4c}} 
+\index{metacall.h@{metacall.h}!metacall\_function\_return\_type@{metacall\_function\_return\_type}}
+\index{metacall\_function\_return\_type@{metacall\_function\_return\_type}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_function\_return\_type()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+function\+\_\+return\+\_\+type (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$}]{id }\end{DoxyParamCaption})}
+
+
+
+Get the function return type id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & The pointer to the function obtained from metacall\+\_\+function\\
+\hline
+\mbox{\texttt{ out}}  & {\em id} & The value id of the return type of the function @func\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if the @func is valid, 1 otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ae41ffa4531b7819e7f0d1c580ef508c5}} 
+\index{metacall.h@{metacall.h}!metacall\_function\_size@{metacall\_function\_size}}
+\index{metacall\_function\_size@{metacall\_function\_size}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_function\_size()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t metacall\+\_\+function\+\_\+size (\begin{DoxyParamCaption}\item[{void $\ast$}]{func }\end{DoxyParamCaption})}
+
+
+
+Get minimun mumber of arguments accepted by function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Function reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return mumber of arguments 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a42f7b6d24d91f6aa2b1a1bf773a2be3b}} 
+\index{metacall.h@{metacall.h}!metacall\_function\_async@{metacall\_function\_async}}
+\index{metacall\_function\_async@{metacall\_function\_async}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_function\_async()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+function\+\_\+async (\begin{DoxyParamCaption}\item[{void $\ast$}]{func }\end{DoxyParamCaption})}
+
+
+
+Check if the function @func is asynchronous or synchronous. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Function reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if it is syncrhonous, 1 if it is asynchronous and -\/1 if the function is N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a579d699c4407cc27e94d216303f152aa}} 
+\index{metacall.h@{metacall.h}!metacall\_handle@{metacall\_handle}}
+\index{metacall\_handle@{metacall\_handle}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_handle()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+handle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_af1a1d52c74b30adba3e328eafb77cf3c}} 
+\index{metacall.h@{metacall.h}!metacall\_handle\_id@{metacall\_handle\_id}}
+\index{metacall\_handle\_id@{metacall\_handle\_id}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_handle\_id()}
+{\footnotesize\ttfamily const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+handle\+\_\+id (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Get name of a @handle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Pointer to the handle to be retrieved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String that references the handle 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ad69cc4988cf490c58d1c5d72ce7a3f95}} 
+\index{metacall.h@{metacall.h}!metacall\_handle\_export@{metacall\_handle\_export}}
+\index{metacall\_handle\_export@{metacall\_handle\_export}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_handle\_export()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+handle\+\_\+export (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Return a value representing the handle as a map of functions (or values) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Reference to the handle to be described\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of type map on success, null otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a7029ce54bb2a8fb4516415e42d6d986b}} 
+\index{metacall.h@{metacall.h}!metacallfv@{metacallfv}}
+\index{metacallfv@{metacallfv}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfv()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by value array @args and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_afcaf2d96cbe7e899e9f5450be7d7d1c4}} 
+\index{metacall.h@{metacall.h}!metacallfv\_s@{metacallfv\_s}}
+\index{metacallfv\_s@{metacallfv\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfv\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by value array @args and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of function arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ae523e9a658d5ea11bde72660df84df95}} 
+\index{metacall.h@{metacall.h}!metacallf@{metacallf}}
+\index{metacallf@{metacallf}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallf()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallf (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by variable arguments @va\+\_\+args and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a6de5e0d836963404a27918bfade98cad}} 
+\index{metacall.h@{metacall.h}!metacallfs@{metacallfs}}
+\index{metacallfs@{metacallfs}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfs()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfs (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by function @func and serial @buffer of size @size. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & String representing an array to be deserialized into arguments of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of string @buffer\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ac1ecf16f1985cecee777d9e84c70d79a}} 
+\index{metacall.h@{metacall.h}!metacallfmv@{metacallfmv}}
+\index{metacallfmv@{metacallfmv}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfmv()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfmv (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$] }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by value map (@keys -\/$>$ @values) and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em keys} & Array of values representing argument keys\\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Array of values representing argument values data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ae381876c35f6b194c96c19a9b808e313}} 
+\index{metacall.h@{metacall.h}!metacallfms@{metacallfms}}
+\index{metacallfms@{metacallfms}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfms()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfms (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Call a function anonymously by function @func and serial @buffer of size @size. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & String representing a map to be deserialized into arguments of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of string @buffer\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a810ca74b8efef842df8ea7baf2b87e67}} 
+\index{metacall.h@{metacall.h}!metacall\_register@{metacall\_register}}
+\index{metacall\_register@{metacall\_register}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_register()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+register (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{void $\ast$$\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_ae0f575287847cd57f5a549b2b211db1d}} 
+\index{metacall.h@{metacall.h}!metacall\_registerv@{metacall\_registerv}}
+\index{metacall\_registerv@{metacall\_registerv}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_registerv()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+registerv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{void $\ast$$\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{types[$\,$] }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_a52ef2927638d958c6e76555fc49a765b}} 
+\index{metacall.h@{metacall.h}!metacall\_await@{metacall\_await}}
+\index{metacall\_await@{metacall\_await}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_await()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+await (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Executes an asynchronous call to the function and registers a callback to be executed when a future is resolved (it does block) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & The name of the function to be called asynchronously\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to the values to be passed to the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a5f24de215645b2728c80e20685cb5525}} 
+\index{metacall.h@{metacall.h}!metacall\_await\_future@{metacall\_await\_future}}
+\index{metacall\_await\_future@{metacall\_await\_future}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_await\_future()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+await\+\_\+future (\begin{DoxyParamCaption}\item[{void $\ast$}]{f,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Awaits for a promise and registers a callback to be executed when a future is resolved. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & The pointer to the future\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a698f9b1a031af836302d2634e3194f75}} 
+\index{metacall.h@{metacall.h}!metacall\_await\_s@{metacall\_await\_s}}
+\index{metacall\_await\_s@{metacall\_await\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_await\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Executes an asynchronous call to the function and registers a callback to be executed when a future is resolved (it does block) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & The name of the function to be called asynchronously\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to the values to be passed to the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the array @args\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a4aae2677499d7bc7992840e90d754d83}} 
+\index{metacall.h@{metacall.h}!metacallfv\_await@{metacallfv\_await}}
+\index{metacallfv\_await@{metacallfv\_await}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfv\_await()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Call an asynchronous function anonymously by value array @args and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to values\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a9c5ead1f1aa559e58a65f69ae51972cb}} 
+\index{metacall.h@{metacall.h}!metacallfv\_await\_s@{metacallfv\_await\_s}}
+\index{metacallfv\_await\_s@{metacallfv\_await\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfv\_await\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Call an asynchronous function anonymously by value array @args and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to values\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the array @args\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a806b1dda95f596de33a9527123fed8e4}} 
+\index{metacall.h@{metacall.h}!metacallfmv\_await@{metacallfmv\_await}}
+\index{metacallfmv\_await@{metacallfmv\_await}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfmv\_await()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfmv\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Call an asynchronous function anonymously by value map (@keys -\/$>$ @values) and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em keys} & Array of values representing argument keys\\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Array of values representing argument values data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the arrays @keys and @values\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a4c8d0fa0f6b7c3607bd92524a11f3c5c}} 
+\index{metacall.h@{metacall.h}!metacallfmv\_await\_s@{metacallfmv\_await\_s}}
+\index{metacallfmv\_await\_s@{metacallfmv\_await\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfmv\_await\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfmv\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Call an asynchronous function anonymously by value map (@keys -\/$>$ @values) and function @func. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em keys} & Array of values representing argument keys\\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Array of values representing argument values data\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_addd2e38b4966b41bc2473c172d52147d}} 
+\index{metacall.h@{metacall.h}!metacallfs\_await@{metacallfs\_await}}
+\index{metacallfs\_await@{metacallfs\_await}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfs\_await()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfs\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Call an asynchronous function anonymously by function @func and serial @buffer of size @size. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & String representing an array to be deserialized into arguments of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of string @buffer\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a6111e7af53fb3dcf04018aa7a06b01e3}} 
+\index{metacall.h@{metacall.h}!metacallfms\_await@{metacallfms\_await}}
+\index{metacallfms\_await@{metacallfms\_await}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfms\_await()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfms\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Call an asynchronous function anonymously by function @func and serial @buffer of size @size. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & String representing a map to be deserialized into arguments of the function\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of string @buffer\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em resolve\+\_\+callback} & Pointer to function that will be executed when task completion \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ Value representing the result of the future resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em void} & $\ast$ A reference to @data that will be used as a closure for the chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value containing the result of the operation, it will be wrapped into a future later on to be returned by the function
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em reject\+\_\+callback} & Pointer to function that will be executed when task error (signature is identical as resolve\+\_\+callback)\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a62422ba9010c261547585dc014f5f71f}} 
+\index{metacall.h@{metacall.h}!metacall\_class@{metacall\_class}}
+\index{metacall\_class@{metacall\_class}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_class()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_a9a59bb8134aa3243a995d871262f5085}} 
+\index{metacall.h@{metacall.h}!metacallv\_class@{metacallv\_class}}
+\index{metacallv\_class@{metacallv\_class}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallv\_class()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
+
+
+
+Call a class method anonymously by value array @args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the method\\
+\hline
+\mbox{\texttt{ in}}  & {\em cls} & Pointer to the class\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of args array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a3fb7a043355dd7fd9974cea54ff93814}} 
+\index{metacall.h@{metacall.h}!metacall\_class\_new@{metacall\_class\_new}}
+\index{metacall\_class\_new@{metacall\_class\_new}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_class\_new()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class\+\_\+new (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
+
+
+
+Create a new object instance from @cls by value array @args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cls} & Pointer to the class\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the new object\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers constructor parameters\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of constructor parameters\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the new object value instance 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a70337e2f826dab637d640337404831cf}} 
+\index{metacall.h@{metacall.h}!metacall\_class\_static\_get@{metacall\_class\_static\_get}}
+\index{metacall\_class\_static\_get@{metacall\_class\_static\_get}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_class\_static\_get()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class\+\_\+static\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Get an attribute from @cls by @key name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cls} & Pointer to the class\\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Name of the attribute to get\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the class attribute value or N\+U\+LL if an error occurred 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ad69032d3eec3834b36d907141f32332a}} 
+\index{metacall.h@{metacall.h}!metacall\_class\_static\_set@{metacall\_class\_static\_set}}
+\index{metacall\_class\_static\_set@{metacall\_class\_static\_set}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_class\_static\_set()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+class\+\_\+static\+\_\+set (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{key,  }\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Set an attribute to @cls by @key name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cls} & Pointer to the class\\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Name of the attribute to set\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero integer if an error ocurred 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a84679047389d04a406f1e3a91fa00e1d}} 
+\index{metacall.h@{metacall.h}!metacallv\_object@{metacallv\_object}}
+\index{metacallv\_object@{metacallv\_object}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallv\_object()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
+
+
+
+Call an object method anonymously by value array @args. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & Pointer to the object\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the method\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of args array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_abf765af19df6abca9ef981ed56db6b92}} 
+\index{metacall.h@{metacall.h}!metacall\_object\_get@{metacall\_object\_get}}
+\index{metacall\_object\_get@{metacall\_object\_get}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_object\_get()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+object\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Get an attribute from @obj by @key name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & Pointer to the object\\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Name of the attribute to get\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the object attribute value or N\+U\+LL if an error occurred 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a567cbdd3c398e4bcfab8e07ff76de06b}} 
+\index{metacall.h@{metacall.h}!metacall\_object\_set@{metacall\_object\_set}}
+\index{metacall\_object\_set@{metacall\_object\_set}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_object\_set()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+object\+\_\+set (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{key,  }\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Set an attribute to @obj by @key name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & Pointer to the object\\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & Name of the attribute to set\\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & Value to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero integer if an error ocurred 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ab9d6a8fa4d186f14741ef15015798eb0}} 
+\index{metacall.h@{metacall.h}!metacall\_inspect@{metacall\_inspect}}
+\index{metacall\_inspect@{metacall\_inspect}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_inspect()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+inspect (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Provide information about all loaded objects. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em size} & Size in bytes of return buffer\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String containing introspection information 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_acdcbeeeafdc83e9b69937265a0da53c3}} 
+\index{metacall.h@{metacall.h}!metacall\_serialize@{metacall\_serialize}}
+\index{metacall\_serialize@{metacall\_serialize}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_serialize()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+serialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{v,  }\item[{size\+\_\+t $\ast$}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Convert the value @v to serialized string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the serial to be used\\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ out}}  & {\em size} & Size of new allocated string\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New allocated string containing stringified value 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a0d45c99a4491e8bbad9d66aa8e719e54}} 
+\index{metacall.h@{metacall.h}!metacall\_deserialize@{metacall\_deserialize}}
+\index{metacall\_deserialize@{metacall\_deserialize}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_deserialize()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+deserialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+
+
+
+Convert the string @buffer to value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the serial to be used\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & String to be deserialized\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size of string @buffer\\
+\hline
+\mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New allocated value representing the string (must be freed) 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ae1f35c9c5cd2b375e8fb00b9d8c5890c}} 
+\index{metacall.h@{metacall.h}!metacall\_clear@{metacall\_clear}}
+\index{metacall\_clear@{metacall\_clear}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_clear()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+clear (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+
+
+Clear handle from memory and unload related resources. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Reference to the handle to be unloaded\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_aca8745a9f261bc3d37ee9156b991296f}} 
+\index{metacall.h@{metacall.h}!metacall\_destroy@{metacall\_destroy}}
+\index{metacall\_destroy@{metacall\_destroy}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_destroy()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destroy Meta\+Call library. 
+
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a1e8b06591a5564cfa4f1209e84ad5e78}} 
+\index{metacall.h@{metacall.h}!metacall\_print\_info@{metacall\_print\_info}}
+\index{metacall\_print\_info@{metacall\_print\_info}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_print\_info()}
+{\footnotesize\ttfamily const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module information. 
+
+\begin{DoxyReturn}{Returns}
+Static string containing module information 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{metacall_8h_ad50602b5115964e06b18483807ba1e11}} 
+\index{metacall.h@{metacall.h}!metacall\_null\_args@{metacall\_null\_args}}
+\index{metacall\_null\_args@{metacall\_null\_args}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_null\_args}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+null\+\_\+args[1]}
+

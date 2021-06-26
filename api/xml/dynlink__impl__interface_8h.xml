@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dynlink__impl__interface_8h" kind="file" language="C++">
+    <compoundname>dynlink_impl_interface.h</compoundname>
+    <includes local="no">dynlink/dynlink_api.h</includes>
+    <includes refid="dynlink__impl_8h" local="no">dynlink/dynlink_impl.h</includes>
+    <includes local="no">dynlink/dynlink_interface.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>dynlink_impl_interface.h</label>
+        <link refid="dynlink__impl__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dynlink/dynlink_impl_type.h</label>
+        <link refid="dynlink__impl__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>dynlink/dynlink_interface.h</label>
+      </node>
+      <node id="3">
+        <label>dynlink/dynlink_impl.h</label>
+        <link refid="dynlink__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dynlink/dynlink_api.h</label>
+      </node>
+      <node id="4">
+        <label>dynlink/dynlink_type.h</label>
+        <link refid="dynlink__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dynlink/dynlink_impl_name.h</label>
+        <link refid="dynlink__impl__name_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structdynlink__impl__interface__type" prot="public">dynlink_impl_interface_type</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dynlink__impl__interface_8h_1a22af984583c224b4b5996c7ad6f94fa7" prot="public" static="no" mutable="no">
+        <type>const typedef char *(*</type>
+        <definition>const typedef char*(* dynlink_impl_interface_extension) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>dynlink_impl_interface_extension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="37" column="15" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dynlink__impl__interface_8h_1a830e6cbd1f246ffc55445c07b4bf3c75" prot="public" static="no">
+        <type><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref>(*</type>
+        <definition>typedef dynlink_impl(* dynlink_impl_interface_load) (dynlink)</definition>
+        <argsstring>)(dynlink)</argsstring>
+        <name>dynlink_impl_interface_load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="38" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dynlink__impl__interface_8h_1a4c684797f95e6c2a751c6ee315dee6c4" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* dynlink_impl_interface_symbol) (dynlink, dynlink_impl, dynlink_symbol_name, dynlink_symbol_addr *)</definition>
+        <argsstring>)(dynlink, dynlink_impl, dynlink_symbol_name, dynlink_symbol_addr *)</argsstring>
+        <name>dynlink_impl_interface_symbol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="39" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dynlink__impl__interface_8h_1ac3977092576cd5ab38b0663726f6a4b8" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* dynlink_impl_interface_unload) (dynlink, dynlink_impl)</definition>
+        <argsstring>)(dynlink, dynlink_impl)</argsstring>
+        <name>dynlink_impl_interface_unload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="40" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dynlink__impl__interface_8h_1a27a0f612bbb437ee29ad3df129dbf298" prot="public" static="no">
+        <type>dynlink_impl_interface(*</type>
+        <definition>typedef dynlink_impl_interface(* dynlink_impl_interface_singleton) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>dynlink_impl_interface_singleton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" line="51" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Dynamic<sp/>Link<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>dynamic<sp/>loading<sp/>and<sp/>linking<sp/>shared<sp/>objects<sp/>at<sp/>run-time.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DYNLINK_IMPL_INTERFACE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_IMPL_INTERFACE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__impl_8h" kindref="compound">dynlink/dynlink_impl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_interface.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="dynlink__impl__interface_8h_1a22af984583c224b4b5996c7ad6f94fa7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*(*dynlink_impl_interface_extension)(void);</highlight></codeline>
+<codeline lineno="38" refid="dynlink__impl__interface_8h_1a830e6cbd1f246ffc55445c07b4bf3c75" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref><sp/>(*<ref refid="dynlink__impl__interface_8h_1a830e6cbd1f246ffc55445c07b4bf3c75" kindref="member">dynlink_impl_interface_load</ref>)(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref>);</highlight></codeline>
+<codeline lineno="39" refid="dynlink__impl__interface_8h_1a4c684797f95e6c2a751c6ee315dee6c4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="dynlink__impl__interface_8h_1a4c684797f95e6c2a751c6ee315dee6c4" kindref="member">dynlink_impl_interface_symbol</ref>)(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref>,<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref>,<sp/><ref refid="dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41" kindref="member">dynlink_symbol_name</ref>,<sp/><ref refid="dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf" kindref="member">dynlink_symbol_addr</ref><sp/>*);</highlight></codeline>
+<codeline lineno="40" refid="dynlink__impl__interface_8h_1ac3977092576cd5ab38b0663726f6a4b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="dynlink__impl__interface_8h_1ac3977092576cd5ab38b0663726f6a4b8" kindref="member">dynlink_impl_interface_unload</ref>)(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref>,<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structdynlink__impl__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdynlink__impl__interface__type" kindref="compound">dynlink_impl_interface_type</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44" refid="structdynlink__impl__interface__type_1ac46a0c862aae9427569633c6398f92f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynlink__impl__interface_8h_1a22af984583c224b4b5996c7ad6f94fa7" kindref="member">dynlink_impl_interface_extension</ref><sp/><ref refid="structdynlink__impl__interface__type_1ac46a0c862aae9427569633c6398f92f4" kindref="member">extension</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structdynlink__impl__interface__type_1a698d01a172ce9891cb59afb9ec5fda67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynlink__impl__interface_8h_1a830e6cbd1f246ffc55445c07b4bf3c75" kindref="member">dynlink_impl_interface_load</ref><sp/><ref refid="structdynlink__impl__interface__type_1a698d01a172ce9891cb59afb9ec5fda67" kindref="member">load</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structdynlink__impl__interface__type_1a7f826d29ec293c69985e86b34066d742" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynlink__impl__interface_8h_1a4c684797f95e6c2a751c6ee315dee6c4" kindref="member">dynlink_impl_interface_symbol</ref><sp/><ref refid="structdynlink__impl__interface__type_1a7f826d29ec293c69985e86b34066d742" kindref="member">symbol</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structdynlink__impl__interface__type_1afa6b8f501ce50e73db4279b87bd6de25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dynlink__impl__interface_8h_1ac3977092576cd5ab38b0663726f6a4b8" kindref="member">dynlink_impl_interface_unload</ref><sp/><ref refid="structdynlink__impl__interface__type_1afa6b8f501ce50e73db4279b87bd6de25" kindref="member">unload</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/>*<sp/>dynlink_impl_interface;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="dynlink__impl__interface_8h_1a27a0f612bbb437ee29ad3df129dbf298" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>dynlink_impl_interface<sp/>(*<ref refid="dynlink__impl__interface_8h_1a27a0f612bbb437ee29ad3df129dbf298" kindref="member">dynlink_impl_interface_singleton</ref>)(void);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DYNLINK_IMPL_INTERFACE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_interface.h"/>
+  </compounddef>
+</doxygen>

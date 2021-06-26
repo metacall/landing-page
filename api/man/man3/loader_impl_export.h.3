@@ -1,0 +1,73 @@
+.TH "loader_impl_export.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loader_impl_export.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <loader/loader_impl_descriptor\&.h>\fP
+.br
+\fC#include <loader/loader_impl_interface\&.h>\fP
+.br
+\fC#include <loader/loader_impl_print\&.h>\fP
+.br
+\fC#include <dynlink/dynlink\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBloader_impl_export\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOADER_IMPL_EXPORT_TAG\fP   __loader_impl_export_tag"
+.br
+.ti -1c
+.RI "#define \fBLOADER_IMPL_EXPORT_INTERFACE\fP(api)"
+.br
+.ti -1c
+.RI "#define \fBLOADER_IMPL_EXPORT\fP(export_singleton)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef loader_impl_export(* \fBloader_impl_export_singleton\fP) (void)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOADER_IMPL_EXPORT_TAG   __loader_impl_export_tag"
+
+.SS "#define LOADER_IMPL_EXPORT_INTERFACE(api)"
+\fBValue:\fP
+.PP
+.nf
+  api loader_impl_export LOADER_IMPL_EXPORT_TAG(void); \
+    DYNLINK_SYMBOL_EXPORT(LOADER_IMPL_EXPORT_TAG)
+.fi
+.SS "#define LOADER_IMPL_EXPORT(export_singleton)"
+\fBValue:\fP
+.PP
+.nf
+    loader_impl_export LOADER_IMPL_EXPORT_TAG()      \
+    {                                                \
+        loader_impl_export exp = export_singleton(); \
+                                                     \
+        return exp;                                  \
+    }
+.fi
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef loader_impl_export(* loader_impl_export_singleton) (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_loader_8h">
+<title>loader.h File Reference</title>
+<indexterm><primary>loader.h</primary></indexterm>
+<programlisting>#include &lt;loader/loader_api.h&gt;
+#include &lt;loader/loader_impl.h&gt;
+#include &lt;loader/loader_impl_interface.h&gt;
+#include &lt;loader/loader_naming.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for loader.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="loader_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_loader_8h_1a0c56e5ef778aefaa4587573667a35945">loader_register_invoke</link>) (size_t, void *[], void *)</para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_loader_8h_1a23baef561ce24e04bc23d02fa16656a6">loader_data</link></para>
+</listitem>
+            <listitem><para>typedef struct loader_type * <link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOADER_API <link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link> <link linkend="_loader_8h_1a93d450b68df4ddb9aa57383b6930839c">loader_singleton</link> (void)</para>
+</listitem>
+            <listitem><para>LOADER_API void <link linkend="_loader_8h_1a7c6926c94ce1b9a7edd78931f081dd5b">loader_initialization_register</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
+</listitem>
+            <listitem><para>LOADER_API void <link linkend="_loader_8h_1a295fe19eb38401793c7feaa24160f223">loader_initialize</link> (void)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1a7ed3017240e5db05e1323fa97b3da2d1">loader_is_initialized</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1a42860cc3bb2c50fac1424579e158a83b">loader_register</link> (const char *name, <link linkend="_loader_8h_1a0c56e5ef778aefaa4587573667a35945">loader_register_invoke</link> invoke, <link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> *func, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> return_type, size_t arg_size, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args_type_id[])</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1a647d1eec2ce01f45485d35cd69c6eac6">loader_load_path</link> (const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1a4739ee3ed07e62a6410379b9fed2a7f1">loader_execution_path</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1a25d7854cec594b64371f17ea60711c77">loader_load_from_file</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> paths[], size_t size, void **handle)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1ac36c522839c545113037a64ce69feedf">loader_load_from_memory</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const char *buffer, size_t size, void **handle)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1aba20f1b7bf897e6531a7580fadf66a72">loader_load_from_package</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path, void **handle)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1a16d3a4792b9f55b4a22bf662832c8e03">loader_load_from_configuration</link> (const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path, void **handle, void *allocator)</para>
+</listitem>
+            <listitem><para>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> <link linkend="_loader_8h_1a2f50c4778d1534eace279c7b182e2dc3">loader_get_impl</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</para>
+</listitem>
+            <listitem><para>LOADER_API <link linkend="_loader_8h_1a23baef561ce24e04bc23d02fa16656a6">loader_data</link> <link linkend="_loader_8h_1ae325c8a6eb9cc688d3f8b995fe5eeef1">loader_get</link> (const char *name)</para>
+</listitem>
+            <listitem><para>LOADER_API void * <link linkend="_loader_8h_1a7ebee7a40e35b8286d9bfcaa4eaaf08c">loader_get_handle</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const char *name)</para>
+</listitem>
+            <listitem><para>LOADER_API void <link linkend="_loader_8h_1aff80b88574c4ecd9bd5bcb4b549c1059">loader_set_options</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, void *options)</para>
+</listitem>
+            <listitem><para>LOADER_API void * <link linkend="_loader_8h_1a057eb44bd3132e88416f1a90e4b7b5b2">loader_get_options</link> (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</para>
+</listitem>
+            <listitem><para>const LOADER_API char * <link linkend="_loader_8h_1a4bad4c3d55fc7534694b049194bbcd90">loader_handle_id</link> (void *handle)</para>
+</listitem>
+            <listitem><para>LOADER_API void * <link linkend="_loader_8h_1a3dd119a750e2f56d2198270bb29ec0ff">loader_handle_export</link> (void *handle)</para>
+</listitem>
+            <listitem><para>LOADER_API <link linkend="_loader_8h_1a23baef561ce24e04bc23d02fa16656a6">loader_data</link> <link linkend="_loader_8h_1a945db9c2048ac8d35c9b9e9d028c83de">loader_handle_get</link> (void *handle, const char *name)</para>
+</listitem>
+            <listitem><para>LOADER_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_loader_8h_1af0267882166a3ab6e011e9e9c4c8826a">loader_metadata</link> (void)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1a50281bf1571a363c0b9b198c4e3e3a6e">loader_clear</link> (void *handle)</para>
+</listitem>
+            <listitem><para>LOADER_API void <link linkend="_loader_8h_1aae52d09e532fd966f933d4573ee97fbf">loader_unload_children</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader_8h_1ac4f17dddef9935d0b1b727271f5e2308">loader_unload</link> (void)</para>
+</listitem>
+            <listitem><para>LOADER_API void <link linkend="_loader_8h_1a34fe0f770a93b0213274d076ed655216">loader_destroy</link> (void)</para>
+</listitem>
+            <listitem><para>const LOADER_API char * <link linkend="_loader_8h_1a5e4b95a22a0fc84007b5ab97e3a8efdb">loader_print_info</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_loader_8h_1a0c56e5ef778aefaa4587573667a35945"/>    <section>
+    <title>loader_register_invoke</title>
+<indexterm><primary>loader_register_invoke</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_register_invoke</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* loader_register_invoke) (size_t, void *[], void *)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a23baef561ce24e04bc23d02fa16656a6"/>    <section>
+    <title>loader_data</title>
+<indexterm><primary>loader_data</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_data</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_loader_8h_1a23baef561ce24e04bc23d02fa16656a6">loader_data</link></computeroutput></para>    </section><anchor xml:id="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5"/>    <section>
+    <title>loader</title>
+<indexterm><primary>loader</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader</secondary></indexterm>
+<para><computeroutput>typedef struct loader_type* <link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_loader_8h_1a93d450b68df4ddb9aa57383b6930839c"/>    <section>
+    <title>loader_singleton()</title>
+<indexterm><primary>loader_singleton</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_singleton</secondary></indexterm>
+<para><computeroutput>LOADER_API <link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link> loader_singleton (void )</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a7c6926c94ce1b9a7edd78931f081dd5b"/>    <section>
+    <title>loader_initialization_register()</title>
+<indexterm><primary>loader_initialization_register</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_initialization_register</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_initialization_register (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a295fe19eb38401793c7feaa24160f223"/>    <section>
+    <title>loader_initialize()</title>
+<indexterm><primary>loader_initialize</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_initialize</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_initialize (void )</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a7ed3017240e5db05e1323fa97b3da2d1"/>    <section>
+    <title>loader_is_initialized()</title>
+<indexterm><primary>loader_is_initialized</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_is_initialized</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_is_initialized (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a42860cc3bb2c50fac1424579e158a83b"/>    <section>
+    <title>loader_register()</title>
+<indexterm><primary>loader_register</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_register</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_register (const char * name, <link linkend="_loader_8h_1a0c56e5ef778aefaa4587573667a35945">loader_register_invoke</link> invoke, <link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> * func, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> return_type, size_t arg_size, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args_type_id[])</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a647d1eec2ce01f45485d35cd69c6eac6"/>    <section>
+    <title>loader_load_path()</title>
+<indexterm><primary>loader_load_path</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_load_path</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_load_path (const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a4739ee3ed07e62a6410379b9fed2a7f1"/>    <section>
+    <title>loader_execution_path()</title>
+<indexterm><primary>loader_execution_path</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_execution_path</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_execution_path (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a25d7854cec594b64371f17ea60711c77"/>    <section>
+    <title>loader_load_from_file()</title>
+<indexterm><primary>loader_load_from_file</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_load_from_file</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_load_from_file (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> paths[], size_t size, void ** handle)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1ac36c522839c545113037a64ce69feedf"/>    <section>
+    <title>loader_load_from_memory()</title>
+<indexterm><primary>loader_load_from_memory</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_load_from_memory</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_load_from_memory (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const char * buffer, size_t size, void ** handle)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1aba20f1b7bf897e6531a7580fadf66a72"/>    <section>
+    <title>loader_load_from_package()</title>
+<indexterm><primary>loader_load_from_package</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_load_from_package</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_load_from_package (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path, void ** handle)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a16d3a4792b9f55b4a22bf662832c8e03"/>    <section>
+    <title>loader_load_from_configuration()</title>
+<indexterm><primary>loader_load_from_configuration</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_load_from_configuration</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_load_from_configuration (const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path, void ** handle, void * allocator)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a2f50c4778d1534eace279c7b182e2dc3"/>    <section>
+    <title>loader_get_impl()</title>
+<indexterm><primary>loader_get_impl</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_get_impl</secondary></indexterm>
+<para><computeroutput>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> loader_get_impl (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1ae325c8a6eb9cc688d3f8b995fe5eeef1"/>    <section>
+    <title>loader_get()</title>
+<indexterm><primary>loader_get</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_get</secondary></indexterm>
+<para><computeroutput>LOADER_API <link linkend="_loader_8h_1a23baef561ce24e04bc23d02fa16656a6">loader_data</link> loader_get (const char * name)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a7ebee7a40e35b8286d9bfcaa4eaaf08c"/>    <section>
+    <title>loader_get_handle()</title>
+<indexterm><primary>loader_get_handle</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_get_handle</secondary></indexterm>
+<para><computeroutput>LOADER_API void* loader_get_handle (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, const char * name)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1aff80b88574c4ecd9bd5bcb4b549c1059"/>    <section>
+    <title>loader_set_options()</title>
+<indexterm><primary>loader_set_options</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_set_options</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_set_options (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag, void * options)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a057eb44bd3132e88416f1a90e4b7b5b2"/>    <section>
+    <title>loader_get_options()</title>
+<indexterm><primary>loader_get_options</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_get_options</secondary></indexterm>
+<para><computeroutput>LOADER_API void* loader_get_options (const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a4bad4c3d55fc7534694b049194bbcd90"/>    <section>
+    <title>loader_handle_id()</title>
+<indexterm><primary>loader_handle_id</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_handle_id</secondary></indexterm>
+<para><computeroutput>const LOADER_API char* loader_handle_id (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a3dd119a750e2f56d2198270bb29ec0ff"/>    <section>
+    <title>loader_handle_export()</title>
+<indexterm><primary>loader_handle_export</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_handle_export</secondary></indexterm>
+<para><computeroutput>LOADER_API void* loader_handle_export (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a945db9c2048ac8d35c9b9e9d028c83de"/>    <section>
+    <title>loader_handle_get()</title>
+<indexterm><primary>loader_handle_get</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_handle_get</secondary></indexterm>
+<para><computeroutput>LOADER_API <link linkend="_loader_8h_1a23baef561ce24e04bc23d02fa16656a6">loader_data</link> loader_handle_get (void * handle, const char * name)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1af0267882166a3ab6e011e9e9c4c8826a"/>    <section>
+    <title>loader_metadata()</title>
+<indexterm><primary>loader_metadata</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_metadata</secondary></indexterm>
+<para><computeroutput>LOADER_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> loader_metadata (void )</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a50281bf1571a363c0b9b198c4e3e3a6e"/>    <section>
+    <title>loader_clear()</title>
+<indexterm><primary>loader_clear</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_clear</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_clear (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1aae52d09e532fd966f933d4573ee97fbf"/>    <section>
+    <title>loader_unload_children()</title>
+<indexterm><primary>loader_unload_children</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_unload_children</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_unload_children (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader_8h_1ac4f17dddef9935d0b1b727271f5e2308"/>    <section>
+    <title>loader_unload()</title>
+<indexterm><primary>loader_unload</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_unload</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_unload (void )</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a34fe0f770a93b0213274d076ed655216"/>    <section>
+    <title>loader_destroy()</title>
+<indexterm><primary>loader_destroy</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_destroy</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_destroy (void )</computeroutput></para>    </section><anchor xml:id="_loader_8h_1a5e4b95a22a0fc84007b5ab97e3a8efdb"/>    <section>
+    <title>loader_print_info()</title>
+<indexterm><primary>loader_print_info</primary><secondary>loader.h</secondary></indexterm>
+<indexterm><primary>loader.h</primary><secondary>loader_print_info</secondary></indexterm>
+<para><computeroutput>const LOADER_API char* loader_print_info (void )</computeroutput></para></section>
+</section>
+</section>

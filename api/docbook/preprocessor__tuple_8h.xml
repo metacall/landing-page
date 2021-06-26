@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_preprocessor__tuple_8h">
+<title>preprocessor_tuple.h File Reference</title>
+<indexterm><primary>preprocessor_tuple.h</primary></indexterm>
+<programlisting>#include &lt;preprocessor/preprocessor_api.h&gt;
+</programlisting>Include dependency graph for preprocessor_tuple.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__tuple_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="preprocessor__tuple_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_preprocessor__tuple_8h_1a5138dcf58655a270d76c6b5bc7bc7faf">PREPROCESSOR_TUPLE_EXPAND_MACRO</link>(macro, ...)   macro __VA_ARGS__</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5">PREPROCESSOR_TUPLE_EXPAND</link>(...)   <link linkend="_preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb">PREPROCESSOR_TUPLE_EXPAND_IMPL</link> __VA_ARGS__</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd">PREPROCESSOR_TUPLE_MAKE</link>(...)   (<link linkend="_preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb">PREPROCESSOR_TUPLE_EXPAND_IMPL</link>(__VA_ARGS__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb">PREPROCESSOR_TUPLE_EXPAND_IMPL</link>(...)   __VA_ARGS__</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__tuple_8h_1a1b917beb9180ed907c5059e80f4cad22">PREPROCESSOR_TUPLE_PREPEND</link>(expr,  tuple)   <link linkend="_preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd">PREPROCESSOR_TUPLE_MAKE</link>(expr, <link linkend="_preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5">PREPROCESSOR_TUPLE_EXPAND</link>(tuple))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_preprocessor__tuple_8h_1a43f977fd541dee44fba93bb8f1bfc6ed">PREPROCESSOR_TUPLE_APPEND</link>(expr,  tuple)   <link linkend="_preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd">PREPROCESSOR_TUPLE_MAKE</link>(<link linkend="_preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5">PREPROCESSOR_TUPLE_EXPAND</link>(tuple), expr)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_preprocessor__tuple_8h_1a5138dcf58655a270d76c6b5bc7bc7faf"/>    <section>
+    <title>PREPROCESSOR_TUPLE_EXPAND_MACRO</title>
+<indexterm><primary>PREPROCESSOR_TUPLE_EXPAND_MACRO</primary><secondary>preprocessor_tuple.h</secondary></indexterm>
+<indexterm><primary>preprocessor_tuple.h</primary><secondary>PREPROCESSOR_TUPLE_EXPAND_MACRO</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_TUPLE_EXPAND_MACRO( macro,  ...)   macro __VA_ARGS__</computeroutput></para>    </section><anchor xml:id="_preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5"/>    <section>
+    <title>PREPROCESSOR_TUPLE_EXPAND</title>
+<indexterm><primary>PREPROCESSOR_TUPLE_EXPAND</primary><secondary>preprocessor_tuple.h</secondary></indexterm>
+<indexterm><primary>preprocessor_tuple.h</primary><secondary>PREPROCESSOR_TUPLE_EXPAND</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_TUPLE_EXPAND( ...)   <link linkend="_preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb">PREPROCESSOR_TUPLE_EXPAND_IMPL</link> __VA_ARGS__</computeroutput></para>    </section><anchor xml:id="_preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd"/>    <section>
+    <title>PREPROCESSOR_TUPLE_MAKE</title>
+<indexterm><primary>PREPROCESSOR_TUPLE_MAKE</primary><secondary>preprocessor_tuple.h</secondary></indexterm>
+<indexterm><primary>preprocessor_tuple.h</primary><secondary>PREPROCESSOR_TUPLE_MAKE</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_TUPLE_MAKE( ...)   (<link linkend="_preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb">PREPROCESSOR_TUPLE_EXPAND_IMPL</link>(__VA_ARGS__))</computeroutput></para>    </section><anchor xml:id="_preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb"/>    <section>
+    <title>PREPROCESSOR_TUPLE_EXPAND_IMPL</title>
+<indexterm><primary>PREPROCESSOR_TUPLE_EXPAND_IMPL</primary><secondary>preprocessor_tuple.h</secondary></indexterm>
+<indexterm><primary>preprocessor_tuple.h</primary><secondary>PREPROCESSOR_TUPLE_EXPAND_IMPL</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_TUPLE_EXPAND_IMPL( ...)   __VA_ARGS__</computeroutput></para>    </section><anchor xml:id="_preprocessor__tuple_8h_1a1b917beb9180ed907c5059e80f4cad22"/>    <section>
+    <title>PREPROCESSOR_TUPLE_PREPEND</title>
+<indexterm><primary>PREPROCESSOR_TUPLE_PREPEND</primary><secondary>preprocessor_tuple.h</secondary></indexterm>
+<indexterm><primary>preprocessor_tuple.h</primary><secondary>PREPROCESSOR_TUPLE_PREPEND</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_TUPLE_PREPEND( expr,  tuple)   <link linkend="_preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd">PREPROCESSOR_TUPLE_MAKE</link>(expr, <link linkend="_preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5">PREPROCESSOR_TUPLE_EXPAND</link>(tuple))</computeroutput></para>    </section><anchor xml:id="_preprocessor__tuple_8h_1a43f977fd541dee44fba93bb8f1bfc6ed"/>    <section>
+    <title>PREPROCESSOR_TUPLE_APPEND</title>
+<indexterm><primary>PREPROCESSOR_TUPLE_APPEND</primary><secondary>preprocessor_tuple.h</secondary></indexterm>
+<indexterm><primary>preprocessor_tuple.h</primary><secondary>PREPROCESSOR_TUPLE_APPEND</secondary></indexterm>
+<para><computeroutput>#define PREPROCESSOR_TUPLE_APPEND( expr,  tuple)   <link linkend="_preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd">PREPROCESSOR_TUPLE_MAKE</link>(<link linkend="_preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5">PREPROCESSOR_TUPLE_EXPAND</link>(tuple), expr)</computeroutput></para></section>
+</section>
+</section>

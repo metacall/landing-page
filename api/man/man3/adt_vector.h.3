@@ -1,0 +1,742 @@
+.TH "adt_vector.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+adt_vector.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <adt/adt_api\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBvector_create_type\fP(\fBtype_name\fP)   \fBvector_create\fP(sizeof(\fBtype_name\fP))"
+.br
+.ti -1c
+.RI "#define \fBvector_create_reserve_type\fP(\fBtype_name\fP,  capacity)   \fBvector_create_reserve\fP(sizeof(\fBtype_name\fP), capacity)"
+.br
+.ti -1c
+.RI "#define \fBvector_front_type\fP(v,  \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_front\fP(v)))"
+.br
+.ti -1c
+.RI "#define \fBvector_back_type\fP(v,  \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_back\fP(v)))"
+.br
+.ti -1c
+.RI "#define \fBvector_at_type\fP(v,  position,  \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_at\fP(v, position)))"
+.br
+.ti -1c
+.RI "#define \fBvector_set_var\fP(v,  position,  variable)   \fBvector_set\fP(v, position, &variable)"
+.br
+.ti -1c
+.RI "#define \fBvector_push_back_var\fP(v,  variable)   \fBvector_push_back\fP(v, &variable)"
+.br
+.ti -1c
+.RI "#define \fBvector_push_front_var\fP(v,  variable)   \fBvector_push_front\fP(v, &variable)"
+.br
+.ti -1c
+.RI "#define \fBvector_insert_var\fP(v,  position,  variable)   \fBvector_insert\fP(v, position, &variable)"
+.br
+.ti -1c
+.RI "#define \fBvector_set_const\fP(v,  position,  constant,  \fBtype_name\fP)"
+.br
+.ti -1c
+.RI "#define \fBvector_push_back_const\fP(v,  constant,  \fBtype_name\fP)"
+.br
+.ti -1c
+.RI "#define \fBvector_push_front_const\fP(v,  constant,  \fBtype_name\fP)"
+.br
+.ti -1c
+.RI "#define \fBvector_insert_const\fP(v,  position,  constant,  \fBtype_name\fP)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct vector_type * \fBvector\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "ADT_API \fBvector\fP \fBvector_create\fP (size_t type_size)"
+.br
+.ti -1c
+.RI "ADT_API \fBvector\fP \fBvector_create_reserve\fP (size_t type_size, size_t capacity)"
+.br
+.ti -1c
+.RI "ADT_API \fBvector\fP \fBvector_copy\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API int \fBvector_reserve\fP (\fBvector\fP v, size_t capacity)"
+.br
+.ti -1c
+.RI "ADT_API int \fBvector_resize\fP (\fBvector\fP v, size_t size)"
+.br
+.ti -1c
+.RI "ADT_API size_t \fBvector_capacity\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API size_t \fBvector_size\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API size_t \fBvector_type_size\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void * \fBvector_front\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void * \fBvector_back\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void * \fBvector_at\fP (\fBvector\fP v, size_t position)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_set\fP (\fBvector\fP v, size_t position, void *element)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_push_back_empty\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_push_back\fP (\fBvector\fP v, void *element)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_pop_back\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_push_front_empty\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_push_front\fP (\fBvector\fP v, void *element)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_pop_front\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_insert_empty\fP (\fBvector\fP v, size_t position)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_insert\fP (\fBvector\fP v, size_t position, void *element)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_erase\fP (\fBvector\fP v, size_t position)"
+.br
+.ti -1c
+.RI "ADT_API int \fBvector_clear\fP (\fBvector\fP v)"
+.br
+.ti -1c
+.RI "ADT_API void \fBvector_destroy\fP (\fBvector\fP v)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define vector_create_type(\fBtype_name\fP)   \fBvector_create\fP(sizeof(\fBtype_name\fP))"
+
+.PP
+Create a vector in memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype_name\fP Type of each element of the vector
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the vector memory block 
+.RE
+.PP
+
+.SS "#define vector_create_reserve_type(\fBtype_name\fP, capacity)   \fBvector_create_reserve\fP(sizeof(\fBtype_name\fP), capacity)"
+
+.PP
+Create a vector with @capacity elements preallocated\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype_name\fP Type of each element of the vector
+.br
+\fIcapacity\fP Preallocated elements of the vector
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the vector memory block 
+.RE
+.PP
+
+.SS "#define vector_front_type(v, \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_front\fP(v)))"
+
+.PP
+Access to the first element in vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fItype_name\fP Type of element to be accessed
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the first element 
+.RE
+.PP
+
+.SS "#define vector_back_type(v, \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_back\fP(v)))"
+
+.PP
+Access to the last element in vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fItype_name\fP Type of element to be accessed
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the last element 
+.RE
+.PP
+
+.SS "#define vector_at_type(v, position, \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_at\fP(v, position)))"
+
+.PP
+Access to object at @position where: [0 <= @position <= vector_size(v) - 1 ]\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be accessed
+.br
+\fItype_name\fP Type of element to be accessed
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the element at @position 
+.RE
+.PP
+
+.SS "#define vector_set_var(v, position, variable)   \fBvector_set\fP(v, position, &variable)"
+
+.PP
+Sets a variable object at @position to the same object pointed by @element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be modified
+.br
+\fIvariable\fP Variable element to be modified
+.br
+\fItype_name\fP Type of element to be modified 
+.RE
+.PP
+
+.SS "#define vector_push_back_var(v, variable)   \fBvector_push_back\fP(v, &variable)"
+
+.PP
+Adds a variable object at the end of vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIvariable\fP Variable element to be inserted
+.br
+\fItype_name\fP Type of element to be inserted 
+.RE
+.PP
+
+.SS "#define vector_push_front_var(v, variable)   \fBvector_push_front\fP(v, &variable)"
+
+.PP
+Adds a variable object in first position of vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIvariable\fP Variable element to be inserted
+.br
+\fItype_name\fP Type of element to be inserted 
+.RE
+.PP
+
+.SS "#define vector_insert_var(v, position, variable)   \fBvector_insert\fP(v, position, &variable)"
+
+.PP
+Adds a variable object in @position where: [ 0 <= @position <= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be inserted
+.br
+\fIvariable\fP Variable element to be inserted
+.br
+\fItype_name\fP Type of element to be inserted 
+.RE
+.PP
+
+.SS "#define vector_set_const(v, position, constant, \fBtype_name\fP)"
+\fBValue:\fP
+.PP
+.nf
+   do                                                            \
+    {                                                             \
+        type_name macro_vector_type_const_to_var = constant;      \\
+                                                                  \\
+		vector_set(v, position, &macro_vector_type_const_to_var); \
+                                                                  \
+    } while (0)
+.fi
+.PP
+Sets a constant object at @position to the same object pointed by @element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be modified
+.br
+\fIconstant\fP Constant element to be modified
+.br
+\fItype_name\fP Type of element to be modified 
+.RE
+.PP
+
+.SS "#define vector_push_back_const(v, constant, \fBtype_name\fP)"
+\fBValue:\fP
+.PP
+.nf
+  do                                                        \
+    {                                                         \
+        type_name macro_vector_type_const_to_var = constant;  \\
+                                                              \\
+		vector_push_back(v, &macro_vector_type_const_to_var); \
+                                                              \
+    } while (0)
+.fi
+.PP
+Adds a constant object at the end of vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIconstant\fP Constant element to be inserted
+.br
+\fItype_name\fP Type of element to be inserted 
+.RE
+.PP
+
+.SS "#define vector_push_front_const(v, constant, \fBtype_name\fP)"
+\fBValue:\fP
+.PP
+.nf
+ do                                                         \
+    {                                                          \
+        type_name macro_vector_type_const_to_var = constant;   \\
+                                                               \\
+		vector_push_front(v, &macro_vector_type_const_to_var); \
+                                                               \
+    } while (0)
+.fi
+.PP
+Adds a constant object in first position of vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIconstant\fP Constant element to be inserted
+.br
+\fItype_name\fP Type of element to be inserted 
+.RE
+.PP
+
+.SS "#define vector_insert_const(v, position, constant, \fBtype_name\fP)"
+\fBValue:\fP
+.PP
+.nf
+   do                                                               \
+    {                                                                \
+        type_name macro_vector_type_const_to_var = constant;         \\
+                                                                     \\
+		vector_insert(v, position, &macro_vector_type_const_to_var); \
+                                                                     \
+    } while (0)
+.fi
+.PP
+Adds a constant object in @position where: [ 0 <= @position <= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be inserted
+.br
+\fIconstant\fP Constant element to be inserted
+.br
+\fItype_name\fP Type of element to be inserted 
+.RE
+.PP
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct vector_type* \fBvector\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "ADT_API \fBvector\fP vector_create (size_t type_size)"
+
+.PP
+Create a vector in memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype_size\fP Size of the element type vector will allocate
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the vector memory block 
+.RE
+.PP
+
+.SS "ADT_API \fBvector\fP vector_create_reserve (size_t type_size, size_t capacity)"
+
+.PP
+Create a vector with @capacity elements preallocated\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype_size\fP Size of the element type vector will allocate
+.br
+\fIcapacity\fP Preallocated elements of the vector
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the vector memory block 
+.RE
+.PP
+
+.SS "ADT_API \fBvector\fP vector_copy (\fBvector\fP v)"
+
+.PP
+Copy a vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Source vector to be copied
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to a vector memory block copy 
+.RE
+.PP
+
+.SS "ADT_API int vector_reserve (\fBvector\fP v, size_t capacity)"
+
+.PP
+Request a change in vector capacity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIcapacity\fP New capacity of vector
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Positive number on error, zero on success 
+.RE
+.PP
+
+.SS "ADT_API int vector_resize (\fBvector\fP v, size_t size)"
+
+.PP
+Resizes container so that it contains @size elements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIsize\fP New size of vector
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Positive number on error, zero on success 
+.RE
+.PP
+
+.SS "ADT_API size_t vector_capacity (\fBvector\fP v)"
+
+.PP
+Retreive amount of objects can be stored with current allocated memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Capacity of vector 
+.RE
+.PP
+
+.SS "ADT_API size_t vector_size (\fBvector\fP v)"
+
+.PP
+Retreive amount of current elements in vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Current elements in vector 
+.RE
+.PP
+
+.SS "ADT_API size_t vector_type_size (\fBvector\fP v)"
+
+.PP
+Retreive size of element type of vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Size of element type 
+.RE
+.PP
+
+.SS "ADT_API void* vector_front (\fBvector\fP v)"
+
+.PP
+Access to the first element in vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the first element 
+.RE
+.PP
+
+.SS "ADT_API void* vector_back (\fBvector\fP v)"
+
+.PP
+Access to the last element in vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the last element 
+.RE
+.PP
+
+.SS "ADT_API void* vector_at (\fBvector\fP v, size_t position)"
+
+.PP
+Access to object at @position where: [0 <= @position <= vector_size(v) - 1 ]\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be accessed
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the element at @position 
+.RE
+.PP
+
+.SS "ADT_API void vector_set (\fBvector\fP v, size_t position, void * element)"
+
+.PP
+Sets the object at @position to the same object pointed by @element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be modified
+.br
+\fIelement\fP Element to be copied at @position 
+.RE
+.PP
+
+.SS "ADT_API void vector_push_back_empty (\fBvector\fP v)"
+
+.PP
+Adds an object at the end of vector without initializing it, all objects be moved (increments allocated memory if neccessary; new element could contain garbage) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer 
+.RE
+.PP
+
+.SS "ADT_API void vector_push_back (\fBvector\fP v, void * element)"
+
+.PP
+Adds an object at the end of vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIelement\fP Element to be inserted 
+.RE
+.PP
+
+.SS "ADT_API void vector_pop_back (\fBvector\fP v)"
+
+.PP
+Deletes the last object in vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer 
+.RE
+.PP
+
+.SS "ADT_API void vector_push_front_empty (\fBvector\fP v)"
+
+.PP
+Adds an object in first position without initializing it, all objects be moved (increments allocated memory if neccessary; new element could contain garbage) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer 
+.RE
+.PP
+
+.SS "ADT_API void vector_push_front (\fBvector\fP v, void * element)"
+
+.PP
+Adds an object in first position of vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIelement\fP Element to be inserted 
+.RE
+.PP
+
+.SS "ADT_API void vector_pop_front (\fBvector\fP v)"
+
+.PP
+Deletes the first object in vector (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer 
+.RE
+.PP
+
+.SS "ADT_API void vector_insert_empty (\fBvector\fP v, size_t position)"
+
+.PP
+Adds an object in @position without initializing it where: [ 0 <= @position <= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary; new element could contain garbage) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be inserted 
+.RE
+.PP
+
+.SS "ADT_API void vector_insert (\fBvector\fP v, size_t position, void * element)"
+
+.PP
+Adds an object in @position where: [ 0 <= @position <= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be inserted
+.br
+\fIelement\fP Reference to the element to be inserted 
+.RE
+.PP
+
+.SS "ADT_API void vector_erase (\fBvector\fP v, size_t position)"
+
+.PP
+Deletes an object in @position (decrements allocated memory if neccessary) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.br
+\fIposition\fP Position of element to be erased 
+.RE
+.PP
+
+.SS "ADT_API int vector_clear (\fBvector\fP v)"
+
+.PP
+Clear internal data of the vector and set size to zero\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Positive number on error, zero on success 
+.RE
+.PP
+
+.SS "ADT_API void vector_destroy (\fBvector\fP v)"
+
+.PP
+Destroy a vector from memory (do not apply same operation twice over same object) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Vector pointer 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

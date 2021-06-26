@@ -1,0 +1,166 @@
+\doxysection{log\+\_\+map.\+h File Reference}
+\label{log__map_8h}\index{log\_map.h@{log\_map.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for log\+\_\+map.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{log__map_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+O\+G\+\_\+\+M\+A\+P\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE}~((size\+\_\+t)0x00000100)
+\item 
+\#define \textbf{ L\+O\+G\+\_\+\+M\+A\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}~((size\+\_\+t)0x00010000)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct log\+\_\+map\+\_\+type $\ast$ \textbf{ log\+\_\+map}
+\item 
+typedef struct log\+\_\+map\+\_\+iterator\+\_\+type $\ast$ \textbf{ log\+\_\+map\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+map} \textbf{ log\+\_\+map\+\_\+create} (size\+\_\+t size)
+\item 
+L\+O\+G\+\_\+\+A\+PI size\+\_\+t \textbf{ log\+\_\+map\+\_\+size} (\textbf{ log\+\_\+map} map)
+\item 
+L\+O\+G\+\_\+\+A\+PI size\+\_\+t \textbf{ log\+\_\+map\+\_\+collisions} (\textbf{ log\+\_\+map} map)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+map\+\_\+insert} (\textbf{ log\+\_\+map} map, const char $\ast$key, const void $\ast$\textbf{ value})
+\item 
+const L\+O\+G\+\_\+\+A\+PI void $\ast$ \textbf{ log\+\_\+map\+\_\+get} (\textbf{ log\+\_\+map} map, const char $\ast$key)
+\item 
+const L\+O\+G\+\_\+\+A\+PI void $\ast$ \textbf{ log\+\_\+map\+\_\+remove} (\textbf{ log\+\_\+map} map, const char $\ast$key)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+map\+\_\+clear} (\textbf{ log\+\_\+map} map)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+map\+\_\+destroy} (\textbf{ log\+\_\+map} map)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+map\+\_\+iterator} \textbf{ log\+\_\+map\+\_\+iterator\+\_\+begin} (\textbf{ log\+\_\+map} map)
+\item 
+const L\+O\+G\+\_\+\+A\+PI char $\ast$ \textbf{ log\+\_\+map\+\_\+iterator\+\_\+key} (\textbf{ log\+\_\+map\+\_\+iterator} iterator)
+\item 
+const L\+O\+G\+\_\+\+A\+PI void $\ast$ \textbf{ log\+\_\+map\+\_\+iterator\+\_\+value} (\textbf{ log\+\_\+map\+\_\+iterator} iterator)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+map\+\_\+iterator\+\_\+next} (\textbf{ log\+\_\+map\+\_\+iterator} iterator)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+map\+\_\+iterator\+\_\+end} (\textbf{ log\+\_\+map\+\_\+iterator} iterator)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{log__map_8h_a51f29049e60390011ba60759928b90d4}} 
+\index{log\_map.h@{log\_map.h}!LOG\_MAP\_MIN\_SIZE@{LOG\_MAP\_MIN\_SIZE}}
+\index{LOG\_MAP\_MIN\_SIZE@{LOG\_MAP\_MIN\_SIZE}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{LOG\_MAP\_MIN\_SIZE}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+M\+A\+P\+\_\+\+M\+I\+N\+\_\+\+S\+I\+ZE~((size\+\_\+t)0x00000100)}
+
+\mbox{\label{log__map_8h_a6c84d535201e393fc5aa12c832099a9a}} 
+\index{log\_map.h@{log\_map.h}!LOG\_MAP\_MAX\_SIZE@{LOG\_MAP\_MAX\_SIZE}}
+\index{LOG\_MAP\_MAX\_SIZE@{LOG\_MAP\_MAX\_SIZE}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{LOG\_MAP\_MAX\_SIZE}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+M\+A\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE~((size\+\_\+t)0x00010000)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{log__map_8h_a7b4ee73aca99f44b9191c6d2869cf6de}} 
+\index{log\_map.h@{log\_map.h}!log\_map@{log\_map}}
+\index{log\_map@{log\_map}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map}
+{\footnotesize\ttfamily typedef struct log\+\_\+map\+\_\+type$\ast$ \textbf{ log\+\_\+map}}
+
+\mbox{\label{log__map_8h_a5759f32622bbae31823849a72cb65278}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_iterator@{log\_map\_iterator}}
+\index{log\_map\_iterator@{log\_map\_iterator}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_iterator}
+{\footnotesize\ttfamily typedef struct log\+\_\+map\+\_\+iterator\+\_\+type$\ast$ \textbf{ log\+\_\+map\+\_\+iterator}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__map_8h_ae7d12bf96b98e30090accec32d5e087f}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_create@{log\_map\_create}}
+\index{log\_map\_create@{log\_map\_create}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_create()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+map} log\+\_\+map\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a979ffcf3807ac2bcd4a103a1a4b3942a}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_size@{log\_map\_size}}
+\index{log\_map\_size@{log\_map\_size}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_size()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI size\+\_\+t log\+\_\+map\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a713b1e9ac10acc9f632bfcf018ba3804}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_collisions@{log\_map\_collisions}}
+\index{log\_map\_collisions@{log\_map\_collisions}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_collisions()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI size\+\_\+t log\+\_\+map\+\_\+collisions (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a45919aa5dc4f8d86a587688f31d8f21c}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_insert@{log\_map\_insert}}
+\index{log\_map\_insert@{log\_map\_insert}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_insert()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+map\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map,  }\item[{const char $\ast$}]{key,  }\item[{const void $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_ad9b2193625cf0720ceb7c6f88747a41e}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_get@{log\_map\_get}}
+\index{log\_map\_get@{log\_map\_get}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_get()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI void$\ast$ log\+\_\+map\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a75e4147fdf32fa0e85b3f92715f48bcf}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_remove@{log\_map\_remove}}
+\index{log\_map\_remove@{log\_map\_remove}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_remove()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI void$\ast$ log\+\_\+map\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a1cce62efc00f8725d0c98448afcc4d03}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_clear@{log\_map\_clear}}
+\index{log\_map\_clear@{log\_map\_clear}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_clear()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+map\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_aa3e9451f8b4a7ffcfeb6e8354001d167}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_destroy@{log\_map\_destroy}}
+\index{log\_map\_destroy@{log\_map\_destroy}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_destroy()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+map\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a868fd9f4821e61dd5c256fa92be67483}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_iterator\_begin@{log\_map\_iterator\_begin}}
+\index{log\_map\_iterator\_begin@{log\_map\_iterator\_begin}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_iterator\_begin()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+map\+\_\+iterator} log\+\_\+map\+\_\+iterator\+\_\+begin (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map}}]{map }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_abe996fa9adc787155fe80220af1b86b9}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_iterator\_key@{log\_map\_iterator\_key}}
+\index{log\_map\_iterator\_key@{log\_map\_iterator\_key}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_iterator\_key()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI char$\ast$ log\+\_\+map\+\_\+iterator\+\_\+key (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map\+\_\+iterator}}]{iterator }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_ad44b39000edc860f31d44c1f18617b02}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_iterator\_value@{log\_map\_iterator\_value}}
+\index{log\_map\_iterator\_value@{log\_map\_iterator\_value}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_iterator\_value()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI void$\ast$ log\+\_\+map\+\_\+iterator\+\_\+value (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map\+\_\+iterator}}]{iterator }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a6b33590e86d50ce35920e7826b2ff0b1}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_iterator\_next@{log\_map\_iterator\_next}}
+\index{log\_map\_iterator\_next@{log\_map\_iterator\_next}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_iterator\_next()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+map\+\_\+iterator\+\_\+next (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map\+\_\+iterator}}]{iterator }\end{DoxyParamCaption})}
+
+\mbox{\label{log__map_8h_a1faa8c1abffa2d1fe93046720ac2f9da}} 
+\index{log\_map.h@{log\_map.h}!log\_map\_iterator\_end@{log\_map\_iterator\_end}}
+\index{log\_map\_iterator\_end@{log\_map\_iterator\_end}!log\_map.h@{log\_map.h}}
+\doxysubsubsection{log\_map\_iterator\_end()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+map\+\_\+iterator\+\_\+end (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+map\+\_\+iterator}}]{iterator }\end{DoxyParamCaption})}
+

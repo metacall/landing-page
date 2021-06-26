@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dynlink__impl__interface_8h">
+<title>dynlink_impl_interface.h File Reference</title>
+<indexterm><primary>dynlink_impl_interface.h</primary></indexterm>
+<programlisting>#include &lt;dynlink/dynlink_api.h&gt;
+#include &lt;dynlink/dynlink_impl.h&gt;
+#include &lt;dynlink/dynlink_interface.h&gt;
+</programlisting>Include dependency graph for dynlink_impl_interface.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dynlink__impl__interface_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structdynlink__impl__interface__type">dynlink_impl_interface</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1">dynlink_impl</link>(* <link linkend="_dynlink__impl__interface_8h_1a830e6cbd1f246ffc55445c07b4bf3c75">dynlink_impl_interface_load</link>) (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_dynlink__impl__interface_8h_1a4c684797f95e6c2a751c6ee315dee6c4">dynlink_impl_interface_symbol</link>) (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link>, <link linkend="_dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1">dynlink_impl</link>, <link linkend="_dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41">dynlink_symbol_name</link>, <link linkend="_dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf">dynlink_symbol_addr</link> *)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_dynlink__impl__interface_8h_1ac3977092576cd5ab38b0663726f6a4b8">dynlink_impl_interface_unload</link>) (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link>, <link linkend="_dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1">dynlink_impl</link>)</para>
+</listitem>
+            <listitem><para>typedef dynlink_impl_interface(* <link linkend="_dynlink__impl__interface_8h_1a27a0f612bbb437ee29ad3df129dbf298">dynlink_impl_interface_singleton</link>) (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const typedef char *(* <link linkend="_dynlink__impl__interface_8h_1a22af984583c224b4b5996c7ad6f94fa7">dynlink_impl_interface_extension</link> )(void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_dynlink__impl__interface_8h_1a830e6cbd1f246ffc55445c07b4bf3c75"/>    <section>
+    <title>dynlink_impl_interface_load</title>
+<indexterm><primary>dynlink_impl_interface_load</primary><secondary>dynlink_impl_interface.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_interface.h</primary><secondary>dynlink_impl_interface_load</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1">dynlink_impl</link>(* dynlink_impl_interface_load) (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link>)</computeroutput></para>    </section><anchor xml:id="_dynlink__impl__interface_8h_1a4c684797f95e6c2a751c6ee315dee6c4"/>    <section>
+    <title>dynlink_impl_interface_symbol</title>
+<indexterm><primary>dynlink_impl_interface_symbol</primary><secondary>dynlink_impl_interface.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_interface.h</primary><secondary>dynlink_impl_interface_symbol</secondary></indexterm>
+<para><computeroutput>typedef int(* dynlink_impl_interface_symbol) (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link>, <link linkend="_dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1">dynlink_impl</link>, <link linkend="_dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41">dynlink_symbol_name</link>, <link linkend="_dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf">dynlink_symbol_addr</link> *)</computeroutput></para>    </section><anchor xml:id="_dynlink__impl__interface_8h_1ac3977092576cd5ab38b0663726f6a4b8"/>    <section>
+    <title>dynlink_impl_interface_unload</title>
+<indexterm><primary>dynlink_impl_interface_unload</primary><secondary>dynlink_impl_interface.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_interface.h</primary><secondary>dynlink_impl_interface_unload</secondary></indexterm>
+<para><computeroutput>typedef int(* dynlink_impl_interface_unload) (<link linkend="_dynlink__type_8h_1a78848577adb8462475a9af5d06560873">dynlink</link>, <link linkend="_dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1">dynlink_impl</link>)</computeroutput></para>    </section><anchor xml:id="_dynlink__impl__interface_8h_1a27a0f612bbb437ee29ad3df129dbf298"/>    <section>
+    <title>dynlink_impl_interface_singleton</title>
+<indexterm><primary>dynlink_impl_interface_singleton</primary><secondary>dynlink_impl_interface.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_interface.h</primary><secondary>dynlink_impl_interface_singleton</secondary></indexterm>
+<para><computeroutput>typedef dynlink_impl_interface(* dynlink_impl_interface_singleton) (void)</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_dynlink__impl__interface_8h_1a22af984583c224b4b5996c7ad6f94fa7"/>    <section>
+    <title>dynlink_impl_interface_extension</title>
+<indexterm><primary>dynlink_impl_interface_extension</primary><secondary>dynlink_impl_interface.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_interface.h</primary><secondary>dynlink_impl_interface_extension</secondary></indexterm>
+<para><computeroutput>const typedef char*(* dynlink_impl_interface_extension) (void)</computeroutput></para></section>
+</section>
+</section>

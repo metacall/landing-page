@@ -1,0 +1,387 @@
+.TH "reflect_type_id.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_type_id.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef int \fBtype_id\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBtype_primitive_id\fP { \fBTYPE_BOOL\fP = 0, \fBTYPE_CHAR\fP = 1, \fBTYPE_SHORT\fP = 2, \fBTYPE_INT\fP = 3, \fBTYPE_LONG\fP = 4, \fBTYPE_FLOAT\fP = 5, \fBTYPE_DOUBLE\fP = 6, \fBTYPE_STRING\fP = 7, \fBTYPE_BUFFER\fP = 8, \fBTYPE_ARRAY\fP = 9, \fBTYPE_MAP\fP = 10, \fBTYPE_PTR\fP = 11, \fBTYPE_FUTURE\fP = 12, \fBTYPE_FUNCTION\fP = 13, \fBTYPE_NULL\fP = 14, \fBTYPE_CLASS\fP = 15, \fBTYPE_OBJECT\fP = 16, \fBTYPE_SIZE\fP, \fBTYPE_INVALID\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const REFLECT_API char * \fBtype_id_name\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_boolean\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_char\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_integer\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_decimal\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_string\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_buffer\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_array\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_map\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_ptr\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_future\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_function\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_null\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_class\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_object\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_invalid\fP (\fBtype_id\fP id)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef int \fBtype_id\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBtype_primitive_id\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITYPE_BOOL \fP\fP
+.TP
+\fB\fITYPE_CHAR \fP\fP
+.TP
+\fB\fITYPE_SHORT \fP\fP
+.TP
+\fB\fITYPE_INT \fP\fP
+.TP
+\fB\fITYPE_LONG \fP\fP
+.TP
+\fB\fITYPE_FLOAT \fP\fP
+.TP
+\fB\fITYPE_DOUBLE \fP\fP
+.TP
+\fB\fITYPE_STRING \fP\fP
+.TP
+\fB\fITYPE_BUFFER \fP\fP
+.TP
+\fB\fITYPE_ARRAY \fP\fP
+.TP
+\fB\fITYPE_MAP \fP\fP
+.TP
+\fB\fITYPE_PTR \fP\fP
+.TP
+\fB\fITYPE_FUTURE \fP\fP
+.TP
+\fB\fITYPE_FUNCTION \fP\fP
+.TP
+\fB\fITYPE_NULL \fP\fP
+.TP
+\fB\fITYPE_CLASS \fP\fP
+.TP
+\fB\fITYPE_OBJECT \fP\fP
+.TP
+\fB\fITYPE_SIZE \fP\fP
+.TP
+\fB\fITYPE_INVALID \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "const REFLECT_API char* type_id_name (\fBtype_id\fP id)"
+
+.PP
+Obtain a human readable form of the type id @id\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be converted into string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String representing a readable name for @id 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_boolean (\fBtype_id\fP id)"
+
+.PP
+Check if type id is boolean value (bool) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is integer, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_char (\fBtype_id\fP id)"
+
+.PP
+Check if type id is char value (char) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is char, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_integer (\fBtype_id\fP id)"
+
+.PP
+Check if type id is integer value (bool, char, short, int, long) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is integer, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_decimal (\fBtype_id\fP id)"
+
+.PP
+Check if type id is decimal value (float, double) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is decimal, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_string (\fBtype_id\fP id)"
+
+.PP
+Check if type id is string value (char *) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is string, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_buffer (\fBtype_id\fP id)"
+
+.PP
+Check if type id is buffer value (void *) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is buffer, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_array (\fBtype_id\fP id)"
+
+.PP
+Check if type id is array of values (value *) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is array, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_map (\fBtype_id\fP id)"
+
+.PP
+Check if type id is map of values (string -> value) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is map, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_ptr (\fBtype_id\fP id)"
+
+.PP
+Check if type id is pointer value (void *) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is pointer, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_future (\fBtype_id\fP id)"
+
+.PP
+Check if type id is future value (future) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is future, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_function (\fBtype_id\fP id)"
+
+.PP
+Check if type id is function value (function) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is function, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_null (\fBtype_id\fP id)"
+
+.PP
+Check if type id is pointer value NULL\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is null, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_class (\fBtype_id\fP id)"
+
+.PP
+Check if type id is class value (class) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is class, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_object (\fBtype_id\fP id)"
+
+.PP
+Check if type id is object value (object) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is object, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_invalid (\fBtype_id\fP id)"
+
+.PP
+Check if type id is invalid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is invalid, different from zero otherwhise 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="adt__trie_8h" kind="file" language="C++">
+    <compoundname>adt_trie.h</compoundname>
+    <includes local="no">adt/adt_api.h</includes>
+    <includes refid="adt__comparable_8h" local="no">adt/adt_comparable.h</includes>
+    <includes refid="adt__hash_8h" local="no">adt/adt_hash.h</includes>
+    <includes refid="adt__vector_8h" local="no">adt/adt_vector.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includedby refid="adt_8h" local="no">adt.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>adt/adt_hash.h</label>
+        <link refid="adt__hash_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>adt/adt_comparable.h</label>
+        <link refid="adt__comparable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>adt_trie.h</label>
+        <link refid="adt__trie_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>adt/adt_api.h</label>
+      </node>
+      <node id="5">
+        <label>adt/adt_vector.h</label>
+        <link refid="adt__vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>adt.h</label>
+        <link refid="adt_8h"/>
+      </node>
+      <node id="1">
+        <label>adt_trie.h</label>
+        <link refid="adt__trie_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" prot="public" static="no">
+        <type>struct trie_type *</type>
+        <definition>typedef struct trie_type* trie</definition>
+        <argsstring></argsstring>
+        <name>trie</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="34" column="24" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" prot="public" static="no">
+        <type><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref></type>
+        <definition>typedef hash trie_hash</definition>
+        <argsstring></argsstring>
+        <name>trie_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="36" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" prot="public" static="no">
+        <type><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref></type>
+        <definition>typedef comparable trie_key</definition>
+        <argsstring></argsstring>
+        <name>trie_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="38" column="20" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* trie_value</definition>
+        <argsstring></argsstring>
+        <name>trie_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="40" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* trie_cb_iterate_args</definition>
+        <argsstring></argsstring>
+        <name>trie_cb_iterate_args</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="42" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" prot="public" static="no">
+        <type><ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref></type>
+        <definition>typedef hash_callback trie_cb_hash</definition>
+        <argsstring></argsstring>
+        <name>trie_cb_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="44" column="23" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" prot="public" static="no">
+        <type><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref></type>
+        <definition>typedef comparable_callback trie_cb_compare</definition>
+        <argsstring></argsstring>
+        <name>trie_cb_compare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="46" column="29" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* trie_cb_iterate) (trie, trie_key, trie_value, trie_cb_iterate_args)</definition>
+        <argsstring>)(trie, trie_key, trie_value, trie_cb_iterate_args)</argsstring>
+        <name>trie_cb_iterate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="48" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adt__trie_8h_1ace480faefba0d60a456e5488cbbe34ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+        <definition>ADT_API trie trie_create</definition>
+        <argsstring>(trie_cb_hash hash_cb, trie_cb_compare compare_cb)</argsstring>
+        <name>trie_create</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref></type>
+          <declname>hash_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref></type>
+          <declname>compare_cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="52" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="52" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1acd742e8bd78713c67222448135134e5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+        <definition>ADT_API trie trie_create_reserve</definition>
+        <argsstring>(size_t capacity, size_t key_limit, size_t depth_limit, trie_cb_hash hash_cb, trie_cb_compare compare_cb)</argsstring>
+        <name>trie_create_reserve</name>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>key_limit</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>depth_limit</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref></type>
+          <declname>hash_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref></type>
+          <declname>compare_cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="54" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="54" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1aa459e92fd29efa3b108fd43e24ad86a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API size_t</type>
+        <definition>ADT_API size_t trie_size</definition>
+        <argsstring>(trie t)</argsstring>
+        <name>trie_size</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="56" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="56" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a9e53e530c646d5036ab451d5cfe19b69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API size_t</type>
+        <definition>ADT_API size_t trie_capacity</definition>
+        <argsstring>(trie t)</argsstring>
+        <name>trie_capacity</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="58" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="58" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1ab3a999ef9a696b8bcba287bba844df75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int trie_insert</definition>
+        <argsstring>(trie t, vector keys, trie_value value)</argsstring>
+        <name>trie_insert</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="60" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="60" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1af73239b8dee66757d5ecbc5ff8110d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref></type>
+        <definition>ADT_API trie_value trie_get</definition>
+        <argsstring>(trie t, vector keys)</argsstring>
+        <name>trie_get</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+          <declname>keys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="62" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="62" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1ab88d59d5c24291946b62c6e53f90cf4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref></type>
+        <definition>ADT_API trie_value trie_remove</definition>
+        <argsstring>(trie t, vector keys)</argsstring>
+        <name>trie_remove</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+          <declname>keys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="64" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="64" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a83ec8301fa64e2f07de788362cab315b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void trie_iterate_recursive</definition>
+        <argsstring>(trie t, trie_cb_iterate iterate_cb, trie_cb_iterate_args args)</argsstring>
+        <name>trie_iterate_recursive</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref></type>
+          <declname>iterate_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref></type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="66" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="66" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a4780dad91d0124f849781a7c9677842b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void trie_iterate</definition>
+        <argsstring>(trie t, trie_cb_iterate iterate_cb, trie_cb_iterate_args args)</argsstring>
+        <name>trie_iterate</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref></type>
+          <declname>iterate_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref></type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="68" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="68" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a96afe437e9e3f50a6b7736d2efb63781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int trie_append</definition>
+        <argsstring>(trie dest, trie src)</argsstring>
+        <name>trie_append</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="70" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="70" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a7b7cea299acb515f25ba560f5d9ce077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int trie_clear</definition>
+        <argsstring>(trie t)</argsstring>
+        <name>trie_clear</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="72" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="72" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a931493cfc03d05321988116ed51f1ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int trie_prefixes</definition>
+        <argsstring>(trie t, trie_key key, vector prefixes)</argsstring>
+        <name>trie_prefixes</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+          <declname>prefixes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="74" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="74" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a70a6d5ed35e9bf656a677785866cddde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+        <definition>ADT_API trie trie_suffixes</definition>
+        <argsstring>(trie t, trie_key key)</argsstring>
+        <name>trie_suffixes</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="76" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="76" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__trie_8h_1a0f224cfe6db8901ab71a9992eb7a09fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void trie_destroy</definition>
+        <argsstring>(trie t)</argsstring>
+        <name>trie_destroy</name>
+        <param>
+          <type><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="78" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" declline="78" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADT_TRIE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADT_TRIE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;adt/adt_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__comparable_8h" kindref="compound">adt/adt_comparable.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__hash_8h" kindref="compound">adt/adt_hash.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__vector_8h" kindref="compound">adt/adt_vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">trie_type;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">trie_type<sp/>*<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref><sp/><ref refid="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" kindref="member">trie_hash</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref><sp/><ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref><sp/><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref>)(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref>,<sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref>,<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref>,<sp/><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1ace480faefba0d60a456e5488cbbe34ea" kindref="member">trie_create</ref>(<ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1acd742e8bd78713c67222448135134e5a" kindref="member">trie_create_reserve</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>capacity,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>key_limit,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>depth_limit,<sp/><ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1aa459e92fd29efa3b108fd43e24ad86a9" kindref="member">trie_size</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a9e53e530c646d5036ab451d5cfe19b69" kindref="member">trie_capacity</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1ab3a999ef9a696b8bcba287bba844df75" kindref="member">trie_insert</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys,<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="adt__trie_8h_1af73239b8dee66757d5ecbc5ff8110d5a" kindref="member">trie_get</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="adt__trie_8h_1ab88d59d5c24291946b62c6e53f90cf4e" kindref="member">trie_remove</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a83ec8301fa64e2f07de788362cab315b" kindref="member">trie_iterate_recursive</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref><sp/>args);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a4780dad91d0124f849781a7c9677842b" kindref="member">trie_iterate</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref><sp/>args);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a96afe437e9e3f50a6b7736d2efb63781" kindref="member">trie_append</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>dest,<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>src);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a7b7cea299acb515f25ba560f5d9ce077" kindref="member">trie_clear</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a931493cfc03d05321988116ed51f1ef7" kindref="member">trie_prefixes</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref><sp/>key,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>prefixes);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1a70a6d5ed35e9bf656a677785866cddde" kindref="member">trie_suffixes</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a0f224cfe6db8901ab71a9992eb7a09fc" kindref="member">trie_destroy</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ADT_TRIE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h"/>
+  </compounddef>
+</doxygen>

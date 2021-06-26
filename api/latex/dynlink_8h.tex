@@ -1,0 +1,184 @@
+\doxysection{dynlink.\+h File Reference}
+\label{dynlink_8h}\index{dynlink.h@{dynlink.h}}
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+flags.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+symbol.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+type.\+h$>$}\newline
+Include dependency graph for dynlink.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dynlink_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{dynlink_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char $\ast$ \textbf{ dynlink\+\_\+extension} (void)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink} \textbf{ dynlink\+\_\+load} (\textbf{ dynlink\+\_\+path} path, \textbf{ dynlink\+\_\+name} name, \textbf{ dynlink\+\_\+flags} flags)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} \textbf{ dynlink\+\_\+get\+\_\+name} (\textbf{ dynlink} handle)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} \textbf{ dynlink\+\_\+get\+\_\+name\+\_\+impl} (\textbf{ dynlink} handle)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+flags} \textbf{ dynlink\+\_\+get\+\_\+flags} (\textbf{ dynlink} handle)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int \textbf{ dynlink\+\_\+symbol} (\textbf{ dynlink} handle, \textbf{ dynlink\+\_\+symbol\+\_\+name} symbol\+\_\+name, \textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$symbol\+\_\+address)
+\item 
+D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void \textbf{ dynlink\+\_\+unload} (\textbf{ dynlink} handle)
+\item 
+const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char $\ast$ \textbf{ dynlink\+\_\+print\+\_\+info} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{dynlink_8h_aec6120fac988249b0a6e4a537b6f97e0}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_extension@{dynlink\_extension}}
+\index{dynlink\_extension@{dynlink\_extension}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_extension()}
+{\footnotesize\ttfamily const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char$\ast$ dynlink\+\_\+extension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the library extension for specified platform. 
+
+\begin{DoxyReturn}{Returns}
+A constant string pointer to the platform extension 
+\end{DoxyReturn}
+\mbox{\label{dynlink_8h_a914187cf2ab8243349c6c1e3615624c6}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_load@{dynlink\_load}}
+\index{dynlink\_load@{dynlink\_load}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_load()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink} dynlink\+\_\+load (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+path}}]{path,  }\item[{\textbf{ dynlink\+\_\+name}}]{name,  }\item[{\textbf{ dynlink\+\_\+flags}}]{flags }\end{DoxyParamCaption})}
+
+
+
+Load a dynamically linked shared object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em path} & Path where is located the shared object\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name identifier of the shared object\\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & Dynamic linking flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle to the dynamically linked shared object 
+\end{DoxyReturn}
+\mbox{\label{dynlink_8h_aff22375c0da8b77fe21b8692de33b319}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_get\_name@{dynlink\_get\_name}}
+\index{dynlink\_get\_name@{dynlink\_get\_name}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_get\_name()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} dynlink\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Retreive the name of the dynamically linked shared object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the name of the dynamically linked shared object 
+\end{DoxyReturn}
+\mbox{\label{dynlink_8h_ad70c135891290391e7bb100a5278a3e7}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_get\_name\_impl@{dynlink\_get\_name\_impl}}
+\index{dynlink\_get\_name\_impl@{dynlink\_get\_name\_impl}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_get\_name\_impl()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} dynlink\+\_\+get\+\_\+name\+\_\+impl (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Retreive the file name of the dynamically linked shared object handle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the file name of the dynamically linked shared object 
+\end{DoxyReturn}
+\mbox{\label{dynlink_8h_af28e4096eecb9b3215779e8a636cb6e3}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_get\_flags@{dynlink\_get\_flags}}
+\index{dynlink\_get\_flags@{dynlink\_get\_flags}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_get\_flags()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+flags} dynlink\+\_\+get\+\_\+flags (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Retreive the linking flags of the dynamically linked shared object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Linking flags of dynamically linked shared object 
+\end{DoxyReturn}
+\mbox{\label{dynlink_8h_a18a6b5308d1b292c32a0a1f19ae38a5f}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_symbol@{dynlink\_symbol}}
+\index{dynlink\_symbol@{dynlink\_symbol}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_symbol()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int dynlink\+\_\+symbol (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name}}]{symbol\+\_\+name,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$}]{symbol\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Get a symbol address of dynamically linked shared object by name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object\\
+\hline
+\mbox{\texttt{ in}}  & {\em symbol\+\_\+name} & Name of the of dynamically linked shared object symbol\\
+\hline
+\mbox{\texttt{ out}}  & {\em symbol\+\_\+address} & Pointer to the address of the of dynamically linked shared object symbol\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on correct dynamic linking, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{dynlink_8h_abb108f7bc002ff0de09f992501a722d4}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_unload@{dynlink\_unload}}
+\index{dynlink\_unload@{dynlink\_unload}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_unload()}
+{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void dynlink\+\_\+unload (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Unloads a dynamically linked shared object by its handle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object \\
+\hline
+\end{DoxyParams}
+\mbox{\label{dynlink_8h_a9c59d2b884ec3456b35fd263c0dcecb6}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_print\_info@{dynlink\_print\_info}}
+\index{dynlink\_print\_info@{dynlink\_print\_info}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_print\_info()}
+{\footnotesize\ttfamily const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char$\ast$ dynlink\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module information. 
+
+\begin{DoxyReturn}{Returns}
+Static string containing module information 
+\end{DoxyReturn}

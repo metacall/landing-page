@@ -1,0 +1,195 @@
+.TH "detour.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+detour.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <detour/detour_api\&.h>\fP
+.br
+\fC#include <memory/memory\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct detour_type * \fBdetour\fP"
+.br
+.ti -1c
+.RI "typedef struct detour_handle_type * \fBdetour_handle\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DETOUR_API int \fBdetour_initialize\fP (void)"
+.br
+.in -1cCreate detour by
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Plugin will be used to detourize and detourize
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to detour on correct initialization, null otherwise 
+.RE
+.PP
+
+.in +1c
+.ti -1c
+.RI "DETOUR_API void(*)(void) \fBdetour_trampoline\fP (\fBdetour_handle\fP handle)"
+.br
+.ti -1c
+.RI "DETOUR_API \fBdetour\fP \fBdetour_create\fP (const char *name)"
+.br
+.ti -1c
+.RI "const DETOUR_API char * \fBdetour_name\fP (\fBdetour\fP d)"
+.br
+.ti -1c
+.RI "DETOUR_API \fBdetour_handle\fP \fBdetour_install\fP (\fBdetour\fP d, void(*target)(void), void(*hook)(void))"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_uninstall\fP (\fBdetour\fP d, \fBdetour_handle\fP handle)"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_clear\fP (\fBdetour\fP d)"
+.br
+.ti -1c
+.RI "DETOUR_API void \fBdetour_destroy\fP (void)"
+.br
+.ti -1c
+.RI "const DETOUR_API char * \fBdetour_print_info\fP (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct detour_type* \fBdetour\fP"
+
+.SS "typedef struct detour_handle_type* \fBdetour_handle\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "DETOUR_API int detour_initialize (void)"
+
+.PP
+Initialize detour module\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Return zero correct initialization, distinct from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API \fBdetour\fP detour_create (const char * name)"
+
+.SS "const DETOUR_API char* detour_name (\fBdetour\fP d)"
+
+.PP
+Get name of detour\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Reference to the detour
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Static const string with detour name 
+.RE
+.PP
+
+.SS "DETOUR_API \fBdetour_handle\fP detour_install (\fBdetour\fP d, void(*)(void) target, void(*)(void) hook)"
+
+.PP
+Install detour from @target to @hook\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Reference to the detour
+.br
+\fItarget\fP Reference to the function to be hooked
+.br
+\fIhook\fP Reference to the function will be called instead of @target
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the detour handle 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_uninstall (\fBdetour\fP d, \fBdetour_handle\fP handle)"
+
+.PP
+Install detour from @target to @hook\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Reference to the detour
+.br
+\fIhandle\fP Reference to the detour handle
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_clear (\fBdetour\fP d)"
+
+.PP
+Destroy detour by handle @d\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Reference to the detour
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return zero on correct destruction, different from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API void detour_destroy (void)"
+
+.PP
+Destroy all detours\&. 
+.SS "const DETOUR_API char* detour_print_info (void)"
+
+.PP
+Provide the module information\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static string containing module information 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "DETOUR_API void(*)(void) detour_trampoline(\fBdetour_handle\fP handle)"
+
+.PP
+Get trampoline of the detour\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Reference to the detour handle
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the trampoline function 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

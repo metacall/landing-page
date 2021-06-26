@@ -1,0 +1,57 @@
+.TH "log_aspect_format.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_aspect_format.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <log/log_aspect\&.h>\fP
+.br
+\fC#include <log/log_record\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlog_aspect_format_impl\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef size_t(* \fBlog_aspect_format_size\fP) (\fBlog_aspect\fP, \fBlog_record\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_aspect_format_serialize\fP) (\fBlog_aspect\fP, \fBlog_record\fP, void *, const size_t)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlog_aspect_format_deserialize\fP) (\fBlog_aspect\fP, \fBlog_record\fP, const void *, const size_t)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOG_API log_aspect_interface \fBlog_aspect_format_interface\fP (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef size_t(* log_aspect_format_size) (\fBlog_aspect\fP, \fBlog_record\fP)"
+
+.SS "typedef int(* log_aspect_format_serialize) (\fBlog_aspect\fP, \fBlog_record\fP, void *, const size_t)"
+
+.SS "typedef int(* log_aspect_format_deserialize) (\fBlog_aspect\fP, \fBlog_record\fP, const void *, const size_t)"
+
+.SH "Function Documentation"
+.PP 
+.SS "LOG_API log_aspect_interface log_aspect_format_interface (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,71 @@
+\doxysection{reflect\+\_\+value\+\_\+type\+\_\+promotion.\+h File Reference}
+\label{reflect__value__type__promotion_8h}\index{reflect\_value\_type\_promotion.h@{reflect\_value\_type\_promotion.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+type\+\_\+id.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
+Include dependency graph for reflect\+\_\+value\+\_\+type\+\_\+promotion.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{reflect__value__type__promotion_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{reflect__value__type__promotion_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+type\+\_\+promotion\+\_\+integer} (\textbf{ value} v, \textbf{ type\+\_\+id} id)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+type\+\_\+promotion\+\_\+decimal} (\textbf{ value} v, \textbf{ type\+\_\+id} id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{reflect__value__type__promotion_8h_a543bee6c54c94a130e0b6959372ab869}} 
+\index{reflect\_value\_type\_promotion.h@{reflect\_value\_type\_promotion.h}!value\_type\_promotion\_integer@{value\_type\_promotion\_integer}}
+\index{value\_type\_promotion\_integer@{value\_type\_promotion\_integer}!reflect\_value\_type\_promotion.h@{reflect\_value\_type\_promotion.h}}
+\doxysubsubsection{value\_type\_promotion\_integer()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+type\+\_\+promotion\+\_\+integer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Promotes a integer value @v to new type @id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & New type id of value to be promoted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promoted value if a valid promotion, or @v if value is already promoted, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type__promotion_8h_afed9bead222cdaecdf7b1dfefca0e01f}} 
+\index{reflect\_value\_type\_promotion.h@{reflect\_value\_type\_promotion.h}!value\_type\_promotion\_decimal@{value\_type\_promotion\_decimal}}
+\index{value\_type\_promotion\_decimal@{value\_type\_promotion\_decimal}!reflect\_value\_type\_promotion.h@{reflect\_value\_type\_promotion.h}}
+\doxysubsubsection{value\_type\_promotion\_decimal()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+type\+\_\+promotion\+\_\+decimal (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Promotes a decimal value @v to new type @id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & New type id of value to be promoted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Promoted value if a valid promotion, or @v if value is already promoted, null otherwhise 
+\end{DoxyReturn}

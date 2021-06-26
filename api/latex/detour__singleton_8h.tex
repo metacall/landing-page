@@ -1,0 +1,151 @@
+\doxysection{detour\+\_\+singleton.\+h File Reference}
+\label{detour__singleton_8h}\index{detour\_singleton.h@{detour\_singleton.h}}
+{\ttfamily \#include $<$detour/detour\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$detour/detour.\+h$>$}\newline
+Include dependency graph for detour\+\_\+singleton.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{detour__singleton_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct detour\+\_\+singleton\+\_\+type $\ast$ \textbf{ detour\+\_\+singleton}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+singleton\+\_\+initialize} ()
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+singleton} \textbf{ detour\+\_\+singleton\+\_\+instance} (void)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+singleton\+\_\+register} (\textbf{ detour} d)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+{\em Retrieve detour from detours map by
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Index which references the detour to be retrieved\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns pointer to detour if exists, null otherwise 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour} \textbf{ detour\+\_\+singleton\+\_\+get} (const char $\ast$name)
+\item 
+const D\+E\+T\+O\+U\+R\+\_\+\+A\+PI char $\ast$ \textbf{ detour\+\_\+singleton\+\_\+path} (void)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int \textbf{ detour\+\_\+singleton\+\_\+clear} (\textbf{ detour} d)
+\item 
+D\+E\+T\+O\+U\+R\+\_\+\+A\+PI void \textbf{ detour\+\_\+singleton\+\_\+destroy} (void)
+\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{detour__singleton_8h_aeef87d8c3305e6b7d58945fe93829954}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton@{detour\_singleton}}
+\index{detour\_singleton@{detour\_singleton}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton}
+{\footnotesize\ttfamily typedef struct detour\+\_\+singleton\+\_\+type$\ast$ \textbf{ detour\+\_\+singleton}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{detour__singleton_8h_ab6308d3e842fbf42b7ed620d08ee7fd9}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton\_initialize@{detour\_singleton\_initialize}}
+\index{detour\_singleton\_initialize@{detour\_singleton\_initialize}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton\_initialize()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+singleton\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize detour singleton. 
+
+\begin{DoxyReturn}{Returns}
+Returns zero on correct detour singleton initialization, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__singleton_8h_a95bc055fdebf2873f3903d86af3393c1}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton\_instance@{detour\_singleton\_instance}}
+\index{detour\_singleton\_instance@{detour\_singleton\_instance}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton\_instance()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour\+\_\+singleton} detour\+\_\+singleton\+\_\+instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Wrapper of detour singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to detour singleton instance 
+\end{DoxyReturn}
+\mbox{\label{detour__singleton_8h_ae4fac28fa2ed1a289fe9757058a1e55b}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton\_register@{detour\_singleton\_register}}
+\index{detour\_singleton\_register@{detour\_singleton\_register}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton\_register()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+singleton\+\_\+register (\begin{DoxyParamCaption}\item[{\textbf{ detour}}]{d }\end{DoxyParamCaption})}
+
+
+
+Register detour into detours map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Pointer to detour\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on correct detour singleton insertion, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__singleton_8h_aa86b7e9be82dd751464294cdacd59dd2}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton\_get@{detour\_singleton\_get}}
+\index{detour\_singleton\_get@{detour\_singleton\_get}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton\_get()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI \textbf{ detour} detour\+\_\+singleton\+\_\+get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{detour__singleton_8h_a3beb5f13a01e22019c28774960f896bb}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton\_path@{detour\_singleton\_path}}
+\index{detour\_singleton\_path@{detour\_singleton\_path}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton\_path()}
+{\footnotesize\ttfamily const D\+E\+T\+O\+U\+R\+\_\+\+A\+PI char$\ast$ detour\+\_\+singleton\+\_\+path (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Retrieve detour library path where detours are located. 
+
+\begin{DoxyReturn}{Returns}
+Returns constant string representing detours library path 
+\end{DoxyReturn}
+\mbox{\label{detour__singleton_8h_a6a4c4b4103701e2bb9f99542f464f528}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton\_clear@{detour\_singleton\_clear}}
+\index{detour\_singleton\_clear@{detour\_singleton\_clear}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton\_clear()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI int detour\+\_\+singleton\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ detour}}]{d }\end{DoxyParamCaption})}
+
+
+
+Remove detour from detours map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Pointer to detour\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero on correct detour singleton removing, distinct from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{detour__singleton_8h_afef5bdebd544d6b9fd88f5f3bcb662b4}} 
+\index{detour\_singleton.h@{detour\_singleton.h}!detour\_singleton\_destroy@{detour\_singleton\_destroy}}
+\index{detour\_singleton\_destroy@{detour\_singleton\_destroy}!detour\_singleton.h@{detour\_singleton.h}}
+\doxysubsubsection{detour\_singleton\_destroy()}
+{\footnotesize\ttfamily D\+E\+T\+O\+U\+R\+\_\+\+A\+PI void detour\+\_\+singleton\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Destroy detour singleton. 
+

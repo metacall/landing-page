@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="reflect__future_8h" kind="file" language="C++">
+    <compoundname>reflect_future.h</compoundname>
+    <includes refid="reflect__value_8h" local="no">reflect/reflect_value.h</includes>
+    <includedby refid="reflect_8h" local="no">reflect.h</includedby>
+    <includedby refid="reflect__value__type_8h" local="no">reflect_value_type.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>reflect/reflect_value.h</label>
+        <link refid="reflect__value_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>reflect/reflect_api.h</label>
+      </node>
+      <node id="1">
+        <label>reflect_future.h</label>
+        <link refid="reflect__future_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>reflect_value_type.h</label>
+        <link refid="reflect__value__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>reflect.h</label>
+        <link refid="reflect_8h"/>
+      </node>
+      <node id="1">
+        <label>reflect_future.h</label>
+        <link refid="reflect__future_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structfuture__interface__type" prot="public">future_interface_type</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* future_impl</definition>
+        <argsstring></argsstring>
+        <name>future_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="32" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" prot="public" static="no">
+        <type>struct future_type *</type>
+        <definition>typedef struct future_type* future</definition>
+        <argsstring></argsstring>
+        <name>future</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="34" column="26" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" prot="public" static="no">
+        <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>typedef value future_return</definition>
+        <argsstring></argsstring>
+        <name>future_return</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="36" column="15" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" prot="public" static="no">
+        <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
+        <definition>typedef value(* future_resolve_callback) (value, void *)</definition>
+        <argsstring>)(value, void *)</argsstring>
+        <name>future_resolve_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="38" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" prot="public" static="no">
+        <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
+        <definition>typedef value(* future_reject_callback) (value, void *)</definition>
+        <argsstring>)(value, void *)</argsstring>
+        <name>future_reject_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="40" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1a79a8b73073b19643eb63ab926b8d27cf" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* future_impl_interface_create) (future, future_impl)</definition>
+        <argsstring>)(future, future_impl)</argsstring>
+        <name>future_impl_interface_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="42" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1a14fdd6ae715e477c620bfd21578a2983" prot="public" static="no">
+        <type><ref refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" kindref="member">future_return</ref>(*</type>
+        <definition>typedef future_return(* future_impl_interface_await) (future, future_impl, future_resolve_callback, future_reject_callback, void *)</definition>
+        <argsstring>)(future, future_impl, future_resolve_callback, future_reject_callback, void *)</argsstring>
+        <name>future_impl_interface_await</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="44" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1ae84f54969d27d1f564229345ab7fdf7a" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* future_impl_interface_destroy) (future, future_impl)</definition>
+        <argsstring>)(future, future_impl)</argsstring>
+        <name>future_impl_interface_destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="46" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" prot="public" static="no">
+        <type>future_interface(*</type>
+        <definition>typedef future_interface(* future_impl_interface_singleton) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>future_impl_interface_singleton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="56" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="reflect__future_8h_1af11e513c084e86bc3560cbccca13aa88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref></type>
+        <definition>REFLECT_API future future_create</definition>
+        <argsstring>(future_impl impl, future_impl_interface_singleton singleton)</argsstring>
+        <name>future_create</name>
+        <param>
+          <type><ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" kindref="member">future_impl_interface_singleton</ref></type>
+          <declname>singleton</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="58" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" declline="58" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__future_8h_1a4c6bfdb1bc35c541b76f92784d352071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" kindref="member">future_return</ref></type>
+        <definition>REFLECT_API future_return future_await</definition>
+        <argsstring>(future f, future_resolve_callback resolve_callback, future_reject_callback reject_callback, void *context)</argsstring>
+        <name>future_await</name>
+        <param>
+          <type><ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref></type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" kindref="member">future_resolve_callback</ref></type>
+          <declname>resolve_callback</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" kindref="member">future_reject_callback</ref></type>
+          <declname>reject_callback</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="60" column="27" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" declline="60" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__future_8h_1a637314f3ee2db826324fedb25f84db7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API void</type>
+        <definition>REFLECT_API void future_destroy</definition>
+        <argsstring>(future f)</argsstring>
+        <name>future_destroy</name>
+        <param>
+          <type><ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" line="62" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h" declline="62" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REFLECT_FUTURE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REFLECT_FUTURE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__value_8h" kindref="compound">reflect/reflect_value.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">future_type;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">future_type<sp/>*<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" kindref="member">future_return</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" kindref="member">future_resolve_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" kindref="member">future_reject_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="reflect__future_8h_1a79a8b73073b19643eb63ab926b8d27cf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__future_8h_1a79a8b73073b19643eb63ab926b8d27cf" kindref="member">future_impl_interface_create</ref>)(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref>,<sp/><ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="reflect__future_8h_1a14fdd6ae715e477c620bfd21578a2983" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" kindref="member">future_return</ref><sp/>(*<ref refid="reflect__future_8h_1a14fdd6ae715e477c620bfd21578a2983" kindref="member">future_impl_interface_await</ref>)(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref>,<sp/><ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref>,<sp/><ref refid="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" kindref="member">future_resolve_callback</ref>,<sp/><ref refid="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" kindref="member">future_reject_callback</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="reflect__future_8h_1ae84f54969d27d1f564229345ab7fdf7a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="reflect__future_8h_1ae84f54969d27d1f564229345ab7fdf7a" kindref="member">future_impl_interface_destroy</ref>)(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref>,<sp/><ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structfuture__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfuture__interface__type" kindref="compound">future_interface_type</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50" refid="structfuture__interface__type_1a882ab28de79d7131c70e3d80afdd230a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__future_8h_1a79a8b73073b19643eb63ab926b8d27cf" kindref="member">future_impl_interface_create</ref><sp/><ref refid="structfuture__interface__type_1a882ab28de79d7131c70e3d80afdd230a" kindref="member">create</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structfuture__interface__type_1a37bf6a702c9d071512aba1488aaf67ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__future_8h_1a14fdd6ae715e477c620bfd21578a2983" kindref="member">future_impl_interface_await</ref><sp/><ref refid="structfuture__interface__type_1a37bf6a702c9d071512aba1488aaf67ff" kindref="member">await</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structfuture__interface__type_1a67ec59fbed15eab5425632cf35e39fae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__future_8h_1ae84f54969d27d1f564229345ab7fdf7a" kindref="member">future_impl_interface_destroy</ref><sp/><ref refid="structfuture__interface__type_1a67ec59fbed15eab5425632cf35e39fae" kindref="member">destroy</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}<sp/>*<sp/>future_interface;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>future_interface<sp/>(*<ref refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" kindref="member">future_impl_interface_singleton</ref>)(void);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/><ref refid="reflect__future_8h_1af11e513c084e86bc3560cbccca13aa88" kindref="member">future_create</ref>(<ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref><sp/>impl,<sp/><ref refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" kindref="member">future_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" kindref="member">future_return</ref><sp/><ref refid="reflect__future_8h_1a4c6bfdb1bc35c541b76f92784d352071" kindref="member">future_await</ref>(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/>f,<sp/><ref refid="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" kindref="member">future_resolve_callback</ref><sp/>resolve_callback,<sp/><ref refid="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" kindref="member">future_reject_callback</ref><sp/>reject_callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__future_8h_1a637314f3ee2db826324fedb25f84db7e" kindref="member">future_destroy</ref>(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/>f);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_FUTURE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_future.h"/>
+  </compounddef>
+</doxygen>

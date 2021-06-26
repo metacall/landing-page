@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__context_8h">
+<title>reflect_context.h File Reference</title>
+<indexterm><primary>reflect_context.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_scope.h&gt;
+</programlisting>Include dependency graph for reflect_context.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__context_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__context_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct context_type * <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>REFLECT_API <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> <link linkend="_reflect__context_8h_1aba99e7b5a51077e3371a6c131606efd3">context_create</link> (const char *name)</para>
+</listitem>
+            <listitem><para>const REFLECT_API char * <link linkend="_reflect__context_8h_1a47ee629e6f2a6cafa23a58849c01be52">context_name</link> (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> ctx)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> <link linkend="_reflect__context_8h_1a815f013b9a064495be9b76c39233a490">context_scope</link> (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> ctx)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__context_8h_1a5a08e99bf8fa8d47022a3eb5037f5782">context_append</link> (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> dest, <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> src)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__context_8h_1a5c2a59a06a882c2ec2c3bd0cf6e5acea">context_contains</link> (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> dest, <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> src)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__context_8h_1a7fb6ba2f8b8c507b6ff568ac02470bf1">context_remove</link> (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> dest, <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> src)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__context_8h_1a1d32f37f3d89f4ffcac27c12797a5dbd">context_destroy</link> (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> ctx)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b"/>    <section>
+    <title>context</title>
+<indexterm><primary>context</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context</secondary></indexterm>
+<para><computeroutput>typedef struct context_type* <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__context_8h_1aba99e7b5a51077e3371a6c131606efd3"/>    <section>
+    <title>context_create()</title>
+<indexterm><primary>context_create</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context_create</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> context_create (const char * name)</computeroutput></para>    </section><anchor xml:id="_reflect__context_8h_1a47ee629e6f2a6cafa23a58849c01be52"/>    <section>
+    <title>context_name()</title>
+<indexterm><primary>context_name</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context_name</secondary></indexterm>
+<para><computeroutput>const REFLECT_API char* context_name (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> ctx)</computeroutput></para>    </section><anchor xml:id="_reflect__context_8h_1a815f013b9a064495be9b76c39233a490"/>    <section>
+    <title>context_scope()</title>
+<indexterm><primary>context_scope</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context_scope</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b">scope</link> context_scope (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> ctx)</computeroutput></para>    </section><anchor xml:id="_reflect__context_8h_1a5a08e99bf8fa8d47022a3eb5037f5782"/>    <section>
+    <title>context_append()</title>
+<indexterm><primary>context_append</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context_append</secondary></indexterm>
+<para><computeroutput>REFLECT_API int context_append (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> dest, <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> src)</computeroutput></para>    </section><anchor xml:id="_reflect__context_8h_1a5c2a59a06a882c2ec2c3bd0cf6e5acea"/>    <section>
+    <title>context_contains()</title>
+<indexterm><primary>context_contains</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context_contains</secondary></indexterm>
+<para><computeroutput>REFLECT_API int context_contains (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> dest, <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> src)</computeroutput></para>    </section><anchor xml:id="_reflect__context_8h_1a7fb6ba2f8b8c507b6ff568ac02470bf1"/>    <section>
+    <title>context_remove()</title>
+<indexterm><primary>context_remove</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context_remove</secondary></indexterm>
+<para><computeroutput>REFLECT_API int context_remove (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> dest, <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> src)</computeroutput></para>    </section><anchor xml:id="_reflect__context_8h_1a1d32f37f3d89f4ffcac27c12797a5dbd"/>    <section>
+    <title>context_destroy()</title>
+<indexterm><primary>context_destroy</primary><secondary>reflect_context.h</secondary></indexterm>
+<indexterm><primary>reflect_context.h</primary><secondary>context_destroy</secondary></indexterm>
+<para><computeroutput>REFLECT_API void context_destroy (<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> ctx)</computeroutput></para></section>
+</section>
+</section>

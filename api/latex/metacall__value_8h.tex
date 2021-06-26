@@ -1,0 +1,1719 @@
+\doxysection{metacall\+\_\+value.\+h File Reference}
+\label{metacall__value_8h}\index{metacall\_value.h@{metacall\_value.h}}
+{\ttfamily \#include $<$metacall/metacall\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for metacall\+\_\+value.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{metacall__value_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{metacall__value_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ boolean}~unsigned char
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ metacall\+\_\+value\+\_\+id} \{ \newline
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+B\+O\+OL} = 0, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+C\+H\+AR} = 1, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+S\+H\+O\+RT} = 2, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+I\+NT} = 3, 
+\newline
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+NG} = 4, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+O\+AT} = 5, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+D\+O\+U\+B\+LE} = 6, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+S\+T\+R\+I\+NG} = 7, 
+\newline
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+B\+U\+F\+F\+ER} = 8, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+R\+R\+AY} = 9, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+M\+AP} = 10, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+P\+TR} = 11, 
+\newline
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+U\+T\+U\+RE} = 12, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON} = 13, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+N\+U\+LL} = 14, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+C\+L\+A\+SS} = 15, 
+\newline
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+O\+B\+J\+E\+CT} = 16, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+S\+I\+ZE}, 
+\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+I\+N\+V\+A\+L\+ID}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+bool} (\textbf{ boolean} b)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+char} (char c)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+short} (short s)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+int} (int i)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+long} (long l)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+float} (float f)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+double} (double d)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+string} (const char $\ast$str, size\+\_\+t length)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+buffer} (const void $\ast$buffer, size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+array} (const void $\ast$values[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+map} (const void $\ast$tuples[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+ptr} (const void $\ast$ptr)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+future} (void $\ast$f)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+function} (void $\ast$f)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+function\+\_\+closure} (void $\ast$f, void $\ast$c)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+null} (void)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+class} (void $\ast$c)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+create\+\_\+object} (void $\ast$o)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t \textbf{ metacall\+\_\+value\+\_\+size} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t \textbf{ metacall\+\_\+value\+\_\+count} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI enum \textbf{ metacall\+\_\+value\+\_\+id} \textbf{ metacall\+\_\+value\+\_\+id} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+copy} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+value\+\_\+move} (void $\ast$src, void $\ast$dest)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI \textbf{ boolean} \textbf{ metacall\+\_\+value\+\_\+to\+\_\+bool} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char \textbf{ metacall\+\_\+value\+\_\+to\+\_\+char} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI short \textbf{ metacall\+\_\+value\+\_\+to\+\_\+short} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+value\+\_\+to\+\_\+int} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI long \textbf{ metacall\+\_\+value\+\_\+to\+\_\+long} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI float \textbf{ metacall\+\_\+value\+\_\+to\+\_\+float} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI double \textbf{ metacall\+\_\+value\+\_\+to\+\_\+double} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+string} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+buffer} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$$\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+array} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$$\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+map} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+ptr} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+future} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+function} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+null} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+class} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+to\+\_\+object} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+bool} (void $\ast$v, \textbf{ boolean} b)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+char} (void $\ast$v, char c)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+short} (void $\ast$v, short s)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+int} (void $\ast$v, int i)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+long} (void $\ast$v, long l)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+float} (void $\ast$v, float f)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+double} (void $\ast$v, double d)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+string} (void $\ast$v, const char $\ast$str, size\+\_\+t length)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+buffer} (void $\ast$v, const void $\ast$buffer, size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+array} (void $\ast$v, const void $\ast$values[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+map} (void $\ast$v, const void $\ast$tuples[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+ptr} (void $\ast$v, const void $\ast$ptr)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+future} (void $\ast$v, void $\ast$f)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+function} (void $\ast$v, void $\ast$f)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+null} (void $\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+class} (void $\ast$v, void $\ast$c)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+from\+\_\+object} (void $\ast$v, void $\ast$o)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast} (void $\ast$v, enum \textbf{ metacall\+\_\+value\+\_\+id} id)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI \textbf{ boolean} \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+bool} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+char} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI short \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+short} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+int} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI long \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+long} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI float \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+float} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI double \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+double} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+string} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+buffer} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$$\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+array} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+map} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+ptr} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+future} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+function} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+null} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+class} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+value\+\_\+cast\+\_\+object} (void $\ast$$\ast$v)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+value\+\_\+destroy} (void $\ast$v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{metacall__value_8h_a9201c1178e191a87a38dd59c7fc36ff6}} 
+\index{metacall\_value.h@{metacall\_value.h}!boolean@{boolean}}
+\index{boolean@{boolean}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{boolean}
+{\footnotesize\ttfamily \#define boolean~unsigned char}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34d}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_id@{metacall\_value\_id}}
+\index{metacall\_value\_id@{metacall\_value\_id}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_id}
+{\footnotesize\ttfamily enum \textbf{ metacall\+\_\+value\+\_\+id}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_BOOL@{METACALL\_BOOL}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_BOOL@{METACALL\_BOOL}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34daf1ed7cdddf10345db76d2e8b73a850f1}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+B\+O\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_CHAR@{METACALL\_CHAR}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_CHAR@{METACALL\_CHAR}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34daf6e9581ae5631d2652a537bee5af5c1a}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+C\+H\+AR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_SHORT@{METACALL\_SHORT}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_SHORT@{METACALL\_SHORT}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da1948334102ccd6a6e290013b763cceb3}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+S\+H\+O\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_INT@{METACALL\_INT}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_INT@{METACALL\_INT}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34dae4e777421eadce7ec1ce67ace7bbbbf7}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_LONG@{METACALL\_LONG}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_LONG@{METACALL\_LONG}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34dad85bf5663269cb2888c9bfe1122d8543}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+L\+O\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_FLOAT@{METACALL\_FLOAT}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_FLOAT@{METACALL\_FLOAT}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da93d58d60961738ec4660caa4e5c4be93}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+O\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_DOUBLE@{METACALL\_DOUBLE}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_DOUBLE@{METACALL\_DOUBLE}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da85d4639f77c06eeefa84a580a0941bcb}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+D\+O\+U\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_STRING@{METACALL\_STRING}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_STRING@{METACALL\_STRING}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34daf59cd94d876a398fe6409fb0c8144426}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+S\+T\+R\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_BUFFER@{METACALL\_BUFFER}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_BUFFER@{METACALL\_BUFFER}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da88c93c6ae8e4583eee58214d03653e6a}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+B\+U\+F\+F\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_ARRAY@{METACALL\_ARRAY}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_ARRAY@{METACALL\_ARRAY}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34daaa4fc2878287b6df005db5169f6eab98}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+R\+R\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_MAP@{METACALL\_MAP}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_MAP@{METACALL\_MAP}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34dac329d13cc2b8ccbd454f2a2bb3dea879}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+M\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_PTR@{METACALL\_PTR}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_PTR@{METACALL\_PTR}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da147232ca7f32a6c8814055e241bc2bca}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+P\+TR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_FUTURE@{METACALL\_FUTURE}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_FUTURE@{METACALL\_FUTURE}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34dabdac5ec837a51d2c205ecd8604115d82}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+U\+T\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_FUNCTION@{METACALL\_FUNCTION}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_FUNCTION@{METACALL\_FUNCTION}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da329cf92d5a2f59884bcf4a7c8e8e3e2a}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+U\+N\+C\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_NULL@{METACALL\_NULL}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_NULL@{METACALL\_NULL}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da6b806e6b61f3bcebaf4bbe7ae5b92648}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+N\+U\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_CLASS@{METACALL\_CLASS}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_CLASS@{METACALL\_CLASS}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da739dddbb88729e1b5bf407e38c3152df}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+C\+L\+A\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_OBJECT@{METACALL\_OBJECT}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_OBJECT@{METACALL\_OBJECT}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34dac9e5a1a2942a283bd955b894c906259d}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+O\+B\+J\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_SIZE@{METACALL\_SIZE}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_SIZE@{METACALL\_SIZE}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34dacb39937884a2344522421bd1cf21f2e5}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_INVALID@{METACALL\_INVALID}!metacall\_value.h@{metacall\_value.h}}\index{metacall\_value.h@{metacall\_value.h}!METACALL\_INVALID@{METACALL\_INVALID}}}\mbox{\label{metacall__value_8h_a09df370b94fa034a58dc8048e14ed34da12e465aff45a6098cb0402d16ff7634a}} 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{metacall__value_8h_a45b44d263ff22525f0dfbf8f231cbe3b}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_bool@{metacall\_value\_create\_bool}}
+\index{metacall\_value\_create\_bool@{metacall\_value\_create\_bool}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_bool()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
+
+
+
+Create a value from boolean {\bfseries{}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & Boolean will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a1bb0b8962324b56efbe6507b0f6059e0}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_char@{metacall\_value\_create\_char}}
+\index{metacall\_value\_create\_char@{metacall\_value\_create\_char}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_char()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Create a value from char {\ttfamily }. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Character will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a5c3e6d9ec081bf4d9e529315d487d880}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_short@{metacall\_value\_create\_short}}
+\index{metacall\_value\_create\_short@{metacall\_value\_create\_short}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_short()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+short (\begin{DoxyParamCaption}\item[{short}]{s }\end{DoxyParamCaption})}
+
+
+
+Create a value from short @s. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & Short will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a2f9276cc43e790ff6b11676f75387697}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_int@{metacall\_value\_create\_int}}
+\index{metacall\_value\_create\_int@{metacall\_value\_create\_int}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_int()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Create a value from integer @i. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & Integer will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a23d27061663c3bdb1739764049d34a54}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_long@{metacall\_value\_create\_long}}
+\index{metacall\_value\_create\_long@{metacall\_value\_create\_long}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_long()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+long (\begin{DoxyParamCaption}\item[{long}]{l }\end{DoxyParamCaption})}
+
+
+
+Create a value from long @l. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em l} & Long integer will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ab81f77c2f3afd42ee90dc662667083ae}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_float@{metacall\_value\_create\_float}}
+\index{metacall\_value\_create\_float@{metacall\_value\_create\_float}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_float()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+float (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Create a value from single precision floating point number @f. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Float will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aeb4f3bceb1c5fbaf0907b77ddb4eaf54}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_double@{metacall\_value\_create\_double}}
+\index{metacall\_value\_create\_double@{metacall\_value\_create\_double}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_double()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+double (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Create a value from double precision floating point number @d. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em d} & Double will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a25dd31dc304ede5d1fb1d634e1c73813}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_string@{metacall\_value\_create\_string}}
+\index{metacall\_value\_create\_string@{metacall\_value\_create\_string}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_string()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Create a value from a C string @str. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str} & Constant string will be copied into value (needs to be null terminated)\\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Length of the constant string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a9041629e37f7713b0a84bf8ab39ff80c}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_buffer@{metacall\_value\_create\_buffer}}
+\index{metacall\_value\_create\_buffer@{metacall\_value\_create\_buffer}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_buffer()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+buffer (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Create a value buffer from array @buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buffer} & Constant memory block will be copied into value array\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Size in bytes of data contained in the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a4128bdc47c985c39ecbbbf038ebafba8}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_array@{metacall\_value\_create\_array}}
+\index{metacall\_value\_create\_array@{metacall\_value\_create\_array}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_array()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+array (\begin{DoxyParamCaption}\item[{const void $\ast$}]{values[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Create a value array from array of values @values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em values} & Constant array of values will be copied into value list\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements contained in the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a2beb1da0d657f001433a9a407d6366ee}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_map@{metacall\_value\_create\_map}}
+\index{metacall\_value\_create\_map@{metacall\_value\_create\_map}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_map()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+map (\begin{DoxyParamCaption}\item[{const void $\ast$}]{tuples[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Create a value map from array of tuples @map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tuples} & Constant array of tuples will be copied into value map\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements contained in the map\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a6862e70d8de61d1c8e2e3f5f99d440a5}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_ptr@{metacall\_value\_create\_ptr}}
+\index{metacall\_value\_create\_ptr@{metacall\_value\_create\_ptr}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_ptr()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+ptr (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Create a value from pointer @ptr. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to constant data will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a3845cedd950e060d7484d0026a9788ea}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_future@{metacall\_value\_create\_future}}
+\index{metacall\_value\_create\_future@{metacall\_value\_create\_future}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_future()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+future (\begin{DoxyParamCaption}\item[{void $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Create a value from future @f. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Pointer to constant data will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aaa343d4d8fd0a1658bb7d342f97d1988}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_function@{metacall\_value\_create\_function}}
+\index{metacall\_value\_create\_function@{metacall\_value\_create\_function}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_function()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Create a value from function @f. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Pointer to constant data will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aca9f1f1342ec81e4459f51f4c2fa2898}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_function\_closure@{metacall\_value\_create\_function\_closure}}
+\index{metacall\_value\_create\_function\_closure@{metacall\_value\_create\_function\_closure}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_function\_closure()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+function\+\_\+closure (\begin{DoxyParamCaption}\item[{void $\ast$}]{f,  }\item[{void $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Create a value from function @f binding a closure {\ttfamily to} it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & Pointer to constant data will be copied into value\\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Pointer to closure that will be binded into function @f\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ad4e2dd190da30deed2c633d089659841}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_null@{metacall\_value\_create\_null}}
+\index{metacall\_value\_create\_null@{metacall\_value\_create\_null}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_null()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create a value of type null. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aa354cdc11462daeebc943ae2c9d5b19c}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_class@{metacall\_value\_create\_class}}
+\index{metacall\_value\_create\_class@{metacall\_value\_create\_class}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_class()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Create a value from class {\ttfamily }. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Pointer to constant data will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ae17566399a49d2cbcb475d82785d5784}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_create\_object@{metacall\_value\_create\_object}}
+\index{metacall\_value\_create\_object@{metacall\_value\_create\_object}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_create\_object()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+create\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+Create a value from object @o. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em o} & Pointer to constant data will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a9082ce571ae07afffafdaadb5f491bea}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_size@{metacall\_value\_size}}
+\index{metacall\_value\_size@{metacall\_value\_size}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_size()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t metacall\+\_\+value\+\_\+size (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Returns the size of the value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size in bytes of the value 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a6fd4a52154e8f47a1795087e87682402}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_count@{metacall\_value\_count}}
+\index{metacall\_value\_count@{metacall\_value\_count}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_count()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t metacall\+\_\+value\+\_\+count (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Returns the amount of values this value contains. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of values @v represents 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a2638568cb16a6e2af896c5117f4583d1}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_id@{metacall\_value\_id}}
+\index{metacall\_value\_id@{metacall\_value\_id}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_id()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI enum \textbf{ metacall\+\_\+value\+\_\+id} \textbf{ metacall\+\_\+value\+\_\+id} (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Provide type id of value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return type id assigned to value 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aab341c484fb53670d74dc4d83c46d087}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_copy@{metacall\_value\_copy}}
+\index{metacall\_value\_copy@{metacall\_value\_copy}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_copy()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+copy (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Deep copies the value @v, the result copy resets the reference counter and ownership, including the finalizer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value to be copied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Copy of the value @v on success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aaee82fc2175e42f9d7ba7ba6bb6932c5}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_move@{metacall\_value\_move}}
+\index{metacall\_value\_move@{metacall\_value\_move}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_move()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+value\+\_\+move (\begin{DoxyParamCaption}\item[{void $\ast$}]{src,  }\item[{void $\ast$}]{dest }\end{DoxyParamCaption})}
+
+
+
+Copies the ownership from @src to @dst, including the finalizer, and resets the owner and finalizer of @src. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em src} & Source value which will lose the ownership\\
+\hline
+\mbox{\texttt{ in}}  & {\em dst} & Destination value which will recieve the ownership \\
+\hline
+\end{DoxyParams}
+\mbox{\label{metacall__value_8h_a44462c581e795e19717be8ba59d18d54}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_bool@{metacall\_value\_to\_bool}}
+\index{metacall\_value\_to\_bool@{metacall\_value\_to\_bool}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_bool()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI \textbf{ boolean} metacall\+\_\+value\+\_\+to\+\_\+bool (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to boolean. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to boolean 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a649f3838667db1acedec1d3718d9a963}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_char@{metacall\_value\_to\_char}}
+\index{metacall\_value\_to\_char@{metacall\_value\_to\_char}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_char()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char metacall\+\_\+value\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to char. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to char 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a8dfeaff12f2b7184868b6baf7857cb8e}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_short@{metacall\_value\_to\_short}}
+\index{metacall\_value\_to\_short@{metacall\_value\_to\_short}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_short()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI short metacall\+\_\+value\+\_\+to\+\_\+short (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to short. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to short 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_afb2d5f17cc3fd938cbda60f1ba958005}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_int@{metacall\_value\_to\_int}}
+\index{metacall\_value\_to\_int@{metacall\_value\_to\_int}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_int()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+value\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to integer 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a10bba9906d6a4eb1f66e5df66b7eacf8}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_long@{metacall\_value\_to\_long}}
+\index{metacall\_value\_to\_long@{metacall\_value\_to\_long}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_long()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI long metacall\+\_\+value\+\_\+to\+\_\+long (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to long integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to long integer 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a4858c8c4029961b1c7ac341adc71c29a}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_float@{metacall\_value\_to\_float}}
+\index{metacall\_value\_to\_float@{metacall\_value\_to\_float}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_float()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI float metacall\+\_\+value\+\_\+to\+\_\+float (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to single precision floating point. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to float 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_afda80c2e30da04650c2bdc02f69f6b4d}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_double@{metacall\_value\_to\_double}}
+\index{metacall\_value\_to\_double@{metacall\_value\_to\_double}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_double()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI double metacall\+\_\+value\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to double precision floating point. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to dobule 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a28751668dd118354642834b221e06888}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_string@{metacall\_value\_to\_string}}
+\index{metacall\_value\_to\_string@{metacall\_value\_to\_string}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_string()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+value\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to C string (null terminated) 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_afca305bd3361f24162dbc6e3b5c9df72}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_buffer@{metacall\_value\_to\_buffer}}
+\index{metacall\_value\_to\_buffer@{metacall\_value\_to\_buffer}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_buffer()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to memory block 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a737470aa802a5ed4d798b3f2deb14395}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_array@{metacall\_value\_to\_array}}
+\index{metacall\_value\_to\_array@{metacall\_value\_to\_array}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_array()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$$\ast$ metacall\+\_\+value\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to array of values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to array of values 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aa4a788e12ee1cc5b82470b92858e892c}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_map@{metacall\_value\_to\_map}}
+\index{metacall\_value\_to\_map@{metacall\_value\_to\_map}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_map()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$$\ast$ metacall\+\_\+value\+\_\+to\+\_\+map (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to map (array of tuples (array of values)) 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a91408213de351f7d7edf2f007ba70bf7}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_ptr@{metacall\_value\_to\_ptr}}
+\index{metacall\_value\_to\_ptr@{metacall\_value\_to\_ptr}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_ptr()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+to\+\_\+ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to pointer 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ae4a80a4df26c9ecb79e513b2cd086338}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_future@{metacall\_value\_to\_future}}
+\index{metacall\_value\_to\_future@{metacall\_value\_to\_future}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_future()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+to\+\_\+future (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to future. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to future 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a6d3dfd990c32fec2e105284bfba777cf}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_function@{metacall\_value\_to\_function}}
+\index{metacall\_value\_to\_function@{metacall\_value\_to\_function}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_function()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+to\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to function 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a7dbc4343e6ffeb5a8d3b57b3ac366f09}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_null@{metacall\_value\_to\_null}}
+\index{metacall\_value\_to\_null@{metacall\_value\_to\_null}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_null()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+to\+\_\+null (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to null. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to null 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a61ef3dc638c1dc6057020c9416a5a320}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_class@{metacall\_value\_to\_class}}
+\index{metacall\_value\_to\_class@{metacall\_value\_to\_class}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_class()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+to\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to class 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a259e938167701e245d5d77e7c696b679}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_to\_object@{metacall\_value\_to\_object}}
+\index{metacall\_value\_to\_object@{metacall\_value\_to\_object}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_to\_object()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+to\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to object 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a3d4cc16b27769288accd67187c5a3baf}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_bool@{metacall\_value\_from\_bool}}
+\index{metacall\_value\_from\_bool@{metacall\_value\_from\_bool}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_bool()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+bool (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
+
+
+
+Assign boolean {\bfseries{to}} value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Boolean to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with boolean {\bfseries{assigned}} to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aef00ad2af4d2ba1981e27d493dfbaf6b}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_char@{metacall\_value\_from\_char}}
+\index{metacall\_value\_from\_char@{metacall\_value\_from\_char}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_char()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+char (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Assign character {\ttfamily to} value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Character to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with char {\ttfamily assigned} to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a3ff58c02042e7593eb1d2a3c6c83311f}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_short@{metacall\_value\_from\_short}}
+\index{metacall\_value\_from\_short@{metacall\_value\_from\_short}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_short()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+short (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{short}]{s }\end{DoxyParamCaption})}
+
+
+
+Assign short @s to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Short to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with short @s assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a1a773f11c7c6609c80575cde7ea568ad}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_int@{metacall\_value\_from\_int}}
+\index{metacall\_value\_from\_int@{metacall\_value\_from\_int}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_int()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+int (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Assign integer @i to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & Integer to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with integer @i assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a679120509747a6f994695c68e9f5229f}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_long@{metacall\_value\_from\_long}}
+\index{metacall\_value\_from\_long@{metacall\_value\_from\_long}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_long()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+long (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{long}]{l }\end{DoxyParamCaption})}
+
+
+
+Assign long integer @l to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em l} & Long integer to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with long @l assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a5e23e67a26546f7d43126fe32b69889a}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_float@{metacall\_value\_from\_float}}
+\index{metacall\_value\_from\_float@{metacall\_value\_from\_float}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_float()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+float (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Assign single precision floating point @f to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & Float to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with float @f assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ac343bdea2db4d805255fd9a73c256f38}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_double@{metacall\_value\_from\_double}}
+\index{metacall\_value\_from\_double@{metacall\_value\_from\_double}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_double()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+double (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Assign double precision floating point @d to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em d} & Double to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with double @d assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ad9e41dca2659e74184359817fd8252db}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_string@{metacall\_value\_from\_string}}
+\index{metacall\_value\_from\_string@{metacall\_value\_from\_string}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_string()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Assign string @str to value @v, truncates to @v size if it is smaller than @length + 1. It does not add null terminator if truncated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em str} & Constant string to be assigned to value @v (it needs to be null terminated)\\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & Length of the constant string @str\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with string @str assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a968633f1ee578fcf88789cf846c5126a}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_buffer@{metacall\_value\_from\_buffer}}
+\index{metacall\_value\_from\_buffer@{metacall\_value\_from\_buffer}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_buffer()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Assign array @buffer to value buffer @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em buffer} & Constant array to be assigned to value @v\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements contained in @buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with array @buffer assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ac8c5e6f3245ce8235b0d13eb4ef2888e}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_array@{metacall\_value\_from\_array}}
+\index{metacall\_value\_from\_array@{metacall\_value\_from\_array}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_array()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{const void $\ast$}]{values[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Assign array of values @values to value array @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Constant array of values to be assigned to value array @v\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of values contained in constant array @values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with array of values @values assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_adc61d4d19be29fdcf70d4e3284d6dedf}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_map@{metacall\_value\_from\_map}}
+\index{metacall\_value\_from\_map@{metacall\_value\_from\_map}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_map()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+map (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{const void $\ast$}]{tuples[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Assign array of values @values to value map @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em tuples} & Constant array of tuples to be assigned to value map @v\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of values contained in constant array @tuples\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with array of tuples @tuples assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a4b7a109c7cf63b937249e1342ac6f654}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_ptr@{metacall\_value\_from\_ptr}}
+\index{metacall\_value\_from\_ptr@{metacall\_value\_from\_ptr}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_ptr()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Assign pointer reference @ptr to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & Pointer to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with pointer @ptr assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_abb974bed7ddaa97880cbe7198a9d32fa}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_future@{metacall\_value\_from\_future}}
+\index{metacall\_value\_from\_future@{metacall\_value\_from\_future}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_future()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+future (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{void $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Assign future @f to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & Future to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with future @f assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a8020261ff5293006dc450772f7dfbfd6}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_function@{metacall\_value\_from\_function}}
+\index{metacall\_value\_from\_function@{metacall\_value\_from\_function}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_function()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{void $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Assign function @f to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & Function to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with function @f assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a2fdc79ca9786293f2d9b1d91b2740851}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_null@{metacall\_value\_from\_null}}
+\index{metacall\_value\_from\_null@{metacall\_value\_from\_null}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_null()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+null (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Assign null to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with null assigned to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_ae3ef2331c52bf1a27f84228b59bedb69}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_class@{metacall\_value\_from\_class}}
+\index{metacall\_value\_from\_class@{metacall\_value\_from\_class}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_class()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{void $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Assign class {\ttfamily to} value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Class to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with class {\ttfamily assigned} to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a51e678472b1244e9c761b8855fe596dc}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_from\_object@{metacall\_value\_from\_object}}
+\index{metacall\_value\_from\_object@{metacall\_value\_from\_object}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_from\_object()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+from\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{void $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+Assign object @o to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em o} & Object to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with object {\ttfamily assigned} to it 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a039e12d103757050bf6d533a1676a0c2}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast@{metacall\_value\_cast}}
+\index{metacall\_value\_cast@{metacall\_value\_cast}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Casts a value to a new type @id. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & New type id of value to be casted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casted value or reference to @v if casting is between equivalent types 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a5cbe3be84788ca24f8f2d63418a787e1}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_bool@{metacall\_value\_cast\_bool}}
+\index{metacall\_value\_cast\_bool@{metacall\_value\_cast\_bool}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_bool()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI \textbf{ boolean} metacall\+\_\+value\+\_\+cast\+\_\+bool (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to boolean. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to boolean 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a61b7edbdf1dce20e342b6245c02bf9b9}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_char@{metacall\_value\_cast\_char}}
+\index{metacall\_value\_cast\_char@{metacall\_value\_cast\_char}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_char()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char metacall\+\_\+value\+\_\+cast\+\_\+char (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to char. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to char 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a50de88e8919f108e922741720d35a732}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_short@{metacall\_value\_cast\_short}}
+\index{metacall\_value\_cast\_short@{metacall\_value\_cast\_short}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_short()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI short metacall\+\_\+value\+\_\+cast\+\_\+short (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to short. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to short 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a6d8d1269a465b428561b8c79c739e579}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_int@{metacall\_value\_cast\_int}}
+\index{metacall\_value\_cast\_int@{metacall\_value\_cast\_int}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_int()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+value\+\_\+cast\+\_\+int (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to int. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to int 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a1fbbd7b9a350cc60d74e6ba4a9871289}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_long@{metacall\_value\_cast\_long}}
+\index{metacall\_value\_cast\_long@{metacall\_value\_cast\_long}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_long()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI long metacall\+\_\+value\+\_\+cast\+\_\+long (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to long. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to long 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aaf2783171b3c3eeec0120577257f717e}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_float@{metacall\_value\_cast\_float}}
+\index{metacall\_value\_cast\_float@{metacall\_value\_cast\_float}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_float()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI float metacall\+\_\+value\+\_\+cast\+\_\+float (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to float. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to float 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a537d9af0da5be7cfb975aed99aa1303f}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_double@{metacall\_value\_cast\_double}}
+\index{metacall\_value\_cast\_double@{metacall\_value\_cast\_double}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_double()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI double metacall\+\_\+value\+\_\+cast\+\_\+double (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to double. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to double 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_af16e83924c61fb79b458c287ff976773}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_string@{metacall\_value\_cast\_string}}
+\index{metacall\_value\_cast\_string@{metacall\_value\_cast\_string}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_string()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+string (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to a C string (null terminated) 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a8dbab928a9fa8107b561515a4374d69e}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_buffer@{metacall\_value\_cast\_buffer}}
+\index{metacall\_value\_cast\_buffer@{metacall\_value\_cast\_buffer}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_buffer()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+buffer (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to buffer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to buffer 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a5573d502e127580e1509eb4eceec5e32}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_array@{metacall\_value\_cast\_array}}
+\index{metacall\_value\_cast\_array@{metacall\_value\_cast\_array}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_array()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to array of values 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a824d7c75b9ad0217086ce21dee4af067}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_map@{metacall\_value\_cast\_map}}
+\index{metacall\_value\_cast\_map@{metacall\_value\_cast\_map}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_map()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+map (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to map 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a4600b6fffd9af1aba6237c57b3af57b5}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_ptr@{metacall\_value\_cast\_ptr}}
+\index{metacall\_value\_cast\_ptr@{metacall\_value\_cast\_ptr}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_ptr()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+ptr (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to ptr. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to ptr 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a7b8519fed5dcd787faad32b78acd4500}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_future@{metacall\_value\_cast\_future}}
+\index{metacall\_value\_cast\_future@{metacall\_value\_cast\_future}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_future()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+future (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to future. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to future 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a134e434ff538d4fbe68b57f5724b01be}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_function@{metacall\_value\_cast\_function}}
+\index{metacall\_value\_cast\_function@{metacall\_value\_cast\_function}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_function()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to function 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a18dfc06126de47d9eea60fc1b5d3144f}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_null@{metacall\_value\_cast\_null}}
+\index{metacall\_value\_cast\_null@{metacall\_value\_cast\_null}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_null()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+null (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to null. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to null 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_aeee04f68d085d94e87085f1c1d5124f0}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_class@{metacall\_value\_cast\_class}}
+\index{metacall\_value\_cast\_class@{metacall\_value\_cast\_class}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_class()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to class 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a9758b8fe022d4bec41da0a6e2589567d}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_cast\_object@{metacall\_value\_cast\_object}}
+\index{metacall\_value\_cast\_object@{metacall\_value\_cast\_object}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_cast\_object()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+value\+\_\+cast\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v implicitly to object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the reference of the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to object 
+\end{DoxyReturn}
+\mbox{\label{metacall__value_8h_a200101b204c58a5a99342af65b6026bd}} 
+\index{metacall\_value.h@{metacall\_value.h}!metacall\_value\_destroy@{metacall\_value\_destroy}}
+\index{metacall\_value\_destroy@{metacall\_value\_destroy}!metacall\_value.h@{metacall\_value.h}}
+\doxysubsubsection{metacall\_value\_destroy()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+value\+\_\+destroy (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Destroy a value from scope stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,45 @@
+.TH "log_preprocessor.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+log_preprocessor.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <log/log_api\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_arguments\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_if\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG_PREPROCESSOR_LINE\fP   ((size_t)__LINE__)"
+.br
+.ti -1c
+.RI "#define \fBlog_configure\fP(name, \&.\&.\&.)   \fBlog_configure_impl\fP(name, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), __VA_ARGS__)"
+.br
+.ti -1c
+.RI "#define \fBlog_write\fP(name,  level,  message, \&.\&.\&.)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG_PREPROCESSOR_LINE   ((size_t)__LINE__)"
+
+.SS "#define log_configure(name,  \&.\&.\&.)   \fBlog_configure_impl\fP(name, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), __VA_ARGS__)"
+
+.SS "#define log_write(name, level, message,  \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+        PREPROCESSOR_IF(PREPROCESSOR_ARGS_EMPTY(__VA_ARGS__),                                             \
+            log_write_impl(name, LOG_PREPROCESSOR_LINE, log_record_function(), __FILE__, level, message), \
+            log_write_impl_va(name, LOG_PREPROCESSOR_LINE, log_record_function(), __FILE__, level, message, __VA_ARGS__))
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

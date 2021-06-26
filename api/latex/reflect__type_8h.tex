@@ -1,0 +1,127 @@
+\doxysection{reflect\+\_\+type.\+h File Reference}
+\label{reflect__type_8h}\index{reflect\_type.h@{reflect\_type.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+type\+\_\+id.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for reflect\+\_\+type.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{reflect__type_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{reflect__type_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ type\+\_\+interface}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct type\+\_\+type $\ast$ \textbf{ type}
+\item 
+typedef void $\ast$ \textbf{ type\+\_\+impl}
+\item 
+typedef int($\ast$ \textbf{ type\+\_\+impl\+\_\+interface\+\_\+create}) (\textbf{ type}, \textbf{ type\+\_\+impl})
+\item 
+typedef void($\ast$ \textbf{ type\+\_\+impl\+\_\+interface\+\_\+destroy}) (\textbf{ type}, \textbf{ type\+\_\+impl})
+\item 
+typedef type\+\_\+interface($\ast$ \textbf{ type\+\_\+impl\+\_\+interface\+\_\+singleton}) (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type} \textbf{ type\+\_\+create} (\textbf{ type\+\_\+id} id, const char $\ast$name, \textbf{ type\+\_\+impl} impl, \textbf{ type\+\_\+impl\+\_\+interface\+\_\+singleton} singleton)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+id} \textbf{ type\+\_\+index} (\textbf{ type} t)
+\item 
+const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ type\+\_\+name} (\textbf{ type} t)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+impl} \textbf{ type\+\_\+derived} (\textbf{ type} t)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ type\+\_\+metadata} (\textbf{ type} t)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ type\+\_\+destroy} (\textbf{ type} t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{reflect__type_8h_a9989d3b49f04ce2227be1eedda3efaac}} 
+\index{reflect\_type.h@{reflect\_type.h}!type@{type}}
+\index{type@{type}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type}
+{\footnotesize\ttfamily typedef struct type\+\_\+type$\ast$ \textbf{ type}}
+
+\mbox{\label{reflect__type_8h_a230af52888c99bcc230160d532eebfcf}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_impl@{type\_impl}}
+\index{type\_impl@{type\_impl}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_impl}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ type\+\_\+impl}}
+
+\mbox{\label{reflect__type_8h_a66867c5842b36b62294e829ecc0ba2fe}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_impl\_interface\_create@{type\_impl\_interface\_create}}
+\index{type\_impl\_interface\_create@{type\_impl\_interface\_create}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_impl\_interface\_create}
+{\footnotesize\ttfamily typedef int($\ast$ type\+\_\+impl\+\_\+interface\+\_\+create) (\textbf{ type}, \textbf{ type\+\_\+impl})}
+
+\mbox{\label{reflect__type_8h_a72bb5eeb8fea871cfb4e0f157947b870}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_impl\_interface\_destroy@{type\_impl\_interface\_destroy}}
+\index{type\_impl\_interface\_destroy@{type\_impl\_interface\_destroy}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_impl\_interface\_destroy}
+{\footnotesize\ttfamily typedef void($\ast$ type\+\_\+impl\+\_\+interface\+\_\+destroy) (\textbf{ type}, \textbf{ type\+\_\+impl})}
+
+\mbox{\label{reflect__type_8h_a7b3907ca7b27baed594c631ab82cc631}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_impl\_interface\_singleton@{type\_impl\_interface\_singleton}}
+\index{type\_impl\_interface\_singleton@{type\_impl\_interface\_singleton}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_impl\_interface\_singleton}
+{\footnotesize\ttfamily typedef type\+\_\+interface($\ast$ type\+\_\+impl\+\_\+interface\+\_\+singleton) (void)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{reflect__type_8h_a7683f6ef2a040083621265d0a1c79e2b}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_create@{type\_create}}
+\index{type\_create@{type\_create}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_create()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type} type\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ type\+\_\+impl}}]{impl,  }\item[{\textbf{ type\+\_\+impl\+\_\+interface\+\_\+singleton}}]{singleton }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__type_8h_af50924b7190a1d7777a0cf7ae75094cd}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_index@{type\_index}}
+\index{type\_index@{type\_index}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_index()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+id} type\+\_\+index (\begin{DoxyParamCaption}\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__type_8h_a5427879e0f27f7cac779fe6cefb94623}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_name@{type\_name}}
+\index{type\_name@{type\_name}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_name()}
+{\footnotesize\ttfamily const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ type\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__type_8h_afba531946394a5b0fa5af71c64fb3ae9}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_derived@{type\_derived}}
+\index{type\_derived@{type\_derived}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_derived()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+impl} type\+\_\+derived (\begin{DoxyParamCaption}\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__type_8h_a19541fec33dcd6f5ed0904800650e24a}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_metadata@{type\_metadata}}
+\index{type\_metadata@{type\_metadata}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_metadata()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} type\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__type_8h_ae196cc48207fd9e7a909f18f0a7ad72e}} 
+\index{reflect\_type.h@{reflect\_type.h}!type\_destroy@{type\_destroy}}
+\index{type\_destroy@{type\_destroy}!reflect\_type.h@{reflect\_type.h}}
+\doxysubsubsection{type\_destroy()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void type\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+

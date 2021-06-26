@@ -1,0 +1,801 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__aspect_8h" kind="file" language="C++">
+    <compoundname>log_aspect.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includedby refid="log__aspect__format_8h" local="no">log_aspect_format.h</includedby>
+    <includedby refid="log__aspect__schedule_8h" local="no">log_aspect_schedule.h</includedby>
+    <includedby refid="log__aspect__storage_8h" local="no">log_aspect_storage.h</includedby>
+    <includedby refid="log__aspect__stream_8h" local="no">log_aspect_stream.h</includedby>
+    <includedby refid="log__impl_8h" local="no">log_impl.h</includedby>
+    <includedby refid="log__policy_8h" local="no">log_policy.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="1">
+        <label>log_aspect.h</label>
+        <link refid="log__aspect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>log_policy_format_binary.h</label>
+        <link refid="log__policy__format__binary_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>log_aspect_schedule.h</label>
+        <link refid="log__aspect__schedule_8h"/>
+      </node>
+      <node id="6">
+        <label>log_impl.h</label>
+        <link refid="log__impl_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>log.h</label>
+        <link refid="log_8h"/>
+      </node>
+      <node id="15">
+        <label>log_policy_schedule_async.h</label>
+        <link refid="log__policy__schedule__async_8h"/>
+      </node>
+      <node id="14">
+        <label>log_policy_schedule.h</label>
+        <link refid="log__policy__schedule_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>log_aspect_format.h</label>
+        <link refid="log__aspect__format_8h"/>
+      </node>
+      <node id="10">
+        <label>log_policy_format.h</label>
+        <link refid="log__policy__format_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>log_aspect_stream.h</label>
+        <link refid="log__aspect__stream_8h"/>
+      </node>
+      <node id="18">
+        <label>log_policy_storage_batch.h</label>
+        <link refid="log__policy__storage__batch_8h"/>
+      </node>
+      <node id="24">
+        <label>log_policy_stream_socket.h</label>
+        <link refid="log__policy__stream__socket_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>log_policy_stream.h</label>
+        <link refid="log__policy__stream_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>log_policy_stream_custom.h</label>
+        <link refid="log__policy__stream__custom_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>log_policy_schedule_sync.h</label>
+        <link refid="log__policy__schedule__sync_8h"/>
+      </node>
+      <node id="13">
+        <label>log_policy_format_text.h</label>
+        <link refid="log__policy__format__text_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>log_aspect.h</label>
+        <link refid="log__aspect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>log_policy_stream_syslog.h</label>
+        <link refid="log__policy__stream__syslog_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>log_policy_storage_sequential.h</label>
+        <link refid="log__policy__storage__sequential_8h"/>
+      </node>
+      <node id="4">
+        <label>log_aspect_storage.h</label>
+        <link refid="log__aspect__storage_8h"/>
+      </node>
+      <node id="25">
+        <label>log_policy_stream_stdio.h</label>
+        <link refid="log__policy__stream__stdio_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>log_policy_stream_file.h</label>
+        <link refid="log__policy__stream__file_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>log_policy_storage.h</label>
+        <link refid="log__policy__storage_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>log_policy.h</label>
+        <link refid="log__policy_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>log_policy_format_custom.h</label>
+        <link refid="log__policy__format__custom_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>log_policy_stream_nginx.h</label>
+        <link refid="log__policy__stream__nginx_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>log_singleton.h</label>
+        <link refid="log__singleton_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlog__aspect__interface__type" prot="public">log_aspect_interface_type</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" prot="public" static="no" strong="no">
+        <type></type>
+        <name>log_aspect_id</name>
+        <enumvalue id="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a6cd1cea2305e0697b7c9f604f5e40446" prot="public">
+          <name>LOG_ASPECT_FORMAT</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__aspect_8h_1aa56e037326e6848386c348d0596ba319ac0cda2b1be0ad928a3dd6b1284f1af27" prot="public">
+          <name>LOG_ASPECT_SCHEDULE</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795" prot="public">
+          <name>LOG_ASPECT_STORAGE</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49" prot="public">
+          <name>LOG_ASPECT_STREAM</name>
+          <initializer>= 0x03</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a" prot="public">
+          <name>LOG_ASPECT_SIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="39" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="38" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" prot="public" static="no">
+        <type>struct log_policy_type *</type>
+        <definition>typedef struct log_policy_type* log_policy</definition>
+        <argsstring></argsstring>
+        <name>log_policy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="60" column="30" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_aspect_impl</definition>
+        <argsstring></argsstring>
+        <name>log_aspect_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="62" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_aspect_data</definition>
+        <argsstring></argsstring>
+        <name>log_aspect_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="64" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_aspect_ctor</definition>
+        <argsstring></argsstring>
+        <name>log_aspect_ctor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="66" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" prot="public" static="no">
+        <type>struct log_aspect_type *</type>
+        <definition>typedef struct log_aspect_type* log_aspect</definition>
+        <argsstring></argsstring>
+        <name>log_aspect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="68" column="30" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_aspect_notify_data</definition>
+        <argsstring></argsstring>
+        <name>log_aspect_notify_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="70" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" prot="public" static="no">
+        <type>struct log_impl_type *</type>
+        <definition>typedef struct log_impl_type* log_impl</definition>
+        <argsstring></argsstring>
+        <name>log_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="72" column="28" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_aspect_restrict_cb) (log_aspect, log_policy)</definition>
+        <argsstring>)(log_aspect, log_policy)</argsstring>
+        <name>log_aspect_restrict_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="76" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_aspect_notify_cb) (log_aspect, log_policy, log_aspect_notify_data)</definition>
+        <argsstring>)(log_aspect, log_policy, log_aspect_notify_data)</argsstring>
+        <name>log_aspect_notify_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="78" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1aad7fb7f87b60842d5593838cdc1c9bfd" prot="public" static="no">
+        <type><ref refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" kindref="member">log_aspect_data</ref>(*</type>
+        <definition>typedef log_aspect_data(* log_aspect_impl_create) (log_aspect, const log_aspect_ctor)</definition>
+        <argsstring>)(log_aspect, const log_aspect_ctor)</argsstring>
+        <name>log_aspect_impl_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="80" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1af445703b027dc7055f6bd76e856d1357" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_aspect_impl_destroy) (log_aspect)</definition>
+        <argsstring>)(log_aspect)</argsstring>
+        <name>log_aspect_impl_destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="82" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__aspect_8h_1ab67dada17f8fbc73e2bce122469af278" prot="public" static="no">
+        <type>log_aspect_interface(*</type>
+        <definition>typedef log_aspect_interface(* log_aspect_singleton) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>log_aspect_singleton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="84" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__aspect_8h_1a750966e98b30e53f100dc0df28450f3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+        <definition>LOG_API log_aspect log_aspect_create</definition>
+        <argsstring>(log_impl impl, const log_aspect_interface iface, const log_aspect_ctor ctor)</argsstring>
+        <name>log_aspect_create</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const log_aspect_interface</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type>const <ref refid="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" kindref="member">log_aspect_ctor</ref></type>
+          <declname>ctor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="97" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="97" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1ab96281d08b293b8cccdccb8d8447496e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_aspect_reserve</definition>
+        <argsstring>(log_aspect aspect, size_t size)</argsstring>
+        <name>log_aspect_reserve</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="99" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="99" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1ac726a21fe89be520fbe8bdabf2fae75d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API void</type>
+        <definition>LOG_API void log_aspect_restrict</definition>
+        <argsstring>(log_aspect aspect, log_aspect_restrict_cb restrict_cb)</argsstring>
+        <name>log_aspect_restrict</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53" kindref="member">log_aspect_restrict_cb</ref></type>
+          <declname>restrict_cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="101" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="101" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a6d0d1689b238560ed1bd76f45e4c4244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" kindref="member">log_aspect_data</ref></type>
+        <definition>LOG_API log_aspect_data log_aspect_instance</definition>
+        <argsstring>(log_aspect aspect)</argsstring>
+        <name>log_aspect_instance</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="103" column="25" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="103" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a2df568ec2954b0d7f26e354d9df825a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API log_aspect_interface</type>
+        <definition>LOG_API log_aspect_interface log_aspect_behavior</definition>
+        <argsstring>(log_aspect aspect)</argsstring>
+        <name>log_aspect_behavior</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="105" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="105" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1ab2450eed6d6b6424b757c11820cededc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref></type>
+        <definition>LOG_API log_impl log_aspect_parent</definition>
+        <argsstring>(log_aspect aspect)</argsstring>
+        <name>log_aspect_parent</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="107" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="107" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a730839e0b6a6eefd2ea4e9786bf58981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" kindref="member">log_aspect_impl</ref></type>
+        <definition>LOG_API log_aspect_impl log_aspect_derived</definition>
+        <argsstring>(log_aspect aspect)</argsstring>
+        <name>log_aspect_derived</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="109" column="25" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="109" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a458957aaa98f5048fc2a963744c5e4d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_aspect_attach</definition>
+        <argsstring>(log_aspect aspect, log_policy policy)</argsstring>
+        <name>log_aspect_attach</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="111" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="111" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a7b6e8b6850a7423a54979e97a110a9ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_aspect_notify_first</definition>
+        <argsstring>(log_aspect aspect, log_aspect_notify_cb notify_cb, log_aspect_notify_data notify_data)</argsstring>
+        <name>log_aspect_notify_first</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref></type>
+          <declname>notify_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref></type>
+          <declname>notify_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="113" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="113" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a2d04670ab049a9f7afe09a76f837e94f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_aspect_notify_all</definition>
+        <argsstring>(log_aspect aspect, log_aspect_notify_cb notify_cb, log_aspect_notify_data notify_data)</argsstring>
+        <name>log_aspect_notify_all</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref></type>
+          <declname>notify_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref></type>
+          <declname>notify_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="115" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="115" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a1d6f908bead87827c72185748bfa54d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_aspect_detach</definition>
+        <argsstring>(log_aspect aspect, log_policy policy)</argsstring>
+        <name>log_aspect_detach</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="117" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="117" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__aspect_8h_1a1cf48dca81a16598c732e9221eca66e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_aspect_destroy</definition>
+        <argsstring>(log_aspect aspect)</argsstring>
+        <name>log_aspect_destroy</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="119" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" declline="119" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_ASPECT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_ASPECT_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a6cd1cea2305e0697b7c9f604f5e40446" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a6cd1cea2305e0697b7c9f604f5e40446" kindref="member">LOG_ASPECT_FORMAT</ref><sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="41" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319ac0cda2b1be0ad928a3dd6b1284f1af27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319ac0cda2b1be0ad928a3dd6b1284f1af27" kindref="member">LOG_ASPECT_SCHEDULE</ref><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="42" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795" kindref="member">LOG_ASPECT_STORAGE</ref><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline lineno="43" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49" kindref="member">LOG_ASPECT_STREAM</ref><sp/>=<sp/>0x03,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a" kindref="member">LOG_ASPECT_SIZE</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_policy_type;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_aspect_type;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_aspect_impl_type;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_impl_type;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_policy_type<sp/>*<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" kindref="member">log_aspect_impl</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" kindref="member">log_aspect_data</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" kindref="member">log_aspect_ctor</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_aspect_type<sp/>*<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_impl_type<sp/>*<ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__aspect__interface__type" kindref="compound">log_aspect_interface_type</ref><sp/>*log_aspect_interface;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53" kindref="member">log_aspect_restrict_cb</ref>)(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref>,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref>)(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref>,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>,<sp/><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="log__aspect_8h_1aad7fb7f87b60842d5593838cdc1c9bfd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" kindref="member">log_aspect_data</ref><sp/>(*<ref refid="log__aspect_8h_1aad7fb7f87b60842d5593838cdc1c9bfd" kindref="member">log_aspect_impl_create</ref>)(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" kindref="member">log_aspect_ctor</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="log__aspect_8h_1af445703b027dc7055f6bd76e856d1357" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__aspect_8h_1af445703b027dc7055f6bd76e856d1357" kindref="member">log_aspect_impl_destroy</ref>)(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="log__aspect_8h_1ab67dada17f8fbc73e2bce122469af278" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>log_aspect_interface<sp/>(*<ref refid="log__aspect_8h_1ab67dada17f8fbc73e2bce122469af278" kindref="member">log_aspect_singleton</ref>)(void);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structlog__aspect__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__aspect__interface__type" kindref="compound">log_aspect_interface_type</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90" refid="structlog__aspect__interface__type_1a758e54236603164fb1a5a455bbd9c474" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aad7fb7f87b60842d5593838cdc1c9bfd" kindref="member">log_aspect_impl_create</ref><sp/><ref refid="structlog__aspect__interface__type_1a758e54236603164fb1a5a455bbd9c474" kindref="member">create</ref>;</highlight></codeline>
+<codeline lineno="91" refid="structlog__aspect__interface__type_1a2ef1ca3f282d29716edb6e7ca6a9abb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" kindref="member">log_aspect_impl</ref><sp/><ref refid="structlog__aspect__interface__type_1a2ef1ca3f282d29716edb6e7ca6a9abb4" kindref="member">impl</ref>;</highlight></codeline>
+<codeline lineno="92" refid="structlog__aspect__interface__type_1a7a1a9067ef6adb818df28ca98b990ea8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1af445703b027dc7055f6bd76e856d1357" kindref="member">log_aspect_impl_destroy</ref><sp/><ref refid="structlog__aspect__interface__type_1a7a1a9067ef6adb818df28ca98b990ea8" kindref="member">destroy</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/><ref refid="log__aspect_8h_1a750966e98b30e53f100dc0df28450f3c" kindref="member">log_aspect_create</ref>(<ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_aspect_interface<sp/>iface,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" kindref="member">log_aspect_ctor</ref><sp/>ctor);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1ab96281d08b293b8cccdccb8d8447496e" kindref="member">log_aspect_reserve</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1ac726a21fe89be520fbe8bdabf2fae75d" kindref="member">log_aspect_restrict</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53" kindref="member">log_aspect_restrict_cb</ref><sp/>restrict_cb);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" kindref="member">log_aspect_data</ref><sp/><ref refid="log__aspect_8h_1a6d0d1689b238560ed1bd76f45e4c4244" kindref="member">log_aspect_instance</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">LOG_API<sp/>log_aspect_interface<sp/><ref refid="log__aspect_8h_1a2df568ec2954b0d7f26e354d9df825a5" kindref="member">log_aspect_behavior</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/><ref refid="log__aspect_8h_1ab2450eed6d6b6424b757c11820cededc" kindref="member">log_aspect_parent</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" kindref="member">log_aspect_impl</ref><sp/><ref refid="log__aspect_8h_1a730839e0b6a6eefd2ea4e9786bf58981" kindref="member">log_aspect_derived</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a458957aaa98f5048fc2a963744c5e4d2" kindref="member">log_aspect_attach</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a7b6e8b6850a7423a54979e97a110a9ed" kindref="member">log_aspect_notify_first</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref><sp/>notify_cb,<sp/><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref><sp/>notify_data);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a2d04670ab049a9f7afe09a76f837e94f" kindref="member">log_aspect_notify_all</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref><sp/>notify_cb,<sp/><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref><sp/>notify_data);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a1d6f908bead87827c72185748bfa54d5" kindref="member">log_aspect_detach</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a1cf48dca81a16598c732e9221eca66e0" kindref="member">log_aspect_destroy</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_ASPECT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h"/>
+  </compounddef>
+</doxygen>

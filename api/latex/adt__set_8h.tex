@@ -1,0 +1,250 @@
+\doxysection{adt\+\_\+set.\+h File Reference}
+\label{adt__set_8h}\index{adt\_set.h@{adt\_set.h}}
+{\ttfamily \#include $<$adt/adt\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+comparable.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+hash.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for adt\+\_\+set.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{adt__set_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=106pt]{adt__set_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct set\+\_\+type $\ast$ \textbf{ set}
+\item 
+typedef \textbf{ hash} \textbf{ set\+\_\+hash}
+\item 
+typedef \textbf{ comparable} \textbf{ set\+\_\+key}
+\item 
+typedef void $\ast$ \textbf{ set\+\_\+value}
+\item 
+typedef void $\ast$ \textbf{ set\+\_\+cb\+\_\+iterate\+\_\+args}
+\item 
+typedef \textbf{ hash\+\_\+callback} \textbf{ set\+\_\+cb\+\_\+hash}
+\item 
+typedef \textbf{ comparable\+\_\+callback} \textbf{ set\+\_\+cb\+\_\+compare}
+\item 
+typedef int($\ast$ \textbf{ set\+\_\+cb\+\_\+iterate}) (\textbf{ set}, \textbf{ set\+\_\+key}, \textbf{ set\+\_\+value}, \textbf{ set\+\_\+cb\+\_\+iterate\+\_\+args})
+\item 
+typedef struct set\+\_\+iterator\+\_\+type $\ast$ \textbf{ set\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ set} \textbf{ set\+\_\+create} (\textbf{ set\+\_\+cb\+\_\+hash} hash\+\_\+cb, \textbf{ set\+\_\+cb\+\_\+compare} compare\+\_\+cb)
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ set\+\_\+size} (\textbf{ set} s)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+insert} (\textbf{ set} s, \textbf{ set\+\_\+key} key, \textbf{ set\+\_\+value} \textbf{ value})
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+insert\+\_\+array} (\textbf{ set} s, \textbf{ set\+\_\+key} keys[$\,$], \textbf{ set\+\_\+value} values[$\,$], size\+\_\+t size)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+value} \textbf{ set\+\_\+get} (\textbf{ set} s, \textbf{ set\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+contains} (\textbf{ set} s, \textbf{ set\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+contains\+\_\+any} (\textbf{ set} dest, \textbf{ set} src)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+value} \textbf{ set\+\_\+remove} (\textbf{ set} s, \textbf{ set\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ set\+\_\+iterate} (\textbf{ set} s, \textbf{ set\+\_\+cb\+\_\+iterate} iterate\+\_\+cb, \textbf{ set\+\_\+cb\+\_\+iterate\+\_\+args} args)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+append} (\textbf{ set} dest, \textbf{ set} src)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+disjoint} (\textbf{ set} dest, \textbf{ set} src)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+clear} (\textbf{ set} s)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ set\+\_\+destroy} (\textbf{ set} s)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+iterator} \textbf{ set\+\_\+iterator\+\_\+begin} (\textbf{ set} s)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+key} \textbf{ set\+\_\+iterator\+\_\+get\+\_\+key} (\textbf{ set\+\_\+iterator} it)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+value} \textbf{ set\+\_\+iterator\+\_\+get\+\_\+value} (\textbf{ set\+\_\+iterator} it)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ set\+\_\+iterator\+\_\+next} (\textbf{ set\+\_\+iterator} it)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ set\+\_\+iterator\+\_\+end} (\textbf{ set\+\_\+iterator} $\ast$it)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{adt__set_8h_af1b1dedbae3a63c77c18814c6080529f}} 
+\index{adt\_set.h@{adt\_set.h}!set@{set}}
+\index{set@{set}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set}
+{\footnotesize\ttfamily typedef struct set\+\_\+type$\ast$ \textbf{ set}}
+
+\mbox{\label{adt__set_8h_ada139513d97afc81c35f9f89a634e985}} 
+\index{adt\_set.h@{adt\_set.h}!set\_hash@{set\_hash}}
+\index{set\_hash@{set\_hash}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_hash}
+{\footnotesize\ttfamily typedef \textbf{ hash} \textbf{ set\+\_\+hash}}
+
+\mbox{\label{adt__set_8h_ab8483b59585c6662d52bc57b3dd61c09}} 
+\index{adt\_set.h@{adt\_set.h}!set\_key@{set\_key}}
+\index{set\_key@{set\_key}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_key}
+{\footnotesize\ttfamily typedef \textbf{ comparable} \textbf{ set\+\_\+key}}
+
+\mbox{\label{adt__set_8h_a68280a448bd2011e8d88f45c8a4f8dde}} 
+\index{adt\_set.h@{adt\_set.h}!set\_value@{set\_value}}
+\index{set\_value@{set\_value}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_value}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ set\+\_\+value}}
+
+\mbox{\label{adt__set_8h_a8cb0ced0c0b60a7bd5577b825adb877a}} 
+\index{adt\_set.h@{adt\_set.h}!set\_cb\_iterate\_args@{set\_cb\_iterate\_args}}
+\index{set\_cb\_iterate\_args@{set\_cb\_iterate\_args}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_cb\_iterate\_args}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ set\+\_\+cb\+\_\+iterate\+\_\+args}}
+
+\mbox{\label{adt__set_8h_ae30b448653dfdd1ac0e74255f17557a2}} 
+\index{adt\_set.h@{adt\_set.h}!set\_cb\_hash@{set\_cb\_hash}}
+\index{set\_cb\_hash@{set\_cb\_hash}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_cb\_hash}
+{\footnotesize\ttfamily typedef \textbf{ hash\+\_\+callback} \textbf{ set\+\_\+cb\+\_\+hash}}
+
+\mbox{\label{adt__set_8h_a3faae05d7487ec909547ae7f665305a7}} 
+\index{adt\_set.h@{adt\_set.h}!set\_cb\_compare@{set\_cb\_compare}}
+\index{set\_cb\_compare@{set\_cb\_compare}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_cb\_compare}
+{\footnotesize\ttfamily typedef \textbf{ comparable\+\_\+callback} \textbf{ set\+\_\+cb\+\_\+compare}}
+
+\mbox{\label{adt__set_8h_a8fd872ed5a89c8eb6108690330486742}} 
+\index{adt\_set.h@{adt\_set.h}!set\_cb\_iterate@{set\_cb\_iterate}}
+\index{set\_cb\_iterate@{set\_cb\_iterate}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_cb\_iterate}
+{\footnotesize\ttfamily typedef int($\ast$ set\+\_\+cb\+\_\+iterate) (\textbf{ set}, \textbf{ set\+\_\+key}, \textbf{ set\+\_\+value}, \textbf{ set\+\_\+cb\+\_\+iterate\+\_\+args})}
+
+\mbox{\label{adt__set_8h_af6d1ce700940d7e3fcc6f656ca546c8b}} 
+\index{adt\_set.h@{adt\_set.h}!set\_iterator@{set\_iterator}}
+\index{set\_iterator@{set\_iterator}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_iterator}
+{\footnotesize\ttfamily typedef struct set\+\_\+iterator\+\_\+type$\ast$ \textbf{ set\+\_\+iterator}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{adt__set_8h_ac1d78cd72fa2a82e4e330626b04e937d}} 
+\index{adt\_set.h@{adt\_set.h}!set\_create@{set\_create}}
+\index{set\_create@{set\_create}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_create()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ set} set\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ set\+\_\+cb\+\_\+hash}}]{hash\+\_\+cb,  }\item[{\textbf{ set\+\_\+cb\+\_\+compare}}]{compare\+\_\+cb }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a59d124567260a15aa705f77ff9796c50}} 
+\index{adt\_set.h@{adt\_set.h}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_size()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t set\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_aed6c098ba7ac8d9d3261581e344dfc96}} 
+\index{adt\_set.h@{adt\_set.h}!set\_insert@{set\_insert}}
+\index{set\_insert@{set\_insert}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_insert()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s,  }\item[{\textbf{ set\+\_\+key}}]{key,  }\item[{\textbf{ set\+\_\+value}}]{value }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_ab024cd240fae7f3d1b9a8e9d218bcba5}} 
+\index{adt\_set.h@{adt\_set.h}!set\_insert\_array@{set\_insert\_array}}
+\index{set\_insert\_array@{set\_insert\_array}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_insert\_array()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+insert\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s,  }\item[{\textbf{ set\+\_\+key}}]{keys[$\,$],  }\item[{\textbf{ set\+\_\+value}}]{values[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a433e5474d3de9012a2e08ff6356cdf39}} 
+\index{adt\_set.h@{adt\_set.h}!set\_get@{set\_get}}
+\index{set\_get@{set\_get}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_get()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+value} set\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s,  }\item[{\textbf{ set\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_ab45546fa9c240ed7bf3fa92939901cd1}} 
+\index{adt\_set.h@{adt\_set.h}!set\_contains@{set\_contains}}
+\index{set\_contains@{set\_contains}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_contains()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+contains (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s,  }\item[{\textbf{ set\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_af6867d7bf575465b8d56be1619b3a519}} 
+\index{adt\_set.h@{adt\_set.h}!set\_contains\_any@{set\_contains\_any}}
+\index{set\_contains\_any@{set\_contains\_any}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_contains\_any()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+contains\+\_\+any (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{dest,  }\item[{\textbf{ set}}]{src }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a7f2210acc45518622a8f642817c2cdf5}} 
+\index{adt\_set.h@{adt\_set.h}!set\_remove@{set\_remove}}
+\index{set\_remove@{set\_remove}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_remove()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+value} set\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s,  }\item[{\textbf{ set\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_ac719326a2dfbd15ad9597b501d465379}} 
+\index{adt\_set.h@{adt\_set.h}!set\_iterate@{set\_iterate}}
+\index{set\_iterate@{set\_iterate}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_iterate()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void set\+\_\+iterate (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s,  }\item[{\textbf{ set\+\_\+cb\+\_\+iterate}}]{iterate\+\_\+cb,  }\item[{\textbf{ set\+\_\+cb\+\_\+iterate\+\_\+args}}]{args }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a5e4ba95e5fc0a19f8ea5972ce5ac1c15}} 
+\index{adt\_set.h@{adt\_set.h}!set\_append@{set\_append}}
+\index{set\_append@{set\_append}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_append()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+append (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{dest,  }\item[{\textbf{ set}}]{src }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a7feb072e87833cf309de0498c8e34abc}} 
+\index{adt\_set.h@{adt\_set.h}!set\_disjoint@{set\_disjoint}}
+\index{set\_disjoint@{set\_disjoint}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_disjoint()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+disjoint (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{dest,  }\item[{\textbf{ set}}]{src }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a71928f9d2bdb535e9d8fb6bdb2dc479f}} 
+\index{adt\_set.h@{adt\_set.h}!set\_clear@{set\_clear}}
+\index{set\_clear@{set\_clear}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_clear()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a4c7beae1b15da99376f4fc6f5acb0ebe}} 
+\index{adt\_set.h@{adt\_set.h}!set\_destroy@{set\_destroy}}
+\index{set\_destroy@{set\_destroy}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_destroy()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void set\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_a28f0e86e46788f17d6fc9f93ba1ad217}} 
+\index{adt\_set.h@{adt\_set.h}!set\_iterator\_begin@{set\_iterator\_begin}}
+\index{set\_iterator\_begin@{set\_iterator\_begin}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_iterator\_begin()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+iterator} set\+\_\+iterator\+\_\+begin (\begin{DoxyParamCaption}\item[{\textbf{ set}}]{s }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_af4489b2c6634f1ca21a0e6725c0afa1f}} 
+\index{adt\_set.h@{adt\_set.h}!set\_iterator\_get\_key@{set\_iterator\_get\_key}}
+\index{set\_iterator\_get\_key@{set\_iterator\_get\_key}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_iterator\_get\_key()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+key} set\+\_\+iterator\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{\textbf{ set\+\_\+iterator}}]{it }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_abca4386a64fa2dbf5c101b30b8c55aae}} 
+\index{adt\_set.h@{adt\_set.h}!set\_iterator\_get\_value@{set\_iterator\_get\_value}}
+\index{set\_iterator\_get\_value@{set\_iterator\_get\_value}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_iterator\_get\_value()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ set\+\_\+value} set\+\_\+iterator\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\textbf{ set\+\_\+iterator}}]{it }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_aa2d12e07e3cf7533789d566a4fc2bd8c}} 
+\index{adt\_set.h@{adt\_set.h}!set\_iterator\_next@{set\_iterator\_next}}
+\index{set\_iterator\_next@{set\_iterator\_next}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_iterator\_next()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void set\+\_\+iterator\+\_\+next (\begin{DoxyParamCaption}\item[{\textbf{ set\+\_\+iterator}}]{it }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__set_8h_ad1f48b3840d8addfd1c0faf23124d225}} 
+\index{adt\_set.h@{adt\_set.h}!set\_iterator\_end@{set\_iterator\_end}}
+\index{set\_iterator\_end@{set\_iterator\_end}!adt\_set.h@{adt\_set.h}}
+\doxysubsubsection{set\_iterator\_end()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int set\+\_\+iterator\+\_\+end (\begin{DoxyParamCaption}\item[{\textbf{ set\+\_\+iterator} $\ast$}]{it }\end{DoxyParamCaption})}
+

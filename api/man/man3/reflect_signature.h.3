@@ -1,0 +1,90 @@
+.TH "reflect_signature.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_signature.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+\fC#include <reflect/reflect_type\&.h>\fP
+.br
+\fC#include <reflect/reflect_value\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct signature_type * \fBsignature\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBsignature\fP \fBsignature_create\fP (size_t count)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBsignature\fP \fBsignature_resize\fP (\fBsignature\fP s, size_t count)"
+.br
+.ti -1c
+.RI "REFLECT_API size_t \fBsignature_count\fP (\fBsignature\fP s)"
+.br
+.ti -1c
+.RI "REFLECT_API size_t \fBsignature_get_index\fP (\fBsignature\fP s, const char *name)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBsignature_get_name\fP (\fBsignature\fP s, size_t index)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBtype\fP \fBsignature_get_type\fP (\fBsignature\fP s, size_t index)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBtype\fP \fBsignature_get_return\fP (\fBsignature\fP s)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBsignature_set\fP (\fBsignature\fP s, size_t index, const char *name, \fBtype\fP t)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBsignature_set_return\fP (\fBsignature\fP s, \fBtype\fP t)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBsignature_metadata\fP (\fBsignature\fP s)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBsignature_destroy\fP (\fBsignature\fP s)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct signature_type* \fBsignature\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBsignature\fP signature_create (size_t count)"
+
+.SS "REFLECT_API \fBsignature\fP signature_resize (\fBsignature\fP s, size_t count)"
+
+.SS "REFLECT_API size_t signature_count (\fBsignature\fP s)"
+
+.SS "REFLECT_API size_t signature_get_index (\fBsignature\fP s, const char * name)"
+
+.SS "const REFLECT_API char* signature_get_name (\fBsignature\fP s, size_t index)"
+
+.SS "REFLECT_API \fBtype\fP signature_get_type (\fBsignature\fP s, size_t index)"
+
+.SS "REFLECT_API \fBtype\fP signature_get_return (\fBsignature\fP s)"
+
+.SS "REFLECT_API void signature_set (\fBsignature\fP s, size_t index, const char * name, \fBtype\fP t)"
+
+.SS "REFLECT_API void signature_set_return (\fBsignature\fP s, \fBtype\fP t)"
+
+.SS "REFLECT_API \fBvalue\fP signature_metadata (\fBsignature\fP s)"
+
+.SS "REFLECT_API void signature_destroy (\fBsignature\fP s)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

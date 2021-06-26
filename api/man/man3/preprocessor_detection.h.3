@@ -1,0 +1,49 @@
+.TH "preprocessor_detection.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+preprocessor_detection.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <preprocessor/preprocessor_api\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_arguments\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_concatenation\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPREPROCESSOR_DETECT\fP(\&.\&.\&.)   \fBPREPROCESSOR_ARGS_SECOND\fP(__VA_ARGS__, 0, )"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_DETECT_TOKEN\fP(token)   token, 1"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_DETECT_PARENTHESIS_IMPL\fP(\&.\&.\&.)   \fBPREPROCESSOR_DETECT_TOKEN\fP(~)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_DETECT_PARENTHESIS\fP(expr)   \fBPREPROCESSOR_DETECT\fP(\fBPREPROCESSOR_DETECT_PARENTHESIS_IMPL\fP expr)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_DETECT_COMPARABLE\fP(expr)   \fBPREPROCESSOR_DETECT_PARENTHESIS\fP(\fBPREPROCESSOR_CONCAT\fP(PREPROCESSOR_COMPARE_, expr)(()))"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PREPROCESSOR_DETECT( \&.\&.\&.)   \fBPREPROCESSOR_ARGS_SECOND\fP(__VA_ARGS__, 0, )"
+
+.SS "#define PREPROCESSOR_DETECT_TOKEN(token)   token, 1"
+
+.SS "#define PREPROCESSOR_DETECT_PARENTHESIS_IMPL( \&.\&.\&.)   \fBPREPROCESSOR_DETECT_TOKEN\fP(~)"
+
+.SS "#define PREPROCESSOR_DETECT_PARENTHESIS(expr)   \fBPREPROCESSOR_DETECT\fP(\fBPREPROCESSOR_DETECT_PARENTHESIS_IMPL\fP expr)"
+
+.SS "#define PREPROCESSOR_DETECT_COMPARABLE(expr)   \fBPREPROCESSOR_DETECT_PARENTHESIS\fP(\fBPREPROCESSOR_CONCAT\fP(PREPROCESSOR_COMPARE_, expr)(()))"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

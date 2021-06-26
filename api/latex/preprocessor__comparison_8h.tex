@@ -1,0 +1,69 @@
+\doxysection{preprocessor\+\_\+comparison.\+h File Reference}
+\label{preprocessor__comparison_8h}\index{preprocessor\_comparison.h@{preprocessor\_comparison.h}}
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+bit.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+concatenation.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+detection.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+empty.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+if.\+h$>$}\newline
+Include dependency graph for preprocessor\+\_\+comparison.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{preprocessor__comparison_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{preprocessor__comparison_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+M\+PL}(left,  right)
+\item 
+\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL}(left,  right)
+\item 
+\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+E\+Q\+U\+AL}(left,  right)~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+PL}(\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL}(left, right))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{preprocessor__comparison_8h_a8370815c87834af662ec2100e9f1f69f}} 
+\index{preprocessor\_comparison.h@{preprocessor\_comparison.h}!PREPROCESSOR\_COMPARE\_IMPL@{PREPROCESSOR\_COMPARE\_IMPL}}
+\index{PREPROCESSOR\_COMPARE\_IMPL@{PREPROCESSOR\_COMPARE\_IMPL}!preprocessor\_comparison.h@{preprocessor\_comparison.h}}
+\doxysubsubsection{PREPROCESSOR\_COMPARE\_IMPL}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+M\+PL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    PREPROCESSOR\_DETECT\_PARENTHESIS(           \(\backslash\)}
+\DoxyCodeLine{        PREPROCESSOR\_COMPARE\_\#\#left(PREPROCESSOR\_COMPARE\_\#\#right)(()))}
+
+\end{DoxyCode}
+\mbox{\label{preprocessor__comparison_8h_a9f5a5a9a7532c55879c0f837309b94bc}} 
+\index{preprocessor\_comparison.h@{preprocessor\_comparison.h}!PREPROCESSOR\_NOT\_EQUAL@{PREPROCESSOR\_NOT\_EQUAL}}
+\index{PREPROCESSOR\_NOT\_EQUAL@{PREPROCESSOR\_NOT\_EQUAL}!preprocessor\_comparison.h@{preprocessor\_comparison.h}}
+\doxysubsubsection{PREPROCESSOR\_NOT\_EQUAL}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    PREPROCESSOR\_IF\_IMPL(                                                                                  \(\backslash\)}
+\DoxyCodeLine{        PREPROCESSOR\_BIT\_AND(PREPROCESSOR\_DETECT\_COMPARABLE(left))(PREPROCESSOR\_DETECT\_COMPARABLE(right)), \(\backslash\)}
+\DoxyCodeLine{        PREPROCESSOR\_COMPARE\_IMPL,                                                                         \(\backslash\)}
+\DoxyCodeLine{        1 PREPROCESSOR\_EMPTY\_EXPANSION\_VARIADIC)                                                           \(\backslash\)}
+\DoxyCodeLine{    (left, right)}
+
+\end{DoxyCode}
+\mbox{\label{preprocessor__comparison_8h_a7eb481391763f36fadaa40a3677a3850}} 
+\index{preprocessor\_comparison.h@{preprocessor\_comparison.h}!PREPROCESSOR\_EQUAL@{PREPROCESSOR\_EQUAL}}
+\index{PREPROCESSOR\_EQUAL@{PREPROCESSOR\_EQUAL}!preprocessor\_comparison.h@{preprocessor\_comparison.h}}
+\doxysubsubsection{PREPROCESSOR\_EQUAL}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+PL}(\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL}(left, right))}
+

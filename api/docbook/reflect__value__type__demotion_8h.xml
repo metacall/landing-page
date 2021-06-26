@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__value__type__demotion_8h">
+<title>reflect_value_type_demotion.h File Reference</title>
+<indexterm><primary>reflect_value_type_demotion.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_type_id.h&gt;
+#include &lt;reflect/reflect_value.h&gt;
+</programlisting>Include dependency graph for reflect_value_type_demotion.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__value__type__demotion_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__value__type__demotion_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type__demotion_8h_1ac9ffe11dcb724796394629d1bca55925">value_type_demotion_boolean</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type__demotion_8h_1ad3d5a7bb5f59adaf90d0f1300fbfd1e0">value_type_demotion_integer</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__value__type__demotion_8h_1adaceb63576fd21eb14a582e32a71d1d2">value_type_demotion_decimal</link> (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__value__type__demotion_8h_1ac9ffe11dcb724796394629d1bca55925"/>    <section>
+    <title>value_type_demotion_boolean()</title>
+<indexterm><primary>value_type_demotion_boolean</primary><secondary>reflect_value_type_demotion.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type_demotion.h</primary><secondary>value_type_demotion_boolean</secondary></indexterm>
+<para><computeroutput><link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_type_demotion_boolean (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Demotes a boolean value @v to new type @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>New type id of value to be demoted</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Demoted value if a valid demotion, or @v if value is already demoted, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type__demotion_8h_1ad3d5a7bb5f59adaf90d0f1300fbfd1e0"/>    <section>
+    <title>value_type_demotion_integer()</title>
+<indexterm><primary>value_type_demotion_integer</primary><secondary>reflect_value_type_demotion.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type_demotion.h</primary><secondary>value_type_demotion_integer</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_type_demotion_integer (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Demotes a integer value @v to new type @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>New type id of value to be demoted</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Demoted value if a valid demotion, or @v if value is already demoted, null otherwhise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_reflect__value__type__demotion_8h_1adaceb63576fd21eb14a582e32a71d1d2"/>    <section>
+    <title>value_type_demotion_decimal()</title>
+<indexterm><primary>value_type_demotion_decimal</primary><secondary>reflect_value_type_demotion.h</secondary></indexterm>
+<indexterm><primary>reflect_value_type_demotion.h</primary><secondary>value_type_demotion_decimal</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> value_type_demotion_decimal (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> id)</computeroutput></para><para>
+
+<para>Demotes a decimal value @v to new type @id. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Reference to the value</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>New type id of value to be demoted</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Demoted value if a valid demotion, or @v if value is already demoted, null otherwhise </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

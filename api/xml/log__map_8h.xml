@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__map_8h" kind="file" language="C++">
+    <compoundname>log_map.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="1">
+        <label>log_map.h</label>
+        <link refid="log__map_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="log__map_8h_1a51f29049e60390011ba60759928b90d4" prot="public" static="no">
+        <name>LOG_MAP_MIN_SIZE</name>
+        <initializer>((size_t)0x00000100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="26" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log__map_8h_1a6c84d535201e393fc5aa12c832099a9a" prot="public" static="no">
+        <name>LOG_MAP_MAX_SIZE</name>
+        <initializer>((size_t)0x00010000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="27" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" prot="public" static="no">
+        <type>struct log_map_type *</type>
+        <definition>typedef struct log_map_type* log_map</definition>
+        <argsstring></argsstring>
+        <name>log_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="37" column="27" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__map_8h_1a5759f32622bbae31823849a72cb65278" prot="public" static="no">
+        <type>struct log_map_iterator_type *</type>
+        <definition>typedef struct log_map_iterator_type* log_map_iterator</definition>
+        <argsstring></argsstring>
+        <name>log_map_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="39" column="36" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__map_8h_1ae7d12bf96b98e30090accec32d5e087f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+        <definition>LOG_API log_map log_map_create</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>log_map_create</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="43" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="43" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a979ffcf3807ac2bcd4a103a1a4b3942a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API size_t</type>
+        <definition>LOG_API size_t log_map_size</definition>
+        <argsstring>(log_map map)</argsstring>
+        <name>log_map_size</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="45" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="45" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a713b1e9ac10acc9f632bfcf018ba3804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API size_t</type>
+        <definition>LOG_API size_t log_map_collisions</definition>
+        <argsstring>(log_map map)</argsstring>
+        <name>log_map_collisions</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="47" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="47" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a45919aa5dc4f8d86a587688f31d8f21c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_map_insert</definition>
+        <argsstring>(log_map map, const char *key, const void *value)</argsstring>
+        <name>log_map_insert</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="49" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="49" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1ad9b2193625cf0720ceb7c6f88747a41e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const LOG_API void *</type>
+        <definition>const LOG_API void* log_map_get</definition>
+        <argsstring>(log_map map, const char *key)</argsstring>
+        <name>log_map_get</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="51" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="51" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a75e4147fdf32fa0e85b3f92715f48bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const LOG_API void *</type>
+        <definition>const LOG_API void* log_map_remove</definition>
+        <argsstring>(log_map map, const char *key)</argsstring>
+        <name>log_map_remove</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="53" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="53" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a1cce62efc00f8725d0c98448afcc4d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_map_clear</definition>
+        <argsstring>(log_map map)</argsstring>
+        <name>log_map_clear</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="55" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="55" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1aa3e9451f8b4a7ffcfeb6e8354001d167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_map_destroy</definition>
+        <argsstring>(log_map map)</argsstring>
+        <name>log_map_destroy</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="57" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="57" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a868fd9f4821e61dd5c256fa92be67483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref></type>
+        <definition>LOG_API log_map_iterator log_map_iterator_begin</definition>
+        <argsstring>(log_map map)</argsstring>
+        <name>log_map_iterator_begin</name>
+        <param>
+          <type><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="59" column="26" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="59" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1abe996fa9adc787155fe80220af1b86b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const LOG_API char *</type>
+        <definition>const LOG_API char* log_map_iterator_key</definition>
+        <argsstring>(log_map_iterator iterator)</argsstring>
+        <name>log_map_iterator_key</name>
+        <param>
+          <type><ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref></type>
+          <declname>iterator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="61" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="61" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1ad44b39000edc860f31d44c1f18617b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const LOG_API void *</type>
+        <definition>const LOG_API void* log_map_iterator_value</definition>
+        <argsstring>(log_map_iterator iterator)</argsstring>
+        <name>log_map_iterator_value</name>
+        <param>
+          <type><ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref></type>
+          <declname>iterator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="63" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="63" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a6b33590e86d50ce35920e7826b2ff0b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_map_iterator_next</definition>
+        <argsstring>(log_map_iterator iterator)</argsstring>
+        <name>log_map_iterator_next</name>
+        <param>
+          <type><ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref></type>
+          <declname>iterator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="65" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="65" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="log__map_8h_1a1faa8c1abffa2d1fe93046720ac2f9da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_map_iterator_end</definition>
+        <argsstring>(log_map_iterator iterator)</argsstring>
+        <name>log_map_iterator_end</name>
+        <param>
+          <type><ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref></type>
+          <declname>iterator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" line="67" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h" declline="67" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_MAP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_MAP_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="log__map_8h_1a51f29049e60390011ba60759928b90d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_MAP_MIN_SIZE<sp/>((size_t)0x00000100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="log__map_8h_1a6c84d535201e393fc5aa12c832099a9a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_MAP_MAX_SIZE<sp/>((size_t)0x00010000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_map_type;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_map_iterator_type;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_map_type<sp/>*<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_map_iterator_type<sp/>*<ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">LOG_API<sp/><ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/><ref refid="log__map_8h_1ae7d12bf96b98e30090accec32d5e087f" kindref="member">log_map_create</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__map_8h_1a979ffcf3807ac2bcd4a103a1a4b3942a" kindref="member">log_map_size</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__map_8h_1a713b1e9ac10acc9f632bfcf018ba3804" kindref="member">log_map_collisions</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__map_8h_1a45919aa5dc4f8d86a587688f31d8f21c" kindref="member">log_map_insert</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__map_8h_1ad9b2193625cf0720ceb7c6f88747a41e" kindref="member">log_map_get</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__map_8h_1a75e4147fdf32fa0e85b3f92715f48bcf" kindref="member">log_map_remove</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__map_8h_1a1cce62efc00f8725d0c98448afcc4d03" kindref="member">log_map_clear</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__map_8h_1aa3e9451f8b4a7ffcfeb6e8354001d167" kindref="member">log_map_destroy</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">LOG_API<sp/><ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref><sp/><ref refid="log__map_8h_1a868fd9f4821e61dd5c256fa92be67483" kindref="member">log_map_iterator_begin</ref>(<ref refid="log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de" kindref="member">log_map</ref><sp/>map);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="log__map_8h_1abe996fa9adc787155fe80220af1b86b9" kindref="member">log_map_iterator_key</ref>(<ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref><sp/>iterator);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__map_8h_1ad44b39000edc860f31d44c1f18617b02" kindref="member">log_map_iterator_value</ref>(<ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref><sp/>iterator);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__map_8h_1a6b33590e86d50ce35920e7826b2ff0b1" kindref="member">log_map_iterator_next</ref>(<ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref><sp/>iterator);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__map_8h_1a1faa8c1abffa2d1fe93046720ac2f9da" kindref="member">log_map_iterator_end</ref>(<ref refid="log__map_8h_1a5759f32622bbae31823849a72cb65278" kindref="member">log_map_iterator</ref><sp/>iterator);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_MAP_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_map.h"/>
+  </compounddef>
+</doxygen>

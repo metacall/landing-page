@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall__allocator_8h">
+<title>metacall_allocator.h File Reference</title>
+<indexterm><primary>metacall_allocator.h</primary></indexterm>
+<programlisting>#include &lt;metacall/metacall_api.h&gt;
+#include &lt;stdint.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for metacall_allocator.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__allocator_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__allocator_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structmetacall__allocator__std__type">metacall_allocator_std</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__allocator__nginx__type">metacall_allocator_nginx</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct ngx_pool_s <link linkend="_metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a">ngx_pool_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0">metacall_allocator_id</link> { <link linkend="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0a67cca764a74b77ad2020133cedebbccf">METACALL_ALLOCATOR_STD</link>, 
+<link linkend="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0af8fd4cad9e16d4eebc5d6b11f22ad660">METACALL_ALLOCATOR_NGINX</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__allocator_8h_1a80bcc59f9af8de1e83b2f3cd16331abf">metacall_allocator_create</link> (enum <link linkend="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0">metacall_allocator_id</link> allocator_id, void *ctx)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__allocator_8h_1a11955bb72ecaeb55d744399c4873877a">metacall_allocator_alloc</link> (void *allocator, size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall__allocator_8h_1a86d28585e532c50bd40400a9e08c945e">metacall_allocator_realloc</link> (void *allocator, void *data, size_t size, size_t new_size)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall__allocator_8h_1a8e5a017db2359ab0c61abf65e2ddbca8">metacall_allocator_free</link> (void *allocator, void *data)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall__allocator_8h_1ac10be77104e59404e9f611eb0e8e830a">metacall_allocator_destroy</link> (void *allocator)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a"/>    <section>
+    <title>ngx_pool_t</title>
+<indexterm><primary>ngx_pool_t</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>ngx_pool_t</secondary></indexterm>
+<para><computeroutput>typedef struct ngx_pool_s <link linkend="_metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a">ngx_pool_t</link></computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0"/>    <section>
+    <title>metacall_allocator_id</title>
+<indexterm><primary>metacall_allocator_id</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>metacall_allocator_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0">metacall_allocator_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>METACALL_ALLOCATOR_STD</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>METACALL_ALLOCATOR_STD</secondary></indexterm>
+<anchor xml:id="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0a67cca764a74b77ad2020133cedebbccf"/>METACALL_ALLOCATOR_STD</entry><entry></entry></row><row><entry><indexterm><primary>METACALL_ALLOCATOR_NGINX</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>METACALL_ALLOCATOR_NGINX</secondary></indexterm>
+<anchor xml:id="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0af8fd4cad9e16d4eebc5d6b11f22ad660"/>METACALL_ALLOCATOR_NGINX</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_metacall__allocator_8h_1a80bcc59f9af8de1e83b2f3cd16331abf"/>    <section>
+    <title>metacall_allocator_create()</title>
+<indexterm><primary>metacall_allocator_create</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>metacall_allocator_create</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_allocator_create (enum <link linkend="_metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0">metacall_allocator_id</link> allocator_id, void * ctx)</computeroutput></para><para>
+
+<para>Create an allocator instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator_id</entry>
+                                <entry>
+<para>Type of allocator to be created</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ctx</entry>
+                                <entry>
+<para>Context of the allocator</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to allocator if success, null otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__allocator_8h_1a11955bb72ecaeb55d744399c4873877a"/>    <section>
+    <title>metacall_allocator_alloc()</title>
+<indexterm><primary>metacall_allocator_alloc</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>metacall_allocator_alloc</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_allocator_alloc (void * allocator, size_t size)</computeroutput></para><para>
+
+<para>Reserve memory from an allocator instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator instance</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Size in bytes to be allocated</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to allocated data on success, null otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__allocator_8h_1a86d28585e532c50bd40400a9e08c945e"/>    <section>
+    <title>metacall_allocator_realloc()</title>
+<indexterm><primary>metacall_allocator_realloc</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>metacall_allocator_realloc</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_allocator_realloc (void * allocator, void * data, size_t size, size_t new_size)</computeroutput></para><para>
+
+<para>Reallocate memory from an allocator instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator instance</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Original pointer to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Original size in bytes</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>new_size</entry>
+                                <entry>
+<para>New size in bytes to be reallocated</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to new reallocated data on success, null otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__allocator_8h_1a8e5a017db2359ab0c61abf65e2ddbca8"/>    <section>
+    <title>metacall_allocator_free()</title>
+<indexterm><primary>metacall_allocator_free</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>metacall_allocator_free</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_allocator_free (void * allocator, void * data)</computeroutput></para><para>
+
+<para>Free memory from an allocator instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator instance</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to data to be freed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_metacall__allocator_8h_1ac10be77104e59404e9f611eb0e8e830a"/>    <section>
+    <title>metacall_allocator_destroy()</title>
+<indexterm><primary>metacall_allocator_destroy</primary><secondary>metacall_allocator.h</secondary></indexterm>
+<indexterm><primary>metacall_allocator.h</primary><secondary>metacall_allocator_destroy</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_allocator_destroy (void * allocator)</computeroutput></para><para>
+
+<para>Destroy an allocator instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>allocator</entry>
+                                <entry>
+<para>Pointer to allocator instance </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

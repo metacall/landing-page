@@ -1,0 +1,827 @@
+\doxysection{adt\+\_\+vector.\+h File Reference}
+\label{adt__vector_8h}\index{adt\_vector.h@{adt\_vector.h}}
+{\ttfamily \#include $<$adt/adt\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for adt\+\_\+vector.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{adt__vector_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{adt__vector_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ vector\+\_\+create\+\_\+type}(\textbf{ type\+\_\+name})~\textbf{ vector\+\_\+create}(sizeof(\textbf{ type\+\_\+name}))
+\item 
+\#define \textbf{ vector\+\_\+create\+\_\+reserve\+\_\+type}(\textbf{ type\+\_\+name},  capacity)~\textbf{ vector\+\_\+create\+\_\+reserve}(sizeof(\textbf{ type\+\_\+name}), capacity)
+\item 
+\#define \textbf{ vector\+\_\+front\+\_\+type}(v,  \textbf{ type\+\_\+name})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+front}(v)))
+\item 
+\#define \textbf{ vector\+\_\+back\+\_\+type}(v,  \textbf{ type\+\_\+name})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+back}(v)))
+\item 
+\#define \textbf{ vector\+\_\+at\+\_\+type}(v,  position,  \textbf{ type\+\_\+name})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+at}(v, position)))
+\item 
+\#define \textbf{ vector\+\_\+set\+\_\+var}(v,  position,  variable)~\textbf{ vector\+\_\+set}(v, position, \&variable)
+\item 
+\#define \textbf{ vector\+\_\+push\+\_\+back\+\_\+var}(v,  variable)~\textbf{ vector\+\_\+push\+\_\+back}(v, \&variable)
+\item 
+\#define \textbf{ vector\+\_\+push\+\_\+front\+\_\+var}(v,  variable)~\textbf{ vector\+\_\+push\+\_\+front}(v, \&variable)
+\item 
+\#define \textbf{ vector\+\_\+insert\+\_\+var}(v,  position,  variable)~\textbf{ vector\+\_\+insert}(v, position, \&variable)
+\item 
+\#define \textbf{ vector\+\_\+set\+\_\+const}(v,  position,  constant,  \textbf{ type\+\_\+name})
+\item 
+\#define \textbf{ vector\+\_\+push\+\_\+back\+\_\+const}(v,  constant,  \textbf{ type\+\_\+name})
+\item 
+\#define \textbf{ vector\+\_\+push\+\_\+front\+\_\+const}(v,  constant,  \textbf{ type\+\_\+name})
+\item 
+\#define \textbf{ vector\+\_\+insert\+\_\+const}(v,  position,  constant,  \textbf{ type\+\_\+name})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct vector\+\_\+type $\ast$ \textbf{ vector}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ vector\+\_\+create} (size\+\_\+t type\+\_\+size)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ vector\+\_\+create\+\_\+reserve} (size\+\_\+t type\+\_\+size, size\+\_\+t capacity)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ vector\+\_\+copy} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ vector\+\_\+reserve} (\textbf{ vector} v, size\+\_\+t capacity)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ vector\+\_\+resize} (\textbf{ vector} v, size\+\_\+t size)
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ vector\+\_\+capacity} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ vector\+\_\+size} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ vector\+\_\+type\+\_\+size} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void $\ast$ \textbf{ vector\+\_\+front} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void $\ast$ \textbf{ vector\+\_\+back} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void $\ast$ \textbf{ vector\+\_\+at} (\textbf{ vector} v, size\+\_\+t position)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+set} (\textbf{ vector} v, size\+\_\+t position, void $\ast$element)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+back\+\_\+empty} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+back} (\textbf{ vector} v, void $\ast$element)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+pop\+\_\+back} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+front\+\_\+empty} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+front} (\textbf{ vector} v, void $\ast$element)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+pop\+\_\+front} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+insert\+\_\+empty} (\textbf{ vector} v, size\+\_\+t position)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+insert} (\textbf{ vector} v, size\+\_\+t position, void $\ast$element)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+erase} (\textbf{ vector} v, size\+\_\+t position)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ vector\+\_\+clear} (\textbf{ vector} v)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+destroy} (\textbf{ vector} v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{adt__vector_8h_a946b6ec8932c7d60139f2e289c74a36b}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_create\_type@{vector\_create\_type}}
+\index{vector\_create\_type@{vector\_create\_type}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_create\_type}
+{\footnotesize\ttfamily \#define vector\+\_\+create\+\_\+type(\begin{DoxyParamCaption}\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~\textbf{ vector\+\_\+create}(sizeof(\textbf{ type\+\_\+name}))}
+
+
+
+Create a vector in memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of each element of the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the vector memory block 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a7d8a3fb5278ed9df33d2bb8599331e06}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_create\_reserve\_type@{vector\_create\_reserve\_type}}
+\index{vector\_create\_reserve\_type@{vector\_create\_reserve\_type}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_create\_reserve\_type}
+{\footnotesize\ttfamily \#define vector\+\_\+create\+\_\+reserve\+\_\+type(\begin{DoxyParamCaption}\item[{}]{\textbf{ type\+\_\+name},  }\item[{}]{capacity }\end{DoxyParamCaption})~\textbf{ vector\+\_\+create\+\_\+reserve}(sizeof(\textbf{ type\+\_\+name}), capacity)}
+
+
+
+Create a vector with @capacity elements preallocated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of each element of the vector\\
+\hline
+\mbox{\texttt{ in}}  & {\em capacity} & Preallocated elements of the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the vector memory block 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a7f11f0092036be5fc72c8129f6a90d21}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_front\_type@{vector\_front\_type}}
+\index{vector\_front\_type@{vector\_front\_type}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_front\_type}
+{\footnotesize\ttfamily \#define vector\+\_\+front\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+front}(v)))}
+
+
+
+Access to the first element in vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be accessed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the first element 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a0ee15fe71f9082d4bcea90a56a6f38da}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_back\_type@{vector\_back\_type}}
+\index{vector\_back\_type@{vector\_back\_type}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_back\_type}
+{\footnotesize\ttfamily \#define vector\+\_\+back\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+back}(v)))}
+
+
+
+Access to the last element in vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be accessed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the last element 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a8955efed1b07820a1da1c2b71f4449b1}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_at\_type@{vector\_at\_type}}
+\index{vector\_at\_type@{vector\_at\_type}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_at\_type}
+{\footnotesize\ttfamily \#define vector\+\_\+at\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+at}(v, position)))}
+
+
+
+Access to object at @position where\+: [0 $<$= @position $<$= vector\+\_\+size(v) -\/ 1 ]. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be accessed\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be accessed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the element at @position 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a37183e73995259f522d6925e52989078}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_set\_var@{vector\_set\_var}}
+\index{vector\_set\_var@{vector\_set\_var}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_set\_var}
+{\footnotesize\ttfamily \#define vector\+\_\+set\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+set}(v, position, \&variable)}
+
+
+
+Sets a variable object at @position to the same object pointed by @element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be modified\\
+\hline
+\mbox{\texttt{ in}}  & {\em variable} & Variable element to be modified\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be modified \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a06322aeaa2dd1a50a20919d3e13aa0f0}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_back\_var@{vector\_push\_back\_var}}
+\index{vector\_push\_back\_var@{vector\_push\_back\_var}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_back\_var}
+{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+back\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+push\+\_\+back}(v, \&variable)}
+
+
+
+Adds a variable object at the end of vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em variable} & Variable element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a112671f6edc461b2f62d275bd1add3e3}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_front\_var@{vector\_push\_front\_var}}
+\index{vector\_push\_front\_var@{vector\_push\_front\_var}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_front\_var}
+{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+front\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+push\+\_\+front}(v, \&variable)}
+
+
+
+Adds a variable object in first position of vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em variable} & Variable element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_af0e7e14e0926c31055b09d958a2a4b92}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_insert\_var@{vector\_insert\_var}}
+\index{vector\_insert\_var@{vector\_insert\_var}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_insert\_var}
+{\footnotesize\ttfamily \#define vector\+\_\+insert\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+insert}(v, position, \&variable)}
+
+
+
+Adds a variable object in @position where\+: [ 0 $<$= @position $<$= vector\+\_\+size(v) -\/ 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em variable} & Variable element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a5af8eacbf4a90ebcd66fefaf5fdaf46c}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_set\_const@{vector\_set\_const}}
+\index{vector\_set\_const@{vector\_set\_const}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_set\_const}
+{\footnotesize\ttfamily \#define vector\+\_\+set\+\_\+const(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{constant,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                            \(\backslash\)}
+\DoxyCodeLine{    \{                                                             \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;      \(\backslash\)}
+\DoxyCodeLine{                                                                  \(\backslash\)}
+\DoxyCodeLine{        vector\_set(v, position, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
+\DoxyCodeLine{                                                                  \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Sets a constant object at @position to the same object pointed by @element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be modified\\
+\hline
+\mbox{\texttt{ in}}  & {\em constant} & Constant element to be modified\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be modified \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_ad4167623ce19909adc0a66d73276c014}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_back\_const@{vector\_push\_back\_const}}
+\index{vector\_push\_back\_const@{vector\_push\_back\_const}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_back\_const}
+{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+back\+\_\+const(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{constant,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                        \(\backslash\)}
+\DoxyCodeLine{    \{                                                         \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;  \(\backslash\)}
+\DoxyCodeLine{                                                              \(\backslash\)}
+\DoxyCodeLine{        vector\_push\_back(v, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
+\DoxyCodeLine{                                                              \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Adds a constant object at the end of vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em constant} & Constant element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_ac8c9e1a390f31c2fac3d6c7d11ee95ab}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_front\_const@{vector\_push\_front\_const}}
+\index{vector\_push\_front\_const@{vector\_push\_front\_const}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_front\_const}
+{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+front\+\_\+const(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{constant,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                         \(\backslash\)}
+\DoxyCodeLine{    \{                                                          \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;   \(\backslash\)}
+\DoxyCodeLine{                                                               \(\backslash\)}
+\DoxyCodeLine{        vector\_push\_front(v, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
+\DoxyCodeLine{                                                               \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Adds a constant object in first position of vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em constant} & Constant element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_aa8ae3ac32fd2c80f25e922a4f95bcb21}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_insert\_const@{vector\_insert\_const}}
+\index{vector\_insert\_const@{vector\_insert\_const}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_insert\_const}
+{\footnotesize\ttfamily \#define vector\+\_\+insert\+\_\+const(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{constant,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                               \(\backslash\)}
+\DoxyCodeLine{    \{                                                                \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;         \(\backslash\)}
+\DoxyCodeLine{                                                                     \(\backslash\)}
+\DoxyCodeLine{        vector\_insert(v, position, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
+\DoxyCodeLine{                                                                     \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Adds a constant object in @position where\+: [ 0 $<$= @position $<$= vector\+\_\+size(v) -\/ 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em constant} & Constant element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em type\+\_\+name} & Type of element to be inserted \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{adt__vector_8h_addb8a5a5ce3ff4924de759607f4a7a8f}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector@{vector}}
+\index{vector@{vector}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector}
+{\footnotesize\ttfamily typedef struct vector\+\_\+type$\ast$ \textbf{ vector}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{adt__vector_8h_aa5fda1f32a04c497a47c35c4887b4ef7}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_create@{vector\_create}}
+\index{vector\_create@{vector\_create}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_create()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} vector\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{type\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Create a vector in memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type\+\_\+size} & Size of the element type vector will allocate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the vector memory block 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a84986aef46e65945a8b908049cefc1dc}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_create\_reserve@{vector\_create\_reserve}}
+\index{vector\_create\_reserve@{vector\_create\_reserve}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_create\_reserve()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} vector\+\_\+create\+\_\+reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{type\+\_\+size,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Create a vector with @capacity elements preallocated. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type\+\_\+size} & Size of the element type vector will allocate\\
+\hline
+\mbox{\texttt{ in}}  & {\em capacity} & Preallocated elements of the vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the vector memory block 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a953d027f445c44cba0ca5b3a0887c69e}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_copy@{vector\_copy}}
+\index{vector\_copy@{vector\_copy}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_copy()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} vector\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Copy a vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Source vector to be copied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a vector memory block copy 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a98a7e70a5b4fef06bc7c707e0d6a3716}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_reserve@{vector\_reserve}}
+\index{vector\_reserve@{vector\_reserve}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_reserve()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int vector\+\_\+reserve (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Request a change in vector capacity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em capacity} & New capacity of vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positive number on error, zero on success 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a7b182ac37ab3c2a523353d283322867e}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_resize@{vector\_resize}}
+\index{vector\_resize@{vector\_resize}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_resize()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int vector\+\_\+resize (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Resizes container so that it contains @size elements. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & New size of vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positive number on error, zero on success 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a13e1f1a3bed60f1d41d8f984cfea5f34}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_capacity@{vector\_capacity}}
+\index{vector\_capacity@{vector\_capacity}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_capacity()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t vector\+\_\+capacity (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Retreive amount of objects can be stored with current allocated memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Capacity of vector 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a39330e3a432d5512e18e3ed851099240}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_size@{vector\_size}}
+\index{vector\_size@{vector\_size}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_size()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t vector\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Retreive amount of current elements in vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current elements in vector 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a17fda1719686f75abcb047a7cab98535}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_type\_size@{vector\_type\_size}}
+\index{vector\_type\_size@{vector\_type\_size}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_type\_size()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t vector\+\_\+type\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Retreive size of element type of vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size of element type 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_aa117c0fcc822d4cf87442204f98f0cdd}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_front@{vector\_front}}
+\index{vector\_front@{vector\_front}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_front()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void$\ast$ vector\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Access to the first element in vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the first element 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a63ca9ed28901e46249cf49a578803f06}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_back@{vector\_back}}
+\index{vector\_back@{vector\_back}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_back()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void$\ast$ vector\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Access to the last element in vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the last element 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_af81ce1fcedbe109b25134a321806738d}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_at@{vector\_at}}
+\index{vector\_at@{vector\_at}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_at()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void$\ast$ vector\+\_\+at (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
+
+
+
+Access to object at @position where\+: [0 $<$= @position $<$= vector\+\_\+size(v) -\/ 1 ]. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be accessed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the element at @position 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_a5eba77703e9efc9f8f4aa7487040ba60}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_set@{vector\_set}}
+\index{vector\_set@{vector\_set}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_set()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Sets the object at @position to the same object pointed by @element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be modified\\
+\hline
+\mbox{\texttt{ in}}  & {\em element} & Element to be copied at @position \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a0d06e0b81b9cc09e5db0e42588521a56}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_back\_empty@{vector\_push\_back\_empty}}
+\index{vector\_push\_back\_empty@{vector\_push\_back\_empty}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_back\_empty()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+back\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Adds an object at the end of vector without initializing it, all objects be moved (increments allocated memory if neccessary; new element could contain garbage) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a115b74cee82e62489f7648011563837a}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_back@{vector\_push\_back}}
+\index{vector\_push\_back@{vector\_push\_back}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_back()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Adds an object at the end of vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em element} & Element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a4e259834c8bfbb6298b81d8d0d2fe039}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_pop\_back@{vector\_pop\_back}}
+\index{vector\_pop\_back@{vector\_pop\_back}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_pop\_back()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+pop\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Deletes the last object in vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a324cb2548f536dba78139508e0cd7c86}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_front\_empty@{vector\_push\_front\_empty}}
+\index{vector\_push\_front\_empty@{vector\_push\_front\_empty}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_front\_empty()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+front\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Adds an object in first position without initializing it, all objects be moved (increments allocated memory if neccessary; new element could contain garbage) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_adce797d3b63b3b204b4f76c3cb5896e5}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_push\_front@{vector\_push\_front}}
+\index{vector\_push\_front@{vector\_push\_front}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_push\_front()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Adds an object in first position of vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em element} & Element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a896e85d1017183c0703fa5215f51d799}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_pop\_front@{vector\_pop\_front}}
+\index{vector\_pop\_front@{vector\_pop\_front}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_pop\_front()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+pop\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Deletes the first object in vector (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_ab563b1e38cc93fda623dc3e720e2eaf4}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_insert\_empty@{vector\_insert\_empty}}
+\index{vector\_insert\_empty@{vector\_insert\_empty}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_insert\_empty()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+insert\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
+
+
+
+Adds an object in @position without initializing it where\+: [ 0 $<$= @position $<$= vector\+\_\+size(v) -\/ 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary; new element could contain garbage) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_af0331e41caf5c4e352fc15ab55e9cf99}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_insert@{vector\_insert}}
+\index{vector\_insert@{vector\_insert}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_insert()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+
+
+
+Adds an object in @position where\+: [ 0 $<$= @position $<$= vector\+\_\+size(v) -\/ 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be inserted\\
+\hline
+\mbox{\texttt{ in}}  & {\em element} & Reference to the element to be inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_a75406763e0f7bd429502f2f0cdc88107}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_erase@{vector\_erase}}
+\index{vector\_erase@{vector\_erase}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_erase()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+erase (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
+
+
+
+Deletes an object in @position (decrements allocated memory if neccessary) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & Position of element to be erased \\
+\hline
+\end{DoxyParams}
+\mbox{\label{adt__vector_8h_af1ab05486b73a8d81ef36597422e175c}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_clear@{vector\_clear}}
+\index{vector\_clear@{vector\_clear}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_clear()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int vector\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Clear internal data of the vector and set size to zero. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positive number on error, zero on success 
+\end{DoxyReturn}
+\mbox{\label{adt__vector_8h_ab25378e57451406a042071ffa0d03e3d}} 
+\index{adt\_vector.h@{adt\_vector.h}!vector\_destroy@{vector\_destroy}}
+\index{vector\_destroy@{vector\_destroy}!adt\_vector.h@{adt\_vector.h}}
+\doxysubsubsection{vector\_destroy()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+
+
+
+Destroy a vector from memory (do not apply same operation twice over same object) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector pointer \\
+\hline
+\end{DoxyParams}

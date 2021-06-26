@@ -1,0 +1,174 @@
+.TH "loader.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loader.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <loader/loader_api\&.h>\fP
+.br
+\fC#include <loader/loader_impl\&.h>\fP
+.br
+\fC#include <loader/loader_impl_interface\&.h>\fP
+.br
+\fC#include <loader/loader_naming\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvalue\fP(* \fBloader_register_invoke\fP) (size_t, void *[], void *)"
+.br
+.ti -1c
+.RI "typedef void * \fBloader_data\fP"
+.br
+.ti -1c
+.RI "typedef struct loader_type * \fBloader\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOADER_API \fBloader\fP \fBloader_singleton\fP (void)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_initialization_register\fP (\fBloader_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_initialize\fP (void)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_is_initialized\fP (const \fBloader_naming_tag\fP tag)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_register\fP (const char *name, \fBloader_register_invoke\fP invoke, \fBfunction\fP *func, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_load_path\fP (const \fBloader_naming_path\fP path)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_execution_path\fP (const \fBloader_naming_tag\fP tag, const \fBloader_naming_path\fP path)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_load_from_file\fP (const \fBloader_naming_tag\fP tag, const \fBloader_naming_path\fP paths[], size_t size, void **handle)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_load_from_memory\fP (const \fBloader_naming_tag\fP tag, const char *buffer, size_t size, void **handle)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_load_from_package\fP (const \fBloader_naming_tag\fP tag, const \fBloader_naming_path\fP path, void **handle)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_load_from_configuration\fP (const \fBloader_naming_path\fP path, void **handle, void *allocator)"
+.br
+.ti -1c
+.RI "LOADER_API \fBloader_impl\fP \fBloader_get_impl\fP (const \fBloader_naming_tag\fP tag)"
+.br
+.ti -1c
+.RI "LOADER_API \fBloader_data\fP \fBloader_get\fP (const char *name)"
+.br
+.ti -1c
+.RI "LOADER_API void * \fBloader_get_handle\fP (const \fBloader_naming_tag\fP tag, const char *name)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_set_options\fP (const \fBloader_naming_tag\fP tag, void *options)"
+.br
+.ti -1c
+.RI "LOADER_API void * \fBloader_get_options\fP (const \fBloader_naming_tag\fP tag)"
+.br
+.ti -1c
+.RI "const LOADER_API char * \fBloader_handle_id\fP (void *handle)"
+.br
+.ti -1c
+.RI "LOADER_API void * \fBloader_handle_export\fP (void *handle)"
+.br
+.ti -1c
+.RI "LOADER_API \fBloader_data\fP \fBloader_handle_get\fP (void *handle, const char *name)"
+.br
+.ti -1c
+.RI "LOADER_API \fBvalue\fP \fBloader_metadata\fP (void)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_clear\fP (void *handle)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_unload_children\fP (\fBloader_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_unload\fP (void)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_destroy\fP (void)"
+.br
+.ti -1c
+.RI "const LOADER_API char * \fBloader_print_info\fP (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBvalue\fP(* loader_register_invoke) (size_t, void *[], void *)"
+
+.SS "typedef void* \fBloader_data\fP"
+
+.SS "typedef struct loader_type* \fBloader\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "LOADER_API \fBloader\fP loader_singleton (void)"
+
+.SS "LOADER_API void loader_initialization_register (\fBloader_impl\fP impl)"
+
+.SS "LOADER_API void loader_initialize (void)"
+
+.SS "LOADER_API int loader_is_initialized (const \fBloader_naming_tag\fP tag)"
+
+.SS "LOADER_API int loader_register (const char * name, \fBloader_register_invoke\fP invoke, \fBfunction\fP * func, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
+
+.SS "LOADER_API int loader_load_path (const \fBloader_naming_path\fP path)"
+
+.SS "LOADER_API int loader_execution_path (const \fBloader_naming_tag\fP tag, const \fBloader_naming_path\fP path)"
+
+.SS "LOADER_API int loader_load_from_file (const \fBloader_naming_tag\fP tag, const \fBloader_naming_path\fP paths[], size_t size, void ** handle)"
+
+.SS "LOADER_API int loader_load_from_memory (const \fBloader_naming_tag\fP tag, const char * buffer, size_t size, void ** handle)"
+
+.SS "LOADER_API int loader_load_from_package (const \fBloader_naming_tag\fP tag, const \fBloader_naming_path\fP path, void ** handle)"
+
+.SS "LOADER_API int loader_load_from_configuration (const \fBloader_naming_path\fP path, void ** handle, void * allocator)"
+
+.SS "LOADER_API \fBloader_impl\fP loader_get_impl (const \fBloader_naming_tag\fP tag)"
+
+.SS "LOADER_API \fBloader_data\fP loader_get (const char * name)"
+
+.SS "LOADER_API void* loader_get_handle (const \fBloader_naming_tag\fP tag, const char * name)"
+
+.SS "LOADER_API void loader_set_options (const \fBloader_naming_tag\fP tag, void * options)"
+
+.SS "LOADER_API void* loader_get_options (const \fBloader_naming_tag\fP tag)"
+
+.SS "const LOADER_API char* loader_handle_id (void * handle)"
+
+.SS "LOADER_API void* loader_handle_export (void * handle)"
+
+.SS "LOADER_API \fBloader_data\fP loader_handle_get (void * handle, const char * name)"
+
+.SS "LOADER_API \fBvalue\fP loader_metadata (void)"
+
+.SS "LOADER_API int loader_clear (void * handle)"
+
+.SS "LOADER_API void loader_unload_children (\fBloader_impl\fP impl)"
+
+.SS "LOADER_API int loader_unload (void)"
+
+.SS "LOADER_API void loader_destroy (void)"
+
+.SS "const LOADER_API char* loader_print_info (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,0 +1,53 @@
+.TH "loader_impl_function.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loader_impl_function.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <loader/loader_function\&.h>\fP
+.br
+\fC#include <loader/loader_handle\&.h>\fP
+.br
+\fC#include <loader/loader_impl\&.h>\fP
+.br
+\fC#include <reflect/function\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBloader_impl_function\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBloader_function\fP(* \fBloader_impl_function_create\fP) (\fBloader_impl\fP, \fBloader_handle\fP)"
+.br
+.ti -1c
+.RI "typedef \fBfunction_impl_interface_singleton\fP(* \fBloader_impl_function_interface\fP) (void)"
+.br
+.ti -1c
+.RI "typedef int(* \fBloader_impl_function_destroy\fP) (\fBloader_impl\fP, \fBloader_handle\fP, \fBloader_function\fP)"
+.br
+.ti -1c
+.RI "typedef loader_impl_function(* \fBloader_impl_function_singleton\fP) (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBloader_function\fP(* loader_impl_function_create) (\fBloader_impl\fP, \fBloader_handle\fP)"
+
+.SS "typedef \fBfunction_impl_interface_singleton\fP(* loader_impl_function_interface) (void)"
+
+.SS "typedef int(* loader_impl_function_destroy) (\fBloader_impl\fP, \fBloader_handle\fP, \fBloader_function\fP)"
+
+.SS "typedef loader_impl_function(* loader_impl_function_singleton) (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

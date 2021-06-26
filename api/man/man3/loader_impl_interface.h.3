@@ -1,0 +1,89 @@
+.TH "loader_impl_interface.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loader_impl_interface.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <loader/loader_api\&.h>\fP
+.br
+\fC#include <loader/loader_handle\&.h>\fP
+.br
+\fC#include <loader/loader_impl_data\&.h>\fP
+.br
+\fC#include <loader/loader_naming\&.h>\fP
+.br
+\fC#include <reflect/reflect_context\&.h>\fP
+.br
+\fC#include <configuration/configuration\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBloader_impl_interface\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBloader_impl_type\fP * \fBloader_impl\fP"
+.br
+.ti -1c
+.RI "typedef \fBloader_impl_data\fP(* \fBloader_impl_interface_initialize\fP) (\fBloader_impl\fP, configuration)"
+.br
+.ti -1c
+.RI "typedef int(* \fBloader_impl_interface_execution_path\fP) (\fBloader_impl\fP, const \fBloader_naming_path\fP)"
+.br
+.ti -1c
+.RI "typedef \fBloader_handle\fP(* \fBloader_impl_interface_load_from_file\fP) (\fBloader_impl\fP, const \fBloader_naming_path\fP[], size_t)"
+.br
+.ti -1c
+.RI "typedef \fBloader_handle\fP(* \fBloader_impl_interface_load_from_memory\fP) (\fBloader_impl\fP, const \fBloader_naming_name\fP, const char *, size_t)"
+.br
+.ti -1c
+.RI "typedef \fBloader_handle\fP(* \fBloader_impl_interface_load_from_package\fP) (\fBloader_impl\fP, const \fBloader_naming_path\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBloader_impl_interface_clear\fP) (\fBloader_impl\fP, \fBloader_handle\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBloader_impl_interface_discover\fP) (\fBloader_impl\fP, \fBloader_handle\fP, \fBcontext\fP)"
+.br
+.ti -1c
+.RI "typedef int(* \fBloader_impl_interface_destroy\fP) (\fBloader_impl\fP)"
+.br
+.ti -1c
+.RI "typedef loader_impl_interface(* \fBloader_impl_interface_singleton\fP) (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBloader_impl_type\fP* \fBloader_impl\fP"
+
+.SS "typedef \fBloader_impl_data\fP(* loader_impl_interface_initialize) (\fBloader_impl\fP, configuration)"
+
+.SS "typedef int(* loader_impl_interface_execution_path) (\fBloader_impl\fP, const \fBloader_naming_path\fP)"
+
+.SS "typedef \fBloader_handle\fP(* loader_impl_interface_load_from_file) (\fBloader_impl\fP, const \fBloader_naming_path\fP[], size_t)"
+
+.SS "typedef \fBloader_handle\fP(* loader_impl_interface_load_from_memory) (\fBloader_impl\fP, const \fBloader_naming_name\fP, const char *, size_t)"
+
+.SS "typedef \fBloader_handle\fP(* loader_impl_interface_load_from_package) (\fBloader_impl\fP, const \fBloader_naming_path\fP)"
+
+.SS "typedef int(* loader_impl_interface_clear) (\fBloader_impl\fP, \fBloader_handle\fP)"
+
+.SS "typedef int(* loader_impl_interface_discover) (\fBloader_impl\fP, \fBloader_handle\fP, \fBcontext\fP)"
+
+.SS "typedef int(* loader_impl_interface_destroy) (\fBloader_impl\fP)"
+
+.SS "typedef loader_impl_interface(* loader_impl_interface_singleton) (void)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

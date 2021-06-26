@@ -1,0 +1,173 @@
+.TH "dynlink.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dynlink.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <dynlink/dynlink_api\&.h>\fP
+.br
+\fC#include <dynlink/dynlink_flags\&.h>\fP
+.br
+\fC#include <dynlink/dynlink_interface\&.h>\fP
+.br
+\fC#include <dynlink/dynlink_symbol\&.h>\fP
+.br
+\fC#include <dynlink/dynlink_type\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const DYNLINK_API char * \fBdynlink_extension\fP (void)"
+.br
+.ti -1c
+.RI "DYNLINK_API \fBdynlink\fP \fBdynlink_load\fP (\fBdynlink_path\fP path, \fBdynlink_name\fP name, \fBdynlink_flags\fP flags)"
+.br
+.ti -1c
+.RI "DYNLINK_API \fBdynlink_name\fP \fBdynlink_get_name\fP (\fBdynlink\fP handle)"
+.br
+.ti -1c
+.RI "DYNLINK_API \fBdynlink_name\fP \fBdynlink_get_name_impl\fP (\fBdynlink\fP handle)"
+.br
+.ti -1c
+.RI "DYNLINK_API \fBdynlink_flags\fP \fBdynlink_get_flags\fP (\fBdynlink\fP handle)"
+.br
+.ti -1c
+.RI "DYNLINK_API int \fBdynlink_symbol\fP (\fBdynlink\fP handle, \fBdynlink_symbol_name\fP symbol_name, \fBdynlink_symbol_addr\fP *symbol_address)"
+.br
+.ti -1c
+.RI "DYNLINK_API void \fBdynlink_unload\fP (\fBdynlink\fP handle)"
+.br
+.ti -1c
+.RI "const DYNLINK_API char * \fBdynlink_print_info\fP (void)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "const DYNLINK_API char* dynlink_extension (void)"
+
+.PP
+Get the library extension for specified platform\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A constant string pointer to the platform extension 
+.RE
+.PP
+
+.SS "DYNLINK_API \fBdynlink\fP dynlink_load (\fBdynlink_path\fP path, \fBdynlink_name\fP name, \fBdynlink_flags\fP flags)"
+
+.PP
+Load a dynamically linked shared object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path where is located the shared object
+.br
+\fIname\fP Name identifier of the shared object
+.br
+\fIflags\fP Dynamic linking flags
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A handle to the dynamically linked shared object 
+.RE
+.PP
+
+.SS "DYNLINK_API \fBdynlink_name\fP dynlink_get_name (\fBdynlink\fP handle)"
+
+.PP
+Retreive the name of the dynamically linked shared object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Handle of dynamically linked shared object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the name of the dynamically linked shared object 
+.RE
+.PP
+
+.SS "DYNLINK_API \fBdynlink_name\fP dynlink_get_name_impl (\fBdynlink\fP handle)"
+
+.PP
+Retreive the file name of the dynamically linked shared object handle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Handle of dynamically linked shared object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the file name of the dynamically linked shared object 
+.RE
+.PP
+
+.SS "DYNLINK_API \fBdynlink_flags\fP dynlink_get_flags (\fBdynlink\fP handle)"
+
+.PP
+Retreive the linking flags of the dynamically linked shared object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Handle of dynamically linked shared object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Linking flags of dynamically linked shared object 
+.RE
+.PP
+
+.SS "DYNLINK_API int dynlink_symbol (\fBdynlink\fP handle, \fBdynlink_symbol_name\fP symbol_name, \fBdynlink_symbol_addr\fP * symbol_address)"
+
+.PP
+Get a symbol address of dynamically linked shared object by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Handle of dynamically linked shared object
+.br
+\fIsymbol_name\fP Name of the of dynamically linked shared object symbol
+.br
+\fIsymbol_address\fP Pointer to the address of the of dynamically linked shared object symbol
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on correct dynamic linking, distinct from zero otherwise 
+.RE
+.PP
+
+.SS "DYNLINK_API void dynlink_unload (\fBdynlink\fP handle)"
+
+.PP
+Unloads a dynamically linked shared object by its handle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP Handle of dynamically linked shared object 
+.RE
+.PP
+
+.SS "const DYNLINK_API char* dynlink_print_info (void)"
+
+.PP
+Provide the module information\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static string containing module information 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

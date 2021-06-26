@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_detour__singleton_8h">
+<title>detour_singleton.h File Reference</title>
+<indexterm><primary>detour_singleton.h</primary></indexterm>
+<programlisting>#include &lt;detour/detour_api.h&gt;
+#include &lt;detour/detour.h&gt;
+</programlisting>Include dependency graph for detour_singleton.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="detour__singleton_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct detour_singleton_type * <link linkend="_detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954">detour_singleton</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>DETOUR_API int <link linkend="_detour__singleton_8h_1ab6308d3e842fbf42b7ed620d08ee7fd9">detour_singleton_initialize</link> ()</para>
+</listitem>
+            <listitem><para>DETOUR_API <link linkend="_detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954">detour_singleton</link> <link linkend="_detour__singleton_8h_1a95bc055fdebf2873f3903d86af3393c1">detour_singleton_instance</link> (void)</para>
+</listitem>
+            <listitem><para>DETOUR_API int <link linkend="_detour__singleton_8h_1ae4fac28fa2ed1a289fe9757058a1e55b">detour_singleton_register</link> (<link linkend="_detour_8h_1a98b044d8fd6bb0343802eefe9ce75591">detour</link> d)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect><title></title>
+
+<para>Retrieve detour from detours map by</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Index which references the detour to be retrieved</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns pointer to detour if exists, null otherwise </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>DETOUR_API <link linkend="_detour_8h_1a98b044d8fd6bb0343802eefe9ce75591">detour</link> <link linkend="_detour__singleton_8h_1aa86b7e9be82dd751464294cdacd59dd2">detour_singleton_get</link> (const char *name)</para>
+</listitem>
+            <listitem><para>const DETOUR_API char * <link linkend="_detour__singleton_8h_1a3beb5f13a01e22019c28774960f896bb">detour_singleton_path</link> (void)</para>
+</listitem>
+            <listitem><para>DETOUR_API int <link linkend="_detour__singleton_8h_1a6a4c4b4103701e2bb9f99542f464f528">detour_singleton_clear</link> (<link linkend="_detour_8h_1a98b044d8fd6bb0343802eefe9ce75591">detour</link> d)</para>
+</listitem>
+            <listitem><para>DETOUR_API void <link linkend="_detour__singleton_8h_1afef5bdebd544d6b9fd88f5f3bcb662b4">detour_singleton_destroy</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954"/>    <section>
+    <title>detour_singleton</title>
+<indexterm><primary>detour_singleton</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton</secondary></indexterm>
+<para><computeroutput>typedef struct detour_singleton_type* <link linkend="_detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954">detour_singleton</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_detour__singleton_8h_1ab6308d3e842fbf42b7ed620d08ee7fd9"/>    <section>
+    <title>detour_singleton_initialize()</title>
+<indexterm><primary>detour_singleton_initialize</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton_initialize</secondary></indexterm>
+<para><computeroutput>DETOUR_API int detour_singleton_initialize ( )</computeroutput></para><para>
+
+<para>Initialize detour singleton. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Returns zero on correct detour singleton initialization, distinct from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_detour__singleton_8h_1a95bc055fdebf2873f3903d86af3393c1"/>    <section>
+    <title>detour_singleton_instance()</title>
+<indexterm><primary>detour_singleton_instance</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton_instance</secondary></indexterm>
+<para><computeroutput>DETOUR_API <link linkend="_detour__singleton_8h_1aeef87d8c3305e6b7d58945fe93829954">detour_singleton</link> detour_singleton_instance (void )</computeroutput></para><para>
+
+<para>Wrapper of detour singleton instance. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to detour singleton instance </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_detour__singleton_8h_1ae4fac28fa2ed1a289fe9757058a1e55b"/>    <section>
+    <title>detour_singleton_register()</title>
+<indexterm><primary>detour_singleton_register</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton_register</secondary></indexterm>
+<para><computeroutput>DETOUR_API int detour_singleton_register (<link linkend="_detour_8h_1a98b044d8fd6bb0343802eefe9ce75591">detour</link> d)</computeroutput></para><para>
+
+<para>Register detour into detours map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Pointer to detour</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero on correct detour singleton insertion, distinct from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_detour__singleton_8h_1aa86b7e9be82dd751464294cdacd59dd2"/>    <section>
+    <title>detour_singleton_get()</title>
+<indexterm><primary>detour_singleton_get</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton_get</secondary></indexterm>
+<para><computeroutput>DETOUR_API <link linkend="_detour_8h_1a98b044d8fd6bb0343802eefe9ce75591">detour</link> detour_singleton_get (const char * name)</computeroutput></para>    </section><anchor xml:id="_detour__singleton_8h_1a3beb5f13a01e22019c28774960f896bb"/>    <section>
+    <title>detour_singleton_path()</title>
+<indexterm><primary>detour_singleton_path</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton_path</secondary></indexterm>
+<para><computeroutput>const DETOUR_API char* detour_singleton_path (void )</computeroutput></para><para>
+
+<para>Retrieve detour library path where detours are located. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Returns constant string representing detours library path </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_detour__singleton_8h_1a6a4c4b4103701e2bb9f99542f464f528"/>    <section>
+    <title>detour_singleton_clear()</title>
+<indexterm><primary>detour_singleton_clear</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton_clear</secondary></indexterm>
+<para><computeroutput>DETOUR_API int detour_singleton_clear (<link linkend="_detour_8h_1a98b044d8fd6bb0343802eefe9ce75591">detour</link> d)</computeroutput></para><para>
+
+<para>Remove detour from detours map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>d</entry>
+                                <entry>
+<para>Pointer to detour</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns zero on correct detour singleton removing, distinct from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_detour__singleton_8h_1afef5bdebd544d6b9fd88f5f3bcb662b4"/>    <section>
+    <title>detour_singleton_destroy()</title>
+<indexterm><primary>detour_singleton_destroy</primary><secondary>detour_singleton.h</secondary></indexterm>
+<indexterm><primary>detour_singleton.h</primary><secondary>detour_singleton_destroy</secondary></indexterm>
+<para><computeroutput>DETOUR_API void detour_singleton_destroy (void )</computeroutput></para><para>
+
+<para>Destroy detour singleton. </para>
+</para>
+</section>
+</section>
+</section>

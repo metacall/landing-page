@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__policy__storage_8h">
+<title>log_policy_storage.h File Reference</title>
+<indexterm><primary>log_policy_storage.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_policy.h&gt;
+#include &lt;log/log_record.h&gt;
+</programlisting>Include dependency graph for log_policy_storage.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__storage_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__policy__storage_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structlog__policy__storage__impl__type">log_policy_storage_impl</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef int(* <link linkend="_log__policy__storage_8h_1a866c51f6d0e11a3b5a0052f27bc8bdef">log_policy_storage_append</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>)</para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_log__policy__storage_8h_1aa379a2d51fc9d33fd85eebc396c1339d">log_policy_storage_flush</link>) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4">log_policy_storage_id</link> { <link linkend="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a9e2608dafb91195744b546e8dd362ecc">LOG_POLICY_STORAGE_BATCH</link> = 0x00, 
+<link linkend="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4ad84649b3132132f59e5cb53af7856ef6">LOG_POLICY_STORAGE_SEQUENTIAL</link> = 0x01, 
+<link linkend="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a7019f5508ab5da9834ffb6f43077da92">LOG_POLICY_STORAGE_SIZE</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API log_policy_interface <link linkend="_log__policy__storage_8h_1abc89599ffe2cf66077aa92bd080af6b0">log_policy_storage</link> (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_storage_id)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__storage_8h_1a6d679df8c30bd998a4930e4a18f9975d">log_policy_storage_batch</link> (size_t size)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> <link linkend="_log__policy__storage_8h_1aa4ce9fd36df28f1598ea32b02915f0aa">log_policy_storage_sequential</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__policy__storage_8h_1a866c51f6d0e11a3b5a0052f27bc8bdef"/>    <section>
+    <title>log_policy_storage_append</title>
+<indexterm><primary>log_policy_storage_append</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>log_policy_storage_append</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_storage_append) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>, const <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link>)</computeroutput></para>    </section><anchor xml:id="_log__policy__storage_8h_1aa379a2d51fc9d33fd85eebc396c1339d"/>    <section>
+    <title>log_policy_storage_flush</title>
+<indexterm><primary>log_policy_storage_flush</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>log_policy_storage_flush</secondary></indexterm>
+<para><computeroutput>typedef int(* log_policy_storage_flush) (<link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link>)</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4"/>    <section>
+    <title>log_policy_storage_id</title>
+<indexterm><primary>log_policy_storage_id</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>log_policy_storage_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4">log_policy_storage_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>LOG_POLICY_STORAGE_BATCH</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>LOG_POLICY_STORAGE_BATCH</secondary></indexterm>
+<anchor xml:id="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a9e2608dafb91195744b546e8dd362ecc"/>LOG_POLICY_STORAGE_BATCH</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STORAGE_SEQUENTIAL</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>LOG_POLICY_STORAGE_SEQUENTIAL</secondary></indexterm>
+<anchor xml:id="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4ad84649b3132132f59e5cb53af7856ef6"/>LOG_POLICY_STORAGE_SEQUENTIAL</entry><entry></entry></row><row><entry><indexterm><primary>LOG_POLICY_STORAGE_SIZE</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>LOG_POLICY_STORAGE_SIZE</secondary></indexterm>
+<anchor xml:id="_log__policy__storage_8h_1ad9d43be74e9ccd3765ff2445d8ebaaa4a7019f5508ab5da9834ffb6f43077da92"/>LOG_POLICY_STORAGE_SIZE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__policy__storage_8h_1abc89599ffe2cf66077aa92bd080af6b0"/>    <section>
+    <title>log_policy_storage()</title>
+<indexterm><primary>log_policy_storage</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>log_policy_storage</secondary></indexterm>
+<para><computeroutput>LOG_API log_policy_interface log_policy_storage (const <link linkend="_log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5">log_policy_id</link> policy_storage_id)</computeroutput></para>    </section><anchor xml:id="_log__policy__storage_8h_1a6d679df8c30bd998a4930e4a18f9975d"/>    <section>
+    <title>log_policy_storage_batch()</title>
+<indexterm><primary>log_policy_storage_batch</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>log_policy_storage_batch</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_storage_batch (size_t size)</computeroutput></para>    </section><anchor xml:id="_log__policy__storage_8h_1aa4ce9fd36df28f1598ea32b02915f0aa"/>    <section>
+    <title>log_policy_storage_sequential()</title>
+<indexterm><primary>log_policy_storage_sequential</primary><secondary>log_policy_storage.h</secondary></indexterm>
+<indexterm><primary>log_policy_storage.h</primary><secondary>log_policy_storage_sequential</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe">log_policy</link> log_policy_storage_sequential (void )</computeroutput></para></section>
+</section>
+</section>

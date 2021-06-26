@@ -1,0 +1,115 @@
+\doxysection{log.\+h File Reference}
+\label{log_8h}\index{log.h@{log.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+level.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+policy.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+policy\+\_\+format.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+policy\+\_\+schedule.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+policy\+\_\+storage.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+policy\+\_\+stream.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+preprocessor.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+record.\+h$>$}\newline
+{\ttfamily \#include $<$format/format\+\_\+specifier.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+Include dependency graph for log.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI void $\ast$ \textbf{ log\+\_\+instance} (void)
+\item 
+L\+O\+G\+\_\+\+A\+PI size\+\_\+t \textbf{ log\+\_\+size} (void)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+create} (const char $\ast$name)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+define} (const char $\ast$name, \textbf{ log\+\_\+policy} policy)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+configure\+\_\+impl} (const char $\ast$name, size\+\_\+t size,...)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+level} (const char $\ast$name, const char $\ast$level, size\+\_\+t length)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+write\+\_\+impl} (const char $\ast$name, const size\+\_\+t line, const char $\ast$func, const char $\ast$\textbf{ file}, const enum \textbf{ log\+\_\+level\+\_\+id} level, const char $\ast$message)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+write\+\_\+impl\+\_\+va} (const char $\ast$name, const size\+\_\+t line, const char $\ast$func, const char $\ast$\textbf{ file}, const enum \textbf{ log\+\_\+level\+\_\+id} level, const char $\ast$message,...)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+clear} (const char $\ast$name)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+delete} (const char $\ast$name)
+\item 
+const L\+O\+G\+\_\+\+A\+PI char $\ast$ \textbf{ log\+\_\+print\+\_\+info} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log_8h_a7d7b6e62eb6fa8f84a1a6989eb096d0c}} 
+\index{log.h@{log.h}!log\_instance@{log\_instance}}
+\index{log\_instance@{log\_instance}!log.h@{log.h}}
+\doxysubsubsection{log\_instance()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void$\ast$ log\+\_\+instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a1f784322e19c24bccab759b41ba93ce9}} 
+\index{log.h@{log.h}!log\_size@{log\_size}}
+\index{log\_size@{log\_size}!log.h@{log.h}}
+\doxysubsubsection{log\_size()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI size\+\_\+t log\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_aa07cf0aadf62887d2490157a26d11d20}} 
+\index{log.h@{log.h}!log\_create@{log\_create}}
+\index{log\_create@{log\_create}!log.h@{log.h}}
+\doxysubsubsection{log\_create()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_adf34dd59ed3263c6e6aa0bbb500335ef}} 
+\index{log.h@{log.h}!log\_define@{log\_define}}
+\index{log\_define@{log\_define}!log.h@{log.h}}
+\doxysubsubsection{log\_define()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+define (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\textbf{ log\+\_\+policy}}]{policy }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a3bbe4b78b618932e6f0b73cce1e80e7c}} 
+\index{log.h@{log.h}!log\_configure\_impl@{log\_configure\_impl}}
+\index{log\_configure\_impl@{log\_configure\_impl}!log.h@{log.h}}
+\doxysubsubsection{log\_configure\_impl()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+configure\+\_\+impl (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a80fdc25f4e548aca64af76272f18736c}} 
+\index{log.h@{log.h}!log\_level@{log\_level}}
+\index{log\_level@{log\_level}!log.h@{log.h}}
+\doxysubsubsection{log\_level()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+level (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{level,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a406197a270523baeb61bf60e5a2a7ed7}} 
+\index{log.h@{log.h}!log\_write\_impl@{log\_write\_impl}}
+\index{log\_write\_impl@{log\_write\_impl}!log.h@{log.h}}
+\doxysubsubsection{log\_write\_impl()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+write\+\_\+impl (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const size\+\_\+t}]{line,  }\item[{const char $\ast$}]{func,  }\item[{const char $\ast$}]{file,  }\item[{const enum \textbf{ log\+\_\+level\+\_\+id}}]{level,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a97b582a8278d4a7e95476b0ad55dceda}} 
+\index{log.h@{log.h}!log\_write\_impl\_va@{log\_write\_impl\_va}}
+\index{log\_write\_impl\_va@{log\_write\_impl\_va}!log.h@{log.h}}
+\doxysubsubsection{log\_write\_impl\_va()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+write\+\_\+impl\+\_\+va (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const size\+\_\+t}]{line,  }\item[{const char $\ast$}]{func,  }\item[{const char $\ast$}]{file,  }\item[{const enum \textbf{ log\+\_\+level\+\_\+id}}]{level,  }\item[{const char $\ast$}]{message,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a8b92d3bba63810079cef6856a9109107}} 
+\index{log.h@{log.h}!log\_clear@{log\_clear}}
+\index{log\_clear@{log\_clear}!log.h@{log.h}}
+\doxysubsubsection{log\_clear()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+clear (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a82ac8dc9916b60ee74fecdaafac95984}} 
+\index{log.h@{log.h}!log\_delete@{log\_delete}}
+\index{log\_delete@{log\_delete}!log.h@{log.h}}
+\doxysubsubsection{log\_delete()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+delete (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{log_8h_a120ac5f32a2a356fbf28f297cb15a5bc}} 
+\index{log.h@{log.h}!log\_print\_info@{log\_print\_info}}
+\index{log\_print\_info@{log\_print\_info}!log.h@{log.h}}
+\doxysubsubsection{log\_print\_info()}
+{\footnotesize\ttfamily const L\+O\+G\+\_\+\+A\+PI char$\ast$ log\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,144 @@
+.TH "adt_trie.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+adt_trie.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <adt/adt_api\&.h>\fP
+.br
+\fC#include <adt/adt_comparable\&.h>\fP
+.br
+\fC#include <adt/adt_hash\&.h>\fP
+.br
+\fC#include <adt/adt_vector\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct trie_type * \fBtrie\fP"
+.br
+.ti -1c
+.RI "typedef \fBhash\fP \fBtrie_hash\fP"
+.br
+.ti -1c
+.RI "typedef \fBcomparable\fP \fBtrie_key\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBtrie_value\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBtrie_cb_iterate_args\fP"
+.br
+.ti -1c
+.RI "typedef \fBhash_callback\fP \fBtrie_cb_hash\fP"
+.br
+.ti -1c
+.RI "typedef \fBcomparable_callback\fP \fBtrie_cb_compare\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBtrie_cb_iterate\fP) (\fBtrie\fP, \fBtrie_key\fP, \fBtrie_value\fP, \fBtrie_cb_iterate_args\fP)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "ADT_API \fBtrie\fP \fBtrie_create\fP (\fBtrie_cb_hash\fP hash_cb, \fBtrie_cb_compare\fP compare_cb)"
+.br
+.ti -1c
+.RI "ADT_API \fBtrie\fP \fBtrie_create_reserve\fP (size_t capacity, size_t key_limit, size_t depth_limit, \fBtrie_cb_hash\fP hash_cb, \fBtrie_cb_compare\fP compare_cb)"
+.br
+.ti -1c
+.RI "ADT_API size_t \fBtrie_size\fP (\fBtrie\fP t)"
+.br
+.ti -1c
+.RI "ADT_API size_t \fBtrie_capacity\fP (\fBtrie\fP t)"
+.br
+.ti -1c
+.RI "ADT_API int \fBtrie_insert\fP (\fBtrie\fP t, \fBvector\fP keys, \fBtrie_value\fP \fBvalue\fP)"
+.br
+.ti -1c
+.RI "ADT_API \fBtrie_value\fP \fBtrie_get\fP (\fBtrie\fP t, \fBvector\fP keys)"
+.br
+.ti -1c
+.RI "ADT_API \fBtrie_value\fP \fBtrie_remove\fP (\fBtrie\fP t, \fBvector\fP keys)"
+.br
+.ti -1c
+.RI "ADT_API void \fBtrie_iterate_recursive\fP (\fBtrie\fP t, \fBtrie_cb_iterate\fP iterate_cb, \fBtrie_cb_iterate_args\fP args)"
+.br
+.ti -1c
+.RI "ADT_API void \fBtrie_iterate\fP (\fBtrie\fP t, \fBtrie_cb_iterate\fP iterate_cb, \fBtrie_cb_iterate_args\fP args)"
+.br
+.ti -1c
+.RI "ADT_API int \fBtrie_append\fP (\fBtrie\fP dest, \fBtrie\fP src)"
+.br
+.ti -1c
+.RI "ADT_API int \fBtrie_clear\fP (\fBtrie\fP t)"
+.br
+.ti -1c
+.RI "ADT_API int \fBtrie_prefixes\fP (\fBtrie\fP t, \fBtrie_key\fP key, \fBvector\fP prefixes)"
+.br
+.ti -1c
+.RI "ADT_API \fBtrie\fP \fBtrie_suffixes\fP (\fBtrie\fP t, \fBtrie_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API void \fBtrie_destroy\fP (\fBtrie\fP t)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct trie_type* \fBtrie\fP"
+
+.SS "typedef \fBhash\fP \fBtrie_hash\fP"
+
+.SS "typedef \fBcomparable\fP \fBtrie_key\fP"
+
+.SS "typedef void* \fBtrie_value\fP"
+
+.SS "typedef void* \fBtrie_cb_iterate_args\fP"
+
+.SS "typedef \fBhash_callback\fP \fBtrie_cb_hash\fP"
+
+.SS "typedef \fBcomparable_callback\fP \fBtrie_cb_compare\fP"
+
+.SS "typedef int(* trie_cb_iterate) (\fBtrie\fP, \fBtrie_key\fP, \fBtrie_value\fP, \fBtrie_cb_iterate_args\fP)"
+
+.SH "Function Documentation"
+.PP 
+.SS "ADT_API \fBtrie\fP trie_create (\fBtrie_cb_hash\fP hash_cb, \fBtrie_cb_compare\fP compare_cb)"
+
+.SS "ADT_API \fBtrie\fP trie_create_reserve (size_t capacity, size_t key_limit, size_t depth_limit, \fBtrie_cb_hash\fP hash_cb, \fBtrie_cb_compare\fP compare_cb)"
+
+.SS "ADT_API size_t trie_size (\fBtrie\fP t)"
+
+.SS "ADT_API size_t trie_capacity (\fBtrie\fP t)"
+
+.SS "ADT_API int trie_insert (\fBtrie\fP t, \fBvector\fP keys, \fBtrie_value\fP value)"
+
+.SS "ADT_API \fBtrie_value\fP trie_get (\fBtrie\fP t, \fBvector\fP keys)"
+
+.SS "ADT_API \fBtrie_value\fP trie_remove (\fBtrie\fP t, \fBvector\fP keys)"
+
+.SS "ADT_API void trie_iterate_recursive (\fBtrie\fP t, \fBtrie_cb_iterate\fP iterate_cb, \fBtrie_cb_iterate_args\fP args)"
+
+.SS "ADT_API void trie_iterate (\fBtrie\fP t, \fBtrie_cb_iterate\fP iterate_cb, \fBtrie_cb_iterate_args\fP args)"
+
+.SS "ADT_API int trie_append (\fBtrie\fP dest, \fBtrie\fP src)"
+
+.SS "ADT_API int trie_clear (\fBtrie\fP t)"
+
+.SS "ADT_API int trie_prefixes (\fBtrie\fP t, \fBtrie_key\fP key, \fBvector\fP prefixes)"
+
+.SS "ADT_API \fBtrie\fP trie_suffixes (\fBtrie\fP t, \fBtrie_key\fP key)"
+
+.SS "ADT_API void trie_destroy (\fBtrie\fP t)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

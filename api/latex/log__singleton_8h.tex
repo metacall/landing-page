@@ -1,0 +1,96 @@
+\doxysection{log\+\_\+singleton.\+h File Reference}
+\label{log__singleton_8h}\index{log\_singleton.h@{log\_singleton.h}}
+{\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$log/log\+\_\+impl.\+h$>$}\newline
+Include dependency graph for log\+\_\+singleton.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__singleton_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct log\+\_\+singleton\+\_\+map\+\_\+bucket\+\_\+type $\ast$ \textbf{ log\+\_\+singleton\+\_\+map\+\_\+bucket}
+\item 
+typedef struct log\+\_\+singleton\+\_\+type $\ast$ \textbf{ log\+\_\+singleton}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+singleton} $\ast$ \textbf{ log\+\_\+singleton\+\_\+instance} (void)
+\item 
+L\+O\+G\+\_\+\+A\+PI void \textbf{ log\+\_\+singleton\+\_\+initialize} (\textbf{ log\+\_\+singleton} singleton)
+\item 
+L\+O\+G\+\_\+\+A\+PI size\+\_\+t \textbf{ log\+\_\+singleton\+\_\+size} (void)
+\item 
+L\+O\+G\+\_\+\+A\+PI int \textbf{ log\+\_\+singleton\+\_\+insert} (const char $\ast$name, \textbf{ log\+\_\+impl} impl)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} \textbf{ log\+\_\+singleton\+\_\+get} (const char $\ast$name)
+\item 
+L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} \textbf{ log\+\_\+singleton\+\_\+remove} (const char $\ast$name)
+\item 
+L\+O\+G\+\_\+\+A\+PI void \textbf{ log\+\_\+singleton\+\_\+clear} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{log__singleton_8h_ac3d8e4a9fd56bf4cb322cc30fa9dc113}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_map\_bucket@{log\_singleton\_map\_bucket}}
+\index{log\_singleton\_map\_bucket@{log\_singleton\_map\_bucket}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_map\_bucket}
+{\footnotesize\ttfamily typedef struct log\+\_\+singleton\+\_\+map\+\_\+bucket\+\_\+type$\ast$ \textbf{ log\+\_\+singleton\+\_\+map\+\_\+bucket}}
+
+\mbox{\label{log__singleton_8h_add5876ef6a8095fae819a849b702e62c}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton@{log\_singleton}}
+\index{log\_singleton@{log\_singleton}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton}
+{\footnotesize\ttfamily typedef struct log\+\_\+singleton\+\_\+type$\ast$ \textbf{ log\+\_\+singleton}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{log__singleton_8h_a342cce86e9e85dd1787718f17be9b039}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_instance@{log\_singleton\_instance}}
+\index{log\_singleton\_instance@{log\_singleton\_instance}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_instance()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+singleton}$\ast$ log\+\_\+singleton\+\_\+instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log__singleton_8h_a13a966f52d5d743e18aac3b144c4e145}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_initialize@{log\_singleton\_initialize}}
+\index{log\_singleton\_initialize@{log\_singleton\_initialize}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_initialize()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void log\+\_\+singleton\+\_\+initialize (\begin{DoxyParamCaption}\item[{\textbf{ log\+\_\+singleton}}]{singleton }\end{DoxyParamCaption})}
+
+\mbox{\label{log__singleton_8h_ae1ebdb863fca82b603160639c060d44c}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_size@{log\_singleton\_size}}
+\index{log\_singleton\_size@{log\_singleton\_size}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_size()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI size\+\_\+t log\+\_\+singleton\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\label{log__singleton_8h_a0db5de81c163acaca46a8732eb6bc07f}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_insert@{log\_singleton\_insert}}
+\index{log\_singleton\_insert@{log\_singleton\_insert}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_insert()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI int log\+\_\+singleton\+\_\+insert (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\textbf{ log\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{log__singleton_8h_aa36402f20ac7cf37758c76d032bf8d9d}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_get@{log\_singleton\_get}}
+\index{log\_singleton\_get@{log\_singleton\_get}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_get()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} log\+\_\+singleton\+\_\+get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{log__singleton_8h_a6bb941872fae7ab057cb8b59edf5d43e}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_remove@{log\_singleton\_remove}}
+\index{log\_singleton\_remove@{log\_singleton\_remove}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_remove()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+impl} log\+\_\+singleton\+\_\+remove (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{log__singleton_8h_a0fa5476886446fa42a9494ce6cc9304a}} 
+\index{log\_singleton.h@{log\_singleton.h}!log\_singleton\_clear@{log\_singleton\_clear}}
+\index{log\_singleton\_clear@{log\_singleton\_clear}!log\_singleton.h@{log\_singleton.h}}
+\doxysubsubsection{log\_singleton\_clear()}
+{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI void log\+\_\+singleton\+\_\+clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

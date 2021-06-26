@@ -1,0 +1,152 @@
+.TH "detour_impl.h" 3 "Sat Jun 26 2021" "Version 0.1.0.e6cda9765a88" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+detour_impl.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <detour/detour_api\&.h>\fP
+.br
+\fC#include <detour/detour_impl_handle\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct detour_impl_type * \fBdetour_impl\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "DETOUR_API \fBdetour_impl\fP \fBdetour_impl_create\fP (void)"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_impl_load\fP (\fBdetour_impl\fP impl, const char *path, const char *name)"
+.br
+.ti -1c
+.RI "DETOUR_API \fBdetour_impl_handle\fP \fBdetour_impl_install\fP (\fBdetour_impl\fP impl, void(**target)(void), void(*hook)(void))"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_impl_uninstall\fP (\fBdetour_impl\fP impl, \fBdetour_impl_handle\fP handle)"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_impl_unload\fP (\fBdetour_impl\fP impl)"
+.br
+.ti -1c
+.RI "DETOUR_API int \fBdetour_impl_destroy\fP (\fBdetour_impl\fP impl)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct detour_impl_type* \fBdetour_impl\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "DETOUR_API \fBdetour_impl\fP detour_impl_create (void)"
+
+.PP
+Create detour implementation\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Returns pointer to detour implementation correct creation, null otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_impl_load (\fBdetour_impl\fP impl, const char * path, const char * name)"
+
+.PP
+Load detour implementation @impl\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimpl\fP Pointer to the detour implementation to be loaded
+.br
+\fIpath\fP Path where dependency is located
+.br
+\fIname\fP Dependency name to be injected
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on correct loading, distinct from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API \fBdetour_impl_handle\fP detour_impl_install (\fBdetour_impl\fP impl, void(**)(void) target, void(*)(void) hook)"
+
+.PP
+Install detour implementation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimpl\fP Pointer to the detour hook implementation
+.br
+\fItarget\fP Pointer to the function to be intercepted
+.br
+\fIhook\fP Function will be called instead of target
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return pointer to the detour handle on success, null otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_impl_uninstall (\fBdetour_impl\fP impl, \fBdetour_impl_handle\fP handle)"
+
+.PP
+Uninstall detour implementation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimpl\fP Pointer to the detour hook implementation
+.br
+\fIhandle\fP Pointer to the detour hook handle
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return zero on success, different from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_impl_unload (\fBdetour_impl\fP impl)"
+
+.PP
+Unload detour implementation @impl\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimpl\fP Pointer to the detour implementation to be unloaded
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on correct unloading, distinct from zero otherwise 
+.RE
+.PP
+
+.SS "DETOUR_API int detour_impl_destroy (\fBdetour_impl\fP impl)"
+
+.PP
+Destroy detour implementation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimpl\fP Pointer to the detour implementation to be destroyed
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero on correct destruction, distinct from zero otherwise 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

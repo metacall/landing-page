@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__policy__schedule_8h" kind="file" language="C++">
+    <compoundname>log_policy_schedule.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes refid="log__policy_8h" local="no">log/log_policy.h</includes>
+    <includedby refid="log_8h" local="no">log.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>log_policy_schedule.h</label>
+        <link refid="log__policy__schedule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="4">
+        <label>log/log_aspect.h</label>
+        <link refid="log__aspect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>log/log_policy.h</label>
+        <link refid="log__policy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>log.h</label>
+        <link refid="log_8h"/>
+      </node>
+      <node id="1">
+        <label>log_policy_schedule.h</label>
+        <link refid="log__policy__schedule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlog__policy__schedule__impl__type" prot="public">log_policy_schedule_impl_type</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25" prot="public" static="no" strong="no">
+        <type></type>
+        <name>log_policy_schedule_id</name>
+        <enumvalue id="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b" prot="public">
+          <name>LOG_POLICY_SCHEDULE_ASYNC</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a" prot="public">
+          <name>LOG_POLICY_SCHEDULE_SYNC</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db" prot="public">
+          <name>LOG_POLICY_SCHEDULE_SIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="25" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="24" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_policy_schedule_data</definition>
+        <argsstring></argsstring>
+        <name>log_policy_schedule_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_schedule_execute_cb) (log_policy, log_policy_schedule_data)</definition>
+        <argsstring>)(log_policy, log_policy_schedule_data)</argsstring>
+        <name>log_policy_schedule_execute_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="42" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy__schedule_8h_1a4f84ef0771c429ff4b0ae461afdba6cb" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_schedule_lock) (log_policy)</definition>
+        <argsstring>)(log_policy)</argsstring>
+        <name>log_policy_schedule_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="44" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy__schedule_8h_1a38b092b7b8d24b57a6d0eaf3d7240161" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_schedule_execute) (log_policy, log_policy_schedule_execute_cb, log_policy_schedule_data)</definition>
+        <argsstring>)(log_policy, log_policy_schedule_execute_cb, log_policy_schedule_data)</argsstring>
+        <name>log_policy_schedule_execute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="45" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy__schedule_8h_1a3f7d2f72b5a3cf81553696e8ffb98b5f" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_schedule_unlock) (log_policy)</definition>
+        <argsstring>)(log_policy)</argsstring>
+        <name>log_policy_schedule_unlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="46" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__policy__schedule_8h_1a1a457f64ce52cef20969cf64198642e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API log_policy_interface</type>
+        <definition>LOG_API log_policy_interface log_policy_schedule</definition>
+        <argsstring>(const log_policy_id policy_schedule_id)</argsstring>
+        <name>log_policy_schedule</name>
+        <param>
+          <type>const <ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref></type>
+          <declname>policy_schedule_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="59" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" declline="59" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy__schedule_8h_1ac9f8ff2ec3264e0b2271dbf22a4eb782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+        <definition>LOG_API log_policy log_policy_schedule_async</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_policy_schedule_async</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="61" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" declline="61" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy__schedule_8h_1a238989dd68646f238ee7ce2337bfe971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+        <definition>LOG_API log_policy log_policy_schedule_sync</definition>
+        <argsstring>(void)</argsstring>
+        <name>log_policy_schedule_sync</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="63" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" declline="63" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_POLICY_SCHEDULE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_POLICY_SCHEDULE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__policy_8h" kindref="compound">log/log_policy.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25" kindref="member">log_policy_schedule_id</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b" kindref="member">LOG_POLICY_SCHEDULE_ASYNC</ref><sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="27" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a" kindref="member">LOG_POLICY_SCHEDULE_SYNC</ref><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db" kindref="member">LOG_POLICY_SCHEDULE_SIZE</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__schedule__impl__type" kindref="compound">log_policy_schedule_impl_type</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" kindref="member">log_policy_schedule_data</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__schedule__impl__type" kindref="compound">log_policy_schedule_impl_type</ref><sp/>*log_policy_schedule_impl;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf" kindref="member">log_policy_schedule_execute_cb</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>,<sp/><ref refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" kindref="member">log_policy_schedule_data</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="log__policy__schedule_8h_1a4f84ef0771c429ff4b0ae461afdba6cb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy__schedule_8h_1a4f84ef0771c429ff4b0ae461afdba6cb" kindref="member">log_policy_schedule_lock</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>);</highlight></codeline>
+<codeline lineno="45" refid="log__policy__schedule_8h_1a38b092b7b8d24b57a6d0eaf3d7240161" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy__schedule_8h_1a38b092b7b8d24b57a6d0eaf3d7240161" kindref="member">log_policy_schedule_execute</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>,<sp/><ref refid="log__policy__schedule_8h_1a3d29f502383737fedbd083dcf673f7bf" kindref="member">log_policy_schedule_execute_cb</ref>,<sp/><ref refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" kindref="member">log_policy_schedule_data</ref>);</highlight></codeline>
+<codeline lineno="46" refid="log__policy__schedule_8h_1a3f7d2f72b5a3cf81553696e8ffb98b5f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy__schedule_8h_1a3f7d2f72b5a3cf81553696e8ffb98b5f" kindref="member">log_policy_schedule_unlock</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structlog__policy__schedule__impl__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__schedule__impl__type" kindref="compound">log_policy_schedule_impl_type</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52" refid="structlog__policy__schedule__impl__type_1ac9e28c78a9e909c587b935c5e246b5f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a4f84ef0771c429ff4b0ae461afdba6cb" kindref="member">log_policy_schedule_lock</ref><sp/><ref refid="structlog__policy__schedule__impl__type_1ac9e28c78a9e909c587b935c5e246b5f7" kindref="member">lock</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structlog__policy__schedule__impl__type_1a2ba771f7a5322e5ae5f84d361668fb8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a38b092b7b8d24b57a6d0eaf3d7240161" kindref="member">log_policy_schedule_execute</ref><sp/><ref refid="structlog__policy__schedule__impl__type_1a2ba771f7a5322e5ae5f84d361668fb8f" kindref="member">execute</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structlog__policy__schedule__impl__type_1a8ddaa1a6977ec8ec91516e6346240a00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a3f7d2f72b5a3cf81553696e8ffb98b5f" kindref="member">log_policy_schedule_unlock</ref><sp/><ref refid="structlog__policy__schedule__impl__type_1a8ddaa1a6977ec8ec91516e6346240a00" kindref="member">unlock</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__schedule_8h_1a1a457f64ce52cef20969cf64198642e3" kindref="member">log_policy_schedule</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref><sp/>policy_schedule_id);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__schedule_8h_1ac9f8ff2ec3264e0b2271dbf22a4eb782" kindref="member">log_policy_schedule_async</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__schedule_8h_1a238989dd68646f238ee7ce2337bfe971" kindref="member">log_policy_schedule_sync</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_POLICY_SCHEDULE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dynlink__impl__symbol__win32_8h">
+<title>dynlink_impl_symbol_win32.h File Reference</title>
+<indexterm><primary>dynlink_impl_symbol_win32.h</primary></indexterm>
+<programlisting>#include &lt;dynlink/dynlink_api.h&gt;
+#include &lt;preprocessor/preprocessor_concatenation.h&gt;
+</programlisting>Include dependency graph for dynlink_impl_symbol_win32.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dynlink__impl__symbol__win32_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dynlink__impl__symbol__win32_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_dynlink__impl__symbol__win32_8h_1ac5d66723717583b0efbc7c23f9ccd059">DYNLINK_SYMBOL_PREFIX</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__impl__symbol__win32_8h_1ac7c2e3794ef31f11c7743643f55000e6">DYNLINK_SYMBOL_EXPORT</link>(name)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_dynlink__impl__symbol__win32_8h_1a2103b1d11c0227b698826a7a7b2eb844">DYNLINK_SYMBOL_GET</link>(name)   name</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef void(* <link linkend="_dynlink__impl__symbol__win32_8h_1aba90ac516e82054be6efab5886df3a3e">dynlink_symbol_addr_win32</link>) (void)</para>
+</listitem>
+            <listitem><para>typedef <link linkend="_dynlink__impl__symbol__win32_8h_1aba90ac516e82054be6efab5886df3a3e">dynlink_symbol_addr_win32</link> <link linkend="_dynlink__impl__symbol__win32_8h_1a4d504c6b325ead6af4305487514a9e92">dynlink_symbol_addr</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_dynlink__impl__symbol__win32_8h_1ac5d66723717583b0efbc7c23f9ccd059"/>    <section>
+    <title>DYNLINK_SYMBOL_PREFIX</title>
+<indexterm><primary>DYNLINK_SYMBOL_PREFIX</primary><secondary>dynlink_impl_symbol_win32.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_symbol_win32.h</primary><secondary>DYNLINK_SYMBOL_PREFIX</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_SYMBOL_PREFIX</computeroutput></para>    </section><anchor xml:id="_dynlink__impl__symbol__win32_8h_1ac7c2e3794ef31f11c7743643f55000e6"/>    <section>
+    <title>DYNLINK_SYMBOL_EXPORT</title>
+<indexterm><primary>DYNLINK_SYMBOL_EXPORT</primary><secondary>dynlink_impl_symbol_win32.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_symbol_win32.h</primary><secondary>DYNLINK_SYMBOL_EXPORT</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_SYMBOL_EXPORT( name)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;DYNLINK_NO_EXPORT&#32;<emphasis role="keyword">struct&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;char&#32;name;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}&#32;<link linkend="_preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1">PREPROCESSOR_CONCAT</link>(dynlink_no_export_,&#32;name)
+</programlisting>    </section><anchor xml:id="_dynlink__impl__symbol__win32_8h_1a2103b1d11c0227b698826a7a7b2eb844"/>    <section>
+    <title>DYNLINK_SYMBOL_GET</title>
+<indexterm><primary>DYNLINK_SYMBOL_GET</primary><secondary>dynlink_impl_symbol_win32.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_symbol_win32.h</primary><secondary>DYNLINK_SYMBOL_GET</secondary></indexterm>
+<para><computeroutput>#define DYNLINK_SYMBOL_GET( name)   name</computeroutput></para></section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_dynlink__impl__symbol__win32_8h_1aba90ac516e82054be6efab5886df3a3e"/>    <section>
+    <title>dynlink_symbol_addr_win32</title>
+<indexterm><primary>dynlink_symbol_addr_win32</primary><secondary>dynlink_impl_symbol_win32.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_symbol_win32.h</primary><secondary>dynlink_symbol_addr_win32</secondary></indexterm>
+<para><computeroutput>typedef void(* dynlink_symbol_addr_win32) (void)</computeroutput></para>    </section><anchor xml:id="_dynlink__impl__symbol__win32_8h_1a4d504c6b325ead6af4305487514a9e92"/>    <section>
+    <title>dynlink_symbol_addr</title>
+<indexterm><primary>dynlink_symbol_addr</primary><secondary>dynlink_impl_symbol_win32.h</secondary></indexterm>
+<indexterm><primary>dynlink_impl_symbol_win32.h</primary><secondary>dynlink_symbol_addr</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_dynlink__impl__symbol__win32_8h_1aba90ac516e82054be6efab5886df3a3e">dynlink_symbol_addr_win32</link> <link linkend="_dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf">dynlink_symbol_addr</link></computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__handle_8h">
+<title>log_handle.h File Reference</title>
+<indexterm><primary>log_handle.h</primary></indexterm>
+<programlisting>#include &lt;log/log_api.h&gt;
+#include &lt;log/log_record.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for log_handle.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__handle_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="log__handle_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct log_handle_type * <link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LOG_API <link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> <link linkend="_log__handle_8h_1a1c7536699daf407eee8bb67c2eab49a1">log_handle_create</link> (void)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> <link linkend="_log__handle_8h_1ada2c7f76bc8fc22016695e565d9dda58">log_handle_initialize</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> <link linkend="_log__handle_8h_1ac4fdad18d31bb340f4402a310653e9f1">log_handle_get</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle, const size_t record_id)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> <link linkend="_log__handle_8h_1a88b5f466d448bf7920f3e8c51e2a2fd6">log_handle_set</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle, const size_t record_id, const log_record_ctor record_ctor)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> <link linkend="_log__handle_8h_1ad5f63af9ffd0089b6067d0d69dcc5da5">log_handle_push</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle, const log_record_ctor record_ctor)</para>
+</listitem>
+            <listitem><para>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> <link linkend="_log__handle_8h_1a9d91a0795de60f11cf95f30f435c54ab">log_handle_pop</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</para>
+</listitem>
+            <listitem><para>LOG_API size_t <link linkend="_log__handle_8h_1a040aea6a0005846bda846f9421364a05">log_handle_count</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</para>
+</listitem>
+            <listitem><para>LOG_API size_t <link linkend="_log__handle_8h_1afe1a4a6076ec5daa3f0de58635a8645d">log_handle_size</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__handle_8h_1aeeec8968a604c55c679d082946d08fe0">log_handle_clear</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</para>
+</listitem>
+            <listitem><para>LOG_API int <link linkend="_log__handle_8h_1a3433a4e193067930721505471faf5159">log_handle_destroy</link> (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6"/>    <section>
+    <title>log_handle</title>
+<indexterm><primary>log_handle</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle</secondary></indexterm>
+<para><computeroutput>typedef struct log_handle_type* <link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_log__handle_8h_1a1c7536699daf407eee8bb67c2eab49a1"/>    <section>
+    <title>log_handle_create()</title>
+<indexterm><primary>log_handle_create</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_create</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> log_handle_create (void )</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1ada2c7f76bc8fc22016695e565d9dda58"/>    <section>
+    <title>log_handle_initialize()</title>
+<indexterm><primary>log_handle_initialize</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_initialize</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> log_handle_initialize (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1ac4fdad18d31bb340f4402a310653e9f1"/>    <section>
+    <title>log_handle_get()</title>
+<indexterm><primary>log_handle_get</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_get</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> log_handle_get (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle, const size_t record_id)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1a88b5f466d448bf7920f3e8c51e2a2fd6"/>    <section>
+    <title>log_handle_set()</title>
+<indexterm><primary>log_handle_set</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_set</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> log_handle_set (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle, const size_t record_id, const log_record_ctor record_ctor)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1ad5f63af9ffd0089b6067d0d69dcc5da5"/>    <section>
+    <title>log_handle_push()</title>
+<indexterm><primary>log_handle_push</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_push</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> log_handle_push (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle, const log_record_ctor record_ctor)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1a9d91a0795de60f11cf95f30f435c54ab"/>    <section>
+    <title>log_handle_pop()</title>
+<indexterm><primary>log_handle_pop</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_pop</secondary></indexterm>
+<para><computeroutput>LOG_API <link linkend="_log__record_8h_1ad23af9c6a5830213a2b0bf0c9a4ec2e4">log_record</link> log_handle_pop (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1a040aea6a0005846bda846f9421364a05"/>    <section>
+    <title>log_handle_count()</title>
+<indexterm><primary>log_handle_count</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_count</secondary></indexterm>
+<para><computeroutput>LOG_API size_t log_handle_count (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1afe1a4a6076ec5daa3f0de58635a8645d"/>    <section>
+    <title>log_handle_size()</title>
+<indexterm><primary>log_handle_size</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_size</secondary></indexterm>
+<para><computeroutput>LOG_API size_t log_handle_size (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1aeeec8968a604c55c679d082946d08fe0"/>    <section>
+    <title>log_handle_clear()</title>
+<indexterm><primary>log_handle_clear</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_clear</secondary></indexterm>
+<para><computeroutput>LOG_API int log_handle_clear (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</computeroutput></para>    </section><anchor xml:id="_log__handle_8h_1a3433a4e193067930721505471faf5159"/>    <section>
+    <title>log_handle_destroy()</title>
+<indexterm><primary>log_handle_destroy</primary><secondary>log_handle.h</secondary></indexterm>
+<indexterm><primary>log_handle.h</primary><secondary>log_handle_destroy</secondary></indexterm>
+<para><computeroutput>LOG_API int log_handle_destroy (<link linkend="_log__handle_8h_1a2c6e87df6b97a24b71d5a6ef9a8722c6">log_handle</link> handle)</computeroutput></para></section>
+</section>
+</section>

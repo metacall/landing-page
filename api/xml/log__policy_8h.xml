@@ -1,0 +1,564 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="log__policy_8h" kind="file" language="C++">
+    <compoundname>log_policy.h</compoundname>
+    <includes local="no">log/log_api.h</includes>
+    <includes refid="log__aspect_8h" local="no">log/log_aspect.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includedby refid="log_8h" local="no">log.h</includedby>
+    <includedby refid="log__policy__format_8h" local="no">log_policy_format.h</includedby>
+    <includedby refid="log__policy__format__binary_8h" local="no">log_policy_format_binary.h</includedby>
+    <includedby refid="log__policy__format__custom_8h" local="no">log_policy_format_custom.h</includedby>
+    <includedby refid="log__policy__format__text_8h" local="no">log_policy_format_text.h</includedby>
+    <includedby refid="log__policy__schedule_8h" local="no">log_policy_schedule.h</includedby>
+    <includedby refid="log__policy__schedule__async_8h" local="no">log_policy_schedule_async.h</includedby>
+    <includedby refid="log__policy__schedule__sync_8h" local="no">log_policy_schedule_sync.h</includedby>
+    <includedby refid="log__policy__storage_8h" local="no">log_policy_storage.h</includedby>
+    <includedby refid="log__policy__storage__batch_8h" local="no">log_policy_storage_batch.h</includedby>
+    <includedby refid="log__policy__storage__sequential_8h" local="no">log_policy_storage_sequential.h</includedby>
+    <includedby refid="log__policy__stream_8h" local="no">log_policy_stream.h</includedby>
+    <includedby refid="log__policy__stream__custom_8h" local="no">log_policy_stream_custom.h</includedby>
+    <includedby refid="log__policy__stream__file_8h" local="no">log_policy_stream_file.h</includedby>
+    <includedby refid="log__policy__stream__nginx_8h" local="no">log_policy_stream_nginx.h</includedby>
+    <includedby refid="log__policy__stream__socket_8h" local="no">log_policy_stream_socket.h</includedby>
+    <includedby refid="log__policy__stream__stdio_8h" local="no">log_policy_stream_stdio.h</includedby>
+    <includedby refid="log__policy__stream__syslog_8h" local="no">log_policy_stream_syslog.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>log/log_api.h</label>
+      </node>
+      <node id="3">
+        <label>log/log_aspect.h</label>
+        <link refid="log__aspect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>log_policy.h</label>
+        <link refid="log__policy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>log_policy_format_binary.h</label>
+        <link refid="log__policy__format__binary_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>log.h</label>
+        <link refid="log_8h"/>
+      </node>
+      <node id="8">
+        <label>log_policy_schedule_async.h</label>
+        <link refid="log__policy__schedule__async_8h"/>
+      </node>
+      <node id="7">
+        <label>log_policy_schedule.h</label>
+        <link refid="log__policy__schedule_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>log_policy_format.h</label>
+        <link refid="log__policy__format_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>log_policy_storage_batch.h</label>
+        <link refid="log__policy__storage__batch_8h"/>
+      </node>
+      <node id="17">
+        <label>log_policy_stream_socket.h</label>
+        <link refid="log__policy__stream__socket_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>log_policy_stream.h</label>
+        <link refid="log__policy__stream_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>log_policy_stream_custom.h</label>
+        <link refid="log__policy__stream__custom_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>log_policy_schedule_sync.h</label>
+        <link refid="log__policy__schedule__sync_8h"/>
+      </node>
+      <node id="6">
+        <label>log_policy_format_text.h</label>
+        <link refid="log__policy__format__text_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>log_policy_stream_syslog.h</label>
+        <link refid="log__policy__stream__syslog_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>log_policy_storage_sequential.h</label>
+        <link refid="log__policy__storage__sequential_8h"/>
+      </node>
+      <node id="18">
+        <label>log_policy_stream_stdio.h</label>
+        <link refid="log__policy__stream__stdio_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>log_policy_stream_file.h</label>
+        <link refid="log__policy__stream__file_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>log_policy_storage.h</label>
+        <link refid="log__policy__storage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>log_policy.h</label>
+        <link refid="log__policy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>log_policy_format_custom.h</label>
+        <link refid="log__policy__format__custom_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>log_policy_stream_nginx.h</label>
+        <link refid="log__policy__stream__nginx_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlog__policy__interface__type" prot="public">log_policy_interface_type</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t log_policy_id</definition>
+        <argsstring></argsstring>
+        <name>log_policy_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="46" column="16" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_policy_impl</definition>
+        <argsstring></argsstring>
+        <name>log_policy_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="48" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_policy_data</definition>
+        <argsstring></argsstring>
+        <name>log_policy_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="50" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* log_policy_ctor</definition>
+        <argsstring></argsstring>
+        <name>log_policy_ctor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="52" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy_8h_1a58277154fdc39d2de449b5a3dfada9ce" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_interface_create) (log_policy, const log_policy_ctor)</definition>
+        <argsstring>)(log_policy, const log_policy_ctor)</argsstring>
+        <name>log_policy_interface_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="54" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy_8h_1aa57bdfdfb18fe2d24d20daa432d8457c" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_policy_interface_destroy) (log_policy)</definition>
+        <argsstring>)(log_policy)</argsstring>
+        <name>log_policy_interface_destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="56" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy_8h_1aaaf2f7fae9adcaba2987cef30770c7ae" prot="public" static="no">
+        <type>log_policy_interface(*</type>
+        <definition>typedef log_policy_interface(* log_policy_singleton) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>log_policy_singleton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="60" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="log__policy_8h_1a06e277a564eb91c8f30b76c08c3df620" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+        <definition>LOG_API log_policy log_policy_create</definition>
+        <argsstring>(enum log_aspect_id aspect_id, const log_policy_interface iface, const log_policy_ctor ctor)</argsstring>
+        <name>log_policy_create</name>
+        <param>
+          <type>enum <ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref></type>
+          <declname>aspect_id</declname>
+        </param>
+        <param>
+          <type>const log_policy_interface</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type>const <ref refid="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" kindref="member">log_policy_ctor</ref></type>
+          <declname>ctor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="73" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="73" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1a661c84de7ecb775f1e06aea04fe9a18c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API void</type>
+        <definition>LOG_API void log_policy_instantiate</definition>
+        <argsstring>(log_policy policy, log_policy_data instance, const log_policy_id id)</argsstring>
+        <name>log_policy_instantiate</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type><ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref></type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>const <ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="75" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="75" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1af271500926e9eff385ef898bc6b9d781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API void</type>
+        <definition>LOG_API void log_policy_classify</definition>
+        <argsstring>(log_policy policy, log_aspect aspect)</argsstring>
+        <name>log_policy_classify</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <param>
+          <type><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+          <declname>aspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="77" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="77" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1adf778f88ede0fe6bedfab994e9c809b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref></type>
+        <definition>LOG_API log_aspect log_policy_aspect</definition>
+        <argsstring>(log_policy policy)</argsstring>
+        <name>log_policy_aspect</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="79" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="79" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1a1d301f7f7996670937ef91463255a7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API enum <ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref></type>
+        <definition>LOG_API enum log_aspect_id log_policy_aspect_id</definition>
+        <argsstring>(log_policy policy)</argsstring>
+        <name>log_policy_aspect_id</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="81" column="1" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="81" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1a5459b90dff8c00665a3adb85fe326ce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref></type>
+        <definition>LOG_API log_policy_data log_policy_instance</definition>
+        <argsstring>(log_policy policy)</argsstring>
+        <name>log_policy_instance</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="83" column="25" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="83" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1a7666fd97f984b9c168ce93181771c53e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API log_policy_interface</type>
+        <definition>LOG_API log_policy_interface log_policy_behavior</definition>
+        <argsstring>(log_policy policy)</argsstring>
+        <name>log_policy_behavior</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="85" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="85" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1a6ec05522403aca58a1376d5fec8f1d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API <ref refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" kindref="member">log_policy_impl</ref></type>
+        <definition>LOG_API log_policy_impl log_policy_derived</definition>
+        <argsstring>(log_policy policy)</argsstring>
+        <name>log_policy_derived</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="87" column="25" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="87" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="log__policy_8h_1a81b1ef0f90352c0f143d276ce1d9058e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API int</type>
+        <definition>LOG_API int log_policy_destroy</definition>
+        <argsstring>(log_policy policy)</argsstring>
+        <name>log_policy_destroy</name>
+        <param>
+          <type><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref></type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" line="89" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h" declline="89" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOG_POLICY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG_POLICY_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;log/log_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__aspect_8h" kindref="compound">log/log_aspect.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_policy_ctor_type;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__interface__type" kindref="compound">log_policy_interface_type</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" kindref="member">log_policy_impl</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" kindref="member">log_policy_ctor</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="log__policy_8h_1a58277154fdc39d2de449b5a3dfada9ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy_8h_1a58277154fdc39d2de449b5a3dfada9ce" kindref="member">log_policy_interface_create</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" kindref="member">log_policy_ctor</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="log__policy_8h_1aa57bdfdfb18fe2d24d20daa432d8457c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="log__policy_8h_1aa57bdfdfb18fe2d24d20daa432d8457c" kindref="member">log_policy_interface_destroy</ref>)(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__interface__type" kindref="compound">log_policy_interface_type</ref><sp/>*log_policy_interface;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="log__policy_8h_1aaaf2f7fae9adcaba2987cef30770c7ae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>log_policy_interface<sp/>(*<ref refid="log__policy_8h_1aaaf2f7fae9adcaba2987cef30770c7ae" kindref="member">log_policy_singleton</ref>)(void);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structlog__policy__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__interface__type" kindref="compound">log_policy_interface_type</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66" refid="structlog__policy__interface__type_1a1bb9ab5b299fa411de5019c5961baab2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy_8h_1a58277154fdc39d2de449b5a3dfada9ce" kindref="member">log_policy_interface_create</ref><sp/><ref refid="structlog__policy__interface__type_1a1bb9ab5b299fa411de5019c5961baab2" kindref="member">create</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structlog__policy__interface__type_1ac6bdb8b8a1121778c726e1c37b177f8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" kindref="member">log_policy_impl</ref><sp/><ref refid="structlog__policy__interface__type_1ac6bdb8b8a1121778c726e1c37b177f8e" kindref="member">impl</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structlog__policy__interface__type_1a965fa3a4bf7107baa7ca35d1d5ee9591" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy_8h_1aa57bdfdfb18fe2d24d20daa432d8457c" kindref="member">log_policy_interface_destroy</ref><sp/><ref refid="structlog__policy__interface__type_1a965fa3a4bf7107baa7ca35d1d5ee9591" kindref="member">destroy</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy_8h_1a06e277a564eb91c8f30b76c08c3df620" kindref="member">log_policy_create</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref><sp/>aspect_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_policy_interface<sp/>iface,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" kindref="member">log_policy_ctor</ref><sp/>ctor);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a661c84de7ecb775f1e06aea04fe9a18c" kindref="member">log_policy_instantiate</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy,<sp/><ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref><sp/>instance,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1af271500926e9eff385ef898bc6b9d781" kindref="member">log_policy_classify</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy,<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/><ref refid="log__policy_8h_1adf778f88ede0fe6bedfab994e9c809b3" kindref="member">log_policy_aspect</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref><sp/><ref refid="log__policy_8h_1a1d301f7f7996670937ef91463255a7ec" kindref="member">log_policy_aspect_id</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">LOG_API<sp/><ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref><sp/><ref refid="log__policy_8h_1a5459b90dff8c00665a3adb85fe326ce1" kindref="member">log_policy_instance</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy_8h_1a7666fd97f984b9c168ce93181771c53e" kindref="member">log_policy_behavior</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">LOG_API<sp/><ref refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" kindref="member">log_policy_impl</ref><sp/><ref refid="log__policy_8h_1a6ec05522403aca58a1376d5fec8f1d87" kindref="member">log_policy_derived</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a81b1ef0f90352c0f143d276ce1d9058e" kindref="member">log_policy_destroy</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_POLICY_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy.h"/>
+  </compounddef>
+</doxygen>

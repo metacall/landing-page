@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__signature_8h">
+<title>reflect_signature.h File Reference</title>
+<indexterm><primary>reflect_signature.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_type.h&gt;
+#include &lt;reflect/reflect_value.h&gt;
+</programlisting>Include dependency graph for reflect_signature.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__signature_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__signature_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct signature_type * <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>REFLECT_API <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> <link linkend="_reflect__signature_8h_1aaca9e22fd0cf77b54a7c899cc6a308f4">signature_create</link> (size_t count)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> <link linkend="_reflect__signature_8h_1ab3f9f2a4abb73b6f4cc32992ea6d234e">signature_resize</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t count)</para>
+</listitem>
+            <listitem><para>REFLECT_API size_t <link linkend="_reflect__signature_8h_1a8a9fcea7576d3e8c11199be6a8f756df">signature_count</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</para>
+</listitem>
+            <listitem><para>REFLECT_API size_t <link linkend="_reflect__signature_8h_1aa7ff4d2b286e7b096a6c8e7d20c636e8">signature_get_index</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, const char *name)</para>
+</listitem>
+            <listitem><para>const REFLECT_API char * <link linkend="_reflect__signature_8h_1a74d0a8a76e1acfff44060dc8edb6d184">signature_get_name</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t index)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> <link linkend="_reflect__signature_8h_1ae16dc0c235f4174b3ad271f8381f997b">signature_get_type</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t index)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> <link linkend="_reflect__signature_8h_1a3b7f3f804e8c9272c77f32a785d9f4f2">signature_get_return</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__signature_8h_1ac35b0a7452a276b86d8f7397c6b9088a">signature_set</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t index, const char *name, <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> t)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__signature_8h_1a676c4bc345455aaabf2563778b3c2477">signature_set_return</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> t)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__signature_8h_1a6d8b45995ef14c6b0d4de84678646174">signature_metadata</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__signature_8h_1abe33c399405d6064638a396e76443f00">signature_destroy</link> (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44"/>    <section>
+    <title>signature</title>
+<indexterm><primary>signature</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature</secondary></indexterm>
+<para><computeroutput>typedef struct signature_type* <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__signature_8h_1aaca9e22fd0cf77b54a7c899cc6a308f4"/>    <section>
+    <title>signature_create()</title>
+<indexterm><primary>signature_create</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_create</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> signature_create (size_t count)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1ab3f9f2a4abb73b6f4cc32992ea6d234e"/>    <section>
+    <title>signature_resize()</title>
+<indexterm><primary>signature_resize</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_resize</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> signature_resize (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t count)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1a8a9fcea7576d3e8c11199be6a8f756df"/>    <section>
+    <title>signature_count()</title>
+<indexterm><primary>signature_count</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_count</secondary></indexterm>
+<para><computeroutput>REFLECT_API size_t signature_count (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1aa7ff4d2b286e7b096a6c8e7d20c636e8"/>    <section>
+    <title>signature_get_index()</title>
+<indexterm><primary>signature_get_index</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_get_index</secondary></indexterm>
+<para><computeroutput>REFLECT_API size_t signature_get_index (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, const char * name)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1a74d0a8a76e1acfff44060dc8edb6d184"/>    <section>
+    <title>signature_get_name()</title>
+<indexterm><primary>signature_get_name</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_get_name</secondary></indexterm>
+<para><computeroutput>const REFLECT_API char* signature_get_name (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t index)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1ae16dc0c235f4174b3ad271f8381f997b"/>    <section>
+    <title>signature_get_type()</title>
+<indexterm><primary>signature_get_type</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_get_type</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> signature_get_type (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t index)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1a3b7f3f804e8c9272c77f32a785d9f4f2"/>    <section>
+    <title>signature_get_return()</title>
+<indexterm><primary>signature_get_return</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_get_return</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> signature_get_return (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1ac35b0a7452a276b86d8f7397c6b9088a"/>    <section>
+    <title>signature_set()</title>
+<indexterm><primary>signature_set</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_set</secondary></indexterm>
+<para><computeroutput>REFLECT_API void signature_set (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, size_t index, const char * name, <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> t)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1a676c4bc345455aaabf2563778b3c2477"/>    <section>
+    <title>signature_set_return()</title>
+<indexterm><primary>signature_set_return</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_set_return</secondary></indexterm>
+<para><computeroutput>REFLECT_API void signature_set_return (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s, <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> t)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1a6d8b45995ef14c6b0d4de84678646174"/>    <section>
+    <title>signature_metadata()</title>
+<indexterm><primary>signature_metadata</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_metadata</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> signature_metadata (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</computeroutput></para>    </section><anchor xml:id="_reflect__signature_8h_1abe33c399405d6064638a396e76443f00"/>    <section>
+    <title>signature_destroy()</title>
+<indexterm><primary>signature_destroy</primary><secondary>reflect_signature.h</secondary></indexterm>
+<indexterm><primary>reflect_signature.h</primary><secondary>signature_destroy</secondary></indexterm>
+<para><computeroutput>REFLECT_API void signature_destroy (<link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> s)</computeroutput></para></section>
+</section>
+</section>

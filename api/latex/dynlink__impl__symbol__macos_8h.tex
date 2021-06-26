@@ -1,0 +1,83 @@
+\doxysection{dynlink\+\_\+impl\+\_\+symbol\+\_\+macos.\+h File Reference}
+\label{dynlink__impl__symbol__macos_8h}\index{dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}}
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+Include dependency graph for dynlink\+\_\+impl\+\_\+symbol\+\_\+macos.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{dynlink__impl__symbol__macos_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{dynlink__impl__symbol__macos_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+macos}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX}~dynlink\+\_\+symbol\+\_\+
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT}(name)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET}(name)~((dynlink\+\_\+symbol\+\_\+addr\+\_\+macos)(name))-\/$>$symbol
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+macos\+\_\+impl}) (void)
+\item 
+typedef dynlink\+\_\+symbol\+\_\+addr\+\_\+macos \textbf{ dynlink\+\_\+symbol\+\_\+addr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{dynlink__impl__symbol__macos_8h_ac5d66723717583b0efbc7c23f9ccd059}} 
+\index{dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}!DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}}
+\index{DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}!dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_PREFIX}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX~dynlink\+\_\+symbol\+\_\+}
+
+\mbox{\label{dynlink__impl__symbol__macos_8h_ac7c2e3794ef31f11c7743643f55000e6}} 
+\index{dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}!DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}}
+\index{DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}!dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_EXPORT}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    DYNLINK\_API \textcolor{keyword}{struct }dynlink\_symbol\_addr\_macos\_type DYNLINK\_SYMBOL\_NAME(name) = \{ \(\backslash\)}
+\DoxyCodeLine{        (dynlink\_symbol\_addr\_macos\_impl)\&name                                       \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\label{dynlink__impl__symbol__macos_8h_a2103b1d11c0227b698826a7a7b2eb844}} 
+\index{dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}!DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}}
+\index{DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}!dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}}
+\doxysubsubsection{DYNLINK\_SYMBOL\_GET}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~((dynlink\+\_\+symbol\+\_\+addr\+\_\+macos)(name))-\/$>$symbol}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{dynlink__impl__symbol__macos_8h_a463c40799da85e58f2becdf3e6989273}} 
+\index{dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}!dynlink\_symbol\_addr\_macos\_impl@{dynlink\_symbol\_addr\_macos\_impl}}
+\index{dynlink\_symbol\_addr\_macos\_impl@{dynlink\_symbol\_addr\_macos\_impl}!dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}}
+\doxysubsubsection{dynlink\_symbol\_addr\_macos\_impl}
+{\footnotesize\ttfamily typedef void($\ast$ dynlink\+\_\+symbol\+\_\+addr\+\_\+macos\+\_\+impl) (void)}
+
+\mbox{\label{dynlink__impl__symbol__macos_8h_ab0a170a4a4ea8e3e7b5423383057e693}} 
+\index{dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}!dynlink\_symbol\_addr@{dynlink\_symbol\_addr}}
+\index{dynlink\_symbol\_addr@{dynlink\_symbol\_addr}!dynlink\_impl\_symbol\_macos.h@{dynlink\_impl\_symbol\_macos.h}}
+\doxysubsubsection{dynlink\_symbol\_addr}
+{\footnotesize\ttfamily typedef dynlink\+\_\+symbol\+\_\+addr\+\_\+macos \textbf{ dynlink\+\_\+symbol\+\_\+addr}}
+

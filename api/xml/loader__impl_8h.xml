@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="loader__impl_8h" kind="file" language="C++">
+    <compoundname>loader_impl.h</compoundname>
+    <includes local="no">loader/loader_api.h</includes>
+    <includes refid="loader__impl__interface_8h" local="no">loader/loader_impl_interface.h</includes>
+    <includes refid="loader__path_8h" local="no">loader/loader_path.h</includes>
+    <includedby refid="loader_8h" local="no">loader.h</includedby>
+    <includedby refid="loader__impl__function_8h" local="no">loader_impl_function.h</includedby>
+    <includedby refid="loader__impl__handle_8h" local="no">loader_impl_handle.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>loader/loader_handle.h</label>
+        <link refid="loader__handle_8h"/>
+      </node>
+      <node id="10">
+        <label>reflect/reflect_function.h</label>
+        <link refid="reflect__function_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>loader/loader_impl_interface.h</label>
+        <link refid="loader__impl__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>loader/loader_naming.h</label>
+        <link refid="loader__naming_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>reflect/reflect_scope.h</label>
+        <link refid="reflect__scope_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>reflect/reflect_type.h</label>
+        <link refid="reflect__type_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>loader/loader_impl_data.h</label>
+        <link refid="loader__impl__data_8h"/>
+      </node>
+      <node id="2">
+        <label>loader/loader_api.h</label>
+      </node>
+      <node id="13">
+        <label>reflect/reflect_type_id.h</label>
+        <link refid="reflect__type__id_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>reflect/reflect_value.h</label>
+        <link refid="reflect__value_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>reflect/reflect_api.h</label>
+      </node>
+      <node id="16">
+        <label>configuration/configuration.h</label>
+      </node>
+      <node id="1">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>loader/loader_path.h</label>
+        <link refid="loader__path_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>reflect/reflect_context.h</label>
+        <link refid="reflect__context_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>reflect/reflect_signature.h</label>
+        <link refid="reflect__signature_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>loader_impl_function.h</label>
+        <link refid="loader__impl__function_8h"/>
+      </node>
+      <node id="4">
+        <label>loader_impl_handle.h</label>
+        <link refid="loader__impl__handle_8h"/>
+      </node>
+      <node id="1">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>loader.h</label>
+        <link refid="loader_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="loader__impl_8h_1a8ef9b4483d15ceb12658af43407fb8da" prot="public" static="no">
+        <name>LOADER_HOST_PROXY_NAME</name>
+        <initializer>&quot;__metacall_host__&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="35" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="loader__impl_8h_1a3f2a7835ee2b99411b1f4af33ef5d4b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_impl_is_initialized</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_is_initialized</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="39" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="39" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a856e1c576e498383cb5db471f1f559d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+        <definition>LOADER_API loader_impl loader_impl_create</definition>
+        <argsstring>(const char *path, const loader_naming_tag tag)</argsstring>
+        <name>loader_impl_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="41" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="41" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1af0d21828a829732e62791a3941242d01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="loader__impl__data_8h_1ab431d457f46d287723fd3922779f9c2c" kindref="member">loader_impl_data</ref></type>
+        <definition>LOADER_API loader_impl_data loader_impl_get</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_get</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="43" column="29" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="43" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1aa0b0eea1c7a428289665c675c622b091" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API loader_impl_interface</type>
+        <definition>LOADER_API loader_impl_interface loader_impl_symbol</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_symbol</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="45" column="34" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="45" declcolumn="34"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1aabca7a1227c9447193f6b04171adae37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref> *</type>
+        <definition>LOADER_API loader_naming_tag* loader_impl_tag</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_tag</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="47" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="47" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1acbe6beea3b8aa45da1b0b4d3f23cf03a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref></type>
+        <definition>LOADER_API context loader_impl_context</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_context</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="49" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="49" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1aa2168a5acade5495211094e35331c604" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref></type>
+        <definition>LOADER_API type loader_impl_type</definition>
+        <argsstring>(loader_impl impl, const char *name)</argsstring>
+        <name>loader_impl_type</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="51" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="51" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a167299d624745a6c7d4b946f6bbbf8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_impl_type_define</definition>
+        <argsstring>(loader_impl impl, const char *name, type t)</argsstring>
+        <name>loader_impl_type_define</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="53" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="53" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1ae9e68606c3b0b8115cb981e01cda9369" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_impl_execution_path</definition>
+        <argsstring>(loader_impl impl, const loader_naming_path path)</argsstring>
+        <name>loader_impl_execution_path</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="55" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="55" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1af1482072a4fdb60e77afdf7a02503e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_impl_load_from_file</definition>
+        <argsstring>(loader_impl impl, const loader_naming_path paths[], size_t size, void **handle_ptr)</argsstring>
+        <name>loader_impl_load_from_file</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
+          <declname>paths</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>handle_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="57" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="57" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1acde0e72d18cc6ede9f200a099eff643c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_impl_load_from_memory</definition>
+        <argsstring>(loader_impl impl, const char *buffer, size_t size, void **handle_ptr)</argsstring>
+        <name>loader_impl_load_from_memory</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>handle_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="59" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="59" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a59eb6cce42796b2bfabd4a0fd1539442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_impl_load_from_package</definition>
+        <argsstring>(loader_impl impl, const loader_naming_path path, void **handle_ptr)</argsstring>
+        <name>loader_impl_load_from_package</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>handle_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="61" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="61" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1ae51eabce177ad3f740f54abed5085f79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API void *</type>
+        <definition>LOADER_API void* loader_impl_get_handle</definition>
+        <argsstring>(loader_impl impl, const char *name)</argsstring>
+        <name>loader_impl_get_handle</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="63" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="63" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1ab0a5e979f9e63c12c08e029f36994461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API void</type>
+        <definition>LOADER_API void loader_impl_set_options</definition>
+        <argsstring>(loader_impl impl, void *options)</argsstring>
+        <name>loader_impl_set_options</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="65" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="65" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1ab38c47aad274df78e047d04eff7b4ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API void *</type>
+        <definition>LOADER_API void* loader_impl_get_options</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_get_options</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="67" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="67" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1abc84e0552507a704d3dcdaa04a0dd3c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const LOADER_API char *</type>
+        <definition>const LOADER_API char* loader_impl_handle_id</definition>
+        <argsstring>(void *handle)</argsstring>
+        <name>loader_impl_handle_id</name>
+        <param>
+          <type>void *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="69" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="69" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a7b8593fabd702e8bdb2552755128aa44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>LOADER_API value loader_impl_handle_export</definition>
+        <argsstring>(void *handle)</argsstring>
+        <name>loader_impl_handle_export</name>
+        <param>
+          <type>void *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="71" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="71" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a0feed327b857033b702cf7c21fc0b88d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref></type>
+        <definition>LOADER_API context loader_impl_handle_context</definition>
+        <argsstring>(void *handle)</argsstring>
+        <name>loader_impl_handle_context</name>
+        <param>
+          <type>void *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="73" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="73" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a1533d375b2c0936275ea5d6b47a498c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>LOADER_API value loader_impl_metadata</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_metadata</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="75" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="75" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1af1f5d8072b794eec75444ccf79abe9ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_impl_clear</definition>
+        <argsstring>(void *handle)</argsstring>
+        <name>loader_impl_clear</name>
+        <param>
+          <type>void *</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="77" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="77" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a222684e3ae6d78eba758da03ea663023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API void</type>
+        <definition>LOADER_API void loader_impl_destroy_objects</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_destroy_objects</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="79" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="79" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a51e445d2aa93a560bb3f9a9e665612b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API void</type>
+        <definition>LOADER_API void loader_impl_destroy</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_impl_destroy</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="81" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="81" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="loader__impl_8h_1a86245fe7bbd8e7a710e754e883f15db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API <ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+        <definition>LOADER_API loader_impl loader_impl_create_proxy</definition>
+        <argsstring>(void)</argsstring>
+        <name>loader_impl_create_proxy</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" line="83" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h" declline="83" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Loader<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>loading<sp/>executable<sp/>code<sp/>at<sp/>run-time<sp/>into<sp/>a<sp/>process.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LOADER_IMPL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOADER_IMPL_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;loader/loader_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="loader__impl__interface_8h" kindref="compound">loader/loader_impl_interface.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="loader__path_8h" kindref="compound">loader/loader_path.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="loader__impl_8h_1a8ef9b4483d15ceb12658af43407fb8da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOADER_HOST_PROXY_NAME<sp/>&quot;__metacall_host__&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1a3f2a7835ee2b99411b1f4af33ef5d4b2" kindref="member">loader_impl_is_initialized</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">LOADER_API<sp/><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/><ref refid="loader__impl_8h_1a856e1c576e498383cb5db471f1f559d6" kindref="member">loader_impl_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">LOADER_API<sp/><ref refid="loader__impl__data_8h_1ab431d457f46d287723fd3922779f9c2c" kindref="member">loader_impl_data</ref><sp/><ref refid="loader__impl_8h_1af0d21828a829732e62791a3941242d01" kindref="member">loader_impl_get</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">LOADER_API<sp/>loader_impl_interface<sp/><ref refid="loader__impl_8h_1aa0b0eea1c7a428289665c675c622b091" kindref="member">loader_impl_symbol</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">LOADER_API<sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>*<ref refid="loader__impl_8h_1aabca7a1227c9447193f6b04171adae37" kindref="member">loader_impl_tag</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">LOADER_API<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/><ref refid="loader__impl_8h_1acbe6beea3b8aa45da1b0b4d3f23cf03a" kindref="member">loader_impl_context</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">LOADER_API<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/><ref refid="loader__impl_8h_1aa2168a5acade5495211094e35331c604" kindref="member">loader_impl_type</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1a167299d624745a6c7d4b946f6bbbf8a8" kindref="member">loader_impl_type_define</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/>t);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1ae9e68606c3b0b8115cb981e01cda9369" kindref="member">loader_impl_execution_path</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>path);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1af1482072a4fdb60e77afdf7a02503e96" kindref="member">loader_impl_load_from_file</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>paths[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle_ptr);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1acde0e72d18cc6ede9f200a099eff643c" kindref="member">loader_impl_load_from_memory</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle_ptr);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1a59eb6cce42796b2bfabd4a0fd1539442" kindref="member">loader_impl_load_from_package</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>path,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle_ptr);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader__impl_8h_1ae51eabce177ad3f740f54abed5085f79" kindref="member">loader_impl_get_handle</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1ab0a5e979f9e63c12c08e029f36994461" kindref="member">loader_impl_set_options</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*options);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader__impl_8h_1ab38c47aad274df78e047d04eff7b4ce9" kindref="member">loader_impl_get_options</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="loader__impl_8h_1abc84e0552507a704d3dcdaa04a0dd3c2" kindref="member">loader_impl_handle_id</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">LOADER_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="loader__impl_8h_1a7b8593fabd702e8bdb2552755128aa44" kindref="member">loader_impl_handle_export</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">LOADER_API<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/><ref refid="loader__impl_8h_1a0feed327b857033b702cf7c21fc0b88d" kindref="member">loader_impl_handle_context</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">LOADER_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="loader__impl_8h_1a1533d375b2c0936275ea5d6b47a498c0" kindref="member">loader_impl_metadata</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1af1f5d8072b794eec75444ccf79abe9ce" kindref="member">loader_impl_clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1a222684e3ae6d78eba758da03ea663023" kindref="member">loader_impl_destroy_objects</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader__impl_8h_1a51e445d2aa93a560bb3f9a9e665612b1" kindref="member">loader_impl_destroy</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">LOADER_API<sp/><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/><ref refid="loader__impl_8h_1a86245fe7bbd8e7a710e754e883f15db4" kindref="member">loader_impl_create_proxy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOADER_IMPL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,225 @@
+\doxysection{loader\+\_\+impl.\+h File Reference}
+\label{loader__impl_8h}\index{loader\_impl.h@{loader\_impl.h}}
+{\ttfamily \#include $<$loader/loader\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$loader/loader\+\_\+impl\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$loader/loader\+\_\+path.\+h$>$}\newline
+Include dependency graph for loader\+\_\+impl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{loader__impl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{loader__impl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+O\+A\+D\+E\+R\+\_\+\+H\+O\+S\+T\+\_\+\+P\+R\+O\+X\+Y\+\_\+\+N\+A\+ME}~\char`\"{}\+\_\+\+\_\+metacall\+\_\+host\+\_\+\+\_\+\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+impl\+\_\+is\+\_\+initialized} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl} \textbf{ loader\+\_\+impl\+\_\+create} (const char $\ast$path, const \textbf{ loader\+\_\+naming\+\_\+tag} tag)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl\+\_\+data} \textbf{ loader\+\_\+impl\+\_\+get} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI loader\+\_\+impl\+\_\+interface \textbf{ loader\+\_\+impl\+\_\+symbol} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+naming\+\_\+tag} $\ast$ \textbf{ loader\+\_\+impl\+\_\+tag} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ context} \textbf{ loader\+\_\+impl\+\_\+context} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ type} \textbf{ loader\+\_\+impl\+\_\+type} (\textbf{ loader\+\_\+impl} impl, const char $\ast$name)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+impl\+\_\+type\+\_\+define} (\textbf{ loader\+\_\+impl} impl, const char $\ast$name, \textbf{ type} t)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+impl\+\_\+execution\+\_\+path} (\textbf{ loader\+\_\+impl} impl, const \textbf{ loader\+\_\+naming\+\_\+path} path)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+impl\+\_\+load\+\_\+from\+\_\+file} (\textbf{ loader\+\_\+impl} impl, const \textbf{ loader\+\_\+naming\+\_\+path} paths[$\,$], size\+\_\+t size, void $\ast$$\ast$handle\+\_\+ptr)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+impl\+\_\+load\+\_\+from\+\_\+memory} (\textbf{ loader\+\_\+impl} impl, const char $\ast$buffer, size\+\_\+t size, void $\ast$$\ast$handle\+\_\+ptr)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+impl\+\_\+load\+\_\+from\+\_\+package} (\textbf{ loader\+\_\+impl} impl, const \textbf{ loader\+\_\+naming\+\_\+path} path, void $\ast$$\ast$handle\+\_\+ptr)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void $\ast$ \textbf{ loader\+\_\+impl\+\_\+get\+\_\+handle} (\textbf{ loader\+\_\+impl} impl, const char $\ast$name)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+impl\+\_\+set\+\_\+options} (\textbf{ loader\+\_\+impl} impl, void $\ast$options)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void $\ast$ \textbf{ loader\+\_\+impl\+\_\+get\+\_\+options} (\textbf{ loader\+\_\+impl} impl)
+\item 
+const L\+O\+A\+D\+E\+R\+\_\+\+A\+PI char $\ast$ \textbf{ loader\+\_\+impl\+\_\+handle\+\_\+id} (void $\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ value} \textbf{ loader\+\_\+impl\+\_\+handle\+\_\+export} (void $\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ context} \textbf{ loader\+\_\+impl\+\_\+handle\+\_\+context} (void $\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ value} \textbf{ loader\+\_\+impl\+\_\+metadata} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int \textbf{ loader\+\_\+impl\+\_\+clear} (void $\ast$handle)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+impl\+\_\+destroy\+\_\+objects} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void \textbf{ loader\+\_\+impl\+\_\+destroy} (\textbf{ loader\+\_\+impl} impl)
+\item 
+L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl} \textbf{ loader\+\_\+impl\+\_\+create\+\_\+proxy} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{loader__impl_8h_a8ef9b4483d15ceb12658af43407fb8da}} 
+\index{loader\_impl.h@{loader\_impl.h}!LOADER\_HOST\_PROXY\_NAME@{LOADER\_HOST\_PROXY\_NAME}}
+\index{LOADER\_HOST\_PROXY\_NAME@{LOADER\_HOST\_PROXY\_NAME}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{LOADER\_HOST\_PROXY\_NAME}
+{\footnotesize\ttfamily \#define L\+O\+A\+D\+E\+R\+\_\+\+H\+O\+S\+T\+\_\+\+P\+R\+O\+X\+Y\+\_\+\+N\+A\+ME~\char`\"{}\+\_\+\+\_\+metacall\+\_\+host\+\_\+\+\_\+\char`\"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{loader__impl_8h_a3f2a7835ee2b99411b1f4af33ef5d4b2}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_is\_initialized@{loader\_impl\_is\_initialized}}
+\index{loader\_impl\_is\_initialized@{loader\_impl\_is\_initialized}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_is\_initialized()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+impl\+\_\+is\+\_\+initialized (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a856e1c576e498383cb5db471f1f559d6}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_create@{loader\_impl\_create}}
+\index{loader\_impl\_create@{loader\_impl\_create}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_create()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl} loader\+\_\+impl\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{const \textbf{ loader\+\_\+naming\+\_\+tag}}]{tag }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_af0d21828a829732e62791a3941242d01}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_get@{loader\_impl\_get}}
+\index{loader\_impl\_get@{loader\_impl\_get}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_get()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl\+\_\+data} loader\+\_\+impl\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_aa0b0eea1c7a428289665c675c622b091}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_symbol@{loader\_impl\_symbol}}
+\index{loader\_impl\_symbol@{loader\_impl\_symbol}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_symbol()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI loader\+\_\+impl\+\_\+interface loader\+\_\+impl\+\_\+symbol (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_aabca7a1227c9447193f6b04171adae37}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_tag@{loader\_impl\_tag}}
+\index{loader\_impl\_tag@{loader\_impl\_tag}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_tag()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+naming\+\_\+tag}$\ast$ loader\+\_\+impl\+\_\+tag (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_acbe6beea3b8aa45da1b0b4d3f23cf03a}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_context@{loader\_impl\_context}}
+\index{loader\_impl\_context@{loader\_impl\_context}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_context()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ context} loader\+\_\+impl\+\_\+context (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_aa2168a5acade5495211094e35331c604}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_type@{loader\_impl\_type}}
+\index{loader\_impl\_type@{loader\_impl\_type}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_type()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ type} loader\+\_\+impl\+\_\+type (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a167299d624745a6c7d4b946f6bbbf8a8}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_type\_define@{loader\_impl\_type\_define}}
+\index{loader\_impl\_type\_define@{loader\_impl\_type\_define}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_type\_define()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+impl\+\_\+type\+\_\+define (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_ae9e68606c3b0b8115cb981e01cda9369}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_execution\_path@{loader\_impl\_execution\_path}}
+\index{loader\_impl\_execution\_path@{loader\_impl\_execution\_path}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_execution\_path()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+impl\+\_\+execution\+\_\+path (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{path }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_af1482072a4fdb60e77afdf7a02503e96}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_load\_from\_file@{loader\_impl\_load\_from\_file}}
+\index{loader\_impl\_load\_from\_file@{loader\_impl\_load\_from\_file}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_load\_from\_file()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+impl\+\_\+load\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{paths[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_acde0e72d18cc6ede9f200a099eff643c}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_load\_from\_memory@{loader\_impl\_load\_from\_memory}}
+\index{loader\_impl\_load\_from\_memory@{loader\_impl\_load\_from\_memory}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_load\_from\_memory()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+impl\+\_\+load\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a59eb6cce42796b2bfabd4a0fd1539442}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_load\_from\_package@{loader\_impl\_load\_from\_package}}
+\index{loader\_impl\_load\_from\_package@{loader\_impl\_load\_from\_package}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_load\_from\_package()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+impl\+\_\+load\+\_\+from\+\_\+package (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const \textbf{ loader\+\_\+naming\+\_\+path}}]{path,  }\item[{void $\ast$$\ast$}]{handle\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_ae51eabce177ad3f740f54abed5085f79}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_get\_handle@{loader\_impl\_get\_handle}}
+\index{loader\_impl\_get\_handle@{loader\_impl\_get\_handle}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_get\_handle()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void$\ast$ loader\+\_\+impl\+\_\+get\+\_\+handle (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_ab0a5e979f9e63c12c08e029f36994461}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_set\_options@{loader\_impl\_set\_options}}
+\index{loader\_impl\_set\_options@{loader\_impl\_set\_options}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_set\_options()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+impl\+\_\+set\+\_\+options (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{void $\ast$}]{options }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_ab38c47aad274df78e047d04eff7b4ce9}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_get\_options@{loader\_impl\_get\_options}}
+\index{loader\_impl\_get\_options@{loader\_impl\_get\_options}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_get\_options()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void$\ast$ loader\+\_\+impl\+\_\+get\+\_\+options (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_abc84e0552507a704d3dcdaa04a0dd3c2}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_handle\_id@{loader\_impl\_handle\_id}}
+\index{loader\_impl\_handle\_id@{loader\_impl\_handle\_id}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_handle\_id()}
+{\footnotesize\ttfamily const L\+O\+A\+D\+E\+R\+\_\+\+A\+PI char$\ast$ loader\+\_\+impl\+\_\+handle\+\_\+id (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a7b8593fabd702e8bdb2552755128aa44}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_handle\_export@{loader\_impl\_handle\_export}}
+\index{loader\_impl\_handle\_export@{loader\_impl\_handle\_export}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_handle\_export()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ value} loader\+\_\+impl\+\_\+handle\+\_\+export (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a0feed327b857033b702cf7c21fc0b88d}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_handle\_context@{loader\_impl\_handle\_context}}
+\index{loader\_impl\_handle\_context@{loader\_impl\_handle\_context}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_handle\_context()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ context} loader\+\_\+impl\+\_\+handle\+\_\+context (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a1533d375b2c0936275ea5d6b47a498c0}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_metadata@{loader\_impl\_metadata}}
+\index{loader\_impl\_metadata@{loader\_impl\_metadata}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_metadata()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ value} loader\+\_\+impl\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_af1f5d8072b794eec75444ccf79abe9ce}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_clear@{loader\_impl\_clear}}
+\index{loader\_impl\_clear@{loader\_impl\_clear}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_clear()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI int loader\+\_\+impl\+\_\+clear (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a222684e3ae6d78eba758da03ea663023}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_destroy\_objects@{loader\_impl\_destroy\_objects}}
+\index{loader\_impl\_destroy\_objects@{loader\_impl\_destroy\_objects}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_destroy\_objects()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+impl\+\_\+destroy\+\_\+objects (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a51e445d2aa93a560bb3f9a9e665612b1}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_destroy@{loader\_impl\_destroy}}
+\index{loader\_impl\_destroy@{loader\_impl\_destroy}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_destroy()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI void loader\+\_\+impl\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a86245fe7bbd8e7a710e754e883f15db4}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_create\_proxy@{loader\_impl\_create\_proxy}}
+\index{loader\_impl\_create\_proxy@{loader\_impl\_create\_proxy}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_create\_proxy()}
+{\footnotesize\ttfamily L\+O\+A\+D\+E\+R\+\_\+\+A\+PI \textbf{ loader\+\_\+impl} loader\+\_\+impl\+\_\+create\+\_\+proxy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,159 @@
+\doxysection{dynlink\+\_\+flags.\+h File Reference}
+\label{dynlink__flags_8h}\index{dynlink\_flags.h@{dynlink\_flags.h}}
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+Include dependency graph for dynlink\+\_\+flags.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{dynlink__flags_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{dynlink__flags_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+N\+OW}~(0x01 $<$$<$ 0x00)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+L\+A\+ZY}~(0x01 $<$$<$ 0x01)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+L\+O\+C\+AL}~(0x01 $<$$<$ 0x02)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+G\+L\+O\+B\+AL}~(0x01 $<$$<$ 0x03)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}(flags,  flag)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+A\+DD}(flags,  flag)
+\item 
+\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+H\+E\+CK}(flags,  flag)~(((flags) \& (flag)) != 0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \textbf{ dynlink\+\_\+flags}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{dynlink__flags_8h_ac0e790b80cfe3dd7f790bc4640331afb}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!DYNLINK\_FLAGS\_BIND\_NOW@{DYNLINK\_FLAGS\_BIND\_NOW}}
+\index{DYNLINK\_FLAGS\_BIND\_NOW@{DYNLINK\_FLAGS\_BIND\_NOW}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{DYNLINK\_FLAGS\_BIND\_NOW}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+N\+OW~(0x01 $<$$<$ 0x00)}
+
+Inmediate loading bind flag \mbox{\label{dynlink__flags_8h_a449177169d6ff1874519b8ceed479897}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!DYNLINK\_FLAGS\_BIND\_LAZY@{DYNLINK\_FLAGS\_BIND\_LAZY}}
+\index{DYNLINK\_FLAGS\_BIND\_LAZY@{DYNLINK\_FLAGS\_BIND\_LAZY}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{DYNLINK\_FLAGS\_BIND\_LAZY}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+L\+A\+ZY~(0x01 $<$$<$ 0x01)}
+
+Lazy loading bind flag \mbox{\label{dynlink__flags_8h_a1e033f06d637a4a18724a99b8184801a}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!DYNLINK\_FLAGS\_BIND\_LOCAL@{DYNLINK\_FLAGS\_BIND\_LOCAL}}
+\index{DYNLINK\_FLAGS\_BIND\_LOCAL@{DYNLINK\_FLAGS\_BIND\_LOCAL}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{DYNLINK\_FLAGS\_BIND\_LOCAL}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+L\+O\+C\+AL~(0x01 $<$$<$ 0x02)}
+
+Private visibility bind flag \mbox{\label{dynlink__flags_8h_adc7e26f520321d22f1ca107b213b2c0e}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!DYNLINK\_FLAGS\_BIND\_GLOBAL@{DYNLINK\_FLAGS\_BIND\_GLOBAL}}
+\index{DYNLINK\_FLAGS\_BIND\_GLOBAL@{DYNLINK\_FLAGS\_BIND\_GLOBAL}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{DYNLINK\_FLAGS\_BIND\_GLOBAL}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+G\+L\+O\+B\+AL~(0x01 $<$$<$ 0x03)}
+
+Public visibility bind flag \mbox{\label{dynlink__flags_8h_a401a42b6fe8623f6324835789f2edd18}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!DYNLINK\_FLAGS\_SET@{DYNLINK\_FLAGS\_SET}}
+\index{DYNLINK\_FLAGS\_SET@{DYNLINK\_FLAGS\_SET}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{DYNLINK\_FLAGS\_SET}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{flags,  }\item[{}]{flag }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                 \(\backslash\)}
+\DoxyCodeLine{    \{                                  \(\backslash\)}
+\DoxyCodeLine{        flags = (flag);                \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Assign to the left operator the right literal. 
+
+Using flag as a 0 resets the flags. Combined flags can be passed to the macro and they will be assigned correctly too. It can be used for generic and implementation flags.
+
+\doxyref{D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+E\+T(flags, 0)}{p.}{dynlink__flags_8h_a401a42b6fe8623f6324835789f2edd18}; D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET(flags, D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+L\+A\+ZY $\vert$ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+G\+L\+O\+B\+AL); D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET(flags\+\_\+impl, R\+T\+L\+D\+\_\+\+L\+A\+ZY $\vert$ R\+T\+L\+D\+\_\+\+G\+L\+O\+B\+AL);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em flags} & The left operator that will be overwritten\\
+\hline
+\mbox{\texttt{ in}}  & {\em flag} & The right literal input parameter \\
+\hline
+\end{DoxyParams}
+\mbox{\label{dynlink__flags_8h_aa06b14c8f8aeb5e56ba4d8d6dd621506}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!DYNLINK\_FLAGS\_ADD@{DYNLINK\_FLAGS\_ADD}}
+\index{DYNLINK\_FLAGS\_ADD@{DYNLINK\_FLAGS\_ADD}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{DYNLINK\_FLAGS\_ADD}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+A\+DD(\begin{DoxyParamCaption}\item[{}]{flags,  }\item[{}]{flag }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                 \(\backslash\)}
+\DoxyCodeLine{    \{                                  \(\backslash\)}
+\DoxyCodeLine{        flags |= (flag);               \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Append to the left operator the right literal. 
+
+Using flag as a 0 does nothing. Combined flags can be passed to the macro and they will be added correctly too. It can be used for generic and implementation flags.
+
+\doxyref{D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+A\+D\+D(nothing, 0)}{p.}{dynlink__flags_8h_aa06b14c8f8aeb5e56ba4d8d6dd621506}; D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+A\+DD(flags, D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+L\+A\+ZY $\vert$ D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+G\+L\+O\+B\+AL); D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+A\+DD(flags\+\_\+impl, R\+T\+L\+D\+\_\+\+L\+A\+ZY $\vert$ R\+T\+L\+D\+\_\+\+G\+L\+O\+B\+AL);
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em flags} & The left operator that will be added\\
+\hline
+\mbox{\texttt{ in}}  & {\em flag} & The literal input parameter \\
+\hline
+\end{DoxyParams}
+\mbox{\label{dynlink__flags_8h_aa829809c84d157f62cbeefcd23146091}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!DYNLINK\_FLAGS\_CHECK@{DYNLINK\_FLAGS\_CHECK}}
+\index{DYNLINK\_FLAGS\_CHECK@{DYNLINK\_FLAGS\_CHECK}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{DYNLINK\_FLAGS\_CHECK}
+{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{flags,  }\item[{}]{flag }\end{DoxyParamCaption})~(((flags) \& (flag)) != 0)}
+
+
+
+Check flags operator. 
+
+This macro must be used as a conditional guard. Using flag as a 0 never enters to the guard. Combined flags can be passed to the macro. It can be used for generic and implementation flags.
+
+if (\doxyref{D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+H\+E\+C\+K(flags, D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+B\+I\+N\+D\+\_\+\+L\+A\+Z\+Y)}{p.}{dynlink__flags_8h_aa829809c84d157f62cbeefcd23146091}) \{ ... \}
+
+if (D\+Y\+N\+L\+I\+N\+K\+\_\+\+F\+L\+A\+G\+S\+\_\+\+C\+H\+E\+CK(flags\+\_\+impl, R\+T\+L\+D\+\_\+\+L\+A\+ZY $\vert$ R\+T\+L\+D\+\_\+\+G\+L\+O\+B\+AL)) \{ ... \}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em flags} & The left operator that will be check against the literal\\
+\hline
+\mbox{\texttt{ in}}  & {\em flag} & The literal input parameter \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{dynlink__flags_8h_a5eb7c21c7f6671d1b1d25092ba3b0648}} 
+\index{dynlink\_flags.h@{dynlink\_flags.h}!dynlink\_flags@{dynlink\_flags}}
+\index{dynlink\_flags@{dynlink\_flags}!dynlink\_flags.h@{dynlink\_flags.h}}
+\doxysubsubsection{dynlink\_flags}
+{\footnotesize\ttfamily typedef int \textbf{ dynlink\+\_\+flags}}
+
+Dynamically linked shared object flags 
