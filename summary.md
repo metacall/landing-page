@@ -14,7 +14,7 @@
 
 ---
 
-- [Reference API](./api/html/index.html)
+- <a href="api/html/index.html" title="Reference API">Reference API</a>
 
 ---
 
