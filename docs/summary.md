@@ -14,7 +14,7 @@
 
 ---
 
-- [Reference API](/api/index.html)
+- [Reference API](/api/html/index.html)
 
 ---
 
