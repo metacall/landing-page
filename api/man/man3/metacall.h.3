@@ -1,4 +1,4 @@
-.TH "metacall.h" 3 "Wed Jun 30 2021" "Version 0.1.0.9bcc4c97acac" "MetaCall" \" -*- nroff -*-
+.TH "metacall.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,12 +27,22 @@ metacall.h
 .ti -1c
 .RI "struct \fBmetacall_initialize_configuration_type\fP"
 .br
+.ti -1c
+.RI "struct \fBmetacall_await_callbacks_type\fP"
+.br
 .in -1c
 .SS "Macros"
 
 .in +1c
 .ti -1c
 .RI "#define \fBMETACALL_FLAGS_FORK_SAFE\fP   0x01 << 0x00"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef void *(* \fBmetacall_await_callback\fP) (void *, void *)"
 .br
 .in -1c
 .SS "Functions"
@@ -305,6 +315,9 @@ Pointer to value containing the result of the call
 .RI "METACALL_API void * \fBmetacallfv_await_s\fP (void *func, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
 .br
 .ti -1c
+.RI "METACALL_API void * \fBmetacallfv_await_struct_s\fP (void *func, void *args[], size_t size, metacall_await_callbacks cb, void *data)"
+.br
+.ti -1c
 .RI "METACALL_API void * \fBmetacallfmv_await\fP (void *func, void *keys[], void *values[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
 .br
 .ti -1c
@@ -341,10 +354,13 @@ Class reference, null if the class does not exist
 .RI "METACALL_API void * \fBmetacall_class\fP (const char *name)"
 .br
 .ti -1c
-.RI "METACALL_API void * \fBmetacallv_class\fP (void *cls, const char *name, void *args[], size_t argc)"
+.RI "METACALL_API void * \fBmetacallv_class\fP (void *cls, const char *name, void *args[], size_t size)"
 .br
 .ti -1c
-.RI "METACALL_API void * \fBmetacall_class_new\fP (void *cls, const char *name, void *args[], size_t argc)"
+.RI "METACALL_API void * \fBmetacallt_class\fP (void *cls, const char *name, const enum \fBmetacall_value_id\fP ret, void *args[], size_t size)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_class_new\fP (void *cls, const char *name, void *args[], size_t size)"
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_class_static_get\fP (void *cls, const char *key)"
@@ -353,7 +369,10 @@ Class reference, null if the class does not exist
 .RI "METACALL_API int \fBmetacall_class_static_set\fP (void *cls, const char *key, void *v)"
 .br
 .ti -1c
-.RI "METACALL_API void * \fBmetacallv_object\fP (void *obj, const char *name, void *args[], size_t argc)"
+.RI "METACALL_API void * \fBmetacallv_object\fP (void *obj, const char *name, void *args[], size_t size)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacallt_object\fP (void *obj, const char *name, const enum \fBmetacall_value_id\fP ret, void *args[], size_t size)"
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_object_get\fP (void *obj, const char *key)"
@@ -391,6 +410,10 @@ Class reference, null if the class does not exist
 .SH "Macro Definition Documentation"
 .PP 
 .SS "#define METACALL_FLAGS_FORK_SAFE   0x01 << 0x00"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef void*(* metacall_await_callback) (void *, void *)"
 
 .SH "Function Documentation"
 .PP 
@@ -1209,6 +1232,30 @@ Pointer to value containing the result of the call returned by @resolve_callback
 .RE
 .PP
 
+.SS "METACALL_API void* metacallfv_await_struct_s (void * func, void * args[], size_t size, metacall_await_callbacks cb, void * data)"
+
+.PP
+Call an asynchronous function anonymously by value array @args and function @func (offered without function pointers for languages without support to function pointers) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfunc\fP Reference to function to be called
+.br
+\fIargs\fP Array of pointers to values
+.br
+\fIsize\fP Number of elements of the array @args
+.br
+\fIcb\fP Pointer to struct containing the function pointers to reject and resolve that will be executed when task completion or error
+.br
+\fIdata\fP Pointer to a context that will act as a closure for the chain
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future 
+.RE
+.PP
+
 .SS "METACALL_API void* metacallfmv_await (void * func, void * keys[], void * values[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
 
 .PP
@@ -1369,16 +1416,16 @@ Pointer to value containing the result of the call returned by @resolve_callback
 
 .SS "METACALL_API void* metacall_class (const char * name)"
 
-.SS "METACALL_API void* metacallv_class (void * cls, const char * name, void * args[], size_t argc)"
+.SS "METACALL_API void* metacallv_class (void * cls, const char * name, void * args[], size_t size)"
 
 .PP
-Call a class method anonymously by value array @args\&. 
+Call a class method anonymously by value array @args (this procedure assumes there's no overloaded methods and does type conversion on values) 
 .PP
 \fBParameters\fP
 .RS 4
-\fIname\fP Name of the method
-.br
 \fIcls\fP Pointer to the class
+.br
+\fIname\fP Name of the method
 .br
 \fIargs\fP Array of pointers to data
 .br
@@ -1391,7 +1438,31 @@ Pointer to value containing the result of the call
 .RE
 .PP
 
-.SS "METACALL_API void* metacall_class_new (void * cls, const char * name, void * args[], size_t argc)"
+.SS "METACALL_API void* metacallt_class (void * cls, const char * name, const enum \fBmetacall_value_id\fP ret, void * args[], size_t size)"
+
+.PP
+Call a class method anonymously by value array @args and return value type @ret (helps to resolve overloading methods) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcls\fP Pointer to the class
+.br
+\fIname\fP Name of the method
+.br
+\fIret\fP Type of the return value of the method
+.br
+\fIargs\fP Array of pointers to data
+.br
+\fIsize\fP Number of elements of args array
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_class_new (void * cls, const char * name, void * args[], size_t size)"
 
 .PP
 Create a new object instance from @cls by value array @args\&. 
@@ -1451,7 +1522,7 @@ Non-zero integer if an error ocurred
 .RE
 .PP
 
-.SS "METACALL_API void* metacallv_object (void * obj, const char * name, void * args[], size_t argc)"
+.SS "METACALL_API void* metacallv_object (void * obj, const char * name, void * args[], size_t size)"
 
 .PP
 Call an object method anonymously by value array @args\&. 
@@ -1461,6 +1532,30 @@ Call an object method anonymously by value array @args\&.
 \fIobj\fP Pointer to the object
 .br
 \fIname\fP Name of the method
+.br
+\fIargs\fP Array of pointers to data
+.br
+\fIsize\fP Number of elements of args array
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value containing the result of the call 
+.RE
+.PP
+
+.SS "METACALL_API void* metacallt_object (void * obj, const char * name, const enum \fBmetacall_value_id\fP ret, void * args[], size_t size)"
+
+.PP
+Call a object method anonymously by value array @args and return value type @ret (helps to resolve overloading methods) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobj\fP Pointer to the object
+.br
+\fIname\fP Name of the method
+.br
+\fIret\fP Type of the return value of the method
 .br
 \fIargs\fP Array of pointers to data
 .br

@@ -1,0 +1,243 @@
+\doxysection{adt\+\_\+map.\+h File Reference}
+\label{adt__map_8h}\index{adt\_map.h@{adt\_map.h}}
+{\ttfamily \#include $<$adt/adt\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+comparable.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+hash.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+vector.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for adt\+\_\+map.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adt__map_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct map\+\_\+type $\ast$ \textbf{ map}
+\item 
+typedef \textbf{ hash} \textbf{ map\+\_\+hash}
+\item 
+typedef \textbf{ comparable} \textbf{ map\+\_\+key}
+\item 
+typedef void $\ast$ \textbf{ map\+\_\+value}
+\item 
+typedef void $\ast$ \textbf{ map\+\_\+cb\+\_\+iterate\+\_\+args}
+\item 
+typedef \textbf{ hash\+\_\+callback} \textbf{ map\+\_\+cb\+\_\+hash}
+\item 
+typedef \textbf{ comparable\+\_\+callback} \textbf{ map\+\_\+cb\+\_\+compare}
+\item 
+typedef int($\ast$ \textbf{ map\+\_\+cb\+\_\+iterate}) (\textbf{ map}, \textbf{ map\+\_\+key}, \textbf{ map\+\_\+value}, \textbf{ map\+\_\+cb\+\_\+iterate\+\_\+args})
+\item 
+typedef struct map\+\_\+iterator\+\_\+type $\ast$ \textbf{ map\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ map} \textbf{ map\+\_\+create} (\textbf{ map\+\_\+cb\+\_\+hash} hash\+\_\+cb, \textbf{ map\+\_\+cb\+\_\+compare} compare\+\_\+cb)
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ map\+\_\+size} (\textbf{ map} m)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ map\+\_\+insert} (\textbf{ map} m, \textbf{ map\+\_\+key} key, \textbf{ map\+\_\+value} \textbf{ value})
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ map\+\_\+insert\+\_\+array} (\textbf{ map} m, \textbf{ map\+\_\+key} keys[$\,$], \textbf{ map\+\_\+value} values[$\,$], size\+\_\+t size)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ map\+\_\+get} (\textbf{ map} m, \textbf{ map\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ map\+\_\+contains} (\textbf{ map} m, \textbf{ map\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ map\+\_\+contains\+\_\+any} (\textbf{ map} dest, \textbf{ map} src)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+value} \textbf{ map\+\_\+remove} (\textbf{ map} m, \textbf{ map\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ map\+\_\+remove\+\_\+all} (\textbf{ map} m, \textbf{ map\+\_\+key} key)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ map\+\_\+iterate} (\textbf{ map} m, \textbf{ map\+\_\+cb\+\_\+iterate} iterate\+\_\+cb, \textbf{ map\+\_\+cb\+\_\+iterate\+\_\+args} args)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ map\+\_\+append} (\textbf{ map} dest, \textbf{ map} src)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ map\+\_\+clear} (\textbf{ map} m)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ map\+\_\+destroy} (\textbf{ map} m)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+iterator} \textbf{ map\+\_\+iterator\+\_\+begin} (\textbf{ map} m)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+key} \textbf{ map\+\_\+iterator\+\_\+get\+\_\+key} (\textbf{ map\+\_\+iterator} it)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+value} \textbf{ map\+\_\+iterator\+\_\+get\+\_\+value} (\textbf{ map\+\_\+iterator} it)
+\item 
+A\+D\+T\+\_\+\+A\+PI void \textbf{ map\+\_\+iterator\+\_\+next} (\textbf{ map\+\_\+iterator} it)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ map\+\_\+iterator\+\_\+end} (\textbf{ map\+\_\+iterator} $\ast$it)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{adt__map_8h_a894ef97deeb054c79dd0043ce64d100c}} 
+\index{adt\_map.h@{adt\_map.h}!map@{map}}
+\index{map@{map}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map}
+{\footnotesize\ttfamily typedef struct map\+\_\+type$\ast$ \textbf{ map}}
+
+\mbox{\label{adt__map_8h_ac4802d1cc3ceb437db92ba4040db679a}} 
+\index{adt\_map.h@{adt\_map.h}!map\_hash@{map\_hash}}
+\index{map\_hash@{map\_hash}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_hash}
+{\footnotesize\ttfamily typedef \textbf{ hash} \textbf{ map\+\_\+hash}}
+
+\mbox{\label{adt__map_8h_a9efd3202c32d772acc65e29e1fe62a81}} 
+\index{adt\_map.h@{adt\_map.h}!map\_key@{map\_key}}
+\index{map\_key@{map\_key}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_key}
+{\footnotesize\ttfamily typedef \textbf{ comparable} \textbf{ map\+\_\+key}}
+
+\mbox{\label{adt__map_8h_a457370f795b43c9c9c00f014d2f4817c}} 
+\index{adt\_map.h@{adt\_map.h}!map\_value@{map\_value}}
+\index{map\_value@{map\_value}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_value}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ map\+\_\+value}}
+
+\mbox{\label{adt__map_8h_a127721d107c1ac4a2823f6dd33d704cc}} 
+\index{adt\_map.h@{adt\_map.h}!map\_cb\_iterate\_args@{map\_cb\_iterate\_args}}
+\index{map\_cb\_iterate\_args@{map\_cb\_iterate\_args}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_cb\_iterate\_args}
+{\footnotesize\ttfamily typedef void$\ast$ \textbf{ map\+\_\+cb\+\_\+iterate\+\_\+args}}
+
+\mbox{\label{adt__map_8h_aefb9d0a81d95621c3cef5e8300002282}} 
+\index{adt\_map.h@{adt\_map.h}!map\_cb\_hash@{map\_cb\_hash}}
+\index{map\_cb\_hash@{map\_cb\_hash}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_cb\_hash}
+{\footnotesize\ttfamily typedef \textbf{ hash\+\_\+callback} \textbf{ map\+\_\+cb\+\_\+hash}}
+
+\mbox{\label{adt__map_8h_aea474be520c211c6c35e391e4dbf5050}} 
+\index{adt\_map.h@{adt\_map.h}!map\_cb\_compare@{map\_cb\_compare}}
+\index{map\_cb\_compare@{map\_cb\_compare}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_cb\_compare}
+{\footnotesize\ttfamily typedef \textbf{ comparable\+\_\+callback} \textbf{ map\+\_\+cb\+\_\+compare}}
+
+\mbox{\label{adt__map_8h_a6f4c546c7d3b2a45b5876ab1eed09ed0}} 
+\index{adt\_map.h@{adt\_map.h}!map\_cb\_iterate@{map\_cb\_iterate}}
+\index{map\_cb\_iterate@{map\_cb\_iterate}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_cb\_iterate}
+{\footnotesize\ttfamily typedef int($\ast$ map\+\_\+cb\+\_\+iterate) (\textbf{ map}, \textbf{ map\+\_\+key}, \textbf{ map\+\_\+value}, \textbf{ map\+\_\+cb\+\_\+iterate\+\_\+args})}
+
+\mbox{\label{adt__map_8h_a2109cb4cae90391364858b706c616461}} 
+\index{adt\_map.h@{adt\_map.h}!map\_iterator@{map\_iterator}}
+\index{map\_iterator@{map\_iterator}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_iterator}
+{\footnotesize\ttfamily typedef struct map\+\_\+iterator\+\_\+type$\ast$ \textbf{ map\+\_\+iterator}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{adt__map_8h_aa5ab2c5347ebe47e75b262f50e02ed02}} 
+\index{adt\_map.h@{adt\_map.h}!map\_create@{map\_create}}
+\index{map\_create@{map\_create}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_create()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ map} map\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ map\+\_\+cb\+\_\+hash}}]{hash\+\_\+cb,  }\item[{\textbf{ map\+\_\+cb\+\_\+compare}}]{compare\+\_\+cb }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a03c40d3bdc29209381454a148cb95eaa}} 
+\index{adt\_map.h@{adt\_map.h}!map\_size@{map\_size}}
+\index{map\_size@{map\_size}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_size()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t map\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_ae567f499d141dd6484b7024d8ce6b085}} 
+\index{adt\_map.h@{adt\_map.h}!map\_insert@{map\_insert}}
+\index{map\_insert@{map\_insert}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_insert()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int map\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m,  }\item[{\textbf{ map\+\_\+key}}]{key,  }\item[{\textbf{ map\+\_\+value}}]{value }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a97232d474132c5915363ecc68c2f1dfb}} 
+\index{adt\_map.h@{adt\_map.h}!map\_insert\_array@{map\_insert\_array}}
+\index{map\_insert\_array@{map\_insert\_array}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_insert\_array()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int map\+\_\+insert\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m,  }\item[{\textbf{ map\+\_\+key}}]{keys[$\,$],  }\item[{\textbf{ map\+\_\+value}}]{values[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_abce862b09db3c842e121fcafac5ead10}} 
+\index{adt\_map.h@{adt\_map.h}!map\_get@{map\_get}}
+\index{map\_get@{map\_get}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_get()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} map\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m,  }\item[{\textbf{ map\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_af405aa3330b6c4dd56f21539fd64538f}} 
+\index{adt\_map.h@{adt\_map.h}!map\_contains@{map\_contains}}
+\index{map\_contains@{map\_contains}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_contains()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int map\+\_\+contains (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m,  }\item[{\textbf{ map\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a060c9c2c0b0699ed924efb936ee8936e}} 
+\index{adt\_map.h@{adt\_map.h}!map\_contains\_any@{map\_contains\_any}}
+\index{map\_contains\_any@{map\_contains\_any}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_contains\_any()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int map\+\_\+contains\+\_\+any (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{dest,  }\item[{\textbf{ map}}]{src }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_ab0eecd9e3bd9aeb80905f0905163b85c}} 
+\index{adt\_map.h@{adt\_map.h}!map\_remove@{map\_remove}}
+\index{map\_remove@{map\_remove}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_remove()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+value} map\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m,  }\item[{\textbf{ map\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a6291a04947b8e82d14b0fd39ea2b3908}} 
+\index{adt\_map.h@{adt\_map.h}!map\_remove\_all@{map\_remove\_all}}
+\index{map\_remove\_all@{map\_remove\_all}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_remove\_all()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} map\+\_\+remove\+\_\+all (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m,  }\item[{\textbf{ map\+\_\+key}}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a07766545182d29afff29aad5f1dd2fda}} 
+\index{adt\_map.h@{adt\_map.h}!map\_iterate@{map\_iterate}}
+\index{map\_iterate@{map\_iterate}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_iterate()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void map\+\_\+iterate (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m,  }\item[{\textbf{ map\+\_\+cb\+\_\+iterate}}]{iterate\+\_\+cb,  }\item[{\textbf{ map\+\_\+cb\+\_\+iterate\+\_\+args}}]{args }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a3d7bf2643d5c9f4d5f6ce6819dddd441}} 
+\index{adt\_map.h@{adt\_map.h}!map\_append@{map\_append}}
+\index{map\_append@{map\_append}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_append()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int map\+\_\+append (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{dest,  }\item[{\textbf{ map}}]{src }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a1258c62b6f83f71dc29909d6fa106845}} 
+\index{adt\_map.h@{adt\_map.h}!map\_clear@{map\_clear}}
+\index{map\_clear@{map\_clear}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_clear()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int map\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a85d85da136e73af850428e02bc359e01}} 
+\index{adt\_map.h@{adt\_map.h}!map\_destroy@{map\_destroy}}
+\index{map\_destroy@{map\_destroy}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_destroy()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void map\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a36ac6726113e9e51ee543f7e5c08437a}} 
+\index{adt\_map.h@{adt\_map.h}!map\_iterator\_begin@{map\_iterator\_begin}}
+\index{map\_iterator\_begin@{map\_iterator\_begin}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_iterator\_begin()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+iterator} map\+\_\+iterator\+\_\+begin (\begin{DoxyParamCaption}\item[{\textbf{ map}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a63ff72181734409b2a70e04cd42a0e0c}} 
+\index{adt\_map.h@{adt\_map.h}!map\_iterator\_get\_key@{map\_iterator\_get\_key}}
+\index{map\_iterator\_get\_key@{map\_iterator\_get\_key}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_iterator\_get\_key()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+key} map\+\_\+iterator\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{\textbf{ map\+\_\+iterator}}]{it }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_ae3d97f642ad6b305c9f0fffd61d7d977}} 
+\index{adt\_map.h@{adt\_map.h}!map\_iterator\_get\_value@{map\_iterator\_get\_value}}
+\index{map\_iterator\_get\_value@{map\_iterator\_get\_value}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_iterator\_get\_value()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ map\+\_\+value} map\+\_\+iterator\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\textbf{ map\+\_\+iterator}}]{it }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a173825fc4f4cc21b8f55a1d8159bb4fe}} 
+\index{adt\_map.h@{adt\_map.h}!map\_iterator\_next@{map\_iterator\_next}}
+\index{map\_iterator\_next@{map\_iterator\_next}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_iterator\_next()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void map\+\_\+iterator\+\_\+next (\begin{DoxyParamCaption}\item[{\textbf{ map\+\_\+iterator}}]{it }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__map_8h_a735796ebb72c13a828ff79a4f92f3252}} 
+\index{adt\_map.h@{adt\_map.h}!map\_iterator\_end@{map\_iterator\_end}}
+\index{map\_iterator\_end@{map\_iterator\_end}!adt\_map.h@{adt\_map.h}}
+\doxysubsubsection{map\_iterator\_end()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int map\+\_\+iterator\+\_\+end (\begin{DoxyParamCaption}\item[{\textbf{ map\+\_\+iterator} $\ast$}]{it }\end{DoxyParamCaption})}
+

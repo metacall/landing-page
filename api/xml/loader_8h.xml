@@ -17,7 +17,9 @@
         <link refid="reflect__function_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -33,9 +35,9 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -44,7 +46,7 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>stdlib.h</label>
       </node>
       <node id="10">
@@ -54,19 +56,19 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>reflect/reflect_type.h</label>
         <link refid="reflect__type_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -76,24 +78,24 @@
       <node id="2">
         <label>loader/loader_api.h</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>reflect/reflect_type_id.h</label>
         <link refid="reflect__type__id_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>reflect/reflect_value.h</label>
         <link refid="reflect__value_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="9">
         <label>reflect/reflect_api.h</label>
       </node>
-      <node id="17">
+      <node id="18">
         <label>configuration/configuration.h</label>
       </node>
       <node id="3">
@@ -103,17 +105,17 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>loader/loader_path.h</label>
         <link refid="loader__path_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -127,7 +129,7 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -138,14 +140,20 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>reflect/reflect_signature.h</label>
         <link refid="reflect__signature_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>reflect/reflect_async.h</label>
+        <link refid="reflect__async_8h"/>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -623,14 +631,18 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="94" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="94" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1aae52d09e532fd966f933d4573ee97fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a5ccaf6095bcc8ffe4fd3e8c2bb3d8202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API void</type>
         <definition>LOADER_API void loader_unload_children</definition>
-        <argsstring>(loader_impl impl)</argsstring>
+        <argsstring>(loader_impl impl, int destroy_objects)</argsstring>
         <name>loader_unload_children</name>
         <param>
           <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
           <declname>impl</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>destroy_objects</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -789,7 +801,7 @@
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a50281bf1571a363c0b9b198c4e3e3a6e" kindref="member">loader_clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1aae52d09e532fd966f933d4573ee97fbf" kindref="member">loader_unload_children</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a5ccaf6095bcc8ffe4fd3e8c2bb3d8202" kindref="member">loader_unload_children</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>destroy_objects);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1ac4f17dddef9935d0b1b727271f5e2308" kindref="member">loader_unload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>

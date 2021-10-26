@@ -1,0 +1,68 @@
+.TH "reflect_attribute.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_attribute.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+\fC#include <reflect/reflect_class_decl\&.h>\fP
+.br
+\fC#include <reflect/reflect_class_visibility\&.h>\fP
+.br
+\fC#include <reflect/reflect_type\&.h>\fP
+.br
+\fC#include <reflect/reflect_attribute_decl\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBattribute\fP \fBattribute_create\fP (\fBklass\fP cls, const char *name, \fBtype\fP t, \fBattribute_impl\fP impl, enum \fBclass_visibility_id\fP visibility, \fBattribute_impl_interface_singleton\fP singleton)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBklass\fP \fBattribute_class\fP (\fBattribute\fP attr)"
+.br
+.ti -1c
+.RI "REFLECT_API char * \fBattribute_name\fP (\fBattribute\fP attr)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBtype\fP \fBattribute_type\fP (\fBattribute\fP attr)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBattribute_impl\fP \fBattribute_data\fP (\fBattribute\fP attr)"
+.br
+.ti -1c
+.RI "REFLECT_API enum \fBclass_visibility_id\fP \fBattribute_visibility\fP (\fBattribute\fP attr)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBattribute_metadata\fP (\fBattribute\fP attr)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBattribute_destroy\fP (\fBattribute\fP attr)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBattribute\fP attribute_create (\fBklass\fP cls, const char * name, \fBtype\fP t, \fBattribute_impl\fP impl, enum \fBclass_visibility_id\fP visibility, \fBattribute_impl_interface_singleton\fP singleton)"
+
+.SS "REFLECT_API \fBklass\fP attribute_class (\fBattribute\fP attr)"
+
+.SS "REFLECT_API char* attribute_name (\fBattribute\fP attr)"
+
+.SS "REFLECT_API \fBtype\fP attribute_type (\fBattribute\fP attr)"
+
+.SS "REFLECT_API \fBattribute_impl\fP attribute_data (\fBattribute\fP attr)"
+
+.SS "REFLECT_API enum \fBclass_visibility_id\fP attribute_visibility (\fBattribute\fP attr)"
+
+.SS "REFLECT_API \fBvalue\fP attribute_metadata (\fBattribute\fP attr)"
+
+.SS "REFLECT_API void attribute_destroy (\fBattribute\fP attr)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

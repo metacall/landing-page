@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="reflect__attribute_8h" kind="file" language="C++">
+    <compoundname>reflect_attribute.h</compoundname>
+    <includes local="no">reflect/reflect_api.h</includes>
+    <includes refid="reflect__class__decl_8h" local="no">reflect/reflect_class_decl.h</includes>
+    <includes refid="reflect__class__visibility_8h" local="no">reflect/reflect_class_visibility.h</includes>
+    <includes refid="reflect__type_8h" local="no">reflect/reflect_type.h</includes>
+    <includes refid="reflect__attribute__decl_8h" local="no">reflect/reflect_attribute_decl.h</includes>
+    <includedby refid="reflect__class_8h" local="no">reflect_class.h</includedby>
+    <includedby refid="reflect__object_8h" local="no">reflect_object.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>reflect/reflect_class_visibility.h</label>
+        <link refid="reflect__class__visibility_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>preprocessor/preprocessor_concatenation.h</label>
+        <link refid="preprocessor__concatenation_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>reflect/reflect_type.h</label>
+        <link refid="reflect__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>reflect/reflect_type_id.h</label>
+        <link refid="reflect__type__id_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>reflect/reflect_value.h</label>
+        <link refid="reflect__value_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>reflect/reflect_attribute_decl.h</label>
+        <link refid="reflect__attribute__decl_8h"/>
+      </node>
+      <node id="2">
+        <label>reflect/reflect_api.h</label>
+      </node>
+      <node id="1">
+        <label>reflect_attribute.h</label>
+        <link refid="reflect__attribute_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>preprocessor/preprocessor_api.h</label>
+      </node>
+      <node id="3">
+        <label>reflect/reflect_class_decl.h</label>
+        <link refid="reflect__class__decl_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>reflect_class.h</label>
+        <link refid="reflect__class_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>reflect_object.h</label>
+        <link refid="reflect__object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>reflect_attribute.h</label>
+        <link refid="reflect__attribute_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>reflect_value_type.h</label>
+        <link refid="reflect__value__type_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>reflect.h</label>
+        <link refid="reflect_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="reflect__attribute_8h_1aa22afc61dff6c72e20d384366a5da691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+        <definition>REFLECT_API attribute attribute_create</definition>
+        <argsstring>(klass cls, const char *name, type t, attribute_impl impl, enum class_visibility_id visibility, attribute_impl_interface_singleton singleton)</argsstring>
+        <name>attribute_create</name>
+        <param>
+          <type><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref></type>
+          <declname>cls</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b" kindref="member">class_visibility_id</ref></type>
+          <declname>visibility</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a76563a235b0e955fbd4db3527e548082" kindref="member">attribute_impl_interface_singleton</ref></type>
+          <declname>singleton</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="37" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="37" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__attribute_8h_1ae3af81285d39502c872b389430573d05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref></type>
+        <definition>REFLECT_API klass attribute_class</definition>
+        <argsstring>(attribute attr)</argsstring>
+        <name>attribute_class</name>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="39" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="39" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__attribute_8h_1a36acca30c7ea846a7382001b8d8a52e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API char *</type>
+        <definition>REFLECT_API char* attribute_name</definition>
+        <argsstring>(attribute attr)</argsstring>
+        <name>attribute_name</name>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="41" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="41" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__attribute_8h_1ab80731c450c9896e3ef36ea65b056e3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref></type>
+        <definition>REFLECT_API type attribute_type</definition>
+        <argsstring>(attribute attr)</argsstring>
+        <name>attribute_type</name>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="43" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="43" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__attribute_8h_1a9f6678c047128551566a7e5ddd5e422d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref></type>
+        <definition>REFLECT_API attribute_impl attribute_data</definition>
+        <argsstring>(attribute attr)</argsstring>
+        <name>attribute_data</name>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="45" column="28" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="45" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__attribute_8h_1acbed2fc23fea38fef4a7af663cbd8ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API enum <ref refid="reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b" kindref="member">class_visibility_id</ref></type>
+        <definition>REFLECT_API enum class_visibility_id attribute_visibility</definition>
+        <argsstring>(attribute attr)</argsstring>
+        <name>attribute_visibility</name>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="47" column="1" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="47" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__attribute_8h_1aa26bc3af9c5fc831869565f8d0a04e29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+        <definition>REFLECT_API value attribute_metadata</definition>
+        <argsstring>(attribute attr)</argsstring>
+        <name>attribute_metadata</name>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="49" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="49" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__attribute_8h_1af2af6fe518cf22802b0cb7829be412e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API void</type>
+        <definition>REFLECT_API void attribute_destroy</definition>
+        <argsstring>(attribute attr)</argsstring>
+        <name>attribute_destroy</name>
+        <param>
+          <type><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" line="51" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h" declline="51" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REFLECT_ATTRIBUTE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REFLECT_ATTRIBUTE_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;reflect/reflect_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__class__decl_8h" kindref="compound">reflect/reflect_class_decl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__class__visibility_8h" kindref="compound">reflect/reflect_class_visibility.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__type_8h" kindref="compound">reflect/reflect_type.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__attribute__decl_8h" kindref="compound">reflect/reflect_attribute_decl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/><ref refid="reflect__attribute_8h_1aa22afc61dff6c72e20d384366a5da691" kindref="member">attribute_create</ref>(<ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/>cls,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/>t,<sp/><ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b" kindref="member">class_visibility_id</ref><sp/>visibility,<sp/><ref refid="reflect__attribute__decl_8h_1a76563a235b0e955fbd4db3527e548082" kindref="member">attribute_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/><ref refid="reflect__attribute_8h_1ae3af81285d39502c872b389430573d05" kindref="member">attribute_class</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__attribute_8h_1a36acca30c7ea846a7382001b8d8a52e5" kindref="member">attribute_name</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/><ref refid="reflect__attribute_8h_1ab80731c450c9896e3ef36ea65b056e3d" kindref="member">attribute_type</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref><sp/><ref refid="reflect__attribute_8h_1a9f6678c047128551566a7e5ddd5e422d" kindref="member">attribute_data</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal">_visibility_id<sp/><ref refid="reflect__attribute_8h_1acbed2fc23fea38fef4a7af663cbd8ef9" kindref="member">attribute_visibility</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__attribute_8h_1aa26bc3af9c5fc831869565f8d0a04e29" kindref="member">attribute_metadata</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__attribute_8h_1af2af6fe518cf22802b0cb7829be412e9" kindref="member">attribute_destroy</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_ATTRIBUTE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_attribute.h"/>
+  </compounddef>
+</doxygen>

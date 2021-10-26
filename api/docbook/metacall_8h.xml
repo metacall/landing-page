@@ -23,12 +23,21 @@
         <itemizedlist>
             <listitem><para>struct <link linkend="_structmetacall__initialize__configuration__type">metacall_initialize_configuration_type</link></para>
 </listitem>
+            <listitem><para>struct <link linkend="_structmetacall__await__callbacks__type">metacall_await_callbacks_type</link></para>
+</listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
     <title>Macros    </title>
         <itemizedlist>
             <listitem><para>#define <link linkend="_metacall_8h_1a9c8f9f1a02aa8b7f11203f473ad45a0c">METACALL_FLAGS_FORK_SAFE</link>   0x01 &lt;&lt; 0x00</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef void *(* <link linkend="_metacall_8h_1aa9b6fcb756e3ac95f638f4a42bb8f5d4">metacall_await_callback</link>) (void *, void *)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -369,6 +378,8 @@ Parameters                    </title>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a9c5ead1f1aa559e58a65f69ae51972cb">metacallfv_await_s</link> (void *func, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
 </listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1afe71978aefb3bb4d664ddf54b5ab81b7">metacallfv_await_struct_s</link> (void *func, void *args[], size_t size, metacall_await_callbacks cb, void *data)</para>
+</listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a806b1dda95f596de33a9527123fed8e4">metacallfmv_await</link> (void *func, void *keys[], void *values[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a4c8d0fa0f6b7c3607bd92524a11f3c5c">metacallfmv_await_s</link> (void *func, void *keys[], void *values[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
@@ -413,15 +424,19 @@ Parameters                    </title>
         <itemizedlist>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a62422ba9010c261547585dc014f5f71f">metacall_class</link> (const char *name)</para>
 </listitem>
-            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a9a59bb8134aa3243a995d871262f5085">metacallv_class</link> (void *cls, const char *name, void *args[], size_t argc)</para>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a97f50d305c683edfbeec022d41d8b749">metacallv_class</link> (void *cls, const char *name, void *args[], size_t size)</para>
 </listitem>
-            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a3fb7a043355dd7fd9974cea54ff93814">metacall_class_new</link> (void *cls, const char *name, void *args[], size_t argc)</para>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ac0e15e8ca121a9b0c5b1f22f760d7137">metacallt_class</link> (void *cls, const char *name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ret, void *args[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1aee922f6a17e2d304c8074342779205c1">metacall_class_new</link> (void *cls, const char *name, void *args[], size_t size)</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a70337e2f826dab637d640337404831cf">metacall_class_static_get</link> (void *cls, const char *key)</para>
 </listitem>
             <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ad69032d3eec3834b36d907141f32332a">metacall_class_static_set</link> (void *cls, const char *key, void *v)</para>
 </listitem>
-            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a84679047389d04a406f1e3a91fa00e1d">metacallv_object</link> (void *obj, const char *name, void *args[], size_t argc)</para>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a1b346165cc3e9d4c958bf92c65f71ef5">metacallv_object</link> (void *obj, const char *name, void *args[], size_t size)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a1391d4d2e8f9dc919ecb6ce5ac00916f">metacallt_object</link> (void *obj, const char *name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ret, void *args[], size_t size)</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1abf765af19df6abca9ef981ed56db6b92">metacall_object_get</link> (void *obj, const char *key)</para>
 </listitem>
@@ -455,6 +470,14 @@ Parameters                    </title>
 <indexterm><primary>METACALL_FLAGS_FORK_SAFE</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>METACALL_FLAGS_FORK_SAFE</secondary></indexterm>
 <para><computeroutput>#define METACALL_FLAGS_FORK_SAFE   0x01 &lt;&lt; 0x00</computeroutput></para></section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_metacall_8h_1aa9b6fcb756e3ac95f638f4a42bb8f5d4"/>    <section>
+    <title>metacall_await_callback</title>
+<indexterm><primary>metacall_await_callback</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_await_callback</secondary></indexterm>
+<para><computeroutput>typedef void*(* metacall_await_callback) (void *, void *)</computeroutput></para></section>
 </section>
 <section>
 <title>Function Documentation</title>
@@ -2378,6 +2401,66 @@ Parameters                    </title>
 <para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
 </formalpara>
 </para>
+    </section><anchor xml:id="_metacall_8h_1afe71978aefb3bb4d664ddf54b5ab81b7"/>    <section>
+    <title>metacallfv_await_struct_s()</title>
+<indexterm><primary>metacallfv_await_struct_s</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallfv_await_struct_s</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallfv_await_struct_s (void * func, void * args[], size_t size, metacall_await_callbacks cb, void * data)</computeroutput></para><para>
+
+<para>Call an asynchronous function anonymously by value array @args and function @func (offered without function pointers for languages without support to function pointers) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>func</entry>
+                                <entry>
+<para>Reference to function to be called</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to values</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of the array @args</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>cb</entry>
+                                <entry>
+<para>Pointer to struct containing the function pointers to reject and resolve that will be executed when task completion or error</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>data</entry>
+                                <entry>
+<para>Pointer to a context that will act as a closure for the chain</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call returned by @resolve_callback or @reject_callback wrapped in a future </para>
+</formalpara>
+</para>
     </section><anchor xml:id="_metacall_8h_1a806b1dda95f596de33a9527123fed8e4"/>    <section>
     <title>metacallfmv_await()</title>
 <indexterm><primary>metacallfmv_await</primary><secondary>metacall.h</secondary></indexterm>
@@ -2792,13 +2875,13 @@ Parameters                    </title>
     <title>metacall_class()</title>
 <indexterm><primary>metacall_class</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_class</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacall_class (const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a9a59bb8134aa3243a995d871262f5085"/>    <section>
+<para><computeroutput>METACALL_API void* metacall_class (const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a97f50d305c683edfbeec022d41d8b749"/>    <section>
     <title>metacallv_class()</title>
 <indexterm><primary>metacallv_class</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacallv_class</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacallv_class (void * cls, const char * name, void * args[], size_t argc)</computeroutput></para><para>
+<para><computeroutput>METACALL_API void* metacallv_class (void * cls, const char * name, void * args[], size_t size)</computeroutput></para><para>
 
-<para>Call a class method anonymously by value array @args. </para>
+<para>Call a class method anonymously by value array @args (this procedure assumes there&apos;s no overloaded methods and does type conversion on values) </para>
 </para>
 
 <para>
@@ -2813,15 +2896,15 @@ Parameters                    </title>
                         <colspec colwidth="4*"/>
                         <tbody>
                             <row>
-                                <entry>in                                </entry>                                <entry>name</entry>
-                                <entry>
-<para>Name of the method</para>
-</entry>
-                            </row>
-                            <row>
                                 <entry>in                                </entry>                                <entry>cls</entry>
                                 <entry>
 <para>Pointer to the class</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the method</para>
 </entry>
                             </row>
                             <row>
@@ -2846,11 +2929,71 @@ Parameters                    </title>
 <para>Pointer to value containing the result of the call </para>
 </formalpara>
 </para>
-    </section><anchor xml:id="_metacall_8h_1a3fb7a043355dd7fd9974cea54ff93814"/>    <section>
+    </section><anchor xml:id="_metacall_8h_1ac0e15e8ca121a9b0c5b1f22f760d7137"/>    <section>
+    <title>metacallt_class()</title>
+<indexterm><primary>metacallt_class</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallt_class</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallt_class (void * cls, const char * name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ret, void * args[], size_t size)</computeroutput></para><para>
+
+<para>Call a class method anonymously by value array @args and return value type @ret (helps to resolve overloading methods) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>cls</entry>
+                                <entry>
+<para>Pointer to the class</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the method</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ret</entry>
+                                <entry>
+<para>Type of the return value of the method</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of args array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1aee922f6a17e2d304c8074342779205c1"/>    <section>
     <title>metacall_class_new()</title>
 <indexterm><primary>metacall_class_new</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_class_new</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacall_class_new (void * cls, const char * name, void * args[], size_t argc)</computeroutput></para><para>
+<para><computeroutput>METACALL_API void* metacall_class_new (void * cls, const char * name, void * args[], size_t size)</computeroutput></para><para>
 
 <para>Create a new object instance from @cls by value array @args. </para>
 </para>
@@ -2990,11 +3133,11 @@ Parameters                    </title>
 <para>Non-zero integer if an error ocurred </para>
 </formalpara>
 </para>
-    </section><anchor xml:id="_metacall_8h_1a84679047389d04a406f1e3a91fa00e1d"/>    <section>
+    </section><anchor xml:id="_metacall_8h_1a1b346165cc3e9d4c958bf92c65f71ef5"/>    <section>
     <title>metacallv_object()</title>
 <indexterm><primary>metacallv_object</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacallv_object</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacallv_object (void * obj, const char * name, void * args[], size_t argc)</computeroutput></para><para>
+<para><computeroutput>METACALL_API void* metacallv_object (void * obj, const char * name, void * args[], size_t size)</computeroutput></para><para>
 
 <para>Call an object method anonymously by value array @args. </para>
 </para>
@@ -3020,6 +3163,66 @@ Parameters                    </title>
                                 <entry>in                                </entry>                                <entry>name</entry>
                                 <entry>
 <para>Name of the method</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>args</entry>
+                                <entry>
+<para>Array of pointers to data</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>size</entry>
+                                <entry>
+<para>Number of elements of args array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to value containing the result of the call </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a1391d4d2e8f9dc919ecb6ce5ac00916f"/>    <section>
+    <title>metacallt_object()</title>
+<indexterm><primary>metacallt_object</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacallt_object</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacallt_object (void * obj, const char * name, const enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> ret, void * args[], size_t size)</computeroutput></para><para>
+
+<para>Call a object method anonymously by value array @args and return value type @ret (helps to resolve overloading methods) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>obj</entry>
+                                <entry>
+<para>Pointer to the object</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the method</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>ret</entry>
+                                <entry>
+<para>Type of the return value of the method</para>
 </entry>
                             </row>
                             <row>

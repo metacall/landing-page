@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__class__visibility_8h">
+<title>reflect_class_visibility.h File Reference</title>
+<indexterm><primary>reflect_class_visibility.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_value.h&gt;
+#include &lt;preprocessor/preprocessor_concatenation.h&gt;
+</programlisting>Include dependency graph for reflect_class_visibility.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__class__visibility_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__class__visibility_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_reflect__class__visibility_8h_1a48e56c462513043160125ddeaf1f1f1b">CLASS_VISIBILITY_X</link>(X)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_reflect__class__visibility_8h_1ad0a8239472286285b58757727d77dda3">CLASS_VISIBILITY_ENUM</link>(name,  str,  id)   <link linkend="_preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1">PREPROCESSOR_CONCAT</link>(VISIBILITY_, name) = id</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>const REFLECT_API char * <link linkend="_reflect__class__visibility_8h_1a54482c852ae39c4cdc6688dc98a66442">class_visibility_string</link> (enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class__visibility_8h_1a75e28ae1e30a1e8ec68143542478dae2">class_visibility_value</link> (enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class__visibility_8h_1a4472b8e5740b0d6d1ff277978941d6fb">class_visibility_value_pair</link> (enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_reflect__class__visibility_8h_1a48e56c462513043160125ddeaf1f1f1b"/>    <section>
+    <title>CLASS_VISIBILITY_X</title>
+<indexterm><primary>CLASS_VISIBILITY_X</primary><secondary>reflect_class_visibility.h</secondary></indexterm>
+<indexterm><primary>reflect_class_visibility.h</primary><secondary>CLASS_VISIBILITY_X</secondary></indexterm>
+<para><computeroutput>#define CLASS_VISIBILITY_X( X)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;X(PUBLIC,&#32;<emphasis role="stringliteral">&quot;public&quot;</emphasis>,&#32;0),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;X(PROTECTED,&#32;<emphasis role="stringliteral">&quot;protected&quot;</emphasis>,&#32;1),&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;X(PRIVATE,&#32;<emphasis role="stringliteral">&quot;private&quot;</emphasis>,&#32;2)
+</programlisting>    </section><anchor xml:id="_reflect__class__visibility_8h_1ad0a8239472286285b58757727d77dda3"/>    <section>
+    <title>CLASS_VISIBILITY_ENUM</title>
+<indexterm><primary>CLASS_VISIBILITY_ENUM</primary><secondary>reflect_class_visibility.h</secondary></indexterm>
+<indexterm><primary>reflect_class_visibility.h</primary><secondary>CLASS_VISIBILITY_ENUM</secondary></indexterm>
+<para><computeroutput>#define CLASS_VISIBILITY_ENUM( name,  str,  id)   <link linkend="_preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1">PREPROCESSOR_CONCAT</link>(VISIBILITY_, name) = id</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b"/>    <section>
+    <title>class_visibility_id</title>
+<indexterm><primary>class_visibility_id</primary><secondary>reflect_class_visibility.h</secondary></indexterm>
+<indexterm><primary>reflect_class_visibility.h</primary><secondary>class_visibility_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__class__visibility_8h_1a54482c852ae39c4cdc6688dc98a66442"/>    <section>
+    <title>class_visibility_string()</title>
+<indexterm><primary>class_visibility_string</primary><secondary>reflect_class_visibility.h</secondary></indexterm>
+<indexterm><primary>reflect_class_visibility.h</primary><secondary>class_visibility_string</secondary></indexterm>
+<para><computeroutput>const REFLECT_API char* class_visibility_string (enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility)</computeroutput></para>    </section><anchor xml:id="_reflect__class__visibility_8h_1a75e28ae1e30a1e8ec68143542478dae2"/>    <section>
+    <title>class_visibility_value()</title>
+<indexterm><primary>class_visibility_value</primary><secondary>reflect_class_visibility.h</secondary></indexterm>
+<indexterm><primary>reflect_class_visibility.h</primary><secondary>class_visibility_value</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_visibility_value (enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility)</computeroutput></para>    </section><anchor xml:id="_reflect__class__visibility_8h_1a4472b8e5740b0d6d1ff277978941d6fb"/>    <section>
+    <title>class_visibility_value_pair()</title>
+<indexterm><primary>class_visibility_value_pair</primary><secondary>reflect_class_visibility.h</secondary></indexterm>
+<indexterm><primary>reflect_class_visibility.h</primary><secondary>class_visibility_value_pair</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_visibility_value_pair (enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility)</computeroutput></para></section>
+</section>
+</section>

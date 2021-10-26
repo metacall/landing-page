@@ -16,6 +16,7 @@ var adt__set_8h =
     [ "set_get", "adt__set_8h.html#a433e5474d3de9012a2e08ff6356cdf39", null ],
     [ "set_contains", "adt__set_8h.html#ab45546fa9c240ed7bf3fa92939901cd1", null ],
     [ "set_contains_any", "adt__set_8h.html#af6867d7bf575465b8d56be1619b3a519", null ],
+    [ "set_contains_which", "adt__set_8h.html#aac0b0a2726cfa2c29dd6826285405f7d", null ],
     [ "set_remove", "adt__set_8h.html#a7f2210acc45518622a8f642817c2cdf5", null ],
     [ "set_iterate", "adt__set_8h.html#ac719326a2dfbd15ad9597b501d465379", null ],
     [ "set_append", "adt__set_8h.html#a5e4ba95e5fc0a19f8ea5972ce5ac1c15", null ],

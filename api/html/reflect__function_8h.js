@@ -12,15 +12,11 @@ var reflect__function_8h =
     [ "function_impl_interface_await", "reflect__function_8h.html#ad5fee2d03c9d6a4fea8f9a8097ef0339", null ],
     [ "function_impl_interface_destroy", "reflect__function_8h.html#aefd4a5abb695deff8cb131f873232ae8", null ],
     [ "function_impl_interface_singleton", "reflect__function_8h.html#a6cc96ba0bf4a09fffea8c09de6af63af", null ],
-    [ "function_async_id", "reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795", [
-      [ "FUNCTION_SYNC", "reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28", null ],
-      [ "FUNCTION_ASYNC", "reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28", null ]
-    ] ],
     [ "function_create", "reflect__function_8h.html#a6aa2df1f3525beb9952a226ba4176131", null ],
     [ "function_increment_reference", "reflect__function_8h.html#ad3b35f9baa70a446cff0fac71b40db2e", null ],
     [ "function_decrement_reference", "reflect__function_8h.html#ad3c51bbe31aba3fbeefbbcea568e4685", null ],
-    [ "function_async", "reflect__function_8h.html#add4836a9d458071f05ae742e6addb8a6", null ],
-    [ "function_async_id", "reflect__function_8h.html#a55ff4f4a26bf8c92378c3f608e913e42", null ],
+    [ "function_async", "reflect__function_8h.html#af709f2c74fa6a9ffefc895204021878c", null ],
+    [ "function_async_id", "reflect__function_8h.html#afd3d88e128ac7c27a124c77a73606f51", null ],
     [ "function_bind", "reflect__function_8h.html#a5b279b5c18645cff4b54eb55e22053b4", null ],
     [ "function_closure", "reflect__function_8h.html#a050920384e8f96c443dc11242ac421ba", null ],
     [ "function_name", "reflect__function_8h.html#af75cac62bcca3a43ce45507b528fc290", null ],
@@ -28,5 +24,6 @@ var reflect__function_8h =
     [ "function_metadata", "reflect__function_8h.html#ac437dd533263274b9fcb1d6fb10b71cc", null ],
     [ "function_call", "reflect__function_8h.html#a55f786badbc8f796b72a8bc87c653fcb", null ],
     [ "function_await", "reflect__function_8h.html#a63391dc688728a94873fd4e6176031ca", null ],
+    [ "function_stats_debug", "reflect__function_8h.html#a93ce6eeff8ef033f0a36e60875096bfc", null ],
     [ "function_destroy", "reflect__function_8h.html#a3ef49cc819e4515b1f0222cc7f3dd6dc", null ]
 ];

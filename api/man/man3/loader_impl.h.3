@@ -1,4 +1,4 @@
-.TH "loader_impl.h" 3 "Wed Jun 30 2021" "Version 0.1.0.9bcc4c97acac" "MetaCall" \" -*- nroff -*-
+.TH "loader_impl.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,6 +31,9 @@ loader_impl.h
 .br
 .ti -1c
 .RI "LOADER_API \fBloader_impl_data\fP \fBloader_impl_get\fP (\fBloader_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOADER_API \fBvalue\fP \fBloader_impl_get_value\fP (\fBloader_impl\fP impl, const char *name)"
 .br
 .ti -1c
 .RI "LOADER_API loader_impl_interface \fBloader_impl_symbol\fP (\fBloader_impl\fP impl)"
@@ -104,6 +107,8 @@ loader_impl.h
 .SS "LOADER_API \fBloader_impl\fP loader_impl_create (const char * path, const \fBloader_naming_tag\fP tag)"
 
 .SS "LOADER_API \fBloader_impl_data\fP loader_impl_get (\fBloader_impl\fP impl)"
+
+.SS "LOADER_API \fBvalue\fP loader_impl_get_value (\fBloader_impl\fP impl, const char * name)"
 
 .SS "LOADER_API loader_impl_interface loader_impl_symbol (\fBloader_impl\fP impl)"
 

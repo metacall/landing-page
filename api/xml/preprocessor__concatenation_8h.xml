@@ -10,6 +10,7 @@
     <includedby refid="preprocessor__detection_8h" local="no">preprocessor_detection.h</includedby>
     <includedby refid="preprocessor__serial_8h" local="no">preprocessor_serial.h</includedby>
     <includedby refid="dynlink__impl__symbol__win32_8h" local="no">dynlink_impl_symbol_win32.h</includedby>
+    <includedby refid="reflect__class__visibility_8h" local="no">reflect_class_visibility.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>preprocessor_concatenation.h</label>
@@ -28,6 +29,26 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
+      <node id="16">
+        <label>reflect_class.h</label>
+        <link refid="reflect__class_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>reflect_class_visibility.h</label>
+        <link refid="reflect__class__visibility_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
       <node id="13">
         <label>dynlink_impl_win32.h</label>
         <link refid="dynlink__impl__win32_8h"/>
@@ -35,6 +56,16 @@
       <node id="9">
         <label>log.h</label>
         <link refid="log_8h"/>
+      </node>
+      <node id="19">
+        <label>reflect_object.h</label>
+        <link refid="reflect__object_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>preprocessor_detection.h</label>
@@ -65,6 +96,8 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
       <node id="7">
         <label>preprocessor_stringify.h</label>
@@ -86,6 +119,14 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
+      <node id="21">
+        <label>reflect_method.h</label>
+        <link refid="reflect__method_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
       <node id="11">
         <label>preprocessor_serial.h</label>
         <link refid="preprocessor__serial_8h"/>
@@ -104,6 +145,26 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
+      <node id="20">
+        <label>reflect_constructor.h</label>
+        <link refid="reflect__constructor_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>reflect_attribute.h</label>
+        <link refid="reflect__attribute_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>reflect_value_type.h</label>
+        <link refid="reflect__value__type_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
       <node id="6">
         <label>preprocessor_for.h</label>
         <link refid="preprocessor__for_8h"/>
@@ -111,6 +172,10 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="17">
+        <label>reflect.h</label>
+        <link refid="reflect_8h"/>
       </node>
       <node id="8">
         <label>log_preprocessor.h</label>

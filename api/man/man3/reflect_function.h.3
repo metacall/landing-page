@@ -1,4 +1,4 @@
-.TH "reflect_function.h" 3 "Wed Jun 30 2021" "Version 0.1.0.9bcc4c97acac" "MetaCall" \" -*- nroff -*-
+.TH "reflect_function.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -6,6 +6,8 @@ reflect_function.h
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <reflect/reflect_async\&.h>\fP
+.br
 \fC#include <reflect/reflect_signature\&.h>\fP
 .br
 \fC#include <reflect/reflect_value\&.h>\fP
@@ -55,13 +57,6 @@ reflect_function.h
 .RI "typedef function_interface(* \fBfunction_impl_interface_singleton\fP) (void)"
 .br
 .in -1c
-.SS "Enumerations"
-
-.in +1c
-.ti -1c
-.RI "enum \fBfunction_async_id\fP { \fBFUNCTION_SYNC\fP = 0, \fBFUNCTION_ASYNC\fP = 1 }"
-.br
-.in -1c
 .SS "Functions"
 
 .in +1c
@@ -75,10 +70,10 @@ reflect_function.h
 .RI "REFLECT_API int \fBfunction_decrement_reference\fP (\fBfunction\fP func)"
 .br
 .ti -1c
-.RI "REFLECT_API void \fBfunction_async\fP (\fBfunction\fP func, enum \fBfunction_async_id\fP async)"
+.RI "REFLECT_API void \fBfunction_async\fP (\fBfunction\fP func, enum \fBasync_id\fP async)"
 .br
 .ti -1c
-.RI "REFLECT_API enum \fBfunction_async_id\fP \fBfunction_async_id\fP (\fBfunction\fP func)"
+.RI "REFLECT_API enum \fBasync_id\fP \fBfunction_async_id\fP (\fBfunction\fP func)"
 .br
 .ti -1c
 .RI "REFLECT_API void \fBfunction_bind\fP (\fBfunction\fP func, void *data)"
@@ -100,6 +95,9 @@ reflect_function.h
 .br
 .ti -1c
 .RI "REFLECT_API \fBfunction_return\fP \fBfunction_await\fP (\fBfunction\fP func, \fBfunction_args\fP args, size_t size, \fBfunction_resolve_callback\fP resolve_callback, \fBfunction_reject_callback\fP reject_callback, void *\fBcontext\fP)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBfunction_stats_debug\fP (void)"
 .br
 .ti -1c
 .RI "REFLECT_API void \fBfunction_destroy\fP (\fBfunction\fP func)"
@@ -129,17 +127,6 @@ reflect_function.h
 
 .SS "typedef function_interface(* function_impl_interface_singleton) (void)"
 
-.SH "Enumeration Type Documentation"
-.PP 
-.SS "enum \fBfunction_async_id\fP"
-
-.PP
-\fBEnumerator\fP
-.in +1c
-.TP
-\fB\fIFUNCTION_SYNC \fP\fP
-.TP
-\fB\fIFUNCTION_ASYNC \fP\fP
 .SH "Function Documentation"
 .PP 
 .SS "REFLECT_API \fBfunction\fP function_create (const char * name, size_t args_count, \fBfunction_impl\fP impl, \fBfunction_impl_interface_singleton\fP singleton)"
@@ -148,9 +135,9 @@ reflect_function.h
 
 .SS "REFLECT_API int function_decrement_reference (\fBfunction\fP func)"
 
-.SS "REFLECT_API void function_async (\fBfunction\fP func, enum \fBfunction_async_id\fP async)"
+.SS "REFLECT_API void function_async (\fBfunction\fP func, enum \fBasync_id\fP async)"
 
-.SS "REFLECT_API enum \fBfunction_async_id\fP \fBfunction_async_id\fP (\fBfunction\fP func)"
+.SS "REFLECT_API enum \fBasync_id\fP function_async_id (\fBfunction\fP func)"
 
 .SS "REFLECT_API void function_bind (\fBfunction\fP func, void * data)"
 
@@ -165,6 +152,8 @@ reflect_function.h
 .SS "REFLECT_API \fBfunction_return\fP function_call (\fBfunction\fP func, \fBfunction_args\fP args, size_t size)"
 
 .SS "REFLECT_API \fBfunction_return\fP function_await (\fBfunction\fP func, \fBfunction_args\fP args, size_t size, \fBfunction_resolve_callback\fP resolve_callback, \fBfunction_reject_callback\fP reject_callback, void * context)"
+
+.SS "REFLECT_API void function_stats_debug (void)"
 
 .SS "REFLECT_API void function_destroy (\fBfunction\fP func)"
 

@@ -1,0 +1,78 @@
+.TH "reflect_constructor.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_constructor.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+\fC#include <reflect/reflect_class_visibility\&.h>\fP
+.br
+\fC#include <reflect/reflect_type\&.h>\fP
+.br
+\fC#include <reflect/reflect_value\&.h>\fP
+.br
+\fC#include <reflect/reflect_constructor_decl\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBconstructor\fP \fBconstructor_create\fP (size_t count, enum \fBclass_visibility_id\fP visibility)"
+.br
+.ti -1c
+.RI "REFLECT_API size_t \fBconstructor_count\fP (\fBconstructor\fP ctor)"
+.br
+.ti -1c
+.RI "REFLECT_API size_t \fBconstructor_get_index\fP (\fBconstructor\fP ctor, const char *name)"
+.br
+.ti -1c
+.RI "const REFLECT_API char * \fBconstructor_get_name\fP (\fBconstructor\fP ctor, size_t index)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBtype\fP \fBconstructor_get_type\fP (\fBconstructor\fP ctor, size_t index)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBconstructor_set\fP (\fBconstructor\fP ctor, size_t index, const char *name, \fBtype\fP t)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBconstructor_compare\fP (\fBconstructor\fP ctor, \fBtype_id\fP args[], size_t size)"
+.br
+.ti -1c
+.RI "REFLECT_API enum \fBclass_visibility_id\fP \fBconstructor_visibility\fP (\fBconstructor\fP ctor)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBconstructor_metadata\fP (\fBconstructor\fP ctor)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBconstructor_destroy\fP (\fBconstructor\fP ctor)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBconstructor\fP constructor_create (size_t count, enum \fBclass_visibility_id\fP visibility)"
+
+.SS "REFLECT_API size_t constructor_count (\fBconstructor\fP ctor)"
+
+.SS "REFLECT_API size_t constructor_get_index (\fBconstructor\fP ctor, const char * name)"
+
+.SS "const REFLECT_API char* constructor_get_name (\fBconstructor\fP ctor, size_t index)"
+
+.SS "REFLECT_API \fBtype\fP constructor_get_type (\fBconstructor\fP ctor, size_t index)"
+
+.SS "REFLECT_API void constructor_set (\fBconstructor\fP ctor, size_t index, const char * name, \fBtype\fP t)"
+
+.SS "REFLECT_API int constructor_compare (\fBconstructor\fP ctor, \fBtype_id\fP args[], size_t size)"
+
+.SS "REFLECT_API enum \fBclass_visibility_id\fP constructor_visibility (\fBconstructor\fP ctor)"
+
+.SS "REFLECT_API \fBvalue\fP constructor_metadata (\fBconstructor\fP ctor)"
+
+.SS "REFLECT_API void constructor_destroy (\fBconstructor\fP ctor)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

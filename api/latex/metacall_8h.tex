@@ -19,11 +19,18 @@ Include dependency graph for metacall.\+h\+:
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type}
+\item 
+struct \textbf{ metacall\+\_\+await\+\_\+callbacks\+\_\+type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+\+F\+O\+R\+K\+\_\+\+S\+A\+FE}~0x01 $<$$<$ 0x00
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$($\ast$ \textbf{ metacall\+\_\+await\+\_\+callback}) (void $\ast$, void $\ast$)
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -213,6 +220,8 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await} 
 \item 
 M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await\+\_\+struct\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size, metacall\+\_\+await\+\_\+callbacks cb, void $\ast$data)
+\item 
 M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv\+\_\+await} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
 M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
@@ -237,15 +246,19 @@ Class reference, null if the class does not exist
 \item 
 M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class} (const char $\ast$name)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+class} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t argc)
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+class} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class\+\_\+new} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t argc)
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt\+\_\+class} (void $\ast$cls, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ret, void $\ast$args[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class\+\_\+new} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
 M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class\+\_\+static\+\_\+get} (void $\ast$cls, const char $\ast$key)
 \item 
 M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+class\+\_\+static\+\_\+set} (void $\ast$cls, const char $\ast$key, void $\ast$v)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+object} (void $\ast$obj, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t argc)
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+object} (void $\ast$obj, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+\item 
+M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt\+\_\+object} (void $\ast$obj, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ret, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
 M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+object\+\_\+get} (void $\ast$obj, const char $\ast$key)
 \item 
@@ -277,6 +290,15 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+null\+\_\
 \index{METACALL\_FLAGS\_FORK\_SAFE@{METACALL\_FLAGS\_FORK\_SAFE}!metacall.h@{metacall.h}}
 \doxysubsubsection{METACALL\_FLAGS\_FORK\_SAFE}
 {\footnotesize\ttfamily \#define M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+\+F\+O\+R\+K\+\_\+\+S\+A\+FE~0x01 $<$$<$ 0x00}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{metacall_8h_aa9b6fcb756e3ac95f638f4a42bb8f5d4}} 
+\index{metacall.h@{metacall.h}!metacall\_await\_callback@{metacall\_await\_callback}}
+\index{metacall\_await\_callback@{metacall\_await\_callback}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_await\_callback}
+{\footnotesize\ttfamily typedef void$\ast$($\ast$ metacall\+\_\+await\+\_\+callback) (void $\ast$, void $\ast$)}
 
 
 
@@ -1196,6 +1218,32 @@ Value containing the result of the operation, it will be wrapped into a future l
 \begin{DoxyReturn}{Returns}
 Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
 \end{DoxyReturn}
+\mbox{\label{metacall_8h_afe71978aefb3bb4d664ddf54b5ab81b7}} 
+\index{metacall.h@{metacall.h}!metacallfv\_await\_struct\_s@{metacallfv\_await\_struct\_s}}
+\index{metacallfv\_await\_struct\_s@{metacallfv\_await\_struct\_s}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallfv\_await\_struct\_s()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+await\+\_\+struct\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{metacall\+\_\+await\+\_\+callbacks}]{cb,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Call an asynchronous function anonymously by value array @args and function @func (offered without function pointers for languages without support to function pointers) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Reference to function to be called\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to values\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of the array @args\\
+\hline
+\mbox{\texttt{ in}}  & {\em cb} & Pointer to struct containing the function pointers to reject and resolve that will be executed when task completion or error\\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a context that will act as a closure for the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call returned by @resolve\+\_\+callback or @reject\+\_\+callback wrapped in a future 
+\end{DoxyReturn}
 \mbox{\label{metacall_8h_a806b1dda95f596de33a9527123fed8e4}} 
 \index{metacall.h@{metacall.h}!metacallfmv\_await@{metacallfmv\_await}}
 \index{metacallfmv\_await@{metacallfmv\_await}!metacall.h@{metacall.h}}
@@ -1360,21 +1408,21 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \doxysubsubsection{metacall\_class()}
 {\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
-\mbox{\label{metacall_8h_a9a59bb8134aa3243a995d871262f5085}} 
+\mbox{\label{metacall_8h_a97f50d305c683edfbeec022d41d8b749}} 
 \index{metacall.h@{metacall.h}!metacallv\_class@{metacallv\_class}}
 \index{metacallv\_class@{metacallv\_class}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallv\_class()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
-Call a class method anonymously by value array @args. 
+Call a class method anonymously by value array @args (this procedure assumes there\textquotesingle{}s no overloaded methods and does type conversion on values) 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em name} & Name of the method\\
-\hline
 \mbox{\texttt{ in}}  & {\em cls} & Pointer to the class\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the method\\
 \hline
 \mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
 \hline
@@ -1384,11 +1432,37 @@ Call a class method anonymously by value array @args.
 \begin{DoxyReturn}{Returns}
 Pointer to value containing the result of the call 
 \end{DoxyReturn}
-\mbox{\label{metacall_8h_a3fb7a043355dd7fd9974cea54ff93814}} 
+\mbox{\label{metacall_8h_ac0e15e8ca121a9b0c5b1f22f760d7137}} 
+\index{metacall.h@{metacall.h}!metacallt\_class@{metacallt\_class}}
+\index{metacallt\_class@{metacallt\_class}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallt\_class()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ret,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Call a class method anonymously by value array @args and return value type @ret (helps to resolve overloading methods) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cls} & Pointer to the class\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the method\\
+\hline
+\mbox{\texttt{ in}}  & {\em ret} & Type of the return value of the method\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of args array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_aee922f6a17e2d304c8074342779205c1}} 
 \index{metacall.h@{metacall.h}!metacall\_class\_new@{metacall\_class\_new}}
 \index{metacall\_class\_new@{metacall\_class\_new}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_class\_new()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class\+\_\+new (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class\+\_\+new (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1450,11 +1524,11 @@ Set an attribute to @cls by @key name.
 \begin{DoxyReturn}{Returns}
 Non-\/zero integer if an error ocurred 
 \end{DoxyReturn}
-\mbox{\label{metacall_8h_a84679047389d04a406f1e3a91fa00e1d}} 
+\mbox{\label{metacall_8h_a1b346165cc3e9d4c958bf92c65f71ef5}} 
 \index{metacall.h@{metacall.h}!metacallv\_object@{metacallv\_object}}
 \index{metacallv\_object@{metacallv\_object}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallv\_object()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1465,6 +1539,32 @@ Call an object method anonymously by value array @args.
 \mbox{\texttt{ in}}  & {\em obj} & Pointer to the object\\
 \hline
 \mbox{\texttt{ in}}  & {\em name} & Name of the method\\
+\hline
+\mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & Number of elements of args array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value containing the result of the call 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a1391d4d2e8f9dc919ecb6ce5ac00916f}} 
+\index{metacall.h@{metacall.h}!metacallt\_object@{metacallt\_object}}
+\index{metacallt\_object@{metacallt\_object}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacallt\_object()}
+{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ret,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Call a object method anonymously by value array @args and return value type @ret (helps to resolve overloading methods) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & Pointer to the object\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the method\\
+\hline
+\mbox{\texttt{ in}}  & {\em ret} & Type of the return value of the method\\
 \hline
 \mbox{\texttt{ in}}  & {\em args} & Array of pointers to data\\
 \hline

@@ -6,7 +6,9 @@
     <includes refid="reflect__type_8h" local="no">reflect/reflect_type.h</includes>
     <includes refid="reflect__value_8h" local="no">reflect/reflect_value.h</includes>
     <includedby refid="reflect_8h" local="no">reflect.h</includedby>
+    <includedby refid="reflect__class_8h" local="no">reflect_class.h</includedby>
     <includedby refid="reflect__function_8h" local="no">reflect_function.h</includedby>
+    <includedby refid="reflect__method_8h" local="no">reflect_method.h</includedby>
     <incdepgraph>
       <node id="6">
         <label>stdlib.h</label>
@@ -52,78 +54,104 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="10">
+      <node id="12">
         <label>loader_impl_function.h</label>
         <link refid="loader__impl__function_8h"/>
       </node>
-      <node id="12">
+      <node id="14">
         <label>loader_impl_export.h</label>
         <link refid="loader__impl__export_8h"/>
       </node>
       <node id="3">
-        <label>reflect_function.h</label>
-        <link refid="reflect__function_8h"/>
+        <label>reflect_class.h</label>
+        <link refid="reflect__class_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
       </node>
-      <node id="6">
-        <label>loader_impl_interface.h</label>
-        <link refid="loader__impl__interface_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>reflect_scope.h</label>
-        <link refid="reflect__scope_8h"/>
+      <node id="5">
+        <label>reflect_function.h</label>
+        <link refid="reflect__function_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>reflect_object.h</label>
+        <link refid="reflect__object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="8">
-        <label>loader_export.h</label>
-        <link refid="loader__export_8h"/>
-      </node>
-      <node id="11">
-        <label>loader_impl_handle.h</label>
-        <link refid="loader__impl__handle_8h"/>
-      </node>
-      <node id="13">
-        <label>reflect_value_type.h</label>
-        <link refid="reflect__value__type_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>loader_impl.h</label>
-        <link refid="loader__impl_8h"/>
-        <childnode refid="7" relation="include">
+        <label>loader_impl_interface.h</label>
+        <link refid="loader__impl__interface_8h"/>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
-      <node id="7">
+      <node id="6">
+        <label>reflect_scope.h</label>
+        <link refid="reflect__scope_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>loader_export.h</label>
+        <link refid="loader__export_8h"/>
+      </node>
+      <node id="15">
+        <label>reflect_method.h</label>
+        <link refid="reflect__method_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>loader_impl_handle.h</label>
+        <link refid="loader__impl__handle_8h"/>
+      </node>
+      <node id="4">
+        <label>reflect_value_type.h</label>
+        <link refid="reflect__value__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
         <label>loader.h</label>
         <link refid="loader_8h"/>
       </node>
-      <node id="5">
+      <node id="7">
         <label>reflect_context.h</label>
         <link refid="reflect__context_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -136,6 +164,10 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -340,6 +372,36 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" line="53" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" declline="53" declcolumn="18"/>
       </memberdef>
+      <memberdef kind="function" id="reflect__signature_8h_1aac15d75236c6c25696258357fc645202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int signature_compare</definition>
+        <argsstring>(signature s, type_id ret, type_id args[], size_t size)</argsstring>
+        <name>signature_compare</name>
+        <param>
+          <type><ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref></type>
+          <declname>ret</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref></type>
+          <declname>args</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" line="55" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" declline="55" declcolumn="17"/>
+      </memberdef>
       <memberdef kind="function" id="reflect__signature_8h_1a6d8b45995ef14c6b0d4de84678646174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
         <definition>REFLECT_API value signature_metadata</definition>
@@ -355,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" line="55" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" declline="55" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" line="57" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" declline="57" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="reflect__signature_8h_1abe33c399405d6064638a396e76443f00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -372,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" line="57" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" declline="57" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" line="59" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h" declline="59" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -434,15 +496,17 @@
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__signature_8h_1a676c4bc345455aaabf2563778b3c2477" kindref="member">signature_set_return</ref>(<ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/>s,<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/>t);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__signature_8h_1a6d8b45995ef14c6b0d4de84678646174" kindref="member">signature_metadata</ref>(<ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/>s);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__signature_8h_1aac15d75236c6c25696258357fc645202" kindref="member">signature_compare</ref>(<ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/>s,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>ret,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>args[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__signature_8h_1abe33c399405d6064638a396e76443f00" kindref="member">signature_destroy</ref>(<ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/>s);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__signature_8h_1a6d8b45995ef14c6b0d4de84678646174" kindref="member">signature_metadata</ref>(<ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/>s);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_SIGNATURE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__signature_8h_1abe33c399405d6064638a396e76443f00" kindref="member">signature_destroy</ref>(<ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/>s);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_SIGNATURE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_signature.h"/>
   </compounddef>

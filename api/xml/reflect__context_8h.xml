@@ -12,10 +12,12 @@
         <link refid="reflect__function_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>stdlib.h</label>
       </node>
       <node id="3">
@@ -25,33 +27,33 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>reflect/reflect_type.h</label>
         <link refid="reflect__type_8h"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>reflect/reflect_type_id.h</label>
         <link refid="reflect__type__id_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>reflect/reflect_value.h</label>
         <link refid="reflect__value_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -65,14 +67,20 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>reflect/reflect_signature.h</label>
         <link refid="reflect__signature_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>reflect/reflect_async.h</label>
+        <link refid="reflect__async_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -220,10 +228,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_context.h" line="42" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_context.h" declline="42" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__context_8h_1a5c2a59a06a882c2ec2c3bd0cf6e5acea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__context_8h_1a5456caa9f37c96d125fa7f0534f5033d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
         <definition>REFLECT_API int context_contains</definition>
-        <argsstring>(context dest, context src)</argsstring>
+        <argsstring>(context dest, context src, char **duplicated)</argsstring>
         <name>context_contains</name>
         <param>
           <type><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref></type>
@@ -232,6 +240,10 @@
         <param>
           <type><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref></type>
           <declname>src</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>duplicated</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -328,7 +340,7 @@
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a5a08e99bf8fa8d47022a3eb5037f5782" kindref="member">context_append</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a5c2a59a06a882c2ec2c3bd0cf6e5acea" kindref="member">context_contains</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a5456caa9f37c96d125fa7f0534f5033d" kindref="member">context_contains</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**duplicated);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a7fb6ba2f8b8c507b6ff568ac02470bf1" kindref="member">context_remove</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>

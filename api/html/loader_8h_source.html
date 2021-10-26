@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MetaCall
-   &#160;<span id="projectnumber">0.1.0.9bcc4c97acac</span>
+   &#160;<span id="projectnumber">0.1.0.44b1ab3b98a6</span>
    </div>
    <div id="projectbrief">A library for providing inter-language foreign function interface calls</div>
   </td>
@@ -183,7 +183,7 @@ $(document).ready(function(){initNavTree('loader_8h_source.html',''); initResiza
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;LOADER_API <span class="keywordtype">int</span> <a class="code" href="loader_8h.html#a50281bf1571a363c0b9b198c4e3e3a6e">loader_clear</a>(<span class="keywordtype">void</span> *handle);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;LOADER_API <span class="keywordtype">void</span> <a class="code" href="loader_8h.html#aae52d09e532fd966f933d4573ee97fbf">loader_unload_children</a>(<a class="code" href="loader__impl__interface_8h.html#a92e542164f804b49f0c1d6149b1c045e">loader_impl</a> impl);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;LOADER_API <span class="keywordtype">void</span> <a class="code" href="loader_8h.html#a5ccaf6095bcc8ffe4fd3e8c2bb3d8202">loader_unload_children</a>(<a class="code" href="loader__impl__interface_8h.html#a92e542164f804b49f0c1d6149b1c045e">loader_impl</a> impl, <span class="keywordtype">int</span> destroy_objects);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;LOADER_API <span class="keywordtype">int</span> <a class="code" href="loader_8h.html#ac4f17dddef9935d0b1b727271f5e2308">loader_unload</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
@@ -216,12 +216,12 @@ $(document).ready(function(){initNavTree('loader_8h_source.html',''); initResiza
 <div class="ttc" id="aloader__impl_8h_html"><div class="ttname"><a href="loader__impl_8h.html">loader_impl.h</a></div></div>
 <div class="ttc" id="aloader__naming_8h_html_aa27055dfc9a7bd58b024fea91438099a"><div class="ttname"><a href="loader__naming_8h.html#aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</a></div><div class="ttdeci">char loader_naming_path[LOADER_NAMING_PATH_SIZE]</div><div class="ttdef"><b>Definition:</b> loader_naming.h:34</div></div>
 <div class="ttc" id="aloader_8h_html_a4bad4c3d55fc7534694b049194bbcd90"><div class="ttname"><a href="loader_8h.html#a4bad4c3d55fc7534694b049194bbcd90">loader_handle_id</a></div><div class="ttdeci">const LOADER_API char * loader_handle_id(void *handle)</div></div>
-<div class="ttc" id="aloader_8h_html_aae52d09e532fd966f933d4573ee97fbf"><div class="ttname"><a href="loader_8h.html#aae52d09e532fd966f933d4573ee97fbf">loader_unload_children</a></div><div class="ttdeci">LOADER_API void loader_unload_children(loader_impl impl)</div></div>
 <div class="ttc" id="aloader_8h_html_a2f50c4778d1534eace279c7b182e2dc3"><div class="ttname"><a href="loader_8h.html#a2f50c4778d1534eace279c7b182e2dc3">loader_get_impl</a></div><div class="ttdeci">LOADER_API loader_impl loader_get_impl(const loader_naming_tag tag)</div></div>
 <div class="ttc" id="aloader_8h_html_a0c56e5ef778aefaa4587573667a35945"><div class="ttname"><a href="loader_8h.html#a0c56e5ef778aefaa4587573667a35945">loader_register_invoke</a></div><div class="ttdeci">value(* loader_register_invoke)(size_t, void *[], void *)</div><div class="ttdef"><b>Definition:</b> loader.h:46</div></div>
 <div class="ttc" id="aloader_8h_html_a295fe19eb38401793c7feaa24160f223"><div class="ttname"><a href="loader_8h.html#a295fe19eb38401793c7feaa24160f223">loader_initialize</a></div><div class="ttdeci">LOADER_API void loader_initialize(void)</div></div>
 <div class="ttc" id="aloader_8h_html_a25d7854cec594b64371f17ea60711c77"><div class="ttname"><a href="loader_8h.html#a25d7854cec594b64371f17ea60711c77">loader_load_from_file</a></div><div class="ttdeci">LOADER_API int loader_load_from_file(const loader_naming_tag tag, const loader_naming_path paths[], size_t size, void **handle)</div></div>
 <div class="ttc" id="aloader_8h_html_ae325c8a6eb9cc688d3f8b995fe5eeef1"><div class="ttname"><a href="loader_8h.html#ae325c8a6eb9cc688d3f8b995fe5eeef1">loader_get</a></div><div class="ttdeci">LOADER_API loader_data loader_get(const char *name)</div></div>
+<div class="ttc" id="aloader_8h_html_a5ccaf6095bcc8ffe4fd3e8c2bb3d8202"><div class="ttname"><a href="loader_8h.html#a5ccaf6095bcc8ffe4fd3e8c2bb3d8202">loader_unload_children</a></div><div class="ttdeci">LOADER_API void loader_unload_children(loader_impl impl, int destroy_objects)</div></div>
 <div class="ttc" id="areflect__type__id_8h_html_a63f97c5b1281063207c427df64d28950"><div class="ttname"><a href="reflect__type__id_8h.html#a63f97c5b1281063207c427df64d28950">type_id</a></div><div class="ttdeci">int type_id</div><div class="ttdef"><b>Definition:</b> reflect_type_id.h:54</div></div>
 <div class="ttc" id="aloader_8h_html_aff80b88574c4ecd9bd5bcb4b549c1059"><div class="ttname"><a href="loader_8h.html#aff80b88574c4ecd9bd5bcb4b549c1059">loader_set_options</a></div><div class="ttdeci">LOADER_API void loader_set_options(const loader_naming_tag tag, void *options)</div></div>
 <div class="ttc" id="aloader_8h_html_a057eb44bd3132e88416f1a90e4b7b5b2"><div class="ttname"><a href="loader_8h.html#a057eb44bd3132e88416f1a90e4b7b5b2">loader_get_options</a></div><div class="ttdeci">LOADER_API void * loader_get_options(const loader_naming_tag tag)</div></div>
@@ -238,7 +238,7 @@ $(document).ready(function(){initNavTree('loader_8h_source.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_22c957fb592bb7dd0a39292df71c0dbc.html">loader</a></li><li class="navelem"><a class="el" href="dir_5c361d91932ade207a97c66a27ff23d2.html">include</a></li><li class="navelem"><a class="el" href="dir_d50ae27ce1e25427d19ce4c25c05a71d.html">loader</a></li><li class="navelem"><a class="el" href="loader_8h.html">loader.h</a></li>
-    <li class="footer">Generated on Wed Jun 30 2021 13:22:00 for MetaCall by
+    <li class="footer">Generated on Tue Oct 26 2021 21:03:44 for MetaCall by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

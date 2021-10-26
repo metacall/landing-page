@@ -2,8 +2,12 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__object_8h">
 <title>reflect_object.h File Reference</title>
 <indexterm><primary>reflect_object.h</primary></indexterm>
-<programlisting>#include &lt;reflect/reflect_value.h&gt;
-#include &lt;reflect/reflect_class.h&gt;
+<programlisting>#include &lt;adt/adt_vector.h&gt;
+#include &lt;reflect/reflect_accessor.h&gt;
+#include &lt;reflect/reflect_attribute.h&gt;
+#include &lt;reflect/reflect_class_decl.h&gt;
+#include &lt;reflect/reflect_method.h&gt;
+#include &lt;reflect/reflect_value.h&gt;
 </programlisting>Include dependency graph for reflect_object.h:<para>
     <informalfigure>
         <mediaobject>
@@ -44,13 +48,13 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>typedef int(* <link linkend="_reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7">object_impl_interface_create</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>)</para>
 </listitem>
-            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__object_8h_1a0f9ce118d411a006c77ba9838caad781">object_impl_interface_get</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *)</para>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__object_8h_1a8368bda998edac4455943d5330316ba6">object_impl_interface_get</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *)</para>
 </listitem>
-            <listitem><para>typedef int(* <link linkend="_reflect__object_8h_1aa77f3d3c838f029780f79c87fef208f7">object_impl_interface_set</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
+            <listitem><para>typedef int(* <link linkend="_reflect__object_8h_1a346febd447ed8b8e83bda1a8f514cf66">object_impl_interface_set</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
 </listitem>
-            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__object_8h_1a3697e99bfa8f8ac38e44b1271116d865">object_impl_interface_method_invoke</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t)</para>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__object_8h_1a2e28a7e4d52009fa7a3b50f06751b3ac">object_impl_interface_method_invoke</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t)</para>
 </listitem>
-            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__object_8h_1ab09b76f667d991ee66c3802a55c316a0">object_impl_interface_method_await</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link>, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link>, void *)</para>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__object_8h_1a9d8176e73eb34ca7a4ad3701fc41dc3c">object_impl_interface_method_await</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link>, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link>, void *)</para>
 </listitem>
             <listitem><para>typedef int(* <link linkend="_reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511">object_impl_interface_destructor</link>) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>)</para>
 </listitem>
@@ -63,7 +67,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> <link linkend="_reflect__object_8h_1aaca31d53a03398feb87495f21f05182c">object_create</link> (const char *name, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link> impl, <link linkend="_reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989">object_impl_interface_singleton</link> singleton, <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> <link linkend="_reflect__object_8h_1a87c4d79800e397eb808ddfa2bd6367d9">object_create</link> (const char *name, enum <link linkend="_reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913">accessor_type_id</link> accessor, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link> impl, <link linkend="_reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989">object_impl_interface_singleton</link> singleton, <link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
 </listitem>
             <listitem><para>REFLECT_API int <link linkend="_reflect__object_8h_1a695e8394c1e437a883ce7980496b78e7">object_increment_reference</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj)</para>
 </listitem>
@@ -75,15 +79,21 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__object_8h_1a859864a88ef134b9ce8f2a6f24ad0f37">object_get</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char *key)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__object_8h_1a57ba6f406a36aecffcd4533d3b8c5ee1">object_call</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char *name, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__object_8h_1a4937763985036958894130b73a21a4ce">object_call</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__object_8h_1a072bdd58ed8d057b69ae071e45601e1d">object_await</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char *name, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link> resolve_callback, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link> reject_callback, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__object_8h_1ad903e000318a9509ab91a553ff8e129a">object_await</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link> resolve_callback, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link> reject_callback, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_reflect__object_8h_1a5e3bbe95840a2578e0bd2c2277eb4c9d">object_methods</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char *key)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> <link linkend="_reflect__object_8h_1a157904a36494774b740212b211de50b6">object_method</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char *key, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> ret, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</para>
 </listitem>
             <listitem><para>const REFLECT_API char * <link linkend="_reflect__object_8h_1ae6e9a3e287e0e3c26cfbcc03e4f75b58">object_name</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj)</para>
 </listitem>
             <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__object_8h_1a1de46ee0378baeacc14ace5dbc05f8c5">object_metadata</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj)</para>
 </listitem>
             <listitem><para>REFLECT_API int <link linkend="_reflect__object_8h_1a48e2ec3e04b9d511497b8c48a38614be">object_delete</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__object_8h_1acc123ce75b86c2c586396a43db837397">object_stats_debug</link> (void)</para>
 </listitem>
             <listitem><para>REFLECT_API void <link linkend="_reflect__object_8h_1a3702f480c8b4f6093b9db0dfda3bfc08">object_destroy</link> (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj)</para>
 </listitem>
@@ -115,23 +125,23 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>object_impl_interface_create</title>
 <indexterm><primary>object_impl_interface_create</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_impl_interface_create</secondary></indexterm>
-<para><computeroutput>typedef int(* object_impl_interface_create) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a0f9ce118d411a006c77ba9838caad781"/>    <section>
+<para><computeroutput>typedef int(* object_impl_interface_create) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a8368bda998edac4455943d5330316ba6"/>    <section>
     <title>object_impl_interface_get</title>
 <indexterm><primary>object_impl_interface_get</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_impl_interface_get</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* object_impl_interface_get) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1aa77f3d3c838f029780f79c87fef208f7"/>    <section>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* object_impl_interface_get) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a346febd447ed8b8e83bda1a8f514cf66"/>    <section>
     <title>object_impl_interface_set</title>
 <indexterm><primary>object_impl_interface_set</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_impl_interface_set</secondary></indexterm>
-<para><computeroutput>typedef int(* object_impl_interface_set) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a3697e99bfa8f8ac38e44b1271116d865"/>    <section>
+<para><computeroutput>typedef int(* object_impl_interface_set) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a2e28a7e4d52009fa7a3b50f06751b3ac"/>    <section>
     <title>object_impl_interface_method_invoke</title>
 <indexterm><primary>object_impl_interface_method_invoke</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_impl_interface_method_invoke</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* object_impl_interface_method_invoke) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1ab09b76f667d991ee66c3802a55c316a0"/>    <section>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* object_impl_interface_method_invoke) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a9d8176e73eb34ca7a4ad3701fc41dc3c"/>    <section>
     <title>object_impl_interface_method_await</title>
 <indexterm><primary>object_impl_interface_method_await</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_impl_interface_method_await</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* object_impl_interface_method_await) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, const char *, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link>, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link>, void *)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511"/>    <section>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* object_impl_interface_method_await) (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link>, size_t, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link>, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link>, void *)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511"/>    <section>
     <title>object_impl_interface_destructor</title>
 <indexterm><primary>object_impl_interface_destructor</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_impl_interface_destructor</secondary></indexterm>
@@ -147,11 +157,11 @@ This graph shows which files directly or indirectly include this file:<para>
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_reflect__object_8h_1aaca31d53a03398feb87495f21f05182c"/>    <section>
+<anchor xml:id="_reflect__object_8h_1a87c4d79800e397eb808ddfa2bd6367d9"/>    <section>
     <title>object_create()</title>
 <indexterm><primary>object_create</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_create</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> object_create (const char * name, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link> impl, <link linkend="_reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989">object_impl_interface_singleton</link> singleton, <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a695e8394c1e437a883ce7980496b78e7"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> object_create (const char * name, enum <link linkend="_reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913">accessor_type_id</link> accessor, <link linkend="_reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d">object_impl</link> impl, <link linkend="_reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989">object_impl_interface_singleton</link> singleton, <link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a695e8394c1e437a883ce7980496b78e7"/>    <section>
     <title>object_increment_reference()</title>
 <indexterm><primary>object_increment_reference</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_increment_reference</secondary></indexterm>
@@ -171,15 +181,23 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>object_get()</title>
 <indexterm><primary>object_get</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_get</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> object_get (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a57ba6f406a36aecffcd4533d3b8c5ee1"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> object_get (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a4937763985036958894130b73a21a4ce"/>    <section>
     <title>object_call()</title>
 <indexterm><primary>object_call</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_call</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> object_call (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char * name, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a072bdd58ed8d057b69ae071e45601e1d"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> object_call (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1ad903e000318a9509ab91a553ff8e129a"/>    <section>
     <title>object_await()</title>
 <indexterm><primary>object_await</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_await</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> object_await (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char * name, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link> resolve_callback, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link> reject_callback, void * context)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1ae6e9a3e287e0e3c26cfbcc03e4f75b58"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> object_await (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259">object_args</link> args, size_t size, <link linkend="_reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4">object_resolve_callback</link> resolve_callback, <link linkend="_reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9">object_reject_callback</link> reject_callback, void * context)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a5e3bbe95840a2578e0bd2c2277eb4c9d"/>    <section>
+    <title>object_methods()</title>
+<indexterm><primary>object_methods</primary><secondary>reflect_object.h</secondary></indexterm>
+<indexterm><primary>reflect_object.h</primary><secondary>object_methods</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> object_methods (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a157904a36494774b740212b211de50b6"/>    <section>
+    <title>object_method()</title>
+<indexterm><primary>object_method</primary><secondary>reflect_object.h</secondary></indexterm>
+<indexterm><primary>reflect_object.h</primary><secondary>object_method</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> object_method (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj, const char * key, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> ret, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1ae6e9a3e287e0e3c26cfbcc03e4f75b58"/>    <section>
     <title>object_name()</title>
 <indexterm><primary>object_name</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_name</secondary></indexterm>
@@ -191,7 +209,11 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>object_delete()</title>
 <indexterm><primary>object_delete</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_delete</secondary></indexterm>
-<para><computeroutput>REFLECT_API int object_delete (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a3702f480c8b4f6093b9db0dfda3bfc08"/>    <section>
+<para><computeroutput>REFLECT_API int object_delete (<link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> obj)</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1acc123ce75b86c2c586396a43db837397"/>    <section>
+    <title>object_stats_debug()</title>
+<indexterm><primary>object_stats_debug</primary><secondary>reflect_object.h</secondary></indexterm>
+<indexterm><primary>reflect_object.h</primary><secondary>object_stats_debug</secondary></indexterm>
+<para><computeroutput>REFLECT_API void object_stats_debug (void )</computeroutput></para>    </section><anchor xml:id="_reflect__object_8h_1a3702f480c8b4f6093b9db0dfda3bfc08"/>    <section>
     <title>object_destroy()</title>
 <indexterm><primary>object_destroy</primary><secondary>reflect_object.h</secondary></indexterm>
 <indexterm><primary>reflect_object.h</primary><secondary>object_destroy</secondary></indexterm>

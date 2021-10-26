@@ -1,0 +1,75 @@
+.TH "reflect_method.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+reflect_method.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <reflect/reflect_api\&.h>\fP
+.br
+\fC#include <reflect/reflect_class_decl\&.h>\fP
+.br
+\fC#include <reflect/reflect_class_visibility\&.h>\fP
+.br
+\fC#include <reflect/reflect_async\&.h>\fP
+.br
+\fC#include <reflect/reflect_signature\&.h>\fP
+.br
+\fC#include <reflect/reflect_method_decl\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "REFLECT_API \fBmethod\fP \fBmethod_create\fP (\fBklass\fP cls, const char *name, size_t args_count, \fBmethod_impl\fP impl, enum \fBclass_visibility_id\fP visibility, enum \fBasync_id\fP async, \fBmethod_impl_interface_singleton\fP singleton)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBklass\fP \fBmethod_class\fP (\fBmethod\fP m)"
+.br
+.ti -1c
+.RI "REFLECT_API char * \fBmethod_name\fP (\fBmethod\fP m)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBsignature\fP \fBmethod_signature\fP (\fBmethod\fP m)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBmethod_impl\fP \fBmethod_data\fP (\fBmethod\fP m)"
+.br
+.ti -1c
+.RI "REFLECT_API enum \fBclass_visibility_id\fP \fBmethod_visibility\fP (\fBmethod\fP m)"
+.br
+.ti -1c
+.RI "REFLECT_API enum \fBasync_id\fP \fBmethod_async\fP (\fBmethod\fP m)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBmethod_metadata\fP (\fBmethod\fP m)"
+.br
+.ti -1c
+.RI "REFLECT_API void \fBmethod_destroy\fP (\fBmethod\fP m)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "REFLECT_API \fBmethod\fP method_create (\fBklass\fP cls, const char * name, size_t args_count, \fBmethod_impl\fP impl, enum \fBclass_visibility_id\fP visibility, enum \fBasync_id\fP async, \fBmethod_impl_interface_singleton\fP singleton)"
+
+.SS "REFLECT_API \fBklass\fP method_class (\fBmethod\fP m)"
+
+.SS "REFLECT_API char* method_name (\fBmethod\fP m)"
+
+.SS "REFLECT_API \fBsignature\fP method_signature (\fBmethod\fP m)"
+
+.SS "REFLECT_API \fBmethod_impl\fP method_data (\fBmethod\fP m)"
+
+.SS "REFLECT_API enum \fBclass_visibility_id\fP method_visibility (\fBmethod\fP m)"
+
+.SS "REFLECT_API enum \fBasync_id\fP method_async (\fBmethod\fP m)"
+
+.SS "REFLECT_API \fBvalue\fP method_metadata (\fBmethod\fP m)"
+
+.SS "REFLECT_API void method_destroy (\fBmethod\fP m)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

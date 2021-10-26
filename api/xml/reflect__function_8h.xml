@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="reflect__function_8h" kind="file" language="C++">
     <compoundname>reflect_function.h</compoundname>
+    <includes refid="reflect__async_8h" local="no">reflect/reflect_async.h</includes>
     <includes refid="reflect__signature_8h" local="no">reflect/reflect_signature.h</includes>
     <includes refid="reflect__value_8h" local="no">reflect/reflect_value.h</includes>
     <includedby refid="reflect_8h" local="no">reflect.h</includedby>
@@ -13,49 +14,57 @@
         <link refid="reflect__function_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>stdlib.h</label>
       </node>
-      <node id="4">
+      <node id="5">
         <label>reflect/reflect_type.h</label>
         <link refid="reflect__type_8h"/>
         <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>reflect/reflect_type_id.h</label>
         <link refid="reflect__type__id_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>reflect/reflect_value.h</label>
         <link refid="reflect__value_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="3">
         <label>reflect/reflect_api.h</label>
       </node>
-      <node id="2">
+      <node id="4">
         <label>reflect/reflect_signature.h</label>
         <link refid="reflect__signature_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>reflect/reflect_async.h</label>
+        <link refid="reflect__async_8h"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -140,35 +149,6 @@
       </node>
     </invincdepgraph>
     <innerclass refid="structfunction__interface__type" prot="public">function_interface_type</innerclass>
-      <sectiondef kind="enum">
-      <memberdef kind="enum" id="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" prot="public" static="no" strong="no">
-        <type></type>
-        <name>function_async_id</name>
-        <enumvalue id="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28" prot="public">
-          <name>FUNCTION_SYNC</name>
-          <initializer>= 0</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28" prot="public">
-          <name>FUNCTION_ASYNC</name>
-          <initializer>= 1</initializer>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="63" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="62" bodyend="66"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" prot="public" static="no">
         <type>void *</type>
@@ -181,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="33" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="34" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa" prot="public" static="no">
         <type>struct function_type *</type>
@@ -194,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="35" column="28" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="36" column="28" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" prot="public" static="no">
         <type>void *</type>
@@ -207,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="37" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" prot="public" static="no">
         <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
@@ -220,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="39" column="15" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="40" column="15" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" prot="public" static="no">
         <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
@@ -233,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="41" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="42" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" prot="public" static="no">
         <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
@@ -246,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="43" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="44" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1ae64966150dd1d74eea1c434d558d8cfd" prot="public" static="no">
         <type>int(*</type>
@@ -259,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="45" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="46" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1a16be39ef3fdd557661a85fee4f5d54b1" prot="public" static="no">
         <type><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref>(*</type>
@@ -272,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="47" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="48" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1ad5fee2d03c9d6a4fea8f9a8097ef0339" prot="public" static="no">
         <type><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref>(*</type>
@@ -285,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="49" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="50" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1aefd4a5abb695deff8cb131f873232ae8" prot="public" static="no">
         <type>void(*</type>
@@ -298,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="51" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="52" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af" prot="public" static="no">
         <type>function_interface(*</type>
@@ -311,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="68" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="63" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -342,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="70" column="22" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="70" declcolumn="22"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="65" column="22" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="65" declcolumn="22"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1ad3b35f9baa70a446cff0fac71b40db2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
@@ -359,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="72" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="72" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="67" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="67" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1ad3c51bbe31aba3fbeefbbcea568e4685" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
@@ -376,19 +356,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="74" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="74" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="69" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="69" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__function_8h_1add4836a9d458071f05ae742e6addb8a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__function_8h_1af709f2c74fa6a9ffefc895204021878c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
         <definition>REFLECT_API void function_async</definition>
-        <argsstring>(function func, enum function_async_id async)</argsstring>
+        <argsstring>(function func, enum async_id async)</argsstring>
         <name>function_async</name>
         <param>
           <type><ref refid="reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa" kindref="member">function</ref></type>
           <declname>func</declname>
         </param>
         <param>
-          <type>enum <ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" kindref="member">function_async_id</ref></type>
+          <type>enum <ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref></type>
           <declname>async</declname>
         </param>
         <briefdescription>
@@ -397,11 +377,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="76" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="76" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="71" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="71" declcolumn="18"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__function_8h_1a55ff4f4a26bf8c92378c3f608e913e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>REFLECT_API enum <ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" kindref="member">function_async_id</ref></type>
-        <definition>REFLECT_API enum function_async_id function_async_id</definition>
+      <memberdef kind="function" id="reflect__function_8h_1afd3d88e128ac7c27a124c77a73606f51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API enum <ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref></type>
+        <definition>REFLECT_API enum async_id function_async_id</definition>
         <argsstring>(function func)</argsstring>
         <name>function_async_id</name>
         <param>
@@ -414,7 +394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="78" column="1" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="78" declcolumn="1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="73" column="1" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="73" declcolumn="1"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1a5b279b5c18645cff4b54eb55e22053b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -435,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="80" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="80" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="75" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="75" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1a050920384e8f96c443dc11242ac421ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void *</type>
@@ -452,7 +432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="82" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="82" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="77" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="77" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1af75cac62bcca3a43ce45507b528fc290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const REFLECT_API char *</type>
@@ -469,7 +449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="84" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="84" declcolumn="24"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="79" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="79" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1a9ff1a7f5a167c79be8eeffe8acf356a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref></type>
@@ -486,7 +466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="86" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="86" declcolumn="23"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="81" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="81" declcolumn="23"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1ac437dd533263274b9fcb1d6fb10b71cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
@@ -503,7 +483,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="88" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="88" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="83" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="83" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1a55f786badbc8f796b72a8bc87c653fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref></type>
@@ -528,7 +508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="90" column="29" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="90" declcolumn="29"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="85" column="29" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="85" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1a63391dc688728a94873fd4e6176031ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref></type>
@@ -565,7 +545,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="92" column="29" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="92" declcolumn="29"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="87" column="29" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="87" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__function_8h_1a93ce6eeff8ef033f0a36e60875096bfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API void</type>
+        <definition>REFLECT_API void function_stats_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>function_stats_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="89" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="89" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__function_8h_1a3ef49cc819e4515b1f0222cc7f3dd6dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -582,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="94" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="94" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" line="91" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h" declline="91" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -613,83 +609,80 @@
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REFLECT_FUNCTION_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REFLECT_FUNCTION_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__signature_8h" kindref="compound">reflect/reflect_signature.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__value_8h" kindref="compound">reflect/reflect_value.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">function_type;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">function_type<sp/>*</highlight><highlight class="keyword">function</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref>[];</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref>;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" kindref="member">function_resolve_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" kindref="member">function_reject_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="reflect__function_8h_1ae64966150dd1d74eea1c434d558d8cfd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__function_8h_1ae64966150dd1d74eea1c434d558d8cfd" kindref="member">function_impl_interface_create</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="reflect__function_8h_1a16be39ef3fdd557661a85fee4f5d54b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/>(*<ref refid="reflect__function_8h_1a16be39ef3fdd557661a85fee4f5d54b1" kindref="member">function_impl_interface_invoke</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref>,<sp/>size_t);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="reflect__function_8h_1ad5fee2d03c9d6a4fea8f9a8097ef0339" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/>(*<ref refid="reflect__function_8h_1ad5fee2d03c9d6a4fea8f9a8097ef0339" kindref="member">function_impl_interface_await</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref>,<sp/>size_t,<sp/><ref refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" kindref="member">function_resolve_callback</ref>,<sp/><ref refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" kindref="member">function_reject_callback</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="reflect__function_8h_1aefd4a5abb695deff8cb131f873232ae8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="reflect__function_8h_1aefd4a5abb695deff8cb131f873232ae8" kindref="member">function_impl_interface_destroy</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="structfunction__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfunction__interface__type" kindref="compound">function_interface_type</ref></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="55" refid="structfunction__interface__type_1a7a77b6977013a80def0e9f00ad5ecac9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1ae64966150dd1d74eea1c434d558d8cfd" kindref="member">function_impl_interface_create</ref><sp/><ref refid="structfunction__interface__type_1a7a77b6977013a80def0e9f00ad5ecac9" kindref="member">create</ref>;</highlight></codeline>
-<codeline lineno="56" refid="structfunction__interface__type_1a37db630a2a18aa13df5ea034b9dbd738" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1a16be39ef3fdd557661a85fee4f5d54b1" kindref="member">function_impl_interface_invoke</ref><sp/><ref refid="structfunction__interface__type_1a37db630a2a18aa13df5ea034b9dbd738" kindref="member">invoke</ref>;</highlight></codeline>
-<codeline lineno="57" refid="structfunction__interface__type_1ac9b5d350c6140c1138a1c6fb81315954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1ad5fee2d03c9d6a4fea8f9a8097ef0339" kindref="member">function_impl_interface_await</ref><sp/><ref refid="structfunction__interface__type_1ac9b5d350c6140c1138a1c6fb81315954" kindref="member">await</ref>;</highlight></codeline>
-<codeline lineno="58" refid="structfunction__interface__type_1ad60d4764bc15dfdf1799934ef93ed151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1aefd4a5abb695deff8cb131f873232ae8" kindref="member">function_impl_interface_destroy</ref><sp/><ref refid="structfunction__interface__type_1ad60d4764bc15dfdf1799934ef93ed151" kindref="member">destroy</ref>;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}<sp/>*<sp/>function_interface;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" kindref="member">function_async_id</ref></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="64" refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28" kindref="member">FUNCTION_SYNC</ref><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="65" refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28" kindref="member">FUNCTION_ASYNC</ref><sp/>=<sp/>1</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>function_interface<sp/>(*<ref refid="reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af" kindref="member">function_impl_interface_singleton</ref>)(void);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1a6aa2df1f3525beb9952a226ba4176131" kindref="member">function_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>args_count,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref><sp/>impl,<sp/><ref refid="reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af" kindref="member">function_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ad3b35f9baa70a446cff0fac71b40db2e" kindref="member">function_increment_reference</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ad3c51bbe31aba3fbeefbbcea568e4685" kindref="member">function_decrement_reference</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1add4836a9d458071f05ae742e6addb8a6" kindref="member">function_async</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" kindref="member">function_async_id</ref><sp/>async);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" kindref="member">function_async_id</ref><sp/><ref refid="reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795" kindref="member">function_async_id</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1a5b279b5c18645cff4b54eb55e22053b4" kindref="member">function_bind</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1a050920384e8f96c443dc11242ac421ba" kindref="member">function_closure</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1af75cac62bcca3a43ce45507b528fc290" kindref="member">function_name</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/><ref refid="reflect__function_8h_1a9ff1a7f5a167c79be8eeffe8acf356a4" kindref="member">function_signature</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__function_8h_1ac437dd533263274b9fcb1d6fb10b71cc" kindref="member">function_metadata</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/><ref refid="reflect__function_8h_1a55f786badbc8f796b72a8bc87c653fcb" kindref="member">function_call</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/><ref refid="reflect__function_8h_1a63391dc688728a94873fd4e6176031ca" kindref="member">function_await</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/><ref refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" kindref="member">function_resolve_callback</ref><sp/>resolve_callback,<sp/><ref refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" kindref="member">function_reject_callback</ref><sp/>reject_callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1a3ef49cc819e4515b1f0222cc7f3dd6dc" kindref="member">function_destroy</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_FUNCTION_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__async_8h" kindref="compound">reflect/reflect_async.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__signature_8h" kindref="compound">reflect/reflect_signature.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__value_8h" kindref="compound">reflect/reflect_value.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">function_type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">function_type<sp/>*</highlight><highlight class="keyword">function</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref>[];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" kindref="member">function_resolve_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" kindref="member">function_reject_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="reflect__function_8h_1ae64966150dd1d74eea1c434d558d8cfd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__function_8h_1ae64966150dd1d74eea1c434d558d8cfd" kindref="member">function_impl_interface_create</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="reflect__function_8h_1a16be39ef3fdd557661a85fee4f5d54b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/>(*<ref refid="reflect__function_8h_1a16be39ef3fdd557661a85fee4f5d54b1" kindref="member">function_impl_interface_invoke</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref>,<sp/>size_t);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="reflect__function_8h_1ad5fee2d03c9d6a4fea8f9a8097ef0339" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/>(*<ref refid="reflect__function_8h_1ad5fee2d03c9d6a4fea8f9a8097ef0339" kindref="member">function_impl_interface_await</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref>,<sp/>size_t,<sp/><ref refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" kindref="member">function_resolve_callback</ref>,<sp/><ref refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" kindref="member">function_reject_callback</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="reflect__function_8h_1aefd4a5abb695deff8cb131f873232ae8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="reflect__function_8h_1aefd4a5abb695deff8cb131f873232ae8" kindref="member">function_impl_interface_destroy</ref>)(</highlight><highlight class="keyword">function</highlight><highlight class="normal">,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structfunction__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfunction__interface__type" kindref="compound">function_interface_type</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56" refid="structfunction__interface__type_1a7a77b6977013a80def0e9f00ad5ecac9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1ae64966150dd1d74eea1c434d558d8cfd" kindref="member">function_impl_interface_create</ref><sp/><ref refid="structfunction__interface__type_1a7a77b6977013a80def0e9f00ad5ecac9" kindref="member">create</ref>;</highlight></codeline>
+<codeline lineno="57" refid="structfunction__interface__type_1a37db630a2a18aa13df5ea034b9dbd738" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1a16be39ef3fdd557661a85fee4f5d54b1" kindref="member">function_impl_interface_invoke</ref><sp/><ref refid="structfunction__interface__type_1a37db630a2a18aa13df5ea034b9dbd738" kindref="member">invoke</ref>;</highlight></codeline>
+<codeline lineno="58" refid="structfunction__interface__type_1ac9b5d350c6140c1138a1c6fb81315954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1ad5fee2d03c9d6a4fea8f9a8097ef0339" kindref="member">function_impl_interface_await</ref><sp/><ref refid="structfunction__interface__type_1ac9b5d350c6140c1138a1c6fb81315954" kindref="member">await</ref>;</highlight></codeline>
+<codeline lineno="59" refid="structfunction__interface__type_1ad60d4764bc15dfdf1799934ef93ed151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__function_8h_1aefd4a5abb695deff8cb131f873232ae8" kindref="member">function_impl_interface_destroy</ref><sp/><ref refid="structfunction__interface__type_1ad60d4764bc15dfdf1799934ef93ed151" kindref="member">destroy</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/>*<sp/>function_interface;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>function_interface<sp/>(*<ref refid="reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af" kindref="member">function_impl_interface_singleton</ref>)(void);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1a6aa2df1f3525beb9952a226ba4176131" kindref="member">function_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>args_count,<sp/><ref refid="reflect__function_8h_1a12e83b3665a651995433eec50acdcf89" kindref="member">function_impl</ref><sp/>impl,<sp/><ref refid="reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af" kindref="member">function_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ad3b35f9baa70a446cff0fac71b40db2e" kindref="member">function_increment_reference</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1ad3c51bbe31aba3fbeefbbcea568e4685" kindref="member">function_decrement_reference</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1af709f2c74fa6a9ffefc895204021878c" kindref="member">function_async</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref><sp/>async);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref><sp/><ref refid="reflect__function_8h_1afd3d88e128ac7c27a124c77a73606f51" kindref="member">function_async_id</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1a5b279b5c18645cff4b54eb55e22053b4" kindref="member">function_bind</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1a050920384e8f96c443dc11242ac421ba" kindref="member">function_closure</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__function_8h_1af75cac62bcca3a43ce45507b528fc290" kindref="member">function_name</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/><ref refid="reflect__function_8h_1a9ff1a7f5a167c79be8eeffe8acf356a4" kindref="member">function_signature</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__function_8h_1ac437dd533263274b9fcb1d6fb10b71cc" kindref="member">function_metadata</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/><ref refid="reflect__function_8h_1a55f786badbc8f796b72a8bc87c653fcb" kindref="member">function_call</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1" kindref="member">function_return</ref><sp/><ref refid="reflect__function_8h_1a63391dc688728a94873fd4e6176031ca" kindref="member">function_await</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func,<sp/><ref refid="reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220" kindref="member">function_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/><ref refid="reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5" kindref="member">function_resolve_callback</ref><sp/>resolve_callback,<sp/><ref refid="reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec" kindref="member">function_reject_callback</ref><sp/>reject_callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1a93ce6eeff8ef033f0a36e60875096bfc" kindref="member">function_stats_debug</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__function_8h_1a3ef49cc819e4515b1f0222cc7f3dd6dc" kindref="member">function_destroy</ref>(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>func);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_FUNCTION_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_function.h"/>
   </compounddef>

@@ -1,6 +1,7 @@
 var globals_defs =
 [
     [ "b", "globals_defs.html", null ],
+    [ "c", "globals_defs_c.html", null ],
     [ "d", "globals_defs_d.html", null ],
     [ "f", "globals_defs_f.html", null ],
     [ "l", "globals_defs_l.html", null ],

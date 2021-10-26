@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__method_8h">
+<title>reflect_method.h File Reference</title>
+<indexterm><primary>reflect_method.h</primary></indexterm>
+<programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;reflect/reflect_class_decl.h&gt;
+#include &lt;reflect/reflect_class_visibility.h&gt;
+#include &lt;reflect/reflect_async.h&gt;
+#include &lt;reflect/reflect_signature.h&gt;
+#include &lt;reflect/reflect_method_decl.h&gt;
+</programlisting>Include dependency graph for reflect_method.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__method_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__method_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> <link linkend="_reflect__method_8h_1a3f47cf8dc8702d839782af6f4abb3b4b">method_create</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *name, size_t args_count, <link linkend="_reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22">method_impl</link> impl, enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility, enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> async, <link linkend="_reflect__method__decl_8h_1a404f71076eca66c871aa28c3ec7f51e6">method_impl_interface_singleton</link> singleton)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> <link linkend="_reflect__method_8h_1a9d51a01b9d2a89a044cbb40c0dcb60c7">method_class</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API char * <link linkend="_reflect__method_8h_1a9fbe596906113e1cb220229b44eec11a">method_name</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> <link linkend="_reflect__method_8h_1a3b2b59daa56c1be1b1d807afd80c6af7">method_signature</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22">method_impl</link> <link linkend="_reflect__method_8h_1a1ead81f9a91885c59a64c6bc5b713bc6">method_data</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> <link linkend="_reflect__method_8h_1af8692f3fe5fc4b35fa58032831e7ebb9">method_visibility</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> <link linkend="_reflect__method_8h_1ae2a3b59f69e4756e455cf80a45042fdc">method_async</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__method_8h_1a8313c936afdc1d651a5d12cf86218cc1">method_metadata</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__method_8h_1a508bdf711fefe65854bd2a0282d7d8b2">method_destroy</link> (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reflect__method_8h_1a3f47cf8dc8702d839782af6f4abb3b4b"/>    <section>
+    <title>method_create()</title>
+<indexterm><primary>method_create</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_create</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> method_create (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * name, size_t args_count, <link linkend="_reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22">method_impl</link> impl, enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> visibility, enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> async, <link linkend="_reflect__method__decl_8h_1a404f71076eca66c871aa28c3ec7f51e6">method_impl_interface_singleton</link> singleton)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1a9d51a01b9d2a89a044cbb40c0dcb60c7"/>    <section>
+    <title>method_class()</title>
+<indexterm><primary>method_class</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_class</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> method_class (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1a9fbe596906113e1cb220229b44eec11a"/>    <section>
+    <title>method_name()</title>
+<indexterm><primary>method_name</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_name</secondary></indexterm>
+<para><computeroutput>REFLECT_API char* method_name (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1a3b2b59daa56c1be1b1d807afd80c6af7"/>    <section>
+    <title>method_signature()</title>
+<indexterm><primary>method_signature</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_signature</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44">signature</link> method_signature (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1a1ead81f9a91885c59a64c6bc5b713bc6"/>    <section>
+    <title>method_data()</title>
+<indexterm><primary>method_data</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_data</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22">method_impl</link> method_data (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1af8692f3fe5fc4b35fa58032831e7ebb9"/>    <section>
+    <title>method_visibility()</title>
+<indexterm><primary>method_visibility</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_visibility</secondary></indexterm>
+<para><computeroutput>REFLECT_API enum <link linkend="_reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b">class_visibility_id</link> method_visibility (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1ae2a3b59f69e4756e455cf80a45042fdc"/>    <section>
+    <title>method_async()</title>
+<indexterm><primary>method_async</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_async</secondary></indexterm>
+<para><computeroutput>REFLECT_API enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> method_async (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1a8313c936afdc1d651a5d12cf86218cc1"/>    <section>
+    <title>method_metadata()</title>
+<indexterm><primary>method_metadata</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_metadata</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> method_metadata (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__method_8h_1a508bdf711fefe65854bd2a0282d7d8b2"/>    <section>
+    <title>method_destroy()</title>
+<indexterm><primary>method_destroy</primary><secondary>reflect_method.h</secondary></indexterm>
+<indexterm><primary>reflect_method.h</primary><secondary>method_destroy</secondary></indexterm>
+<para><computeroutput>REFLECT_API void method_destroy (<link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para></section>
+</section>
+</section>

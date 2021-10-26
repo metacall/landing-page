@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="adt__map_8h" kind="file" language="C++">
+    <compoundname>adt_map.h</compoundname>
+    <includes local="no">adt/adt_api.h</includes>
+    <includes refid="adt__comparable_8h" local="no">adt/adt_comparable.h</includes>
+    <includes refid="adt__hash_8h" local="no">adt/adt_hash.h</includes>
+    <includes refid="adt__vector_8h" local="no">adt/adt_vector.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>adt/adt_hash.h</label>
+        <link refid="adt__hash_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>adt/adt_comparable.h</label>
+        <link refid="adt__comparable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>adt/adt_api.h</label>
+      </node>
+      <node id="1">
+        <label>adt_map.h</label>
+        <link refid="adt__map_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>adt/adt_vector.h</label>
+        <link refid="adt__vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" prot="public" static="no">
+        <type>struct map_type *</type>
+        <definition>typedef struct map_type* map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="36" column="23" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" prot="public" static="no">
+        <type><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref></type>
+        <definition>typedef hash map_hash</definition>
+        <argsstring></argsstring>
+        <name>map_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" prot="public" static="no">
+        <type><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref></type>
+        <definition>typedef comparable map_key</definition>
+        <argsstring></argsstring>
+        <name>map_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="40" column="20" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* map_value</definition>
+        <argsstring></argsstring>
+        <name>map_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="42" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* map_cb_iterate_args</definition>
+        <argsstring></argsstring>
+        <name>map_cb_iterate_args</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="44" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282" prot="public" static="no">
+        <type><ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref></type>
+        <definition>typedef hash_callback map_cb_hash</definition>
+        <argsstring></argsstring>
+        <name>map_cb_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="46" column="23" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1aea474be520c211c6c35e391e4dbf5050" prot="public" static="no">
+        <type><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref></type>
+        <definition>typedef comparable_callback map_cb_compare</definition>
+        <argsstring></argsstring>
+        <name>map_cb_compare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="48" column="29" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* map_cb_iterate) (map, map_key, map_value, map_cb_iterate_args)</definition>
+        <argsstring>)(map, map_key, map_value, map_cb_iterate_args)</argsstring>
+        <name>map_cb_iterate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="50" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="adt__map_8h_1a2109cb4cae90391364858b706c616461" prot="public" static="no">
+        <type>struct map_iterator_type *</type>
+        <definition>typedef struct map_iterator_type* map_iterator</definition>
+        <argsstring></argsstring>
+        <name>map_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="52" column="32" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adt__map_8h_1aa5ab2c5347ebe47e75b262f50e02ed02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+        <definition>ADT_API map map_create</definition>
+        <argsstring>(map_cb_hash hash_cb, map_cb_compare compare_cb)</argsstring>
+        <name>map_create</name>
+        <param>
+          <type><ref refid="adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282" kindref="member">map_cb_hash</ref></type>
+          <declname>hash_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1aea474be520c211c6c35e391e4dbf5050" kindref="member">map_cb_compare</ref></type>
+          <declname>compare_cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="56" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="56" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a03c40d3bdc29209381454a148cb95eaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API size_t</type>
+        <definition>ADT_API size_t map_size</definition>
+        <argsstring>(map m)</argsstring>
+        <name>map_size</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="58" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="58" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1ae567f499d141dd6484b7024d8ce6b085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int map_insert</definition>
+        <argsstring>(map m, map_key key, map_value value)</argsstring>
+        <name>map_insert</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="60" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="60" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a97232d474132c5915363ecc68c2f1dfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int map_insert_array</definition>
+        <argsstring>(map m, map_key keys[], map_value values[], size_t size)</argsstring>
+        <name>map_insert_array</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref></type>
+          <declname>keys</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref></type>
+          <declname>values</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="62" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="62" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1abce862b09db3c842e121fcafac5ead10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+        <definition>ADT_API vector map_get</definition>
+        <argsstring>(map m, map_key key)</argsstring>
+        <name>map_get</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="64" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="64" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1af405aa3330b6c4dd56f21539fd64538f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int map_contains</definition>
+        <argsstring>(map m, map_key key)</argsstring>
+        <name>map_contains</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="66" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="66" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a060c9c2c0b0699ed924efb936ee8936e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int map_contains_any</definition>
+        <argsstring>(map dest, map src)</argsstring>
+        <name>map_contains_any</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="68" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="68" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1ab0eecd9e3bd9aeb80905f0905163b85c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref></type>
+        <definition>ADT_API map_value map_remove</definition>
+        <argsstring>(map m, map_key key)</argsstring>
+        <name>map_remove</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="70" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="70" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a6291a04947b8e82d14b0fd39ea2b3908" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+        <definition>ADT_API vector map_remove_all</definition>
+        <argsstring>(map m, map_key key)</argsstring>
+        <name>map_remove_all</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="72" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="72" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a07766545182d29afff29aad5f1dd2fda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void map_iterate</definition>
+        <argsstring>(map m, map_cb_iterate iterate_cb, map_cb_iterate_args args)</argsstring>
+        <name>map_iterate</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0" kindref="member">map_cb_iterate</ref></type>
+          <declname>iterate_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" kindref="member">map_cb_iterate_args</ref></type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="74" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="74" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a3d7bf2643d5c9f4d5f6ce6819dddd441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int map_append</definition>
+        <argsstring>(map dest, map src)</argsstring>
+        <name>map_append</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="76" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="76" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a1258c62b6f83f71dc29909d6fa106845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int map_clear</definition>
+        <argsstring>(map m)</argsstring>
+        <name>map_clear</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="78" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="78" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a85d85da136e73af850428e02bc359e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void map_destroy</definition>
+        <argsstring>(map m)</argsstring>
+        <name>map_destroy</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="80" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="80" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a36ac6726113e9e51ee543f7e5c08437a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref></type>
+        <definition>ADT_API map_iterator map_iterator_begin</definition>
+        <argsstring>(map m)</argsstring>
+        <name>map_iterator_begin</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="82" column="22" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="82" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a63ff72181734409b2a70e04cd42a0e0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref></type>
+        <definition>ADT_API map_key map_iterator_get_key</definition>
+        <argsstring>(map_iterator it)</argsstring>
+        <name>map_iterator_get_key</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref></type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="84" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="84" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1ae3d97f642ad6b305c9f0fffd61d7d977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref></type>
+        <definition>ADT_API map_value map_iterator_get_value</definition>
+        <argsstring>(map_iterator it)</argsstring>
+        <name>map_iterator_get_value</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref></type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="86" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="86" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a173825fc4f4cc21b8f55a1d8159bb4fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API void</type>
+        <definition>ADT_API void map_iterator_next</definition>
+        <argsstring>(map_iterator it)</argsstring>
+        <name>map_iterator_next</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref></type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="88" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="88" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__map_8h_1a735796ebb72c13a828ff79a4f92f3252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int map_iterator_end</definition>
+        <argsstring>(map_iterator *it)</argsstring>
+        <name>map_iterator_end</name>
+        <param>
+          <type><ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref> *</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="90" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" declline="90" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADT_MAP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADT_MAP_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;adt/adt_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__comparable_8h" kindref="compound">adt/adt_comparable.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__hash_8h" kindref="compound">adt/adt_hash.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__vector_8h" kindref="compound">adt/adt_vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">map_type;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">map_iterator_type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">map_type<sp/>*<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref><sp/><ref refid="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" kindref="member">map_hash</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" kindref="member">map_cb_iterate_args</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref><sp/><ref refid="adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282" kindref="member">map_cb_hash</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="adt__map_8h_1aea474be520c211c6c35e391e4dbf5050" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref><sp/><ref refid="adt__map_8h_1aea474be520c211c6c35e391e4dbf5050" kindref="member">map_cb_compare</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0" kindref="member">map_cb_iterate</ref>)(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref>,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref>,<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref>,<sp/><ref refid="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" kindref="member">map_cb_iterate_args</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">map_iterator_type<sp/>*<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/><ref refid="adt__map_8h_1aa5ab2c5347ebe47e75b262f50e02ed02" kindref="member">map_create</ref>(<ref refid="adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282" kindref="member">map_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__map_8h_1aea474be520c211c6c35e391e4dbf5050" kindref="member">map_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a03c40d3bdc29209381454a148cb95eaa" kindref="member">map_size</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1ae567f499d141dd6484b7024d8ce6b085" kindref="member">map_insert</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key,<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a97232d474132c5915363ecc68c2f1dfb" kindref="member">map_insert_array</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>keys[],<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/>values[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">ADT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="adt__map_8h_1abce862b09db3c842e121fcafac5ead10" kindref="member">map_get</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1af405aa3330b6c4dd56f21539fd64538f" kindref="member">map_contains</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a060c9c2c0b0699ed924efb936ee8936e" kindref="member">map_contains_any</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>dest,<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>src);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="adt__map_8h_1ab0eecd9e3bd9aeb80905f0905163b85c" kindref="member">map_remove</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">ADT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="adt__map_8h_1a6291a04947b8e82d14b0fd39ea2b3908" kindref="member">map_remove_all</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a07766545182d29afff29aad5f1dd2fda" kindref="member">map_iterate</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0" kindref="member">map_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" kindref="member">map_cb_iterate_args</ref><sp/>args);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a3d7bf2643d5c9f4d5f6ce6819dddd441" kindref="member">map_append</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>dest,<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>src);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a1258c62b6f83f71dc29909d6fa106845" kindref="member">map_clear</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a85d85da136e73af850428e02bc359e01" kindref="member">map_destroy</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/><ref refid="adt__map_8h_1a36ac6726113e9e51ee543f7e5c08437a" kindref="member">map_iterator_begin</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/><ref refid="adt__map_8h_1a63ff72181734409b2a70e04cd42a0e0c" kindref="member">map_iterator_get_key</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="adt__map_8h_1ae3d97f642ad6b305c9f0fffd61d7d977" kindref="member">map_iterator_get_value</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a173825fc4f4cc21b8f55a1d8159bb4fe" kindref="member">map_iterator_next</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a735796ebb72c13a828ff79a4f92f3252" kindref="member">map_iterator_end</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>*it);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ADT_MAP_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,94 @@
+\doxysection{reflect\+\_\+class\+\_\+visibility.\+h File Reference}
+\label{reflect__class__visibility_8h}\index{reflect\_class\_visibility.h@{reflect\_class\_visibility.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
+{\ttfamily \#include $<$preprocessor/preprocessor\+\_\+concatenation.\+h$>$}\newline
+Include dependency graph for reflect\+\_\+class\+\_\+visibility.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{reflect__class__visibility_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{reflect__class__visibility_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ C\+L\+A\+S\+S\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+X}(X)
+\item 
+\#define \textbf{ C\+L\+A\+S\+S\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+E\+N\+UM}(name,  str,  id)~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+AT}(V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+, name) = id
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ class\+\_\+visibility\+\_\+id} 
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ class\+\_\+visibility\+\_\+string} (enum \textbf{ class\+\_\+visibility\+\_\+id} visibility)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+visibility\+\_\+value} (enum \textbf{ class\+\_\+visibility\+\_\+id} visibility)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+visibility\+\_\+value\+\_\+pair} (enum \textbf{ class\+\_\+visibility\+\_\+id} visibility)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{reflect__class__visibility_8h_a48e56c462513043160125ddeaf1f1f1b}} 
+\index{reflect\_class\_visibility.h@{reflect\_class\_visibility.h}!CLASS\_VISIBILITY\_X@{CLASS\_VISIBILITY\_X}}
+\index{CLASS\_VISIBILITY\_X@{CLASS\_VISIBILITY\_X}!reflect\_class\_visibility.h@{reflect\_class\_visibility.h}}
+\doxysubsubsection{CLASS\_VISIBILITY\_X}
+{\footnotesize\ttfamily \#define C\+L\+A\+S\+S\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+X(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    X(PUBLIC, \textcolor{stringliteral}{"public"}, 0),           \(\backslash\)}
+\DoxyCodeLine{        X(PROTECTED, \textcolor{stringliteral}{"protected"}, 1), \(\backslash\)}
+\DoxyCodeLine{        X(PRIVATE, \textcolor{stringliteral}{"private"}, 2)}
+
+\end{DoxyCode}
+\mbox{\label{reflect__class__visibility_8h_ad0a8239472286285b58757727d77dda3}} 
+\index{reflect\_class\_visibility.h@{reflect\_class\_visibility.h}!CLASS\_VISIBILITY\_ENUM@{CLASS\_VISIBILITY\_ENUM}}
+\index{CLASS\_VISIBILITY\_ENUM@{CLASS\_VISIBILITY\_ENUM}!reflect\_class\_visibility.h@{reflect\_class\_visibility.h}}
+\doxysubsubsection{CLASS\_VISIBILITY\_ENUM}
+{\footnotesize\ttfamily \#define C\+L\+A\+S\+S\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+E\+N\+UM(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{str,  }\item[{}]{id }\end{DoxyParamCaption})~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+AT}(V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+, name) = id}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{reflect__class__visibility_8h_a9c1f4542578dfdde3d46db231b4ea37b}} 
+\index{reflect\_class\_visibility.h@{reflect\_class\_visibility.h}!class\_visibility\_id@{class\_visibility\_id}}
+\index{class\_visibility\_id@{class\_visibility\_id}!reflect\_class\_visibility.h@{reflect\_class\_visibility.h}}
+\doxysubsubsection{class\_visibility\_id}
+{\footnotesize\ttfamily enum \textbf{ class\+\_\+visibility\+\_\+id}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{reflect__class__visibility_8h_a54482c852ae39c4cdc6688dc98a66442}} 
+\index{reflect\_class\_visibility.h@{reflect\_class\_visibility.h}!class\_visibility\_string@{class\_visibility\_string}}
+\index{class\_visibility\_string@{class\_visibility\_string}!reflect\_class\_visibility.h@{reflect\_class\_visibility.h}}
+\doxysubsubsection{class\_visibility\_string()}
+{\footnotesize\ttfamily const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ class\+\_\+visibility\+\_\+string (\begin{DoxyParamCaption}\item[{enum \textbf{ class\+\_\+visibility\+\_\+id}}]{visibility }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class__visibility_8h_a75e28ae1e30a1e8ec68143542478dae2}} 
+\index{reflect\_class\_visibility.h@{reflect\_class\_visibility.h}!class\_visibility\_value@{class\_visibility\_value}}
+\index{class\_visibility\_value@{class\_visibility\_value}!reflect\_class\_visibility.h@{reflect\_class\_visibility.h}}
+\doxysubsubsection{class\_visibility\_value()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} class\+\_\+visibility\+\_\+value (\begin{DoxyParamCaption}\item[{enum \textbf{ class\+\_\+visibility\+\_\+id}}]{visibility }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class__visibility_8h_a4472b8e5740b0d6d1ff277978941d6fb}} 
+\index{reflect\_class\_visibility.h@{reflect\_class\_visibility.h}!class\_visibility\_value\_pair@{class\_visibility\_value\_pair}}
+\index{class\_visibility\_value\_pair@{class\_visibility\_value\_pair}!reflect\_class\_visibility.h@{reflect\_class\_visibility.h}}
+\doxysubsubsection{class\_visibility\_value\_pair()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} class\+\_\+visibility\+\_\+value\+\_\+pair (\begin{DoxyParamCaption}\item[{enum \textbf{ class\+\_\+visibility\+\_\+id}}]{visibility }\end{DoxyParamCaption})}
+

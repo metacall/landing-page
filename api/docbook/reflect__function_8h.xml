@@ -2,7 +2,8 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__function_8h">
 <title>reflect_function.h File Reference</title>
 <indexterm><primary>reflect_function.h</primary></indexterm>
-<programlisting>#include &lt;reflect/reflect_signature.h&gt;
+<programlisting>#include &lt;reflect/reflect_async.h&gt;
+#include &lt;reflect/reflect_signature.h&gt;
 #include &lt;reflect/reflect_value.h&gt;
 </programlisting>Include dependency graph for reflect_function.h:<para>
     <informalfigure>
@@ -57,15 +58,6 @@ This graph shows which files directly or indirectly include this file:<para>
         </itemizedlist>
 </simplesect>
 <simplesect>
-    <title>Enumerations    </title>
-        <itemizedlist>
-            <listitem><para>enum <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795">function_async_id</link> { <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28">FUNCTION_SYNC</link> = 0, 
-<link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28">FUNCTION_ASYNC</link> = 1
- }</para>
-</listitem>
-        </itemizedlist>
-</simplesect>
-<simplesect>
     <title>Functions    </title>
         <itemizedlist>
             <listitem><para>REFLECT_API <link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> <link linkend="_reflect__function_8h_1a6aa2df1f3525beb9952a226ba4176131">function_create</link> (const char *name, size_t args_count, <link linkend="_reflect__function_8h_1a12e83b3665a651995433eec50acdcf89">function_impl</link> impl, <link linkend="_reflect__function_8h_1a6cc96ba0bf4a09fffea8c09de6af63af">function_impl_interface_singleton</link> singleton)</para>
@@ -74,9 +66,9 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>REFLECT_API int <link linkend="_reflect__function_8h_1ad3c51bbe31aba3fbeefbbcea568e4685">function_decrement_reference</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</para>
 </listitem>
-            <listitem><para>REFLECT_API void <link linkend="_reflect__function_8h_1add4836a9d458071f05ae742e6addb8a6">function_async</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, enum <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795">function_async_id</link> async)</para>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__function_8h_1af709f2c74fa6a9ffefc895204021878c">function_async</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> async)</para>
 </listitem>
-            <listitem><para>REFLECT_API enum <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795">function_async_id</link> <link linkend="_reflect__function_8h_1a55ff4f4a26bf8c92378c3f608e913e42">function_async_id</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</para>
+            <listitem><para>REFLECT_API enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> <link linkend="_reflect__function_8h_1afd3d88e128ac7c27a124c77a73606f51">function_async_id</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</para>
 </listitem>
             <listitem><para>REFLECT_API void <link linkend="_reflect__function_8h_1a5b279b5c18645cff4b54eb55e22053b4">function_bind</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, void *data)</para>
 </listitem>
@@ -91,6 +83,8 @@ This graph shows which files directly or indirectly include this file:<para>
             <listitem><para>REFLECT_API <link linkend="_reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1">function_return</link> <link linkend="_reflect__function_8h_1a55f786badbc8f796b72a8bc87c653fcb">function_call</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, <link linkend="_reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220">function_args</link> args, size_t size)</para>
 </listitem>
             <listitem><para>REFLECT_API <link linkend="_reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1">function_return</link> <link linkend="_reflect__function_8h_1a63391dc688728a94873fd4e6176031ca">function_await</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, <link linkend="_reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220">function_args</link> args, size_t size, <link linkend="_reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5">function_resolve_callback</link> resolve_callback, <link linkend="_reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec">function_reject_callback</link> reject_callback, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__function_8h_1a93ce6eeff8ef033f0a36e60875096bfc">function_stats_debug</link> (void)</para>
 </listitem>
             <listitem><para>REFLECT_API void <link linkend="_reflect__function_8h_1a3ef49cc819e4515b1f0222cc7f3dd6dc">function_destroy</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</para>
 </listitem>
@@ -145,27 +139,6 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>typedef function_interface(* function_impl_interface_singleton) (void)</computeroutput></para></section>
 </section>
 <section>
-<title>Enumeration Type Documentation</title>
-<anchor xml:id="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795"/>    <section>
-    <title>function_async_id</title>
-<indexterm><primary>function_async_id</primary><secondary>reflect_function.h</secondary></indexterm>
-<indexterm><primary>reflect_function.h</primary><secondary>function_async_id</secondary></indexterm>
-<para><computeroutput>enum <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795">function_async_id</link></computeroutput></para><informaltable frame="all">
-<title>Enumerator</title>
-    <tgroup cols="2" align="left" colsep="1" rowsep="1">
-      <colspec colname='c1'/>
-      <colspec colname='c2'/>
-<tbody>
-<row><entry><indexterm><primary>FUNCTION_SYNC</primary><secondary>reflect_function.h</secondary></indexterm>
-<indexterm><primary>reflect_function.h</primary><secondary>FUNCTION_SYNC</secondary></indexterm>
-<anchor xml:id="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28"/>FUNCTION_SYNC</entry><entry></entry></row><row><entry><indexterm><primary>FUNCTION_ASYNC</primary><secondary>reflect_function.h</secondary></indexterm>
-<indexterm><primary>reflect_function.h</primary><secondary>FUNCTION_ASYNC</secondary></indexterm>
-<anchor xml:id="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28"/>FUNCTION_ASYNC</entry><entry></entry></row>    </tbody>
-    </tgroup>
-</informaltable>
-</section>
-</section>
-<section>
 <title>Function Documentation</title>
 <anchor xml:id="_reflect__function_8h_1a6aa2df1f3525beb9952a226ba4176131"/>    <section>
     <title>function_create()</title>
@@ -179,15 +152,15 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>function_decrement_reference()</title>
 <indexterm><primary>function_decrement_reference</primary><secondary>reflect_function.h</secondary></indexterm>
 <indexterm><primary>reflect_function.h</primary><secondary>function_decrement_reference</secondary></indexterm>
-<para><computeroutput>REFLECT_API int function_decrement_reference (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1add4836a9d458071f05ae742e6addb8a6"/>    <section>
+<para><computeroutput>REFLECT_API int function_decrement_reference (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1af709f2c74fa6a9ffefc895204021878c"/>    <section>
     <title>function_async()</title>
 <indexterm><primary>function_async</primary><secondary>reflect_function.h</secondary></indexterm>
 <indexterm><primary>reflect_function.h</primary><secondary>function_async</secondary></indexterm>
-<para><computeroutput>REFLECT_API void function_async (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, enum <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795">function_async_id</link> async)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1a55ff4f4a26bf8c92378c3f608e913e42"/>    <section>
+<para><computeroutput>REFLECT_API void function_async (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> async)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1afd3d88e128ac7c27a124c77a73606f51"/>    <section>
     <title>function_async_id()</title>
 <indexterm><primary>function_async_id</primary><secondary>reflect_function.h</secondary></indexterm>
 <indexterm><primary>reflect_function.h</primary><secondary>function_async_id</secondary></indexterm>
-<para><computeroutput>REFLECT_API enum <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795">function_async_id</link> <link linkend="_reflect__function_8h_1ab5d5a2179fc6a44b98705c25b6995795">function_async_id</link> (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1a5b279b5c18645cff4b54eb55e22053b4"/>    <section>
+<para><computeroutput>REFLECT_API enum <link linkend="_reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</link> function_async_id (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1a5b279b5c18645cff4b54eb55e22053b4"/>    <section>
     <title>function_bind()</title>
 <indexterm><primary>function_bind</primary><secondary>reflect_function.h</secondary></indexterm>
 <indexterm><primary>reflect_function.h</primary><secondary>function_bind</secondary></indexterm>
@@ -215,7 +188,11 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>function_await()</title>
 <indexterm><primary>function_await</primary><secondary>reflect_function.h</secondary></indexterm>
 <indexterm><primary>reflect_function.h</primary><secondary>function_await</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1">function_return</link> function_await (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, <link linkend="_reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220">function_args</link> args, size_t size, <link linkend="_reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5">function_resolve_callback</link> resolve_callback, <link linkend="_reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec">function_reject_callback</link> reject_callback, void * context)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1a3ef49cc819e4515b1f0222cc7f3dd6dc"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__function_8h_1ab0c2bc43f379e346cc9693892bccfea1">function_return</link> function_await (<link linkend="_reflect__function_8h_1a953b9b92e7e0b17b663e13f2e92177aa">function</link> func, <link linkend="_reflect__function_8h_1ac0b514567378b0111b64c4df8c77a220">function_args</link> args, size_t size, <link linkend="_reflect__function_8h_1a18231033bc347c9868e9e27983fd06c5">function_resolve_callback</link> resolve_callback, <link linkend="_reflect__function_8h_1a7b5b3717fa4870e36a787047398f68ec">function_reject_callback</link> reject_callback, void * context)</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1a93ce6eeff8ef033f0a36e60875096bfc"/>    <section>
+    <title>function_stats_debug()</title>
+<indexterm><primary>function_stats_debug</primary><secondary>reflect_function.h</secondary></indexterm>
+<indexterm><primary>reflect_function.h</primary><secondary>function_stats_debug</secondary></indexterm>
+<para><computeroutput>REFLECT_API void function_stats_debug (void )</computeroutput></para>    </section><anchor xml:id="_reflect__function_8h_1a3ef49cc819e4515b1f0222cc7f3dd6dc"/>    <section>
     <title>function_destroy()</title>
 <indexterm><primary>function_destroy</primary><secondary>reflect_function.h</secondary></indexterm>
 <indexterm><primary>reflect_function.h</primary><secondary>function_destroy</secondary></indexterm>

@@ -2,18 +2,29 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="reflect__object_8h" kind="file" language="C++">
     <compoundname>reflect_object.h</compoundname>
+    <includes refid="adt__vector_8h" local="no">adt/adt_vector.h</includes>
+    <includes refid="reflect__accessor_8h" local="no">reflect/reflect_accessor.h</includes>
+    <includes refid="reflect__attribute_8h" local="no">reflect/reflect_attribute.h</includes>
+    <includes refid="reflect__class__decl_8h" local="no">reflect/reflect_class_decl.h</includes>
+    <includes refid="reflect__method_8h" local="no">reflect/reflect_method.h</includes>
     <includes refid="reflect__value_8h" local="no">reflect/reflect_value.h</includes>
-    <includes refid="reflect__class_8h" local="no">reflect/reflect_class.h</includes>
+    <includedby refid="reflect_8h" local="no">reflect.h</includedby>
     <includedby refid="reflect__class_8h" local="no">reflect_class.h</includedby>
     <includedby refid="reflect__value__type_8h" local="no">reflect_value_type.h</includedby>
     <incdepgraph>
-      <node id="5">
-        <label>reflect/reflect_class.h</label>
-        <link refid="reflect__class_8h"/>
-        <childnode refid="2" relation="include">
+      <node id="12">
+        <label>reflect/reflect_class_visibility.h</label>
+        <link refid="reflect__class__visibility_8h"/>
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="1" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>reflect/reflect_method_decl.h</label>
+        <link refid="reflect__method__decl_8h"/>
       </node>
       <node id="1">
         <label>reflect_object.h</label>
@@ -22,29 +33,143 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>stdlib.h</label>
       </node>
-      <node id="2">
+      <node id="14">
+        <label>preprocessor/preprocessor_concatenation.h</label>
+        <link refid="preprocessor__concatenation_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>reflect/reflect_type.h</label>
+        <link refid="reflect__type_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>reflect/reflect_method.h</label>
+        <link refid="reflect__method_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>reflect/reflect_type_id.h</label>
+        <link refid="reflect__type__id_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>reflect/reflect_accessor.h</label>
+        <link refid="reflect__accessor_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>adt/adt_api.h</label>
+      </node>
+      <node id="13">
         <label>reflect/reflect_value.h</label>
         <link refid="reflect__value_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>reflect/reflect_attribute_decl.h</label>
+        <link refid="reflect__attribute__decl_8h"/>
+      </node>
+      <node id="10">
+        <label>reflect/reflect_api.h</label>
+      </node>
+      <node id="9">
+        <label>reflect/reflect_attribute.h</label>
+        <link refid="reflect__attribute_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>preprocessor/preprocessor_api.h</label>
+      </node>
+      <node id="2">
+        <label>adt/adt_vector.h</label>
+        <link refid="adt__vector_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>reflect/reflect_api.h</label>
+      <node id="11">
+        <label>reflect/reflect_class_decl.h</label>
+        <link refid="reflect__class__decl_8h"/>
+      </node>
+      <node id="20">
+        <label>reflect/reflect_signature.h</label>
+        <link refid="reflect__signature_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>reflect/reflect_constructor_decl.h</label>
+        <link refid="reflect__constructor__decl_8h"/>
+      </node>
+      <node id="19">
+        <label>reflect/reflect_async.h</label>
+        <link refid="reflect__async_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
+      <node id="3">
         <label>reflect_class.h</label>
         <link refid="reflect__class_8h"/>
-        <childnode refid="1" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -54,14 +179,16 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>reflect_value_type.h</label>
-        <link refid="reflect__value__type_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="4">
+        <label>reflect_value_type.h</label>
+        <link refid="reflect__value__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
       </node>
@@ -79,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="32" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" prot="public" static="no">
         <type>struct object_type *</type>
@@ -92,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="34" column="26" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="40" column="26" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" prot="public" static="no">
         <type>void *</type>
@@ -105,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="42" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" prot="public" static="no">
         <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
@@ -118,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="40" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="40" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="44" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" prot="public" static="no">
         <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
@@ -131,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="42" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="46" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7" prot="public" static="no">
         <type>int(*</type>
@@ -144,39 +271,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="44" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="44" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="reflect__object_8h_1a0f9ce118d411a006c77ba9838caad781" prot="public" static="no">
-        <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
-        <definition>typedef value(* object_impl_interface_get) (object, object_impl, const char *)</definition>
-        <argsstring>)(object, object_impl, const char *)</argsstring>
-        <name>object_impl_interface_get</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="46" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="46" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="reflect__object_8h_1aa77f3d3c838f029780f79c87fef208f7" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* object_impl_interface_set) (object, object_impl, const char *, value)</definition>
-        <argsstring>)(object, object_impl, const char *, value)</argsstring>
-        <name>object_impl_interface_set</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="48" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="48" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="reflect__object_8h_1a3697e99bfa8f8ac38e44b1271116d865" prot="public" static="no">
+      <memberdef kind="typedef" id="reflect__object_8h_1a8368bda998edac4455943d5330316ba6" prot="public" static="no">
         <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
-        <definition>typedef value(* object_impl_interface_method_invoke) (object, object_impl, const char *, object_args, size_t)</definition>
-        <argsstring>)(object, object_impl, const char *, object_args, size_t)</argsstring>
-        <name>object_impl_interface_method_invoke</name>
+        <definition>typedef value(* object_impl_interface_get) (object, object_impl, struct accessor_type *)</definition>
+        <argsstring>)(object, object_impl, struct accessor_type *)</argsstring>
+        <name>object_impl_interface_get</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -185,11 +286,11 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="50" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="50" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="reflect__object_8h_1ab09b76f667d991ee66c3802a55c316a0" prot="public" static="no">
-        <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
-        <definition>typedef value(* object_impl_interface_method_await) (object, object_impl, const char *, object_args, size_t, object_resolve_callback, object_reject_callback, void *)</definition>
-        <argsstring>)(object, object_impl, const char *, object_args, size_t, object_resolve_callback, object_reject_callback, void *)</argsstring>
-        <name>object_impl_interface_method_await</name>
+      <memberdef kind="typedef" id="reflect__object_8h_1a346febd447ed8b8e83bda1a8f514cf66" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* object_impl_interface_set) (object, object_impl, struct accessor_type *, value)</definition>
+        <argsstring>)(object, object_impl, struct accessor_type *, value)</argsstring>
+        <name>object_impl_interface_set</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -197,6 +298,32 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="52" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__object_8h_1a2e28a7e4d52009fa7a3b50f06751b3ac" prot="public" static="no">
+        <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
+        <definition>typedef value(* object_impl_interface_method_invoke) (object, object_impl, method, object_args, size_t)</definition>
+        <argsstring>)(object, object_impl, method, object_args, size_t)</argsstring>
+        <name>object_impl_interface_method_invoke</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="54" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="reflect__object_8h_1a9d8176e73eb34ca7a4ad3701fc41dc3c" prot="public" static="no">
+        <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
+        <definition>typedef value(* object_impl_interface_method_await) (object, object_impl, method, object_args, size_t, object_resolve_callback, object_reject_callback, void *)</definition>
+        <argsstring>)(object, object_impl, method, object_args, size_t, object_resolve_callback, object_reject_callback, void *)</argsstring>
+        <name>object_impl_interface_method_await</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="56" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511" prot="public" static="no">
         <type>int(*</type>
@@ -209,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="54" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="54" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="58" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1abca6a176c01679f666e6f098a1219ad0" prot="public" static="no">
         <type>void(*</type>
@@ -222,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="56" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="56" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="60" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989" prot="public" static="no">
         <type>object_interface(*</type>
@@ -235,18 +362,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="70" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="74" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="reflect__object_8h_1aaca31d53a03398feb87495f21f05182c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__object_8h_1a87c4d79800e397eb808ddfa2bd6367d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref></type>
         <definition>REFLECT_API object object_create</definition>
-        <argsstring>(const char *name, object_impl impl, object_impl_interface_singleton singleton, klass cls)</argsstring>
+        <argsstring>(const char *name, enum accessor_type_id accessor, object_impl impl, object_impl_interface_singleton singleton, klass cls)</argsstring>
         <name>object_create</name>
         <param>
           <type>const char *</type>
           <declname>name</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913" kindref="member">accessor_type_id</ref></type>
+          <declname>accessor</declname>
         </param>
         <param>
           <type><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref></type>
@@ -257,7 +388,7 @@
           <declname>singleton</declname>
         </param>
         <param>
-          <type><ref refid="reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref></type>
+          <type><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref></type>
           <declname>cls</declname>
         </param>
         <briefdescription>
@@ -266,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="72" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="72" declcolumn="20"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="76" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="76" declcolumn="20"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1a695e8394c1e437a883ce7980496b78e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
@@ -283,7 +414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="74" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="74" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="78" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="78" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1ac555ebaddfeb6a2009fb8986c968cefb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
@@ -300,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="76" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="76" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="80" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="80" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1a07818042e3061e39b0022f44415b8ab6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref></type>
@@ -317,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="78" column="25" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="78" declcolumn="25"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="82" column="25" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="82" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1ab831de3c942cec9093061d0b3995f7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
@@ -342,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="80" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="80" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="84" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="84" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1a859864a88ef134b9ce8f2a6f24ad0f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
@@ -363,20 +494,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="82" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="82" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="86" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="86" declcolumn="19"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__object_8h_1a57ba6f406a36aecffcd4533d3b8c5ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__object_8h_1a4937763985036958894130b73a21a4ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
         <definition>REFLECT_API value object_call</definition>
-        <argsstring>(object obj, const char *name, object_args args, size_t size)</argsstring>
+        <argsstring>(object obj, method m, object_args args, size_t size)</argsstring>
         <name>object_call</name>
         <param>
           <type><ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref></type>
           <declname>obj</declname>
         </param>
         <param>
-          <type>const char *</type>
-          <declname>name</declname>
+          <type><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref></type>
+          <declname>m</declname>
         </param>
         <param>
           <type><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref></type>
@@ -392,20 +523,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="84" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="84" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="88" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="88" declcolumn="19"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__object_8h_1a072bdd58ed8d057b69ae071e45601e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__object_8h_1ad903e000318a9509ab91a553ff8e129a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
         <definition>REFLECT_API value object_await</definition>
-        <argsstring>(object obj, const char *name, object_args args, size_t size, object_resolve_callback resolve_callback, object_reject_callback reject_callback, void *context)</argsstring>
+        <argsstring>(object obj, method m, object_args args, size_t size, object_resolve_callback resolve_callback, object_reject_callback reject_callback, void *context)</argsstring>
         <name>object_await</name>
         <param>
           <type><ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref></type>
           <declname>obj</declname>
         </param>
         <param>
-          <type>const char *</type>
-          <declname>name</declname>
+          <type><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref></type>
+          <declname>m</declname>
         </param>
         <param>
           <type><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref></type>
@@ -433,7 +564,62 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="86" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="86" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="90" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="90" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__object_8h_1a5e3bbe95840a2578e0bd2c2277eb4c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+        <definition>REFLECT_API vector object_methods</definition>
+        <argsstring>(object obj, const char *key)</argsstring>
+        <name>object_methods</name>
+        <param>
+          <type><ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="92" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="92" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__object_8h_1a157904a36494774b740212b211de50b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref></type>
+        <definition>REFLECT_API method object_method</definition>
+        <argsstring>(object obj, const char *key, type_id ret, type_id args[], size_t size)</argsstring>
+        <name>object_method</name>
+        <param>
+          <type><ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref></type>
+          <declname>ret</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref></type>
+          <declname>args</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="94" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="94" declcolumn="20"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1ae6e9a3e287e0e3c26cfbcc03e4f75b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const REFLECT_API char *</type>
@@ -450,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="88" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="88" declcolumn="24"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="96" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="96" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1a1de46ee0378baeacc14ace5dbc05f8c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
@@ -467,7 +653,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="90" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="90" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="98" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="98" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1a48e2ec3e04b9d511497b8c48a38614be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
@@ -484,7 +670,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="92" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="92" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="100" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="100" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__object_8h_1acc123ce75b86c2c586396a43db837397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API void</type>
+        <definition>REFLECT_API void object_stats_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>object_stats_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="102" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="102" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__object_8h_1a3702f480c8b4f6093b9db0dfda3bfc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -501,7 +703,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="94" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="94" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="104" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" declline="104" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -532,83 +734,93 @@
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REFLECT_OBJECT_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REFLECT_OBJECT_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__value_8h" kindref="compound">reflect/reflect_value.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__vector_8h" kindref="compound">adt/adt_vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">object_type;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__accessor_8h" kindref="compound">reflect/reflect_accessor.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__attribute_8h" kindref="compound">reflect/reflect_attribute.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__class__decl_8h" kindref="compound">reflect/reflect_class_decl.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__method_8h" kindref="compound">reflect/reflect_method.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__value_8h" kindref="compound">reflect/reflect_value.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">object_type<sp/>*<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__class_8h" kindref="compound">reflect/reflect_class.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">object_type;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref>[];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" kindref="member">object_resolve_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="40" refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">object_type<sp/>*<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" kindref="member">object_reject_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="42" refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref>[];</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7" kindref="member">object_impl_interface_create</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>);</highlight></codeline>
+<codeline lineno="44" refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" kindref="member">object_resolve_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="reflect__object_8h_1a0f9ce118d411a006c77ba9838caad781" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1a0f9ce118d411a006c77ba9838caad781" kindref="member">object_impl_interface_get</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="46" refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" kindref="member">object_reject_callback</ref>)(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="reflect__object_8h_1aa77f3d3c838f029780f79c87fef208f7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__object_8h_1aa77f3d3c838f029780f79c87fef208f7" kindref="member">object_impl_interface_set</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="48" refid="reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7" kindref="member">object_impl_interface_create</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="reflect__object_8h_1a3697e99bfa8f8ac38e44b1271116d865" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1a3697e99bfa8f8ac38e44b1271116d865" kindref="member">object_impl_interface_method_invoke</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref>,<sp/>size_t);</highlight></codeline>
+<codeline lineno="50" refid="reflect__object_8h_1a8368bda998edac4455943d5330316ba6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1a8368bda998edac4455943d5330316ba6" kindref="member">object_impl_interface_get</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structaccessor__type" kindref="compound">accessor_type</ref><sp/>*);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="reflect__object_8h_1ab09b76f667d991ee66c3802a55c316a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1ab09b76f667d991ee66c3802a55c316a0" kindref="member">object_impl_interface_method_await</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref>,<sp/>size_t,<sp/><ref refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" kindref="member">object_resolve_callback</ref>,<sp/><ref refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" kindref="member">object_reject_callback</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="52" refid="reflect__object_8h_1a346febd447ed8b8e83bda1a8f514cf66" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__object_8h_1a346febd447ed8b8e83bda1a8f514cf66" kindref="member">object_impl_interface_set</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structaccessor__type" kindref="compound">accessor_type</ref><sp/>*,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511" kindref="member">object_impl_interface_destructor</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>);</highlight></codeline>
+<codeline lineno="54" refid="reflect__object_8h_1a2e28a7e4d52009fa7a3b50f06751b3ac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1a2e28a7e4d52009fa7a3b50f06751b3ac" kindref="member">object_impl_interface_method_invoke</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref>,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref>,<sp/>size_t);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="reflect__object_8h_1abca6a176c01679f666e6f098a1219ad0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="reflect__object_8h_1abca6a176c01679f666e6f098a1219ad0" kindref="member">object_impl_interface_destroy</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>);</highlight></codeline>
+<codeline lineno="56" refid="reflect__object_8h_1a9d8176e73eb34ca7a4ad3701fc41dc3c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>(*<ref refid="reflect__object_8h_1a9d8176e73eb34ca7a4ad3701fc41dc3c" kindref="member">object_impl_interface_method_await</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>,<sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref>,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref>,<sp/>size_t,<sp/><ref refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" kindref="member">object_resolve_callback</ref>,<sp/><ref refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" kindref="member">object_reject_callback</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="structobject__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structobject__interface__type" kindref="compound">object_interface_type</ref></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="60" refid="structobject__interface__type_1aab95e2d877dfa670b8126394a8427a2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7" kindref="member">object_impl_interface_create</ref><sp/><ref refid="structobject__interface__type_1aab95e2d877dfa670b8126394a8427a2f" kindref="member">create</ref>;</highlight></codeline>
-<codeline lineno="61" refid="structobject__interface__type_1a4612462c8ff4f1b97d5686ce616e3240" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a0f9ce118d411a006c77ba9838caad781" kindref="member">object_impl_interface_get</ref><sp/><ref refid="structobject__interface__type_1a4612462c8ff4f1b97d5686ce616e3240" kindref="member">get</ref>;</highlight></codeline>
-<codeline lineno="62" refid="structobject__interface__type_1a6bccf4b1614d9eaed72cfc5ff39a61a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1aa77f3d3c838f029780f79c87fef208f7" kindref="member">object_impl_interface_set</ref><sp/><ref refid="structobject__interface__type_1a6bccf4b1614d9eaed72cfc5ff39a61a1" kindref="member">set</ref>;</highlight></codeline>
-<codeline lineno="63" refid="structobject__interface__type_1a89bcdd4702a82725a8552c36675dcf22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a3697e99bfa8f8ac38e44b1271116d865" kindref="member">object_impl_interface_method_invoke</ref><sp/><ref refid="structobject__interface__type_1a89bcdd4702a82725a8552c36675dcf22" kindref="member">method_invoke</ref>;</highlight></codeline>
-<codeline lineno="64" refid="structobject__interface__type_1a651d177373779adf8c1c6718fa79ad18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1ab09b76f667d991ee66c3802a55c316a0" kindref="member">object_impl_interface_method_await</ref><sp/><ref refid="structobject__interface__type_1a651d177373779adf8c1c6718fa79ad18" kindref="member">method_await</ref>;</highlight></codeline>
-<codeline lineno="65" refid="structobject__interface__type_1ab49207305d301beb664f43c860343f53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511" kindref="member">object_impl_interface_destructor</ref><sp/><ref refid="structobject__interface__type_1ab49207305d301beb664f43c860343f53" kindref="member">destructor</ref>;</highlight></codeline>
-<codeline lineno="66" refid="structobject__interface__type_1ab410cf71d7915f5f5038b5cbdd74484c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1abca6a176c01679f666e6f098a1219ad0" kindref="member">object_impl_interface_destroy</ref><sp/><ref refid="structobject__interface__type_1ab410cf71d7915f5f5038b5cbdd74484c" kindref="member">destroy</ref>;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">}<sp/>*<sp/>object_interface;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70" refid="reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>object_interface<sp/>(*<ref refid="reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989" kindref="member">object_impl_interface_singleton</ref>)(void);</highlight></codeline>
+<codeline lineno="58" refid="reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511" kindref="member">object_impl_interface_destructor</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="reflect__object_8h_1abca6a176c01679f666e6f098a1219ad0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="reflect__object_8h_1abca6a176c01679f666e6f098a1219ad0" kindref="member">object_impl_interface_destroy</ref>)(<ref refid="reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e" kindref="member">object</ref>,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structobject__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structobject__interface__type" kindref="compound">object_interface_type</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64" refid="structobject__interface__type_1aab95e2d877dfa670b8126394a8427a2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a6662f05ef726f3e3f2b09929cc45c7d7" kindref="member">object_impl_interface_create</ref><sp/><ref refid="structobject__interface__type_1aab95e2d877dfa670b8126394a8427a2f" kindref="member">create</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structobject__interface__type_1a4612462c8ff4f1b97d5686ce616e3240" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a8368bda998edac4455943d5330316ba6" kindref="member">object_impl_interface_get</ref><sp/><ref refid="structobject__interface__type_1a4612462c8ff4f1b97d5686ce616e3240" kindref="member">get</ref>;</highlight></codeline>
+<codeline lineno="66" refid="structobject__interface__type_1a6bccf4b1614d9eaed72cfc5ff39a61a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a346febd447ed8b8e83bda1a8f514cf66" kindref="member">object_impl_interface_set</ref><sp/><ref refid="structobject__interface__type_1a6bccf4b1614d9eaed72cfc5ff39a61a1" kindref="member">set</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structobject__interface__type_1a89bcdd4702a82725a8552c36675dcf22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a2e28a7e4d52009fa7a3b50f06751b3ac" kindref="member">object_impl_interface_method_invoke</ref><sp/><ref refid="structobject__interface__type_1a89bcdd4702a82725a8552c36675dcf22" kindref="member">method_invoke</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structobject__interface__type_1a651d177373779adf8c1c6718fa79ad18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a9d8176e73eb34ca7a4ad3701fc41dc3c" kindref="member">object_impl_interface_method_await</ref><sp/><ref refid="structobject__interface__type_1a651d177373779adf8c1c6718fa79ad18" kindref="member">method_await</ref>;</highlight></codeline>
+<codeline lineno="69" refid="structobject__interface__type_1ab49207305d301beb664f43c860343f53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1a0c7591dc8d73bf4c45d1dd874fd45511" kindref="member">object_impl_interface_destructor</ref><sp/><ref refid="structobject__interface__type_1ab49207305d301beb664f43c860343f53" kindref="member">destructor</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structobject__interface__type_1ab410cf71d7915f5f5038b5cbdd74484c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__object_8h_1abca6a176c01679f666e6f098a1219ad0" kindref="member">object_impl_interface_destroy</ref><sp/><ref refid="structobject__interface__type_1ab410cf71d7915f5f5038b5cbdd74484c" kindref="member">destroy</ref>;</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1aaca31d53a03398feb87495f21f05182c" kindref="member">object_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref><sp/>impl,<sp/><ref refid="reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989" kindref="member">object_impl_interface_singleton</ref><sp/>singleton,<sp/><ref refid="reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/>cls);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/>*<sp/>object_interface;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1a695e8394c1e437a883ce7980496b78e7" kindref="member">object_increment_reference</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="74" refid="reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>object_interface<sp/>(*<ref refid="reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989" kindref="member">object_impl_interface_singleton</ref>)(void);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1ac555ebaddfeb6a2009fb8986c968cefb" kindref="member">object_decrement_reference</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1a87c4d79800e397eb808ddfa2bd6367d9" kindref="member">object_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913" kindref="member">accessor_type_id</ref><sp/>accessor,<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref><sp/>impl,<sp/><ref refid="reflect__object_8h_1aaeb777b14770088af59bb81f80f4a989" kindref="member">object_impl_interface_singleton</ref><sp/>singleton,<sp/><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/>cls);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref><sp/><ref refid="reflect__object_8h_1a07818042e3061e39b0022f44415b8ab6" kindref="member">object_impl_get</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1a695e8394c1e437a883ce7980496b78e7" kindref="member">object_increment_reference</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1ab831de3c942cec9093061d0b3995f7df" kindref="member">object_set</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1ac555ebaddfeb6a2009fb8986c968cefb" kindref="member">object_decrement_reference</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1a859864a88ef134b9ce8f2a6f24ad0f37" kindref="member">object_get</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__object_8h_1a8c53a3dcbc16cdfc6e116ab35f07321d" kindref="member">object_impl</ref><sp/><ref refid="reflect__object_8h_1a07818042e3061e39b0022f44415b8ab6" kindref="member">object_impl_get</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1a57ba6f406a36aecffcd4533d3b8c5ee1" kindref="member">object_call</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1ab831de3c942cec9093061d0b3995f7df" kindref="member">object_set</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1a072bdd58ed8d057b69ae071e45601e1d" kindref="member">object_await</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/><ref refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" kindref="member">object_resolve_callback</ref><sp/>resolve_callback,<sp/><ref refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" kindref="member">object_reject_callback</ref><sp/>reject_callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1a859864a88ef134b9ce8f2a6f24ad0f37" kindref="member">object_get</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__object_8h_1ae6e9a3e287e0e3c26cfbcc03e4f75b58" kindref="member">object_name</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1a4937763985036958894130b73a21a4ce" kindref="member">object_call</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1a1de46ee0378baeacc14ace5dbc05f8c5" kindref="member">object_metadata</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1ad903e000318a9509ab91a553ff8e129a" kindref="member">object_await</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m,<sp/><ref refid="reflect__object_8h_1a2dda7fd056fb123e79fa20648ffc4259" kindref="member">object_args</ref><sp/>args,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/><ref refid="reflect__object_8h_1ac5f060c355ecc37fb1f2d8089a825ca4" kindref="member">object_resolve_callback</ref><sp/>resolve_callback,<sp/><ref refid="reflect__object_8h_1a687cc2cd022d3662ccbc87da8d12e7d9" kindref="member">object_reject_callback</ref><sp/>reject_callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1a48e2ec3e04b9d511497b8c48a38614be" kindref="member">object_delete</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">REFLECT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="reflect__object_8h_1a5e3bbe95840a2578e0bd2c2277eb4c9d" kindref="member">object_methods</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1a3702f480c8b4f6093b9db0dfda3bfc08" kindref="member">object_destroy</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/><ref refid="reflect__object_8h_1a157904a36494774b740212b211de50b6" kindref="member">object_method</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>ret,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>args[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__object_8h_1ae6e9a3e287e0e3c26cfbcc03e4f75b58" kindref="member">object_name</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__object_8h_1a1de46ee0378baeacc14ace5dbc05f8c5" kindref="member">object_metadata</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_OBJECT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1a48e2ec3e04b9d511497b8c48a38614be" kindref="member">object_delete</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1acc123ce75b86c2c586396a43db837397" kindref="member">object_stats_debug</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__object_8h_1a3702f480c8b4f6093b9db0dfda3bfc08" kindref="member">object_destroy</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_OBJECT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h"/>
   </compounddef>

@@ -4,6 +4,7 @@ var loader__impl_8h =
     [ "loader_impl_is_initialized", "loader__impl_8h.html#a3f2a7835ee2b99411b1f4af33ef5d4b2", null ],
     [ "loader_impl_create", "loader__impl_8h.html#a856e1c576e498383cb5db471f1f559d6", null ],
     [ "loader_impl_get", "loader__impl_8h.html#af0d21828a829732e62791a3941242d01", null ],
+    [ "loader_impl_get_value", "loader__impl_8h.html#a612796e92003f5325098db4b60e7f287", null ],
     [ "loader_impl_symbol", "loader__impl_8h.html#aa0b0eea1c7a428289665c675c622b091", null ],
     [ "loader_impl_tag", "loader__impl_8h.html#aabca7a1227c9447193f6b04171adae37", null ],
     [ "loader_impl_context", "loader__impl_8h.html#acbe6beea3b8aa45da1b0b4d3f23cf03a", null ],

@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="adt__bucket_8h" kind="file" language="C++">
+    <compoundname>adt_bucket.h</compoundname>
+    <includes local="no">adt/adt_api.h</includes>
+    <includes refid="adt__comparable_8h" local="no">adt/adt_comparable.h</includes>
+    <includes refid="adt__vector_8h" local="no">adt/adt_vector.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>adt_bucket.h</label>
+        <link refid="adt__bucket_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3">
+        <label>adt/adt_comparable.h</label>
+        <link refid="adt__comparable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>adt/adt_api.h</label>
+      </node>
+      <node id="4">
+        <label>adt/adt_vector.h</label>
+        <link refid="adt__vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structpair__type" prot="public">pair_type</innerclass>
+    <innerclass refid="structbucket__type" prot="public">bucket_type</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adt__bucket_8h_1a8a8b5c70b358520b48e73694a69273cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API size_t</type>
+        <definition>ADT_API size_t bucket_capacity</definition>
+        <argsstring>(size_t prime)</argsstring>
+        <name>bucket_capacity</name>
+        <param>
+          <type>size_t</type>
+          <declname>prime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="54" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="54" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__bucket_8h_1a89c1081ea1b78a0fe7a39c5b0753a728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API bucket</type>
+        <definition>ADT_API bucket bucket_create</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>bucket_create</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="56" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="56" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__bucket_8h_1ac880b9e940d9379bba8ff80e4ee3e253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int bucket_alloc_pairs</definition>
+        <argsstring>(bucket b, size_t capacity)</argsstring>
+        <name>bucket_alloc_pairs</name>
+        <param>
+          <type>bucket</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="58" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="58" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__bucket_8h_1a4ec49b16a6eeb387fbe0682097351ae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int bucket_realloc_pairs</definition>
+        <argsstring>(bucket b, size_t new_capacity)</argsstring>
+        <name>bucket_realloc_pairs</name>
+        <param>
+          <type>bucket</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>new_capacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="60" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="60" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__bucket_8h_1a6c751dc7a90aa91bf790d2ec83369408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API pair</type>
+        <definition>ADT_API pair bucket_get_pair</definition>
+        <argsstring>(bucket b, comparable_callback compare_cb, void *key)</argsstring>
+        <name>bucket_get_pair</name>
+        <param>
+          <type>bucket</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref></type>
+          <declname>compare_cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="62" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="62" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__bucket_8h_1aa6f67b5da6f19114666357c57a11a57c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+        <definition>ADT_API vector bucket_get_pairs_value</definition>
+        <argsstring>(bucket b, comparable_callback compare_cb, void *key)</argsstring>
+        <name>bucket_get_pairs_value</name>
+        <param>
+          <type>bucket</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref></type>
+          <declname>compare_cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="64" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="64" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__bucket_8h_1a41cf27460bb7b545b325a049fb282d41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int bucket_insert</definition>
+        <argsstring>(bucket b, void *key, void *value)</argsstring>
+        <name>bucket_insert</name>
+        <param>
+          <type>bucket</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="66" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="66" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__bucket_8h_1a9565a794c839198b38e751cb90bf4e3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API int</type>
+        <definition>ADT_API int bucket_remove</definition>
+        <argsstring>(bucket b, comparable_callback compare_cb, void *key, void **value)</argsstring>
+        <name>bucket_remove</name>
+        <param>
+          <type>bucket</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref></type>
+          <declname>compare_cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" line="68" column="13" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h" declline="68" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ADT_BUCKET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADT_BUCKET_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;adt/adt_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__comparable_8h" kindref="compound">adt/adt_comparable.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="adt__vector_8h" kindref="compound">adt/adt_vector.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpair__type" kindref="compound">pair_type</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbucket__type" kindref="compound">bucket_type</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpair__type" kindref="compound">pair_type</ref><sp/>*pair;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbucket__type" kindref="compound">bucket_type</ref><sp/>*bucket;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structpair__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpair__type" kindref="compound">pair_type</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="structpair__type_1a1f93db3d21eccff1cfabd989972b88d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structpair__type_1a1f93db3d21eccff1cfabd989972b88d9" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structpair__type_1af18fd929b551b7de2c8dece54ac88a64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structpair__type_1af18fd929b551b7de2c8dece54ac88a64" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="structbucket__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbucket__type" kindref="compound">bucket_type</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="structbucket__type_1a568e18c779cc91915699e92b182e2d90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structbucket__type_1a568e18c779cc91915699e92b182e2d90" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structbucket__type_1a35d721afc36d7f544fc0cb1f0eff403a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structbucket__type_1a35d721afc36d7f544fc0cb1f0eff403a" kindref="member">capacity</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structbucket__type_1a3d278a534f92d4057875d7899a67e511" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>pair<sp/><ref refid="structbucket__type_1a3d278a534f92d4057875d7899a67e511" kindref="member">pairs</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__bucket_8h_1a8a8b5c70b358520b48e73694a69273cb" kindref="member">bucket_capacity</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>prime);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">ADT_API<sp/>bucket<sp/><ref refid="adt__bucket_8h_1a89c1081ea1b78a0fe7a39c5b0753a728" kindref="member">bucket_create</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__bucket_8h_1ac880b9e940d9379bba8ff80e4ee3e253" kindref="member">bucket_alloc_pairs</ref>(bucket<sp/>b,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>capacity);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__bucket_8h_1a4ec49b16a6eeb387fbe0682097351ae7" kindref="member">bucket_realloc_pairs</ref>(bucket<sp/>b,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>new_capacity);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">ADT_API<sp/>pair<sp/><ref refid="adt__bucket_8h_1a6c751dc7a90aa91bf790d2ec83369408" kindref="member">bucket_get_pair</ref>(bucket<sp/>b,<sp/><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref><sp/>compare_cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">ADT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="adt__bucket_8h_1aa6f67b5da6f19114666357c57a11a57c" kindref="member">bucket_get_pairs_value</ref>(bucket<sp/>b,<sp/><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref><sp/>compare_cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__bucket_8h_1a41cf27460bb7b545b325a049fb282d41" kindref="member">bucket_insert</ref>(bucket<sp/>b,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__bucket_8h_1a9565a794c839198b38e751cb90bf4e3c" kindref="member">bucket_remove</ref>(bucket<sp/>b,<sp/><ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref><sp/>compare_cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ADT_BUCKET_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_bucket.h"/>
+  </compounddef>
+</doxygen>

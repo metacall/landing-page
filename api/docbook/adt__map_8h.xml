@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_adt__map_8h">
+<title>adt_map.h File Reference</title>
+<indexterm><primary>adt_map.h</primary></indexterm>
+<programlisting>#include &lt;adt/adt_api.h&gt;
+#include &lt;adt/adt_comparable.h&gt;
+#include &lt;adt/adt_hash.h&gt;
+#include &lt;adt/adt_vector.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for adt_map.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="adt__map_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct map_type * <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link> <link linkend="_adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a">map_hash</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef">comparable</link> <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link></para>
+</listitem>
+            <listitem><para>typedef void * <link linkend="_adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc">map_cb_iterate_args</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b">hash_callback</link> <link linkend="_adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282">map_cb_hash</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> <link linkend="_adt__map_8h_1aea474be520c211c6c35e391e4dbf5050">map_cb_compare</link></para>
+</listitem>
+            <listitem><para>typedef int(* <link linkend="_adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0">map_cb_iterate</link>) (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link>, <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link>, <link linkend="_adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc">map_cb_iterate_args</link>)</para>
+</listitem>
+            <listitem><para>typedef struct map_iterator_type * <link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>ADT_API <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> <link linkend="_adt__map_8h_1aa5ab2c5347ebe47e75b262f50e02ed02">map_create</link> (<link linkend="_adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282">map_cb_hash</link> hash_cb, <link linkend="_adt__map_8h_1aea474be520c211c6c35e391e4dbf5050">map_cb_compare</link> compare_cb)</para>
+</listitem>
+            <listitem><para>ADT_API size_t <link linkend="_adt__map_8h_1a03c40d3bdc29209381454a148cb95eaa">map_size</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__map_8h_1ae567f499d141dd6484b7024d8ce6b085">map_insert</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key, <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__map_8h_1a97232d474132c5915363ecc68c2f1dfb">map_insert_array</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> keys[], <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> values[], size_t size)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_adt__map_8h_1abce862b09db3c842e121fcafac5ead10">map_get</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__map_8h_1af405aa3330b6c4dd56f21539fd64538f">map_contains</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__map_8h_1a060c9c2c0b0699ed924efb936ee8936e">map_contains_any</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> dest, <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> src)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> <link linkend="_adt__map_8h_1ab0eecd9e3bd9aeb80905f0905163b85c">map_remove</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_adt__map_8h_1a6291a04947b8e82d14b0fd39ea2b3908">map_remove_all</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__map_8h_1a07766545182d29afff29aad5f1dd2fda">map_iterate</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0">map_cb_iterate</link> iterate_cb, <link linkend="_adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc">map_cb_iterate_args</link> args)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__map_8h_1a3d7bf2643d5c9f4d5f6ce6819dddd441">map_append</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> dest, <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> src)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__map_8h_1a1258c62b6f83f71dc29909d6fa106845">map_clear</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__map_8h_1a85d85da136e73af850428e02bc359e01">map_destroy</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> <link linkend="_adt__map_8h_1a36ac6726113e9e51ee543f7e5c08437a">map_iterator_begin</link> (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> <link linkend="_adt__map_8h_1a63ff72181734409b2a70e04cd42a0e0c">map_iterator_get_key</link> (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> it)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> <link linkend="_adt__map_8h_1ae3d97f642ad6b305c9f0fffd61d7d977">map_iterator_get_value</link> (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> it)</para>
+</listitem>
+            <listitem><para>ADT_API void <link linkend="_adt__map_8h_1a173825fc4f4cc21b8f55a1d8159bb4fe">map_iterator_next</link> (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> it)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__map_8h_1a735796ebb72c13a828ff79a4f92f3252">map_iterator_end</link> (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> *it)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c"/>    <section>
+    <title>map</title>
+<indexterm><primary>map</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map</secondary></indexterm>
+<para><computeroutput>typedef struct map_type* <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link></computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a"/>    <section>
+    <title>map_hash</title>
+<indexterm><primary>map_hash</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_hash</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link> <link linkend="_adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a">map_hash</link></computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81"/>    <section>
+    <title>map_key</title>
+<indexterm><primary>map_key</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_key</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef">comparable</link> <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link></computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c"/>    <section>
+    <title>map_value</title>
+<indexterm><primary>map_value</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_value</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link></computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc"/>    <section>
+    <title>map_cb_iterate_args</title>
+<indexterm><primary>map_cb_iterate_args</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_cb_iterate_args</secondary></indexterm>
+<para><computeroutput>typedef void* <link linkend="_adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc">map_cb_iterate_args</link></computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282"/>    <section>
+    <title>map_cb_hash</title>
+<indexterm><primary>map_cb_hash</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_cb_hash</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b">hash_callback</link> <link linkend="_adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282">map_cb_hash</link></computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1aea474be520c211c6c35e391e4dbf5050"/>    <section>
+    <title>map_cb_compare</title>
+<indexterm><primary>map_cb_compare</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_cb_compare</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> <link linkend="_adt__map_8h_1aea474be520c211c6c35e391e4dbf5050">map_cb_compare</link></computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0"/>    <section>
+    <title>map_cb_iterate</title>
+<indexterm><primary>map_cb_iterate</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_cb_iterate</secondary></indexterm>
+<para><computeroutput>typedef int(* map_cb_iterate) (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link>, <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link>, <link linkend="_adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc">map_cb_iterate_args</link>)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a2109cb4cae90391364858b706c616461"/>    <section>
+    <title>map_iterator</title>
+<indexterm><primary>map_iterator</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_iterator</secondary></indexterm>
+<para><computeroutput>typedef struct map_iterator_type* <link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_adt__map_8h_1aa5ab2c5347ebe47e75b262f50e02ed02"/>    <section>
+    <title>map_create()</title>
+<indexterm><primary>map_create</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_create</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> map_create (<link linkend="_adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282">map_cb_hash</link> hash_cb, <link linkend="_adt__map_8h_1aea474be520c211c6c35e391e4dbf5050">map_cb_compare</link> compare_cb)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a03c40d3bdc29209381454a148cb95eaa"/>    <section>
+    <title>map_size()</title>
+<indexterm><primary>map_size</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_size</secondary></indexterm>
+<para><computeroutput>ADT_API size_t map_size (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1ae567f499d141dd6484b7024d8ce6b085"/>    <section>
+    <title>map_insert()</title>
+<indexterm><primary>map_insert</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_insert</secondary></indexterm>
+<para><computeroutput>ADT_API int map_insert (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key, <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> value)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a97232d474132c5915363ecc68c2f1dfb"/>    <section>
+    <title>map_insert_array()</title>
+<indexterm><primary>map_insert_array</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_insert_array</secondary></indexterm>
+<para><computeroutput>ADT_API int map_insert_array (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> keys[], <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> values[], size_t size)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1abce862b09db3c842e121fcafac5ead10"/>    <section>
+    <title>map_get()</title>
+<indexterm><primary>map_get</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_get</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> map_get (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1af405aa3330b6c4dd56f21539fd64538f"/>    <section>
+    <title>map_contains()</title>
+<indexterm><primary>map_contains</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_contains</secondary></indexterm>
+<para><computeroutput>ADT_API int map_contains (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a060c9c2c0b0699ed924efb936ee8936e"/>    <section>
+    <title>map_contains_any()</title>
+<indexterm><primary>map_contains_any</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_contains_any</secondary></indexterm>
+<para><computeroutput>ADT_API int map_contains_any (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> dest, <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> src)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1ab0eecd9e3bd9aeb80905f0905163b85c"/>    <section>
+    <title>map_remove()</title>
+<indexterm><primary>map_remove</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_remove</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> map_remove (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a6291a04947b8e82d14b0fd39ea2b3908"/>    <section>
+    <title>map_remove_all()</title>
+<indexterm><primary>map_remove_all</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_remove_all</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> map_remove_all (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> key)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a07766545182d29afff29aad5f1dd2fda"/>    <section>
+    <title>map_iterate()</title>
+<indexterm><primary>map_iterate</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_iterate</secondary></indexterm>
+<para><computeroutput>ADT_API void map_iterate (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m, <link linkend="_adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0">map_cb_iterate</link> iterate_cb, <link linkend="_adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc">map_cb_iterate_args</link> args)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a3d7bf2643d5c9f4d5f6ce6819dddd441"/>    <section>
+    <title>map_append()</title>
+<indexterm><primary>map_append</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_append</secondary></indexterm>
+<para><computeroutput>ADT_API int map_append (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> dest, <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> src)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a1258c62b6f83f71dc29909d6fa106845"/>    <section>
+    <title>map_clear()</title>
+<indexterm><primary>map_clear</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_clear</secondary></indexterm>
+<para><computeroutput>ADT_API int map_clear (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a85d85da136e73af850428e02bc359e01"/>    <section>
+    <title>map_destroy()</title>
+<indexterm><primary>map_destroy</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_destroy</secondary></indexterm>
+<para><computeroutput>ADT_API void map_destroy (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a36ac6726113e9e51ee543f7e5c08437a"/>    <section>
+    <title>map_iterator_begin()</title>
+<indexterm><primary>map_iterator_begin</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_iterator_begin</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> map_iterator_begin (<link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link> m)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a63ff72181734409b2a70e04cd42a0e0c"/>    <section>
+    <title>map_iterator_get_key()</title>
+<indexterm><primary>map_iterator_get_key</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_iterator_get_key</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81">map_key</link> map_iterator_get_key (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> it)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1ae3d97f642ad6b305c9f0fffd61d7d977"/>    <section>
+    <title>map_iterator_get_value()</title>
+<indexterm><primary>map_iterator_get_value</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_iterator_get_value</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c">map_value</link> map_iterator_get_value (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> it)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a173825fc4f4cc21b8f55a1d8159bb4fe"/>    <section>
+    <title>map_iterator_next()</title>
+<indexterm><primary>map_iterator_next</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_iterator_next</secondary></indexterm>
+<para><computeroutput>ADT_API void map_iterator_next (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> it)</computeroutput></para>    </section><anchor xml:id="_adt__map_8h_1a735796ebb72c13a828ff79a4f92f3252"/>    <section>
+    <title>map_iterator_end()</title>
+<indexterm><primary>map_iterator_end</primary><secondary>adt_map.h</secondary></indexterm>
+<indexterm><primary>adt_map.h</primary><secondary>map_iterator_end</secondary></indexterm>
+<para><computeroutput>ADT_API int map_iterator_end (<link linkend="_adt__map_8h_1a2109cb4cae90391364858b706c616461">map_iterator</link> * it)</computeroutput></para></section>
+</section>
+</section>

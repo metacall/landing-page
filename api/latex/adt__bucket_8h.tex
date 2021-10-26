@@ -1,0 +1,91 @@
+\doxysection{adt\+\_\+bucket.\+h File Reference}
+\label{adt__bucket_8h}\index{adt\_bucket.h@{adt\_bucket.h}}
+{\ttfamily \#include $<$adt/adt\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+comparable.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+vector.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for adt\+\_\+bucket.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{adt__bucket_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ pair}
+\item 
+struct \textbf{ bucket}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ bucket\+\_\+capacity} (size\+\_\+t prime)
+\item 
+A\+D\+T\+\_\+\+A\+PI bucket \textbf{ bucket\+\_\+create} (size\+\_\+t size)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ bucket\+\_\+alloc\+\_\+pairs} (bucket b, size\+\_\+t capacity)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ bucket\+\_\+realloc\+\_\+pairs} (bucket b, size\+\_\+t new\+\_\+capacity)
+\item 
+A\+D\+T\+\_\+\+A\+PI pair \textbf{ bucket\+\_\+get\+\_\+pair} (bucket b, \textbf{ comparable\+\_\+callback} compare\+\_\+cb, void $\ast$key)
+\item 
+A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ bucket\+\_\+get\+\_\+pairs\+\_\+value} (bucket b, \textbf{ comparable\+\_\+callback} compare\+\_\+cb, void $\ast$key)
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ bucket\+\_\+insert} (bucket b, void $\ast$key, void $\ast$\textbf{ value})
+\item 
+A\+D\+T\+\_\+\+A\+PI int \textbf{ bucket\+\_\+remove} (bucket b, \textbf{ comparable\+\_\+callback} compare\+\_\+cb, void $\ast$key, void $\ast$$\ast$\textbf{ value})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{adt__bucket_8h_a8a8b5c70b358520b48e73694a69273cb}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_capacity@{bucket\_capacity}}
+\index{bucket\_capacity@{bucket\_capacity}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_capacity()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t bucket\+\_\+capacity (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{prime }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__bucket_8h_a89c1081ea1b78a0fe7a39c5b0753a728}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_create@{bucket\_create}}
+\index{bucket\_create@{bucket\_create}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_create()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI bucket bucket\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__bucket_8h_ac880b9e940d9379bba8ff80e4ee3e253}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_alloc\_pairs@{bucket\_alloc\_pairs}}
+\index{bucket\_alloc\_pairs@{bucket\_alloc\_pairs}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_alloc\_pairs()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int bucket\+\_\+alloc\+\_\+pairs (\begin{DoxyParamCaption}\item[{bucket}]{b,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__bucket_8h_a4ec49b16a6eeb387fbe0682097351ae7}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_realloc\_pairs@{bucket\_realloc\_pairs}}
+\index{bucket\_realloc\_pairs@{bucket\_realloc\_pairs}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_realloc\_pairs()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int bucket\+\_\+realloc\+\_\+pairs (\begin{DoxyParamCaption}\item[{bucket}]{b,  }\item[{size\+\_\+t}]{new\+\_\+capacity }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__bucket_8h_a6c751dc7a90aa91bf790d2ec83369408}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_get\_pair@{bucket\_get\_pair}}
+\index{bucket\_get\_pair@{bucket\_get\_pair}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_get\_pair()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI pair bucket\+\_\+get\+\_\+pair (\begin{DoxyParamCaption}\item[{bucket}]{b,  }\item[{\textbf{ comparable\+\_\+callback}}]{compare\+\_\+cb,  }\item[{void $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__bucket_8h_aa6f67b5da6f19114666357c57a11a57c}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_get\_pairs\_value@{bucket\_get\_pairs\_value}}
+\index{bucket\_get\_pairs\_value@{bucket\_get\_pairs\_value}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_get\_pairs\_value()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} bucket\+\_\+get\+\_\+pairs\+\_\+value (\begin{DoxyParamCaption}\item[{bucket}]{b,  }\item[{\textbf{ comparable\+\_\+callback}}]{compare\+\_\+cb,  }\item[{void $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__bucket_8h_a41cf27460bb7b545b325a049fb282d41}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_insert@{bucket\_insert}}
+\index{bucket\_insert@{bucket\_insert}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_insert()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int bucket\+\_\+insert (\begin{DoxyParamCaption}\item[{bucket}]{b,  }\item[{void $\ast$}]{key,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\label{adt__bucket_8h_a9565a794c839198b38e751cb90bf4e3c}} 
+\index{adt\_bucket.h@{adt\_bucket.h}!bucket\_remove@{bucket\_remove}}
+\index{bucket\_remove@{bucket\_remove}!adt\_bucket.h@{adt\_bucket.h}}
+\doxysubsubsection{bucket\_remove()}
+{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int bucket\+\_\+remove (\begin{DoxyParamCaption}\item[{bucket}]{b,  }\item[{\textbf{ comparable\+\_\+callback}}]{compare\+\_\+cb,  }\item[{void $\ast$}]{key,  }\item[{void $\ast$$\ast$}]{value }\end{DoxyParamCaption})}
+

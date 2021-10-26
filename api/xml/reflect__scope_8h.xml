@@ -13,10 +13,12 @@
         <link refid="reflect__function_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>stdlib.h</label>
       </node>
       <node id="1">
@@ -26,46 +28,52 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>reflect/reflect_type.h</label>
         <link refid="reflect__type_8h"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>reflect/reflect_type_id.h</label>
         <link refid="reflect__type__id_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>reflect/reflect_value.h</label>
         <link refid="reflect__value_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>reflect/reflect_api.h</label>
       </node>
-      <node id="4">
+      <node id="5">
         <label>reflect/reflect_signature.h</label>
         <link refid="reflect__signature_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>reflect/reflect_async.h</label>
+        <link refid="reflect__async_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -318,10 +326,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" line="53" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_scope.h" declline="53" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__scope_8h_1a7ae749919eed062fa9f9aec307210903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__scope_8h_1a5249538e9b82297881638fd5237c71ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
         <definition>REFLECT_API int scope_contains</definition>
-        <argsstring>(scope dest, scope src)</argsstring>
+        <argsstring>(scope dest, scope src, char **duplicated)</argsstring>
         <name>scope_contains</name>
         <param>
           <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
@@ -330,6 +338,10 @@
         <param>
           <type><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref></type>
           <declname>src</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>duplicated</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -513,7 +525,7 @@
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae" kindref="member">scope_append</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a7ae749919eed062fa9f9aec307210903" kindref="member">scope_contains</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a5249538e9b82297881638fd5237c71ef" kindref="member">scope_contains</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**duplicated);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc" kindref="member">scope_remove</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>

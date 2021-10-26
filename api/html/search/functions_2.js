@@ -1,25 +1,11 @@
 var searchData=
 [
-  ['class_5fcreate_2343',['class_create',['../reflect__class_8h.html#a55b8b71f5f5ed8df886d4d536fb0eb27',1,'reflect_class.h']]],
-  ['class_5fdecrement_5freference_2344',['class_decrement_reference',['../reflect__class_8h.html#ac15a40b786e31618a4b2eda5a95ae836',1,'reflect_class.h']]],
-  ['class_5fdestroy_2345',['class_destroy',['../reflect__class_8h.html#a7d8d4d3d74c47d55f7201e917cc1b232',1,'reflect_class.h']]],
-  ['class_5fimpl_5fget_2346',['class_impl_get',['../reflect__class_8h.html#a0caae9162ce8891bc0d3a19c663d1a53',1,'reflect_class.h']]],
-  ['class_5fincrement_5freference_2347',['class_increment_reference',['../reflect__class_8h.html#a502b70bd05d4b7ecbced360ceefaadf4',1,'reflect_class.h']]],
-  ['class_5fmetadata_2348',['class_metadata',['../reflect__class_8h.html#a7972d49956ba43a04c8b6a21f76e490c',1,'reflect_class.h']]],
-  ['class_5fname_2349',['class_name',['../reflect__class_8h.html#a2fb9659f1662ca7d01adae0369ebc387',1,'reflect_class.h']]],
-  ['class_5fnew_2350',['class_new',['../reflect__class_8h.html#a3eed8458d3fdaf7ce6e1a7e33cd774bb',1,'reflect_class.h']]],
-  ['class_5fstatic_5fawait_2351',['class_static_await',['../reflect__class_8h.html#a9359a9f17b7ff3672d94a1f241a0099e',1,'reflect_class.h']]],
-  ['class_5fstatic_5fcall_2352',['class_static_call',['../reflect__class_8h.html#a9a9ae3b61bdad1869e6e3a7a61230a62',1,'reflect_class.h']]],
-  ['class_5fstatic_5fget_2353',['class_static_get',['../reflect__class_8h.html#a57ac656ed8bbc28ddb16dfb46f764643',1,'reflect_class.h']]],
-  ['class_5fstatic_5fset_2354',['class_static_set',['../reflect__class_8h.html#a6f9710e42fbd7ab4f808361e20968a04',1,'reflect_class.h']]],
-  ['comparable_5fcallback_5fint_2355',['comparable_callback_int',['../adt__comparable_8h.html#afffe1859af17b5c11c0df63ed057fa4b',1,'adt_comparable.h']]],
-  ['comparable_5fcallback_5fptr_2356',['comparable_callback_ptr',['../adt__comparable_8h.html#ac6e83e2e29020c04d0a5af8e0c0d0110',1,'adt_comparable.h']]],
-  ['comparable_5fcallback_5fstr_2357',['comparable_callback_str',['../adt__comparable_8h.html#afc355bdf60cfec2fbc74e2705af5189b',1,'adt_comparable.h']]],
-  ['context_5fappend_2358',['context_append',['../reflect__context_8h.html#a5a08e99bf8fa8d47022a3eb5037f5782',1,'reflect_context.h']]],
-  ['context_5fcontains_2359',['context_contains',['../reflect__context_8h.html#a5c2a59a06a882c2ec2c3bd0cf6e5acea',1,'reflect_context.h']]],
-  ['context_5fcreate_2360',['context_create',['../reflect__context_8h.html#aba99e7b5a51077e3371a6c131606efd3',1,'reflect_context.h']]],
-  ['context_5fdestroy_2361',['context_destroy',['../reflect__context_8h.html#a1d32f37f3d89f4ffcac27c12797a5dbd',1,'reflect_context.h']]],
-  ['context_5fname_2362',['context_name',['../reflect__context_8h.html#a47ee629e6f2a6cafa23a58849c01be52',1,'reflect_context.h']]],
-  ['context_5fremove_2363',['context_remove',['../reflect__context_8h.html#a7fb6ba2f8b8c507b6ff568ac02470bf1',1,'reflect_context.h']]],
-  ['context_5fscope_2364',['context_scope',['../reflect__context_8h.html#a815f013b9a064495be9b76c39233a490',1,'reflect_context.h']]]
+  ['bucket_5falloc_5fpairs_2487',['bucket_alloc_pairs',['../adt__bucket_8h.html#ac880b9e940d9379bba8ff80e4ee3e253',1,'adt_bucket.h']]],
+  ['bucket_5fcapacity_2488',['bucket_capacity',['../adt__bucket_8h.html#a8a8b5c70b358520b48e73694a69273cb',1,'adt_bucket.h']]],
+  ['bucket_5fcreate_2489',['bucket_create',['../adt__bucket_8h.html#a89c1081ea1b78a0fe7a39c5b0753a728',1,'adt_bucket.h']]],
+  ['bucket_5fget_5fpair_2490',['bucket_get_pair',['../adt__bucket_8h.html#a6c751dc7a90aa91bf790d2ec83369408',1,'adt_bucket.h']]],
+  ['bucket_5fget_5fpairs_5fvalue_2491',['bucket_get_pairs_value',['../adt__bucket_8h.html#aa6f67b5da6f19114666357c57a11a57c',1,'adt_bucket.h']]],
+  ['bucket_5finsert_2492',['bucket_insert',['../adt__bucket_8h.html#a41cf27460bb7b545b325a049fb282d41',1,'adt_bucket.h']]],
+  ['bucket_5frealloc_5fpairs_2493',['bucket_realloc_pairs',['../adt__bucket_8h.html#a4ec49b16a6eeb387fbe0682097351ae7',1,'adt_bucket.h']]],
+  ['bucket_5fremove_2494',['bucket_remove',['../adt__bucket_8h.html#a9565a794c839198b38e751cb90bf4e3c',1,'adt_bucket.h']]]
 ];

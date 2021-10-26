@@ -5,9 +5,13 @@
     <includes local="no">adt/adt_api.h</includes>
     <includes local="no">stdlib.h</includes>
     <includedby refid="adt_8h" local="no">adt.h</includedby>
+    <includedby refid="adt__bucket_8h" local="no">adt_bucket.h</includedby>
+    <includedby refid="adt__map_8h" local="no">adt_map.h</includedby>
     <includedby refid="adt__trie_8h" local="no">adt_trie.h</includedby>
     <includedby refid="filesystem_8h" local="no">filesystem.h</includedby>
     <includedby refid="filesystem__directory__descriptor_8h" local="no">filesystem_directory_descriptor.h</includedby>
+    <includedby refid="reflect__class_8h" local="no">reflect_class.h</includedby>
+    <includedby refid="reflect__object_8h" local="no">reflect_object.h</includedby>
     <incdepgraph>
       <node id="3">
         <label>stdlib.h</label>
@@ -25,11 +29,33 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
+      <node id="6">
         <label>filesystem.h</label>
         <link refid="filesystem_8h"/>
       </node>
-      <node id="6">
+      <node id="9">
+        <label>reflect_class.h</label>
+        <link refid="reflect__class_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>adt_bucket.h</label>
+        <link refid="adt__bucket_8h"/>
+      </node>
+      <node id="12">
+        <label>reflect_object.h</label>
+        <link refid="reflect__object_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
         <label>filesystem_file_descriptor.h</label>
         <link refid="filesystem__file__descriptor_8h"/>
       </node>
@@ -37,16 +63,26 @@
         <label>adt.h</label>
         <link refid="adt_8h"/>
       </node>
-      <node id="3">
+      <node id="5">
         <label>adt_trie.h</label>
         <link refid="adt__trie_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="4">
+        <label>adt_map.h</label>
+        <link refid="adt__map_8h"/>
+      </node>
+      <node id="11">
+        <label>reflect_value_type.h</label>
+        <link refid="reflect__value__type_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
         <label>filesystem_directory_descriptor.h</label>
         <link refid="filesystem__directory__descriptor_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -60,6 +96,18 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>reflect.h</label>
+        <link refid="reflect_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">

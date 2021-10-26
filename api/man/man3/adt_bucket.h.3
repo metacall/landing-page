@@ -1,0 +1,76 @@
+.TH "adt_bucket.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+adt_bucket.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <adt/adt_api\&.h>\fP
+.br
+\fC#include <adt/adt_comparable\&.h>\fP
+.br
+\fC#include <adt/adt_vector\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpair\fP"
+.br
+.ti -1c
+.RI "struct \fBbucket\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "ADT_API size_t \fBbucket_capacity\fP (size_t prime)"
+.br
+.ti -1c
+.RI "ADT_API bucket \fBbucket_create\fP (size_t size)"
+.br
+.ti -1c
+.RI "ADT_API int \fBbucket_alloc_pairs\fP (bucket b, size_t capacity)"
+.br
+.ti -1c
+.RI "ADT_API int \fBbucket_realloc_pairs\fP (bucket b, size_t new_capacity)"
+.br
+.ti -1c
+.RI "ADT_API pair \fBbucket_get_pair\fP (bucket b, \fBcomparable_callback\fP compare_cb, void *key)"
+.br
+.ti -1c
+.RI "ADT_API \fBvector\fP \fBbucket_get_pairs_value\fP (bucket b, \fBcomparable_callback\fP compare_cb, void *key)"
+.br
+.ti -1c
+.RI "ADT_API int \fBbucket_insert\fP (bucket b, void *key, void *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "ADT_API int \fBbucket_remove\fP (bucket b, \fBcomparable_callback\fP compare_cb, void *key, void **\fBvalue\fP)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "ADT_API size_t bucket_capacity (size_t prime)"
+
+.SS "ADT_API bucket bucket_create (size_t size)"
+
+.SS "ADT_API int bucket_alloc_pairs (bucket b, size_t capacity)"
+
+.SS "ADT_API int bucket_realloc_pairs (bucket b, size_t new_capacity)"
+
+.SS "ADT_API pair bucket_get_pair (bucket b, \fBcomparable_callback\fP compare_cb, void * key)"
+
+.SS "ADT_API \fBvector\fP bucket_get_pairs_value (bucket b, \fBcomparable_callback\fP compare_cb, void * key)"
+
+.SS "ADT_API int bucket_insert (bucket b, void * key, void * value)"
+
+.SS "ADT_API int bucket_remove (bucket b, \fBcomparable_callback\fP compare_cb, void * key, void ** value)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

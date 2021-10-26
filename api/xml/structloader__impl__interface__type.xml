@@ -114,25 +114,22 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="6">
-        <label>int(*)(loader_impl, loader_handle, context)</label>
-      </node>
-      <node id="7">
-        <label>int(*)(loader_impl)</label>
+      <node id="4">
+        <label>size_t</label>
       </node>
       <node id="5">
-        <label>loader_handle(*)(loader_impl, const loader_naming_path[], size_t)</label>
+        <label>int(*)(loader_impl, loader_handle, context)</label>
       </node>
-      <node id="8">
+      <node id="6">
+        <label>int(*)(loader_impl)</label>
+      </node>
+      <node id="7">
         <label>loader_impl_data(*)(loader_impl, configuration)</label>
       </node>
-      <node id="4">
+      <node id="3">
         <label>int(*)(loader_impl, const loader_naming_path)</label>
       </node>
-      <node id="3">
-        <label>loader_handle(*)(loader_impl, const loader_naming_name, const char *, size_t)</label>
-      </node>
-      <node id="9">
+      <node id="8">
         <label>int(*)(loader_impl, loader_handle)</label>
       </node>
       <node id="2">
@@ -145,24 +142,22 @@
           <edgelabel>+load_from_package</edgelabel>
         </childnode>
         <childnode refid="3" relation="usage">
-          <edgelabel>+load_from_memory</edgelabel>
-        </childnode>
-        <childnode refid="4" relation="usage">
           <edgelabel>+execution_path</edgelabel>
         </childnode>
-        <childnode refid="5" relation="usage">
+        <childnode refid="4" relation="usage">
+          <edgelabel>+load_from_memory</edgelabel>
           <edgelabel>+load_from_file</edgelabel>
         </childnode>
-        <childnode refid="6" relation="usage">
+        <childnode refid="5" relation="usage">
           <edgelabel>+discover</edgelabel>
         </childnode>
-        <childnode refid="7" relation="usage">
+        <childnode refid="6" relation="usage">
           <edgelabel>+destroy</edgelabel>
         </childnode>
-        <childnode refid="8" relation="usage">
+        <childnode refid="7" relation="usage">
           <edgelabel>+initialize</edgelabel>
         </childnode>
-        <childnode refid="9" relation="usage">
+        <childnode refid="8" relation="usage">
           <edgelabel>+clear</edgelabel>
         </childnode>
       </node>

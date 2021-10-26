@@ -24,7 +24,7 @@ var loader_8h =
     [ "loader_handle_get", "loader_8h.html#a945db9c2048ac8d35c9b9e9d028c83de", null ],
     [ "loader_metadata", "loader_8h.html#af0267882166a3ab6e011e9e9c4c8826a", null ],
     [ "loader_clear", "loader_8h.html#a50281bf1571a363c0b9b198c4e3e3a6e", null ],
-    [ "loader_unload_children", "loader_8h.html#aae52d09e532fd966f933d4573ee97fbf", null ],
+    [ "loader_unload_children", "loader_8h.html#a5ccaf6095bcc8ffe4fd3e8c2bb3d8202", null ],
     [ "loader_unload", "loader_8h.html#ac4f17dddef9935d0b1b727271f5e2308", null ],
     [ "loader_destroy", "loader_8h.html#a34fe0f770a93b0213274d076ed655216", null ],
     [ "loader_print_info", "loader_8h.html#a5e4b95a22a0fc84007b5ab97e3a8efdb", null ]

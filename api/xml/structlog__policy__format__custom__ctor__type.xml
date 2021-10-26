@@ -62,31 +62,21 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="5">
-        <label>void *</label>
+      <node id="2">
+        <label>size_t</label>
       </node>
       <node id="3">
-        <label>size_t(*)(void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</label>
-      </node>
-      <node id="2">
-        <label>size_t(*)(void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</label>
-      </node>
-      <node id="4">
-        <label>size_t(*)(void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</label>
+        <label>void *</label>
       </node>
       <node id="1">
         <label>log_policy_format_custom_ctor</label>
         <link refid="structlog__policy__format__custom__ctor__type"/>
         <childnode refid="2" relation="usage">
           <edgelabel>+format_deserialize</edgelabel>
-        </childnode>
-        <childnode refid="3" relation="usage">
+          <edgelabel>+format_size</edgelabel>
           <edgelabel>+format_serialize</edgelabel>
         </childnode>
-        <childnode refid="4" relation="usage">
-          <edgelabel>+format_size</edgelabel>
-        </childnode>
-        <childnode refid="5" relation="usage">
+        <childnode refid="3" relation="usage">
           <edgelabel>+context</edgelabel>
         </childnode>
       </node>

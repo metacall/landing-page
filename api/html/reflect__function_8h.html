@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MetaCall
-   &#160;<span id="projectnumber">0.1.0.9bcc4c97acac</span>
+   &#160;<span id="projectnumber">0.1.0.44b1ab3b98a6</span>
    </div>
    <div id="projectbrief">A library for providing inter-language foreign function interface calls</div>
   </td>
@@ -87,13 +87,13 @@ $(document).ready(function(){initNavTree('reflect__function_8h.html',''); initRe
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">reflect_function.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="reflect__signature_8h_source.html">reflect/reflect_signature.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="reflect__async_8h_source.html">reflect/reflect_async.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="reflect__signature_8h_source.html">reflect/reflect_signature.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="reflect__value_8h_source.html">reflect/reflect_value.h</a>&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for reflect_function.h:</div>
@@ -102,13 +102,14 @@ $(document).ready(function(){initNavTree('reflect__function_8h.html',''); initRe
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="reflect__function_8h__incl.png" border="0" usemap="#reflect__function_8h" alt=""/></div>
 <map name="reflect__function_8h" id="reflect__function_8h">
-<area shape="rect" title=" " alt="" coords="73,5,181,31"/>
-<area shape="rect" href="reflect__signature_8h.html" title=" " alt="" coords="127,79,278,104"/>
+<area shape="rect" title=" " alt="" coords="169,5,277,31"/>
+<area shape="rect" href="reflect__async_8h.html" title=" " alt="" coords="481,152,615,177"/>
+<area shape="rect" href="reflect__signature_8h.html" title=" " alt="" coords="147,79,298,104"/>
 <area shape="rect" href="reflect__value_8h.html" title=" " alt="" coords="5,225,136,251"/>
-<area shape="rect" title=" " alt="" coords="249,299,369,324"/>
-<area shape="rect" href="reflect__type_8h.html" title=" " alt="" coords="159,152,284,177"/>
-<area shape="rect" href="reflect__type__id_8h.html" title=" " alt="" coords="211,225,354,251"/>
-<area shape="rect" title=" " alt="" coords="117,299,177,324"/>
+<area shape="rect" title=" " alt="" coords="273,299,393,324"/>
+<area shape="rect" href="reflect__type_8h.html" title=" " alt="" coords="160,152,285,177"/>
+<area shape="rect" href="reflect__type__id_8h.html" title=" " alt="" coords="262,225,405,251"/>
+<area shape="rect" title=" " alt="" coords="93,299,153,324"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -165,13 +166,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a6cc96ba0bf4a09fffea8c09de6af63af"><td class="memItemLeft" align="right" valign="top">typedef function_interface(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a6cc96ba0bf4a09fffea8c09de6af63af">function_impl_interface_singleton</a>) (void)</td></tr>
 <tr class="separator:a6cc96ba0bf4a09fffea8c09de6af63af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ab5d5a2179fc6a44b98705c25b6995795"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795">function_async_id</a> { <a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28">FUNCTION_SYNC</a> = 0, 
-<a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28">FUNCTION_ASYNC</a> = 1
- }</td></tr>
-<tr class="separator:ab5d5a2179fc6a44b98705c25b6995795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6aa2df1f3525beb9952a226ba4176131"><td class="memItemLeft" align="right" valign="top">REFLECT_API <a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a6aa2df1f3525beb9952a226ba4176131">function_create</a> (const char *name, size_t args_count, <a class="el" href="reflect__function_8h.html#a12e83b3665a651995433eec50acdcf89">function_impl</a> impl, <a class="el" href="reflect__function_8h.html#a6cc96ba0bf4a09fffea8c09de6af63af">function_impl_interface_singleton</a> singleton)</td></tr>
@@ -180,10 +174,10 @@ Functions</h2></td></tr>
 <tr class="separator:ad3b35f9baa70a446cff0fac71b40db2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3c51bbe31aba3fbeefbbcea568e4685"><td class="memItemLeft" align="right" valign="top">REFLECT_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#ad3c51bbe31aba3fbeefbbcea568e4685">function_decrement_reference</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func)</td></tr>
 <tr class="separator:ad3c51bbe31aba3fbeefbbcea568e4685"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4836a9d458071f05ae742e6addb8a6"><td class="memItemLeft" align="right" valign="top">REFLECT_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#add4836a9d458071f05ae742e6addb8a6">function_async</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func, enum <a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795">function_async_id</a> async)</td></tr>
-<tr class="separator:add4836a9d458071f05ae742e6addb8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55ff4f4a26bf8c92378c3f608e913e42"><td class="memItemLeft" align="right" valign="top">REFLECT_API enum <a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795">function_async_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a55ff4f4a26bf8c92378c3f608e913e42">function_async_id</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func)</td></tr>
-<tr class="separator:a55ff4f4a26bf8c92378c3f608e913e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af709f2c74fa6a9ffefc895204021878c"><td class="memItemLeft" align="right" valign="top">REFLECT_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#af709f2c74fa6a9ffefc895204021878c">function_async</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func, enum <a class="el" href="reflect__async_8h.html#a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</a> async)</td></tr>
+<tr class="separator:af709f2c74fa6a9ffefc895204021878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd3d88e128ac7c27a124c77a73606f51"><td class="memItemLeft" align="right" valign="top">REFLECT_API enum <a class="el" href="reflect__async_8h.html#a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#afd3d88e128ac7c27a124c77a73606f51">function_async_id</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func)</td></tr>
+<tr class="separator:afd3d88e128ac7c27a124c77a73606f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b279b5c18645cff4b54eb55e22053b4"><td class="memItemLeft" align="right" valign="top">REFLECT_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a5b279b5c18645cff4b54eb55e22053b4">function_bind</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func, void *data)</td></tr>
 <tr class="separator:a5b279b5c18645cff4b54eb55e22053b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a050920384e8f96c443dc11242ac421ba"><td class="memItemLeft" align="right" valign="top">REFLECT_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a050920384e8f96c443dc11242ac421ba">function_closure</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func)</td></tr>
@@ -198,6 +192,8 @@ Functions</h2></td></tr>
 <tr class="separator:a55f786badbc8f796b72a8bc87c653fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63391dc688728a94873fd4e6176031ca"><td class="memItemLeft" align="right" valign="top">REFLECT_API <a class="el" href="reflect__function_8h.html#ab0c2bc43f379e346cc9693892bccfea1">function_return</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a63391dc688728a94873fd4e6176031ca">function_await</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func, <a class="el" href="reflect__function_8h.html#ac0b514567378b0111b64c4df8c77a220">function_args</a> args, size_t size, <a class="el" href="reflect__function_8h.html#a18231033bc347c9868e9e27983fd06c5">function_resolve_callback</a> resolve_callback, <a class="el" href="reflect__function_8h.html#a7b5b3717fa4870e36a787047398f68ec">function_reject_callback</a> reject_callback, void *<a class="el" href="reflect__context_8h.html#ab01e2b1d8e268430d5c2d3d1d870251b">context</a>)</td></tr>
 <tr class="separator:a63391dc688728a94873fd4e6176031ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ce6eeff8ef033f0a36e60875096bfc"><td class="memItemLeft" align="right" valign="top">REFLECT_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a93ce6eeff8ef033f0a36e60875096bfc">function_stats_debug</a> (void)</td></tr>
+<tr class="separator:a93ce6eeff8ef033f0a36e60875096bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ef49cc819e4515b1f0222cc7f3dd6dc"><td class="memItemLeft" align="right" valign="top">REFLECT_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reflect__function_8h.html#a3ef49cc819e4515b1f0222cc7f3dd6dc">function_destroy</a> (<a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> func)</td></tr>
 <tr class="separator:a3ef49cc819e4515b1f0222cc7f3dd6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -356,25 +352,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ab5d5a2179fc6a44b98705c25b6995795"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5d5a2179fc6a44b98705c25b6995795">&#9670;&nbsp;</a></span>function_async_id</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795">function_async_id</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28"></a>FUNCTION_SYNC&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28"></a>FUNCTION_ASYNC&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a6aa2df1f3525beb9952a226ba4176131"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6aa2df1f3525beb9952a226ba4176131">&#9670;&nbsp;</a></span>function_create()</h2>
@@ -452,8 +429,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="add4836a9d458071f05ae742e6addb8a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add4836a9d458071f05ae742e6addb8a6">&#9670;&nbsp;</a></span>function_async()</h2>
+<a id="af709f2c74fa6a9ffefc895204021878c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af709f2c74fa6a9ffefc895204021878c">&#9670;&nbsp;</a></span>function_async()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,7 +444,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">enum <a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795">function_async_id</a>&#160;</td>
+          <td class="paramtype">enum <a class="el" href="reflect__async_8h.html#a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</a>&#160;</td>
           <td class="paramname"><em>async</em>&#160;</td>
         </tr>
         <tr>
@@ -480,14 +457,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a55ff4f4a26bf8c92378c3f608e913e42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55ff4f4a26bf8c92378c3f608e913e42">&#9670;&nbsp;</a></span>function_async_id()</h2>
+<a id="afd3d88e128ac7c27a124c77a73606f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd3d88e128ac7c27a124c77a73606f51">&#9670;&nbsp;</a></span>function_async_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">REFLECT_API enum <a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795">function_async_id</a> <a class="el" href="reflect__function_8h.html#ab5d5a2179fc6a44b98705c25b6995795">function_async_id</a> </td>
+          <td class="memname">REFLECT_API enum <a class="el" href="reflect__async_8h.html#a00906375bbe7dbe8f9db5b3a3f8f8586">async_id</a> function_async_id </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a>&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
@@ -684,6 +661,24 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a93ce6eeff8ef033f0a36e60875096bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ce6eeff8ef033f0a36e60875096bfc">&#9670;&nbsp;</a></span>function_stats_debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">REFLECT_API void function_stats_debug </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3ef49cc819e4515b1f0222cc7f3dd6dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ef49cc819e4515b1f0222cc7f3dd6dc">&#9670;&nbsp;</a></span>function_destroy()</h2>
 
@@ -708,7 +703,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_e212849920d5afeb1bd87e42ee764cec.html">reflect</a></li><li class="navelem"><a class="el" href="dir_0b0bd2a4a1a2bb2c64ca81b2bef5dd65.html">include</a></li><li class="navelem"><a class="el" href="dir_b7d0f4f6ee26594209f79de8fe572935.html">reflect</a></li><li class="navelem"><a class="el" href="reflect__function_8h.html">reflect_function.h</a></li>
-    <li class="footer">Generated on Wed Jun 30 2021 13:22:01 for MetaCall by
+    <li class="footer">Generated on Tue Oct 26 2021 21:03:45 for MetaCall by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

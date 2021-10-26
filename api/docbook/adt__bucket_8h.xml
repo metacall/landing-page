@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_adt__bucket_8h">
+<title>adt_bucket.h File Reference</title>
+<indexterm><primary>adt_bucket.h</primary></indexterm>
+<programlisting>#include &lt;adt/adt_api.h&gt;
+#include &lt;adt/adt_comparable.h&gt;
+#include &lt;adt/adt_vector.h&gt;
+#include &lt;stdlib.h&gt;
+</programlisting>Include dependency graph for adt_bucket.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="adt__bucket_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structpair__type">pair</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structbucket__type">bucket</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>ADT_API size_t <link linkend="_adt__bucket_8h_1a8a8b5c70b358520b48e73694a69273cb">bucket_capacity</link> (size_t prime)</para>
+</listitem>
+            <listitem><para>ADT_API bucket <link linkend="_adt__bucket_8h_1a89c1081ea1b78a0fe7a39c5b0753a728">bucket_create</link> (size_t size)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__bucket_8h_1ac880b9e940d9379bba8ff80e4ee3e253">bucket_alloc_pairs</link> (bucket b, size_t capacity)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__bucket_8h_1a4ec49b16a6eeb387fbe0682097351ae7">bucket_realloc_pairs</link> (bucket b, size_t new_capacity)</para>
+</listitem>
+            <listitem><para>ADT_API pair <link linkend="_adt__bucket_8h_1a6c751dc7a90aa91bf790d2ec83369408">bucket_get_pair</link> (bucket b, <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> compare_cb, void *key)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_adt__bucket_8h_1aa6f67b5da6f19114666357c57a11a57c">bucket_get_pairs_value</link> (bucket b, <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> compare_cb, void *key)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__bucket_8h_1a41cf27460bb7b545b325a049fb282d41">bucket_insert</link> (bucket b, void *key, void *<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
+</listitem>
+            <listitem><para>ADT_API int <link linkend="_adt__bucket_8h_1a9565a794c839198b38e751cb90bf4e3c">bucket_remove</link> (bucket b, <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> compare_cb, void *key, void **<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_adt__bucket_8h_1a8a8b5c70b358520b48e73694a69273cb"/>    <section>
+    <title>bucket_capacity()</title>
+<indexterm><primary>bucket_capacity</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_capacity</secondary></indexterm>
+<para><computeroutput>ADT_API size_t bucket_capacity (size_t prime)</computeroutput></para>    </section><anchor xml:id="_adt__bucket_8h_1a89c1081ea1b78a0fe7a39c5b0753a728"/>    <section>
+    <title>bucket_create()</title>
+<indexterm><primary>bucket_create</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_create</secondary></indexterm>
+<para><computeroutput>ADT_API bucket bucket_create (size_t size)</computeroutput></para>    </section><anchor xml:id="_adt__bucket_8h_1ac880b9e940d9379bba8ff80e4ee3e253"/>    <section>
+    <title>bucket_alloc_pairs()</title>
+<indexterm><primary>bucket_alloc_pairs</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_alloc_pairs</secondary></indexterm>
+<para><computeroutput>ADT_API int bucket_alloc_pairs (bucket b, size_t capacity)</computeroutput></para>    </section><anchor xml:id="_adt__bucket_8h_1a4ec49b16a6eeb387fbe0682097351ae7"/>    <section>
+    <title>bucket_realloc_pairs()</title>
+<indexterm><primary>bucket_realloc_pairs</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_realloc_pairs</secondary></indexterm>
+<para><computeroutput>ADT_API int bucket_realloc_pairs (bucket b, size_t new_capacity)</computeroutput></para>    </section><anchor xml:id="_adt__bucket_8h_1a6c751dc7a90aa91bf790d2ec83369408"/>    <section>
+    <title>bucket_get_pair()</title>
+<indexterm><primary>bucket_get_pair</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_get_pair</secondary></indexterm>
+<para><computeroutput>ADT_API pair bucket_get_pair (bucket b, <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> compare_cb, void * key)</computeroutput></para>    </section><anchor xml:id="_adt__bucket_8h_1aa6f67b5da6f19114666357c57a11a57c"/>    <section>
+    <title>bucket_get_pairs_value()</title>
+<indexterm><primary>bucket_get_pairs_value</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_get_pairs_value</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> bucket_get_pairs_value (bucket b, <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> compare_cb, void * key)</computeroutput></para>    </section><anchor xml:id="_adt__bucket_8h_1a41cf27460bb7b545b325a049fb282d41"/>    <section>
+    <title>bucket_insert()</title>
+<indexterm><primary>bucket_insert</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_insert</secondary></indexterm>
+<para><computeroutput>ADT_API int bucket_insert (bucket b, void * key, void * value)</computeroutput></para>    </section><anchor xml:id="_adt__bucket_8h_1a9565a794c839198b38e751cb90bf4e3c"/>    <section>
+    <title>bucket_remove()</title>
+<indexterm><primary>bucket_remove</primary><secondary>adt_bucket.h</secondary></indexterm>
+<indexterm><primary>adt_bucket.h</primary><secondary>bucket_remove</secondary></indexterm>
+<para><computeroutput>ADT_API int bucket_remove (bucket b, <link linkend="_adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79">comparable_callback</link> compare_cb, void * key, void ** value)</computeroutput></para></section>
+</section>
+</section>

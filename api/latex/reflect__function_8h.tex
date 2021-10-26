@@ -1,5 +1,6 @@
 \doxysection{reflect\+\_\+function.\+h File Reference}
 \label{reflect__function_8h}\index{reflect\_function.h@{reflect\_function.h}}
+{\ttfamily \#include $<$reflect/reflect\+\_\+async.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+signature.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
 Include dependency graph for reflect\+\_\+function.\+h\+:
@@ -7,7 +8,7 @@ Include dependency graph for reflect\+\_\+function.\+h\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=333pt]{reflect__function_8h__incl}
+\includegraphics[width=350pt]{reflect__function_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -48,13 +49,6 @@ typedef void($\ast$ \textbf{ function\+\_\+impl\+\_\+interface\+\_\+destroy}) (\
 \item 
 typedef function\+\_\+interface($\ast$ \textbf{ function\+\_\+impl\+\_\+interface\+\_\+singleton}) (void)
 \end{DoxyCompactItemize}
-\doxysubsection*{Enumerations}
-\begin{DoxyCompactItemize}
-\item 
-enum \textbf{ function\+\_\+async\+\_\+id} \{ \textbf{ F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+Y\+NC} = 0, 
-\textbf{ F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+S\+Y\+NC} = 1
- \}
-\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,9 +58,9 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ function\+\_\+increment\+\_\+refer
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ function\+\_\+decrement\+\_\+reference} (\textbf{ function} func)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+async} (\textbf{ function} func, enum \textbf{ function\+\_\+async\+\_\+id} async)
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+async} (\textbf{ function} func, enum \textbf{ async\+\_\+id} async)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI enum \textbf{ function\+\_\+async\+\_\+id} \textbf{ function\+\_\+async\+\_\+id} (\textbf{ function} func)
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI enum \textbf{ async\+\_\+id} \textbf{ function\+\_\+async\+\_\+id} (\textbf{ function} func)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+bind} (\textbf{ function} func, void $\ast$data)
 \item 
@@ -81,6 +75,8 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ function\+\_\+metadata
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function\+\_\+return} \textbf{ function\+\_\+call} (\textbf{ function} func, \textbf{ function\+\_\+args} args, size\+\_\+t size)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function\+\_\+return} \textbf{ function\+\_\+await} (\textbf{ function} func, \textbf{ function\+\_\+args} args, size\+\_\+t size, \textbf{ function\+\_\+resolve\+\_\+callback} resolve\+\_\+callback, \textbf{ function\+\_\+reject\+\_\+callback} reject\+\_\+callback, void $\ast$\textbf{ context})
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+stats\+\_\+debug} (void)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+destroy} (\textbf{ function} func)
 \end{DoxyCompactItemize}
@@ -155,25 +151,6 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ function\+\_\+destroy} (\textbf{ 
 
 
 
-\doxysubsection{Enumeration Type Documentation}
-\mbox{\label{reflect__function_8h_ab5d5a2179fc6a44b98705c25b6995795}} 
-\index{reflect\_function.h@{reflect\_function.h}!function\_async\_id@{function\_async\_id}}
-\index{function\_async\_id@{function\_async\_id}!reflect\_function.h@{reflect\_function.h}}
-\doxysubsubsection{function\_async\_id}
-{\footnotesize\ttfamily enum \textbf{ function\+\_\+async\+\_\+id}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCTION\_SYNC@{FUNCTION\_SYNC}!reflect\_function.h@{reflect\_function.h}}\index{reflect\_function.h@{reflect\_function.h}!FUNCTION\_SYNC@{FUNCTION\_SYNC}}}\mbox{\label{reflect__function_8h_ab5d5a2179fc6a44b98705c25b6995795a5c5377c8c314a294095bf4c73e2ecc28}} 
-F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+Y\+NC&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCTION\_ASYNC@{FUNCTION\_ASYNC}!reflect\_function.h@{reflect\_function.h}}\index{reflect\_function.h@{reflect\_function.h}!FUNCTION\_ASYNC@{FUNCTION\_ASYNC}}}\mbox{\label{reflect__function_8h_ab5d5a2179fc6a44b98705c25b6995795aa3d186a7b9fbf49c84459b3f431bab28}} 
-F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+S\+Y\+NC&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
 \doxysubsection{Function Documentation}
 \mbox{\label{reflect__function_8h_a6aa2df1f3525beb9952a226ba4176131}} 
 \index{reflect\_function.h@{reflect\_function.h}!function\_create@{function\_create}}
@@ -193,17 +170,17 @@ F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+S\+Y\+NC&\\
 \doxysubsubsection{function\_decrement\_reference()}
 {\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int function\+\_\+decrement\+\_\+reference (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
 
-\mbox{\label{reflect__function_8h_add4836a9d458071f05ae742e6addb8a6}} 
+\mbox{\label{reflect__function_8h_af709f2c74fa6a9ffefc895204021878c}} 
 \index{reflect\_function.h@{reflect\_function.h}!function\_async@{function\_async}}
 \index{function\_async@{function\_async}!reflect\_function.h@{reflect\_function.h}}
 \doxysubsubsection{function\_async()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void function\+\_\+async (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func,  }\item[{enum \textbf{ function\+\_\+async\+\_\+id}}]{async }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void function\+\_\+async (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func,  }\item[{enum \textbf{ async\+\_\+id}}]{async }\end{DoxyParamCaption})}
 
-\mbox{\label{reflect__function_8h_a55ff4f4a26bf8c92378c3f608e913e42}} 
+\mbox{\label{reflect__function_8h_afd3d88e128ac7c27a124c77a73606f51}} 
 \index{reflect\_function.h@{reflect\_function.h}!function\_async\_id@{function\_async\_id}}
 \index{function\_async\_id@{function\_async\_id}!reflect\_function.h@{reflect\_function.h}}
 \doxysubsubsection{function\_async\_id()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI enum \textbf{ function\+\_\+async\+\_\+id} \textbf{ function\+\_\+async\+\_\+id} (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI enum \textbf{ async\+\_\+id} function\+\_\+async\+\_\+id (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__function_8h_a5b279b5c18645cff4b54eb55e22053b4}} 
 \index{reflect\_function.h@{reflect\_function.h}!function\_bind@{function\_bind}}
@@ -246,6 +223,12 @@ F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+S\+Y\+NC&\\
 \index{function\_await@{function\_await}!reflect\_function.h@{reflect\_function.h}}
 \doxysubsubsection{function\_await()}
 {\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function\+\_\+return} function\+\_\+await (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{func,  }\item[{\textbf{ function\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size,  }\item[{\textbf{ function\+\_\+resolve\+\_\+callback}}]{resolve\+\_\+callback,  }\item[{\textbf{ function\+\_\+reject\+\_\+callback}}]{reject\+\_\+callback,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__function_8h_a93ce6eeff8ef033f0a36e60875096bfc}} 
+\index{reflect\_function.h@{reflect\_function.h}!function\_stats\_debug@{function\_stats\_debug}}
+\index{function\_stats\_debug@{function\_stats\_debug}!reflect\_function.h@{reflect\_function.h}}
+\doxysubsubsection{function\_stats\_debug()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void function\+\_\+stats\+\_\+debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__function_8h_a3ef49cc819e4515b1f0222cc7f3dd6dc}} 
 \index{reflect\_function.h@{reflect\_function.h}!function\_destroy@{function\_destroy}}

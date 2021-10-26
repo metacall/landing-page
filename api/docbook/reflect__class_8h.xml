@@ -2,8 +2,16 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__class_8h">
 <title>reflect_class.h File Reference</title>
 <indexterm><primary>reflect_class.h</primary></indexterm>
-<programlisting>#include &lt;reflect/reflect_value.h&gt;
+<programlisting>#include &lt;adt/adt_vector.h&gt;
+#include &lt;reflect/reflect_accessor.h&gt;
+#include &lt;reflect/reflect_attribute.h&gt;
+#include &lt;reflect/reflect_class_decl.h&gt;
+#include &lt;reflect/reflect_class_visibility.h&gt;
+#include &lt;reflect/reflect_constructor.h&gt;
+#include &lt;reflect/reflect_method.h&gt;
 #include &lt;reflect/reflect_object.h&gt;
+#include &lt;reflect/reflect_signature.h&gt;
+#include &lt;reflect/reflect_value.h&gt;
 </programlisting>Include dependency graph for reflect_class.h:<para>
     <informalfigure>
         <mediaobject>
@@ -32,29 +40,25 @@ This graph shows which files directly or indirectly include this file:<para>
 <simplesect>
     <title>Typedefs    </title>
         <itemizedlist>
-            <listitem><para>typedef void * <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link></para>
-</listitem>
-            <listitem><para>typedef struct class_type * <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link></para>
-</listitem>
             <listitem><para>typedef void * <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>[]</para>
 </listitem>
             <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link>) (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, void *)</para>
 </listitem>
             <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link>) (<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>, void *)</para>
 </listitem>
-            <listitem><para>typedef int(* <link linkend="_reflect__class_8h_1a55767619fc86aaebc3b4c15fd722bf63">class_impl_interface_create</link>) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</para>
+            <listitem><para>typedef int(* <link linkend="_reflect__class_8h_1a55767619fc86aaebc3b4c15fd722bf63">class_impl_interface_create</link>) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</para>
 </listitem>
-            <listitem><para>typedef <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>(* <link linkend="_reflect__class_8h_1a8de3e81791c30b55618958b5dcefac58">class_impl_interface_constructor</link>) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</para>
+            <listitem><para>typedef <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>(* <link linkend="_reflect__class_8h_1a38c334ddb1b110c4693415ae1c7e1720">class_impl_interface_constructor</link>) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link>, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</para>
 </listitem>
-            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1aef665634272d37f78dbd56600807cdfa">class_impl_interface_static_get</link>) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *)</para>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1ac70c39b56dfd69f42837fc1b8b80a3fe">class_impl_interface_static_get</link>) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *)</para>
 </listitem>
-            <listitem><para>typedef int(* <link linkend="_reflect__class_8h_1a6b73add4cfa75275c640a3eea9bd9701">class_impl_interface_static_set</link>) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
+            <listitem><para>typedef int(* <link linkend="_reflect__class_8h_1a0505df277e8c09f9bb59ec26a8ca868b">class_impl_interface_static_set</link>) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
 </listitem>
-            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1a6acae144338ac706534a1d0f1761a238">class_impl_interface_static_invoke</link>) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</para>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1a4985b209b652574ab541b0d5792d218b">class_impl_interface_static_invoke</link>) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</para>
 </listitem>
-            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1aa0786dff2f03422645259d1f1184a017">class_impl_interface_static_await</link>) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link>, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link>, void *)</para>
+            <listitem><para>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* <link linkend="_reflect__class_8h_1a9ba340502c4dac60709cbb502e0b2ea0">class_impl_interface_static_await</link>) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link>, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link>, void *)</para>
 </listitem>
-            <listitem><para>typedef void(* <link linkend="_reflect__class_8h_1a2ca3dd9b1bf0ef21986d576a7832e1dc">class_impl_interface_destroy</link>) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</para>
+            <listitem><para>typedef void(* <link linkend="_reflect__class_8h_1a2ca3dd9b1bf0ef21986d576a7832e1dc">class_impl_interface_destroy</link>) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</para>
 </listitem>
             <listitem><para>typedef class_interface(* <link linkend="_reflect__class_8h_1a11cfa867b914dc92668c9aed9e31ba96">class_impl_interface_singleton</link>) (void)</para>
 </listitem>
@@ -63,43 +67,65 @@ This graph shows which files directly or indirectly include this file:<para>
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>REFLECT_API <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> <link linkend="_reflect__class_8h_1a55b8b71f5f5ed8df886d4d536fb0eb27">class_create</link> (const char *name, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> impl, <link linkend="_reflect__class_8h_1a11cfa867b914dc92668c9aed9e31ba96">class_impl_interface_singleton</link> singleton)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> <link linkend="_reflect__class_8h_1ac6c5eac78dcdc9acef14ed8b79840be3">class_create</link> (const char *name, enum <link linkend="_reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913">accessor_type_id</link> accessor, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> impl, <link linkend="_reflect__class_8h_1a11cfa867b914dc92668c9aed9e31ba96">class_impl_interface_singleton</link> singleton)</para>
 </listitem>
-            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a502b70bd05d4b7ecbced360ceefaadf4">class_increment_reference</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a502b70bd05d4b7ecbced360ceefaadf4">class_increment_reference</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
 </listitem>
-            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1ac15a40b786e31618a4b2eda5a95ae836">class_decrement_reference</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1ac15a40b786e31618a4b2eda5a95ae836">class_decrement_reference</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> <link linkend="_reflect__class_8h_1a0caae9162ce8891bc0d3a19c663d1a53">class_impl_get</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> <link linkend="_reflect__class_8h_1a0caae9162ce8891bc0d3a19c663d1a53">class_impl_get</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> <link linkend="_reflect__class_8h_1a3eed8458d3fdaf7ce6e1a7e33cd774bb">class_new</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t argc)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> <link linkend="_reflect__class_8h_1a64fe3931969f760239c970c74c0bd983">class_new</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *name, <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> ctor, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t argc)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1a57ac656ed8bbc28ddb16dfb46f764643">class_static_get</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1a57ac656ed8bbc28ddb16dfb46f764643">class_static_get</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key)</para>
 </listitem>
-            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a6f9710e42fbd7ab4f808361e20968a04">class_static_set</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a6f9710e42fbd7ab4f808361e20968a04">class_static_set</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1a9a9ae3b61bdad1869e6e3a7a61230a62">class_static_call</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size)</para>
+            <listitem><para>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_reflect__class_8h_1ac63c0e7ce0cc435ff047ce3eb3499f00">class_constructors</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1a9359a9f17b7ff3672d94a1f241a0099e">class_static_await</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link> resolve_callback, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link> reject_callback, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> <link linkend="_reflect__class_8h_1a4d3b587b79240c5247921939ec29973d">class_default_constructor</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
 </listitem>
-            <listitem><para>const REFLECT_API char * <link linkend="_reflect__class_8h_1a2fb9659f1662ca7d01adae0369ebc387">class_name</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> <link linkend="_reflect__class_8h_1a6e90e40b7c1012f579e184ef82515d21">class_constructor</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</para>
 </listitem>
-            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1a7972d49956ba43a04c8b6a21f76e490c">class_metadata</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+            <listitem><para>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_reflect__class_8h_1ab8ccd4ff715248b199bf55288d2e8824">class_static_methods</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key)</para>
 </listitem>
-            <listitem><para>REFLECT_API void <link linkend="_reflect__class_8h_1a7d8d4d3d74c47d55f7201e917cc1b232">class_destroy</link> (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+            <listitem><para>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> <link linkend="_reflect__class_8h_1ae42eebb8cef72d622190619620533872">class_methods</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> <link linkend="_reflect__class_8h_1a7fc7ba429dfe0b654d28e9c2dd16299a">class_static_method</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> ret, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> <link linkend="_reflect__class_8h_1a4bd7df49435a96bb58e22962796ecc55">class_method</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> ret, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> <link linkend="_reflect__class_8h_1abff662163896cd46e31f07492842269c">class_static_attribute</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> <link linkend="_reflect__class_8h_1a04015e3e6ba3896a89df7669f3365fb1">class_attribute</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char *key)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a9134cc0c292c97161be7f3c325b73582">class_register_constructor</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> ctor)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a9e817589bf1106c914d6bfe3324f1307">class_register_static_method</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a5cb83a771ae1686901c6d62b2b679027">class_register_method</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a932e72f406678b76143fc8c86df0bf86">class_register_static_attribute</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> attr)</para>
+</listitem>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__class_8h_1a8ff2132c1c32a2fd3743823fd8f44f6f">class_register_attribute</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> attr)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1af283c2acb0e15881917b28dbc9599819">class_static_call</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1acc5bce2551cc9f8d1323cf3ebb2ccf91">class_static_await</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link> resolve_callback, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link> reject_callback, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>)</para>
+</listitem>
+            <listitem><para>const REFLECT_API char * <link linkend="_reflect__class_8h_1a2fb9659f1662ca7d01adae0369ebc387">class_name</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+</listitem>
+            <listitem><para>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_reflect__class_8h_1a7972d49956ba43a04c8b6a21f76e490c">class_metadata</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__class_8h_1a55ce61f55ab54a8617a4ee6f415894a7">class_stats_debug</link> (void)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__class_8h_1a7d8d4d3d74c47d55f7201e917cc1b232">class_destroy</link> (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Typedef Documentation</title>
-<anchor xml:id="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5"/>    <section>
-    <title>class_impl</title>
-<indexterm><primary>class_impl</primary><secondary>reflect_class.h</secondary></indexterm>
-<indexterm><primary>reflect_class.h</primary><secondary>class_impl</secondary></indexterm>
-<para><computeroutput>typedef void* <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link></computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc"/>    <section>
-    <title>klass</title>
-<indexterm><primary>klass</primary><secondary>reflect_class.h</secondary></indexterm>
-<indexterm><primary>reflect_class.h</primary><secondary>klass</secondary></indexterm>
-<para><computeroutput>typedef struct class_type* <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link></computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289"/>    <section>
+<anchor xml:id="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289"/>    <section>
     <title>class_args</title>
 <indexterm><primary>class_args</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_args</secondary></indexterm>
@@ -115,31 +141,31 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>class_impl_interface_create</title>
 <indexterm><primary>class_impl_interface_create</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_create</secondary></indexterm>
-<para><computeroutput>typedef int(* class_impl_interface_create) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a8de3e81791c30b55618958b5dcefac58"/>    <section>
+<para><computeroutput>typedef int(* class_impl_interface_create) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a38c334ddb1b110c4693415ae1c7e1720"/>    <section>
     <title>class_impl_interface_constructor</title>
 <indexterm><primary>class_impl_interface_constructor</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_constructor</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>(* class_impl_interface_constructor) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1aef665634272d37f78dbd56600807cdfa"/>    <section>
+<para><computeroutput>typedef <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link>(* class_impl_interface_constructor) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link>, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1ac70c39b56dfd69f42837fc1b8b80a3fe"/>    <section>
     <title>class_impl_interface_static_get</title>
 <indexterm><primary>class_impl_interface_static_get</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_static_get</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* class_impl_interface_static_get) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a6b73add4cfa75275c640a3eea9bd9701"/>    <section>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* class_impl_interface_static_get) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a0505df277e8c09f9bb59ec26a8ca868b"/>    <section>
     <title>class_impl_interface_static_set</title>
 <indexterm><primary>class_impl_interface_static_set</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_static_set</secondary></indexterm>
-<para><computeroutput>typedef int(* class_impl_interface_static_set) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a6acae144338ac706534a1d0f1761a238"/>    <section>
+<para><computeroutput>typedef int(* class_impl_interface_static_set) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, struct <link linkend="_structaccessor__type">accessor_type</link> *, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a4985b209b652574ab541b0d5792d218b"/>    <section>
     <title>class_impl_interface_static_invoke</title>
 <indexterm><primary>class_impl_interface_static_invoke</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_static_invoke</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* class_impl_interface_static_invoke) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1aa0786dff2f03422645259d1f1184a017"/>    <section>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* class_impl_interface_static_invoke) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a9ba340502c4dac60709cbb502e0b2ea0"/>    <section>
     <title>class_impl_interface_static_await</title>
 <indexterm><primary>class_impl_interface_static_await</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_static_await</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* class_impl_interface_static_await) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, const char *, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link>, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link>, void *)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a2ca3dd9b1bf0ef21986d576a7832e1dc"/>    <section>
+<para><computeroutput>typedef <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>(* class_impl_interface_static_await) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link>, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link>, size_t, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link>, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link>, void *)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a2ca3dd9b1bf0ef21986d576a7832e1dc"/>    <section>
     <title>class_impl_interface_destroy</title>
 <indexterm><primary>class_impl_interface_destroy</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_destroy</secondary></indexterm>
-<para><computeroutput>typedef void(* class_impl_interface_destroy) (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a11cfa867b914dc92668c9aed9e31ba96"/>    <section>
+<para><computeroutput>typedef void(* class_impl_interface_destroy) (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link>, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link>)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a11cfa867b914dc92668c9aed9e31ba96"/>    <section>
     <title>class_impl_interface_singleton</title>
 <indexterm><primary>class_impl_interface_singleton</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_interface_singleton</secondary></indexterm>
@@ -147,54 +173,114 @@ This graph shows which files directly or indirectly include this file:<para>
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_reflect__class_8h_1a55b8b71f5f5ed8df886d4d536fb0eb27"/>    <section>
+<anchor xml:id="_reflect__class_8h_1ac6c5eac78dcdc9acef14ed8b79840be3"/>    <section>
     <title>class_create()</title>
 <indexterm><primary>class_create</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_create</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> class_create (const char * name, <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> impl, <link linkend="_reflect__class_8h_1a11cfa867b914dc92668c9aed9e31ba96">class_impl_interface_singleton</link> singleton)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a502b70bd05d4b7ecbced360ceefaadf4"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> class_create (const char * name, enum <link linkend="_reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913">accessor_type_id</link> accessor, <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> impl, <link linkend="_reflect__class_8h_1a11cfa867b914dc92668c9aed9e31ba96">class_impl_interface_singleton</link> singleton)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a502b70bd05d4b7ecbced360ceefaadf4"/>    <section>
     <title>class_increment_reference()</title>
 <indexterm><primary>class_increment_reference</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_increment_reference</secondary></indexterm>
-<para><computeroutput>REFLECT_API int class_increment_reference (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1ac15a40b786e31618a4b2eda5a95ae836"/>    <section>
+<para><computeroutput>REFLECT_API int class_increment_reference (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1ac15a40b786e31618a4b2eda5a95ae836"/>    <section>
     <title>class_decrement_reference()</title>
 <indexterm><primary>class_decrement_reference</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_decrement_reference</secondary></indexterm>
-<para><computeroutput>REFLECT_API int class_decrement_reference (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a0caae9162ce8891bc0d3a19c663d1a53"/>    <section>
+<para><computeroutput>REFLECT_API int class_decrement_reference (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a0caae9162ce8891bc0d3a19c663d1a53"/>    <section>
     <title>class_impl_get()</title>
 <indexterm><primary>class_impl_get</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_impl_get</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__class_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> class_impl_get (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a3eed8458d3fdaf7ce6e1a7e33cd774bb"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__class__decl_8h_1a2234f6a9c79471f9f333531b1d39fcd5">class_impl</link> class_impl_get (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a64fe3931969f760239c970c74c0bd983"/>    <section>
     <title>class_new()</title>
 <indexterm><primary>class_new</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_new</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> class_new (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t argc)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a57ac656ed8bbc28ddb16dfb46f764643"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__object_8h_1a81c8dc01745e4ad1d67aefef13bfb08e">object</link> class_new (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * name, <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> ctor, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t argc)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a57ac656ed8bbc28ddb16dfb46f764643"/>    <section>
     <title>class_static_get()</title>
 <indexterm><primary>class_static_get</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_static_get</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_static_get (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a6f9710e42fbd7ab4f808361e20968a04"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_static_get (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a6f9710e42fbd7ab4f808361e20968a04"/>    <section>
     <title>class_static_set()</title>
 <indexterm><primary>class_static_set</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_static_set</secondary></indexterm>
-<para><computeroutput>REFLECT_API int class_static_set (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a9a9ae3b61bdad1869e6e3a7a61230a62"/>    <section>
+<para><computeroutput>REFLECT_API int class_static_set (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key, <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> v)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1ac63c0e7ce0cc435ff047ce3eb3499f00"/>    <section>
+    <title>class_constructors()</title>
+<indexterm><primary>class_constructors</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_constructors</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> class_constructors (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a4d3b587b79240c5247921939ec29973d"/>    <section>
+    <title>class_default_constructor()</title>
+<indexterm><primary>class_default_constructor</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_default_constructor</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> class_default_constructor (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a6e90e40b7c1012f579e184ef82515d21"/>    <section>
+    <title>class_constructor()</title>
+<indexterm><primary>class_constructor</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_constructor</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> class_constructor (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1ab8ccd4ff715248b199bf55288d2e8824"/>    <section>
+    <title>class_static_methods()</title>
+<indexterm><primary>class_static_methods</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_static_methods</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> class_static_methods (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1ae42eebb8cef72d622190619620533872"/>    <section>
+    <title>class_methods()</title>
+<indexterm><primary>class_methods</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_methods</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f">vector</link> class_methods (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a7fc7ba429dfe0b654d28e9c2dd16299a"/>    <section>
+    <title>class_static_method()</title>
+<indexterm><primary>class_static_method</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_static_method</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> class_static_method (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> ret, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a4bd7df49435a96bb58e22962796ecc55"/>    <section>
+    <title>class_method()</title>
+<indexterm><primary>class_method</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_method</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> class_method (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> ret, <link linkend="_reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950">type_id</link> args[], size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1abff662163896cd46e31f07492842269c"/>    <section>
+    <title>class_static_attribute()</title>
+<indexterm><primary>class_static_attribute</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_static_attribute</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> class_static_attribute (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a04015e3e6ba3896a89df7669f3365fb1"/>    <section>
+    <title>class_attribute()</title>
+<indexterm><primary>class_attribute</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_attribute</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> class_attribute (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * key)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a9134cc0c292c97161be7f3c325b73582"/>    <section>
+    <title>class_register_constructor()</title>
+<indexterm><primary>class_register_constructor</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_register_constructor</secondary></indexterm>
+<para><computeroutput>REFLECT_API int class_register_constructor (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1">constructor</link> ctor)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a9e817589bf1106c914d6bfe3324f1307"/>    <section>
+    <title>class_register_static_method()</title>
+<indexterm><primary>class_register_static_method</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_register_static_method</secondary></indexterm>
+<para><computeroutput>REFLECT_API int class_register_static_method (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a5cb83a771ae1686901c6d62b2b679027"/>    <section>
+    <title>class_register_method()</title>
+<indexterm><primary>class_register_method</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_register_method</secondary></indexterm>
+<para><computeroutput>REFLECT_API int class_register_method (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a932e72f406678b76143fc8c86df0bf86"/>    <section>
+    <title>class_register_static_attribute()</title>
+<indexterm><primary>class_register_static_attribute</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_register_static_attribute</secondary></indexterm>
+<para><computeroutput>REFLECT_API int class_register_static_attribute (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> attr)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a8ff2132c1c32a2fd3743823fd8f44f6f"/>    <section>
+    <title>class_register_attribute()</title>
+<indexterm><primary>class_register_attribute</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_register_attribute</secondary></indexterm>
+<para><computeroutput>REFLECT_API int class_register_attribute (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b">attribute</link> attr)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1af283c2acb0e15881917b28dbc9599819"/>    <section>
     <title>class_static_call()</title>
 <indexterm><primary>class_static_call</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_static_call</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_static_call (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a9359a9f17b7ff3672d94a1f241a0099e"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_static_call (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1acc5bce2551cc9f8d1323cf3ebb2ccf91"/>    <section>
     <title>class_static_await()</title>
 <indexterm><primary>class_static_await</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_static_await</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_static_await (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, const char * name, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link> resolve_callback, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link> reject_callback, void * context)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a2fb9659f1662ca7d01adae0369ebc387"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_static_await (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls, <link linkend="_reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122">method</link> m, <link linkend="_reflect__class_8h_1a4cfa2d34bc4e64b7fabdf94813e5a289">class_args</link> args, size_t size, <link linkend="_reflect__class_8h_1af5c0a9aba70a0ae25e8c50586959a243">class_resolve_callback</link> resolve_callback, <link linkend="_reflect__class_8h_1af5250f199f45eab0afd5bb8854f7cdc5">class_reject_callback</link> reject_callback, void * context)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a2fb9659f1662ca7d01adae0369ebc387"/>    <section>
     <title>class_name()</title>
 <indexterm><primary>class_name</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_name</secondary></indexterm>
-<para><computeroutput>const REFLECT_API char* class_name (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a7972d49956ba43a04c8b6a21f76e490c"/>    <section>
+<para><computeroutput>const REFLECT_API char* class_name (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a7972d49956ba43a04c8b6a21f76e490c"/>    <section>
     <title>class_metadata()</title>
 <indexterm><primary>class_metadata</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_metadata</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_metadata (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a7d8d4d3d74c47d55f7201e917cc1b232"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> class_metadata (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a55ce61f55ab54a8617a4ee6f415894a7"/>    <section>
+    <title>class_stats_debug()</title>
+<indexterm><primary>class_stats_debug</primary><secondary>reflect_class.h</secondary></indexterm>
+<indexterm><primary>reflect_class.h</primary><secondary>class_stats_debug</secondary></indexterm>
+<para><computeroutput>REFLECT_API void class_stats_debug (void )</computeroutput></para>    </section><anchor xml:id="_reflect__class_8h_1a7d8d4d3d74c47d55f7201e917cc1b232"/>    <section>
     <title>class_destroy()</title>
 <indexterm><primary>class_destroy</primary><secondary>reflect_class.h</secondary></indexterm>
 <indexterm><primary>reflect_class.h</primary><secondary>class_destroy</secondary></indexterm>
-<para><computeroutput>REFLECT_API void class_destroy (<link linkend="_reflect__class_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para></section>
+<para><computeroutput>REFLECT_API void class_destroy (<link linkend="_reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc">klass</link> cls)</computeroutput></para></section>
 </section>
 </section>

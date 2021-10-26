@@ -1,0 +1,169 @@
+.TH "adt_map.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+adt_map.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <adt/adt_api\&.h>\fP
+.br
+\fC#include <adt/adt_comparable\&.h>\fP
+.br
+\fC#include <adt/adt_hash\&.h>\fP
+.br
+\fC#include <adt/adt_vector\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct map_type * \fBmap\fP"
+.br
+.ti -1c
+.RI "typedef \fBhash\fP \fBmap_hash\fP"
+.br
+.ti -1c
+.RI "typedef \fBcomparable\fP \fBmap_key\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBmap_value\fP"
+.br
+.ti -1c
+.RI "typedef void * \fBmap_cb_iterate_args\fP"
+.br
+.ti -1c
+.RI "typedef \fBhash_callback\fP \fBmap_cb_hash\fP"
+.br
+.ti -1c
+.RI "typedef \fBcomparable_callback\fP \fBmap_cb_compare\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBmap_cb_iterate\fP) (\fBmap\fP, \fBmap_key\fP, \fBmap_value\fP, \fBmap_cb_iterate_args\fP)"
+.br
+.ti -1c
+.RI "typedef struct map_iterator_type * \fBmap_iterator\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "ADT_API \fBmap\fP \fBmap_create\fP (\fBmap_cb_hash\fP hash_cb, \fBmap_cb_compare\fP compare_cb)"
+.br
+.ti -1c
+.RI "ADT_API size_t \fBmap_size\fP (\fBmap\fP m)"
+.br
+.ti -1c
+.RI "ADT_API int \fBmap_insert\fP (\fBmap\fP m, \fBmap_key\fP key, \fBmap_value\fP \fBvalue\fP)"
+.br
+.ti -1c
+.RI "ADT_API int \fBmap_insert_array\fP (\fBmap\fP m, \fBmap_key\fP keys[], \fBmap_value\fP values[], size_t size)"
+.br
+.ti -1c
+.RI "ADT_API \fBvector\fP \fBmap_get\fP (\fBmap\fP m, \fBmap_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API int \fBmap_contains\fP (\fBmap\fP m, \fBmap_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API int \fBmap_contains_any\fP (\fBmap\fP dest, \fBmap\fP src)"
+.br
+.ti -1c
+.RI "ADT_API \fBmap_value\fP \fBmap_remove\fP (\fBmap\fP m, \fBmap_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API \fBvector\fP \fBmap_remove_all\fP (\fBmap\fP m, \fBmap_key\fP key)"
+.br
+.ti -1c
+.RI "ADT_API void \fBmap_iterate\fP (\fBmap\fP m, \fBmap_cb_iterate\fP iterate_cb, \fBmap_cb_iterate_args\fP args)"
+.br
+.ti -1c
+.RI "ADT_API int \fBmap_append\fP (\fBmap\fP dest, \fBmap\fP src)"
+.br
+.ti -1c
+.RI "ADT_API int \fBmap_clear\fP (\fBmap\fP m)"
+.br
+.ti -1c
+.RI "ADT_API void \fBmap_destroy\fP (\fBmap\fP m)"
+.br
+.ti -1c
+.RI "ADT_API \fBmap_iterator\fP \fBmap_iterator_begin\fP (\fBmap\fP m)"
+.br
+.ti -1c
+.RI "ADT_API \fBmap_key\fP \fBmap_iterator_get_key\fP (\fBmap_iterator\fP it)"
+.br
+.ti -1c
+.RI "ADT_API \fBmap_value\fP \fBmap_iterator_get_value\fP (\fBmap_iterator\fP it)"
+.br
+.ti -1c
+.RI "ADT_API void \fBmap_iterator_next\fP (\fBmap_iterator\fP it)"
+.br
+.ti -1c
+.RI "ADT_API int \fBmap_iterator_end\fP (\fBmap_iterator\fP *it)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct map_type* \fBmap\fP"
+
+.SS "typedef \fBhash\fP \fBmap_hash\fP"
+
+.SS "typedef \fBcomparable\fP \fBmap_key\fP"
+
+.SS "typedef void* \fBmap_value\fP"
+
+.SS "typedef void* \fBmap_cb_iterate_args\fP"
+
+.SS "typedef \fBhash_callback\fP \fBmap_cb_hash\fP"
+
+.SS "typedef \fBcomparable_callback\fP \fBmap_cb_compare\fP"
+
+.SS "typedef int(* map_cb_iterate) (\fBmap\fP, \fBmap_key\fP, \fBmap_value\fP, \fBmap_cb_iterate_args\fP)"
+
+.SS "typedef struct map_iterator_type* \fBmap_iterator\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "ADT_API \fBmap\fP map_create (\fBmap_cb_hash\fP hash_cb, \fBmap_cb_compare\fP compare_cb)"
+
+.SS "ADT_API size_t map_size (\fBmap\fP m)"
+
+.SS "ADT_API int map_insert (\fBmap\fP m, \fBmap_key\fP key, \fBmap_value\fP value)"
+
+.SS "ADT_API int map_insert_array (\fBmap\fP m, \fBmap_key\fP keys[], \fBmap_value\fP values[], size_t size)"
+
+.SS "ADT_API \fBvector\fP map_get (\fBmap\fP m, \fBmap_key\fP key)"
+
+.SS "ADT_API int map_contains (\fBmap\fP m, \fBmap_key\fP key)"
+
+.SS "ADT_API int map_contains_any (\fBmap\fP dest, \fBmap\fP src)"
+
+.SS "ADT_API \fBmap_value\fP map_remove (\fBmap\fP m, \fBmap_key\fP key)"
+
+.SS "ADT_API \fBvector\fP map_remove_all (\fBmap\fP m, \fBmap_key\fP key)"
+
+.SS "ADT_API void map_iterate (\fBmap\fP m, \fBmap_cb_iterate\fP iterate_cb, \fBmap_cb_iterate_args\fP args)"
+
+.SS "ADT_API int map_append (\fBmap\fP dest, \fBmap\fP src)"
+
+.SS "ADT_API int map_clear (\fBmap\fP m)"
+
+.SS "ADT_API void map_destroy (\fBmap\fP m)"
+
+.SS "ADT_API \fBmap_iterator\fP map_iterator_begin (\fBmap\fP m)"
+
+.SS "ADT_API \fBmap_key\fP map_iterator_get_key (\fBmap_iterator\fP it)"
+
+.SS "ADT_API \fBmap_value\fP map_iterator_get_value (\fBmap_iterator\fP it)"
+
+.SS "ADT_API void map_iterator_next (\fBmap_iterator\fP it)"
+
+.SS "ADT_API int map_iterator_end (\fBmap_iterator\fP * it)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

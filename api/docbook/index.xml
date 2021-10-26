@@ -5,6 +5,9 @@
     </info>
 <chapter>
     <title>Class Documentation</title>
+    <xi:include href="structaccessor__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structattribute__interface__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structbucket__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structclass__interface__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structdetour__interface__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structdynlink__impl__interface__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -51,6 +54,7 @@
     <xi:include href="structlog__record__va__list__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structmetacall__allocator__nginx__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structmetacall__allocator__std__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structmetacall__await__callbacks__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structmetacall__initialize__configuration__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structmetacall__log__custom__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structmetacall__log__custom__va__list__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -59,18 +63,19 @@
     <xi:include href="structmetacall__log__socket__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structmetacall__log__stdio__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structmetacall__log__syslog__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structmethod__interface__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structobject__interface__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="structset__bucket__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="structset__pair__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structpair__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="structtype__interface__type.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
     <title>File Documentation</title>
     <xi:include href="adt_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="adt__bucket_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="adt__comparable_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="adt__hash_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="adt__map_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="adt__set_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-    <xi:include href="adt__set__bucket_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="adt__trie_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="adt__vector_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="detour_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -170,11 +175,21 @@
     <xi:include href="preprocessor__stringify_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="preprocessor__tuple_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__accessor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__async_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__attribute_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__attribute__decl_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__class_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__class__decl_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__class__visibility_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__constructor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__constructor__decl_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__context_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__exception_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__function_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__future_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__method_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="reflect__method__decl_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__object_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__scope_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="reflect__signature_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

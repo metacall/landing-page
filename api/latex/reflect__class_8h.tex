@@ -1,13 +1,21 @@
 \doxysection{reflect\+\_\+class.\+h File Reference}
 \label{reflect__class_8h}\index{reflect\_class.h@{reflect\_class.h}}
-{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+vector.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+accessor.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+attribute.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+class\+\_\+decl.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+class\+\_\+visibility.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+constructor.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+method.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+object.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+signature.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
 Include dependency graph for reflect\+\_\+class.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=223pt]{reflect__class_8h__incl}
+\includegraphics[width=350pt]{reflect__class_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -15,7 +23,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=162pt]{reflect__class_8h__dep__incl}
+\includegraphics[width=166pt]{reflect__class_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -26,10 +34,6 @@ struct \textbf{ class\+\_\+interface}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef void $\ast$ \textbf{ class\+\_\+impl}
-\item 
-typedef struct class\+\_\+type $\ast$ \textbf{ klass}
-\item 
 typedef void $\ast$ \textbf{ class\+\_\+args}[$\,$]
 \item 
 typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+resolve\+\_\+callback}) (\textbf{ value}, void $\ast$)
@@ -38,15 +42,15 @@ typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+reject\+\_\+callback}) (\text
 \item 
 typedef int($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+create}) (\textbf{ klass}, \textbf{ class\+\_\+impl})
 \item 
-typedef \textbf{ object}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+constructor}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$name, \textbf{ class\+\_\+args}, size\+\_\+t)
+typedef \textbf{ object}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+constructor}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ constructor}, \textbf{ class\+\_\+args}, size\+\_\+t)
 \item 
-typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+get}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$)
+typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+get}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, struct \textbf{ accessor\+\_\+type} $\ast$)
 \item 
-typedef int($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+set}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ value})
+typedef int($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+set}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, struct \textbf{ accessor\+\_\+type} $\ast$, \textbf{ value})
 \item 
-typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+invoke}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ class\+\_\+args}, size\+\_\+t)
+typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+invoke}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, \textbf{ method}, \textbf{ class\+\_\+args}, size\+\_\+t)
 \item 
-typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+await}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ class\+\_\+args}, size\+\_\+t, \textbf{ class\+\_\+resolve\+\_\+callback}, \textbf{ class\+\_\+reject\+\_\+callback}, void $\ast$)
+typedef \textbf{ value}($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+await}) (\textbf{ klass}, \textbf{ class\+\_\+impl}, \textbf{ method}, \textbf{ class\+\_\+args}, size\+\_\+t, \textbf{ class\+\_\+resolve\+\_\+callback}, \textbf{ class\+\_\+reject\+\_\+callback}, void $\ast$)
 \item 
 typedef void($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\+destroy}) (\textbf{ klass}, \textbf{ class\+\_\+impl})
 \item 
@@ -55,7 +59,7 @@ typedef class\+\_\+interface($\ast$ \textbf{ class\+\_\+impl\+\_\+interface\+\_\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} \textbf{ class\+\_\+create} (const char $\ast$name, \textbf{ class\+\_\+impl} impl, \textbf{ class\+\_\+impl\+\_\+interface\+\_\+singleton} singleton)
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} \textbf{ class\+\_\+create} (const char $\ast$name, enum \textbf{ accessor\+\_\+type\+\_\+id} accessor, \textbf{ class\+\_\+impl} impl, \textbf{ class\+\_\+impl\+\_\+interface\+\_\+singleton} singleton)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+increment\+\_\+reference} (\textbf{ klass} cls)
 \item 
@@ -63,37 +67,55 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+decrement\+\_\+referenc
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ class\+\_\+impl} \textbf{ class\+\_\+impl\+\_\+get} (\textbf{ klass} cls)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} \textbf{ class\+\_\+new} (\textbf{ klass} cls, const char $\ast$name, \textbf{ class\+\_\+args} args, size\+\_\+t argc)
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} \textbf{ class\+\_\+new} (\textbf{ klass} cls, const char $\ast$name, \textbf{ constructor} ctor, \textbf{ class\+\_\+args} args, size\+\_\+t argc)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+static\+\_\+get} (\textbf{ klass} cls, const char $\ast$key)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+static\+\_\+set} (\textbf{ klass} cls, const char $\ast$key, \textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+static\+\_\+call} (\textbf{ klass} cls, const char $\ast$name, \textbf{ class\+\_\+args} args, size\+\_\+t size)
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ class\+\_\+constructors} (\textbf{ klass} cls)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+static\+\_\+await} (\textbf{ klass} cls, const char $\ast$name, \textbf{ class\+\_\+args} args, size\+\_\+t size, \textbf{ class\+\_\+resolve\+\_\+callback} resolve\+\_\+callback, \textbf{ class\+\_\+reject\+\_\+callback} reject\+\_\+callback, void $\ast$\textbf{ context})
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ constructor} \textbf{ class\+\_\+default\+\_\+constructor} (\textbf{ klass} cls)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ constructor} \textbf{ class\+\_\+constructor} (\textbf{ klass} cls, \textbf{ type\+\_\+id} args[$\,$], size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ class\+\_\+static\+\_\+methods} (\textbf{ klass} cls, const char $\ast$key)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ class\+\_\+methods} (\textbf{ klass} cls, const char $\ast$key)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ method} \textbf{ class\+\_\+static\+\_\+method} (\textbf{ klass} cls, const char $\ast$key, \textbf{ type\+\_\+id} ret, \textbf{ type\+\_\+id} args[$\,$], size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ method} \textbf{ class\+\_\+method} (\textbf{ klass} cls, const char $\ast$key, \textbf{ type\+\_\+id} ret, \textbf{ type\+\_\+id} args[$\,$], size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ attribute} \textbf{ class\+\_\+static\+\_\+attribute} (\textbf{ klass} cls, const char $\ast$key)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ attribute} \textbf{ class\+\_\+attribute} (\textbf{ klass} cls, const char $\ast$key)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+register\+\_\+constructor} (\textbf{ klass} cls, \textbf{ constructor} ctor)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+register\+\_\+static\+\_\+method} (\textbf{ klass} cls, \textbf{ method} m)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+register\+\_\+method} (\textbf{ klass} cls, \textbf{ method} m)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+register\+\_\+static\+\_\+attribute} (\textbf{ klass} cls, \textbf{ attribute} attr)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ class\+\_\+register\+\_\+attribute} (\textbf{ klass} cls, \textbf{ attribute} attr)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+static\+\_\+call} (\textbf{ klass} cls, \textbf{ method} m, \textbf{ class\+\_\+args} args, size\+\_\+t size)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+static\+\_\+await} (\textbf{ klass} cls, \textbf{ method} m, \textbf{ class\+\_\+args} args, size\+\_\+t size, \textbf{ class\+\_\+resolve\+\_\+callback} resolve\+\_\+callback, \textbf{ class\+\_\+reject\+\_\+callback} reject\+\_\+callback, void $\ast$\textbf{ context})
 \item 
 const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ class\+\_\+name} (\textbf{ klass} cls)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ class\+\_\+metadata} (\textbf{ klass} cls)
+\item 
+R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ class\+\_\+stats\+\_\+debug} (void)
 \item 
 R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ class\+\_\+destroy} (\textbf{ klass} cls)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\label{reflect__class_8h_a2234f6a9c79471f9f333531b1d39fcd5}} 
-\index{reflect\_class.h@{reflect\_class.h}!class\_impl@{class\_impl}}
-\index{class\_impl@{class\_impl}!reflect\_class.h@{reflect\_class.h}}
-\doxysubsubsection{class\_impl}
-{\footnotesize\ttfamily typedef void$\ast$ \textbf{ class\+\_\+impl}}
-
-\mbox{\label{reflect__class_8h_ae0333cc8abac5fba6baa3bb523242fcc}} 
-\index{reflect\_class.h@{reflect\_class.h}!klass@{klass}}
-\index{klass@{klass}!reflect\_class.h@{reflect\_class.h}}
-\doxysubsubsection{klass}
-{\footnotesize\ttfamily typedef struct class\+\_\+type$\ast$ \textbf{ klass}}
-
 \mbox{\label{reflect__class_8h_a4cfa2d34bc4e64b7fabdf94813e5a289}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_args@{class\_args}}
 \index{class\_args@{class\_args}!reflect\_class.h@{reflect\_class.h}}
@@ -118,35 +140,35 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ class\+\_\+destroy} (\textbf{ kla
 \doxysubsubsection{class\_impl\_interface\_create}
 {\footnotesize\ttfamily typedef int($\ast$ class\+\_\+impl\+\_\+interface\+\_\+create) (\textbf{ klass}, \textbf{ class\+\_\+impl})}
 
-\mbox{\label{reflect__class_8h_a8de3e81791c30b55618958b5dcefac58}} 
+\mbox{\label{reflect__class_8h_a38c334ddb1b110c4693415ae1c7e1720}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_impl\_interface\_constructor@{class\_impl\_interface\_constructor}}
 \index{class\_impl\_interface\_constructor@{class\_impl\_interface\_constructor}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_impl\_interface\_constructor}
-{\footnotesize\ttfamily typedef \textbf{ object}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+constructor) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$name, \textbf{ class\+\_\+args}, size\+\_\+t)}
+{\footnotesize\ttfamily typedef \textbf{ object}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+constructor) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ constructor}, \textbf{ class\+\_\+args}, size\+\_\+t)}
 
-\mbox{\label{reflect__class_8h_aef665634272d37f78dbd56600807cdfa}} 
+\mbox{\label{reflect__class_8h_ac70c39b56dfd69f42837fc1b8b80a3fe}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_impl\_interface\_static\_get@{class\_impl\_interface\_static\_get}}
 \index{class\_impl\_interface\_static\_get@{class\_impl\_interface\_static\_get}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_impl\_interface\_static\_get}
-{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+get) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$)}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+get) (\textbf{ klass}, \textbf{ class\+\_\+impl}, struct \textbf{ accessor\+\_\+type} $\ast$)}
 
-\mbox{\label{reflect__class_8h_a6b73add4cfa75275c640a3eea9bd9701}} 
+\mbox{\label{reflect__class_8h_a0505df277e8c09f9bb59ec26a8ca868b}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_impl\_interface\_static\_set@{class\_impl\_interface\_static\_set}}
 \index{class\_impl\_interface\_static\_set@{class\_impl\_interface\_static\_set}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_impl\_interface\_static\_set}
-{\footnotesize\ttfamily typedef int($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+set) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ value})}
+{\footnotesize\ttfamily typedef int($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+set) (\textbf{ klass}, \textbf{ class\+\_\+impl}, struct \textbf{ accessor\+\_\+type} $\ast$, \textbf{ value})}
 
-\mbox{\label{reflect__class_8h_a6acae144338ac706534a1d0f1761a238}} 
+\mbox{\label{reflect__class_8h_a4985b209b652574ab541b0d5792d218b}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_impl\_interface\_static\_invoke@{class\_impl\_interface\_static\_invoke}}
 \index{class\_impl\_interface\_static\_invoke@{class\_impl\_interface\_static\_invoke}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_impl\_interface\_static\_invoke}
-{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+invoke) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ class\+\_\+args}, size\+\_\+t)}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+invoke) (\textbf{ klass}, \textbf{ class\+\_\+impl}, \textbf{ method}, \textbf{ class\+\_\+args}, size\+\_\+t)}
 
-\mbox{\label{reflect__class_8h_aa0786dff2f03422645259d1f1184a017}} 
+\mbox{\label{reflect__class_8h_a9ba340502c4dac60709cbb502e0b2ea0}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_impl\_interface\_static\_await@{class\_impl\_interface\_static\_await}}
 \index{class\_impl\_interface\_static\_await@{class\_impl\_interface\_static\_await}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_impl\_interface\_static\_await}
-{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+await) (\textbf{ klass}, \textbf{ class\+\_\+impl}, const char $\ast$, \textbf{ class\+\_\+args}, size\+\_\+t, \textbf{ class\+\_\+resolve\+\_\+callback}, \textbf{ class\+\_\+reject\+\_\+callback}, void $\ast$)}
+{\footnotesize\ttfamily typedef \textbf{ value}($\ast$ class\+\_\+impl\+\_\+interface\+\_\+static\+\_\+await) (\textbf{ klass}, \textbf{ class\+\_\+impl}, \textbf{ method}, \textbf{ class\+\_\+args}, size\+\_\+t, \textbf{ class\+\_\+resolve\+\_\+callback}, \textbf{ class\+\_\+reject\+\_\+callback}, void $\ast$)}
 
 \mbox{\label{reflect__class_8h_a2ca3dd9b1bf0ef21986d576a7832e1dc}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_impl\_interface\_destroy@{class\_impl\_interface\_destroy}}
@@ -163,11 +185,11 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ class\+\_\+destroy} (\textbf{ kla
 
 
 \doxysubsection{Function Documentation}
-\mbox{\label{reflect__class_8h_a55b8b71f5f5ed8df886d4d536fb0eb27}} 
+\mbox{\label{reflect__class_8h_ac6c5eac78dcdc9acef14ed8b79840be3}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_create@{class\_create}}
 \index{class\_create@{class\_create}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_create()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} class\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\textbf{ class\+\_\+impl}}]{impl,  }\item[{\textbf{ class\+\_\+impl\+\_\+interface\+\_\+singleton}}]{singleton }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} class\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{enum \textbf{ accessor\+\_\+type\+\_\+id}}]{accessor,  }\item[{\textbf{ class\+\_\+impl}}]{impl,  }\item[{\textbf{ class\+\_\+impl\+\_\+interface\+\_\+singleton}}]{singleton }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__class_8h_a502b70bd05d4b7ecbced360ceefaadf4}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_increment\_reference@{class\_increment\_reference}}
@@ -187,11 +209,11 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ class\+\_\+destroy} (\textbf{ kla
 \doxysubsubsection{class\_impl\_get()}
 {\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ class\+\_\+impl} class\+\_\+impl\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls }\end{DoxyParamCaption})}
 
-\mbox{\label{reflect__class_8h_a3eed8458d3fdaf7ce6e1a7e33cd774bb}} 
+\mbox{\label{reflect__class_8h_a64fe3931969f760239c970c74c0bd983}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_new@{class\_new}}
 \index{class\_new@{class\_new}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_new()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} class\+\_\+new (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ class\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} class\+\_\+new (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ constructor}}]{ctor,  }\item[{\textbf{ class\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__class_8h_a57ac656ed8bbc28ddb16dfb46f764643}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_static\_get@{class\_static\_get}}
@@ -205,17 +227,101 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ class\+\_\+destroy} (\textbf{ kla
 \doxysubsubsection{class\_static\_set()}
 {\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int class\+\_\+static\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
-\mbox{\label{reflect__class_8h_a9a9ae3b61bdad1869e6e3a7a61230a62}} 
+\mbox{\label{reflect__class_8h_ac63c0e7ce0cc435ff047ce3eb3499f00}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_constructors@{class\_constructors}}
+\index{class\_constructors@{class\_constructors}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_constructors()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} class\+\_\+constructors (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a4d3b587b79240c5247921939ec29973d}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_default\_constructor@{class\_default\_constructor}}
+\index{class\_default\_constructor@{class\_default\_constructor}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_default\_constructor()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ constructor} class\+\_\+default\+\_\+constructor (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a6e90e40b7c1012f579e184ef82515d21}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_constructor@{class\_constructor}}
+\index{class\_constructor@{class\_constructor}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_constructor()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ constructor} class\+\_\+constructor (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ type\+\_\+id}}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_ab8ccd4ff715248b199bf55288d2e8824}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_static\_methods@{class\_static\_methods}}
+\index{class\_static\_methods@{class\_static\_methods}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_static\_methods()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} class\+\_\+static\+\_\+methods (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_ae42eebb8cef72d622190619620533872}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_methods@{class\_methods}}
+\index{class\_methods@{class\_methods}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_methods()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} class\+\_\+methods (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a7fc7ba429dfe0b654d28e9c2dd16299a}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_static\_method@{class\_static\_method}}
+\index{class\_static\_method@{class\_static\_method}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_static\_method()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ method} class\+\_\+static\+\_\+method (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ type\+\_\+id}}]{ret,  }\item[{\textbf{ type\+\_\+id}}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a4bd7df49435a96bb58e22962796ecc55}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_method@{class\_method}}
+\index{class\_method@{class\_method}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_method()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ method} class\+\_\+method (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ type\+\_\+id}}]{ret,  }\item[{\textbf{ type\+\_\+id}}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_abff662163896cd46e31f07492842269c}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_static\_attribute@{class\_static\_attribute}}
+\index{class\_static\_attribute@{class\_static\_attribute}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_static\_attribute()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ attribute} class\+\_\+static\+\_\+attribute (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a04015e3e6ba3896a89df7669f3365fb1}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_attribute@{class\_attribute}}
+\index{class\_attribute@{class\_attribute}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_attribute()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ attribute} class\+\_\+attribute (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a9134cc0c292c97161be7f3c325b73582}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_register\_constructor@{class\_register\_constructor}}
+\index{class\_register\_constructor@{class\_register\_constructor}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_register\_constructor()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int class\+\_\+register\+\_\+constructor (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ constructor}}]{ctor }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a9e817589bf1106c914d6bfe3324f1307}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_register\_static\_method@{class\_register\_static\_method}}
+\index{class\_register\_static\_method@{class\_register\_static\_method}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_register\_static\_method()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int class\+\_\+register\+\_\+static\+\_\+method (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ method}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a5cb83a771ae1686901c6d62b2b679027}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_register\_method@{class\_register\_method}}
+\index{class\_register\_method@{class\_register\_method}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_register\_method()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int class\+\_\+register\+\_\+method (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ method}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a932e72f406678b76143fc8c86df0bf86}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_register\_static\_attribute@{class\_register\_static\_attribute}}
+\index{class\_register\_static\_attribute@{class\_register\_static\_attribute}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_register\_static\_attribute()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int class\+\_\+register\+\_\+static\+\_\+attribute (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ attribute}}]{attr }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a8ff2132c1c32a2fd3743823fd8f44f6f}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_register\_attribute@{class\_register\_attribute}}
+\index{class\_register\_attribute@{class\_register\_attribute}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_register\_attribute()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int class\+\_\+register\+\_\+attribute (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ attribute}}]{attr }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_af283c2acb0e15881917b28dbc9599819}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_static\_call@{class\_static\_call}}
 \index{class\_static\_call@{class\_static\_call}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_static\_call()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} class\+\_\+static\+\_\+call (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ class\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} class\+\_\+static\+\_\+call (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ method}}]{m,  }\item[{\textbf{ class\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
-\mbox{\label{reflect__class_8h_a9359a9f17b7ff3672d94a1f241a0099e}} 
+\mbox{\label{reflect__class_8h_acc5bce2551cc9f8d1323cf3ebb2ccf91}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_static\_await@{class\_static\_await}}
 \index{class\_static\_await@{class\_static\_await}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_static\_await()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} class\+\_\+static\+\_\+await (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ class\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size,  }\item[{\textbf{ class\+\_\+resolve\+\_\+callback}}]{resolve\+\_\+callback,  }\item[{\textbf{ class\+\_\+reject\+\_\+callback}}]{reject\+\_\+callback,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} class\+\_\+static\+\_\+await (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls,  }\item[{\textbf{ method}}]{m,  }\item[{\textbf{ class\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size,  }\item[{\textbf{ class\+\_\+resolve\+\_\+callback}}]{resolve\+\_\+callback,  }\item[{\textbf{ class\+\_\+reject\+\_\+callback}}]{reject\+\_\+callback,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__class_8h_a2fb9659f1662ca7d01adae0369ebc387}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_name@{class\_name}}
@@ -228,6 +334,12 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ class\+\_\+destroy} (\textbf{ kla
 \index{class\_metadata@{class\_metadata}!reflect\_class.h@{reflect\_class.h}}
 \doxysubsubsection{class\_metadata()}
 {\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} class\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{cls }\end{DoxyParamCaption})}
+
+\mbox{\label{reflect__class_8h_a55ce61f55ab54a8617a4ee6f415894a7}} 
+\index{reflect\_class.h@{reflect\_class.h}!class\_stats\_debug@{class\_stats\_debug}}
+\index{class\_stats\_debug@{class\_stats\_debug}!reflect\_class.h@{reflect\_class.h}}
+\doxysubsubsection{class\_stats\_debug()}
+{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void class\+\_\+stats\+\_\+debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__class_8h_a7d8d4d3d74c47d55f7201e917cc1b232}} 
 \index{reflect\_class.h@{reflect\_class.h}!class\_destroy@{class\_destroy}}

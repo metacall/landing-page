@@ -4,8 +4,9 @@
     <compoundname>adt_comparable.h</compoundname>
     <includes local="no">adt/adt_api.h</includes>
     <includedby refid="adt_8h" local="no">adt.h</includedby>
+    <includedby refid="adt__bucket_8h" local="no">adt_bucket.h</includedby>
+    <includedby refid="adt__map_8h" local="no">adt_map.h</includedby>
     <includedby refid="adt__set_8h" local="no">adt_set.h</includedby>
-    <includedby refid="adt__set__bucket_8h" local="no">adt_set_bucket.h</includedby>
     <includedby refid="adt__trie_8h" local="no">adt_trie.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -19,9 +20,13 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
+      <node id="6">
         <label>filesystem.h</label>
         <link refid="filesystem_8h"/>
+      </node>
+      <node id="3">
+        <label>adt_bucket.h</label>
+        <link refid="adt__bucket_8h"/>
       </node>
       <node id="2">
         <label>adt.h</label>
@@ -34,26 +39,28 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>adt_set.h</label>
-        <link refid="adt__set_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="5">
-        <label>adt_set_bucket.h</label>
-        <link refid="adt__set__bucket_8h"/>
+        <label>adt_set.h</label>
+        <link refid="adt__set_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>adt_trie.h</label>
         <link refid="adt__trie_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>adt_map.h</label>
+        <link refid="adt__map_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">

@@ -1,5 +1,8 @@
 var annotated_dup =
 [
+    [ "accessor_type", "structaccessor__type.html", "structaccessor__type" ],
+    [ "attribute_interface", "structattribute__interface__type.html", "structattribute__interface__type" ],
+    [ "bucket", "structbucket__type.html", "structbucket__type" ],
     [ "class_interface", "structclass__interface__type.html", "structclass__interface__type" ],
     [ "detour_interface", "structdetour__interface__type.html", "structdetour__interface__type" ],
     [ "dynlink_impl_interface", "structdynlink__impl__interface__type.html", "structdynlink__impl__interface__type" ],
@@ -46,6 +49,7 @@ var annotated_dup =
     [ "log_record_va_list_type", "structlog__record__va__list__type.html", "structlog__record__va__list__type" ],
     [ "metacall_allocator_nginx", "structmetacall__allocator__nginx__type.html", "structmetacall__allocator__nginx__type" ],
     [ "metacall_allocator_std", "structmetacall__allocator__std__type.html", "structmetacall__allocator__std__type" ],
+    [ "metacall_await_callbacks_type", "structmetacall__await__callbacks__type.html", "structmetacall__await__callbacks__type" ],
     [ "metacall_initialize_configuration_type", "structmetacall__initialize__configuration__type.html", "structmetacall__initialize__configuration__type" ],
     [ "metacall_log_custom", "structmetacall__log__custom__type.html", "structmetacall__log__custom__type" ],
     [ "metacall_log_custom_va_list", "structmetacall__log__custom__va__list__type.html", "structmetacall__log__custom__va__list__type" ],
@@ -54,8 +58,8 @@ var annotated_dup =
     [ "metacall_log_socket", "structmetacall__log__socket__type.html", "structmetacall__log__socket__type" ],
     [ "metacall_log_stdio", "structmetacall__log__stdio__type.html", "structmetacall__log__stdio__type" ],
     [ "metacall_log_syslog", "structmetacall__log__syslog__type.html", "structmetacall__log__syslog__type" ],
+    [ "method_interface", "structmethod__interface__type.html", "structmethod__interface__type" ],
     [ "object_interface", "structobject__interface__type.html", "structobject__interface__type" ],
-    [ "set_bucket", "structset__bucket__type.html", "structset__bucket__type" ],
-    [ "set_pair", "structset__pair__type.html", "structset__pair__type" ],
+    [ "pair", "structpair__type.html", "structpair__type" ],
     [ "type_interface", "structtype__interface__type.html", "structtype__interface__type" ]
 ];
