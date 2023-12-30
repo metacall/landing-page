@@ -1,11 +1,60 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="detour_8h" kind="file" language="C++">
     <compoundname>detour.h</compoundname>
     <includes local="no">detour/detour_api.h</includes>
-    <includes local="no">memory/memory.h</includes>
-    <includedby refid="detour__singleton_8h" local="no">detour_singleton.h</includedby>
+    <includes refid="detour__handle_8h" local="no">detour/detour_handle.h</includes>
+    <includes refid="plugin_8h" local="no">plugin/plugin.h</includes>
     <incdepgraph>
+      <node id="20">
+        <label>adt/adt_hash.h</label>
+        <link refid="adt__hash_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dynlink/dynlink.h</label>
+        <link refid="dynlink_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>stdint.h</label>
+      </node>
+      <node id="22">
+        <label>stdlib.h</label>
+      </node>
+      <node id="14">
+        <label>dynlink/dynlink_interface.h</label>
+      </node>
+      <node id="6">
+        <label>plugin/plugin_manager.h</label>
+        <link refid="plugin__manager_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dynlink/dynlink_flags.h</label>
+        <link refid="dynlink__flags_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>detour.h</label>
         <link refid="detour_8h"/>
@@ -13,26 +62,97 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>adt/adt_comparable.h</label>
+        <link refid="adt__comparable_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>adt/adt_set.h</label>
+        <link refid="adt__set_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>detour/detour_api.h</label>
       </node>
-      <node id="3">
-        <label>memory/memory.h</label>
+      <node id="12">
+        <label>portability/portability_library_path.h</label>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1">
-        <label>detour.h</label>
-        <link refid="detour_8h"/>
+      <node id="16">
+        <label>plugin/plugin_loader.h</label>
+        <link refid="plugin__loader_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>detour/detour_handle.h</label>
+        <link refid="detour__handle_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>detour_singleton.h</label>
-        <link refid="detour__singleton_8h"/>
+      <node id="5">
+        <label>plugin/plugin_api.h</label>
       </node>
-    </invincdepgraph>
+      <node id="8">
+        <label>plugin/plugin_descriptor.h</label>
+        <link refid="plugin__descriptor_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>plugin/plugin_impl.h</label>
+        <link refid="plugin__impl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>adt/adt_api.h</label>
+      </node>
+      <node id="4">
+        <label>plugin/plugin.h</label>
+        <link refid="plugin_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dynlink/dynlink_symbol.h</label>
+        <link refid="dynlink__symbol_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dynlink/dynlink_api.h</label>
+      </node>
+      <node id="11">
+        <label>dynlink/dynlink_type.h</label>
+        <link refid="dynlink__type_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
       <sectiondef kind="user-defined">
       <description><para>Create detour by</para>
 <para><parameterlist kind="param"><parameteritem>
@@ -72,10 +192,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="81" column="12" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" bodystart="81" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="75" column="12" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="function" id="detour_8h_1aeb1aa814616739364742a8821a89fe42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>DETOUR_API <ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+        <type>DETOUR_API <ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref></type>
         <definition>DETOUR_API detour detour_create</definition>
         <argsstring>(const char *name)</argsstring>
         <name>detour_create</name>
@@ -89,15 +209,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="55" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="55" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="49" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="49" declcolumn="19"/>
       </memberdef>
-      <memberdef kind="function" id="detour_8h_1ab98755191ec5000f8b546cf37669446b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const DETOUR_API char *</type>
-        <definition>const DETOUR_API char* detour_name</definition>
+      <memberdef kind="function" id="detour_8h_1a874646cd70c19b1f5638ea40b18f5192" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API const char *</type>
+        <definition>DETOUR_API const char* detour_name</definition>
         <argsstring>(detour d)</argsstring>
         <name>detour_name</name>
         <param>
-          <type><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+          <type><ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref></type>
           <declname>d</declname>
         </param>
         <briefdescription>
@@ -119,15 +239,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="68" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="68" declcolumn="23"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="62" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="62" declcolumn="23"/>
       </memberdef>
       <memberdef kind="function" id="detour_8h_1abd6884b0274d91b4d150d4a41d9ff435" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>DETOUR_API <ref refid="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref></type>
+        <type>DETOUR_API <ref refid="detour__handle_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref></type>
         <definition>DETOUR_API detour_handle detour_install</definition>
         <argsstring>(detour d, void(*target)(void), void(*hook)(void))</argsstring>
         <name>detour_install</name>
         <param>
-          <type><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+          <type><ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref></type>
           <declname>d</declname>
         </param>
         <param>
@@ -173,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="100" column="26" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="100" declcolumn="26"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="94" column="26" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="94" declcolumn="26"/>
       </memberdef>
       <memberdef kind="function" id="detour_8h_1ae71c2cec478b01c0c159f3aaefe8176f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DETOUR_API int</type>
@@ -181,11 +301,11 @@
         <argsstring>(detour d, detour_handle handle)</argsstring>
         <name>detour_uninstall</name>
         <param>
-          <type><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+          <type><ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref></type>
           <declname>d</declname>
         </param>
         <param>
-          <type><ref refid="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref></type>
+          <type><ref refid="detour__handle_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref></type>
           <declname>handle</declname>
         </param>
         <briefdescription>
@@ -215,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="116" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="116" declcolumn="16"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="110" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="110" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="detour_8h_1a5a685867fbcf4276c4643162f60ba4be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DETOUR_API int</type>
@@ -223,7 +343,7 @@
         <argsstring>(detour d)</argsstring>
         <name>detour_clear</name>
         <param>
-          <type><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref></type>
+          <type><ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref></type>
           <declname>d</declname>
         </param>
         <briefdescription>
@@ -245,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="129" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="129" declcolumn="16"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="123" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="123" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="detour_8h_1a2620b95d56350cb422c32b33d20dc8b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DETOUR_API void</type>
@@ -262,11 +382,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="136" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="136" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="130" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="130" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="detour_8h_1ae7a5f70dc469322ad7807fe4c1ae661d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const DETOUR_API char *</type>
-        <definition>const DETOUR_API char* detour_print_info</definition>
+      <memberdef kind="function" id="detour_8h_1aa8ebcacb3c1579f44ec26f34100caa7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DETOUR_API const char *</type>
+        <definition>DETOUR_API const char* detour_print_info</definition>
         <argsstring>(void)</argsstring>
         <name>detour_print_info</name>
         <param>
@@ -282,13 +402,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="146" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="146" declcolumn="23"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="140" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="140" declcolumn="23"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" prot="public" static="no">
-        <type>struct detour_type *</type>
-        <definition>typedef struct detour_type* detour</definition>
+      <memberdef kind="typedef" id="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" prot="public" static="no">
+        <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+        <definition>typedef plugin detour</definition>
         <argsstring></argsstring>
         <name>detour</name>
         <briefdescription>
@@ -297,20 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="30" column="26" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" prot="public" static="no">
-        <type>struct detour_handle_type *</type>
-        <definition>typedef struct detour_handle_type* detour_handle</definition>
-        <argsstring></argsstring>
-        <name>detour_handle</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="32" column="33" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="26" column="16" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -332,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="42" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="42" declcolumn="16"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" line="36" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h" declline="36" declcolumn="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -342,7 +449,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Detour<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>cross-platform<sp/>library<sp/>providing<sp/>detours,<sp/>function<sp/>hooks<sp/>and<sp/>trampolines.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -355,143 +462,137 @@
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;detour/detour_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory/memory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="detour__handle_8h" kindref="compound">detour/detour_handle.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="plugin_8h" kindref="compound">plugin/plugin.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detour_type;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detour_handle_type;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detour_type<sp/>*<ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref>;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">detour_handle_type<sp/>*<ref refid="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="34"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="35"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="36"><highlight class="comment">*<sp/><sp/><sp/><sp/>Initialize<sp/>detour<sp/>module</highlight></codeline>
-<codeline lineno="37"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="38"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="39"><highlight class="comment">*<sp/><sp/><sp/><sp/>Return<sp/>zero<sp/>correct<sp/>initialization,<sp/>distinct<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
-<codeline lineno="40"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="41"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1a7774df25f012aa74dd2eb720f3dda3da" kindref="member">detour_initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="44"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="45"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="46"><highlight class="comment">*<sp/><sp/><sp/><sp/>Create<sp/>detour<sp/>by<sp/>@name</highlight></codeline>
+<codeline lineno="26" refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/><ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/><sp/><sp/><sp/>Initialize<sp/>detour<sp/>module</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*<sp/><sp/><sp/><sp/>Return<sp/>zero<sp/>correct<sp/>initialization,<sp/>distinct<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="detour_8h_1a7774df25f012aa74dd2eb720f3dda3da" refkind="member"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1a7774df25f012aa74dd2eb720f3dda3da" kindref="member">detour_initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*<sp/><sp/><sp/><sp/>Create<sp/>detour<sp/>by<sp/>@name</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>name</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*<sp/><sp/><sp/><sp/>Plugin<sp/>will<sp/>be<sp/>used<sp/>to<sp/>detourize<sp/>and<sp/>detourize</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>detour<sp/>on<sp/>correct<sp/>initialization,<sp/>null<sp/>otherwise</highlight></codeline>
 <codeline lineno="47"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="48"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>name</highlight></codeline>
-<codeline lineno="49"><highlight class="comment">*<sp/><sp/><sp/><sp/>Plugin<sp/>will<sp/>be<sp/>used<sp/>to<sp/>detourize<sp/>and<sp/>detourize</highlight></codeline>
-<codeline lineno="50"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="51"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="52"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>detour<sp/>on<sp/>correct<sp/>initialization,<sp/>null<sp/>otherwise</highlight></codeline>
-<codeline lineno="53"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="54"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">DETOUR_API<sp/><ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/><ref refid="detour_8h_1aeb1aa814616739364742a8821a89fe42" kindref="member">detour_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="57"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="58"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="59"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>name<sp/>of<sp/>detour</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="detour_8h_1aeb1aa814616739364742a8821a89fe42" refkind="member"><highlight class="normal">DETOUR_API<sp/><ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref><sp/><ref refid="detour_8h_1aeb1aa814616739364742a8821a89fe42" kindref="member">detour_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>name<sp/>of<sp/>detour</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*<sp/><sp/><sp/><sp/>Static<sp/>const<sp/>string<sp/>with<sp/>detour<sp/>name</highlight></codeline>
 <codeline lineno="60"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="61"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
-<codeline lineno="62"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
-<codeline lineno="63"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="64"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="65"><highlight class="comment">*<sp/><sp/><sp/><sp/>Static<sp/>const<sp/>string<sp/>with<sp/>detour<sp/>name</highlight></codeline>
-<codeline lineno="66"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="67"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="detour_8h_1ab98755191ec5000f8b546cf37669446b" kindref="member">detour_name</ref>(<ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/>d);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="70"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="71"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="72"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>trampoline<sp/>of<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="detour_8h_1a874646cd70c19b1f5638ea40b18f5192" refkind="member"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="detour_8h_1a874646cd70c19b1f5638ea40b18f5192" kindref="member">detour_name</ref>(<ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref><sp/>d);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="64"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>trampoline<sp/>of<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour<sp/>handle</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>trampoline<sp/>function</highlight></codeline>
 <codeline lineno="73"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="74"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
-<codeline lineno="75"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour<sp/>handle</highlight></codeline>
-<codeline lineno="76"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="77"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="78"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>trampoline<sp/>function</highlight></codeline>
-<codeline lineno="79"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="80"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="detour_8h_1a499d7044cff90872c46201c25f1d1636" refkind="member"><highlight class="normal">DETOUR_API<sp/>void<sp/>(*<ref refid="detour_8h_1a499d7044cff90872c46201c25f1d1636" kindref="member">detour_trampoline</ref>(<ref refid="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref><sp/>handle))(void);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="83"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="84"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="85"><highlight class="comment">*<sp/><sp/><sp/><sp/>Install<sp/>detour<sp/>from<sp/>@target<sp/>to<sp/>@hook</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="detour_8h_1a499d7044cff90872c46201c25f1d1636" refkind="member"><highlight class="normal">DETOUR_API<sp/>void<sp/>(*<ref refid="detour_8h_1a499d7044cff90872c46201c25f1d1636" kindref="member">detour_trampoline</ref>(<ref refid="detour__handle_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref><sp/>handle))(void);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="77"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">*<sp/><sp/><sp/><sp/>Install<sp/>detour<sp/>from<sp/>@target<sp/>to<sp/>@hook</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>target</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>function<sp/>to<sp/>be<sp/>hooked</highlight></codeline>
 <codeline lineno="86"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="87"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
-<codeline lineno="88"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>hook</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>function<sp/>will<sp/>be<sp/>called<sp/>instead<sp/>of<sp/>@target</highlight></codeline>
 <codeline lineno="89"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="90"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>target</highlight></codeline>
-<codeline lineno="91"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>function<sp/>to<sp/>be<sp/>hooked</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>detour<sp/>handle</highlight></codeline>
 <codeline lineno="92"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="93"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>hook</highlight></codeline>
-<codeline lineno="94"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>function<sp/>will<sp/>be<sp/>called<sp/>instead<sp/>of<sp/>@target</highlight></codeline>
-<codeline lineno="95"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="96"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="97"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>detour<sp/>handle</highlight></codeline>
-<codeline lineno="98"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="99"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal">DETOUR_API<sp/><ref refid="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref><sp/><ref refid="detour_8h_1abd6884b0274d91b4d150d4a41d9ff435" kindref="member">detour_install</ref>(<ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/>d,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*target)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*hook)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="102"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="103"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="104"><highlight class="comment">*<sp/><sp/><sp/><sp/>Install<sp/>detour<sp/>from<sp/>@target<sp/>to<sp/>@hook</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="detour_8h_1abd6884b0274d91b4d150d4a41d9ff435" refkind="member"><highlight class="normal">DETOUR_API<sp/><ref refid="detour__handle_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref><sp/><ref refid="detour_8h_1abd6884b0274d91b4d150d4a41d9ff435" kindref="member">detour_install</ref>(<ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref><sp/>d,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*target)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*hook)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="96"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">*<sp/><sp/><sp/><sp/>Install<sp/>detour<sp/>from<sp/>@target<sp/>to<sp/>@hook</highlight></codeline>
+<codeline lineno="99"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour<sp/>handle</highlight></codeline>
 <codeline lineno="105"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="106"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
-<codeline lineno="107"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">*<sp/><sp/><sp/><sp/>Return<sp/>zero<sp/>if<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
 <codeline lineno="108"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="109"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
-<codeline lineno="110"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour<sp/>handle</highlight></codeline>
-<codeline lineno="111"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="112"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="113"><highlight class="comment">*<sp/><sp/><sp/><sp/>Return<sp/>zero<sp/>if<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
-<codeline lineno="114"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="115"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1ae71c2cec478b01c0c159f3aaefe8176f" kindref="member">detour_uninstall</ref>(<ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/>d,<sp/><ref refid="detour_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref><sp/>handle);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="118"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="119"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="120"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>detour<sp/>by<sp/>handle<sp/>@d</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="detour_8h_1ae71c2cec478b01c0c159f3aaefe8176f" refkind="member"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1ae71c2cec478b01c0c159f3aaefe8176f" kindref="member">detour_uninstall</ref>(<ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref><sp/>d,<sp/><ref refid="detour__handle_8h_1a4e5a5235d50ce87e1b46d0ef72ea0f59" kindref="member">detour_handle</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="112"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>detour<sp/>by<sp/>handle<sp/>@d</highlight></codeline>
+<codeline lineno="115"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="116"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="119"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="120"><highlight class="comment">*<sp/><sp/><sp/><sp/>Return<sp/>zero<sp/>on<sp/>correct<sp/>destruction,<sp/>different<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
 <codeline lineno="121"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="122"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>d</highlight></codeline>
-<codeline lineno="123"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>detour</highlight></codeline>
-<codeline lineno="124"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="125"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="126"><highlight class="comment">*<sp/><sp/><sp/><sp/>Return<sp/>zero<sp/>on<sp/>correct<sp/>destruction,<sp/>different<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
-<codeline lineno="127"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="128"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1a5a685867fbcf4276c4643162f60ba4be" kindref="member">detour_clear</ref>(<ref refid="detour_8h_1a98b044d8fd6bb0343802eefe9ce75591" kindref="member">detour</ref><sp/>d);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="131"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="132"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="133"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>all<sp/>detours</highlight></codeline>
-<codeline lineno="134"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="135"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1a2620b95d56350cb422c32b33d20dc8b7" kindref="member">detour_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="138"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="139"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="140"><highlight class="comment">*<sp/><sp/><sp/><sp/>Provide<sp/>the<sp/>module<sp/>information</highlight></codeline>
-<codeline lineno="141"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="142"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="143"><highlight class="comment">*<sp/><sp/><sp/><sp/>Static<sp/>string<sp/>containing<sp/>module<sp/>information</highlight></codeline>
-<codeline lineno="144"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="145"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="detour_8h_1ae7a5f70dc469322ad7807fe4c1ae661d" kindref="member">detour_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DETOUR_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="122"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="detour_8h_1a5a685867fbcf4276c4643162f60ba4be" refkind="member"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1a5a685867fbcf4276c4643162f60ba4be" kindref="member">detour_clear</ref>(<ref refid="detour_8h_1ae07655fe8f7440e2b6b8b2f0b31df353" kindref="member">detour</ref><sp/>d);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="125"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="126"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>all<sp/>detours</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="detour_8h_1a2620b95d56350cb422c32b33d20dc8b7" refkind="member"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="detour_8h_1a2620b95d56350cb422c32b33d20dc8b7" kindref="member">detour_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="132"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="133"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">*<sp/><sp/><sp/><sp/>Provide<sp/>the<sp/>module<sp/>information</highlight></codeline>
+<codeline lineno="135"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="136"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">*<sp/><sp/><sp/><sp/>Static<sp/>string<sp/>containing<sp/>module<sp/>information</highlight></codeline>
+<codeline lineno="138"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="detour_8h_1aa8ebcacb3c1579f44ec26f34100caa7a" refkind="member"><highlight class="normal">DETOUR_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="detour_8h_1aa8ebcacb3c1579f44ec26f34100caa7a" kindref="member">detour_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DETOUR_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour.h"/>
   </compounddef>

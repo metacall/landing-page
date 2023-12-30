@@ -8,7 +8,7 @@ Include dependency graph for filesystem.\+h\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=344pt]{filesystem_8h__incl}
+\includegraphics[width=350pt]{filesystem_8h__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Typedefs}
@@ -23,41 +23,41 @@ typedef struct filesystem\+\_\+type $\ast$ \textbf{ filesystem}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \textbf{ filesystem\+\_\+flags\+\_\+enumeration} \{ \newline
-\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+N\+O\+NE} = 0x00, 
-\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A\+ZY} = 0x01 $<$$<$ 0x00, 
-\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+A\+T\+C\+H\+\_\+\+S\+Y\+NC} = 0x01 $<$$<$ 0x01, 
-\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+R\+E\+A\+D\+A\+B\+LE} = 0x01 $<$$<$ 0x02, 
-\newline
-\textbf{ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+R\+I\+T\+E\+A\+B\+LE} = 0x01 $<$$<$ 0x03
+enum \textbf{ filesystem\+\_\+flags} \{ \newline
+\textbf{ FILESYSTEM\+\_\+\+FLAGS\+\_\+\+NONE} = 0x00
+, \textbf{ FILESYSTEM\+\_\+\+FLAGS\+\_\+\+LOAD\+\_\+\+LAZY} = 0x01 $<$$<$ 0x00
+, \textbf{ FILESYSTEM\+\_\+\+FLAGS\+\_\+\+WATCH\+\_\+\+SYNC} = 0x01 $<$$<$ 0x01
+, \textbf{ FILESYSTEM\+\_\+\+FLAGS\+\_\+\+READABLE} = 0x01 $<$$<$ 0x02
+, \newline
+\textbf{ FILESYSTEM\+\_\+\+FLAGS\+\_\+\+WRITEABLE} = 0x01 $<$$<$ 0x03
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ filesystem} \textbf{ filesystem\+\_\+create} (const char $\ast$root, filesystem\+\_\+flags flags)
+FILESYSTEM\+\_\+\+API \textbf{ filesystem} \textbf{ filesystem\+\_\+create} (const char $\ast$root, \textbf{ filesystem\+\_\+flags} flags)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+add\+\_\+file} (\textbf{ filesystem} fs, const char $\ast$file\+\_\+path)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+add\+\_\+file} (\textbf{ filesystem} fs, const char $\ast$file\+\_\+path)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+add\+\_\+directory} (\textbf{ filesystem} fs, const char $\ast$directory\+\_\+path)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+add\+\_\+directory} (\textbf{ filesystem} fs, const char $\ast$directory\+\_\+path)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+remove\+\_\+file} (\textbf{ filesystem} fs, const char $\ast$file\+\_\+path)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+remove\+\_\+file} (\textbf{ filesystem} fs, const char $\ast$file\+\_\+path)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+remove\+\_\+directory} (\textbf{ filesystem} fs, const char $\ast$directory\+\_\+path)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+remove\+\_\+directory} (\textbf{ filesystem} fs, const char $\ast$directory\+\_\+path)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+list\+\_\+files} (\textbf{ filesystem} fs, \textbf{ vector} files)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+list\+\_\+files} (\textbf{ filesystem} fs, \textbf{ vector} files)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+list\+\_\+files\+\_\+by\+\_\+extension} (\textbf{ filesystem} fs, \textbf{ set} files)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+list\+\_\+files\+\_\+by\+\_\+extension} (\textbf{ filesystem} fs, \textbf{ set} files)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+list\+\_\+directories} (\textbf{ filesystem} fs, \textbf{ vector} directories)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+list\+\_\+directories} (\textbf{ filesystem} fs, \textbf{ vector} directories)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+file} (\textbf{ filesystem} fs, \textbf{ file} f, \textbf{ vector} path)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+file} (\textbf{ filesystem} fs, \textbf{ file} f, \textbf{ vector} path)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int \textbf{ filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+directory} (\textbf{ filesystem} fs, \textbf{ directory} d, \textbf{ vector} path)
+FILESYSTEM\+\_\+\+API int \textbf{ filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+directory} (\textbf{ filesystem} fs, \textbf{ directory} d, \textbf{ vector} path)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void \textbf{ filesystem\+\_\+destroy} (\textbf{ filesystem} fs)
+FILESYSTEM\+\_\+\+API void \textbf{ filesystem\+\_\+destroy} (\textbf{ filesystem} fs)
 \item 
-const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char $\ast$ \textbf{ filesystem\+\_\+print\+\_\+info} (void)
+FILESYSTEM\+\_\+\+API const char $\ast$ \textbf{ filesystem\+\_\+print\+\_\+info} (void)
 \end{DoxyCompactItemize}
 
 
@@ -83,31 +83,31 @@ const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char $\ast$ \textbf{ filesystem\
 
 
 \doxysubsection{Enumeration Type Documentation}
-\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cc}} 
-\index{filesystem.h@{filesystem.h}!filesystem\_flags\_enumeration@{filesystem\_flags\_enumeration}}
-\index{filesystem\_flags\_enumeration@{filesystem\_flags\_enumeration}!filesystem.h@{filesystem.h}}
-\doxysubsubsection{filesystem\_flags\_enumeration}
-{\footnotesize\ttfamily enum \textbf{ filesystem\+\_\+flags\+\_\+enumeration}}
+\mbox{\label{filesystem_8h_a7e22d59b12f4912e1371af5873c8cd0f}} 
+\index{filesystem.h@{filesystem.h}!filesystem\_flags@{filesystem\_flags}}
+\index{filesystem\_flags@{filesystem\_flags}!filesystem.h@{filesystem.h}}
+\doxysubsubsection{filesystem\_flags}
+{\footnotesize\ttfamily enum \textbf{ filesystem\+\_\+flags}}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_NONE@{FILESYSTEM\_FLAGS\_NONE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_NONE@{FILESYSTEM\_FLAGS\_NONE}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca5b7524837d6643f9725091842d013520}} 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+N\+O\+NE&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_NONE@{FILESYSTEM\_FLAGS\_NONE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_NONE@{FILESYSTEM\_FLAGS\_NONE}}}\mbox{\label{filesystem_8h_a7e22d59b12f4912e1371af5873c8cd0fa5b7524837d6643f9725091842d013520}} 
+FILESYSTEM\+\_\+\+FLAGS\+\_\+\+NONE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_LOAD\_LAZY@{FILESYSTEM\_FLAGS\_LOAD\_LAZY}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_LOAD\_LAZY@{FILESYSTEM\_FLAGS\_LOAD\_LAZY}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92ccaca618ec1fd26cf4f747ac04be6ca3589}} 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A\+ZY&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_LOAD\_LAZY@{FILESYSTEM\_FLAGS\_LOAD\_LAZY}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_LOAD\_LAZY@{FILESYSTEM\_FLAGS\_LOAD\_LAZY}}}\mbox{\label{filesystem_8h_a7e22d59b12f4912e1371af5873c8cd0faca618ec1fd26cf4f747ac04be6ca3589}} 
+FILESYSTEM\+\_\+\+FLAGS\+\_\+\+LOAD\+\_\+\+LAZY&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_WATCH\_SYNC@{FILESYSTEM\_FLAGS\_WATCH\_SYNC}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_WATCH\_SYNC@{FILESYSTEM\_FLAGS\_WATCH\_SYNC}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca2cd5b792a29402c7bc2f980cd3e183d1}} 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+A\+T\+C\+H\+\_\+\+S\+Y\+NC&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_WATCH\_SYNC@{FILESYSTEM\_FLAGS\_WATCH\_SYNC}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_WATCH\_SYNC@{FILESYSTEM\_FLAGS\_WATCH\_SYNC}}}\mbox{\label{filesystem_8h_a7e22d59b12f4912e1371af5873c8cd0fa2cd5b792a29402c7bc2f980cd3e183d1}} 
+FILESYSTEM\+\_\+\+FLAGS\+\_\+\+WATCH\+\_\+\+SYNC&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_READABLE@{FILESYSTEM\_FLAGS\_READABLE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_READABLE@{FILESYSTEM\_FLAGS\_READABLE}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca6f83a80620d031da43eaa0e3160c0156}} 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+R\+E\+A\+D\+A\+B\+LE&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_READABLE@{FILESYSTEM\_FLAGS\_READABLE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_READABLE@{FILESYSTEM\_FLAGS\_READABLE}}}\mbox{\label{filesystem_8h_a7e22d59b12f4912e1371af5873c8cd0fa6f83a80620d031da43eaa0e3160c0156}} 
+FILESYSTEM\+\_\+\+FLAGS\+\_\+\+READABLE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_WRITEABLE@{FILESYSTEM\_FLAGS\_WRITEABLE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_WRITEABLE@{FILESYSTEM\_FLAGS\_WRITEABLE}}}\mbox{\label{filesystem_8h_a68eb9ad436cef83a7bff8bad8d0e92cca33d09e1cac2bf4ea77ca65184d740778}} 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+R\+I\+T\+E\+A\+B\+LE&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILESYSTEM\_FLAGS\_WRITEABLE@{FILESYSTEM\_FLAGS\_WRITEABLE}!filesystem.h@{filesystem.h}}\index{filesystem.h@{filesystem.h}!FILESYSTEM\_FLAGS\_WRITEABLE@{FILESYSTEM\_FLAGS\_WRITEABLE}}}\mbox{\label{filesystem_8h_a7e22d59b12f4912e1371af5873c8cd0fa33d09e1cac2bf4ea77ca65184d740778}} 
+FILESYSTEM\+\_\+\+FLAGS\+\_\+\+WRITEABLE&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -118,7 +118,7 @@ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+F\+L\+A\+G\+S\+\_\+\+W\+R\+I\+T\+E\+A\+B\+LE
 \index{filesystem.h@{filesystem.h}!filesystem\_create@{filesystem\_create}}
 \index{filesystem\_create@{filesystem\_create}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_create()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ filesystem} filesystem\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{root,  }\item[{filesystem\+\_\+flags}]{flags }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API \textbf{ filesystem} filesystem\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{root,  }\item[{\textbf{ filesystem\+\_\+flags}}]{flags }\end{DoxyParamCaption})}
 
 
 
@@ -136,7 +136,7 @@ A handle to file system if success, null otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_add\_file@{filesystem\_add\_file}}
 \index{filesystem\_add\_file@{filesystem\_add\_file}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_add\_file()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+add\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+add\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
 
 
 
@@ -156,7 +156,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_add\_directory@{filesystem\_add\_directory}}
 \index{filesystem\_add\_directory@{filesystem\_add\_directory}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_add\_directory()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+add\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+add\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})}
 
 
 
@@ -176,7 +176,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_remove\_file@{filesystem\_remove\_file}}
 \index{filesystem\_remove\_file@{filesystem\_remove\_file}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_remove\_file()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+remove\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+remove\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{file\+\_\+path }\end{DoxyParamCaption})}
 
 
 
@@ -196,7 +196,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_remove\_directory@{filesystem\_remove\_directory}}
 \index{filesystem\_remove\_directory@{filesystem\_remove\_directory}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_remove\_directory()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+remove\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+remove\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{const char $\ast$}]{directory\+\_\+path }\end{DoxyParamCaption})}
 
 
 
@@ -216,7 +216,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_list\_files@{filesystem\_list\_files}}
 \index{filesystem\_list\_files@{filesystem\_list\_files}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_list\_files()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+list\+\_\+files (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ vector}}]{files }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+list\+\_\+files (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ vector}}]{files }\end{DoxyParamCaption})}
 
 
 
@@ -236,7 +236,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_list\_files\_by\_extension@{filesystem\_list\_files\_by\_extension}}
 \index{filesystem\_list\_files\_by\_extension@{filesystem\_list\_files\_by\_extension}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_list\_files\_by\_extension()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+list\+\_\+files\+\_\+by\+\_\+extension (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ set}}]{files }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+list\+\_\+files\+\_\+by\+\_\+extension (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ set}}]{files }\end{DoxyParamCaption})}
 
 
 
@@ -256,7 +256,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_list\_directories@{filesystem\_list\_directories}}
 \index{filesystem\_list\_directories@{filesystem\_list\_directories}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_list\_directories()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+list\+\_\+directories (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ vector}}]{directories }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+list\+\_\+directories (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ vector}}]{directories }\end{DoxyParamCaption})}
 
 
 
@@ -276,7 +276,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_cannonical\_path\_from\_file@{filesystem\_cannonical\_path\_from\_file}}
 \index{filesystem\_cannonical\_path\_from\_file@{filesystem\_cannonical\_path\_from\_file}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_cannonical\_path\_from\_file()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ file}}]{f,  }\item[{\textbf{ vector}}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ file}}]{f,  }\item[{\textbf{ vector}}]{path }\end{DoxyParamCaption})}
 
 
 
@@ -298,7 +298,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_cannonical\_path\_from\_directory@{filesystem\_cannonical\_path\_from\_directory}}
 \index{filesystem\_cannonical\_path\_from\_directory@{filesystem\_cannonical\_path\_from\_directory}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_cannonical\_path\_from\_directory()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI int filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ directory}}]{d,  }\item[{\textbf{ vector}}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API int filesystem\+\_\+cannonical\+\_\+path\+\_\+from\+\_\+directory (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs,  }\item[{\textbf{ directory}}]{d,  }\item[{\textbf{ vector}}]{path }\end{DoxyParamCaption})}
 
 
 
@@ -320,7 +320,7 @@ Returns zero on success, different from zero otherwhise
 \index{filesystem.h@{filesystem.h}!filesystem\_destroy@{filesystem\_destroy}}
 \index{filesystem\_destroy@{filesystem\_destroy}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_destroy()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void filesystem\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API void filesystem\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ filesystem}}]{fs }\end{DoxyParamCaption})}
 
 
 
@@ -331,11 +331,11 @@ Unmounts the virtual file system.
 \mbox{\texttt{ in}}  & {\em fs} & Handle referencing the file system \\
 \hline
 \end{DoxyParams}
-\mbox{\label{filesystem_8h_a1298c6453dadaef5b73efcc3f1d1235a}} 
+\mbox{\label{filesystem_8h_a8d67c5a67eaa712b52a6d0d6bbf39323}} 
 \index{filesystem.h@{filesystem.h}!filesystem\_print\_info@{filesystem\_print\_info}}
 \index{filesystem\_print\_info@{filesystem\_print\_info}!filesystem.h@{filesystem.h}}
 \doxysubsubsection{filesystem\_print\_info()}
-{\footnotesize\ttfamily const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char$\ast$ filesystem\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API const char$\ast$ filesystem\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 

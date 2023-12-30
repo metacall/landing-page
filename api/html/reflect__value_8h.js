@@ -5,6 +5,7 @@ var reflect__value_8h =
     [ "value_finalizer_cb", "reflect__value_8h.html#a9261a95d255b026c814b6cfbbd3f1e19", null ],
     [ "value_alloc", "reflect__value_8h.html#ae21bf2663228ad09c7aaba7acf397285", null ],
     [ "value_create", "reflect__value_8h.html#ad54de5d34e19dff84a6798f20d5c68ad", null ],
+    [ "value_validate", "reflect__value_8h.html#ab4ea738843b4862c598beb44c220aeda", null ],
     [ "value_copy", "reflect__value_8h.html#a797b2f8ba4f572bc05c1d86d69a2179d", null ],
     [ "value_move", "reflect__value_8h.html#af5d25763b65c455048fb2d7468000c73", null ],
     [ "value_size", "reflect__value_8h.html#a7ae2174cfa62b082dffbbded72900077", null ],

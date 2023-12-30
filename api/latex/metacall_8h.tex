@@ -3,9 +3,12 @@
 {\ttfamily \#include $<$metacall/metacall\+\_\+api.\+h$>$}\newline
 {\ttfamily \#include $<$metacall/metacall\+\_\+allocator.\+h$>$}\newline
 {\ttfamily \#include $<$metacall/metacall\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$metacall/metacall\+\_\+error.\+h$>$}\newline
 {\ttfamily \#include $<$metacall/metacall\+\_\+log.\+h$>$}\newline
 {\ttfamily \#include $<$metacall/metacall\+\_\+value.\+h$>$}\newline
+{\ttfamily \#include $<$metacall/metacall\+\_\+version.\+h$>$}\newline
 {\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 Include dependency graph for metacall.\+h\+:
 \nopagebreak
@@ -15,17 +18,27 @@ Include dependency graph for metacall.\+h\+:
 \includegraphics[width=350pt]{metacall_8h__incl}
 \end{center}
 \end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{metacall_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type}
 \item 
-struct \textbf{ metacall\+\_\+await\+\_\+callbacks\+\_\+type}
+struct \textbf{ metacall\+\_\+await\+\_\+callbacks}
+\item 
+struct \textbf{ metacall\+\_\+version\+\_\+type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+\+F\+O\+R\+K\+\_\+\+S\+A\+FE}~0x01 $<$$<$ 0x00
+\#define \textbf{ METACALL\+\_\+\+FLAGS\+\_\+\+FORK\+\_\+\+SAFE}~0x01 $<$$<$ 0x00
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -35,53 +48,53 @@ typedef void $\ast$($\ast$ \textbf{ metacall\+\_\+await\+\_\+callback}) (void $\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+serial} (void)
+METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+serial} (void)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+log\+\_\+null} (void)
+METACALL\+\_\+\+API void \textbf{ metacall\+\_\+log\+\_\+null} (void)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+flags} (int flags)
+METACALL\+\_\+\+API void \textbf{ metacall\+\_\+flags} (int flags)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+initialize} (void)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+initialize} (void)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+initialize\+\_\+ex} (struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type} initialize\+\_\+config[$\,$])
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+initialize\+\_\+ex} (struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type} initialize\+\_\+config[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+initialize\+\_\+args} (int argc, char $\ast$argv[$\,$])
+METACALL\+\_\+\+API void \textbf{ metacall\+\_\+initialize\+\_\+args} (int argc, char $\ast$argv[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+argc} ()
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+argc} (void)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$$\ast$ \textbf{ metacall\+\_\+argv} (void)
+METACALL\+\_\+\+API char $\ast$$\ast$ \textbf{ metacall\+\_\+argv} (void)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+is\+\_\+initialized} (const char $\ast$tag)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+is\+\_\+initialized} (const char $\ast$tag)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t \textbf{ metacall\+\_\+args\+\_\+size} (void)
+METACALL\+\_\+\+API size\+\_\+t \textbf{ metacall\+\_\+args\+\_\+size} (void)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+execution\+\_\+path} (const char $\ast$tag, const char $\ast$path)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+execution\+\_\+path} (const char $\ast$tag, const char $\ast$path)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+execution\+\_\+path\+\_\+s} (const char $\ast$tag, size\+\_\+t tag\+\_\+length, const char $\ast$path, size\+\_\+t path\+\_\+length)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+execution\+\_\+path\+\_\+s} (const char $\ast$tag, size\+\_\+t tag\+\_\+length, const char $\ast$path, size\+\_\+t path\+\_\+length)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+file} (const char $\ast$tag, const char $\ast$paths[$\,$], size\+\_\+t size, void $\ast$$\ast$handle)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+file} (const char $\ast$tag, const char $\ast$paths[$\,$], size\+\_\+t size, void $\ast$$\ast$handle)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+memory} (const char $\ast$tag, const char $\ast$buffer, size\+\_\+t size, void $\ast$$\ast$handle)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+memory} (const char $\ast$tag, const char $\ast$buffer, size\+\_\+t size, void $\ast$$\ast$handle)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+package} (const char $\ast$tag, const char $\ast$path, void $\ast$$\ast$handle)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+package} (const char $\ast$tag, const char $\ast$path, void $\ast$$\ast$handle)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+configuration} (const char $\ast$path, void $\ast$$\ast$handle, void $\ast$allocator)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+load\+\_\+from\+\_\+configuration} (const char $\ast$path, void $\ast$$\ast$handle, void $\ast$allocator)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv} (const char $\ast$name, void $\ast$args[$\,$])
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallv} (const char $\ast$name, void $\ast$args[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+s} (const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallv\+\_\+s} (const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallhv} (void $\ast$handle, const char $\ast$name, void $\ast$args[$\,$])
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallhv} (void $\ast$handle, const char $\ast$name, void $\ast$args[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallhv\+\_\+s} (void $\ast$handle, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallhv\+\_\+s} (void $\ast$handle, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall} (const char $\ast$name,...)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall} (const char $\ast$name,...)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt} (const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$],...)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallt} (const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$],...)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt\+\_\+s} (const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$], size\+\_\+t size,...)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallt\+\_\+s} (const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$], size\+\_\+t size,...)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallht\+\_\+s} (void $\ast$handle, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$], size\+\_\+t size,...)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallht\+\_\+s} (void $\ast$handle, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ids[$\,$], size\+\_\+t size,...)
 \end{DoxyCompactItemize}
 \textbf{ }\par
 {\em Get the function by
@@ -96,7 +109,7 @@ Function reference, null if the function does not exist
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+function} (const char $\ast$name)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+function} (const char $\ast$name)
 \end{DoxyCompactItemize}
 
 \begin{Indent}\textbf{ from @handle}\par
@@ -114,15 +127,15 @@ Function reference, null if the function does not exist
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+handle\+\_\+function} (void $\ast$handle, const char $\ast$name)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+handle\+\_\+function} (void $\ast$handle, const char $\ast$name)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+function\+\_\+parameter\+\_\+type} (void $\ast$func, size\+\_\+t parameter, enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$id)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+function\+\_\+parameter\+\_\+type} (void $\ast$func, size\+\_\+t parameter, enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$id)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+function\+\_\+return\+\_\+type} (void $\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$id)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+function\+\_\+return\+\_\+type} (void $\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$id)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t \textbf{ metacall\+\_\+function\+\_\+size} (void $\ast$func)
+METACALL\+\_\+\+API size\+\_\+t \textbf{ metacall\+\_\+function\+\_\+size} (void $\ast$func)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+function\+\_\+async} (void $\ast$func)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+function\+\_\+async} (void $\ast$func)
 \end{DoxyCompactItemize}
 \end{Indent}
 \textbf{ }\par
@@ -140,23 +153,23 @@ Handle reference, null if the function does not exist
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+handle} (const char $\ast$tag, const char $\ast$name)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+handle} (const char $\ast$tag, const char $\ast$name)
 \item 
-const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+handle\+\_\+id} (void $\ast$handle)
+METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+handle\+\_\+id} (void $\ast$handle)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+handle\+\_\+export} (void $\ast$handle)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+handle\+\_\+export} (void $\ast$handle)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv} (void $\ast$func, void $\ast$args[$\,$])
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfv} (void $\ast$func, void $\ast$args[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfv\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallf} (void $\ast$func,...)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallf} (void $\ast$func,...)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfs} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfs} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$])
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfmv} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfms} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfms} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
 \end{DoxyCompactItemize}
 
 \begin{Indent}\textbf{ and arguments @va\+\_\+args}\par
@@ -164,7 +177,7 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfms} (void $\as
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\mbox{\texttt{ in}}  & {\em name} & Name of the function (if it is NULL, function is not registered into host scope)\\
 \hline
 \mbox{\texttt{ in}}  & {\em invoke} & Pointer to function invoke interface (argc, argv, data)\\
 \hline
@@ -182,7 +195,7 @@ Pointer to value containing the result of the call
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+register} (const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), void $\ast$$\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size,...)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+register} (const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), void $\ast$$\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size,...)
 \end{DoxyCompactItemize}
 \end{Indent}
 \begin{Indent}\textbf{ and arguments @types}\par
@@ -190,11 +203,13 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+register} (const 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em name} & Name of the function\\
+\mbox{\texttt{ in}}  & {\em loader} & Opaque pointer to the loader in which you want to register the function (this allows to register the function into a different loader than the host)\\
+\hline
+\mbox{\texttt{ in}}  & {\em context} & Opaque pointer to the context in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the function (if it is NULL, function is not registered into host scope)\\
 \hline
 \mbox{\texttt{ in}}  & {\em invoke} & Pointer to function invoke interface (argc, argv, data)\\
-\hline
-\mbox{\texttt{ out}}  & {\em func} & Will set the pointer to the function if the parameter is not null\\
 \hline
 \mbox{\texttt{ in}}  & {\em return\+\_\+type} & Type of return value\\
 \hline
@@ -208,27 +223,29 @@ Pointer to value containing the result of the call
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+registerv} (const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), void $\ast$$\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size, enum \textbf{ metacall\+\_\+value\+\_\+id} types[$\,$])
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+registerv} (const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), void $\ast$$\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size, enum \textbf{ metacall\+\_\+value\+\_\+id} types[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+await} (const char $\ast$name, void $\ast$args[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+register\+\_\+loaderv} (void $\ast$\textbf{ loader}, void $\ast$\textbf{ context}, const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size, enum \textbf{ metacall\+\_\+value\+\_\+id} types[$\,$])
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+await\+\_\+future} (void $\ast$f, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+await} (const char $\ast$name, void $\ast$args[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+await\+\_\+s} (const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+await\+\_\+future} (void $\ast$f, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await} (void $\ast$func, void $\ast$args[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+await\+\_\+s} (const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfv\+\_\+await} (void $\ast$func, void $\ast$args[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfv\+\_\+await\+\_\+struct\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size, metacall\+\_\+await\+\_\+callbacks cb, void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv\+\_\+await} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfv\+\_\+await\+\_\+struct\+\_\+s} (void $\ast$func, void $\ast$args[$\,$], size\+\_\+t size, \textbf{ metacall\+\_\+await\+\_\+callbacks} cb, void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfmv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfmv\+\_\+await} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfs\+\_\+await} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfmv\+\_\+await\+\_\+s} (void $\ast$func, void $\ast$keys[$\,$], void $\ast$values[$\,$], size\+\_\+t size, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallfms\+\_\+await} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfs\+\_\+await} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
+\item 
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallfms\+\_\+await} (void $\ast$func, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator, void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \end{DoxyCompactItemize}
 \end{Indent}
 \textbf{ }\par
@@ -244,43 +261,63 @@ Class reference, null if the class does not exist
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class} (const char $\ast$name)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+class} (const char $\ast$name)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+class} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallv\+\_\+class} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt\+\_\+class} (void $\ast$cls, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ret, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallt\+\_\+class} (void $\ast$cls, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ret, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class\+\_\+new} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+class\+\_\+new} (void $\ast$cls, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+class\+\_\+static\+\_\+get} (void $\ast$cls, const char $\ast$key)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+class\+\_\+static\+\_\+get} (void $\ast$cls, const char $\ast$key)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+class\+\_\+static\+\_\+set} (void $\ast$cls, const char $\ast$key, void $\ast$v)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+class\+\_\+static\+\_\+set} (void $\ast$cls, const char $\ast$key, void $\ast$v)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallv\+\_\+object} (void $\ast$obj, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallv\+\_\+object} (void $\ast$obj, const char $\ast$name, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacallt\+\_\+object} (void $\ast$obj, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ret, void $\ast$args[$\,$], size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacallt\+\_\+object} (void $\ast$obj, const char $\ast$name, const enum \textbf{ metacall\+\_\+value\+\_\+id} ret, void $\ast$args[$\,$], size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+object\+\_\+get} (void $\ast$obj, const char $\ast$key)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+object\+\_\+get} (void $\ast$obj, const char $\ast$key)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+object\+\_\+set} (void $\ast$obj, const char $\ast$key, void $\ast$v)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+object\+\_\+set} (void $\ast$obj, const char $\ast$key, void $\ast$v)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+inspect} (size\+\_\+t $\ast$size, void $\ast$allocator)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+throwable\+\_\+value} (void $\ast$th)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+serialize} (const char $\ast$name, void $\ast$v, size\+\_\+t $\ast$size, void $\ast$allocator)
+METACALL\+\_\+\+API char $\ast$ \textbf{ metacall\+\_\+inspect} (size\+\_\+t $\ast$size, void $\ast$allocator)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+deserialize} (const char $\ast$name, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+inspect\+\_\+value} (void)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+clear} (void $\ast$handle)
+METACALL\+\_\+\+API char $\ast$ \textbf{ metacall\+\_\+serialize} (const char $\ast$name, void $\ast$v, size\+\_\+t $\ast$size, void $\ast$allocator)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int \textbf{ metacall\+\_\+destroy} (void)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+deserialize} (const char $\ast$name, const char $\ast$buffer, size\+\_\+t size, void $\ast$allocator)
 \item 
-const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char $\ast$ \textbf{ metacall\+\_\+print\+\_\+info} (void)
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+clear} (void $\ast$handle)
+\item 
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+plugin\+\_\+extension} (void)
+\item 
+METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+plugin\+\_\+path} (void)
+\item 
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+destroy} (void)
+\item 
+METACALL\+\_\+\+API const struct \textbf{ metacall\+\_\+version\+\_\+type} $\ast$ \textbf{ metacall\+\_\+version} (void)
+\item 
+METACALL\+\_\+\+API uint32\+\_\+t \textbf{ metacall\+\_\+version\+\_\+hex\+\_\+make} (unsigned int major, unsigned int minor, unsigned int patch)
+\item 
+METACALL\+\_\+\+API uint32\+\_\+t \textbf{ metacall\+\_\+version\+\_\+hex} (void)
+\item 
+METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+version\+\_\+str} (void)
+\item 
+METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+version\+\_\+revision} (void)
+\item 
+METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+version\+\_\+name} (void)
+\item 
+METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+print\+\_\+info} (void)
 \end{DoxyCompactItemize}
 
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+null\+\_\+args} [1]
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+null\+\_\+args} [1]
 \end{DoxyCompactItemize}
 
 
@@ -289,7 +326,7 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+null\+\_\
 \index{metacall.h@{metacall.h}!METACALL\_FLAGS\_FORK\_SAFE@{METACALL\_FLAGS\_FORK\_SAFE}}
 \index{METACALL\_FLAGS\_FORK\_SAFE@{METACALL\_FLAGS\_FORK\_SAFE}!metacall.h@{metacall.h}}
 \doxysubsubsection{METACALL\_FLAGS\_FORK\_SAFE}
-{\footnotesize\ttfamily \#define M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+\+F\+O\+R\+K\+\_\+\+S\+A\+FE~0x01 $<$$<$ 0x00}
+{\footnotesize\ttfamily \#define METACALL\+\_\+\+FLAGS\+\_\+\+FORK\+\_\+\+SAFE~0x01 $<$$<$ 0x00}
 
 
 
@@ -303,11 +340,11 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+null\+\_\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\label{metacall_8h_a4aa530f2d57ee74faec5152ab59cfd2c}} 
+\mbox{\label{metacall_8h_adf5d6e87973ec71e38292324d0fd8048}} 
 \index{metacall.h@{metacall.h}!metacall\_serial@{metacall\_serial}}
 \index{metacall\_serial@{metacall\_serial}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_serial()}
-{\footnotesize\ttfamily const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+serial (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const char$\ast$ metacall\+\_\+serial (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -320,7 +357,7 @@ Name of the serializer to be used with serialization methods
 \index{metacall.h@{metacall.h}!metacall\_log\_null@{metacall\_log\_null}}
 \index{metacall\_log\_null@{metacall\_log\_null}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_log\_null()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+log\+\_\+null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void metacall\+\_\+log\+\_\+null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -330,7 +367,7 @@ When initializing Meta\+Call, it initializes a default logs to stdout if none wa
 \index{metacall.h@{metacall.h}!metacall\_flags@{metacall\_flags}}
 \index{metacall\_flags@{metacall\_flags}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_flags()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+flags (\begin{DoxyParamCaption}\item[{int}]{flags }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void metacall\+\_\+flags (\begin{DoxyParamCaption}\item[{int}]{flags }\end{DoxyParamCaption})}
 
 
 
@@ -338,14 +375,14 @@ Flags to be set in Meta\+Call library.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em flags} & Combination of flags referring to definitions M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+F\+L\+A\+G\+S\+\_\+$\ast$ \\
+\mbox{\texttt{ in}}  & {\em flags} & Combination of flags referring to definitions METACALL\+\_\+\+FLAGS\+\_\+$\ast$ \\
 \hline
 \end{DoxyParams}
 \mbox{\label{metacall_8h_aef066c5638c4e049288d98911e1a799f}} 
 \index{metacall.h@{metacall.h}!metacall\_initialize@{metacall\_initialize}}
 \index{metacall\_initialize@{metacall\_initialize}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_initialize()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -358,7 +395,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_initialize\_ex@{metacall\_initialize\_ex}}
 \index{metacall\_initialize\_ex@{metacall\_initialize\_ex}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_initialize\_ex()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+initialize\+\_\+ex (\begin{DoxyParamCaption}\item[{struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type}}]{initialize\+\_\+config[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+initialize\+\_\+ex (\begin{DoxyParamCaption}\item[{struct \textbf{ metacall\+\_\+initialize\+\_\+configuration\+\_\+type}}]{initialize\+\_\+config[$\,$] }\end{DoxyParamCaption})}
 
 
 
@@ -376,7 +413,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_initialize\_args@{metacall\_initialize\_args}}
 \index{metacall\_initialize\_args@{metacall\_initialize\_args}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_initialize\_args()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+initialize\+\_\+args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void metacall\+\_\+initialize\+\_\+args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
 
 
 
@@ -389,11 +426,11 @@ Initialize Meta\+Call application arguments.
 \mbox{\texttt{ in}}  & {\em argv} & Additional parameters to be passed to the runtime when initializing (when using Meta\+Call as an application) \\
 \hline
 \end{DoxyParams}
-\mbox{\label{metacall_8h_acadaee23ccbd4d29087d617b07e1a346}} 
+\mbox{\label{metacall_8h_a881a9d10167e78461635f285a788816c}} 
 \index{metacall.h@{metacall.h}!metacall\_argc@{metacall\_argc}}
 \index{metacall\_argc@{metacall\_argc}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_argc()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+argc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+argc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -406,7 +443,7 @@ An integer equal or greater than zero
 \index{metacall.h@{metacall.h}!metacall\_argv@{metacall\_argv}}
 \index{metacall\_argv@{metacall\_argv}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_argv()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$$\ast$ metacall\+\_\+argv (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API char$\ast$$\ast$ metacall\+\_\+argv (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -419,7 +456,7 @@ A pointer to an array of strings with the additional arguments
 \index{metacall.h@{metacall.h}!metacall\_is\_initialized@{metacall\_is\_initialized}}
 \index{metacall\_is\_initialized@{metacall\_is\_initialized}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_is\_initialized()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+is\+\_\+initialized (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+is\+\_\+initialized (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag }\end{DoxyParamCaption})}
 
 
 
@@ -427,7 +464,7 @@ Check if script context is loaded by @tag.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em tag} & Extension of the script\\
+\mbox{\texttt{ in}}  & {\em tag} & Extension of the script (if tag is NULL, it returns the status of the whole Meta\+Call instance)\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -437,7 +474,7 @@ Zero if context is initialized, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_args\_size@{metacall\_args\_size}}
 \index{metacall\_args\_size@{metacall\_args\_size}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_args\_size()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t metacall\+\_\+args\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API size\+\_\+t metacall\+\_\+args\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -450,7 +487,7 @@ Number of arguments suported
 \index{metacall.h@{metacall.h}!metacall\_execution\_path@{metacall\_execution\_path}}
 \index{metacall\_execution\_path@{metacall\_execution\_path}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_execution\_path()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+execution\+\_\+path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+execution\+\_\+path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
 
 
 
@@ -470,7 +507,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_execution\_path\_s@{metacall\_execution\_path\_s}}
 \index{metacall\_execution\_path\_s@{metacall\_execution\_path\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_execution\_path\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+execution\+\_\+path\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{size\+\_\+t}]{tag\+\_\+length,  }\item[{const char $\ast$}]{path,  }\item[{size\+\_\+t}]{path\+\_\+length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+execution\+\_\+path\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{size\+\_\+t}]{tag\+\_\+length,  }\item[{const char $\ast$}]{path,  }\item[{size\+\_\+t}]{path\+\_\+length }\end{DoxyParamCaption})}
 
 
 
@@ -494,7 +531,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_load\_from\_file@{metacall\_load\_from\_file}}
 \index{metacall\_load\_from\_file@{metacall\_load\_from\_file}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_load\_from\_file()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{paths[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+load\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{paths[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -508,7 +545,7 @@ Loads a script from file specified by @path.
 \hline
 \mbox{\texttt{ in}}  & {\em size} & Size of the array @paths\\
 \hline
-\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\mbox{\texttt{ in,out}}  & {\em handle} & Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.\+e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void$\ast$ pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.\+e a void$\ast$ pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -518,7 +555,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_load\_from\_memory@{metacall\_load\_from\_memory}}
 \index{metacall\_load\_from\_memory@{metacall\_load\_from\_memory}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_load\_from\_memory()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+load\+\_\+from\+\_\+memory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -532,7 +569,7 @@ Loads a script from memory.
 \hline
 \mbox{\texttt{ in}}  & {\em size} & Memory block representing the string of the script\\
 \hline
-\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\mbox{\texttt{ in,out}}  & {\em handle} & Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.\+e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void$\ast$ pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.\+e a void$\ast$ pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -542,7 +579,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_load\_from\_package@{metacall\_load\_from\_package}}
 \index{metacall\_load\_from\_package@{metacall\_load\_from\_package}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_load\_from\_package()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+package (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{path,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+load\+\_\+from\+\_\+package (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{path,  }\item[{void $\ast$$\ast$}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -554,7 +591,7 @@ Loads a package of scrips from file specified by @path into loader defined by @e
 \hline
 \mbox{\texttt{ in}}  & {\em path} & Path of the package\\
 \hline
-\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\mbox{\texttt{ in,out}}  & {\em handle} & Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.\+e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void$\ast$ pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.\+e a void$\ast$ pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -564,7 +601,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacall\_load\_from\_configuration@{metacall\_load\_from\_configuration}}
 \index{metacall\_load\_from\_configuration@{metacall\_load\_from\_configuration}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_load\_from\_configuration()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+load\+\_\+from\+\_\+configuration (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{void $\ast$$\ast$}]{handle,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+load\+\_\+from\+\_\+configuration (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{void $\ast$$\ast$}]{handle,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
 
 
 
@@ -574,7 +611,7 @@ Loads a a list of scrips from configuration specified by @path into loader with 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em path} & Path of the configuration\\
 \hline
-\mbox{\texttt{ out}}  & {\em handle} & Optional pointer to reference of loaded handle\\
+\mbox{\texttt{ in,out}}  & {\em handle} & Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.\+e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void$\ast$ pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.\+e a void$\ast$ pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.\\
 \hline
 \mbox{\texttt{ in}}  & {\em allocator} & Pointer to allocator will allocate the configuration\\
 \hline
@@ -586,7 +623,7 @@ Zero if success, different from zero otherwise
 \index{metacall.h@{metacall.h}!metacallv@{metacallv}}
 \index{metacallv@{metacallv}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallv()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
 
 
 
@@ -606,7 +643,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallv\_s@{metacallv\_s}}
 \index{metacallv\_s@{metacallv\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallv\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallv\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -628,7 +665,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallhv@{metacallhv}}
 \index{metacallhv@{metacallhv}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallhv()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallhv (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallhv (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
 
 
 
@@ -650,7 +687,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallhv\_s@{metacallhv\_s}}
 \index{metacallhv\_s@{metacallhv\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallhv\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallhv\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallhv\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -674,7 +711,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacall@{metacall}}
 \index{metacall@{metacall}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
@@ -694,7 +731,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallt@{metacallt}}
 \index{metacallt@{metacallt}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallt()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallt (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
@@ -716,7 +753,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallt\_s@{metacallt\_s}}
 \index{metacallt\_s@{metacallt\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallt\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallt\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
@@ -740,7 +777,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallht\_s@{metacallht\_s}}
 \index{metacallht\_s@{metacallht\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallht\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallht\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallht\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ids[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
@@ -766,19 +803,19 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacall\_function@{metacall\_function}}
 \index{metacall\_function@{metacall\_function}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_function()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+function (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+function (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 \mbox{\label{metacall_8h_a0733570d83d6daf0e421e3e414547566}} 
 \index{metacall.h@{metacall.h}!metacall\_handle\_function@{metacall\_handle\_function}}
 \index{metacall\_handle\_function@{metacall\_handle\_function}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_handle\_function()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+handle\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+handle\+\_\+function (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 \mbox{\label{metacall_8h_a26ff10520ec45fc6dc56e6b731f7cd98}} 
 \index{metacall.h@{metacall.h}!metacall\_function\_parameter\_type@{metacall\_function\_parameter\_type}}
 \index{metacall\_function\_parameter\_type@{metacall\_function\_parameter\_type}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_function\_parameter\_type()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+function\+\_\+parameter\+\_\+type (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{size\+\_\+t}]{parameter,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+function\+\_\+parameter\+\_\+type (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{size\+\_\+t}]{parameter,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -800,7 +837,7 @@ Return 0 if the @parameter index exists and @func is valid, 1 otherwhise
 \index{metacall.h@{metacall.h}!metacall\_function\_return\_type@{metacall\_function\_return\_type}}
 \index{metacall\_function\_return\_type@{metacall\_function\_return\_type}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_function\_return\_type()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+function\+\_\+return\+\_\+type (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+function\+\_\+return\+\_\+type (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id} $\ast$}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -820,7 +857,7 @@ Return 0 if the @func is valid, 1 otherwhise
 \index{metacall.h@{metacall.h}!metacall\_function\_size@{metacall\_function\_size}}
 \index{metacall\_function\_size@{metacall\_function\_size}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_function\_size()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI size\+\_\+t metacall\+\_\+function\+\_\+size (\begin{DoxyParamCaption}\item[{void $\ast$}]{func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API size\+\_\+t metacall\+\_\+function\+\_\+size (\begin{DoxyParamCaption}\item[{void $\ast$}]{func }\end{DoxyParamCaption})}
 
 
 
@@ -838,7 +875,7 @@ Return mumber of arguments
 \index{metacall.h@{metacall.h}!metacall\_function\_async@{metacall\_function\_async}}
 \index{metacall\_function\_async@{metacall\_function\_async}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_function\_async()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+function\+\_\+async (\begin{DoxyParamCaption}\item[{void $\ast$}]{func }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+function\+\_\+async (\begin{DoxyParamCaption}\item[{void $\ast$}]{func }\end{DoxyParamCaption})}
 
 
 
@@ -850,19 +887,19 @@ Check if the function @func is asynchronous or synchronous.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Return 0 if it is syncrhonous, 1 if it is asynchronous and -\/1 if the function is N\+U\+LL 
+Return 0 if it is syncrhonous, 1 if it is asynchronous and -\/1 if the function is NULL 
 \end{DoxyReturn}
 \mbox{\label{metacall_8h_a579d699c4407cc27e94d216303f152aa}} 
 \index{metacall.h@{metacall.h}!metacall\_handle@{metacall\_handle}}
 \index{metacall\_handle@{metacall\_handle}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_handle()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+handle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+handle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
-\mbox{\label{metacall_8h_af1a1d52c74b30adba3e328eafb77cf3c}} 
+\mbox{\label{metacall_8h_a593872223a3cbbf9856ce9d9dc8ba2da}} 
 \index{metacall.h@{metacall.h}!metacall\_handle\_id@{metacall\_handle\_id}}
 \index{metacall\_handle\_id@{metacall\_handle\_id}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_handle\_id()}
-{\footnotesize\ttfamily const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+handle\+\_\+id (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const char$\ast$ metacall\+\_\+handle\+\_\+id (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -880,7 +917,7 @@ String that references the handle
 \index{metacall.h@{metacall.h}!metacall\_handle\_export@{metacall\_handle\_export}}
 \index{metacall\_handle\_export@{metacall\_handle\_export}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_handle\_export()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+handle\+\_\+export (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+handle\+\_\+export (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -898,7 +935,7 @@ A value of type map on success, null otherwise
 \index{metacall.h@{metacall.h}!metacallfv@{metacallfv}}
 \index{metacallfv@{metacallfv}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfv()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfv (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$] }\end{DoxyParamCaption})}
 
 
 
@@ -918,7 +955,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallfv\_s@{metacallfv\_s}}
 \index{metacallfv\_s@{metacallfv\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfv\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfv\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -940,7 +977,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallf@{metacallf}}
 \index{metacallf@{metacallf}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallf()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallf (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallf (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 
 
@@ -958,7 +995,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallfs@{metacallfs}}
 \index{metacallfs@{metacallfs}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfs()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfs (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfs (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
 
 
 
@@ -982,7 +1019,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallfmv@{metacallfmv}}
 \index{metacallfmv@{metacallfmv}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfmv()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfmv (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfmv (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$] }\end{DoxyParamCaption})}
 
 
 
@@ -1004,7 +1041,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallfms@{metacallfms}}
 \index{metacallfms@{metacallfms}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfms()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfms (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfms (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
 
 
 
@@ -1028,19 +1065,25 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacall\_register@{metacall\_register}}
 \index{metacall\_register@{metacall\_register}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_register()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+register (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{void $\ast$$\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+register (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{void $\ast$$\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{}]{... }\end{DoxyParamCaption})}
 
 \mbox{\label{metacall_8h_ae0f575287847cd57f5a549b2b211db1d}} 
 \index{metacall.h@{metacall.h}!metacall\_registerv@{metacall\_registerv}}
 \index{metacall\_registerv@{metacall\_registerv}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_registerv()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+registerv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{void $\ast$$\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{types[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+registerv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{void $\ast$$\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{types[$\,$] }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_afc4e32dfcccfefd3fec11b80f7edd10a}} 
+\index{metacall.h@{metacall.h}!metacall\_register\_loaderv@{metacall\_register\_loaderv}}
+\index{metacall\_register\_loaderv@{metacall\_register\_loaderv}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_register\_loaderv()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+register\+\_\+loaderv (\begin{DoxyParamCaption}\item[{void $\ast$}]{loader,  }\item[{void $\ast$}]{context,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{types[$\,$] }\end{DoxyParamCaption})}
 
 \mbox{\label{metacall_8h_a52ef2927638d958c6e76555fc49a765b}} 
 \index{metacall.h@{metacall.h}!metacall\_await@{metacall\_await}}
 \index{metacall\_await@{metacall\_await}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_await()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+await (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+await (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1076,7 +1119,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacall\_await\_future@{metacall\_await\_future}}
 \index{metacall\_await\_future@{metacall\_await\_future}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_await\_future()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+await\+\_\+future (\begin{DoxyParamCaption}\item[{void $\ast$}]{f,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+await\+\_\+future (\begin{DoxyParamCaption}\item[{void $\ast$}]{f,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1110,7 +1153,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacall\_await\_s@{metacall\_await\_s}}
 \index{metacall\_await\_s@{metacall\_await\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_await\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1148,7 +1191,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacallfv\_await@{metacallfv\_await}}
 \index{metacallfv\_await@{metacallfv\_await}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfv\_await()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfv\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1184,7 +1227,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacallfv\_await\_s@{metacallfv\_await\_s}}
 \index{metacallfv\_await\_s@{metacallfv\_await\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfv\_await\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfv\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1222,7 +1265,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacallfv\_await\_struct\_s@{metacallfv\_await\_struct\_s}}
 \index{metacallfv\_await\_struct\_s@{metacallfv\_await\_struct\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfv\_await\_struct\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfv\+\_\+await\+\_\+struct\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{metacall\+\_\+await\+\_\+callbacks}]{cb,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfv\+\_\+await\+\_\+struct\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{\textbf{ metacall\+\_\+await\+\_\+callbacks}}]{cb,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1248,7 +1291,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacallfmv\_await@{metacallfmv\_await}}
 \index{metacallfmv\_await@{metacallfmv\_await}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfmv\_await()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfmv\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfmv\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$],  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1288,7 +1331,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacallfmv\_await\_s@{metacallfmv\_await\_s}}
 \index{metacallfmv\_await\_s@{metacallfmv\_await\_s}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfmv\_await\_s()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfmv\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfmv\+\_\+await\+\_\+s (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{void $\ast$}]{keys[$\,$],  }\item[{void $\ast$}]{values[$\,$],  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1326,7 +1369,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacallfs\_await@{metacallfs\_await}}
 \index{metacallfs\_await@{metacallfs\_await}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfs\_await()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfs\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfs\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1366,7 +1409,7 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacallfms\_await@{metacallfms\_await}}
 \index{metacallfms\_await@{metacallfms\_await}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallfms\_await()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallfms\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallfms\+\_\+await (\begin{DoxyParamCaption}\item[{void $\ast$}]{func,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{resolve\+\_\+callback,  }\item[{void $\ast$($\ast$)(void $\ast$, void $\ast$)}]{reject\+\_\+callback,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -1406,13 +1449,13 @@ Pointer to value containing the result of the call returned by @resolve\+\_\+cal
 \index{metacall.h@{metacall.h}!metacall\_class@{metacall\_class}}
 \index{metacall\_class@{metacall\_class}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_class()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 \mbox{\label{metacall_8h_a97f50d305c683edfbeec022d41d8b749}} 
 \index{metacall.h@{metacall.h}!metacallv\_class@{metacallv\_class}}
 \index{metacallv\_class@{metacallv\_class}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallv\_class()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallv\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1436,7 +1479,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallt\_class@{metacallt\_class}}
 \index{metacallt\_class@{metacallt\_class}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallt\_class()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ret,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallt\+\_\+class (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ret,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1462,7 +1505,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacall\_class\_new@{metacall\_class\_new}}
 \index{metacall\_class\_new@{metacall\_class\_new}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_class\_new()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class\+\_\+new (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+class\+\_\+new (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1486,7 +1529,7 @@ Pointer to the new object value instance
 \index{metacall.h@{metacall.h}!metacall\_class\_static\_get@{metacall\_class\_static\_get}}
 \index{metacall\_class\_static\_get@{metacall\_class\_static\_get}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_class\_static\_get()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+class\+\_\+static\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+class\+\_\+static\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
 
 
 
@@ -1500,13 +1543,13 @@ Get an attribute from @cls by @key name.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Pointer to the class attribute value or N\+U\+LL if an error occurred 
+Pointer to the class attribute value or NULL if an error occurred 
 \end{DoxyReturn}
 \mbox{\label{metacall_8h_ad69032d3eec3834b36d907141f32332a}} 
 \index{metacall.h@{metacall.h}!metacall\_class\_static\_set@{metacall\_class\_static\_set}}
 \index{metacall\_class\_static\_set@{metacall\_class\_static\_set}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_class\_static\_set()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+class\+\_\+static\+\_\+set (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{key,  }\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+class\+\_\+static\+\_\+set (\begin{DoxyParamCaption}\item[{void $\ast$}]{cls,  }\item[{const char $\ast$}]{key,  }\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -1528,7 +1571,7 @@ Non-\/zero integer if an error ocurred
 \index{metacall.h@{metacall.h}!metacallv\_object@{metacallv\_object}}
 \index{metacallv\_object@{metacallv\_object}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallv\_object()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallv\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallv\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1552,7 +1595,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacallt\_object@{metacallt\_object}}
 \index{metacallt\_object@{metacallt\_object}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacallt\_object()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacallt\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ret,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacallt\+\_\+object (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{name,  }\item[{const enum \textbf{ metacall\+\_\+value\+\_\+id}}]{ret,  }\item[{void $\ast$}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1578,7 +1621,7 @@ Pointer to value containing the result of the call
 \index{metacall.h@{metacall.h}!metacall\_object\_get@{metacall\_object\_get}}
 \index{metacall\_object\_get@{metacall\_object\_get}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_object\_get()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+object\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+object\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
 
 
 
@@ -1592,13 +1635,13 @@ Get an attribute from @obj by @key name.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Pointer to the object attribute value or N\+U\+LL if an error occurred 
+Pointer to the object attribute value or NULL if an error occurred 
 \end{DoxyReturn}
 \mbox{\label{metacall_8h_a567cbdd3c398e4bcfab8e07ff76de06b}} 
 \index{metacall.h@{metacall.h}!metacall\_object\_set@{metacall\_object\_set}}
 \index{metacall\_object\_set@{metacall\_object\_set}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_object\_set()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+object\+\_\+set (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{key,  }\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+object\+\_\+set (\begin{DoxyParamCaption}\item[{void $\ast$}]{obj,  }\item[{const char $\ast$}]{key,  }\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -1616,11 +1659,29 @@ Set an attribute to @obj by @key name.
 \begin{DoxyReturn}{Returns}
 Non-\/zero integer if an error ocurred 
 \end{DoxyReturn}
+\mbox{\label{metacall_8h_a7e1d1400dc0a308eff0ad61495aece15}} 
+\index{metacall.h@{metacall.h}!metacall\_throwable\_value@{metacall\_throwable\_value}}
+\index{metacall\_throwable\_value@{metacall\_throwable\_value}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_throwable\_value()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+throwable\+\_\+value (\begin{DoxyParamCaption}\item[{void $\ast$}]{th }\end{DoxyParamCaption})}
+
+
+
+Get the value contained by throwable object @th. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em th} & Pointer to the throwable object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the value inside of the throwable or NULL in case of error 
+\end{DoxyReturn}
 \mbox{\label{metacall_8h_ab9d6a8fa4d186f14741ef15015798eb0}} 
 \index{metacall.h@{metacall.h}!metacall\_inspect@{metacall\_inspect}}
 \index{metacall\_inspect@{metacall\_inspect}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_inspect()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+inspect (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API char$\ast$ metacall\+\_\+inspect (\begin{DoxyParamCaption}\item[{size\+\_\+t $\ast$}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
 
 
 
@@ -1636,11 +1697,24 @@ Provide information about all loaded objects.
 \begin{DoxyReturn}{Returns}
 String containing introspection information 
 \end{DoxyReturn}
+\mbox{\label{metacall_8h_a640b7fe3b2b8b119abc047f3e7a3e2bf}} 
+\index{metacall.h@{metacall.h}!metacall\_inspect\_value@{metacall\_inspect\_value}}
+\index{metacall\_inspect\_value@{metacall\_inspect\_value}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_inspect\_value()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+inspect\+\_\+value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide information about all loaded objects as a value. 
+
+\begin{DoxyReturn}{Returns}
+Value containing introspection information 
+\end{DoxyReturn}
 \mbox{\label{metacall_8h_acdcbeeeafdc83e9b69937265a0da53c3}} 
 \index{metacall.h@{metacall.h}!metacall\_serialize@{metacall\_serialize}}
 \index{metacall\_serialize@{metacall\_serialize}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_serialize()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+serialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{v,  }\item[{size\+\_\+t $\ast$}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API char$\ast$ metacall\+\_\+serialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{v,  }\item[{size\+\_\+t $\ast$}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
 
 
 
@@ -1664,7 +1738,7 @@ New allocated string containing stringified value
 \index{metacall.h@{metacall.h}!metacall\_deserialize@{metacall\_deserialize}}
 \index{metacall\_deserialize@{metacall\_deserialize}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_deserialize()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+deserialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+deserialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
 
 
 
@@ -1688,7 +1762,7 @@ New allocated value representing the string (must be freed)
 \index{metacall.h@{metacall.h}!metacall\_clear@{metacall\_clear}}
 \index{metacall\_clear@{metacall\_clear}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_clear()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+clear (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+clear (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -1702,11 +1776,37 @@ Clear handle from memory and unload related resources.
 \begin{DoxyReturn}{Returns}
 Zero if success, different from zero otherwise 
 \end{DoxyReturn}
+\mbox{\label{metacall_8h_a57ecb3af9057cf7c9457bab16b0958ac}} 
+\index{metacall.h@{metacall.h}!metacall\_plugin\_extension@{metacall\_plugin\_extension}}
+\index{metacall\_plugin\_extension@{metacall\_plugin\_extension}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_plugin\_extension()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+plugin\+\_\+extension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the plugin extension handle to be used for loading plugins. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the extension handle, or null if it failed to load 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_aa2add9c2e53f0bbd664392ada75cd5b0}} 
+\index{metacall.h@{metacall.h}!metacall\_plugin\_path@{metacall\_plugin\_path}}
+\index{metacall\_plugin\_path@{metacall\_plugin\_path}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_plugin\_path()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const char$\ast$ metacall\+\_\+plugin\+\_\+path (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the plugin extension path to be used for accessing the plugins folder. 
+
+\begin{DoxyReturn}{Returns}
+String containing the core plugin path, or null if it failed to load the plugin extension 
+\end{DoxyReturn}
 \mbox{\label{metacall_8h_aca8745a9f261bc3d37ee9156b991296f}} 
 \index{metacall.h@{metacall.h}!metacall\_destroy@{metacall\_destroy}}
 \index{metacall\_destroy@{metacall\_destroy}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_destroy()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI int metacall\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -1715,11 +1815,98 @@ Destroy Meta\+Call library.
 \begin{DoxyReturn}{Returns}
 Zero if success, different from zero otherwise 
 \end{DoxyReturn}
-\mbox{\label{metacall_8h_a1e8b06591a5564cfa4f1209e84ad5e78}} 
+\mbox{\label{metacall_8h_a1193b3c37aee3b2f5ed49b1e08784ffd}} 
+\index{metacall.h@{metacall.h}!metacall\_version@{metacall\_version}}
+\index{metacall\_version@{metacall\_version}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_version()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const struct \textbf{ metacall\+\_\+version\+\_\+type}$\ast$ metacall\+\_\+version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module version struct. 
+
+\begin{DoxyReturn}{Returns}
+Static struct containing unpacked version 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a3af1b1656bce5952ccd86352bdd76bb0}} 
+\index{metacall.h@{metacall.h}!metacall\_version\_hex\_make@{metacall\_version\_hex\_make}}
+\index{metacall\_version\_hex\_make@{metacall\_version\_hex\_make}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_version\_hex\_make()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API uint32\+\_\+t metacall\+\_\+version\+\_\+hex\+\_\+make (\begin{DoxyParamCaption}\item[{unsigned int}]{major,  }\item[{unsigned int}]{minor,  }\item[{unsigned int}]{patch }\end{DoxyParamCaption})}
+
+
+
+Provide the module version hexadecimal value with format 0x\+MMIIPPPP where M is @major, I is @minor and P is @patch. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em major} & Unsigned integer representing major version\\
+\hline
+\mbox{\texttt{ in}}  & {\em minor} & Unsigned integer representing minor version\\
+\hline
+\mbox{\texttt{ in}}  & {\em patch} & Unsigned integer representing patch version\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hexadecimal integer containing packed version 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a81a1feba31ad43cd3dda3d08699e1780}} 
+\index{metacall.h@{metacall.h}!metacall\_version\_hex@{metacall\_version\_hex}}
+\index{metacall\_version\_hex@{metacall\_version\_hex}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_version\_hex()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API uint32\+\_\+t metacall\+\_\+version\+\_\+hex (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module version hexadecimal value with format 0x\+MMIIPPPP where M is major, I is minor and P is patch. 
+
+\begin{DoxyReturn}{Returns}
+Hexadecimal integer containing packed version 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a8c0fd2d5fca3f94b8d52e2fa7ee79788}} 
+\index{metacall.h@{metacall.h}!metacall\_version\_str@{metacall\_version\_str}}
+\index{metacall\_version\_str@{metacall\_version\_str}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_version\_str()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const char$\ast$ metacall\+\_\+version\+\_\+str (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module version string. 
+
+\begin{DoxyReturn}{Returns}
+Static string containing module version 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_ab7beb4c0175a8e98b445bb0bc2218dba}} 
+\index{metacall.h@{metacall.h}!metacall\_version\_revision@{metacall\_version\_revision}}
+\index{metacall\_version\_revision@{metacall\_version\_revision}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_version\_revision()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const char$\ast$ metacall\+\_\+version\+\_\+revision (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module version revision string. 
+
+\begin{DoxyReturn}{Returns}
+Static string containing module version revision 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a8c2bfc0f3461385a84c61e4142d3bc47}} 
+\index{metacall.h@{metacall.h}!metacall\_version\_name@{metacall\_version\_name}}
+\index{metacall\_version\_name@{metacall\_version\_name}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_version\_name()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const char$\ast$ metacall\+\_\+version\+\_\+name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provide the module version name. 
+
+\begin{DoxyReturn}{Returns}
+Static string containing module version name 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a47d8e1e26509c0c775ba0ecbd08f9288}} 
 \index{metacall.h@{metacall.h}!metacall\_print\_info@{metacall\_print\_info}}
 \index{metacall\_print\_info@{metacall\_print\_info}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_print\_info()}
-{\footnotesize\ttfamily const M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI char$\ast$ metacall\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API const char$\ast$ metacall\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -1735,5 +1922,5 @@ Static string containing module information
 \index{metacall.h@{metacall.h}!metacall\_null\_args@{metacall\_null\_args}}
 \index{metacall\_null\_args@{metacall\_null\_args}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_null\_args}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+null\+\_\+args[1]}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+null\+\_\+args[1]\hspace{0.3cm}{\ttfamily [extern]}}
 

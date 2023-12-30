@@ -1,4 +1,4 @@
-.TH "preprocessor_for.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "preprocessor_for.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,6 +11,8 @@ preprocessor_for.h
 \fC#include <preprocessor/preprocessor_arguments\&.h>\fP
 .br
 \fC#include <preprocessor/preprocessor_tuple\&.h>\fP
+.br
+\fC#include <preprocessor/preprocessor_empty\&.h>\fP
 .br
 
 .SS "Macros"
@@ -29,7 +31,7 @@ preprocessor_for.h
 .RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr,  element, \&.\&.\&.)   expr(element)"
 .br
 .ti -1c
-.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_2\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr, __VA_ARGS__))"
+.RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_2\fP(expr,  element, \&.\&.\&.)   	expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr, __VA_ARGS__))"
 .br
 .ti -1c
 .RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_3\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_2\fP(expr, __VA_ARGS__))"
@@ -217,6 +219,204 @@ preprocessor_for.h
 .ti -1c
 .RI "#define \fBPREPROCESSOR_FOR_EACH_IMPL_64\fP(expr,  element, \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_63\fP(expr, __VA_ARGS__))"
 .br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_EVAL\fP(expr)   expr"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_0\fP(expr,  \fBcontext\fP,  iterator, \&.\&.\&.)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_1\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element)"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_2\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   	expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_1\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_3\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_2\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_4\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_3\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_5\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_4\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_6\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_5\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_7\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_6\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_8\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_7\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_9\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_8\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_10\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_9\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_11\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_10\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_12\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_11\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_13\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_12\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_14\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_13\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_15\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_14\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_16\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_15\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_17\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_16\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_18\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_17\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_19\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_18\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_20\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_19\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_21\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_20\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_22\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_21\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_23\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_22\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_24\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_23\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_25\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_24\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_26\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_25\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_27\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_26\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_28\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_27\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_29\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_28\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_30\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_29\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_31\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_30\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_32\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_31\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_33\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_32\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_34\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_33\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_35\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_34\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_36\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_35\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_37\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_36\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_38\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_37\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_39\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_38\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_40\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_39\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_41\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_40\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_42\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_41\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_43\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_42\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_44\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_43\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_45\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_44\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_46\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_45\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_47\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_46\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_48\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_47\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_49\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_48\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_50\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_49\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_51\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_50\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_52\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_51\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_53\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_52\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_54\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_53\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_55\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_54\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_56\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_55\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_57\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_56\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_58\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_57\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_59\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_58\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_60\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_59\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_61\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_60\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_62\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_61\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_63\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_62\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
+.ti -1c
+.RI "#define \fBPREPROCESSOR_FOR_IMPL_64\fP(expr,  \fBcontext\fP,  iterator,  element, \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_63\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+.br
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
@@ -228,7 +428,7 @@ preprocessor_for.h
 
 .SS "#define PREPROCESSOR_FOR_EACH_IMPL_1(expr, element,  \&.\&.\&.)   expr(element)"
 
-.SS "#define PREPROCESSOR_FOR_EACH_IMPL_2(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr, __VA_ARGS__))"
+.SS "#define PREPROCESSOR_FOR_EACH_IMPL_2(expr, element,  \&.\&.\&.)   	expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_1\fP(expr, __VA_ARGS__))"
 
 .SS "#define PREPROCESSOR_FOR_EACH_IMPL_3(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_2\fP(expr, __VA_ARGS__))"
 
@@ -353,6 +553,138 @@ preprocessor_for.h
 .SS "#define PREPROCESSOR_FOR_EACH_IMPL_63(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_62\fP(expr, __VA_ARGS__))"
 
 .SS "#define PREPROCESSOR_FOR_EACH_IMPL_64(expr, element,  \&.\&.\&.)   expr(element) \fBPREPROCESSOR_FOR_EACH_EVAL\fP(\fBPREPROCESSOR_FOR_EACH_IMPL_63\fP(expr, __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_EVAL(expr)   expr"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_0(expr, \fBcontext\fP, iterator,  \&.\&.\&.)"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_1(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element)"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_2(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   	expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_1\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_3(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_2\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_4(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_3\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_5(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_4\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_6(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_5\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_7(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_6\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_8(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_7\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_9(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_8\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_10(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_9\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_11(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_10\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_12(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_11\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_13(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_12\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_14(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_13\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_15(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_14\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_16(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_15\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_17(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_16\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_18(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_17\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_19(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_18\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_20(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_19\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_21(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_20\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_22(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_21\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_23(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_22\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_24(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_23\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_25(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_24\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_26(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_25\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_27(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_26\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_28(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_27\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_29(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_28\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_30(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_29\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_31(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_30\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_32(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_31\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_33(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_32\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_34(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_33\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_35(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_34\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_36(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_35\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_37(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_36\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_38(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_37\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_39(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_38\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_40(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_39\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_41(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_40\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_42(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_41\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_43(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_42\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_44(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_43\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_45(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_44\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_46(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_45\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_47(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_46\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_48(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_47\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_49(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_48\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_50(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_49\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_51(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_50\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_52(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_51\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_53(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_52\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_54(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_53\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_55(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_54\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_56(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_55\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_57(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_56\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_58(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_57\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_59(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_58\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_60(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_59\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_61(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_60\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_62(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_61\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_63(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_62\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
+
+.SS "#define PREPROCESSOR_FOR_IMPL_64(expr, \fBcontext\fP, iterator, element,  \&.\&.\&.)   expr(\fBcontext\fP, iterator, element) \fBPREPROCESSOR_FOR_EVAL\fP(\fBPREPROCESSOR_FOR_IMPL_63\fP(expr, \fBcontext\fP, \fBPREPROCESSOR_INCREMENT\fP(iterator), __VA_ARGS__))"
 
 .SH "Author"
 .PP 

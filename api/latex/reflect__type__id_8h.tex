@@ -26,65 +26,72 @@ typedef int \textbf{ type\+\_\+id}
 \begin{DoxyCompactItemize}
 \item 
 enum \textbf{ type\+\_\+primitive\+\_\+id} \{ \newline
-\textbf{ T\+Y\+P\+E\+\_\+\+B\+O\+OL} = 0, 
-\textbf{ T\+Y\+P\+E\+\_\+\+C\+H\+AR} = 1, 
-\textbf{ T\+Y\+P\+E\+\_\+\+S\+H\+O\+RT} = 2, 
-\textbf{ T\+Y\+P\+E\+\_\+\+I\+NT} = 3, 
-\newline
-\textbf{ T\+Y\+P\+E\+\_\+\+L\+O\+NG} = 4, 
-\textbf{ T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT} = 5, 
-\textbf{ T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE} = 6, 
-\textbf{ T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG} = 7, 
-\newline
-\textbf{ T\+Y\+P\+E\+\_\+\+B\+U\+F\+F\+ER} = 8, 
-\textbf{ T\+Y\+P\+E\+\_\+\+A\+R\+R\+AY} = 9, 
-\textbf{ T\+Y\+P\+E\+\_\+\+M\+AP} = 10, 
-\textbf{ T\+Y\+P\+E\+\_\+\+P\+TR} = 11, 
-\newline
-\textbf{ T\+Y\+P\+E\+\_\+\+F\+U\+T\+U\+RE} = 12, 
-\textbf{ T\+Y\+P\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON} = 13, 
-\textbf{ T\+Y\+P\+E\+\_\+\+N\+U\+LL} = 14, 
-\textbf{ T\+Y\+P\+E\+\_\+\+C\+L\+A\+SS} = 15, 
-\newline
-\textbf{ T\+Y\+P\+E\+\_\+\+O\+B\+J\+E\+CT} = 16, 
-\textbf{ T\+Y\+P\+E\+\_\+\+S\+I\+ZE}, 
-\textbf{ T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+ID}
+\textbf{ TYPE\+\_\+\+BOOL} = 0
+, \textbf{ TYPE\+\_\+\+CHAR} = 1
+, \textbf{ TYPE\+\_\+\+SHORT} = 2
+, \textbf{ TYPE\+\_\+\+INT} = 3
+, \newline
+\textbf{ TYPE\+\_\+\+LONG} = 4
+, \textbf{ TYPE\+\_\+\+FLOAT} = 5
+, \textbf{ TYPE\+\_\+\+DOUBLE} = 6
+, \textbf{ TYPE\+\_\+\+STRING} = 7
+, \newline
+\textbf{ TYPE\+\_\+\+BUFFER} = 8
+, \textbf{ TYPE\+\_\+\+ARRAY} = 9
+, \textbf{ TYPE\+\_\+\+MAP} = 10
+, \textbf{ TYPE\+\_\+\+PTR} = 11
+, \newline
+\textbf{ TYPE\+\_\+\+FUTURE} = 12
+, \textbf{ TYPE\+\_\+\+FUNCTION} = 13
+, \textbf{ TYPE\+\_\+\+NULL} = 14
+, \textbf{ TYPE\+\_\+\+CLASS} = 15
+, \newline
+\textbf{ TYPE\+\_\+\+OBJECT} = 16
+, \textbf{ TYPE\+\_\+\+EXCEPTION} = 17
+, \textbf{ TYPE\+\_\+\+THROWABLE} = 18
+, \textbf{ TYPE\+\_\+\+SIZE}
+, \newline
+\textbf{ TYPE\+\_\+\+INVALID}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ type\+\_\+id\+\_\+name} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API const char $\ast$ \textbf{ type\+\_\+id\+\_\+name} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+boolean} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+boolean} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+char} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+char} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+integer} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+integer} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+decimal} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+decimal} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+string} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+string} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+buffer} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+buffer} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+array} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+array} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+map} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+map} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+ptr} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+ptr} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+future} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+future} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+function} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+function} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+null} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+null} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+class} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+class} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+object} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+object} (\textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+invalid} (\textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+exception} (\textbf{ type\+\_\+id} id)
+\item 
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+throwable} (\textbf{ type\+\_\+id} id)
+\item 
+REFLECT\+\_\+\+API int \textbf{ type\+\_\+id\+\_\+invalid} (\textbf{ type\+\_\+id} id)
 \end{DoxyCompactItemize}
 
 
@@ -106,90 +113,98 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ type\+\_\+id\+\_\+invalid} (\textb
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_BOOL@{TYPE\_BOOL}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_BOOL@{TYPE\_BOOL}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea3e0f738756c5205d71c69d955603f46c}} 
-T\+Y\+P\+E\+\_\+\+B\+O\+OL&\\
+TYPE\+\_\+\+BOOL&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_CHAR@{TYPE\_CHAR}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_CHAR@{TYPE\_CHAR}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea2c8735de6cf799483eefed0e90a386f5}} 
-T\+Y\+P\+E\+\_\+\+C\+H\+AR&\\
+TYPE\+\_\+\+CHAR&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_SHORT@{TYPE\_SHORT}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_SHORT@{TYPE\_SHORT}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea054c36101e4cd86983d1683871e65dd1}} 
-T\+Y\+P\+E\+\_\+\+S\+H\+O\+RT&\\
+TYPE\+\_\+\+SHORT&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_INT@{TYPE\_INT}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_INT@{TYPE\_INT}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea4fcd4421533bb21c827865bdbac4fef9}} 
-T\+Y\+P\+E\+\_\+\+I\+NT&\\
+TYPE\+\_\+\+INT&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_LONG@{TYPE\_LONG}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_LONG@{TYPE\_LONG}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea4ae533852f8003c3e6e568a79cc35388}} 
-T\+Y\+P\+E\+\_\+\+L\+O\+NG&\\
+TYPE\+\_\+\+LONG&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_FLOAT@{TYPE\_FLOAT}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_FLOAT@{TYPE\_FLOAT}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea19a0a402d33a2e049e91ea9e37e90c2f}} 
-T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT&\\
+TYPE\+\_\+\+FLOAT&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_DOUBLE@{TYPE\_DOUBLE}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_DOUBLE@{TYPE\_DOUBLE}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea019d94f7c571e36215cc1a41e825de0c}} 
-T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE&\\
+TYPE\+\_\+\+DOUBLE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_STRING@{TYPE\_STRING}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_STRING@{TYPE\_STRING}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaeaddb4be6b1cc25112defabef75f73427a}} 
-T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG&\\
+TYPE\+\_\+\+STRING&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_BUFFER@{TYPE\_BUFFER}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_BUFFER@{TYPE\_BUFFER}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea723ecdbb4295e88f08e7594fa8f1afac}} 
-T\+Y\+P\+E\+\_\+\+B\+U\+F\+F\+ER&\\
+TYPE\+\_\+\+BUFFER&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_ARRAY@{TYPE\_ARRAY}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_ARRAY@{TYPE\_ARRAY}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaead189c0a53681ec74eeea1f56d08d741f}} 
-T\+Y\+P\+E\+\_\+\+A\+R\+R\+AY&\\
+TYPE\+\_\+\+ARRAY&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_MAP@{TYPE\_MAP}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_MAP@{TYPE\_MAP}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaead2aa4ac68ee62f30544d0f7c9d16a027}} 
-T\+Y\+P\+E\+\_\+\+M\+AP&\\
+TYPE\+\_\+\+MAP&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_PTR@{TYPE\_PTR}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_PTR@{TYPE\_PTR}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea311715f465e358409d513be004f82b2f}} 
-T\+Y\+P\+E\+\_\+\+P\+TR&\\
+TYPE\+\_\+\+PTR&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_FUTURE@{TYPE\_FUTURE}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_FUTURE@{TYPE\_FUTURE}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea3db131537bcaa214a88f6013458eae22}} 
-T\+Y\+P\+E\+\_\+\+F\+U\+T\+U\+RE&\\
+TYPE\+\_\+\+FUTURE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_FUNCTION@{TYPE\_FUNCTION}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_FUNCTION@{TYPE\_FUNCTION}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaeae40264fa7bcc3bc4091d70ddd42bd542}} 
-T\+Y\+P\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON&\\
+TYPE\+\_\+\+FUNCTION&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_NULL@{TYPE\_NULL}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_NULL@{TYPE\_NULL}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea174c14bf485cb83d7bb06493dc9c4eef}} 
-T\+Y\+P\+E\+\_\+\+N\+U\+LL&\\
+TYPE\+\_\+\+NULL&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_CLASS@{TYPE\_CLASS}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_CLASS@{TYPE\_CLASS}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaeae3c05d01e5713b8e32e46fb33c279e62}} 
-T\+Y\+P\+E\+\_\+\+C\+L\+A\+SS&\\
+TYPE\+\_\+\+CLASS&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_OBJECT@{TYPE\_OBJECT}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_OBJECT@{TYPE\_OBJECT}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea43aef6302e2b8ee4efdd9ca87636d7c8}} 
-T\+Y\+P\+E\+\_\+\+O\+B\+J\+E\+CT&\\
+TYPE\+\_\+\+OBJECT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_EXCEPTION@{TYPE\_EXCEPTION}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_EXCEPTION@{TYPE\_EXCEPTION}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea4f7005aa6681a4f86d2e300e08de3720}} 
+TYPE\+\_\+\+EXCEPTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_THROWABLE@{TYPE\_THROWABLE}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_THROWABLE@{TYPE\_THROWABLE}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaeafb9861ae2a8e03986ea83de85a3d066f}} 
+TYPE\+\_\+\+THROWABLE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_SIZE@{TYPE\_SIZE}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_SIZE@{TYPE\_SIZE}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaea616b31034d047757e1c557b7dbd0f63f}} 
-T\+Y\+P\+E\+\_\+\+S\+I\+ZE&\\
+TYPE\+\_\+\+SIZE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TYPE\_INVALID@{TYPE\_INVALID}!reflect\_type\_id.h@{reflect\_type\_id.h}}\index{reflect\_type\_id.h@{reflect\_type\_id.h}!TYPE\_INVALID@{TYPE\_INVALID}}}\mbox{\label{reflect__type__id_8h_aac3b36ca5262794cb8accfef6a2bcaaeafeec3d92b10ebeaa68bbb56e4d08691c}} 
-T\+Y\+P\+E\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+TYPE\+\_\+\+INVALID&\\
 \hline
 
 \end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\label{reflect__type__id_8h_a20c74beaf5431ebfa2767a1e537be21f}} 
+\mbox{\label{reflect__type__id_8h_a70e9080600bdc3c5dc1965c4312c3cd1}} 
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_name@{type\_id\_name}}
 \index{type\_id\_name@{type\_id\_name}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_name()}
-{\footnotesize\ttfamily const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ type\+\_\+id\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API const char$\ast$ type\+\_\+id\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -207,7 +222,7 @@ String representing a readable name for @id
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_boolean@{type\_id\_boolean}}
 \index{type\_id\_boolean@{type\_id\_boolean}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_boolean()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+boolean (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+boolean (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -225,7 +240,7 @@ Returns zero if type is integer, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_char@{type\_id\_char}}
 \index{type\_id\_char@{type\_id\_char}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_char()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -243,7 +258,7 @@ Returns zero if type is char, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_integer@{type\_id\_integer}}
 \index{type\_id\_integer@{type\_id\_integer}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_integer()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+integer (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+integer (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -261,7 +276,7 @@ Returns zero if type is integer, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_decimal@{type\_id\_decimal}}
 \index{type\_id\_decimal@{type\_id\_decimal}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_decimal()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+decimal (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+decimal (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -279,7 +294,7 @@ Returns zero if type is decimal, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_string@{type\_id\_string}}
 \index{type\_id\_string@{type\_id\_string}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_string()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -297,7 +312,7 @@ Returns zero if type is string, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_buffer@{type\_id\_buffer}}
 \index{type\_id\_buffer@{type\_id\_buffer}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_buffer()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -315,7 +330,7 @@ Returns zero if type is buffer, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_array@{type\_id\_array}}
 \index{type\_id\_array@{type\_id\_array}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_array()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -333,7 +348,7 @@ Returns zero if type is array, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_map@{type\_id\_map}}
 \index{type\_id\_map@{type\_id\_map}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_map()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -351,7 +366,7 @@ Returns zero if type is map, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_ptr@{type\_id\_ptr}}
 \index{type\_id\_ptr@{type\_id\_ptr}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_ptr()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -369,7 +384,7 @@ Returns zero if type is pointer, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_future@{type\_id\_future}}
 \index{type\_id\_future@{type\_id\_future}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_future()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -387,7 +402,7 @@ Returns zero if type is future, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_function@{type\_id\_function}}
 \index{type\_id\_function@{type\_id\_function}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_function()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -405,11 +420,11 @@ Returns zero if type is function, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_null@{type\_id\_null}}
 \index{type\_id\_null@{type\_id\_null}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_null()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
-Check if type id is pointer value N\+U\+LL. 
+Check if type id is pointer value NULL. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -423,7 +438,7 @@ Returns zero if type is null, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_class@{type\_id\_class}}
 \index{type\_id\_class@{type\_id\_class}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_class()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -441,7 +456,7 @@ Returns zero if type is class, different from zero otherwhise
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_object@{type\_id\_object}}
 \index{type\_id\_object@{type\_id\_object}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_object()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -455,11 +470,47 @@ Check if type id is object value (object)
 \begin{DoxyReturn}{Returns}
 Returns zero if type is object, different from zero otherwhise 
 \end{DoxyReturn}
+\mbox{\label{reflect__type__id_8h_ad2213185c87afbf070b8c54b01d5711b}} 
+\index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_exception@{type\_id\_exception}}
+\index{type\_id\_exception@{type\_id\_exception}!reflect\_type\_id.h@{reflect\_type\_id.h}}
+\doxysubsubsection{type\_id\_exception()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+exception (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Check if type id is exception value (error type) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & Type id to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero if type is exception, different from zero otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__type__id_8h_a71b119868db3cf99e8b5f42fb028e922}} 
+\index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_throwable@{type\_id\_throwable}}
+\index{type\_id\_throwable@{type\_id\_throwable}!reflect\_type\_id.h@{reflect\_type\_id.h}}
+\doxysubsubsection{type\_id\_throwable()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+throwable (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Check if type id is throwable value (thrown type) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & Type id to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero if type is throwable, different from zero otherwhise 
+\end{DoxyReturn}
 \mbox{\label{reflect__type__id_8h_a68be2eac98b9db19a21d4f2d71e56659}} 
 \index{reflect\_type\_id.h@{reflect\_type\_id.h}!type\_id\_invalid@{type\_id\_invalid}}
 \index{type\_id\_invalid@{type\_id\_invalid}!reflect\_type\_id.h@{reflect\_type\_id.h}}
 \doxysubsubsection{type\_id\_invalid()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int type\+\_\+id\+\_\+invalid (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int type\+\_\+id\+\_\+invalid (\begin{DoxyParamCaption}\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 

@@ -21,23 +21,23 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ vector\+\_\+create\+\_\+type}(\textbf{ type\+\_\+name})~\textbf{ vector\+\_\+create}(sizeof(\textbf{ type\+\_\+name}))
+\#define \textbf{ vector\+\_\+create\+\_\+type}(\textbf{ type\+\_\+name})~ \textbf{ vector\+\_\+create}(sizeof(\textbf{ type\+\_\+name}))
 \item 
-\#define \textbf{ vector\+\_\+create\+\_\+reserve\+\_\+type}(\textbf{ type\+\_\+name},  capacity)~\textbf{ vector\+\_\+create\+\_\+reserve}(sizeof(\textbf{ type\+\_\+name}), capacity)
+\#define \textbf{ vector\+\_\+create\+\_\+reserve\+\_\+type}(\textbf{ type\+\_\+name},  capacity)~ \textbf{ vector\+\_\+create\+\_\+reserve}(sizeof(\textbf{ type\+\_\+name}), capacity)
 \item 
-\#define \textbf{ vector\+\_\+front\+\_\+type}(v,  \textbf{ type\+\_\+name})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+front}(v)))
+\#define \textbf{ vector\+\_\+front\+\_\+type}(v,  \textbf{ type\+\_\+name})~ ($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+front}(v)))
 \item 
-\#define \textbf{ vector\+\_\+back\+\_\+type}(v,  \textbf{ type\+\_\+name})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+back}(v)))
+\#define \textbf{ vector\+\_\+back\+\_\+type}(v,  \textbf{ type\+\_\+name})~ ($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+back}(v)))
 \item 
-\#define \textbf{ vector\+\_\+at\+\_\+type}(v,  position,  \textbf{ type\+\_\+name})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+at}(v, position)))
+\#define \textbf{ vector\+\_\+at\+\_\+type}(v,  position,  \textbf{ type\+\_\+name})~ ($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+at}(v, position)))
 \item 
-\#define \textbf{ vector\+\_\+set\+\_\+var}(v,  position,  variable)~\textbf{ vector\+\_\+set}(v, position, \&variable)
+\#define \textbf{ vector\+\_\+set\+\_\+var}(v,  position,  variable)~ \textbf{ vector\+\_\+set}(v, position, \&variable)
 \item 
-\#define \textbf{ vector\+\_\+push\+\_\+back\+\_\+var}(v,  variable)~\textbf{ vector\+\_\+push\+\_\+back}(v, \&variable)
+\#define \textbf{ vector\+\_\+push\+\_\+back\+\_\+var}(v,  variable)~ \textbf{ vector\+\_\+push\+\_\+back}(v, \&variable)
 \item 
-\#define \textbf{ vector\+\_\+push\+\_\+front\+\_\+var}(v,  variable)~\textbf{ vector\+\_\+push\+\_\+front}(v, \&variable)
+\#define \textbf{ vector\+\_\+push\+\_\+front\+\_\+var}(v,  variable)~ \textbf{ vector\+\_\+push\+\_\+front}(v, \&variable)
 \item 
-\#define \textbf{ vector\+\_\+insert\+\_\+var}(v,  position,  variable)~\textbf{ vector\+\_\+insert}(v, position, \&variable)
+\#define \textbf{ vector\+\_\+insert\+\_\+var}(v,  position,  variable)~ \textbf{ vector\+\_\+insert}(v, position, \&variable)
 \item 
 \#define \textbf{ vector\+\_\+set\+\_\+const}(v,  position,  constant,  \textbf{ type\+\_\+name})
 \item 
@@ -55,51 +55,51 @@ typedef struct vector\+\_\+type $\ast$ \textbf{ vector}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ vector\+\_\+create} (size\+\_\+t type\+\_\+size)
+ADT\+\_\+\+API \textbf{ vector} \textbf{ vector\+\_\+create} (size\+\_\+t type\+\_\+size)
 \item 
-A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ vector\+\_\+create\+\_\+reserve} (size\+\_\+t type\+\_\+size, size\+\_\+t capacity)
+ADT\+\_\+\+API \textbf{ vector} \textbf{ vector\+\_\+create\+\_\+reserve} (size\+\_\+t type\+\_\+size, size\+\_\+t capacity)
 \item 
-A\+D\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ vector\+\_\+copy} (\textbf{ vector} v)
+ADT\+\_\+\+API \textbf{ vector} \textbf{ vector\+\_\+copy} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI int \textbf{ vector\+\_\+reserve} (\textbf{ vector} v, size\+\_\+t capacity)
+ADT\+\_\+\+API int \textbf{ vector\+\_\+reserve} (\textbf{ vector} v, size\+\_\+t capacity)
 \item 
-A\+D\+T\+\_\+\+A\+PI int \textbf{ vector\+\_\+resize} (\textbf{ vector} v, size\+\_\+t size)
+ADT\+\_\+\+API int \textbf{ vector\+\_\+resize} (\textbf{ vector} v, size\+\_\+t size)
 \item 
-A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ vector\+\_\+capacity} (\textbf{ vector} v)
+ADT\+\_\+\+API size\+\_\+t \textbf{ vector\+\_\+capacity} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ vector\+\_\+size} (\textbf{ vector} v)
+ADT\+\_\+\+API size\+\_\+t \textbf{ vector\+\_\+size} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ vector\+\_\+type\+\_\+size} (\textbf{ vector} v)
+ADT\+\_\+\+API size\+\_\+t \textbf{ vector\+\_\+type\+\_\+size} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void $\ast$ \textbf{ vector\+\_\+front} (\textbf{ vector} v)
+ADT\+\_\+\+API void $\ast$ \textbf{ vector\+\_\+front} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void $\ast$ \textbf{ vector\+\_\+back} (\textbf{ vector} v)
+ADT\+\_\+\+API void $\ast$ \textbf{ vector\+\_\+back} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void $\ast$ \textbf{ vector\+\_\+at} (\textbf{ vector} v, size\+\_\+t position)
+ADT\+\_\+\+API void $\ast$ \textbf{ vector\+\_\+at} (\textbf{ vector} v, size\+\_\+t position)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+set} (\textbf{ vector} v, size\+\_\+t position, void $\ast$element)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+set} (\textbf{ vector} v, size\+\_\+t position, void $\ast$element)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+back\+\_\+empty} (\textbf{ vector} v)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+push\+\_\+back\+\_\+empty} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+back} (\textbf{ vector} v, void $\ast$element)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+push\+\_\+back} (\textbf{ vector} v, void $\ast$element)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+pop\+\_\+back} (\textbf{ vector} v)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+pop\+\_\+back} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+front\+\_\+empty} (\textbf{ vector} v)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+push\+\_\+front\+\_\+empty} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+push\+\_\+front} (\textbf{ vector} v, void $\ast$element)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+push\+\_\+front} (\textbf{ vector} v, void $\ast$element)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+pop\+\_\+front} (\textbf{ vector} v)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+pop\+\_\+front} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+insert\+\_\+empty} (\textbf{ vector} v, size\+\_\+t position)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+insert\+\_\+empty} (\textbf{ vector} v, size\+\_\+t position)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+insert} (\textbf{ vector} v, size\+\_\+t position, void $\ast$element)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+insert} (\textbf{ vector} v, size\+\_\+t position, void $\ast$element)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+erase} (\textbf{ vector} v, size\+\_\+t position)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+erase} (\textbf{ vector} v, size\+\_\+t position)
 \item 
-A\+D\+T\+\_\+\+A\+PI int \textbf{ vector\+\_\+clear} (\textbf{ vector} v)
+ADT\+\_\+\+API int \textbf{ vector\+\_\+clear} (\textbf{ vector} v)
 \item 
-A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+destroy} (\textbf{ vector} v)
+ADT\+\_\+\+API void \textbf{ vector\+\_\+destroy} (\textbf{ vector} v)
 \end{DoxyCompactItemize}
 
 
@@ -108,7 +108,7 @@ A\+D\+T\+\_\+\+A\+PI void \textbf{ vector\+\_\+destroy} (\textbf{ vector} v)
 \index{adt\_vector.h@{adt\_vector.h}!vector\_create\_type@{vector\_create\_type}}
 \index{vector\_create\_type@{vector\_create\_type}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_create\_type}
-{\footnotesize\ttfamily \#define vector\+\_\+create\+\_\+type(\begin{DoxyParamCaption}\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~\textbf{ vector\+\_\+create}(sizeof(\textbf{ type\+\_\+name}))}
+{\footnotesize\ttfamily \#define vector\+\_\+create\+\_\+type(\begin{DoxyParamCaption}\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~ \textbf{ vector\+\_\+create}(sizeof(\textbf{ type\+\_\+name}))}
 
 
 
@@ -126,7 +126,7 @@ A pointer to the vector memory block
 \index{adt\_vector.h@{adt\_vector.h}!vector\_create\_reserve\_type@{vector\_create\_reserve\_type}}
 \index{vector\_create\_reserve\_type@{vector\_create\_reserve\_type}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_create\_reserve\_type}
-{\footnotesize\ttfamily \#define vector\+\_\+create\+\_\+reserve\+\_\+type(\begin{DoxyParamCaption}\item[{}]{\textbf{ type\+\_\+name},  }\item[{}]{capacity }\end{DoxyParamCaption})~\textbf{ vector\+\_\+create\+\_\+reserve}(sizeof(\textbf{ type\+\_\+name}), capacity)}
+{\footnotesize\ttfamily \#define vector\+\_\+create\+\_\+reserve\+\_\+type(\begin{DoxyParamCaption}\item[{}]{\textbf{ type\+\_\+name},  }\item[{}]{capacity }\end{DoxyParamCaption})~ \textbf{ vector\+\_\+create\+\_\+reserve}(sizeof(\textbf{ type\+\_\+name}), capacity)}
 
 
 
@@ -146,7 +146,7 @@ A pointer to the vector memory block
 \index{adt\_vector.h@{adt\_vector.h}!vector\_front\_type@{vector\_front\_type}}
 \index{vector\_front\_type@{vector\_front\_type}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_front\_type}
-{\footnotesize\ttfamily \#define vector\+\_\+front\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+front}(v)))}
+{\footnotesize\ttfamily \#define vector\+\_\+front\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~ ($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+front}(v)))}
 
 
 
@@ -166,7 +166,7 @@ Pointer to the first element
 \index{adt\_vector.h@{adt\_vector.h}!vector\_back\_type@{vector\_back\_type}}
 \index{vector\_back\_type@{vector\_back\_type}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_back\_type}
-{\footnotesize\ttfamily \#define vector\+\_\+back\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+back}(v)))}
+{\footnotesize\ttfamily \#define vector\+\_\+back\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~ ($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+back}(v)))}
 
 
 
@@ -186,7 +186,7 @@ Pointer to the last element
 \index{adt\_vector.h@{adt\_vector.h}!vector\_at\_type@{vector\_at\_type}}
 \index{vector\_at\_type@{vector\_at\_type}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_at\_type}
-{\footnotesize\ttfamily \#define vector\+\_\+at\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+at}(v, position)))}
+{\footnotesize\ttfamily \#define vector\+\_\+at\+\_\+type(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~ ($\ast$((\textbf{ type\+\_\+name} $\ast$)\textbf{ vector\+\_\+at}(v, position)))}
 
 
 
@@ -208,7 +208,7 @@ Pointer to the element at @position
 \index{adt\_vector.h@{adt\_vector.h}!vector\_set\_var@{vector\_set\_var}}
 \index{vector\_set\_var@{vector\_set\_var}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_set\_var}
-{\footnotesize\ttfamily \#define vector\+\_\+set\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+set}(v, position, \&variable)}
+{\footnotesize\ttfamily \#define vector\+\_\+set\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{variable }\end{DoxyParamCaption})~ \textbf{ vector\+\_\+set}(v, position, \&variable)}
 
 
 
@@ -229,7 +229,7 @@ Sets a variable object at @position to the same object pointed by @element.
 \index{adt\_vector.h@{adt\_vector.h}!vector\_push\_back\_var@{vector\_push\_back\_var}}
 \index{vector\_push\_back\_var@{vector\_push\_back\_var}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_push\_back\_var}
-{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+back\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+push\+\_\+back}(v, \&variable)}
+{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+back\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{variable }\end{DoxyParamCaption})~ \textbf{ vector\+\_\+push\+\_\+back}(v, \&variable)}
 
 
 
@@ -248,7 +248,7 @@ Adds a variable object at the end of vector (increments allocated memory if necc
 \index{adt\_vector.h@{adt\_vector.h}!vector\_push\_front\_var@{vector\_push\_front\_var}}
 \index{vector\_push\_front\_var@{vector\_push\_front\_var}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_push\_front\_var}
-{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+front\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+push\+\_\+front}(v, \&variable)}
+{\footnotesize\ttfamily \#define vector\+\_\+push\+\_\+front\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{variable }\end{DoxyParamCaption})~ \textbf{ vector\+\_\+push\+\_\+front}(v, \&variable)}
 
 
 
@@ -267,7 +267,7 @@ Adds a variable object in first position of vector (increments allocated memory 
 \index{adt\_vector.h@{adt\_vector.h}!vector\_insert\_var@{vector\_insert\_var}}
 \index{vector\_insert\_var@{vector\_insert\_var}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_insert\_var}
-{\footnotesize\ttfamily \#define vector\+\_\+insert\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{variable }\end{DoxyParamCaption})~\textbf{ vector\+\_\+insert}(v, position, \&variable)}
+{\footnotesize\ttfamily \#define vector\+\_\+insert\+\_\+var(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{position,  }\item[{}]{variable }\end{DoxyParamCaption})~ \textbf{ vector\+\_\+insert}(v, position, \&variable)}
 
 
 
@@ -292,12 +292,10 @@ Adds a variable object in @position where\+: [ 0 $<$= @position $<$= vector\+\_\
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                            \(\backslash\)}
-\DoxyCodeLine{    \{                                                             \(\backslash\)}
-\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;      \(\backslash\)}
-\DoxyCodeLine{                                                                  \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant; \(\backslash\)}
 \DoxyCodeLine{        vector\_set(v, position, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
-\DoxyCodeLine{                                                                  \(\backslash\)}
 \DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
 
 \end{DoxyCode}
@@ -324,12 +322,10 @@ Sets a constant object at @position to the same object pointed by @element.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                        \(\backslash\)}
-\DoxyCodeLine{    \{                                                         \(\backslash\)}
-\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;  \(\backslash\)}
-\DoxyCodeLine{                                                              \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant; \(\backslash\)}
 \DoxyCodeLine{        vector\_push\_back(v, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
-\DoxyCodeLine{                                                              \(\backslash\)}
 \DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
 
 \end{DoxyCode}
@@ -354,12 +350,10 @@ Adds a constant object at the end of vector (increments allocated memory if necc
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                         \(\backslash\)}
-\DoxyCodeLine{    \{                                                          \(\backslash\)}
-\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;   \(\backslash\)}
-\DoxyCodeLine{                                                               \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant; \(\backslash\)}
 \DoxyCodeLine{        vector\_push\_front(v, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
-\DoxyCodeLine{                                                               \(\backslash\)}
 \DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
 
 \end{DoxyCode}
@@ -384,12 +378,10 @@ Adds a constant object in first position of vector (increments allocated memory 
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keywordflow}{do}                                                               \(\backslash\)}
-\DoxyCodeLine{    \{                                                                \(\backslash\)}
-\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant;         \(\backslash\)}
-\DoxyCodeLine{                                                                     \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        type\_name macro\_vector\_type\_const\_to\_var = constant; \(\backslash\)}
 \DoxyCodeLine{        vector\_insert(v, position, \&macro\_vector\_type\_const\_to\_var); \(\backslash\)}
-\DoxyCodeLine{                                                                     \(\backslash\)}
 \DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
 
 \end{DoxyCode}
@@ -424,7 +416,7 @@ Adds a constant object in @position where\+: [ 0 $<$= @position $<$= vector\+\_\
 \index{adt\_vector.h@{adt\_vector.h}!vector\_create@{vector\_create}}
 \index{vector\_create@{vector\_create}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_create()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} vector\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{type\+\_\+size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API \textbf{ vector} vector\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{type\+\_\+size }\end{DoxyParamCaption})}
 
 
 
@@ -442,7 +434,7 @@ A pointer to the vector memory block
 \index{adt\_vector.h@{adt\_vector.h}!vector\_create\_reserve@{vector\_create\_reserve}}
 \index{vector\_create\_reserve@{vector\_create\_reserve}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_create\_reserve()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} vector\+\_\+create\+\_\+reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{type\+\_\+size,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API \textbf{ vector} vector\+\_\+create\+\_\+reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{type\+\_\+size,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
 
 
 
@@ -462,7 +454,7 @@ A pointer to the vector memory block
 \index{adt\_vector.h@{adt\_vector.h}!vector\_copy@{vector\_copy}}
 \index{vector\_copy@{vector\_copy}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_copy()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI \textbf{ vector} vector\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API \textbf{ vector} vector\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -480,7 +472,7 @@ A pointer to a vector memory block copy
 \index{adt\_vector.h@{adt\_vector.h}!vector\_reserve@{vector\_reserve}}
 \index{vector\_reserve@{vector\_reserve}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_reserve()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int vector\+\_\+reserve (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API int vector\+\_\+reserve (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})}
 
 
 
@@ -500,7 +492,7 @@ Positive number on error, zero on success
 \index{adt\_vector.h@{adt\_vector.h}!vector\_resize@{vector\_resize}}
 \index{vector\_resize@{vector\_resize}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_resize()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int vector\+\_\+resize (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API int vector\+\_\+resize (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -520,7 +512,7 @@ Positive number on error, zero on success
 \index{adt\_vector.h@{adt\_vector.h}!vector\_capacity@{vector\_capacity}}
 \index{vector\_capacity@{vector\_capacity}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_capacity()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t vector\+\_\+capacity (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API size\+\_\+t vector\+\_\+capacity (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -538,7 +530,7 @@ Capacity of vector
 \index{adt\_vector.h@{adt\_vector.h}!vector\_size@{vector\_size}}
 \index{vector\_size@{vector\_size}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_size()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t vector\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API size\+\_\+t vector\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -556,7 +548,7 @@ Current elements in vector
 \index{adt\_vector.h@{adt\_vector.h}!vector\_type\_size@{vector\_type\_size}}
 \index{vector\_type\_size@{vector\_type\_size}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_type\_size()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI size\+\_\+t vector\+\_\+type\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API size\+\_\+t vector\+\_\+type\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -574,7 +566,7 @@ Size of element type
 \index{adt\_vector.h@{adt\_vector.h}!vector\_front@{vector\_front}}
 \index{vector\_front@{vector\_front}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_front()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void$\ast$ vector\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void$\ast$ vector\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -592,7 +584,7 @@ Pointer to the first element
 \index{adt\_vector.h@{adt\_vector.h}!vector\_back@{vector\_back}}
 \index{vector\_back@{vector\_back}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_back()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void$\ast$ vector\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void$\ast$ vector\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -610,7 +602,7 @@ Pointer to the last element
 \index{adt\_vector.h@{adt\_vector.h}!vector\_at@{vector\_at}}
 \index{vector\_at@{vector\_at}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_at()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void$\ast$ vector\+\_\+at (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void$\ast$ vector\+\_\+at (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
 
 
 
@@ -630,7 +622,7 @@ Pointer to the element at @position
 \index{adt\_vector.h@{adt\_vector.h}!vector\_set@{vector\_set}}
 \index{vector\_set@{vector\_set}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_set()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
 
 
 
@@ -649,7 +641,7 @@ Sets the object at @position to the same object pointed by @element.
 \index{adt\_vector.h@{adt\_vector.h}!vector\_push\_back\_empty@{vector\_push\_back\_empty}}
 \index{vector\_push\_back\_empty@{vector\_push\_back\_empty}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_push\_back\_empty()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+back\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+push\+\_\+back\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -664,7 +656,7 @@ Adds an object at the end of vector without initializing it, all objects be move
 \index{adt\_vector.h@{adt\_vector.h}!vector\_push\_back@{vector\_push\_back}}
 \index{vector\_push\_back@{vector\_push\_back}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_push\_back()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+push\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
 
 
 
@@ -681,7 +673,7 @@ Adds an object at the end of vector (increments allocated memory if neccessary)
 \index{adt\_vector.h@{adt\_vector.h}!vector\_pop\_back@{vector\_pop\_back}}
 \index{vector\_pop\_back@{vector\_pop\_back}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_pop\_back()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+pop\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+pop\+\_\+back (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -696,7 +688,7 @@ Deletes the last object in vector (increments allocated memory if neccessary)
 \index{adt\_vector.h@{adt\_vector.h}!vector\_push\_front\_empty@{vector\_push\_front\_empty}}
 \index{vector\_push\_front\_empty@{vector\_push\_front\_empty}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_push\_front\_empty()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+front\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+push\+\_\+front\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -711,7 +703,7 @@ Adds an object in first position without initializing it, all objects be moved (
 \index{adt\_vector.h@{adt\_vector.h}!vector\_push\_front@{vector\_push\_front}}
 \index{vector\_push\_front@{vector\_push\_front}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_push\_front()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+push\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+push\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
 
 
 
@@ -728,7 +720,7 @@ Adds an object in first position of vector (increments allocated memory if necce
 \index{adt\_vector.h@{adt\_vector.h}!vector\_pop\_front@{vector\_pop\_front}}
 \index{vector\_pop\_front@{vector\_pop\_front}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_pop\_front()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+pop\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+pop\+\_\+front (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -743,7 +735,7 @@ Deletes the first object in vector (increments allocated memory if neccessary)
 \index{adt\_vector.h@{adt\_vector.h}!vector\_insert\_empty@{vector\_insert\_empty}}
 \index{vector\_insert\_empty@{vector\_insert\_empty}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_insert\_empty()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+insert\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+insert\+\_\+empty (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
 
 
 
@@ -760,7 +752,7 @@ Adds an object in @position without initializing it where\+: [ 0 $<$= @position 
 \index{adt\_vector.h@{adt\_vector.h}!vector\_insert@{vector\_insert}}
 \index{vector\_insert@{vector\_insert}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_insert()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+insert (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position,  }\item[{void $\ast$}]{element }\end{DoxyParamCaption})}
 
 
 
@@ -779,7 +771,7 @@ Adds an object in @position where\+: [ 0 $<$= @position $<$= vector\+\_\+size(v)
 \index{adt\_vector.h@{adt\_vector.h}!vector\_erase@{vector\_erase}}
 \index{vector\_erase@{vector\_erase}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_erase()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+erase (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+erase (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption})}
 
 
 
@@ -796,7 +788,7 @@ Deletes an object in @position (decrements allocated memory if neccessary)
 \index{adt\_vector.h@{adt\_vector.h}!vector\_clear@{vector\_clear}}
 \index{vector\_clear@{vector\_clear}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_clear()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI int vector\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API int vector\+\_\+clear (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -814,7 +806,7 @@ Positive number on error, zero on success
 \index{adt\_vector.h@{adt\_vector.h}!vector\_destroy@{vector\_destroy}}
 \index{vector\_destroy@{vector\_destroy}!adt\_vector.h@{adt\_vector.h}}
 \doxysubsubsection{vector\_destroy()}
-{\footnotesize\ttfamily A\+D\+T\+\_\+\+A\+PI void vector\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ADT\+\_\+\+API void vector\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ vector}}]{v }\end{DoxyParamCaption})}
 
 
 

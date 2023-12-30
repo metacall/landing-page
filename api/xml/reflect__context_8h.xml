@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__context_8h" kind="file" language="C++">
     <compoundname>reflect_context.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
     <includes refid="reflect__scope_8h" local="no">reflect/reflect_scope.h</includes>
     <includedby refid="reflect_8h" local="no">reflect.h</includedby>
+    <includedby refid="loader__host_8h" local="no">loader_host.h</includedby>
     <includedby refid="loader__impl__interface_8h" local="no">loader_impl_interface.h</includedby>
     <incdepgraph>
       <node id="4">
@@ -85,59 +86,57 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="7">
-        <label>loader_impl_function.h</label>
-        <link refid="loader__impl__function_8h"/>
-      </node>
-      <node id="9">
-        <label>loader_impl_export.h</label>
-        <link refid="loader__impl__export_8h"/>
-      </node>
       <node id="3">
-        <label>loader_impl_interface.h</label>
-        <link refid="loader__impl__interface_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>loader_export.h</label>
-        <link refid="loader__export_8h"/>
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
       </node>
       <node id="8">
-        <label>loader_impl_handle.h</label>
-        <link refid="loader__impl__handle_8h"/>
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
       </node>
-      <node id="6">
-        <label>loader_impl.h</label>
-        <link refid="loader__impl_8h"/>
-        <childnode refid="4" relation="include">
+      <node id="5">
+        <label>loader_impl_interface.h</label>
+        <link refid="loader__impl__interface_8h"/>
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
+      </node>
+      <node id="7">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="6">
         <label>loader.h</label>
         <link refid="loader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>reflect_context.h</label>
         <link refid="reflect__context_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
@@ -173,9 +172,9 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_context.h" line="36" column="21" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_context.h" declline="36" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__context_8h_1a47ee629e6f2a6cafa23a58849c01be52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const REFLECT_API char *</type>
-        <definition>const REFLECT_API char* context_name</definition>
+      <memberdef kind="function" id="reflect__context_8h_1a15d43d44587828daf4b8194adf6ccf1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API const char *</type>
+        <definition>REFLECT_API const char* context_name</definition>
         <argsstring>(context ctx)</argsstring>
         <name>context_name</name>
         <param>
@@ -301,7 +300,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -332,19 +331,19 @@
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34" refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">context_type<sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/><ref refid="reflect__context_8h_1aba99e7b5a51077e3371a6c131606efd3" kindref="member">context_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="36" refid="reflect__context_8h_1aba99e7b5a51077e3371a6c131606efd3" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/><ref refid="reflect__context_8h_1aba99e7b5a51077e3371a6c131606efd3" kindref="member">context_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1a47ee629e6f2a6cafa23a58849c01be52" kindref="member">context_name</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>ctx);</highlight></codeline>
+<codeline lineno="38" refid="reflect__context_8h_1a15d43d44587828daf4b8194adf6ccf1e" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1a15d43d44587828daf4b8194adf6ccf1e" kindref="member">context_name</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>ctx);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/><ref refid="reflect__context_8h_1a815f013b9a064495be9b76c39233a490" kindref="member">context_scope</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>ctx);</highlight></codeline>
+<codeline lineno="40" refid="reflect__context_8h_1a815f013b9a064495be9b76c39233a490" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/><ref refid="reflect__context_8h_1a815f013b9a064495be9b76c39233a490" kindref="member">context_scope</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>ctx);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a5a08e99bf8fa8d47022a3eb5037f5782" kindref="member">context_append</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src);</highlight></codeline>
+<codeline lineno="42" refid="reflect__context_8h_1a5a08e99bf8fa8d47022a3eb5037f5782" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a5a08e99bf8fa8d47022a3eb5037f5782" kindref="member">context_append</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a5456caa9f37c96d125fa7f0534f5033d" kindref="member">context_contains</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**duplicated);</highlight></codeline>
+<codeline lineno="44" refid="reflect__context_8h_1a5456caa9f37c96d125fa7f0534f5033d" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a5456caa9f37c96d125fa7f0534f5033d" kindref="member">context_contains</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**duplicated);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a7fb6ba2f8b8c507b6ff568ac02470bf1" kindref="member">context_remove</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src);</highlight></codeline>
+<codeline lineno="46" refid="reflect__context_8h_1a7fb6ba2f8b8c507b6ff568ac02470bf1" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a7fb6ba2f8b8c507b6ff568ac02470bf1" kindref="member">context_remove</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>dest,<sp/><ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>src);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a1d32f37f3d89f4ffcac27c12797a5dbd" kindref="member">context_destroy</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>ctx);</highlight></codeline>
+<codeline lineno="48" refid="reflect__context_8h_1a1d32f37f3d89f4ffcac27c12797a5dbd" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__context_8h_1a1d32f37f3d89f4ffcac27c12797a5dbd" kindref="member">context_destroy</ref>(<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref><sp/>ctx);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal">}</highlight></codeline>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="loader_8h" kind="file" language="C++">
     <compoundname>loader.h</compoundname>
     <includes local="no">loader/loader_api.h</includes>
@@ -7,19 +7,31 @@
     <includes refid="loader__impl__interface_8h" local="no">loader/loader_impl_interface.h</includes>
     <includes refid="loader__naming_8h" local="no">loader/loader_naming.h</includes>
     <includes local="no">stdlib.h</includes>
+    <includedby refid="loader__host_8h" local="no">loader_host.h</includedby>
     <incdepgraph>
+      <node id="35">
+        <label>adt/adt_hash.h</label>
+        <link refid="adt__hash_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>loader/loader_handle.h</label>
         <link refid="loader__handle_8h"/>
       </node>
-      <node id="11">
+      <node id="8">
+        <label>portability/portability_path.h</label>
+      </node>
+      <node id="12">
         <label>reflect/reflect_function.h</label>
         <link refid="reflect__function_8h"/>
-        <childnode refid="12" relation="include">
-        </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -33,11 +45,11 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -45,57 +57,167 @@
         <link refid="loader__naming_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
       </node>
-      <node id="17">
+      <node id="23">
+        <label>dynlink/dynlink.h</label>
+        <link refid="dynlink_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>stdint.h</label>
+      </node>
+      <node id="18">
         <label>stdlib.h</label>
       </node>
-      <node id="10">
-        <label>reflect/reflect_scope.h</label>
-        <link refid="reflect__scope_8h"/>
-        <childnode refid="9" relation="include">
+      <node id="28">
+        <label>dynlink/dynlink_interface.h</label>
+      </node>
+      <node id="30">
+        <label>plugin/plugin_manager.h</label>
+        <link refid="plugin__manager_8h"/>
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="14">
-        <label>reflect/reflect_type.h</label>
-        <link refid="reflect__type_8h"/>
-        <childnode refid="9" relation="include">
+      <node id="27">
+        <label>dynlink/dynlink_flags.h</label>
+        <link refid="dynlink__flags_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>reflect/reflect_scope.h</label>
+        <link refid="reflect__scope_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>reflect/reflect_type.h</label>
+        <link refid="reflect__type_8h"/>
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="6">
         <label>loader/loader_impl_data.h</label>
         <link refid="loader__impl__data_8h"/>
       </node>
+      <node id="34">
+        <label>adt/adt_comparable.h</label>
+        <link refid="adt__comparable_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>adt/adt_set.h</label>
+        <link refid="adt__set_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>loader/loader_api.h</label>
       </node>
-      <node id="15">
-        <label>reflect/reflect_type_id.h</label>
-        <link refid="reflect__type__id_8h"/>
-        <childnode refid="9" relation="include">
+      <node id="26">
+        <label>portability/portability_library_path.h</label>
+      </node>
+      <node id="31">
+        <label>plugin/plugin_loader.h</label>
+        <link refid="plugin__loader_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="16">
+        <label>reflect/reflect_type_id.h</label>
+        <link refid="reflect__type__id_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>plugin/plugin_api.h</label>
+      </node>
+      <node id="22">
+        <label>plugin/plugin_descriptor.h</label>
+        <link refid="plugin__descriptor_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>plugin/plugin_impl.h</label>
+        <link refid="plugin__impl_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>adt/adt_api.h</label>
+      </node>
+      <node id="17">
         <label>reflect/reflect_value.h</label>
         <link refid="reflect__value_8h"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="29">
+        <label>dynlink/dynlink_symbol.h</label>
+        <link refid="dynlink__symbol_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>dynlink/dynlink_api.h</label>
+      </node>
+      <node id="25">
+        <label>dynlink/dynlink_type.h</label>
+        <link refid="dynlink__type_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
         <label>reflect/reflect_api.h</label>
       </node>
-      <node id="18">
+      <node id="19">
         <label>configuration/configuration.h</label>
       </node>
       <node id="3">
@@ -105,17 +227,11 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>loader/loader_path.h</label>
-        <link refid="loader__path_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -129,34 +245,46 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>reflect/reflect_context.h</label>
+        <link refid="reflect__context_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>reflect/reflect_signature.h</label>
+        <link refid="reflect__signature_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>reflect/reflect_context.h</label>
-        <link refid="reflect__context_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
+      <node id="13">
+        <label>reflect/reflect_async.h</label>
+        <link refid="reflect__async_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="13">
-        <label>reflect/reflect_signature.h</label>
-        <link refid="reflect__signature_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>reflect/reflect_async.h</label>
-        <link refid="reflect__async_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
+      </node>
+      <node id="1">
+        <label>loader.h</label>
+        <link refid="loader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="loader_8h_1a0c56e5ef778aefaa4587573667a35945" prot="public" static="no">
         <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>(*</type>
@@ -199,22 +327,6 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="loader_8h_1a93d450b68df4ddb9aa57383b6930839c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>LOADER_API <ref refid="loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5" kindref="member">loader</ref></type>
-        <definition>LOADER_API loader loader_singleton</definition>
-        <argsstring>(void)</argsstring>
-        <name>loader_singleton</name>
-        <param>
-          <type>void</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="54" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="54" declcolumn="19"/>
-      </memberdef>
       <memberdef kind="function" id="loader_8h_1a7c6926c94ce1b9a7edd78931f081dd5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API void</type>
         <definition>LOADER_API void loader_initialization_register</definition>
@@ -230,11 +342,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="56" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="56" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="54" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="54" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a295fe19eb38401793c7feaa24160f223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>LOADER_API void</type>
-        <definition>LOADER_API void loader_initialize</definition>
+      <memberdef kind="function" id="loader_8h_1ae36a62ebfae6681c99dc94290d814415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_initialize</definition>
         <argsstring>(void)</argsstring>
         <name>loader_initialize</name>
         <param>
@@ -246,15 +358,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="58" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="58" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="56" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="56" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a7ed3017240e5db05e1323fa97b3da2d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a9e4dc5b479a109af9be7e2d107958e69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
         <definition>LOADER_API int loader_is_initialized</definition>
-        <argsstring>(const loader_naming_tag tag)</argsstring>
+        <argsstring>(const loader_tag tag)</argsstring>
         <name>loader_is_initialized</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <briefdescription>
@@ -263,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="60" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="60" declcolumn="16"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="58" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="58" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="loader_8h_1a42860cc3bb2c50fac1424579e158a83b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
@@ -301,16 +413,41 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="62" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="62" declcolumn="16"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="60" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="60" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a647d1eec2ce01f45485d35cd69c6eac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1ab25663640bf8f58db25f06c75c65f674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
-        <definition>LOADER_API int loader_load_path</definition>
-        <argsstring>(const loader_naming_path path)</argsstring>
-        <name>loader_load_path</name>
+        <definition>LOADER_API int loader_register_impl</definition>
+        <argsstring>(void *impl, void *ctx, const char *name, loader_register_invoke invoke, type_id return_type, size_t arg_size, type_id args_type_id[])</argsstring>
+        <name>loader_register_impl</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
-          <declname>path</declname>
+          <type>void *</type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="loader_8h_1a0c56e5ef778aefaa4587573667a35945" kindref="member">loader_register_invoke</ref></type>
+          <declname>invoke</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref></type>
+          <declname>return_type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>arg_size</declname>
+        </param>
+        <param>
+          <type><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref></type>
+          <declname>args_type_id</declname>
+          <array>[]</array>
         </param>
         <briefdescription>
         </briefdescription>
@@ -318,19 +455,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="64" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="64" declcolumn="16"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="62" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="62" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a4739ee3ed07e62a6410379b9fed2a7f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1aa6b4ba7e573b47e7f7a96d9aab5c6cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API const char *</type>
+        <definition>LOADER_API const char* loader_library_path</definition>
+        <argsstring>(void)</argsstring>
+        <name>loader_library_path</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="64" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="64" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="loader_8h_1a8d5306a5d328ebaeffe13b224fc7644a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
         <definition>LOADER_API int loader_execution_path</definition>
-        <argsstring>(const loader_naming_tag tag, const loader_naming_path path)</argsstring>
+        <argsstring>(const loader_tag tag, const loader_path path)</argsstring>
         <name>loader_execution_path</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <param>
-          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
+          <type>const <ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref></type>
           <declname>path</declname>
         </param>
         <briefdescription>
@@ -341,17 +494,17 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="66" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="66" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a25d7854cec594b64371f17ea60711c77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a08ea2360d46beb74c5ac7f348b77e600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
         <definition>LOADER_API int loader_load_from_file</definition>
-        <argsstring>(const loader_naming_tag tag, const loader_naming_path paths[], size_t size, void **handle)</argsstring>
+        <argsstring>(const loader_tag tag, const loader_path paths[], size_t size, void **handle)</argsstring>
         <name>loader_load_from_file</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <param>
-          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
+          <type>const <ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref></type>
           <declname>paths</declname>
           <array>[]</array>
         </param>
@@ -371,13 +524,13 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="68" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="68" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1ac36c522839c545113037a64ce69feedf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a201e399a5d6b7049503828a1976eb941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
         <definition>LOADER_API int loader_load_from_memory</definition>
-        <argsstring>(const loader_naming_tag tag, const char *buffer, size_t size, void **handle)</argsstring>
+        <argsstring>(const loader_tag tag, const char *buffer, size_t size, void **handle)</argsstring>
         <name>loader_load_from_memory</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <param>
@@ -400,17 +553,17 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="70" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="70" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1aba20f1b7bf897e6531a7580fadf66a72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a3a260c766ba4ec5c53336a40869c24b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
         <definition>LOADER_API int loader_load_from_package</definition>
-        <argsstring>(const loader_naming_tag tag, const loader_naming_path path, void **handle)</argsstring>
+        <argsstring>(const loader_tag tag, const loader_path path, void **handle)</argsstring>
         <name>loader_load_from_package</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <param>
-          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
+          <type>const <ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref></type>
           <declname>path</declname>
         </param>
         <param>
@@ -425,13 +578,13 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="72" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="72" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a16d3a4792b9f55b4a22bf662832c8e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a085604709dbf1b7881cab0b9f17a0ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API int</type>
         <definition>LOADER_API int loader_load_from_configuration</definition>
-        <argsstring>(const loader_naming_path path, void **handle, void *allocator)</argsstring>
+        <argsstring>(const loader_path path, void **handle, void *allocator)</argsstring>
         <name>loader_load_from_configuration</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref></type>
+          <type>const <ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref></type>
           <declname>path</declname>
         </param>
         <param>
@@ -450,13 +603,13 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="74" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="74" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a2f50c4778d1534eace279c7b182e2dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a0495b82fa36e714bbd8b5002d8ed7856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API <ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
         <definition>LOADER_API loader_impl loader_get_impl</definition>
-        <argsstring>(const loader_naming_tag tag)</argsstring>
+        <argsstring>(const loader_tag tag)</argsstring>
         <name>loader_get_impl</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <briefdescription>
@@ -484,13 +637,13 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="78" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="78" declcolumn="24"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a7ebee7a40e35b8286d9bfcaa4eaaf08c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a7bd109dbad8229149b66b0561bcbaf90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API void *</type>
         <definition>LOADER_API void* loader_get_handle</definition>
-        <argsstring>(const loader_naming_tag tag, const char *name)</argsstring>
+        <argsstring>(const loader_tag tag, const char *name)</argsstring>
         <name>loader_get_handle</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <param>
@@ -505,13 +658,13 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="80" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="80" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1aff80b88574c4ecd9bd5bcb4b549c1059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a991a559588a353edb414b4e3ebe0506a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API void</type>
         <definition>LOADER_API void loader_set_options</definition>
-        <argsstring>(const loader_naming_tag tag, void *options)</argsstring>
+        <argsstring>(const loader_tag tag, void *options)</argsstring>
         <name>loader_set_options</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <param>
@@ -526,13 +679,13 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="82" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="82" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a057eb44bd3132e88416f1a90e4b7b5b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1ab9ca71b78829829b8299d37dfcd7d483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API void *</type>
         <definition>LOADER_API void* loader_get_options</definition>
-        <argsstring>(const loader_naming_tag tag)</argsstring>
+        <argsstring>(const loader_tag tag)</argsstring>
         <name>loader_get_options</name>
         <param>
-          <type>const <ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref></type>
+          <type>const <ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref></type>
           <declname>tag</declname>
         </param>
         <briefdescription>
@@ -543,9 +696,9 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="84" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="84" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a4bad4c3d55fc7534694b049194bbcd90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const LOADER_API char *</type>
-        <definition>const LOADER_API char* loader_handle_id</definition>
+      <memberdef kind="function" id="loader_8h_1ac837bc325c34ef87852aa7f3eb961fff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API const char *</type>
+        <definition>LOADER_API const char* loader_handle_id</definition>
         <argsstring>(void *handle)</argsstring>
         <name>loader_handle_id</name>
         <param>
@@ -631,42 +784,56 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="94" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="94" declcolumn="16"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a5ccaf6095bcc8ffe4fd3e8c2bb3d8202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="loader_8h_1a9fe053d874d8af26bc3f97b56a994d8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API int</type>
+        <definition>LOADER_API int loader_is_destroyed</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_is_destroyed</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="96" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="96" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="loader_8h_1a6f6bb6cc9b7b466cd10138a548c05d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API void</type>
+        <definition>LOADER_API void loader_set_destroyed</definition>
+        <argsstring>(loader_impl impl)</argsstring>
+        <name>loader_set_destroyed</name>
+        <param>
+          <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="98" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="98" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="loader_8h_1aae52d09e532fd966f933d4573ee97fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API void</type>
         <definition>LOADER_API void loader_unload_children</definition>
-        <argsstring>(loader_impl impl, int destroy_objects)</argsstring>
+        <argsstring>(loader_impl impl)</argsstring>
         <name>loader_unload_children</name>
         <param>
           <type><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref></type>
           <declname>impl</declname>
         </param>
-        <param>
-          <type>int</type>
-          <declname>destroy_objects</declname>
-        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="96" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="96" declcolumn="17"/>
-      </memberdef>
-      <memberdef kind="function" id="loader_8h_1ac4f17dddef9935d0b1b727271f5e2308" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>LOADER_API int</type>
-        <definition>LOADER_API int loader_unload</definition>
-        <argsstring>(void)</argsstring>
-        <name>loader_unload</name>
-        <param>
-          <type>void</type>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="98" column="16" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="98" declcolumn="16"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="100" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="100" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="loader_8h_1a34fe0f770a93b0213274d076ed655216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>LOADER_API void</type>
@@ -682,11 +849,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="100" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="100" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="102" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="102" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="loader_8h_1a5e4b95a22a0fc84007b5ab97e3a8efdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const LOADER_API char *</type>
-        <definition>const LOADER_API char* loader_print_info</definition>
+      <memberdef kind="function" id="loader_8h_1aecc75dd62cb8a5fdb01194c40a172e19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOADER_API const char *</type>
+        <definition>LOADER_API const char* loader_print_info</definition>
         <argsstring>(void)</argsstring>
         <name>loader_print_info</name>
         <param>
@@ -698,7 +865,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="102" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="102" declcolumn="23"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" line="104" column="23" declfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h" declline="104" declcolumn="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -710,7 +877,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Loader<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>loading<sp/>executable<sp/>code<sp/>at<sp/>run-time<sp/>into<sp/>a<sp/>process.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -759,61 +926,63 @@
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/><sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">LOADER_API<sp/><ref refid="loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5" kindref="member">loader</ref><sp/><ref refid="loader_8h_1a93d450b68df4ddb9aa57383b6930839c" kindref="member">loader_singleton</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54" refid="loader_8h_1a7c6926c94ce1b9a7edd78931f081dd5b" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a7c6926c94ce1b9a7edd78931f081dd5b" kindref="member">loader_initialization_register</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a7c6926c94ce1b9a7edd78931f081dd5b" kindref="member">loader_initialization_register</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="56" refid="loader_8h_1ae36a62ebfae6681c99dc94290d814415" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1ae36a62ebfae6681c99dc94290d814415" kindref="member">loader_initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a295fe19eb38401793c7feaa24160f223" kindref="member">loader_initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58" refid="loader_8h_1a9e4dc5b479a109af9be7e2d107958e69" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a9e4dc5b479a109af9be7e2d107958e69" kindref="member">loader_is_initialized</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a7ed3017240e5db05e1323fa97b3da2d1" kindref="member">loader_is_initialized</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag);</highlight></codeline>
+<codeline lineno="60" refid="loader_8h_1a42860cc3bb2c50fac1424579e158a83b" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a42860cc3bb2c50fac1424579e158a83b" kindref="member">loader_register</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="loader_8h_1a0c56e5ef778aefaa4587573667a35945" kindref="member">loader_register_invoke</ref><sp/>invoke,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>*func,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>return_type,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>arg_size,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>args_type_id[]);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a42860cc3bb2c50fac1424579e158a83b" kindref="member">loader_register</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="loader_8h_1a0c56e5ef778aefaa4587573667a35945" kindref="member">loader_register_invoke</ref><sp/>invoke,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>*func,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>return_type,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>arg_size,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>args_type_id[]);</highlight></codeline>
+<codeline lineno="62" refid="loader_8h_1ab25663640bf8f58db25f06c75c65f674" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1ab25663640bf8f58db25f06c75c65f674" kindref="member">loader_register_impl</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*impl,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="loader_8h_1a0c56e5ef778aefaa4587573667a35945" kindref="member">loader_register_invoke</ref><sp/>invoke,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>return_type,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>arg_size,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/>args_type_id[]);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a647d1eec2ce01f45485d35cd69c6eac6" kindref="member">loader_load_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>path);</highlight></codeline>
+<codeline lineno="64" refid="loader_8h_1aa6b4ba7e573b47e7f7a96d9aab5c6cf7" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1aa6b4ba7e573b47e7f7a96d9aab5c6cf7" kindref="member">loader_library_path</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a4739ee3ed07e62a6410379b9fed2a7f1" kindref="member">loader_execution_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>path);</highlight></codeline>
+<codeline lineno="66" refid="loader_8h_1a8d5306a5d328ebaeffe13b224fc7644a" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a8d5306a5d328ebaeffe13b224fc7644a" kindref="member">loader_execution_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref><sp/>path);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a25d7854cec594b64371f17ea60711c77" kindref="member">loader_load_from_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>paths[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle);</highlight></codeline>
+<codeline lineno="68" refid="loader_8h_1a08ea2360d46beb74c5ac7f348b77e600" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a08ea2360d46beb74c5ac7f348b77e600" kindref="member">loader_load_from_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref><sp/>paths[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1ac36c522839c545113037a64ce69feedf" kindref="member">loader_load_from_memory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle);</highlight></codeline>
+<codeline lineno="70" refid="loader_8h_1a201e399a5d6b7049503828a1976eb941" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a201e399a5d6b7049503828a1976eb941" kindref="member">loader_load_from_memory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1aba20f1b7bf897e6531a7580fadf66a72" kindref="member">loader_load_from_package</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>path,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle);</highlight></codeline>
+<codeline lineno="72" refid="loader_8h_1a3a260c766ba4ec5c53336a40869c24b8" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a3a260c766ba4ec5c53336a40869c24b8" kindref="member">loader_load_from_package</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref><sp/>path,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a16d3a4792b9f55b4a22bf662832c8e03" kindref="member">loader_load_from_configuration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref><sp/>path,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator);</highlight></codeline>
+<codeline lineno="74" refid="loader_8h_1a085604709dbf1b7881cab0b9f17a0ebb" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a085604709dbf1b7881cab0b9f17a0ebb" kindref="member">loader_load_from_configuration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref><sp/>path,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**handle,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal">LOADER_API<sp/><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/><ref refid="loader_8h_1a2f50c4778d1534eace279c7b182e2dc3" kindref="member">loader_get_impl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag);</highlight></codeline>
+<codeline lineno="76" refid="loader_8h_1a0495b82fa36e714bbd8b5002d8ed7856" refkind="member"><highlight class="normal">LOADER_API<sp/><ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/><ref refid="loader_8h_1a0495b82fa36e714bbd8b5002d8ed7856" kindref="member">loader_get_impl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal">LOADER_API<sp/><ref refid="loader_8h_1a23baef561ce24e04bc23d02fa16656a6" kindref="member">loader_data</ref><sp/><ref refid="loader_8h_1ae325c8a6eb9cc688d3f8b995fe5eeef1" kindref="member">loader_get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="78" refid="loader_8h_1ae325c8a6eb9cc688d3f8b995fe5eeef1" refkind="member"><highlight class="normal">LOADER_API<sp/><ref refid="loader_8h_1a23baef561ce24e04bc23d02fa16656a6" kindref="member">loader_data</ref><sp/><ref refid="loader_8h_1ae325c8a6eb9cc688d3f8b995fe5eeef1" kindref="member">loader_get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1a7ebee7a40e35b8286d9bfcaa4eaaf08c" kindref="member">loader_get_handle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="80" refid="loader_8h_1a7bd109dbad8229149b66b0561bcbaf90" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1a7bd109dbad8229149b66b0561bcbaf90" kindref="member">loader_get_handle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1aff80b88574c4ecd9bd5bcb4b549c1059" kindref="member">loader_set_options</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*options);</highlight></codeline>
+<codeline lineno="82" refid="loader_8h_1a991a559588a353edb414b4e3ebe0506a" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a991a559588a353edb414b4e3ebe0506a" kindref="member">loader_set_options</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*options);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1a057eb44bd3132e88416f1a90e4b7b5b2" kindref="member">loader_get_options</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28" kindref="member">loader_naming_tag</ref><sp/>tag);</highlight></codeline>
+<codeline lineno="84" refid="loader_8h_1ab9ca71b78829829b8299d37dfcd7d483" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1ab9ca71b78829829b8299d37dfcd7d483" kindref="member">loader_get_options</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e" kindref="member">loader_tag</ref><sp/>tag);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1a4bad4c3d55fc7534694b049194bbcd90" kindref="member">loader_handle_id</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
+<codeline lineno="86" refid="loader_8h_1ac837bc325c34ef87852aa7f3eb961fff" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1ac837bc325c34ef87852aa7f3eb961fff" kindref="member">loader_handle_id</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1a3dd119a750e2f56d2198270bb29ec0ff" kindref="member">loader_handle_export</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
+<codeline lineno="88" refid="loader_8h_1a3dd119a750e2f56d2198270bb29ec0ff" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1a3dd119a750e2f56d2198270bb29ec0ff" kindref="member">loader_handle_export</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal">LOADER_API<sp/><ref refid="loader_8h_1a23baef561ce24e04bc23d02fa16656a6" kindref="member">loader_data</ref><sp/><ref refid="loader_8h_1a945db9c2048ac8d35c9b9e9d028c83de" kindref="member">loader_handle_get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="90" refid="loader_8h_1a945db9c2048ac8d35c9b9e9d028c83de" refkind="member"><highlight class="normal">LOADER_API<sp/><ref refid="loader_8h_1a23baef561ce24e04bc23d02fa16656a6" kindref="member">loader_data</ref><sp/><ref refid="loader_8h_1a945db9c2048ac8d35c9b9e9d028c83de" kindref="member">loader_handle_get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal">LOADER_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="loader_8h_1af0267882166a3ab6e011e9e9c4c8826a" kindref="member">loader_metadata</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92" refid="loader_8h_1af0267882166a3ab6e011e9e9c4c8826a" refkind="member"><highlight class="normal">LOADER_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="loader_8h_1af0267882166a3ab6e011e9e9c4c8826a" kindref="member">loader_metadata</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a50281bf1571a363c0b9b198c4e3e3a6e" kindref="member">loader_clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
+<codeline lineno="94" refid="loader_8h_1a50281bf1571a363c0b9b198c4e3e3a6e" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a50281bf1571a363c0b9b198c4e3e3a6e" kindref="member">loader_clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*handle);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a5ccaf6095bcc8ffe4fd3e8c2bb3d8202" kindref="member">loader_unload_children</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>destroy_objects);</highlight></codeline>
+<codeline lineno="96" refid="loader_8h_1a9fe053d874d8af26bc3f97b56a994d8c" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a9fe053d874d8af26bc3f97b56a994d8c" kindref="member">loader_is_destroyed</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1ac4f17dddef9935d0b1b727271f5e2308" kindref="member">loader_unload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98" refid="loader_8h_1a6f6bb6cc9b7b466cd10138a548c05d83" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a6f6bb6cc9b7b466cd10138a548c05d83" kindref="member">loader_set_destroyed</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a34fe0f770a93b0213274d076ed655216" kindref="member">loader_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100" refid="loader_8h_1aae52d09e532fd966f933d4573ee97fbf" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1aae52d09e532fd966f933d4573ee97fbf" kindref="member">loader_unload_children</ref>(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref><sp/>impl);</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1a5e4b95a22a0fc84007b5ab97e3a8efdb" kindref="member">loader_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102" refid="loader_8h_1a34fe0f770a93b0213274d076ed655216" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="loader_8h_1a34fe0f770a93b0213274d076ed655216" kindref="member">loader_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOADER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="104" refid="loader_8h_1aecc75dd62cb8a5fdb01194c40a172e19" refkind="member"><highlight class="normal">LOADER_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="loader_8h_1aecc75dd62cb8a5fdb01194c40a172e19" kindref="member">loader_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOADER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader.h"/>
   </compounddef>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="metacall__fork_8h" kind="file" language="C++">
     <compoundname>metacall_fork.h</compoundname>
     <includes local="no">metacall/metacall_api.h</includes>
@@ -133,7 +133,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>MetaCall<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>providing<sp/>a<sp/>foreign<sp/>function<sp/>interface<sp/>calls.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -160,7 +160,7 @@
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(WIN32)<sp/>||<sp/>defined(_WIN32)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(WIN32)<sp/>||<sp/>defined(_WIN32)<sp/>||<sp/>\</highlight></codeline>
 <codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__CYGWIN__)<sp/>||<sp/>defined(__CYGWIN32__)<sp/>||<sp/>\</highlight></codeline>
 <codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__MINGW32__)<sp/>||<sp/>defined(__MINGW64__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
@@ -172,9 +172,9 @@
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>metacall_pid;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(unix)<sp/>||<sp/>defined(__unix__)<sp/>||<sp/>defined(__unix)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(unix)<sp/>||<sp/>defined(__unix__)<sp/>||<sp/>defined(__unix)<sp/>||<sp/>\</highlight></codeline>
 <codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(linux)<sp/>||<sp/>defined(__linux__)<sp/>||<sp/>defined(__linux)<sp/>||<sp/>defined(__gnu_linux)<sp/>||<sp/>\</highlight></codeline>
-<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__CYGWIN__)<sp/>||<sp/>defined(__CYGWIN32__)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__CYGWIN__)<sp/>||<sp/>defined(__CYGWIN32__)<sp/>||<sp/>\</highlight></codeline>
 <codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(__APPLE__)<sp/>&amp;&amp;<sp/>defined(__MACH__))<sp/>||<sp/>defined(__MACOSX__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -202,7 +202,7 @@
 <codeline lineno="71"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="72"><highlight class="comment">*<sp/><sp/><sp/><sp/>Zero<sp/>if<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
 <codeline lineno="73"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="metacall__fork_8h_1a2ddac237388f8543cfdf7343df7270ed" kindref="member">metacall_fork_initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74" refid="metacall__fork_8h_1a2ddac237388f8543cfdf7343df7270ed" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="metacall__fork_8h_1a2ddac237388f8543cfdf7343df7270ed" kindref="member">metacall_fork_initialize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="76"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="77"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -214,7 +214,7 @@
 <codeline lineno="83"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>post_callback</highlight></codeline>
 <codeline lineno="84"><highlight class="comment">*<sp/><sp/><sp/><sp/>Callback<sp/>to<sp/>be<sp/>called<sp/>after<sp/>fork<sp/>detour<sp/>is<sp/>executed</highlight></codeline>
 <codeline lineno="85"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="metacall__fork_8h_1af3ee5698e71e05e892a64c2c0ba66d3a" kindref="member">metacall_fork</ref>(<ref refid="metacall__fork_8h_1a08d637d91639b7d99f67ecb5bb4fe8f3" kindref="member">metacall_pre_fork_callback_ptr</ref><sp/>pre_callback,<sp/><ref refid="metacall__fork_8h_1af7ebd3032b9a59f483098feb6055ca54" kindref="member">metacall_post_fork_callback_ptr</ref><sp/>post_callback);</highlight></codeline>
+<codeline lineno="86" refid="metacall__fork_8h_1af3ee5698e71e05e892a64c2c0ba66d3a" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="metacall__fork_8h_1af3ee5698e71e05e892a64c2c0ba66d3a" kindref="member">metacall_fork</ref>(<ref refid="metacall__fork_8h_1a08d637d91639b7d99f67ecb5bb4fe8f3" kindref="member">metacall_pre_fork_callback_ptr</ref><sp/>pre_callback,<sp/><ref refid="metacall__fork_8h_1af7ebd3032b9a59f483098feb6055ca54" kindref="member">metacall_post_fork_callback_ptr</ref><sp/>post_callback);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="88"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="89"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -223,7 +223,7 @@
 <codeline lineno="92"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="93"><highlight class="comment">*<sp/><sp/><sp/><sp/>Zero<sp/>if<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
 <codeline lineno="94"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="metacall__fork_8h_1ada8919e4e89d7933277c197b47be5271" kindref="member">metacall_fork_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95" refid="metacall__fork_8h_1ada8919e4e89d7933277c197b47be5271" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="metacall__fork_8h_1ada8919e4e89d7933277c197b47be5271" kindref="member">metacall_fork_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal">}</highlight></codeline>

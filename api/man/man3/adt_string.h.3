@@ -1,0 +1,38 @@
+.TH "adt_string.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+adt_string.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <adt/adt_api\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBstring_copy\fP(dest,  src,  dest_size)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define string_copy(dest, src, dest_size)"
+\fBValue:\fP
+.PP
+.nf
+ do \
+    { \
+        size_t __string_copy_length = strnlen(src, dest_size - 1); \
+        memcpy(dest, src, __string_copy_length); \
+        dest[__string_copy_length] = '\0'; \
+    } while (0)
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

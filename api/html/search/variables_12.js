@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['webpage_3313',['webpage',['../structloader__descriptor__copyright__type.html#ae6287f301f8a830336c89f6fd954b09f',1,'loader_descriptor_copyright_type::webpage()'],['../structloader__descriptor__technology__type.html#ad712d79e53d72ac6c215f71b7f07c071',1,'loader_descriptor_technology_type::webpage()']]],
-  ['write_3314',['write',['../structlog__aspect__stream__impl__type.html#a279fdfc9396d65db803878d62a7f9b89',1,'log_aspect_stream_impl_type::write()'],['../structlog__policy__stream__impl__type.html#a472b6f2c3a6641cc874005c71d026a0f',1,'log_policy_stream_impl_type::write()']]]
+  ['uninstall_3469',['uninstall',['../structdetour__interface__type.html#a7565f1847f77e145cb88227bc468718e',1,'detour_interface_type']]],
+  ['unload_3470',['unload',['../structdynlink__impl__interface__type.html#afa6b8f501ce50e73db4279b87bd6de25',1,'dynlink_impl_interface_type']]],
+  ['unlock_3471',['unlock',['../structlog__policy__schedule__impl__type.html#a8ddaa1a6977ec8ec91516e6346240a00',1,'log_policy_schedule_impl_type']]]
 ];

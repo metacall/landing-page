@@ -1,4 +1,4 @@
-.TH "detour_interface" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "detour_interface" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,27 +12,27 @@ detour_interface
 
 .in +1c
 .ti -1c
-.RI "\fBdetour_interface_initialize\fP \fBinitialize\fP"
+.RI "\fBdetour_impl_handle\fP(* \fBinitialize\fP )(void)"
 .br
 .ti -1c
-.RI "\fBdetour_interface_install\fP \fBinstall\fP"
+.RI "int(* \fBinstall\fP )(\fBdetour_impl_handle\fP, void(**)(void), void(*)(void))"
 .br
 .ti -1c
-.RI "\fBdetour_interface_uninstall\fP \fBuninstall\fP"
+.RI "int(* \fBuninstall\fP )(\fBdetour_impl_handle\fP)"
 .br
 .ti -1c
-.RI "\fBdetour_interface_destroy\fP \fBdestroy\fP"
+.RI "int(* \fBdestroy\fP )(\fBdetour_impl_handle\fP)"
 .br
 .in -1c
 .SH "Member Data Documentation"
 .PP 
-.SS "\fBdetour_interface_initialize\fP detour_interface::initialize"
+.SS "\fBdetour_impl_handle\fP(* detour_interface::initialize) (void)"
 
-.SS "\fBdetour_interface_install\fP detour_interface::install"
+.SS "int(* detour_interface::install) (\fBdetour_impl_handle\fP, void(**)(void), void(*)(void))"
 
-.SS "\fBdetour_interface_uninstall\fP detour_interface::uninstall"
+.SS "int(* detour_interface::uninstall) (\fBdetour_impl_handle\fP)"
 
-.SS "\fBdetour_interface_destroy\fP detour_interface::destroy"
+.SS "int(* detour_interface::destroy) (\fBdetour_impl_handle\fP)"
 
 
 .SH "Author"

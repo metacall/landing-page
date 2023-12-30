@@ -19,10 +19,12 @@ var reflect__type__id_8h =
       [ "TYPE_NULL", "reflect__type__id_8h.html#aac3b36ca5262794cb8accfef6a2bcaaea174c14bf485cb83d7bb06493dc9c4eef", null ],
       [ "TYPE_CLASS", "reflect__type__id_8h.html#aac3b36ca5262794cb8accfef6a2bcaaeae3c05d01e5713b8e32e46fb33c279e62", null ],
       [ "TYPE_OBJECT", "reflect__type__id_8h.html#aac3b36ca5262794cb8accfef6a2bcaaea43aef6302e2b8ee4efdd9ca87636d7c8", null ],
+      [ "TYPE_EXCEPTION", "reflect__type__id_8h.html#aac3b36ca5262794cb8accfef6a2bcaaea4f7005aa6681a4f86d2e300e08de3720", null ],
+      [ "TYPE_THROWABLE", "reflect__type__id_8h.html#aac3b36ca5262794cb8accfef6a2bcaaeafb9861ae2a8e03986ea83de85a3d066f", null ],
       [ "TYPE_SIZE", "reflect__type__id_8h.html#aac3b36ca5262794cb8accfef6a2bcaaea616b31034d047757e1c557b7dbd0f63f", null ],
       [ "TYPE_INVALID", "reflect__type__id_8h.html#aac3b36ca5262794cb8accfef6a2bcaaeafeec3d92b10ebeaa68bbb56e4d08691c", null ]
     ] ],
-    [ "type_id_name", "reflect__type__id_8h.html#a20c74beaf5431ebfa2767a1e537be21f", null ],
+    [ "type_id_name", "reflect__type__id_8h.html#a70e9080600bdc3c5dc1965c4312c3cd1", null ],
     [ "type_id_boolean", "reflect__type__id_8h.html#a519d07501fb589ea0570fa4df20f9333", null ],
     [ "type_id_char", "reflect__type__id_8h.html#ab280e1aba12fab895a28ac1ac6b81c9d", null ],
     [ "type_id_integer", "reflect__type__id_8h.html#ae3bed631492421ecc855b2c18aab5ebe", null ],
@@ -37,5 +39,7 @@ var reflect__type__id_8h =
     [ "type_id_null", "reflect__type__id_8h.html#a5c0cc84d028d219ff2a5a566919cfd93", null ],
     [ "type_id_class", "reflect__type__id_8h.html#a0c7710b09d98a37d7f88ce1e6557c741", null ],
     [ "type_id_object", "reflect__type__id_8h.html#a05f4a4aeedcdb1df98b0e58bd1b4bb0b", null ],
+    [ "type_id_exception", "reflect__type__id_8h.html#ad2213185c87afbf070b8c54b01d5711b", null ],
+    [ "type_id_throwable", "reflect__type__id_8h.html#a71b119868db3cf99e8b5f42fb028e922", null ],
     [ "type_id_invalid", "reflect__type__id_8h.html#a68be2eac98b9db19a21d4f2d71e56659", null ]
 ];

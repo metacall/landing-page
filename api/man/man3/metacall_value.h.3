@@ -1,4 +1,4 @@
-.TH "metacall_value.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "metacall_value.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,7 +22,7 @@ metacall_value.h
 
 .in +1c
 .ti -1c
-.RI "enum \fBmetacall_value_id\fP { \fBMETACALL_BOOL\fP = 0, \fBMETACALL_CHAR\fP = 1, \fBMETACALL_SHORT\fP = 2, \fBMETACALL_INT\fP = 3, \fBMETACALL_LONG\fP = 4, \fBMETACALL_FLOAT\fP = 5, \fBMETACALL_DOUBLE\fP = 6, \fBMETACALL_STRING\fP = 7, \fBMETACALL_BUFFER\fP = 8, \fBMETACALL_ARRAY\fP = 9, \fBMETACALL_MAP\fP = 10, \fBMETACALL_PTR\fP = 11, \fBMETACALL_FUTURE\fP = 12, \fBMETACALL_FUNCTION\fP = 13, \fBMETACALL_NULL\fP = 14, \fBMETACALL_CLASS\fP = 15, \fBMETACALL_OBJECT\fP = 16, \fBMETACALL_SIZE\fP, \fBMETACALL_INVALID\fP }"
+.RI "enum \fBmetacall_value_id\fP { \fBMETACALL_BOOL\fP = 0, \fBMETACALL_CHAR\fP = 1, \fBMETACALL_SHORT\fP = 2, \fBMETACALL_INT\fP = 3, \fBMETACALL_LONG\fP = 4, \fBMETACALL_FLOAT\fP = 5, \fBMETACALL_DOUBLE\fP = 6, \fBMETACALL_STRING\fP = 7, \fBMETACALL_BUFFER\fP = 8, \fBMETACALL_ARRAY\fP = 9, \fBMETACALL_MAP\fP = 10, \fBMETACALL_PTR\fP = 11, \fBMETACALL_FUTURE\fP = 12, \fBMETACALL_FUNCTION\fP = 13, \fBMETACALL_NULL\fP = 14, \fBMETACALL_CLASS\fP = 15, \fBMETACALL_OBJECT\fP = 16, \fBMETACALL_EXCEPTION\fP = 17, \fBMETACALL_THROWABLE\fP = 18, \fBMETACALL_SIZE\fP, \fBMETACALL_INVALID\fP }"
 .br
 .in -1c
 .SS "Functions"
@@ -83,6 +83,12 @@ metacall_value.h
 .RI "METACALL_API void * \fBmetacall_value_create_object\fP (void *o)"
 .br
 .ti -1c
+.RI "METACALL_API void * \fBmetacall_value_create_exception\fP (void *ex)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_value_create_throwable\fP (void *th)"
+.br
+.ti -1c
 .RI "METACALL_API size_t \fBmetacall_value_size\fP (void *v)"
 .br
 .ti -1c
@@ -90,6 +96,12 @@ metacall_value.h
 .br
 .ti -1c
 .RI "METACALL_API enum \fBmetacall_value_id\fP \fBmetacall_value_id\fP (void *v)"
+.br
+.ti -1c
+.RI "METACALL_API const char * \fBmetacall_value_id_name\fP (enum \fBmetacall_value_id\fP id)"
+.br
+.ti -1c
+.RI "METACALL_API const char * \fBmetacall_value_type_name\fP (void *v)"
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_value_copy\fP (void *v)"
@@ -149,6 +161,12 @@ metacall_value.h
 .RI "METACALL_API void * \fBmetacall_value_to_object\fP (void *v)"
 .br
 .ti -1c
+.RI "METACALL_API void * \fBmetacall_value_to_exception\fP (void *v)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_value_to_throwable\fP (void *v)"
+.br
+.ti -1c
 .RI "METACALL_API void * \fBmetacall_value_from_bool\fP (void *v, \fBboolean\fP b)"
 .br
 .ti -1c
@@ -198,6 +216,12 @@ metacall_value.h
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_value_from_object\fP (void *v, void *o)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_value_from_exception\fP (void *v, void *ex)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_value_from_throwable\fP (void *v, void *th)"
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_value_cast\fP (void *v, enum \fBmetacall_value_id\fP id)"
@@ -254,6 +278,12 @@ metacall_value.h
 .RI "METACALL_API void * \fBmetacall_value_cast_object\fP (void **v)"
 .br
 .ti -1c
+.RI "METACALL_API void * \fBmetacall_value_cast_exception\fP (void **v)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_value_cast_throwable\fP (void **v)"
+.br
+.ti -1c
 .RI "METACALL_API void \fBmetacall_value_destroy\fP (void *v)"
 .br
 .in -1c
@@ -302,6 +332,10 @@ metacall_value.h
 \fB\fIMETACALL_CLASS \fP\fP
 .TP
 \fB\fIMETACALL_OBJECT \fP\fP
+.TP
+\fB\fIMETACALL_EXCEPTION \fP\fP
+.TP
+\fB\fIMETACALL_THROWABLE \fP\fP
 .TP
 \fB\fIMETACALL_SIZE \fP\fP
 .TP
@@ -601,6 +635,38 @@ Pointer to value if success, null otherwhise
 .RE
 .PP
 
+.SS "METACALL_API void* metacall_value_create_exception (void * ex)"
+
+.PP
+Create a value from exception @ex\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP Pointer to constant data will be copied into value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value if success, null otherwhise 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_value_create_throwable (void * th)"
+
+.PP
+Create a value from throwable @th\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIth\fP Pointer to constant data will be copied into value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value if success, null otherwhise 
+.RE
+.PP
+
 .SS "METACALL_API size_t metacall_value_size (void * v)"
 
 .PP
@@ -646,6 +712,38 @@ Provide type id of value\&.
 \fBReturns\fP
 .RS 4
 Return type id assigned to value 
+.RE
+.PP
+
+.SS "METACALL_API const char* metacall_value_id_name (enum \fBmetacall_value_id\fP id)"
+
+.PP
+Provide type id in a readable form (as string) of a type id\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Value type identifier
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return string related to the type id 
+.RE
+.PP
+
+.SS "METACALL_API const char* metacall_value_type_name (void * v)"
+
+.PP
+Provide type id in a readable form (as string) of value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return string related to the type id assigned to value 
 .RE
 .PP
 
@@ -947,6 +1045,38 @@ Convert value @v to object\&.
 \fBReturns\fP
 .RS 4
 Value converted to object 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_value_to_exception (void * v)"
+
+.PP
+Convert value @v to exception\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value converted to exception 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_value_to_throwable (void * v)"
+
+.PP
+Convert value @v to throwable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value converted to throwable 
 .RE
 .PP
 
@@ -1258,7 +1388,43 @@ Assign object @o to value @v\&.
 .PP
 \fBReturns\fP
 .RS 4
-Value with object \fCassigned\fP to it 
+Value with object @o assigned to it 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_value_from_exception (void * v, void * ex)"
+
+.PP
+Assign exception @ex to value @v\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.br
+\fIex\fP Exception to be assigned to value @v
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value with exception @ex assigned to it 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_value_from_throwable (void * v, void * th)"
+
+.PP
+Assign throwable @th to value @v\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.br
+\fIth\fP Throwable to be assigned to value @v
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value with throwable @th assigned to it 
 .RE
 .PP
 
@@ -1549,6 +1715,38 @@ Convert value @v implicitly to object\&.
 \fBReturns\fP
 .RS 4
 Value converted to object 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_value_cast_exception (void ** v)"
+
+.PP
+Convert value @v implicitly to exception\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the reference of the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value converted to exception 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_value_cast_throwable (void ** v)"
+
+.PP
+Convert value @v implicitly to throwable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the reference of the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value converted to throwable 
 .RE
 .PP
 

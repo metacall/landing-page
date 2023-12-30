@@ -1,4 +1,4 @@
-.TH "filesystem_file_descriptor.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "filesystem_file_descriptor.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -38,10 +38,10 @@ filesystem_file_descriptor.h
 .RI "FILESYSTEM_API \fBdirectory_descriptor\fP \fBfile_descriptor_owner\fP (\fBfile_descriptor\fP f)"
 .br
 .ti -1c
-.RI "const FILESYSTEM_API char * \fBfile_descriptor_name\fP (\fBfile_descriptor\fP f)"
+.RI "FILESYSTEM_API const char * \fBfile_descriptor_name\fP (\fBfile_descriptor\fP f)"
 .br
 .ti -1c
-.RI "const FILESYSTEM_API char * \fBfile_descriptor_extension\fP (\fBfile_descriptor\fP f)"
+.RI "FILESYSTEM_API const char * \fBfile_descriptor_extension\fP (\fBfile_descriptor\fP f)"
 .br
 .ti -1c
 .RI "FILESYSTEM_API void \fBfile_descriptor_destroy\fP (\fBfile_descriptor\fP f)"
@@ -93,7 +93,7 @@ A pointer to directory descriptor which owns the file
 .RE
 .PP
 
-.SS "const FILESYSTEM_API char* file_descriptor_name (\fBfile_descriptor\fP f)"
+.SS "FILESYSTEM_API const char* file_descriptor_name (\fBfile_descriptor\fP f)"
 
 .PP
 Get the file name\&. 
@@ -109,7 +109,7 @@ A constant string pointer to the name of @f
 .RE
 .PP
 
-.SS "const FILESYSTEM_API char* file_descriptor_extension (\fBfile_descriptor\fP f)"
+.SS "FILESYSTEM_API const char* file_descriptor_extension (\fBfile_descriptor\fP f)"
 
 .PP
 Get the file extension\&. 

@@ -1,0 +1,129 @@
+.TH "plugin_interface.hpp" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugin_interface.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <preprocessor/preprocessor\&.h>\fP
+.br
+\fC#include <log/log\&.h>\fP
+.br
+\fC#include <reflect/reflect\&.h>\fP
+.br
+\fC#include <metacall/metacall\&.h>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEXTENSION_FUNCTION_IMPL_VOID\fP(ret,  name)"
+.br
+.ti -1c
+.RI "#define \fBEXTENSION_FUNCTION_IMPL\fP(ret,  name, \&.\&.\&.)"
+.br
+.ti -1c
+.RI "#define \fBEXTENSION_FUNCTION\fP(ret,  name, \&.\&.\&.)"
+.br
+.ti -1c
+.RI "#define \fBEXTENSION_FUNCTION_THROW\fP(error)"
+.br
+.ti -1c
+.RI "#define \fBEXTENSION_FUNCTION_CHECK_ITERATOR\fP(error,  iterator,  \fBvalue\fP)"
+.br
+.ti -1c
+.RI "#define \fBEXTENSION_FUNCTION_CHECK\fP(error, \&.\&.\&.)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define EXTENSION_FUNCTION_IMPL_VOID(ret, name)"
+\fBValue:\fP
+.PP
+.nf
+   do \
+    { \
+        if (metacall_register_loaderv(loader, context, PREPROCESSOR_STRINGIFY(name), name, ret, 0, NULL) != 0) \
+        { \
+            log_write("metacall", LOG_LEVEL_ERROR, "Failed to register function: " PREPROCESSOR_STRINGIFY(name)); \
+            return 1; \
+        } \
+    } while (0)
+.fi
+.SS "#define EXTENSION_FUNCTION_IMPL(ret, name,  \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+   do \
+    { \
+        enum metacall_value_id arg_types[] = { __VA_ARGS__ }; \
+        if (metacall_register_loaderv(loader, context, PREPROCESSOR_STRINGIFY(name), name, ret, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), arg_types) != 0) \
+        { \
+            log_write("metacall", LOG_LEVEL_ERROR, "Failed to register function: " PREPROCESSOR_STRINGIFY(name)); \
+            return 1; \
+        } \
+    } while (0)
+.fi
+.SS "#define EXTENSION_FUNCTION(ret, name,  \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+    PREPROCESSOR_IF(PREPROCESSOR_ARGS_EMPTY(__VA_ARGS__), \
+        EXTENSION_FUNCTION_IMPL_VOID(ret, name), \
+        EXTENSION_FUNCTION_IMPL(ret, name, __VA_ARGS__))
+.fi
+.SS "#define EXTENSION_FUNCTION_THROW(error)"
+\fBValue:\fP
+.PP
+.nf
+ do \
+    { \
+        /* log_write("metacall", LOG_LEVEL_ERROR, error); */ \
+        exception ex = exception_create_const(error, "PluginException", 0, ""); \
+        throwable th = throwable_create(value_create_exception(ex)); \
+        return value_create_throwable(th); \
+    } while (0)
+.fi
+.SS "#define EXTENSION_FUNCTION_CHECK_ITERATOR(error, iterator, \fBvalue\fP)"
+\fBValue:\fP
+.PP
+.nf
+   if (metacall_value_id(args[iterator]) != value) \
+    { \
+        std::stringstream ss; \
+        ss << error "\&. The parameter number " PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(iterator)) " requires a value of type " << metacall_value_id_name(value) << ", received: " << metacall_value_type_name(args[iterator]); \
+        std::string error_msg = ss\&.str(); \
+        EXTENSION_FUNCTION_THROW(error_msg\&.c_str()); \
+    }
+.fi
+.SS "#define EXTENSION_FUNCTION_CHECK(error,  \&.\&.\&.)"
+\fBValue:\fP
+.PP
+.nf
+  do \
+    { \
+        (void)data; /* TODO: Do something with data */ \
+        /* Disable warning on args when no args */ \
+        PREPROCESSOR_IF(PREPROCESSOR_ARGS_EMPTY(__VA_ARGS__), \
+                        (void)args; \
+                        , \
+                        PREPROCESSOR_EMPTY_SYMBOL()) \
+        if (argc != PREPROCESSOR_ARGS_COUNT(__VA_ARGS__)) \
+        { \
+            std::stringstream ss; \
+            ss << error "\&. The required number of argumens is " PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(__VA_ARGS__)) ", received: " << argc; \
+            std::string error_msg = ss\&.str(); \
+            EXTENSION_FUNCTION_THROW(error_msg\&.c_str()); \
+        } \
+        PREPROCESSOR_FOR(EXTENSION_FUNCTION_CHECK_ITERATOR, error, __VA_ARGS__) \
+    } while (0)
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

@@ -1,13 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall_8h">
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall_8h" xml:lang="en-US">
 <title>metacall.h File Reference</title>
 <indexterm><primary>metacall.h</primary></indexterm>
 <programlisting>#include &lt;metacall/metacall_api.h&gt;
 #include &lt;metacall/metacall_allocator.h&gt;
 #include &lt;metacall/metacall_def.h&gt;
+#include &lt;metacall/metacall_error.h&gt;
 #include &lt;metacall/metacall_log.h&gt;
 #include &lt;metacall/metacall_value.h&gt;
+#include &lt;metacall/metacall_version.h&gt;
 #include &lt;stdarg.h&gt;
+#include &lt;stdint.h&gt;
 #include &lt;stdlib.h&gt;
 </programlisting>Include dependency graph for metacall.h:<para>
     <informalfigure>
@@ -18,12 +21,23 @@
         </mediaobject>
     </informalfigure>
 </para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 <simplesect>
     <title>Classes    </title>
         <itemizedlist>
             <listitem><para>struct <link linkend="_structmetacall__initialize__configuration__type">metacall_initialize_configuration_type</link></para>
 </listitem>
-            <listitem><para>struct <link linkend="_structmetacall__await__callbacks__type">metacall_await_callbacks_type</link></para>
+            <listitem><para>struct <link linkend="_structmetacall__await__callbacks">metacall_await_callbacks</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmetacall__version__type">metacall_version_type</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -44,7 +58,7 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>const METACALL_API char * <link linkend="_metacall_8h_1a4aa530f2d57ee74faec5152ab59cfd2c">metacall_serial</link> (void)</para>
+            <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1adf5d6e87973ec71e38292324d0fd8048">metacall_serial</link> (void)</para>
 </listitem>
             <listitem><para>METACALL_API void <link linkend="_metacall_8h_1a7359cf8608ee329433d129f74621f6b7">metacall_log_null</link> (void)</para>
 </listitem>
@@ -56,7 +70,7 @@
 </listitem>
             <listitem><para>METACALL_API void <link linkend="_metacall_8h_1ab2759ffd9206401b14fb75d53bf35987">metacall_initialize_args</link> (int argc, char *argv[])</para>
 </listitem>
-            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1acadaee23ccbd4d29087d617b07e1a346">metacall_argc</link> ()</para>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a881a9d10167e78461635f285a788816c">metacall_argc</link> (void)</para>
 </listitem>
             <listitem><para>METACALL_API char ** <link linkend="_metacall_8h_1a9c0bd7df095d9a4db05204f04fa657a3">metacall_argv</link> (void)</para>
 </listitem>
@@ -220,7 +234,7 @@ Parameters                    </title>
         <itemizedlist>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a579d699c4407cc27e94d216303f152aa">metacall_handle</link> (const char *tag, const char *name)</para>
 </listitem>
-            <listitem><para>const METACALL_API char * <link linkend="_metacall_8h_1af1a1d52c74b30adba3e328eafb77cf3c">metacall_handle_id</link> (void *handle)</para>
+            <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1a593872223a3cbbf9856ce9d9dc8ba2da">metacall_handle_id</link> (void *handle)</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1ad69cc4988cf490c58d1c5d72ce7a3f95">metacall_handle_export</link> (void *handle)</para>
 </listitem>
@@ -256,7 +270,7 @@ Parameters                    </title>
                             <row>
                                 <entry>in                                </entry>                                <entry>name</entry>
                                 <entry>
-<para>Name of the function</para>
+<para>Name of the function (if it is NULL, function is not registered into host scope)</para>
 </entry>
                             </row>
                             <row>
@@ -320,21 +334,27 @@ Parameters                    </title>
                         <colspec colwidth="4*"/>
                         <tbody>
                             <row>
+                                <entry>in                                </entry>                                <entry>loader</entry>
+                                <entry>
+<para>Opaque pointer to the loader in which you want to register the function (this allows to register the function into a different loader than the host)</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>context</entry>
+                                <entry>
+<para>Opaque pointer to the context in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)</para>
+</entry>
+                            </row>
+                            <row>
                                 <entry>in                                </entry>                                <entry>name</entry>
                                 <entry>
-<para>Name of the function</para>
+<para>Name of the function (if it is NULL, function is not registered into host scope)</para>
 </entry>
                             </row>
                             <row>
                                 <entry>in                                </entry>                                <entry>invoke</entry>
                                 <entry>
 <para>Pointer to function invoke interface (argc, argv, data)</para>
-</entry>
-                            </row>
-                            <row>
-                                <entry>out                                </entry>                                <entry>func</entry>
-                                <entry>
-<para>Will set the pointer to the function if the parameter is not null</para>
 </entry>
                             </row>
                             <row>
@@ -368,6 +388,8 @@ Parameters                    </title>
         <itemizedlist>
             <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ae0f575287847cd57f5a549b2b211db1d">metacall_registerv</link> (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</para>
 </listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1afc4e32dfcccfefd3fec11b80f7edd10a">metacall_register_loaderv</link> (void *<link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link>, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>, const char *name, void *(*invoke)(size_t, void *[], void *), enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</para>
+</listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b">metacall_await</link> (const char *name, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a5f24de215645b2728c80e20685cb5525">metacall_await_future</link> (void *f, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
@@ -378,7 +400,7 @@ Parameters                    </title>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a9c5ead1f1aa559e58a65f69ae51972cb">metacallfv_await_s</link> (void *func, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
 </listitem>
-            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1afe71978aefb3bb4d664ddf54b5ab81b7">metacallfv_await_struct_s</link> (void *func, void *args[], size_t size, metacall_await_callbacks cb, void *data)</para>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1afe71978aefb3bb4d664ddf54b5ab81b7">metacallfv_await_struct_s</link> (void *func, void *args[], size_t size, <link linkend="_structmetacall__await__callbacks">metacall_await_callbacks</link> cb, void *data)</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a806b1dda95f596de33a9527123fed8e4">metacallfmv_await</link> (void *func, void *keys[], void *values[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
 </listitem>
@@ -442,7 +464,11 @@ Parameters                    </title>
 </listitem>
             <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a567cbdd3c398e4bcfab8e07ff76de06b">metacall_object_set</link> (void *obj, const char *key, void *v)</para>
 </listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a7e1d1400dc0a308eff0ad61495aece15">metacall_throwable_value</link> (void *th)</para>
+</listitem>
             <listitem><para>METACALL_API char * <link linkend="_metacall_8h_1ab9d6a8fa4d186f14741ef15015798eb0">metacall_inspect</link> (size_t *size, void *allocator)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a640b7fe3b2b8b119abc047f3e7a3e2bf">metacall_inspect_value</link> (void)</para>
 </listitem>
             <listitem><para>METACALL_API char * <link linkend="_metacall_8h_1acdcbeeeafdc83e9b69937265a0da53c3">metacall_serialize</link> (const char *name, void *v, size_t *size, void *allocator)</para>
 </listitem>
@@ -450,9 +476,25 @@ Parameters                    </title>
 </listitem>
             <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ae1f35c9c5cd2b375e8fb00b9d8c5890c">metacall_clear</link> (void *handle)</para>
 </listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a57ecb3af9057cf7c9457bab16b0958ac">metacall_plugin_extension</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1aa2add9c2e53f0bbd664392ada75cd5b0">metacall_plugin_path</link> (void)</para>
+</listitem>
             <listitem><para>METACALL_API int <link linkend="_metacall_8h_1aca8745a9f261bc3d37ee9156b991296f">metacall_destroy</link> (void)</para>
 </listitem>
-            <listitem><para>const METACALL_API char * <link linkend="_metacall_8h_1a1e8b06591a5564cfa4f1209e84ad5e78">metacall_print_info</link> (void)</para>
+            <listitem><para>METACALL_API const struct <link linkend="_structmetacall__version__type">metacall_version_type</link> * <link linkend="_metacall_8h_1a1193b3c37aee3b2f5ed49b1e08784ffd">metacall_version</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API uint32_t <link linkend="_metacall_8h_1a3af1b1656bce5952ccd86352bdd76bb0">metacall_version_hex_make</link> (unsigned int major, unsigned int minor, unsigned int patch)</para>
+</listitem>
+            <listitem><para>METACALL_API uint32_t <link linkend="_metacall_8h_1a81a1feba31ad43cd3dda3d08699e1780">metacall_version_hex</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1a8c0fd2d5fca3f94b8d52e2fa7ee79788">metacall_version_str</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1ab7beb4c0175a8e98b445bb0bc2218dba">metacall_version_revision</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1a8c2bfc0f3461385a84c61e4142d3bc47">metacall_version_name</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1a47d8e1e26509c0c775ba0ecbd08f9288">metacall_print_info</link> (void)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -481,11 +523,11 @@ Parameters                    </title>
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_metacall_8h_1a4aa530f2d57ee74faec5152ab59cfd2c"/>    <section>
+<anchor xml:id="_metacall_8h_1adf5d6e87973ec71e38292324d0fd8048"/>    <section>
     <title>metacall_serial()</title>
 <indexterm><primary>metacall_serial</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_serial</secondary></indexterm>
-<para><computeroutput>const METACALL_API char* metacall_serial (void )</computeroutput></para><para>
+<para><computeroutput>METACALL_API const char* metacall_serial (void )</computeroutput></para><para>
 
 <para>Returns default serializer used by MetaCall. </para>
 </para>
@@ -625,11 +667,11 @@ Parameters                    </title>
                     </para>
                 </formalpara>
                 </para>
-    </section><anchor xml:id="_metacall_8h_1acadaee23ccbd4d29087d617b07e1a346"/>    <section>
+    </section><anchor xml:id="_metacall_8h_1a881a9d10167e78461635f285a788816c"/>    <section>
     <title>metacall_argc()</title>
 <indexterm><primary>metacall_argc</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_argc</secondary></indexterm>
-<para><computeroutput>METACALL_API int metacall_argc ( )</computeroutput></para><para>
+<para><computeroutput>METACALL_API int metacall_argc (void )</computeroutput></para><para>
 
 <para>Get the number of arguments in which MetaCall was initialized. </para>
 </para>
@@ -676,7 +718,7 @@ Parameters                    </title>
                             <row>
                                 <entry>in                                </entry>                                <entry>tag</entry>
                                 <entry>
-<para>Extension of the script</para>
+<para>Extension of the script (if tag is NULL, it returns the status of the whole MetaCall instance)</para>
 </entry>
                             </row>
                         </tbody>
@@ -838,9 +880,9 @@ Parameters                    </title>
 </entry>
                             </row>
                             <row>
-                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>in,out                                </entry>                                <entry>handle</entry>
                                 <entry>
-<para>Optional pointer to reference of loaded handle</para>
+<para>Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.</para>
 </entry>
                             </row>
                         </tbody>
@@ -892,9 +934,9 @@ Parameters                    </title>
 </entry>
                             </row>
                             <row>
-                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>in,out                                </entry>                                <entry>handle</entry>
                                 <entry>
-<para>Optional pointer to reference of loaded handle</para>
+<para>Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.</para>
 </entry>
                             </row>
                         </tbody>
@@ -940,9 +982,9 @@ Parameters                    </title>
 </entry>
                             </row>
                             <row>
-                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>in,out                                </entry>                                <entry>handle</entry>
                                 <entry>
-<para>Optional pointer to reference of loaded handle</para>
+<para>Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.</para>
 </entry>
                             </row>
                         </tbody>
@@ -982,9 +1024,9 @@ Parameters                    </title>
 </entry>
                             </row>
                             <row>
-                                <entry>out                                </entry>                                <entry>handle</entry>
+                                <entry>in,out                                </entry>                                <entry>handle</entry>
                                 <entry>
-<para>Optional pointer to reference of loaded handle</para>
+<para>Optional pointer to reference of loaded handle. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i.e they will share the scope between all previously loaded files and they can collide). Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions). The last case is if we pass an already allocated handle (i.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter.</para>
 </entry>
                             </row>
                             <row>
@@ -1573,11 +1615,11 @@ Parameters                    </title>
     <title>metacall_handle()</title>
 <indexterm><primary>metacall_handle</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_handle</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacall_handle (const char * tag, const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1af1a1d52c74b30adba3e328eafb77cf3c"/>    <section>
+<para><computeroutput>METACALL_API void* metacall_handle (const char * tag, const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a593872223a3cbbf9856ce9d9dc8ba2da"/>    <section>
     <title>metacall_handle_id()</title>
 <indexterm><primary>metacall_handle_id</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_handle_id</secondary></indexterm>
-<para><computeroutput>const METACALL_API char* metacall_handle_id (void * handle)</computeroutput></para><para>
+<para><computeroutput>METACALL_API const char* metacall_handle_id (void * handle)</computeroutput></para><para>
 
 <para>Get name of a @handle. </para>
 </para>
@@ -1935,7 +1977,11 @@ Parameters                    </title>
     <title>metacall_registerv()</title>
 <indexterm><primary>metacall_registerv</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_registerv</secondary></indexterm>
-<para><computeroutput>METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b"/>    <section>
+<para><computeroutput>METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1afc4e32dfcccfefd3fec11b80f7edd10a"/>    <section>
+    <title>metacall_register_loaderv()</title>
+<indexterm><primary>metacall_register_loaderv</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_register_loaderv</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_register_loaderv (void * loader, void * context, const char * name, void *(*)(size_t, void *[], void *) invoke, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b"/>    <section>
     <title>metacall_await()</title>
 <indexterm><primary>metacall_await</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_await</secondary></indexterm>
@@ -2405,7 +2451,7 @@ Parameters                    </title>
     <title>metacallfv_await_struct_s()</title>
 <indexterm><primary>metacallfv_await_struct_s</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacallfv_await_struct_s</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacallfv_await_struct_s (void * func, void * args[], size_t size, metacall_await_callbacks cb, void * data)</computeroutput></para><para>
+<para><computeroutput>METACALL_API void* metacallfv_await_struct_s (void * func, void * args[], size_t size, <link linkend="_structmetacall__await__callbacks">metacall_await_callbacks</link> cb, void * data)</computeroutput></para><para>
 
 <para>Call an asynchronous function anonymously by value array @args and function @func (offered without function pointers for languages without support to function pointers) </para>
 </para>
@@ -3337,6 +3383,42 @@ Parameters                    </title>
 <para>Non-zero integer if an error ocurred </para>
 </formalpara>
 </para>
+    </section><anchor xml:id="_metacall_8h_1a7e1d1400dc0a308eff0ad61495aece15"/>    <section>
+    <title>metacall_throwable_value()</title>
+<indexterm><primary>metacall_throwable_value</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_throwable_value</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_throwable_value (void * th)</computeroutput></para><para>
+
+<para>Get the value contained by throwable object @th. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>th</entry>
+                                <entry>
+<para>Pointer to the throwable object</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the value inside of the throwable or NULL in case of error </para>
+</formalpara>
+</para>
     </section><anchor xml:id="_metacall_8h_1ab9d6a8fa4d186f14741ef15015798eb0"/>    <section>
     <title>metacall_inspect()</title>
 <indexterm><primary>metacall_inspect</primary><secondary>metacall.h</secondary></indexterm>
@@ -3377,6 +3459,20 @@ Parameters                    </title>
                 <formalpara><title>Returns</title>
 
 <para>String containing introspection information </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a640b7fe3b2b8b119abc047f3e7a3e2bf"/>    <section>
+    <title>metacall_inspect_value()</title>
+<indexterm><primary>metacall_inspect_value</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_inspect_value</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_inspect_value (void )</computeroutput></para><para>
+
+<para>Provide information about all loaded objects as a value. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Value containing introspection information </para>
 </formalpara>
 </para>
     </section><anchor xml:id="_metacall_8h_1acdcbeeeafdc83e9b69937265a0da53c3"/>    <section>
@@ -3523,6 +3619,34 @@ Parameters                    </title>
 <para>Zero if success, different from zero otherwise </para>
 </formalpara>
 </para>
+    </section><anchor xml:id="_metacall_8h_1a57ecb3af9057cf7c9457bab16b0958ac"/>    <section>
+    <title>metacall_plugin_extension()</title>
+<indexterm><primary>metacall_plugin_extension</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_plugin_extension</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_plugin_extension (void )</computeroutput></para><para>
+
+<para>Get the plugin extension handle to be used for loading plugins. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to the extension handle, or null if it failed to load </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1aa2add9c2e53f0bbd664392ada75cd5b0"/>    <section>
+    <title>metacall_plugin_path()</title>
+<indexterm><primary>metacall_plugin_path</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_plugin_path</secondary></indexterm>
+<para><computeroutput>METACALL_API const char* metacall_plugin_path (void )</computeroutput></para><para>
+
+<para>Get the plugin extension path to be used for accessing the plugins folder. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>String containing the core plugin path, or null if it failed to load the plugin extension </para>
+</formalpara>
+</para>
     </section><anchor xml:id="_metacall_8h_1aca8745a9f261bc3d37ee9156b991296f"/>    <section>
     <title>metacall_destroy()</title>
 <indexterm><primary>metacall_destroy</primary><secondary>metacall.h</secondary></indexterm>
@@ -3537,11 +3661,129 @@ Parameters                    </title>
 <para>Zero if success, different from zero otherwise </para>
 </formalpara>
 </para>
-    </section><anchor xml:id="_metacall_8h_1a1e8b06591a5564cfa4f1209e84ad5e78"/>    <section>
+    </section><anchor xml:id="_metacall_8h_1a1193b3c37aee3b2f5ed49b1e08784ffd"/>    <section>
+    <title>metacall_version()</title>
+<indexterm><primary>metacall_version</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_version</secondary></indexterm>
+<para><computeroutput>METACALL_API const struct <link linkend="_structmetacall__version__type">metacall_version_type</link>* metacall_version (void )</computeroutput></para><para>
+
+<para>Provide the module version struct. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Static struct containing unpacked version </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a3af1b1656bce5952ccd86352bdd76bb0"/>    <section>
+    <title>metacall_version_hex_make()</title>
+<indexterm><primary>metacall_version_hex_make</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_version_hex_make</secondary></indexterm>
+<para><computeroutput>METACALL_API uint32_t metacall_version_hex_make (unsigned int major, unsigned int minor, unsigned int patch)</computeroutput></para><para>
+
+<para>Provide the module version hexadecimal value with format 0xMMIIPPPP where M is @major, I is @minor and P is @patch. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>major</entry>
+                                <entry>
+<para>Unsigned integer representing major version</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>minor</entry>
+                                <entry>
+<para>Unsigned integer representing minor version</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>patch</entry>
+                                <entry>
+<para>Unsigned integer representing patch version</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Hexadecimal integer containing packed version </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a81a1feba31ad43cd3dda3d08699e1780"/>    <section>
+    <title>metacall_version_hex()</title>
+<indexterm><primary>metacall_version_hex</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_version_hex</secondary></indexterm>
+<para><computeroutput>METACALL_API uint32_t metacall_version_hex (void )</computeroutput></para><para>
+
+<para>Provide the module version hexadecimal value with format 0xMMIIPPPP where M is major, I is minor and P is patch. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Hexadecimal integer containing packed version </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a8c0fd2d5fca3f94b8d52e2fa7ee79788"/>    <section>
+    <title>metacall_version_str()</title>
+<indexterm><primary>metacall_version_str</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_version_str</secondary></indexterm>
+<para><computeroutput>METACALL_API const char* metacall_version_str (void )</computeroutput></para><para>
+
+<para>Provide the module version string. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Static string containing module version </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1ab7beb4c0175a8e98b445bb0bc2218dba"/>    <section>
+    <title>metacall_version_revision()</title>
+<indexterm><primary>metacall_version_revision</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_version_revision</secondary></indexterm>
+<para><computeroutput>METACALL_API const char* metacall_version_revision (void )</computeroutput></para><para>
+
+<para>Provide the module version revision string. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Static string containing module version revision </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a8c2bfc0f3461385a84c61e4142d3bc47"/>    <section>
+    <title>metacall_version_name()</title>
+<indexterm><primary>metacall_version_name</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_version_name</secondary></indexterm>
+<para><computeroutput>METACALL_API const char* metacall_version_name (void )</computeroutput></para><para>
+
+<para>Provide the module version name. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Static string containing module version name </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a47d8e1e26509c0c775ba0ecbd08f9288"/>    <section>
     <title>metacall_print_info()</title>
 <indexterm><primary>metacall_print_info</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_print_info</secondary></indexterm>
-<para><computeroutput>const METACALL_API char* metacall_print_info (void )</computeroutput></para><para>
+<para><computeroutput>METACALL_API const char* metacall_print_info (void )</computeroutput></para><para>
 
 <para>Provide the module information. </para>
 </para>
@@ -3559,6 +3801,6 @@ Parameters                    </title>
     <title>metacall_null_args</title>
 <indexterm><primary>metacall_null_args</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_null_args</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacall_null_args[1]</computeroutput></para></section>
+<para><computeroutput>METACALL_API void* metacall_null_args[1]<computeroutput>[extern]</computeroutput></computeroutput></para></section>
 </section>
 </section>

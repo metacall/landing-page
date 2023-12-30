@@ -23,6 +23,8 @@ var reflect__value__type_8h =
     [ "value_create_null", "reflect__value__type_8h.html#ae7d4907b740d6548d60ad76c3b990e04", null ],
     [ "value_create_class", "reflect__value__type_8h.html#ac4ffef9102b2fc65c4373c8e121eda09", null ],
     [ "value_create_object", "reflect__value__type_8h.html#ab1c0f4c5b60d48082cac78b64223f99f", null ],
+    [ "value_create_exception", "reflect__value__type_8h.html#a0fbfd806bd884e392910dfe361826973", null ],
+    [ "value_create_throwable", "reflect__value__type_8h.html#a214a304d001a556a0695a73c09121dbc", null ],
     [ "value_to_bool", "reflect__value__type_8h.html#a22ec3aa0f4f44e1a46fdcbdb0c702f4d", null ],
     [ "value_to_char", "reflect__value__type_8h.html#abdc3e144c8ee27e40027b0520fd44c1f", null ],
     [ "value_to_short", "reflect__value__type_8h.html#aaeb82661978bf49fd2b485d987096408", null ],
@@ -40,6 +42,8 @@ var reflect__value__type_8h =
     [ "value_to_null", "reflect__value__type_8h.html#a9cd5c465f3cf5c12ed3da3d126bf68be", null ],
     [ "value_to_class", "reflect__value__type_8h.html#afd29d348dc5a3304f271b33e12256247", null ],
     [ "value_to_object", "reflect__value__type_8h.html#aa8b462e546b78a212acd5fdbc263bd65", null ],
+    [ "value_to_exception", "reflect__value__type_8h.html#ae0225356184d340da7501cc3be0cdee2", null ],
+    [ "value_to_throwable", "reflect__value__type_8h.html#a7d85eacd33469911f94bf5067b9dd071", null ],
     [ "value_from_bool", "reflect__value__type_8h.html#a4dcb4eba01ca47fbeb7a4bc19ddfe269", null ],
     [ "value_from_char", "reflect__value__type_8h.html#a06ca0261b33ca4efa103a58755f40e5f", null ],
     [ "value_from_short", "reflect__value__type_8h.html#a1da4fafcc4f72985387a44a9f4463805", null ],
@@ -57,5 +61,7 @@ var reflect__value__type_8h =
     [ "value_from_null", "reflect__value__type_8h.html#a3457040bbc954e56559bbb39b15730c2", null ],
     [ "value_from_class", "reflect__value__type_8h.html#a5f582aba1b8e8d67feac89a391c6cb34", null ],
     [ "value_from_object", "reflect__value__type_8h.html#a7f909c52ff40f670cc3c388eedd4eef4", null ],
+    [ "value_from_exception", "reflect__value__type_8h.html#a4219a34c3fbc51e39f8452d250438996", null ],
+    [ "value_from_throwable", "reflect__value__type_8h.html#a8e405d38d7229ea2d4947386e6d74814", null ],
     [ "value_type_destroy", "reflect__value__type_8h.html#a89d30694c2d675c9d4077e9f999f95cf", null ]
 ];

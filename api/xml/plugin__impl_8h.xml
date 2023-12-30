@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="plugin__impl_8h" kind="file" language="C++">
+    <compoundname>plugin_impl.h</compoundname>
+    <includes local="no">plugin/plugin_api.h</includes>
+    <includes refid="plugin__descriptor_8h" local="no">plugin/plugin_descriptor.h</includes>
+    <includedby refid="plugin__loader_8h" local="no">plugin_loader.h</includedby>
+    <includedby refid="plugin__manager_8h" local="no">plugin_manager.h</includedby>
+    <includedby refid="loader__host_8h" local="no">loader_host.h</includedby>
+    <includedby refid="loader__impl_8h" local="no">loader_impl.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>dynlink/dynlink.h</label>
+        <link refid="dynlink_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dynlink/dynlink_interface.h</label>
+      </node>
+      <node id="8">
+        <label>dynlink/dynlink_flags.h</label>
+        <link refid="dynlink__flags_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>portability/portability_library_path.h</label>
+      </node>
+      <node id="2">
+        <label>plugin/plugin_api.h</label>
+      </node>
+      <node id="3">
+        <label>plugin/plugin_descriptor.h</label>
+        <link refid="plugin__descriptor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>plugin_impl.h</label>
+        <link refid="plugin__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dynlink/dynlink_symbol.h</label>
+        <link refid="dynlink__symbol_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dynlink/dynlink_api.h</label>
+      </node>
+      <node id="6">
+        <label>dynlink/dynlink_type.h</label>
+        <link refid="dynlink__type_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
+      </node>
+      <node id="3">
+        <label>plugin_manager.h</label>
+        <link refid="plugin__manager_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>detour.h</label>
+        <link refid="detour_8h"/>
+      </node>
+      <node id="2">
+        <label>plugin_loader.h</label>
+        <link refid="plugin__loader_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>plugin_impl.h</label>
+        <link refid="plugin__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>plugin.h</label>
+        <link refid="plugin_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
+      </node>
+      <node id="6">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>loader.h</label>
+        <link refid="loader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="plugin__impl_8h_1a71c34b8b4b6a40f9085106802b3088f0" prot="public" static="no">
+        <name>plugin_iface_type</name>
+        <param><defname>p</defname></param>
+        <param><defname>type_name</defname></param>
+        <initializer>	((<ref refid="reflect__type_8h_1a67e5fbed79b56e6af024546da3d471fb" kindref="member">type_name</ref>)<ref refid="plugin__impl_8h_1ad43fff86f2c241d48fdb1d3ac5ed6f81" kindref="member">plugin_iface</ref>(p))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="36" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="plugin__impl_8h_1a5f483a3862afc261bc73ec31aef6828b" prot="public" static="no">
+        <name>plugin_impl_type</name>
+        <param><defname>p</defname></param>
+        <param><defname>type_name</defname></param>
+        <initializer>	((<ref refid="reflect__type_8h_1a67e5fbed79b56e6af024546da3d471fb" kindref="member">type_name</ref>)<ref refid="plugin__impl_8h_1aeefc083cd5c032f02b91865db935306e" kindref="member">plugin_impl</ref>(p))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="39" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" prot="public" static="no">
+        <type>struct plugin_type *</type>
+        <definition>typedef struct plugin_type* plugin</definition>
+        <argsstring></argsstring>
+        <name>plugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="48" column="26" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="plugin__impl_8h_1ac7daec058f35a8c6c48d016a1439c82f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PLUGIN_API <ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+        <definition>PLUGIN_API plugin plugin_create</definition>
+        <argsstring>(const char *name, plugin_descriptor descriptor, void *iface, void *impl, void(*dtor)(plugin))</argsstring>
+        <name>plugin_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>plugin_descriptor</type>
+          <declname>descriptor</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>impl</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref>)</type>
+          <declname>dtor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="52" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" declline="52" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__impl_8h_1a70c14dff2f80cc903bc3bb331e56c9b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PLUGIN_API char *</type>
+        <definition>PLUGIN_API char* plugin_name</definition>
+        <argsstring>(plugin p)</argsstring>
+        <name>plugin_name</name>
+        <param>
+          <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="54" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" declline="54" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__impl_8h_1a4d8a5df54c4c69251b2dcffbd96bc106" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PLUGIN_API plugin_descriptor</type>
+        <definition>PLUGIN_API plugin_descriptor plugin_desc</definition>
+        <argsstring>(plugin p)</argsstring>
+        <name>plugin_desc</name>
+        <param>
+          <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="56" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" declline="56" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__impl_8h_1ad43fff86f2c241d48fdb1d3ac5ed6f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PLUGIN_API void *</type>
+        <definition>PLUGIN_API void* plugin_iface</definition>
+        <argsstring>(plugin p)</argsstring>
+        <name>plugin_iface</name>
+        <param>
+          <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="58" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" declline="58" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__impl_8h_1aeefc083cd5c032f02b91865db935306e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PLUGIN_API void *</type>
+        <definition>PLUGIN_API void* plugin_impl</definition>
+        <argsstring>(plugin p)</argsstring>
+        <name>plugin_impl</name>
+        <param>
+          <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="60" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" declline="60" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__impl_8h_1a14d0fdac8d151ec4195d3dacdfb5fa51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PLUGIN_API void</type>
+        <definition>PLUGIN_API void plugin_destroy_delayed</definition>
+        <argsstring>(plugin p)</argsstring>
+        <name>plugin_destroy_delayed</name>
+        <param>
+          <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="62" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" declline="62" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="plugin__impl_8h_1abfda84ddb9664b0173e9b76afa67949a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PLUGIN_API void</type>
+        <definition>PLUGIN_API void plugin_destroy</definition>
+        <argsstring>(plugin p)</argsstring>
+        <name>plugin_destroy</name>
+        <param>
+          <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" line="64" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h" declline="64" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Plugin<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>plugins<sp/>at<sp/>run-time<sp/>into<sp/>a<sp/>process.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PLUGIN_IMPL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLUGIN_IMPL_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;plugin/plugin_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="plugin__descriptor_8h" kindref="compound">plugin/plugin_descriptor.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Macros<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="plugin__impl_8h_1a71c34b8b4b6a40f9085106802b3088f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>plugin_iface_type(p,<sp/>type_name)<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((type_name)plugin_iface(p))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="plugin__impl_8h_1a5f483a3862afc261bc73ec31aef6828b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>plugin_impl_type(p,<sp/>type_name)<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((type_name)plugin_impl(p))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/><sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">plugin_type;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Declarations<sp/><sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">plugin_type<sp/>*<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/><sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="plugin__impl_8h_1ac7daec058f35a8c6c48d016a1439c82f" refkind="member"><highlight class="normal">PLUGIN_API<sp/><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/><ref refid="plugin__impl_8h_1ac7daec058f35a8c6c48d016a1439c82f" kindref="member">plugin_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/>plugin_descriptor<sp/>descriptor,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iface,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*impl,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*dtor)(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref>));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="plugin__impl_8h_1a70c14dff2f80cc903bc3bb331e56c9b9" refkind="member"><highlight class="normal">PLUGIN_API<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="plugin__impl_8h_1a70c14dff2f80cc903bc3bb331e56c9b9" kindref="member">plugin_name</ref>(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/>p);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="plugin__impl_8h_1a4d8a5df54c4c69251b2dcffbd96bc106" refkind="member"><highlight class="normal">PLUGIN_API<sp/>plugin_descriptor<sp/><ref refid="plugin__impl_8h_1a4d8a5df54c4c69251b2dcffbd96bc106" kindref="member">plugin_desc</ref>(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/>p);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="plugin__impl_8h_1ad43fff86f2c241d48fdb1d3ac5ed6f81" refkind="member"><highlight class="normal">PLUGIN_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="plugin__impl_8h_1ad43fff86f2c241d48fdb1d3ac5ed6f81" kindref="member">plugin_iface</ref>(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/>p);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="plugin__impl_8h_1aeefc083cd5c032f02b91865db935306e" refkind="member"><highlight class="normal">PLUGIN_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="plugin__impl_8h_1aeefc083cd5c032f02b91865db935306e" kindref="member">plugin_impl</ref>(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/>p);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="plugin__impl_8h_1a14d0fdac8d151ec4195d3dacdfb5fa51" refkind="member"><highlight class="normal">PLUGIN_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="plugin__impl_8h_1a14d0fdac8d151ec4195d3dacdfb5fa51" kindref="member">plugin_destroy_delayed</ref>(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/>p);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="plugin__impl_8h_1abfda84ddb9664b0173e9b76afa67949a" refkind="member"><highlight class="normal">PLUGIN_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="plugin__impl_8h_1abfda84ddb9664b0173e9b76afa67949a" kindref="member">plugin_destroy</ref>(<ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref><sp/>p);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PLUGIN_IMPL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_impl.h"/>
+  </compounddef>
+</doxygen>

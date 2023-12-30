@@ -27,29 +27,29 @@ typedef struct signature\+\_\+type $\ast$ \textbf{ signature}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ signature} \textbf{ signature\+\_\+create} (size\+\_\+t count)
+REFLECT\+\_\+\+API \textbf{ signature} \textbf{ signature\+\_\+create} (size\+\_\+t count)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ signature} \textbf{ signature\+\_\+resize} (\textbf{ signature} s, size\+\_\+t count)
+REFLECT\+\_\+\+API \textbf{ signature} \textbf{ signature\+\_\+resize} (\textbf{ signature} s, size\+\_\+t count)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ signature\+\_\+count} (\textbf{ signature} s)
+REFLECT\+\_\+\+API size\+\_\+t \textbf{ signature\+\_\+count} (\textbf{ signature} s)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ signature\+\_\+get\+\_\+index} (\textbf{ signature} s, const char $\ast$name)
+REFLECT\+\_\+\+API size\+\_\+t \textbf{ signature\+\_\+get\+\_\+index} (\textbf{ signature} s, const char $\ast$name)
 \item 
-const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ signature\+\_\+get\+\_\+name} (\textbf{ signature} s, size\+\_\+t index)
+REFLECT\+\_\+\+API const char $\ast$ \textbf{ signature\+\_\+get\+\_\+name} (\textbf{ signature} s, size\+\_\+t index)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type} \textbf{ signature\+\_\+get\+\_\+type} (\textbf{ signature} s, size\+\_\+t index)
+REFLECT\+\_\+\+API \textbf{ type} \textbf{ signature\+\_\+get\+\_\+type} (\textbf{ signature} s, size\+\_\+t index)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type} \textbf{ signature\+\_\+get\+\_\+return} (\textbf{ signature} s)
+REFLECT\+\_\+\+API \textbf{ type} \textbf{ signature\+\_\+get\+\_\+return} (\textbf{ signature} s)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ signature\+\_\+set} (\textbf{ signature} s, size\+\_\+t index, const char $\ast$name, \textbf{ type} t)
+REFLECT\+\_\+\+API void \textbf{ signature\+\_\+set} (\textbf{ signature} s, size\+\_\+t index, const char $\ast$name, \textbf{ type} t)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ signature\+\_\+set\+\_\+return} (\textbf{ signature} s, \textbf{ type} t)
+REFLECT\+\_\+\+API void \textbf{ signature\+\_\+set\+\_\+return} (\textbf{ signature} s, \textbf{ type} t)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ signature\+\_\+compare} (\textbf{ signature} s, \textbf{ type\+\_\+id} ret, \textbf{ type\+\_\+id} args[$\,$], size\+\_\+t size)
+REFLECT\+\_\+\+API int \textbf{ signature\+\_\+compare} (\textbf{ signature} s, \textbf{ type\+\_\+id} ret, \textbf{ type\+\_\+id} args[$\,$], size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ signature\+\_\+metadata} (\textbf{ signature} s)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ signature\+\_\+metadata} (\textbf{ signature} s)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ signature\+\_\+destroy} (\textbf{ signature} s)
+REFLECT\+\_\+\+API void \textbf{ signature\+\_\+destroy} (\textbf{ signature} s)
 \end{DoxyCompactItemize}
 
 
@@ -67,71 +67,71 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ signature\+\_\+destroy} (\textbf{
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_create@{signature\_create}}
 \index{signature\_create@{signature\_create}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_create()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ signature} signature\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ signature} signature\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_ab3f9f2a4abb73b6f4cc32992ea6d234e}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_resize@{signature\_resize}}
 \index{signature\_resize@{signature\_resize}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_resize()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ signature} signature\+\_\+resize (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ signature} signature\+\_\+resize (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_a8a9fcea7576d3e8c11199be6a8f756df}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_count@{signature\_count}}
 \index{signature\_count@{signature\_count}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_count()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t signature\+\_\+count (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API size\+\_\+t signature\+\_\+count (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_aa7ff4d2b286e7b096a6c8e7d20c636e8}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_get\_index@{signature\_get\_index}}
 \index{signature\_get\_index@{signature\_get\_index}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_get\_index()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t signature\+\_\+get\+\_\+index (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API size\+\_\+t signature\+\_\+get\+\_\+index (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
-\mbox{\label{reflect__signature_8h_a74d0a8a76e1acfff44060dc8edb6d184}} 
+\mbox{\label{reflect__signature_8h_a2c531c1675c9bb14989958273f05b646}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_get\_name@{signature\_get\_name}}
 \index{signature\_get\_name@{signature\_get\_name}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_get\_name()}
-{\footnotesize\ttfamily const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ signature\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API const char$\ast$ signature\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_ae16dc0c235f4174b3ad271f8381f997b}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_get\_type@{signature\_get\_type}}
 \index{signature\_get\_type@{signature\_get\_type}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_get\_type()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type} signature\+\_\+get\+\_\+type (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ type} signature\+\_\+get\+\_\+type (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_a3b7f3f804e8c9272c77f32a785d9f4f2}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_get\_return@{signature\_get\_return}}
 \index{signature\_get\_return@{signature\_get\_return}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_get\_return()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type} signature\+\_\+get\+\_\+return (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ type} signature\+\_\+get\+\_\+return (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_ac35b0a7452a276b86d8f7397c6b9088a}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_set@{signature\_set}}
 \index{signature\_set@{signature\_set}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_set()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void signature\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{index,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void signature\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{size\+\_\+t}]{index,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_a676c4bc345455aaabf2563778b3c2477}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_set\_return@{signature\_set\_return}}
 \index{signature\_set\_return@{signature\_set\_return}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_set\_return()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void signature\+\_\+set\+\_\+return (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void signature\+\_\+set\+\_\+return (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{\textbf{ type}}]{t }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_aac15d75236c6c25696258357fc645202}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_compare@{signature\_compare}}
 \index{signature\_compare@{signature\_compare}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_compare()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int signature\+\_\+compare (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{\textbf{ type\+\_\+id}}]{ret,  }\item[{\textbf{ type\+\_\+id}}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int signature\+\_\+compare (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s,  }\item[{\textbf{ type\+\_\+id}}]{ret,  }\item[{\textbf{ type\+\_\+id}}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_a6d8b45995ef14c6b0d4de84678646174}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_metadata@{signature\_metadata}}
 \index{signature\_metadata@{signature\_metadata}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_metadata()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} signature\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} signature\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__signature_8h_abe33c399405d6064638a396e76443f00}} 
 \index{reflect\_signature.h@{reflect\_signature.h}!signature\_destroy@{signature\_destroy}}
 \index{signature\_destroy@{signature\_destroy}!reflect\_signature.h@{reflect\_signature.h}}
 \doxysubsubsection{signature\_destroy()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void signature\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void signature\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ signature}}]{s }\end{DoxyParamCaption})}
 

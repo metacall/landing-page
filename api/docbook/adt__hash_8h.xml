@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_adt__hash_8h">
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_adt__hash_8h" xml:lang="en-US">
 <title>adt_hash.h File Reference</title>
 <indexterm><primary>adt_hash.h</primary></indexterm>
 <programlisting>#include &lt;adt/adt_api.h&gt;
+#include &lt;stdint.h&gt;
 </programlisting>Include dependency graph for adt_hash.h:<para>
     <informalfigure>
         <mediaobject>
@@ -24,28 +25,30 @@ This graph shows which files directly or indirectly include this file:<para>
 <simplesect>
     <title>Typedefs    </title>
         <itemizedlist>
-            <listitem><para>typedef unsigned int <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link></para>
+            <listitem><para>typedef uintptr_t <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link></para>
 </listitem>
             <listitem><para>typedef void * <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link></para>
 </listitem>
-            <listitem><para>typedef <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link>(* <link linkend="_adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b">hash_callback</link>) (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link>)</para>
+            <listitem><para>typedef <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link>(* <link linkend="_adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b">hash_callback</link>) (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link>)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>ADT_API <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link> <link linkend="_adt__hash_8h_1addd9f66a68ebee4315ea7cba69829415">hash_callback_str</link> (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link> key)</para>
+            <listitem><para>ADT_API <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link> <link linkend="_adt__hash_8h_1addd9f66a68ebee4315ea7cba69829415">hash_callback_str</link> (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link> key)</para>
+</listitem>
+            <listitem><para>ADT_API <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link> <link linkend="_adt__hash_8h_1ae24ccd93062b3fe72e526be0d37c8e36">hash_callback_ptr</link> (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link> key)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Typedef Documentation</title>
-<anchor xml:id="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6"/>    <section>
+<anchor xml:id="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a"/>    <section>
     <title>hash</title>
 <indexterm><primary>hash</primary><secondary>adt_hash.h</secondary></indexterm>
 <indexterm><primary>adt_hash.h</primary><secondary>hash</secondary></indexterm>
-<para><computeroutput>typedef unsigned int <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link></computeroutput></para>    </section><anchor xml:id="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8"/>    <section>
+<para><computeroutput>typedef uintptr_t <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link></computeroutput></para>    </section><anchor xml:id="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8"/>    <section>
     <title>hash_key</title>
 <indexterm><primary>hash_key</primary><secondary>adt_hash.h</secondary></indexterm>
 <indexterm><primary>adt_hash.h</primary><secondary>hash_key</secondary></indexterm>
@@ -53,7 +56,7 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>hash_callback</title>
 <indexterm><primary>hash_callback</primary><secondary>adt_hash.h</secondary></indexterm>
 <indexterm><primary>adt_hash.h</primary><secondary>hash_callback</secondary></indexterm>
-<para><computeroutput>typedef <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link>(* hash_callback) (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link>)</computeroutput></para></section>
+<para><computeroutput>typedef <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link>(* hash_callback) (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link>)</computeroutput></para></section>
 </section>
 <section>
 <title>Function Documentation</title>
@@ -61,6 +64,10 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>hash_callback_str()</title>
 <indexterm><primary>hash_callback_str</primary><secondary>adt_hash.h</secondary></indexterm>
 <indexterm><primary>adt_hash.h</primary><secondary>hash_callback_str</secondary></indexterm>
-<para><computeroutput>ADT_API <link linkend="_adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6">hash</link> hash_callback_str (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link> key)</computeroutput></para></section>
+<para><computeroutput>ADT_API <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link> hash_callback_str (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link> key)</computeroutput></para>    </section><anchor xml:id="_adt__hash_8h_1ae24ccd93062b3fe72e526be0d37c8e36"/>    <section>
+    <title>hash_callback_ptr()</title>
+<indexterm><primary>hash_callback_ptr</primary><secondary>adt_hash.h</secondary></indexterm>
+<indexterm><primary>adt_hash.h</primary><secondary>hash_callback_ptr</secondary></indexterm>
+<para><computeroutput>ADT_API <link linkend="_adt__hash_8h_1a985e7c56889019873a304444f88c8d6a">hash</link> hash_callback_ptr (const <link linkend="_adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8">hash_key</link> key)</computeroutput></para></section>
 </section>
 </section>

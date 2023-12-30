@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="log__aspect_8h" kind="file" language="C++">
     <compoundname>log_aspect.h</compoundname>
     <includes local="no">log/log_api.h</includes>
@@ -27,10 +27,14 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="11">
+      <node id="10">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="12">
         <label>log_policy_format_binary.h</label>
         <link refid="log__policy__format__binary_8h"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -46,12 +50,14 @@
       <node id="9">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>log_policy_schedule_async.h</label>
         <link refid="log__policy__schedule__async_8h"/>
       </node>
-      <node id="14">
+      <node id="15">
         <label>log_policy_schedule.h</label>
         <link refid="log__policy__schedule_8h"/>
         <childnode refid="9" relation="include">
@@ -61,7 +67,7 @@
         <label>log_aspect_format.h</label>
         <link refid="log__aspect__format_8h"/>
       </node>
-      <node id="10">
+      <node id="11">
         <label>log_policy_format.h</label>
         <link refid="log__policy__format_8h"/>
         <childnode refid="9" relation="include">
@@ -71,36 +77,36 @@
         <label>log_aspect_stream.h</label>
         <link refid="log__aspect__stream_8h"/>
       </node>
-      <node id="18">
+      <node id="19">
         <label>log_policy_storage_batch.h</label>
         <link refid="log__policy__storage__batch_8h"/>
       </node>
-      <node id="24">
+      <node id="25">
         <label>log_policy_stream_socket.h</label>
         <link refid="log__policy__stream__socket_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="21">
         <label>log_policy_stream.h</label>
         <link refid="log__policy__stream_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>log_policy_stream_custom.h</label>
         <link refid="log__policy__stream__custom_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>log_policy_schedule_sync.h</label>
         <link refid="log__policy__schedule__sync_8h"/>
       </node>
-      <node id="13">
+      <node id="14">
         <label>log_policy_format_text.h</label>
         <link refid="log__policy__format__text_8h"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -119,13 +125,13 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="26">
+      <node id="27">
         <label>log_policy_stream_syslog.h</label>
         <link refid="log__policy__stream__syslog_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="20">
         <label>log_policy_storage_sequential.h</label>
         <link refid="log__policy__storage__sequential_8h"/>
       </node>
@@ -133,19 +139,19 @@
         <label>log_aspect_storage.h</label>
         <link refid="log__aspect__storage_8h"/>
       </node>
-      <node id="25">
+      <node id="26">
         <label>log_policy_stream_stdio.h</label>
         <link refid="log__policy__stream__stdio_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="23">
         <label>log_policy_stream_file.h</label>
         <link refid="log__policy__stream__file_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="18">
         <label>log_policy_storage.h</label>
         <link refid="log__policy__storage_8h"/>
         <childnode refid="9" relation="include">
@@ -155,8 +161,6 @@
         <label>log_policy.h</label>
         <link refid="log__policy_8h"/>
         <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -190,17 +194,19 @@
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
-      </node>
-      <node id="12">
-        <label>log_policy_format_custom.h</label>
-        <link refid="log__policy__format__custom_8h"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="13">
+        <label>log_policy_format_custom.h</label>
+        <link refid="log__policy__format__custom_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
         <label>log_policy_stream_nginx.h</label>
         <link refid="log__policy__stream__nginx_8h"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -258,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="39" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="38" bodyend="46"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" line="38" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_aspect.h" bodystart="39" bodyend="46"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -674,7 +680,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -714,8 +720,8 @@
 <codeline lineno="42" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0faa4780ec51f5c5e2f9eeb96d037795" kindref="member">LOG_ASPECT_STORAGE</ref><sp/>=<sp/>0x02,</highlight></codeline>
 <codeline lineno="43" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319a0efa9079574d47e10e25f19d9edc9c49" kindref="member">LOG_ASPECT_STREAM</ref><sp/>=<sp/>0x03,</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a" kindref="member">LOG_ASPECT_SIZE</ref></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a" kindref="member">LOG_ASPECT_SIZE</ref></highlight></codeline>
+<codeline lineno="46" refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319aea97c6552da0800a482de4a9f2ebd57a" refkind="member"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
@@ -766,29 +772,29 @@
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/><ref refid="log__aspect_8h_1a750966e98b30e53f100dc0df28450f3c" kindref="member">log_aspect_create</ref>(<ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_aspect_interface<sp/>iface,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" kindref="member">log_aspect_ctor</ref><sp/>ctor);</highlight></codeline>
+<codeline lineno="97" refid="log__aspect_8h_1a750966e98b30e53f100dc0df28450f3c" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/><ref refid="log__aspect_8h_1a750966e98b30e53f100dc0df28450f3c" kindref="member">log_aspect_create</ref>(<ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_aspect_interface<sp/>iface,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a71010ae4f140fb5bb5fe69a7c6e6f53e" kindref="member">log_aspect_ctor</ref><sp/>ctor);</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1ab96281d08b293b8cccdccb8d8447496e" kindref="member">log_aspect_reserve</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="99" refid="log__aspect_8h_1ab96281d08b293b8cccdccb8d8447496e" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1ab96281d08b293b8cccdccb8d8447496e" kindref="member">log_aspect_reserve</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1ac726a21fe89be520fbe8bdabf2fae75d" kindref="member">log_aspect_restrict</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53" kindref="member">log_aspect_restrict_cb</ref><sp/>restrict_cb);</highlight></codeline>
+<codeline lineno="101" refid="log__aspect_8h_1ac726a21fe89be520fbe8bdabf2fae75d" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1ac726a21fe89be520fbe8bdabf2fae75d" kindref="member">log_aspect_restrict</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a5ffd8f83f6b35a305950757c809eeb53" kindref="member">log_aspect_restrict_cb</ref><sp/>restrict_cb);</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" kindref="member">log_aspect_data</ref><sp/><ref refid="log__aspect_8h_1a6d0d1689b238560ed1bd76f45e4c4244" kindref="member">log_aspect_instance</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="103" refid="log__aspect_8h_1a6d0d1689b238560ed1bd76f45e4c4244" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1abe9000f019615c7ea241c590d8514f57" kindref="member">log_aspect_data</ref><sp/><ref refid="log__aspect_8h_1a6d0d1689b238560ed1bd76f45e4c4244" kindref="member">log_aspect_instance</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal">LOG_API<sp/>log_aspect_interface<sp/><ref refid="log__aspect_8h_1a2df568ec2954b0d7f26e354d9df825a5" kindref="member">log_aspect_behavior</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="105" refid="log__aspect_8h_1a2df568ec2954b0d7f26e354d9df825a5" refkind="member"><highlight class="normal">LOG_API<sp/>log_aspect_interface<sp/><ref refid="log__aspect_8h_1a2df568ec2954b0d7f26e354d9df825a5" kindref="member">log_aspect_behavior</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/><ref refid="log__aspect_8h_1ab2450eed6d6b6424b757c11820cededc" kindref="member">log_aspect_parent</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="107" refid="log__aspect_8h_1ab2450eed6d6b6424b757c11820cededc" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab9a2ed7ee9bb2e4a0350d50e2e03e265" kindref="member">log_impl</ref><sp/><ref refid="log__aspect_8h_1ab2450eed6d6b6424b757c11820cededc" kindref="member">log_aspect_parent</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" kindref="member">log_aspect_impl</ref><sp/><ref refid="log__aspect_8h_1a730839e0b6a6eefd2ea4e9786bf58981" kindref="member">log_aspect_derived</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="109" refid="log__aspect_8h_1a730839e0b6a6eefd2ea4e9786bf58981" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ab74307bef83ff8a9391a258ddb183def" kindref="member">log_aspect_impl</ref><sp/><ref refid="log__aspect_8h_1a730839e0b6a6eefd2ea4e9786bf58981" kindref="member">log_aspect_derived</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a458957aaa98f5048fc2a963744c5e4d2" kindref="member">log_aspect_attach</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="111" refid="log__aspect_8h_1a458957aaa98f5048fc2a963744c5e4d2" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a458957aaa98f5048fc2a963744c5e4d2" kindref="member">log_aspect_attach</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a7b6e8b6850a7423a54979e97a110a9ed" kindref="member">log_aspect_notify_first</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref><sp/>notify_cb,<sp/><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref><sp/>notify_data);</highlight></codeline>
+<codeline lineno="113" refid="log__aspect_8h_1a7b6e8b6850a7423a54979e97a110a9ed" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a7b6e8b6850a7423a54979e97a110a9ed" kindref="member">log_aspect_notify_first</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref><sp/>notify_cb,<sp/><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref><sp/>notify_data);</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a2d04670ab049a9f7afe09a76f837e94f" kindref="member">log_aspect_notify_all</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref><sp/>notify_cb,<sp/><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref><sp/>notify_data);</highlight></codeline>
+<codeline lineno="115" refid="log__aspect_8h_1a2d04670ab049a9f7afe09a76f837e94f" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a2d04670ab049a9f7afe09a76f837e94f" kindref="member">log_aspect_notify_all</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1a898ea5b3111c3ff8d726b2b3ba4b254e" kindref="member">log_aspect_notify_cb</ref><sp/>notify_cb,<sp/><ref refid="log__aspect_8h_1a76a6607ceaf40594a794165de892acba" kindref="member">log_aspect_notify_data</ref><sp/>notify_data);</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a1d6f908bead87827c72185748bfa54d5" kindref="member">log_aspect_detach</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="117" refid="log__aspect_8h_1a1d6f908bead87827c72185748bfa54d5" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a1d6f908bead87827c72185748bfa54d5" kindref="member">log_aspect_detach</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect,<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a1cf48dca81a16598c732e9221eca66e0" kindref="member">log_aspect_destroy</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="119" refid="log__aspect_8h_1a1cf48dca81a16598c732e9221eca66e0" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1a1cf48dca81a16598c732e9221eca66e0" kindref="member">log_aspect_destroy</ref>(<ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal">}</highlight></codeline>

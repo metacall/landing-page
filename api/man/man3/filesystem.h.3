@@ -1,4 +1,4 @@
-.TH "filesystem.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "filesystem.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -30,14 +30,14 @@ filesystem.h
 
 .in +1c
 .ti -1c
-.RI "enum \fBfilesystem_flags_enumeration\fP { \fBFILESYSTEM_FLAGS_NONE\fP = 0x00, \fBFILESYSTEM_FLAGS_LOAD_LAZY\fP = 0x01 << 0x00, \fBFILESYSTEM_FLAGS_WATCH_SYNC\fP = 0x01 << 0x01, \fBFILESYSTEM_FLAGS_READABLE\fP = 0x01 << 0x02, \fBFILESYSTEM_FLAGS_WRITEABLE\fP = 0x01 << 0x03 }"
+.RI "enum \fBfilesystem_flags\fP { \fBFILESYSTEM_FLAGS_NONE\fP = 0x00, \fBFILESYSTEM_FLAGS_LOAD_LAZY\fP = 0x01 << 0x00, \fBFILESYSTEM_FLAGS_WATCH_SYNC\fP = 0x01 << 0x01, \fBFILESYSTEM_FLAGS_READABLE\fP = 0x01 << 0x02, \fBFILESYSTEM_FLAGS_WRITEABLE\fP = 0x01 << 0x03 }"
 .br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "FILESYSTEM_API \fBfilesystem\fP \fBfilesystem_create\fP (const char *root, filesystem_flags flags)"
+.RI "FILESYSTEM_API \fBfilesystem\fP \fBfilesystem_create\fP (const char *root, \fBfilesystem_flags\fP flags)"
 .br
 .ti -1c
 .RI "FILESYSTEM_API int \fBfilesystem_add_file\fP (\fBfilesystem\fP fs, const char *file_path)"
@@ -70,7 +70,7 @@ filesystem.h
 .RI "FILESYSTEM_API void \fBfilesystem_destroy\fP (\fBfilesystem\fP fs)"
 .br
 .ti -1c
-.RI "const FILESYSTEM_API char * \fBfilesystem_print_info\fP (void)"
+.RI "FILESYSTEM_API const char * \fBfilesystem_print_info\fP (void)"
 .br
 .in -1c
 .SH "Typedef Documentation"
@@ -83,7 +83,7 @@ filesystem.h
 
 .SH "Enumeration Type Documentation"
 .PP 
-.SS "enum \fBfilesystem_flags_enumeration\fP"
+.SS "enum \fBfilesystem_flags\fP"
 
 .PP
 \fBEnumerator\fP
@@ -100,7 +100,7 @@ filesystem.h
 \fB\fIFILESYSTEM_FLAGS_WRITEABLE \fP\fP
 .SH "Function Documentation"
 .PP 
-.SS "FILESYSTEM_API \fBfilesystem\fP filesystem_create (const char * root, filesystem_flags flags)"
+.SS "FILESYSTEM_API \fBfilesystem\fP filesystem_create (const char * root, \fBfilesystem_flags\fP flags)"
 
 .PP
 Creates a new file system based on a @root path\&. 
@@ -293,7 +293,7 @@ Unmounts the virtual file system\&.
 .RE
 .PP
 
-.SS "const FILESYSTEM_API char* filesystem_print_info (void)"
+.SS "FILESYSTEM_API const char* filesystem_print_info (void)"
 
 .PP
 Provide the module information\&. 

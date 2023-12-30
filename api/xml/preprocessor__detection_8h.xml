@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="preprocessor__detection_8h" kind="file" language="C++">
     <compoundname>preprocessor_detection.h</compoundname>
     <includes local="no">preprocessor/preprocessor_api.h</includes>
@@ -99,19 +99,25 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="1">
         <label>preprocessor_detection.h</label>
         <link refid="preprocessor__detection_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>preprocessor.h</label>
         <link refid="preprocessor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>preprocessor_comparison.h</label>
         <link refid="preprocessor__comparison_8h"/>
         <childnode refid="2" relation="include">
@@ -122,7 +128,7 @@
       <memberdef kind="define" id="preprocessor__detection_8h_1a158e669cc748cee0d3cf7087d73e81ba" prot="public" static="no">
         <name>PREPROCESSOR_DETECT</name>
         <param><defname>...</defname></param>
-        <initializer><ref refid="preprocessor__arguments_8h_1aad28a181cd413d82df83327d39095241" kindref="member">PREPROCESSOR_ARGS_SECOND</ref>(__VA_ARGS__, 0, )</initializer>
+        <initializer>	<ref refid="preprocessor__arguments_8h_1aad28a181cd413d82df83327d39095241" kindref="member">PREPROCESSOR_ARGS_SECOND</ref>(__VA_ARGS__, 0, )</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -146,7 +152,7 @@
       <memberdef kind="define" id="preprocessor__detection_8h_1a028610cad74520ea5ec70dc53ea1d182" prot="public" static="no">
         <name>PREPROCESSOR_DETECT_PARENTHESIS_IMPL</name>
         <param><defname>...</defname></param>
-        <initializer><ref refid="preprocessor__detection_8h_1a29c7f5567f6162d97e772c0136183422" kindref="member">PREPROCESSOR_DETECT_TOKEN</ref>(~)</initializer>
+        <initializer>	<ref refid="preprocessor__detection_8h_1a29c7f5567f6162d97e772c0136183422" kindref="member">PREPROCESSOR_DETECT_TOKEN</ref>(~)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -158,7 +164,7 @@
       <memberdef kind="define" id="preprocessor__detection_8h_1aefbe29817f8314429b13eff6e9a0c00f" prot="public" static="no">
         <name>PREPROCESSOR_DETECT_PARENTHESIS</name>
         <param><defname>expr</defname></param>
-        <initializer><ref refid="preprocessor__detection_8h_1a158e669cc748cee0d3cf7087d73e81ba" kindref="member">PREPROCESSOR_DETECT</ref>(<ref refid="preprocessor__detection_8h_1a028610cad74520ea5ec70dc53ea1d182" kindref="member">PREPROCESSOR_DETECT_PARENTHESIS_IMPL</ref> expr)</initializer>
+        <initializer>	<ref refid="preprocessor__detection_8h_1a158e669cc748cee0d3cf7087d73e81ba" kindref="member">PREPROCESSOR_DETECT</ref>(<ref refid="preprocessor__detection_8h_1a028610cad74520ea5ec70dc53ea1d182" kindref="member">PREPROCESSOR_DETECT_PARENTHESIS_IMPL</ref> expr)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -170,7 +176,7 @@
       <memberdef kind="define" id="preprocessor__detection_8h_1a8c19ab290bcd5b8af62c72675512f40a" prot="public" static="no">
         <name>PREPROCESSOR_DETECT_COMPARABLE</name>
         <param><defname>expr</defname></param>
-        <initializer><ref refid="preprocessor__detection_8h_1aefbe29817f8314429b13eff6e9a0c00f" kindref="member">PREPROCESSOR_DETECT_PARENTHESIS</ref>(<ref refid="preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1" kindref="member">PREPROCESSOR_CONCAT</ref>(PREPROCESSOR_COMPARE_, expr)(()))</initializer>
+        <initializer>	<ref refid="preprocessor__detection_8h_1aefbe29817f8314429b13eff6e9a0c00f" kindref="member">PREPROCESSOR_DETECT_PARENTHESIS</ref>(<ref refid="preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1" kindref="member">PREPROCESSOR_CONCAT</ref>(PREPROCESSOR_COMPARE_, expr)(()))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -187,7 +193,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Preprocessor<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>header-only<sp/>preprocessor<sp/>metaprogramming<sp/>library.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>

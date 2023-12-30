@@ -34,22 +34,22 @@ typedef struct ngx\+\_\+pool\+\_\+s \textbf{ ngx\+\_\+pool\+\_\+t}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \textbf{ metacall\+\_\+allocator\+\_\+id} \{ \textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+S\+TD}, 
-\textbf{ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+N\+G\+I\+NX}
+enum \textbf{ metacall\+\_\+allocator\+\_\+id} \{ \textbf{ METACALL\+\_\+\+ALLOCATOR\+\_\+\+STD}
+, \textbf{ METACALL\+\_\+\+ALLOCATOR\+\_\+\+NGINX}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+allocator\+\_\+create} (enum \textbf{ metacall\+\_\+allocator\+\_\+id} allocator\+\_\+id, void $\ast$ctx)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+allocator\+\_\+create} (enum \textbf{ metacall\+\_\+allocator\+\_\+id} allocator\+\_\+id, void $\ast$ctx)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+allocator\+\_\+alloc} (void $\ast$allocator, size\+\_\+t size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+allocator\+\_\+alloc} (void $\ast$allocator, size\+\_\+t size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void $\ast$ \textbf{ metacall\+\_\+allocator\+\_\+realloc} (void $\ast$allocator, void $\ast$data, size\+\_\+t size, size\+\_\+t new\+\_\+size)
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+allocator\+\_\+realloc} (void $\ast$allocator, void $\ast$data, size\+\_\+t size, size\+\_\+t new\+\_\+size)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+allocator\+\_\+free} (void $\ast$allocator, void $\ast$data)
+METACALL\+\_\+\+API void \textbf{ metacall\+\_\+allocator\+\_\+free} (void $\ast$allocator, void $\ast$data)
 \item 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+allocator\+\_\+destroy} (void $\ast$allocator)
+METACALL\+\_\+\+API void \textbf{ metacall\+\_\+allocator\+\_\+destroy} (void $\ast$allocator)
 \end{DoxyCompactItemize}
 
 
@@ -71,11 +71,11 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void \textbf{ metacall\+\_\+allocator\+\_\+d
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_ALLOCATOR\_STD@{METACALL\_ALLOCATOR\_STD}!metacall\_allocator.h@{metacall\_allocator.h}}\index{metacall\_allocator.h@{metacall\_allocator.h}!METACALL\_ALLOCATOR\_STD@{METACALL\_ALLOCATOR\_STD}}}\mbox{\label{metacall__allocator_8h_a09fc0fc3241414cee74f65e9d9b432a0a67cca764a74b77ad2020133cedebbccf}} 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+S\+TD&\\
+METACALL\+\_\+\+ALLOCATOR\+\_\+\+STD&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{METACALL\_ALLOCATOR\_NGINX@{METACALL\_ALLOCATOR\_NGINX}!metacall\_allocator.h@{metacall\_allocator.h}}\index{metacall\_allocator.h@{metacall\_allocator.h}!METACALL\_ALLOCATOR\_NGINX@{METACALL\_ALLOCATOR\_NGINX}}}\mbox{\label{metacall__allocator_8h_a09fc0fc3241414cee74f65e9d9b432a0af8fd4cad9e16d4eebc5d6b11f22ad660}} 
-M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+N\+G\+I\+NX&\\
+METACALL\+\_\+\+ALLOCATOR\+\_\+\+NGINX&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -86,7 +86,7 @@ M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+L\+L\+O\+C\+A\+T\+O\+R\+\_\+\+N\+G\+I\+NX&\\
 \index{metacall\_allocator.h@{metacall\_allocator.h}!metacall\_allocator\_create@{metacall\_allocator\_create}}
 \index{metacall\_allocator\_create@{metacall\_allocator\_create}!metacall\_allocator.h@{metacall\_allocator.h}}
 \doxysubsubsection{metacall\_allocator\_create()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+allocator\+\_\+create (\begin{DoxyParamCaption}\item[{enum \textbf{ metacall\+\_\+allocator\+\_\+id}}]{allocator\+\_\+id,  }\item[{void $\ast$}]{ctx }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+allocator\+\_\+create (\begin{DoxyParamCaption}\item[{enum \textbf{ metacall\+\_\+allocator\+\_\+id}}]{allocator\+\_\+id,  }\item[{void $\ast$}]{ctx }\end{DoxyParamCaption})}
 
 
 
@@ -106,7 +106,7 @@ Pointer to allocator if success, null otherwise
 \index{metacall\_allocator.h@{metacall\_allocator.h}!metacall\_allocator\_alloc@{metacall\_allocator\_alloc}}
 \index{metacall\_allocator\_alloc@{metacall\_allocator\_alloc}!metacall\_allocator.h@{metacall\_allocator.h}}
 \doxysubsubsection{metacall\_allocator\_alloc()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+allocator\+\_\+alloc (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+allocator\+\_\+alloc (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -126,7 +126,7 @@ Pointer to allocated data on success, null otherwise
 \index{metacall\_allocator.h@{metacall\_allocator.h}!metacall\_allocator\_realloc@{metacall\_allocator\_realloc}}
 \index{metacall\_allocator\_realloc@{metacall\_allocator\_realloc}!metacall\_allocator.h@{metacall\_allocator.h}}
 \doxysubsubsection{metacall\_allocator\_realloc()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void$\ast$ metacall\+\_\+allocator\+\_\+realloc (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{new\+\_\+size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+allocator\+\_\+realloc (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{new\+\_\+size }\end{DoxyParamCaption})}
 
 
 
@@ -150,7 +150,7 @@ Pointer to new reallocated data on success, null otherwise
 \index{metacall\_allocator.h@{metacall\_allocator.h}!metacall\_allocator\_free@{metacall\_allocator\_free}}
 \index{metacall\_allocator\_free@{metacall\_allocator\_free}!metacall\_allocator.h@{metacall\_allocator.h}}
 \doxysubsubsection{metacall\_allocator\_free()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+allocator\+\_\+free (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void metacall\+\_\+allocator\+\_\+free (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -167,7 +167,7 @@ Free memory from an allocator instance.
 \index{metacall\_allocator.h@{metacall\_allocator.h}!metacall\_allocator\_destroy@{metacall\_allocator\_destroy}}
 \index{metacall\_allocator\_destroy@{metacall\_allocator\_destroy}!metacall\_allocator.h@{metacall\_allocator.h}}
 \doxysubsubsection{metacall\_allocator\_destroy()}
-{\footnotesize\ttfamily M\+E\+T\+A\+C\+A\+L\+L\+\_\+\+A\+PI void metacall\+\_\+allocator\+\_\+destroy (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void metacall\+\_\+allocator\+\_\+destroy (\begin{DoxyParamCaption}\item[{void $\ast$}]{allocator }\end{DoxyParamCaption})}
 
 
 

@@ -1,0 +1,64 @@
+\doxysection{plugin\+\_\+loader.\+h File Reference}
+\label{plugin__loader_8h}\index{plugin\_loader.h@{plugin\_loader.h}}
+{\ttfamily \#include $<$plugin/plugin\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$plugin/plugin\+\_\+impl.\+h$>$}\newline
+Include dependency graph for plugin\+\_\+loader.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plugin__loader_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{plugin__loader_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct plugin\+\_\+loader\+\_\+type $\ast$ \textbf{ plugin\+\_\+loader}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PLUGIN\+\_\+\+API \textbf{ plugin\+\_\+loader} \textbf{ plugin\+\_\+loader\+\_\+create} (plugin\+\_\+manager manager)
+\item 
+PLUGIN\+\_\+\+API \textbf{ plugin} \textbf{ plugin\+\_\+loader\+\_\+load} (\textbf{ plugin\+\_\+loader} l, const char $\ast$name, void $\ast$impl, void($\ast$dtor)(\textbf{ plugin}))
+\item 
+PLUGIN\+\_\+\+API void \textbf{ plugin\+\_\+loader\+\_\+destroy} (\textbf{ plugin\+\_\+loader} l)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{plugin__loader_8h_a41d138c4d96b116063b678806f539c17}} 
+\index{plugin\_loader.h@{plugin\_loader.h}!plugin\_loader@{plugin\_loader}}
+\index{plugin\_loader@{plugin\_loader}!plugin\_loader.h@{plugin\_loader.h}}
+\doxysubsubsection{plugin\_loader}
+{\footnotesize\ttfamily typedef struct plugin\+\_\+loader\+\_\+type$\ast$ \textbf{ plugin\+\_\+loader}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{plugin__loader_8h_af354c31bd1e180daf1ee28f010c91fba}} 
+\index{plugin\_loader.h@{plugin\_loader.h}!plugin\_loader\_create@{plugin\_loader\_create}}
+\index{plugin\_loader\_create@{plugin\_loader\_create}!plugin\_loader.h@{plugin\_loader.h}}
+\doxysubsubsection{plugin\_loader\_create()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API \textbf{ plugin\+\_\+loader} plugin\+\_\+loader\+\_\+create (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__loader_8h_a409f92fcbabd0def4c26229b08fb4679}} 
+\index{plugin\_loader.h@{plugin\_loader.h}!plugin\_loader\_load@{plugin\_loader\_load}}
+\index{plugin\_loader\_load@{plugin\_loader\_load}!plugin\_loader.h@{plugin\_loader.h}}
+\doxysubsubsection{plugin\_loader\_load()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API \textbf{ plugin} plugin\+\_\+loader\+\_\+load (\begin{DoxyParamCaption}\item[{\textbf{ plugin\+\_\+loader}}]{l,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{impl,  }\item[{void($\ast$)(\textbf{ plugin})}]{dtor }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__loader_8h_ac6bf8273c19bfb801f2f9d4a7520b521}} 
+\index{plugin\_loader.h@{plugin\_loader.h}!plugin\_loader\_destroy@{plugin\_loader\_destroy}}
+\index{plugin\_loader\_destroy@{plugin\_loader\_destroy}!plugin\_loader.h@{plugin\_loader.h}}
+\doxysubsubsection{plugin\_loader\_destroy()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void plugin\+\_\+loader\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ plugin\+\_\+loader}}]{l }\end{DoxyParamCaption})}
+

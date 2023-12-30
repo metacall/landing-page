@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['operative_5fsystem_3275',['operative_system',['../structloader__descriptor__platform__type.html#aa7af26f3a4063f51a0756495e567eafe',1,'loader_descriptor_platform_type']]],
-  ['options_3276',['options',['../structmetacall__initialize__configuration__type.html#a9a1547a3170d9ae70f300f0488e8bae0',1,'metacall_initialize_configuration_type']]],
-  ['organization_3277',['organization',['../structloader__descriptor__copyright__type.html#abef2ff432a0a37175d95af6e5ae4641e',1,'loader_descriptor_copyright_type']]],
-  ['owners_3278',['owners',['../structloader__descriptor__copyright__type.html#ae1f7479327bbcb6f8fc15374fb55a08d',1,'loader_descriptor_copyright_type']]]
+  ['m_3426',['m',['../structaccessor__type.html#ad1e7326b6736c3aaefdad0e25d0f6475',1,'accessor_type']]],
+  ['major_3427',['major',['../structmetacall__version__type.html#a72135cce1c45fa54cdac390a41dc8e00',1,'metacall_version_type']]],
+  ['malloc_3428',['malloc',['../structmetacall__allocator__std__type.html#af0c2ad81015ef1a49991424f327f741e',1,'metacall_allocator_std_type']]],
+  ['message_3429',['message',['../structlog__record__ctor__type.html#a02bd30bc0569396ebce6def686427010',1,'log_record_ctor_type::message()'],['../structmetacall__exception__type.html#a7146e985a1d7cfe8c7bfa8623a665162',1,'metacall_exception_type::message()']]],
+  ['metacall_5fnull_5fargs_3430',['metacall_null_args',['../metacall_8h.html#ad50602b5115964e06b18483807ba1e11',1,'metacall.h']]],
+  ['method_5fawait_3431',['method_await',['../structobject__interface__type.html#a651d177373779adf8c1c6718fa79ad18',1,'object_interface_type']]],
+  ['method_5finvoke_3432',['method_invoke',['../structobject__interface__type.html#a89bcdd4702a82725a8552c36675dcf22',1,'object_interface_type']]],
+  ['minor_3433',['minor',['../structmetacall__version__type.html#a5e535ee5d25bcffa5f7b5bcc970cfa5a',1,'metacall_version_type']]],
+  ['mode_3434',['mode',['../structlog__policy__stream__file__ctor__type.html#a9eac00ec630efe53b53697cd8bf989af',1,'log_policy_stream_file_ctor_type::mode()'],['../structmetacall__log__file__type.html#abadb09c56ef58319744fb83c57b009c7',1,'metacall_log_file_type::mode()']]]
 ];

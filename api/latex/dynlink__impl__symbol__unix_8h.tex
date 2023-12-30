@@ -25,11 +25,11 @@ struct \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+unix}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX}~dynlink\+\_\+symbol\+\_\+
+\#define \textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+PREFIX}~ dynlink\+\_\+symbol\+\_\+
 \item 
-\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT}(name)
+\#define \textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+EXPORT}(name)
 \item 
-\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET}(name)~((dynlink\+\_\+symbol\+\_\+addr\+\_\+unix)(name))-\/$>$symbol
+\#define \textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+GET}(name)~ ((dynlink\+\_\+symbol\+\_\+addr\+\_\+unix)(name))-\/$>$symbol
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -45,18 +45,18 @@ typedef dynlink\+\_\+symbol\+\_\+addr\+\_\+unix \textbf{ dynlink\+\_\+symbol\+\_
 \index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}}
 \index{DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
 \doxysubsubsection{DYNLINK\_SYMBOL\_PREFIX}
-{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX~dynlink\+\_\+symbol\+\_\+}
+{\footnotesize\ttfamily \#define DYNLINK\+\_\+\+SYMBOL\+\_\+\+PREFIX~ dynlink\+\_\+symbol\+\_\+}
 
 \mbox{\label{dynlink__impl__symbol__unix_8h_ac7c2e3794ef31f11c7743643f55000e6}} 
 \index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}}
 \index{DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
 \doxysubsubsection{DYNLINK\_SYMBOL\_EXPORT}
-{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define DYNLINK\+\_\+\+SYMBOL\+\_\+\+EXPORT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{    DYNLINK\_API \textcolor{keyword}{struct }dynlink\_symbol\_addr\_unix\_type DYNLINK\_SYMBOL\_NAME(name) = \{ \(\backslash\)}
-\DoxyCodeLine{        (dynlink\_symbol\_addr\_unix\_impl)\&name                                       \(\backslash\)}
+\DoxyCodeLine{        (dynlink\_symbol\_addr\_unix\_impl)\&name \(\backslash\)}
 \DoxyCodeLine{    \}}
 
 \end{DoxyCode}
@@ -64,7 +64,7 @@ typedef dynlink\+\_\+symbol\+\_\+addr\+\_\+unix \textbf{ dynlink\+\_\+symbol\+\_
 \index{dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}!DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}}
 \index{DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}!dynlink\_impl\_symbol\_unix.h@{dynlink\_impl\_symbol\_unix.h}}
 \doxysubsubsection{DYNLINK\_SYMBOL\_GET}
-{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~((dynlink\+\_\+symbol\+\_\+addr\+\_\+unix)(name))-\/$>$symbol}
+{\footnotesize\ttfamily \#define DYNLINK\+\_\+\+SYMBOL\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~ ((dynlink\+\_\+symbol\+\_\+addr\+\_\+unix)(name))-\/$>$symbol}
 
 
 

@@ -1,4 +1,4 @@
-.TH "log_record.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "log_record.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -47,7 +47,7 @@ log_record.h
 
 .in +1c
 .ti -1c
-.RI "const LOG_API char * \fB__log_record_unknown_function__\fP (void)"
+.RI "LOG_API const char * \fB__log_record_unknown_function__\fP (void)"
 .br
 .ti -1c
 .RI "LOG_NO_EXPORT size_t \fBlog_record_size\fP (void)"
@@ -59,7 +59,7 @@ log_record.h
 .RI "LOG_API \fBlog_record\fP \fBlog_record_initialize\fP (\fBlog_record\fP record, const log_record_ctor record_ctor)"
 .br
 .ti -1c
-.RI "const LOG_API time_t * \fBlog_record_time\fP (\fBlog_record\fP record)"
+.RI "LOG_API const time_t * \fBlog_record_time\fP (\fBlog_record\fP record)"
 .br
 .ti -1c
 .RI "LOG_API uint64_t \fBlog_record_thread_id\fP (\fBlog_record\fP record)"
@@ -68,16 +68,16 @@ log_record.h
 .RI "LOG_API size_t \fBlog_record_line\fP (\fBlog_record\fP record)"
 .br
 .ti -1c
-.RI "const LOG_API char * \fBlog_record_func\fP (\fBlog_record\fP record)"
+.RI "LOG_API const char * \fBlog_record_func\fP (\fBlog_record\fP record)"
 .br
 .ti -1c
-.RI "const LOG_API char * \fBlog_record_file\fP (\fBlog_record\fP record)"
+.RI "LOG_API const char * \fBlog_record_file\fP (\fBlog_record\fP record)"
 .br
 .ti -1c
 .RI "LOG_API enum \fBlog_level_id\fP \fBlog_record_level\fP (\fBlog_record\fP record)"
 .br
 .ti -1c
-.RI "const LOG_API char * \fBlog_record_message\fP (\fBlog_record\fP record)"
+.RI "LOG_API const char * \fBlog_record_message\fP (\fBlog_record\fP record)"
 .br
 .ti -1c
 .RI "LOG_API struct \fBlog_record_va_list_type\fP * \fBlog_record_variable_args\fP (\fBlog_record\fP record)"
@@ -96,7 +96,7 @@ log_record.h
 
 .SH "Function Documentation"
 .PP 
-.SS "const LOG_API char* __log_record_unknown_function__ (void)"
+.SS "LOG_API const char* __log_record_unknown_function__ (void)"
 
 .SS "LOG_NO_EXPORT size_t log_record_size (void)"
 
@@ -104,19 +104,19 @@ log_record.h
 
 .SS "LOG_API \fBlog_record\fP log_record_initialize (\fBlog_record\fP record, const log_record_ctor record_ctor)"
 
-.SS "const LOG_API time_t* log_record_time (\fBlog_record\fP record)"
+.SS "LOG_API const time_t* log_record_time (\fBlog_record\fP record)"
 
 .SS "LOG_API uint64_t log_record_thread_id (\fBlog_record\fP record)"
 
 .SS "LOG_API size_t log_record_line (\fBlog_record\fP record)"
 
-.SS "const LOG_API char* log_record_func (\fBlog_record\fP record)"
+.SS "LOG_API const char* log_record_func (\fBlog_record\fP record)"
 
-.SS "const LOG_API char* log_record_file (\fBlog_record\fP record)"
+.SS "LOG_API const char* log_record_file (\fBlog_record\fP record)"
 
 .SS "LOG_API enum \fBlog_level_id\fP log_record_level (\fBlog_record\fP record)"
 
-.SS "const LOG_API char* log_record_message (\fBlog_record\fP record)"
+.SS "LOG_API const char* log_record_message (\fBlog_record\fP record)"
 
 .SS "LOG_API struct \fBlog_record_va_list_type\fP* log_record_variable_args (\fBlog_record\fP record)"
 

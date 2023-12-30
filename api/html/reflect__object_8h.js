@@ -24,7 +24,7 @@ var reflect__object_8h =
     [ "object_await", "reflect__object_8h.html#ad903e000318a9509ab91a553ff8e129a", null ],
     [ "object_methods", "reflect__object_8h.html#a5e3bbe95840a2578e0bd2c2277eb4c9d", null ],
     [ "object_method", "reflect__object_8h.html#a157904a36494774b740212b211de50b6", null ],
-    [ "object_name", "reflect__object_8h.html#ae6e9a3e287e0e3c26cfbcc03e4f75b58", null ],
+    [ "object_name", "reflect__object_8h.html#a14df035418c82f826bb6f6fed56776bd", null ],
     [ "object_metadata", "reflect__object_8h.html#a1de46ee0378baeacc14ace5dbc05f8c5", null ],
     [ "object_delete", "reflect__object_8h.html#a48e2ec3e04b9d511497b8c48a38614be", null ],
     [ "object_stats_debug", "reflect__object_8h.html#acc123ce75b86c2c586396a43db837397", null ],

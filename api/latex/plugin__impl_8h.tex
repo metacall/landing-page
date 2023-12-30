@@ -1,0 +1,118 @@
+\doxysection{plugin\+\_\+impl.\+h File Reference}
+\label{plugin__impl_8h}\index{plugin\_impl.h@{plugin\_impl.h}}
+{\ttfamily \#include $<$plugin/plugin\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$plugin/plugin\+\_\+descriptor.\+h$>$}\newline
+Include dependency graph for plugin\+\_\+impl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plugin__impl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plugin__impl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ plugin\+\_\+iface\+\_\+type}(p,  \textbf{ type\+\_\+name})~ ((\textbf{ type\+\_\+name})\textbf{ plugin\+\_\+iface}(p))
+\item 
+\#define \textbf{ plugin\+\_\+impl\+\_\+type}(p,  \textbf{ type\+\_\+name})~ ((\textbf{ type\+\_\+name})\textbf{ plugin\+\_\+impl}(p))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct plugin\+\_\+type $\ast$ \textbf{ plugin}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PLUGIN\+\_\+\+API \textbf{ plugin} \textbf{ plugin\+\_\+create} (const char $\ast$name, plugin\+\_\+descriptor descriptor, void $\ast$iface, void $\ast$impl, void($\ast$dtor)(\textbf{ plugin}))
+\item 
+PLUGIN\+\_\+\+API char $\ast$ \textbf{ plugin\+\_\+name} (\textbf{ plugin} p)
+\item 
+PLUGIN\+\_\+\+API plugin\+\_\+descriptor \textbf{ plugin\+\_\+desc} (\textbf{ plugin} p)
+\item 
+PLUGIN\+\_\+\+API void $\ast$ \textbf{ plugin\+\_\+iface} (\textbf{ plugin} p)
+\item 
+PLUGIN\+\_\+\+API void $\ast$ \textbf{ plugin\+\_\+impl} (\textbf{ plugin} p)
+\item 
+PLUGIN\+\_\+\+API void \textbf{ plugin\+\_\+destroy\+\_\+delayed} (\textbf{ plugin} p)
+\item 
+PLUGIN\+\_\+\+API void \textbf{ plugin\+\_\+destroy} (\textbf{ plugin} p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{plugin__impl_8h_a71c34b8b4b6a40f9085106802b3088f0}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_iface\_type@{plugin\_iface\_type}}
+\index{plugin\_iface\_type@{plugin\_iface\_type}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_iface\_type}
+{\footnotesize\ttfamily \#define plugin\+\_\+iface\+\_\+type(\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~ ((\textbf{ type\+\_\+name})\textbf{ plugin\+\_\+iface}(p))}
+
+\mbox{\label{plugin__impl_8h_a5f483a3862afc261bc73ec31aef6828b}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_impl\_type@{plugin\_impl\_type}}
+\index{plugin\_impl\_type@{plugin\_impl\_type}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_impl\_type}
+{\footnotesize\ttfamily \#define plugin\+\_\+impl\+\_\+type(\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~ ((\textbf{ type\+\_\+name})\textbf{ plugin\+\_\+impl}(p))}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{plugin__impl_8h_af5672f8038c7c743f97c5e6fd31e3bdc}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin@{plugin}}
+\index{plugin@{plugin}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin}
+{\footnotesize\ttfamily typedef struct plugin\+\_\+type$\ast$ \textbf{ plugin}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{plugin__impl_8h_ac7daec058f35a8c6c48d016a1439c82f}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_create@{plugin\_create}}
+\index{plugin\_create@{plugin\_create}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_create()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API \textbf{ plugin} plugin\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{plugin\+\_\+descriptor}]{descriptor,  }\item[{void $\ast$}]{iface,  }\item[{void $\ast$}]{impl,  }\item[{void($\ast$)(\textbf{ plugin})}]{dtor }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__impl_8h_a70c14dff2f80cc903bc3bb331e56c9b9}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_name@{plugin\_name}}
+\index{plugin\_name@{plugin\_name}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_name()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API char$\ast$ plugin\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__impl_8h_a4d8a5df54c4c69251b2dcffbd96bc106}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_desc@{plugin\_desc}}
+\index{plugin\_desc@{plugin\_desc}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_desc()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API plugin\+\_\+descriptor plugin\+\_\+desc (\begin{DoxyParamCaption}\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__impl_8h_ad43fff86f2c241d48fdb1d3ac5ed6f81}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_iface@{plugin\_iface}}
+\index{plugin\_iface@{plugin\_iface}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_iface()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void$\ast$ plugin\+\_\+iface (\begin{DoxyParamCaption}\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__impl_8h_aeefc083cd5c032f02b91865db935306e}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_impl@{plugin\_impl}}
+\index{plugin\_impl@{plugin\_impl}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_impl()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void$\ast$ plugin\+\_\+impl (\begin{DoxyParamCaption}\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__impl_8h_a14d0fdac8d151ec4195d3dacdfb5fa51}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_destroy\_delayed@{plugin\_destroy\_delayed}}
+\index{plugin\_destroy\_delayed@{plugin\_destroy\_delayed}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_destroy\_delayed()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void plugin\+\_\+destroy\+\_\+delayed (\begin{DoxyParamCaption}\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__impl_8h_abfda84ddb9664b0173e9b76afa67949a}} 
+\index{plugin\_impl.h@{plugin\_impl.h}!plugin\_destroy@{plugin\_destroy}}
+\index{plugin\_destroy@{plugin\_destroy}!plugin\_impl.h@{plugin\_impl.h}}
+\doxysubsubsection{plugin\_destroy()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void plugin\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+

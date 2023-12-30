@@ -10,5 +10,5 @@ var log_8h =
     [ "log_write_impl_va", "log_8h.html#a97b582a8278d4a7e95476b0ad55dceda", null ],
     [ "log_clear", "log_8h.html#a8b92d3bba63810079cef6856a9109107", null ],
     [ "log_delete", "log_8h.html#a82ac8dc9916b60ee74fecdaafac95984", null ],
-    [ "log_print_info", "log_8h.html#a120ac5f32a2a356fbf28f297cb15a5bc", null ]
+    [ "log_print_info", "log_8h.html#a201ee77d460f380b457d2fdb4c7ec976", null ]
 ];

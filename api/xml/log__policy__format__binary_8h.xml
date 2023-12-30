@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="log__policy__format__binary_8h" kind="file" language="C++">
     <compoundname>log_policy_format_binary.h</compoundname>
     <includes local="no">log/log_api.h</includes>
@@ -40,6 +40,10 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="1">
         <label>log_policy_format_binary.h</label>
         <link refid="log__policy__format__binary_8h"/>
@@ -49,6 +53,8 @@
       <node id="3">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>log_policy_format.h</label>
@@ -82,7 +88,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -103,7 +109,7 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__format__binary_8h_1a49483332c44a3620d913b97752218f22" kindref="member">log_policy_format_binary_interface</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24" refid="log__policy__format__binary_8h_1a49483332c44a3620d913b97752218f22" refkind="member"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__format__binary_8h_1a49483332c44a3620d913b97752218f22" kindref="member">log_policy_format_binary_interface</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">}</highlight></codeline>

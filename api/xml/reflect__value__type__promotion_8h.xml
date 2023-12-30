@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__value__type__promotion_8h" kind="file" language="C++">
     <compoundname>reflect_value_type_promotion.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
@@ -39,6 +39,10 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="1">
         <label>reflect_value_type_promotion.h</label>
         <link refid="reflect__value__type__promotion_8h"/>
@@ -48,6 +52,8 @@
       <node id="2">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -145,7 +151,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -190,7 +196,7 @@
 <codeline lineno="47"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="48"><highlight class="comment">*<sp/><sp/><sp/><sp/>Promoted<sp/>value<sp/>if<sp/>a<sp/>valid<sp/>promotion,<sp/>or<sp/>@v<sp/>if<sp/>value<sp/>is<sp/>already<sp/>promoted,<sp/>null<sp/>otherwhise</highlight></codeline>
 <codeline lineno="49"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value__type__promotion_8h_1a543bee6c54c94a130e0b6959372ab869" kindref="member">value_type_promotion_integer</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50" refid="reflect__value__type__promotion_8h_1a543bee6c54c94a130e0b6959372ab869" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value__type__promotion_8h_1a543bee6c54c94a130e0b6959372ab869" kindref="member">value_type_promotion_integer</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="52"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="53"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -205,7 +211,7 @@
 <codeline lineno="62"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="63"><highlight class="comment">*<sp/><sp/><sp/><sp/>Promoted<sp/>value<sp/>if<sp/>a<sp/>valid<sp/>promotion,<sp/>or<sp/>@v<sp/>if<sp/>value<sp/>is<sp/>already<sp/>promoted,<sp/>null<sp/>otherwhise</highlight></codeline>
 <codeline lineno="64"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value__type__promotion_8h_1afed9bead222cdaecdf7b1dfefca0e01f" kindref="member">value_type_promotion_decimal</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65" refid="reflect__value__type__promotion_8h_1afed9bead222cdaecdf7b1dfefca0e01f" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value__type__promotion_8h_1afed9bead222cdaecdf7b1dfefca0e01f" kindref="member">value_type_promotion_decimal</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/><ref refid="reflect__type__id_8h_1a63f97c5b1281063207c427df64d28950" kindref="member">type_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal">}</highlight></codeline>

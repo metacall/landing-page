@@ -1,9 +1,31 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__exception_8h" kind="file" language="C++">
     <compoundname>reflect_exception.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="reflect__value__type_8h" local="no">reflect_value_type.h</includedby>
     <incdepgraph>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="1">
+        <label>reflect_exception.h</label>
+        <link refid="reflect__exception_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>reflect/reflect_api.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="1">
         <label>reflect_exception.h</label>
         <link refid="reflect__exception_8h"/>
@@ -11,9 +33,18 @@
         </childnode>
       </node>
       <node id="2">
-        <label>reflect/reflect_api.h</label>
+        <label>reflect_value_type.h</label>
+        <link refid="reflect__value__type_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-    </incdepgraph>
+      <node id="3">
+        <label>reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" prot="public" static="no">
         <type>struct exception_type *</type>
@@ -26,15 +57,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="32" column="29" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="34" column="29" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="reflect__exception_8h_1a07cdd4a20290dcc70a0a20fd67ecc8f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__exception_8h_1a31406433d18febe780c4b1080c27cbc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
         <definition>REFLECT_API exception exception_create</definition>
-        <argsstring>(const char *message, const char *label, int code, const char *stacktrace)</argsstring>
+        <argsstring>(char *message, char *label, int64_t code, char *stacktrace)</argsstring>
         <name>exception_create</name>
+        <param>
+          <type>char *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>stacktrace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="36" column="1" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="36" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__exception_8h_1afb44879b0180bb6db7c8942a90bd8086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API <ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
+        <definition>REFLECT_API exception exception_create_const</definition>
+        <argsstring>(const char *message, const char *label, int64_t code, const char *stacktrace)</argsstring>
+        <name>exception_create_const</name>
         <param>
           <type>const char *</type>
           <declname>message</declname>
@@ -44,7 +104,7 @@
           <declname>label</declname>
         </param>
         <param>
-          <type>int</type>
+          <type>int64_t</type>
           <declname>code</declname>
         </param>
         <param>
@@ -57,47 +117,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="34" column="1" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="34" declcolumn="1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="38" column="1" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="38" declcolumn="1"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__exception_8h_1ab9d4f0dc5fcee6e79a44b4613db00e2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const REFLECT_API char *</type>
-        <definition>const REFLECT_API char* exception_message</definition>
-        <argsstring>(exception ex)</argsstring>
-        <name>exception_message</name>
-        <param>
-          <type><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
-          <declname>ex</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="36" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="36" declcolumn="24"/>
-      </memberdef>
-      <memberdef kind="function" id="reflect__exception_8h_1a9c1a0c7cbd50a900ecb925402c8913e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const REFLECT_API char *</type>
-        <definition>const REFLECT_API char* exception_label</definition>
-        <argsstring>(exception ex)</argsstring>
-        <name>exception_label</name>
-        <param>
-          <type><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
-          <declname>ex</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="38" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="38" declcolumn="24"/>
-      </memberdef>
-      <memberdef kind="function" id="reflect__exception_8h_1a08a29a96f5adacf792e6fed986bd9672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="reflect__exception_8h_1a7b8cb3a3d94b7538ece3e39a35b6d682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API int</type>
-        <definition>REFLECT_API int exception_code</definition>
+        <definition>REFLECT_API int exception_increment_reference</definition>
         <argsstring>(exception ex)</argsstring>
-        <name>exception_code</name>
+        <name>exception_increment_reference</name>
         <param>
           <type><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
           <declname>ex</declname>
@@ -110,9 +136,77 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="40" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="40" declcolumn="17"/>
       </memberdef>
-      <memberdef kind="function" id="reflect__exception_8h_1a9d38b99d2f5dcbf39ccacb37160db617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const REFLECT_API char *</type>
-        <definition>const REFLECT_API char* exception_stacktrace</definition>
+      <memberdef kind="function" id="reflect__exception_8h_1ae86ba3c102dd9a70f81be0bb0eaf4955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int exception_decrement_reference</definition>
+        <argsstring>(exception ex)</argsstring>
+        <name>exception_decrement_reference</name>
+        <param>
+          <type><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="42" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="42" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__exception_8h_1af076c7751e00c3824eede474df149e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API const char *</type>
+        <definition>REFLECT_API const char* exception_message</definition>
+        <argsstring>(exception ex)</argsstring>
+        <name>exception_message</name>
+        <param>
+          <type><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="44" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="44" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__exception_8h_1a8e47aa53476291748ed792551cf64cff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API const char *</type>
+        <definition>REFLECT_API const char* exception_label</definition>
+        <argsstring>(exception ex)</argsstring>
+        <name>exception_label</name>
+        <param>
+          <type><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="46" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="46" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__exception_8h_1a088d663e4c3eb518e6af3d541cdf218d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int64_t</type>
+        <definition>REFLECT_API int64_t exception_error_code</definition>
+        <argsstring>(exception ex)</argsstring>
+        <name>exception_error_code</name>
+        <param>
+          <type><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref></type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="48" column="21" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="48" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__exception_8h_1a645300eee90443326e4109f9e4c04e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API const char *</type>
+        <definition>REFLECT_API const char* exception_stacktrace</definition>
         <argsstring>(exception ex)</argsstring>
         <name>exception_stacktrace</name>
         <param>
@@ -125,7 +219,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="42" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="42" declcolumn="24"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="50" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="50" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="reflect__exception_8h_1ad983a7a9a01aebde04aa4f865ec94e28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API void</type>
+        <definition>REFLECT_API void exception_stats_debug</definition>
+        <argsstring>(void)</argsstring>
+        <name>exception_stats_debug</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="52" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="52" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__exception_8h_1a457c882270c27eacbadb1abcaf54f9ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -142,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="44" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="44" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" line="54" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h" declline="54" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -154,7 +264,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -179,27 +289,37 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">exception_type;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">exception_type<sp/>*<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">exception_type;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/><ref refid="reflect__exception_8h_1a07cdd4a20290dcc70a0a20fd67ecc8f2" kindref="member">exception_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*stacktrace);</highlight></codeline>
+<codeline lineno="34" refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">exception_type<sp/>*<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref>;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__exception_8h_1ab9d4f0dc5fcee6e79a44b4613db00e2c" kindref="member">exception_message</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="36" refid="reflect__exception_8h_1a31406433d18febe780c4b1080c27cbc7" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/><ref refid="reflect__exception_8h_1a31406433d18febe780c4b1080c27cbc7" kindref="member">exception_create</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/>int64_t<sp/>code,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*stacktrace);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__exception_8h_1a9c1a0c7cbd50a900ecb925402c8913e7" kindref="member">exception_label</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="38" refid="reflect__exception_8h_1afb44879b0180bb6db7c8942a90bd8086" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/><ref refid="reflect__exception_8h_1afb44879b0180bb6db7c8942a90bd8086" kindref="member">exception_create_const</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/>int64_t<sp/>code,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*stacktrace);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__exception_8h_1a08a29a96f5adacf792e6fed986bd9672" kindref="member">exception_code</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="40" refid="reflect__exception_8h_1a7b8cb3a3d94b7538ece3e39a35b6d682" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__exception_8h_1a7b8cb3a3d94b7538ece3e39a35b6d682" kindref="member">exception_increment_reference</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__exception_8h_1a9d38b99d2f5dcbf39ccacb37160db617" kindref="member">exception_stacktrace</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="42" refid="reflect__exception_8h_1ae86ba3c102dd9a70f81be0bb0eaf4955" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__exception_8h_1ae86ba3c102dd9a70f81be0bb0eaf4955" kindref="member">exception_decrement_reference</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__exception_8h_1a457c882270c27eacbadb1abcaf54f9ad" kindref="member">exception_destroy</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="44" refid="reflect__exception_8h_1af076c7751e00c3824eede474df149e10" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__exception_8h_1af076c7751e00c3824eede474df149e10" kindref="member">exception_message</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="reflect__exception_8h_1a8e47aa53476291748ed792551cf64cff" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__exception_8h_1a8e47aa53476291748ed792551cf64cff" kindref="member">exception_label</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="reflect__exception_8h_1a088d663e4c3eb518e6af3d541cdf218d" refkind="member"><highlight class="normal">REFLECT_API<sp/>int64_t<sp/><ref refid="reflect__exception_8h_1a088d663e4c3eb518e6af3d541cdf218d" kindref="member">exception_error_code</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_EXCEPTION_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="50" refid="reflect__exception_8h_1a645300eee90443326e4109f9e4c04e99" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__exception_8h_1a645300eee90443326e4109f9e4c04e99" kindref="member">exception_stacktrace</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="reflect__exception_8h_1ad983a7a9a01aebde04aa4f865ec94e28" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__exception_8h_1ad983a7a9a01aebde04aa4f865ec94e28" kindref="member">exception_stats_debug</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="reflect__exception_8h_1a457c882270c27eacbadb1abcaf54f9ad" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__exception_8h_1a457c882270c27eacbadb1abcaf54f9ad" kindref="member">exception_destroy</ref>(<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref><sp/>ex);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_EXCEPTION_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_exception.h"/>
   </compounddef>

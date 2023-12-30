@@ -34,19 +34,19 @@ typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+storage\+\_\+flush}) (\textbf{ 
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \textbf{ log\+\_\+policy\+\_\+storage\+\_\+id} \{ \textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+T\+CH} = 0x00, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+Q\+U\+E\+N\+T\+I\+AL} = 0x01, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+I\+ZE}
+enum \textbf{ log\+\_\+policy\+\_\+storage\+\_\+id} \{ \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STORAGE\+\_\+\+BATCH} = 0x00
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STORAGE\+\_\+\+SEQUENTIAL} = 0x01
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STORAGE\+\_\+\+SIZE}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+storage} (const \textbf{ log\+\_\+policy\+\_\+id} policy\+\_\+storage\+\_\+id)
+LOG\+\_\+\+API log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+storage} (const \textbf{ log\+\_\+policy\+\_\+id} policy\+\_\+storage\+\_\+id)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+storage\+\_\+batch} (size\+\_\+t size)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+storage\+\_\+batch} (size\+\_\+t size)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+storage\+\_\+sequential} (void)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+storage\+\_\+sequential} (void)
 \end{DoxyCompactItemize}
 
 
@@ -74,15 +74,15 @@ L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+sto
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STORAGE\_BATCH@{LOG\_POLICY\_STORAGE\_BATCH}!log\_policy\_storage.h@{log\_policy\_storage.h}}\index{log\_policy\_storage.h@{log\_policy\_storage.h}!LOG\_POLICY\_STORAGE\_BATCH@{LOG\_POLICY\_STORAGE\_BATCH}}}\mbox{\label{log__policy__storage_8h_ad9d43be74e9ccd3765ff2445d8ebaaa4a9e2608dafb91195744b546e8dd362ecc}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+B\+A\+T\+CH&\\
+LOG\+\_\+\+POLICY\+\_\+\+STORAGE\+\_\+\+BATCH&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STORAGE\_SEQUENTIAL@{LOG\_POLICY\_STORAGE\_SEQUENTIAL}!log\_policy\_storage.h@{log\_policy\_storage.h}}\index{log\_policy\_storage.h@{log\_policy\_storage.h}!LOG\_POLICY\_STORAGE\_SEQUENTIAL@{LOG\_POLICY\_STORAGE\_SEQUENTIAL}}}\mbox{\label{log__policy__storage_8h_ad9d43be74e9ccd3765ff2445d8ebaaa4ad84649b3132132f59e5cb53af7856ef6}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+Q\+U\+E\+N\+T\+I\+AL&\\
+LOG\+\_\+\+POLICY\+\_\+\+STORAGE\+\_\+\+SEQUENTIAL&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STORAGE\_SIZE@{LOG\_POLICY\_STORAGE\_SIZE}!log\_policy\_storage.h@{log\_policy\_storage.h}}\index{log\_policy\_storage.h@{log\_policy\_storage.h}!LOG\_POLICY\_STORAGE\_SIZE@{LOG\_POLICY\_STORAGE\_SIZE}}}\mbox{\label{log__policy__storage_8h_ad9d43be74e9ccd3765ff2445d8ebaaa4a7019f5508ab5da9834ffb6f43077da92}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+I\+ZE&\\
+LOG\+\_\+\+POLICY\+\_\+\+STORAGE\+\_\+\+SIZE&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -93,17 +93,17 @@ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+I\+ZE&\\
 \index{log\_policy\_storage.h@{log\_policy\_storage.h}!log\_policy\_storage@{log\_policy\_storage}}
 \index{log\_policy\_storage@{log\_policy\_storage}!log\_policy\_storage.h@{log\_policy\_storage.h}}
 \doxysubsubsection{log\_policy\_storage()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+storage (\begin{DoxyParamCaption}\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{policy\+\_\+storage\+\_\+id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+storage (\begin{DoxyParamCaption}\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{policy\+\_\+storage\+\_\+id }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__storage_8h_a6d679df8c30bd998a4930e4a18f9975d}} 
 \index{log\_policy\_storage.h@{log\_policy\_storage.h}!log\_policy\_storage\_batch@{log\_policy\_storage\_batch}}
 \index{log\_policy\_storage\_batch@{log\_policy\_storage\_batch}!log\_policy\_storage.h@{log\_policy\_storage.h}}
 \doxysubsubsection{log\_policy\_storage\_batch()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+storage\+\_\+batch (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+storage\+\_\+batch (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__storage_8h_aa4ce9fd36df28f1598ea32b02915f0aa}} 
 \index{log\_policy\_storage.h@{log\_policy\_storage.h}!log\_policy\_storage\_sequential@{log\_policy\_storage\_sequential}}
 \index{log\_policy\_storage\_sequential@{log\_policy\_storage\_sequential}!log\_policy\_storage.h@{log\_policy\_storage.h}}
 \doxysubsubsection{log\_policy\_storage\_sequential()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+storage\+\_\+sequential (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+storage\+\_\+sequential (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 

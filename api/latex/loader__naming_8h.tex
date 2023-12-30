@@ -1,12 +1,13 @@
 \doxysection{loader\+\_\+naming.\+h File Reference}
 \label{loader__naming_8h}\index{loader\_naming.h@{loader\_naming.h}}
 {\ttfamily \#include $<$loader/loader\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$portability/portability\+\_\+path.\+h$>$}\newline
 Include dependency graph for loader\+\_\+naming.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=137pt]{loader__naming_8h__incl}
+\includegraphics[width=252pt]{loader__naming_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -14,66 +15,66 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{loader__naming_8h__dep__incl}
+\includegraphics[width=283pt]{loader__naming_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE}~0x01\+FF
+\#define \textbf{ LOADER\+\_\+\+PATH\+\_\+\+SIZE}~PORTABILITY\+\_\+\+PATH\+\_\+\+SIZE
 \item 
-\#define \textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}~0x\+FF
+\#define \textbf{ LOADER\+\_\+\+NAME\+\_\+\+SIZE}~0x\+FF
 \item 
-\#define \textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+T\+A\+G\+\_\+\+S\+I\+ZE}~0x40
+\#define \textbf{ LOADER\+\_\+\+TAG\+\_\+\+SIZE}~0x40
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef char \textbf{ loader\+\_\+naming\+\_\+path}[\textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE}]
+typedef char \textbf{ loader\+\_\+path}[\textbf{ LOADER\+\_\+\+PATH\+\_\+\+SIZE}]
 \item 
-typedef char \textbf{ loader\+\_\+naming\+\_\+name}[\textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}]
+typedef char \textbf{ loader\+\_\+name}[\textbf{ LOADER\+\_\+\+NAME\+\_\+\+SIZE}]
 \item 
-typedef char \textbf{ loader\+\_\+naming\+\_\+tag}[\textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+T\+A\+G\+\_\+\+S\+I\+ZE}]
+typedef char \textbf{ loader\+\_\+tag}[\textbf{ LOADER\+\_\+\+TAG\+\_\+\+SIZE}]
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\label{loader__naming_8h_af465c998eef35a32f83854ae861891b1}} 
-\index{loader\_naming.h@{loader\_naming.h}!LOADER\_NAMING\_PATH\_SIZE@{LOADER\_NAMING\_PATH\_SIZE}}
-\index{LOADER\_NAMING\_PATH\_SIZE@{LOADER\_NAMING\_PATH\_SIZE}!loader\_naming.h@{loader\_naming.h}}
-\doxysubsubsection{LOADER\_NAMING\_PATH\_SIZE}
-{\footnotesize\ttfamily \#define L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE~0x01\+FF}
+\mbox{\label{loader__naming_8h_a6734f4c66e48c01723b2d0b1175e6633}} 
+\index{loader\_naming.h@{loader\_naming.h}!LOADER\_PATH\_SIZE@{LOADER\_PATH\_SIZE}}
+\index{LOADER\_PATH\_SIZE@{LOADER\_PATH\_SIZE}!loader\_naming.h@{loader\_naming.h}}
+\doxysubsubsection{LOADER\_PATH\_SIZE}
+{\footnotesize\ttfamily \#define LOADER\+\_\+\+PATH\+\_\+\+SIZE~PORTABILITY\+\_\+\+PATH\+\_\+\+SIZE}
 
-\mbox{\label{loader__naming_8h_af6bfd76e794688519adfc780aad21963}} 
-\index{loader\_naming.h@{loader\_naming.h}!LOADER\_NAMING\_NAME\_SIZE@{LOADER\_NAMING\_NAME\_SIZE}}
-\index{LOADER\_NAMING\_NAME\_SIZE@{LOADER\_NAMING\_NAME\_SIZE}!loader\_naming.h@{loader\_naming.h}}
-\doxysubsubsection{LOADER\_NAMING\_NAME\_SIZE}
-{\footnotesize\ttfamily \#define L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE~0x\+FF}
+\mbox{\label{loader__naming_8h_a64a479216ae4b6e0182c79cf0d484ab9}} 
+\index{loader\_naming.h@{loader\_naming.h}!LOADER\_NAME\_SIZE@{LOADER\_NAME\_SIZE}}
+\index{LOADER\_NAME\_SIZE@{LOADER\_NAME\_SIZE}!loader\_naming.h@{loader\_naming.h}}
+\doxysubsubsection{LOADER\_NAME\_SIZE}
+{\footnotesize\ttfamily \#define LOADER\+\_\+\+NAME\+\_\+\+SIZE~0x\+FF}
 
-\mbox{\label{loader__naming_8h_a57ef5e6f452eeba08ce716a8b2fd4ff9}} 
-\index{loader\_naming.h@{loader\_naming.h}!LOADER\_NAMING\_TAG\_SIZE@{LOADER\_NAMING\_TAG\_SIZE}}
-\index{LOADER\_NAMING\_TAG\_SIZE@{LOADER\_NAMING\_TAG\_SIZE}!loader\_naming.h@{loader\_naming.h}}
-\doxysubsubsection{LOADER\_NAMING\_TAG\_SIZE}
-{\footnotesize\ttfamily \#define L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+T\+A\+G\+\_\+\+S\+I\+ZE~0x40}
+\mbox{\label{loader__naming_8h_a966bdfdac504cb10961ada913b82cf39}} 
+\index{loader\_naming.h@{loader\_naming.h}!LOADER\_TAG\_SIZE@{LOADER\_TAG\_SIZE}}
+\index{LOADER\_TAG\_SIZE@{LOADER\_TAG\_SIZE}!loader\_naming.h@{loader\_naming.h}}
+\doxysubsubsection{LOADER\_TAG\_SIZE}
+{\footnotesize\ttfamily \#define LOADER\+\_\+\+TAG\+\_\+\+SIZE~0x40}
 
 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\label{loader__naming_8h_aa27055dfc9a7bd58b024fea91438099a}} 
-\index{loader\_naming.h@{loader\_naming.h}!loader\_naming\_path@{loader\_naming\_path}}
-\index{loader\_naming\_path@{loader\_naming\_path}!loader\_naming.h@{loader\_naming.h}}
-\doxysubsubsection{loader\_naming\_path}
-{\footnotesize\ttfamily typedef char loader\+\_\+naming\+\_\+path[\textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE}]}
+\mbox{\label{loader__naming_8h_a0c504454714715861c9a58fc48a8176c}} 
+\index{loader\_naming.h@{loader\_naming.h}!loader\_path@{loader\_path}}
+\index{loader\_path@{loader\_path}!loader\_naming.h@{loader\_naming.h}}
+\doxysubsubsection{loader\_path}
+{\footnotesize\ttfamily typedef char loader\+\_\+path[\textbf{ LOADER\+\_\+\+PATH\+\_\+\+SIZE}]}
 
-\mbox{\label{loader__naming_8h_acd87beffca1d930544a80c0cb82ed249}} 
-\index{loader\_naming.h@{loader\_naming.h}!loader\_naming\_name@{loader\_naming\_name}}
-\index{loader\_naming\_name@{loader\_naming\_name}!loader\_naming.h@{loader\_naming.h}}
-\doxysubsubsection{loader\_naming\_name}
-{\footnotesize\ttfamily typedef char loader\+\_\+naming\+\_\+name[\textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}]}
+\mbox{\label{loader__naming_8h_af292613bc96ed3a05576a325595f76fb}} 
+\index{loader\_naming.h@{loader\_naming.h}!loader\_name@{loader\_name}}
+\index{loader\_name@{loader\_name}!loader\_naming.h@{loader\_naming.h}}
+\doxysubsubsection{loader\_name}
+{\footnotesize\ttfamily typedef char loader\+\_\+name[\textbf{ LOADER\+\_\+\+NAME\+\_\+\+SIZE}]}
 
-\mbox{\label{loader__naming_8h_a3e42cdc1524fee7d4dae2fd0aa997b28}} 
-\index{loader\_naming.h@{loader\_naming.h}!loader\_naming\_tag@{loader\_naming\_tag}}
-\index{loader\_naming\_tag@{loader\_naming\_tag}!loader\_naming.h@{loader\_naming.h}}
-\doxysubsubsection{loader\_naming\_tag}
-{\footnotesize\ttfamily typedef char loader\+\_\+naming\+\_\+tag[\textbf{ L\+O\+A\+D\+E\+R\+\_\+\+N\+A\+M\+I\+N\+G\+\_\+\+T\+A\+G\+\_\+\+S\+I\+ZE}]}
+\mbox{\label{loader__naming_8h_acdc949191ac2655c54541e7f287e2c0e}} 
+\index{loader\_naming.h@{loader\_naming.h}!loader\_tag@{loader\_tag}}
+\index{loader\_tag@{loader\_tag}!loader\_naming.h@{loader\_naming.h}}
+\doxysubsubsection{loader\_tag}
+{\footnotesize\ttfamily typedef char loader\+\_\+tag[\textbf{ LOADER\+\_\+\+TAG\+\_\+\+SIZE}]}
 

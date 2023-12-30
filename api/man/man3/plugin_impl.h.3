@@ -1,0 +1,84 @@
+.TH "plugin_impl.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugin_impl.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <plugin/plugin_api\&.h>\fP
+.br
+\fC#include <plugin/plugin_descriptor\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBplugin_iface_type\fP(p,  \fBtype_name\fP)   	((\fBtype_name\fP)\fBplugin_iface\fP(p))"
+.br
+.ti -1c
+.RI "#define \fBplugin_impl_type\fP(p,  \fBtype_name\fP)   	((\fBtype_name\fP)\fBplugin_impl\fP(p))"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct plugin_type * \fBplugin\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "PLUGIN_API \fBplugin\fP \fBplugin_create\fP (const char *name, plugin_descriptor descriptor, void *iface, void *impl, void(*dtor)(\fBplugin\fP))"
+.br
+.ti -1c
+.RI "PLUGIN_API char * \fBplugin_name\fP (\fBplugin\fP p)"
+.br
+.ti -1c
+.RI "PLUGIN_API plugin_descriptor \fBplugin_desc\fP (\fBplugin\fP p)"
+.br
+.ti -1c
+.RI "PLUGIN_API void * \fBplugin_iface\fP (\fBplugin\fP p)"
+.br
+.ti -1c
+.RI "PLUGIN_API void * \fBplugin_impl\fP (\fBplugin\fP p)"
+.br
+.ti -1c
+.RI "PLUGIN_API void \fBplugin_destroy_delayed\fP (\fBplugin\fP p)"
+.br
+.ti -1c
+.RI "PLUGIN_API void \fBplugin_destroy\fP (\fBplugin\fP p)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define plugin_iface_type(p, \fBtype_name\fP)   	((\fBtype_name\fP)\fBplugin_iface\fP(p))"
+
+.SS "#define plugin_impl_type(p, \fBtype_name\fP)   	((\fBtype_name\fP)\fBplugin_impl\fP(p))"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct plugin_type* \fBplugin\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "PLUGIN_API \fBplugin\fP plugin_create (const char * name, plugin_descriptor descriptor, void * iface, void * impl, void(*)(\fBplugin\fP) dtor)"
+
+.SS "PLUGIN_API char* plugin_name (\fBplugin\fP p)"
+
+.SS "PLUGIN_API plugin_descriptor plugin_desc (\fBplugin\fP p)"
+
+.SS "PLUGIN_API void* plugin_iface (\fBplugin\fP p)"
+
+.SS "PLUGIN_API void* plugin_impl (\fBplugin\fP p)"
+
+.SS "PLUGIN_API void plugin_destroy_delayed (\fBplugin\fP p)"
+
+.SS "PLUGIN_API void plugin_destroy (\fBplugin\fP p)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

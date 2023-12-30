@@ -5,7 +5,7 @@ var reflect__signature_8h =
     [ "signature_resize", "reflect__signature_8h.html#ab3f9f2a4abb73b6f4cc32992ea6d234e", null ],
     [ "signature_count", "reflect__signature_8h.html#a8a9fcea7576d3e8c11199be6a8f756df", null ],
     [ "signature_get_index", "reflect__signature_8h.html#aa7ff4d2b286e7b096a6c8e7d20c636e8", null ],
-    [ "signature_get_name", "reflect__signature_8h.html#a74d0a8a76e1acfff44060dc8edb6d184", null ],
+    [ "signature_get_name", "reflect__signature_8h.html#a2c531c1675c9bb14989958273f05b646", null ],
     [ "signature_get_type", "reflect__signature_8h.html#ae16dc0c235f4174b3ad271f8381f997b", null ],
     [ "signature_get_return", "reflect__signature_8h.html#a3b7f3f804e8c9272c77f32a785d9f4f2", null ],
     [ "signature_set", "reflect__signature_8h.html#ac35b0a7452a276b86d8f7397c6b9088a", null ],

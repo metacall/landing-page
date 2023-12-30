@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="log__policy_8h" kind="file" language="C++">
     <compoundname>log_policy.h</compoundname>
     <includes local="no">log/log_api.h</includes>
@@ -50,87 +50,93 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="5">
         <label>log_policy_format_binary.h</label>
         <link refid="log__policy__format__binary_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>log_policy_schedule_async.h</label>
         <link refid="log__policy__schedule__async_8h"/>
       </node>
-      <node id="7">
+      <node id="8">
         <label>log_policy_schedule.h</label>
         <link refid="log__policy__schedule_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>log_policy_format.h</label>
         <link refid="log__policy__format_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="12">
         <label>log_policy_storage_batch.h</label>
         <link refid="log__policy__storage__batch_8h"/>
       </node>
-      <node id="17">
+      <node id="18">
         <label>log_policy_stream_socket.h</label>
         <link refid="log__policy__stream__socket_8h"/>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>log_policy_stream.h</label>
         <link refid="log__policy__stream_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>log_policy_stream_custom.h</label>
         <link refid="log__policy__stream__custom_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>log_policy_schedule_sync.h</label>
-        <link refid="log__policy__schedule__sync_8h"/>
-      </node>
-      <node id="6">
-        <label>log_policy_format_text.h</label>
-        <link refid="log__policy__format__text_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>log_policy_stream_syslog.h</label>
-        <link refid="log__policy__stream__syslog_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>log_policy_storage_sequential.h</label>
-        <link refid="log__policy__storage__sequential_8h"/>
-      </node>
-      <node id="18">
-        <label>log_policy_stream_stdio.h</label>
-        <link refid="log__policy__stream__stdio_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>log_policy_stream_file.h</label>
-        <link refid="log__policy__stream__file_8h"/>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="10">
+        <label>log_policy_schedule_sync.h</label>
+        <link refid="log__policy__schedule__sync_8h"/>
+      </node>
+      <node id="7">
+        <label>log_policy_format_text.h</label>
+        <link refid="log__policy__format__text_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>log_policy_stream_syslog.h</label>
+        <link refid="log__policy__stream__syslog_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>log_policy_storage_sequential.h</label>
+        <link refid="log__policy__storage__sequential_8h"/>
+      </node>
+      <node id="19">
+        <label>log_policy_stream_stdio.h</label>
+        <link refid="log__policy__stream__stdio_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>log_policy_stream_file.h</label>
+        <link refid="log__policy__stream__file_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
         <label>log_policy_storage.h</label>
         <link refid="log__policy__storage_8h"/>
         <childnode refid="2" relation="include">
@@ -140,8 +146,6 @@
         <label>log_policy.h</label>
         <link refid="log__policy_8h"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -175,17 +179,19 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>log_policy_format_custom.h</label>
-        <link refid="log__policy__format__custom_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="6">
+        <label>log_policy_format_custom.h</label>
+        <link refid="log__policy__format__custom_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
         <label>log_policy_stream_nginx.h</label>
         <link refid="log__policy__stream__nginx_8h"/>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -467,7 +473,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -504,11 +510,11 @@
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">log_policy_ctor_type;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__interface__type" kindref="compound">log_policy_interface_type</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__interface__type" kindref="compound">log_policy_interface_type</ref>;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref>;</highlight></codeline>
+<codeline lineno="46" refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref>;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48" refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" kindref="member">log_policy_impl</ref>;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
@@ -535,23 +541,23 @@
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy_8h_1a06e277a564eb91c8f30b76c08c3df620" kindref="member">log_policy_create</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref><sp/>aspect_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_policy_interface<sp/>iface,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" kindref="member">log_policy_ctor</ref><sp/>ctor);</highlight></codeline>
+<codeline lineno="73" refid="log__policy_8h_1a06e277a564eb91c8f30b76c08c3df620" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy_8h_1a06e277a564eb91c8f30b76c08c3df620" kindref="member">log_policy_create</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref><sp/>aspect_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>log_policy_interface<sp/>iface,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a8a5a40982780ee7ed6f051ee283f3032" kindref="member">log_policy_ctor</ref><sp/>ctor);</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a661c84de7ecb775f1e06aea04fe9a18c" kindref="member">log_policy_instantiate</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy,<sp/><ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref><sp/>instance,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75" refid="log__policy_8h_1a661c84de7ecb775f1e06aea04fe9a18c" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a661c84de7ecb775f1e06aea04fe9a18c" kindref="member">log_policy_instantiate</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy,<sp/><ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref><sp/>instance,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1af271500926e9eff385ef898bc6b9d781" kindref="member">log_policy_classify</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy,<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
+<codeline lineno="77" refid="log__policy_8h_1af271500926e9eff385ef898bc6b9d781" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1af271500926e9eff385ef898bc6b9d781" kindref="member">log_policy_classify</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy,<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/>aspect);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/><ref refid="log__policy_8h_1adf778f88ede0fe6bedfab994e9c809b3" kindref="member">log_policy_aspect</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="79" refid="log__policy_8h_1adf778f88ede0fe6bedfab994e9c809b3" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1ae7e032134723b129bce39846005c1bf6" kindref="member">log_aspect</ref><sp/><ref refid="log__policy_8h_1adf778f88ede0fe6bedfab994e9c809b3" kindref="member">log_policy_aspect</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref><sp/><ref refid="log__policy_8h_1a1d301f7f7996670937ef91463255a7ec" kindref="member">log_policy_aspect_id</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="81" refid="log__policy_8h_1a1d301f7f7996670937ef91463255a7ec" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__aspect_8h_1aa56e037326e6848386c348d0596ba319" kindref="member">log_aspect_id</ref><sp/><ref refid="log__policy_8h_1a1d301f7f7996670937ef91463255a7ec" kindref="member">log_policy_aspect_id</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal">LOG_API<sp/><ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref><sp/><ref refid="log__policy_8h_1a5459b90dff8c00665a3adb85fe326ce1" kindref="member">log_policy_instance</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="83" refid="log__policy_8h_1a5459b90dff8c00665a3adb85fe326ce1" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__policy_8h_1a6de8f72b8d19eb3d6cd9a78cde34b57c" kindref="member">log_policy_data</ref><sp/><ref refid="log__policy_8h_1a5459b90dff8c00665a3adb85fe326ce1" kindref="member">log_policy_instance</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy_8h_1a7666fd97f984b9c168ce93181771c53e" kindref="member">log_policy_behavior</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="85" refid="log__policy_8h_1a7666fd97f984b9c168ce93181771c53e" refkind="member"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy_8h_1a7666fd97f984b9c168ce93181771c53e" kindref="member">log_policy_behavior</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal">LOG_API<sp/><ref refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" kindref="member">log_policy_impl</ref><sp/><ref refid="log__policy_8h_1a6ec05522403aca58a1376d5fec8f1d87" kindref="member">log_policy_derived</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="87" refid="log__policy_8h_1a6ec05522403aca58a1376d5fec8f1d87" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__policy_8h_1a91fb13a5ab0e538aa1b1e5e1dc0da500" kindref="member">log_policy_impl</ref><sp/><ref refid="log__policy_8h_1a6ec05522403aca58a1376d5fec8f1d87" kindref="member">log_policy_derived</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a81b1ef0f90352c0f143d276ce1d9058e" kindref="member">log_policy_destroy</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
+<codeline lineno="89" refid="log__policy_8h_1a81b1ef0f90352c0f143d276ce1d9058e" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a81b1ef0f90352c0f143d276ce1d9058e" kindref="member">log_policy_destroy</ref>(<ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/>policy);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal">}</highlight></codeline>

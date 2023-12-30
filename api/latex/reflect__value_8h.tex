@@ -33,29 +33,31 @@ typedef void($\ast$ \textbf{ value\+\_\+finalizer\+\_\+cb}) (\textbf{ value}, vo
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+alloc} (size\+\_\+t bytes)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+alloc} (size\+\_\+t bytes)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create} (const void $\ast$data, size\+\_\+t bytes)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create} (const void $\ast$data, size\+\_\+t bytes)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+copy} (\textbf{ value} v)
+REFLECT\+\_\+\+API int \textbf{ value\+\_\+validate} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+move} (\textbf{ value} src, \textbf{ value} dst)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+copy} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ value\+\_\+size} (\textbf{ value} v)
+REFLECT\+\_\+\+API void \textbf{ value\+\_\+move} (\textbf{ value} src, \textbf{ value} dst)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+ref\+\_\+inc} (\textbf{ value} v)
+REFLECT\+\_\+\+API size\+\_\+t \textbf{ value\+\_\+size} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+ref\+\_\+dec} (\textbf{ value} v)
+REFLECT\+\_\+\+API void \textbf{ value\+\_\+ref\+\_\+inc} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+finalizer} (\textbf{ value} v, \textbf{ value\+\_\+finalizer\+\_\+cb} finalizer, void $\ast$finalizer\+\_\+data)
+REFLECT\+\_\+\+API void \textbf{ value\+\_\+ref\+\_\+dec} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+data} (\textbf{ value} v)
+REFLECT\+\_\+\+API void \textbf{ value\+\_\+finalizer} (\textbf{ value} v, \textbf{ value\+\_\+finalizer\+\_\+cb} finalizer, void $\ast$finalizer\+\_\+data)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+to} (\textbf{ value} v, void $\ast$data, size\+\_\+t bytes)
+REFLECT\+\_\+\+API void $\ast$ \textbf{ value\+\_\+data} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from} (\textbf{ value} v, const void $\ast$data, size\+\_\+t bytes)
+REFLECT\+\_\+\+API void \textbf{ value\+\_\+to} (\textbf{ value} v, void $\ast$data, size\+\_\+t bytes)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+destroy} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from} (\textbf{ value} v, const void $\ast$data, size\+\_\+t bytes)
+\item 
+REFLECT\+\_\+\+API void \textbf{ value\+\_\+destroy} (\textbf{ value} v)
 \end{DoxyCompactItemize}
 
 
@@ -88,7 +90,7 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+destroy} (\textbf{ val
 \index{reflect\_value.h@{reflect\_value.h}!value\_alloc@{value\_alloc}}
 \index{value\_alloc@{value\_alloc}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_alloc()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+alloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
 
 
 
@@ -106,7 +108,7 @@ Pointer to uninitialized value if success, null otherwhise
 \index{reflect\_value.h@{reflect\_value.h}!value\_create@{value\_create}}
 \index{value\_create@{value\_create}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_create()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
 
 
 
@@ -122,11 +124,29 @@ Create a value from @data with size @bytes.
 \begin{DoxyReturn}{Returns}
 Pointer to value if success, null otherwhise 
 \end{DoxyReturn}
+\mbox{\label{reflect__value_8h_ab4ea738843b4862c598beb44c220aeda}} 
+\index{reflect\_value.h@{reflect\_value.h}!value\_validate@{value\_validate}}
+\index{value\_validate@{value\_validate}!reflect\_value.h@{reflect\_value.h}}
+\doxysubsubsection{value\_validate()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int value\+\_\+validate (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Check if the value @v is valid or the memory is corrupted. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference of value to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if the value is valid, null otherwhise 
+\end{DoxyReturn}
 \mbox{\label{reflect__value_8h_a797b2f8ba4f572bc05c1d86d69a2179d}} 
 \index{reflect\_value.h@{reflect\_value.h}!value\_copy@{value\_copy}}
 \index{value\_copy@{value\_copy}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_copy()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -144,7 +164,7 @@ Reference to new value copied from @v
 \index{reflect\_value.h@{reflect\_value.h}!value\_move@{value\_move}}
 \index{value\_move@{value\_move}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_move()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+move (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{src,  }\item[{\textbf{ value}}]{dst }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void value\+\_\+move (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{src,  }\item[{\textbf{ value}}]{dst }\end{DoxyParamCaption})}
 
 
 
@@ -161,7 +181,7 @@ Copies the ownership from @src to @dst, including the finalizer, and resets the 
 \index{reflect\_value.h@{reflect\_value.h}!value\_size@{value\_size}}
 \index{value\_size@{value\_size}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_size()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t value\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API size\+\_\+t value\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -179,7 +199,7 @@ Size in bytes of the value
 \index{reflect\_value.h@{reflect\_value.h}!value\_ref\_inc@{value\_ref\_inc}}
 \index{value\_ref\_inc@{value\_ref\_inc}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_ref\_inc()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+ref\+\_\+inc (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void value\+\_\+ref\+\_\+inc (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -194,7 +214,7 @@ Increment reference count of a value.
 \index{reflect\_value.h@{reflect\_value.h}!value\_ref\_dec@{value\_ref\_dec}}
 \index{value\_ref\_dec@{value\_ref\_dec}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_ref\_dec()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+ref\+\_\+dec (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void value\+\_\+ref\+\_\+dec (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -209,7 +229,7 @@ Decrement reference count of a value.
 \index{reflect\_value.h@{reflect\_value.h}!value\_finalizer@{value\_finalizer}}
 \index{value\_finalizer@{value\_finalizer}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_finalizer()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+finalizer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ value\+\_\+finalizer\+\_\+cb}}]{finalizer,  }\item[{void $\ast$}]{finalizer\+\_\+data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void value\+\_\+finalizer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ value\+\_\+finalizer\+\_\+cb}}]{finalizer,  }\item[{void $\ast$}]{finalizer\+\_\+data }\end{DoxyParamCaption})}
 
 
 
@@ -228,7 +248,7 @@ Set up the value finalizer, a callback that will be executed when the value life
 \index{reflect\_value.h@{reflect\_value.h}!value\_data@{value\_data}}
 \index{value\_data@{value\_data}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_data()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+data (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void$\ast$ value\+\_\+data (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -246,7 +266,7 @@ Pointer to writeable memory block of value @v
 \index{reflect\_value.h@{reflect\_value.h}!value\_to@{value\_to}}
 \index{value\_to@{value\_to}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_to()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+to (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void value\+\_\+to (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
 
 
 
@@ -265,7 +285,7 @@ Convert value @v to memory block @data.
 \index{reflect\_value.h@{reflect\_value.h}!value\_from@{value\_from}}
 \index{value\_from@{value\_from}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_from()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
 
 
 
@@ -287,7 +307,7 @@ Value with @data of size @bytes assigned to it
 \index{reflect\_value.h@{reflect\_value.h}!value\_destroy@{value\_destroy}}
 \index{value\_destroy@{value\_destroy}!reflect\_value.h@{reflect\_value.h}}
 \doxysubsubsection{value\_destroy()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void value\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 

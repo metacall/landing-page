@@ -21,30 +21,46 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+I\+M\+PL}(expr)~\#expr
+\#define \textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+IMPL}(...)~\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+
 \item 
-\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}(expr)~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+I\+M\+PL}(expr)
+\#define \textbf{ PREPROCESSOR\+\_\+\+STRINGIFY}(expr)~\textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+IMPL}(expr)
 \item 
-\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+V\+A\+R\+I\+A\+D\+IC}(...)~P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+F\+O\+R\+\_\+\+E\+A\+CH(\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\#define \textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+OR\+\_\+\+EMPTY\+\_\+\+IMPL}(...)~\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+
+\item 
+\#define \textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+OR\+\_\+\+EMPTY}(expr)~\textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+OR\+\_\+\+EMPTY\+\_\+\+IMPL}(expr)
+\item 
+\#define \textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+VARIADIC}(...)~ PREPROCESSOR\+\_\+\+FOR\+\_\+\+EACH(\textbf{ PREPROCESSOR\+\_\+\+STRINGIFY}, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\label{preprocessor__stringify_8h_a2f6594312f3e4352cea43f3cbd3ac098}} 
+\mbox{\label{preprocessor__stringify_8h_a1b1e31e7e2766efeeb542784afe00673}} 
 \index{preprocessor\_stringify.h@{preprocessor\_stringify.h}!PREPROCESSOR\_STRINGIFY\_IMPL@{PREPROCESSOR\_STRINGIFY\_IMPL}}
 \index{PREPROCESSOR\_STRINGIFY\_IMPL@{PREPROCESSOR\_STRINGIFY\_IMPL}!preprocessor\_stringify.h@{preprocessor\_stringify.h}}
 \doxysubsubsection{PREPROCESSOR\_STRINGIFY\_IMPL}
-{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+I\+M\+PL(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~\#expr}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}
 
 \mbox{\label{preprocessor__stringify_8h_a687b07489efaaf2b4a03568c2117d32b}} 
 \index{preprocessor\_stringify.h@{preprocessor\_stringify.h}!PREPROCESSOR\_STRINGIFY@{PREPROCESSOR\_STRINGIFY}}
 \index{PREPROCESSOR\_STRINGIFY@{PREPROCESSOR\_STRINGIFY}!preprocessor\_stringify.h@{preprocessor\_stringify.h}}
 \doxysubsubsection{PREPROCESSOR\_STRINGIFY}
-{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+I\+M\+PL}(expr)}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+STRINGIFY(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~\textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+IMPL}(expr)}
+
+\mbox{\label{preprocessor__stringify_8h_a0691ba9453df48a48d4a51b8f6e06395}} 
+\index{preprocessor\_stringify.h@{preprocessor\_stringify.h}!PREPROCESSOR\_STRINGIFY\_OR\_EMPTY\_IMPL@{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY\_IMPL}}
+\index{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY\_IMPL@{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY\_IMPL}!preprocessor\_stringify.h@{preprocessor\_stringify.h}}
+\doxysubsubsection{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY\_IMPL}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+OR\+\_\+\+EMPTY\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}
+
+\mbox{\label{preprocessor__stringify_8h_ac094787bffb9429bdf67ef52744a6ddb}} 
+\index{preprocessor\_stringify.h@{preprocessor\_stringify.h}!PREPROCESSOR\_STRINGIFY\_OR\_EMPTY@{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY}}
+\index{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY@{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY}!preprocessor\_stringify.h@{preprocessor\_stringify.h}}
+\doxysubsubsection{PREPROCESSOR\_STRINGIFY\_OR\_EMPTY}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+OR\+\_\+\+EMPTY(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~\textbf{ PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+OR\+\_\+\+EMPTY\+\_\+\+IMPL}(expr)}
 
 \mbox{\label{preprocessor__stringify_8h_a7e0a8927e7cbacb2bf75f782ffe25610}} 
 \index{preprocessor\_stringify.h@{preprocessor\_stringify.h}!PREPROCESSOR\_STRINGIFY\_VARIADIC@{PREPROCESSOR\_STRINGIFY\_VARIADIC}}
 \index{PREPROCESSOR\_STRINGIFY\_VARIADIC@{PREPROCESSOR\_STRINGIFY\_VARIADIC}!preprocessor\_stringify.h@{preprocessor\_stringify.h}}
 \doxysubsubsection{PREPROCESSOR\_STRINGIFY\_VARIADIC}
-{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+V\+A\+R\+I\+A\+D\+IC(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+F\+O\+R\+\_\+\+E\+A\+CH(\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G\+I\+FY}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+STRINGIFY\+\_\+\+VARIADIC(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~ PREPROCESSOR\+\_\+\+FOR\+\_\+\+EACH(\textbf{ PREPROCESSOR\+\_\+\+STRINGIFY}, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)}
 

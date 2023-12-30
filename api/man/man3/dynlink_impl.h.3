@@ -1,4 +1,4 @@
-.TH "dynlink_impl.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "dynlink_impl.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,10 +23,10 @@ dynlink_impl.h
 
 .in +1c
 .ti -1c
-.RI "const DYNLINK_API char * \fBdynlink_impl_extension\fP (void)"
+.RI "DYNLINK_API const char * \fBdynlink_impl_extension\fP (void)"
 .br
 .ti -1c
-.RI "DYNLINK_API void \fBdynlink_impl_get_name\fP (\fBdynlink\fP handle, \fBdynlink_name_impl\fP name_impl, size_t length)"
+.RI "DYNLINK_API void \fBdynlink_impl_get_name\fP (\fBdynlink_name\fP name, \fBdynlink_name_impl\fP name_impl, size_t size)"
 .br
 .ti -1c
 .RI "DYNLINK_API \fBdynlink_impl\fP \fBdynlink_impl_load\fP (\fBdynlink\fP handle)"
@@ -40,7 +40,7 @@ dynlink_impl.h
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "const DYNLINK_API char* dynlink_impl_extension (void)"
+.SS "DYNLINK_API const char* dynlink_impl_extension (void)"
 
 .PP
 Dynamically linked shared object handle extension implementation\&. 
@@ -51,16 +51,18 @@ A const string reference to the extension depending on the OS implementation
 .RE
 .PP
 
-.SS "DYNLINK_API void dynlink_impl_get_name (\fBdynlink\fP handle, \fBdynlink_name_impl\fP name_impl, size_t length)"
+.SS "DYNLINK_API void dynlink_impl_get_name (\fBdynlink_name\fP name, \fBdynlink_name_impl\fP name_impl, size_t size)"
 
 .PP
 Consturct the file name of dynamically linked shared object implementation\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIhandle\fP Handle of dynamically linked shared object
+\fIname\fP Name of dynamically linked shared object
 .br
-\fIname_impl\fP Pointer to the dynamically linked shared object handle 
+\fIname_impl\fP Pointer to the dynamically linked shared object handle
+.br
+\fIsize\fP Size of string @name_impl 
 .RE
 .PP
 

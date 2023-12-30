@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__value_8h" kind="file" language="C++">
     <compoundname>reflect_value.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
@@ -12,6 +12,7 @@
     <includedby refid="reflect__future_8h" local="no">reflect_future.h</includedby>
     <includedby refid="reflect__object_8h" local="no">reflect_object.h</includedby>
     <includedby refid="reflect__signature_8h" local="no">reflect_signature.h</includedby>
+    <includedby refid="reflect__throwable_8h" local="no">reflect_throwable.h</includedby>
     <includedby refid="reflect__type_8h" local="no">reflect_type.h</includedby>
     <includedby refid="reflect__value__type_8h" local="no">reflect_value_type.h</includedby>
     <includedby refid="reflect__value__type__cast_8h" local="no">reflect_value_type_cast.h</includedby>
@@ -34,72 +35,68 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="17">
-        <label>loader_impl_function.h</label>
-        <link refid="loader__impl__function_8h"/>
-      </node>
-      <node id="19">
-        <label>loader_impl_export.h</label>
-        <link refid="loader__impl__export_8h"/>
-      </node>
       <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="4">
         <label>reflect_class.h</label>
         <link refid="reflect__class_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>reflect_class_visibility.h</label>
         <link refid="reflect__class__visibility_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="10">
+      <node id="18">
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
+      </node>
+      <node id="11">
         <label>reflect_function.h</label>
         <link refid="reflect__function_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>reflect_object.h</label>
         <link refid="reflect__object_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="13">
+      <node id="15">
         <label>loader_impl_interface.h</label>
         <link refid="loader__impl__interface_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="12">
         <label>reflect_scope.h</label>
         <link refid="reflect__scope_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="24">
@@ -113,31 +110,33 @@
         <link refid="reflect__type_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>reflect_throwable.h</label>
+        <link refid="reflect__throwable_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>reflect_method.h</label>
+        <link refid="reflect__method_8h"/>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>loader_export.h</label>
-        <link refid="loader__export_8h"/>
       </node>
       <node id="9">
-        <label>reflect_method.h</label>
-        <link refid="reflect__method_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
         <label>reflect_constructor.h</label>
         <link refid="reflect__constructor_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -145,23 +144,25 @@
         <link refid="reflect__value_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
@@ -170,19 +171,15 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="18">
-        <label>loader_impl_handle.h</label>
-        <link refid="loader__impl__handle_8h"/>
-      </node>
-      <node id="6">
+      <node id="7">
         <label>reflect_attribute.h</label>
         <link refid="reflect__attribute_8h"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>reflect_value_type.h</label>
         <link refid="reflect__value__type_8h"/>
         <childnode refid="2" relation="include">
@@ -193,8 +190,12 @@
         <link refid="reflect__value__type__cast_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="14">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
       </node>
       <node id="25">
         <label>reflect_value_type_promotion.h</label>
@@ -202,50 +203,56 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>loader_impl.h</label>
         <link refid="loader__impl_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="16">
         <label>loader.h</label>
         <link refid="loader_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>reflect_context.h</label>
         <link refid="reflect__context_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="21">
+      <node id="20">
         <label>reflect_signature.h</label>
         <link refid="reflect__signature_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
       </node>
-      <node id="20">
+      <node id="19">
         <label>reflect_future.h</label>
         <link refid="reflect__future_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -363,6 +370,36 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="75" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="75" declcolumn="19"/>
       </memberdef>
+      <memberdef kind="function" id="reflect__value_8h_1ab4ea738843b4862c598beb44c220aeda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API int</type>
+        <definition>REFLECT_API int value_validate</definition>
+        <argsstring>(value v)</argsstring>
+        <name>value_validate</name>
+        <param>
+          <type><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Check if the value @v is valid or the memory is corrupted. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference of value to be checked</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if the value is valid, null otherwhise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="87" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="87" declcolumn="17"/>
+      </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a797b2f8ba4f572bc05c1d86d69a2179d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
         <definition>REFLECT_API value value_copy</definition>
@@ -391,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="87" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="87" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="99" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="99" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1af5d25763b65c455048fb2d7468000c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -431,7 +468,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="100" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="100" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="112" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="112" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a7ae2174cfa62b082dffbbded72900077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API size_t</type>
@@ -461,7 +498,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="112" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="112" declcolumn="20"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="124" column="20" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="124" declcolumn="20"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1ac47ec011aa4afe1c51591d42bb5b2dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -489,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="121" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="121" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="133" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="133" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a8762facffefdc699ff3a6d005d0bdb94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -517,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="130" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="130" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="142" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="142" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a22b46168601daaacd8dca5186d60d6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -569,7 +606,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="146" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="146" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="158" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="158" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a0e1a0503a81542c577c7086ffd269f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void *</type>
@@ -599,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="158" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="158" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="170" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="170" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a0edca2b892c9757981a3418032f368d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -651,7 +688,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="173" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="173" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="185" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="185" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a06da8b687648cf10e92587cfbd22fa91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API <ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref></type>
@@ -705,7 +742,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="191" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="191" declcolumn="19"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="203" column="19" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="203" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="reflect__value_8h_1a75c11678a7edb92bbae645d6a9a65ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>REFLECT_API void</type>
@@ -733,7 +770,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="200" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="200" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" line="212" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h" declline="212" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -745,7 +782,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -800,7 +837,7 @@
 <codeline lineno="57"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="58"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>uninitialized<sp/>value<sp/>if<sp/>success,<sp/>null<sp/>otherwhise</highlight></codeline>
 <codeline lineno="59"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1ae21bf2663228ad09c7aaba7acf397285" kindref="member">value_alloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
+<codeline lineno="60" refid="reflect__value_8h_1ae21bf2663228ad09c7aaba7acf397285" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1ae21bf2663228ad09c7aaba7acf397285" kindref="member">value_alloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="62"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="63"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -815,138 +852,150 @@
 <codeline lineno="72"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="73"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>value<sp/>if<sp/>success,<sp/>null<sp/>otherwhise</highlight></codeline>
 <codeline lineno="74"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1ad54de5d34e19dff84a6798f20d5c68ad" kindref="member">value_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
+<codeline lineno="75" refid="reflect__value_8h_1ad54de5d34e19dff84a6798f20d5c68ad" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1ad54de5d34e19dff84a6798f20d5c68ad" kindref="member">value_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="77"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="78"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="79"><highlight class="comment">*<sp/><sp/><sp/><sp/>Copy<sp/>a<sp/>value<sp/>from<sp/>@v</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">*<sp/><sp/><sp/><sp/>Check<sp/>if<sp/>the<sp/>value<sp/>@v<sp/>is<sp/>valid<sp/>or<sp/>the<sp/>memory<sp/>is<sp/>corrupted</highlight></codeline>
 <codeline lineno="80"><highlight class="comment">*</highlight></codeline>
 <codeline lineno="81"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
-<codeline lineno="82"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>of<sp/>value<sp/>to<sp/>be<sp/>copied</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>of<sp/>value<sp/>to<sp/>be<sp/>checked</highlight></codeline>
 <codeline lineno="83"><highlight class="comment">*</highlight></codeline>
 <codeline lineno="84"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="85"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>new<sp/>value<sp/>copied<sp/>from<sp/>@v</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">*<sp/><sp/><sp/><sp/>Zero<sp/>if<sp/>the<sp/>value<sp/>is<sp/>valid,<sp/>null<sp/>otherwhise</highlight></codeline>
 <codeline lineno="86"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1a797b2f8ba4f572bc05c1d86d69a2179d" kindref="member">value_copy</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="87" refid="reflect__value_8h_1ab4ea738843b4862c598beb44c220aeda" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1ab4ea738843b4862c598beb44c220aeda" kindref="member">value_validate</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="89"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="90"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="91"><highlight class="comment">*<sp/><sp/><sp/><sp/>Copies<sp/>the<sp/>ownership<sp/>from<sp/>@src<sp/>to<sp/>@dst,<sp/>including<sp/>the<sp/>finalizer,</highlight></codeline>
-<codeline lineno="92"><highlight class="comment">*<sp/><sp/><sp/><sp/>and<sp/>resets<sp/>the<sp/>owner<sp/>and<sp/>finalizer<sp/>of<sp/>@src</highlight></codeline>
-<codeline lineno="93"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="94"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>src</highlight></codeline>
-<codeline lineno="95"><highlight class="comment">*<sp/><sp/><sp/><sp/>Source<sp/>value<sp/>which<sp/>will<sp/>lose<sp/>the<sp/>ownership</highlight></codeline>
-<codeline lineno="96"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="97"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>dst</highlight></codeline>
-<codeline lineno="98"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destination<sp/>value<sp/>which<sp/>will<sp/>recieve<sp/>the<sp/>ownership</highlight></codeline>
-<codeline lineno="99"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1af5d25763b65c455048fb2d7468000c73" kindref="member">value_move</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>src,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>dst);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="102"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="103"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="104"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>the<sp/>size<sp/>of<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">*<sp/><sp/><sp/><sp/>Copy<sp/>a<sp/>value<sp/>from<sp/>@v</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>of<sp/>value<sp/>to<sp/>be<sp/>copied</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>new<sp/>value<sp/>copied<sp/>from<sp/>@v</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="reflect__value_8h_1a797b2f8ba4f572bc05c1d86d69a2179d" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1a797b2f8ba4f572bc05c1d86d69a2179d" kindref="member">value_copy</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="101"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">*<sp/><sp/><sp/><sp/>Copies<sp/>the<sp/>ownership<sp/>from<sp/>@src<sp/>to<sp/>@dst,<sp/>including<sp/>the<sp/>finalizer,</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*<sp/><sp/><sp/><sp/>and<sp/>resets<sp/>the<sp/>owner<sp/>and<sp/>finalizer<sp/>of<sp/>@src</highlight></codeline>
 <codeline lineno="105"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="106"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
-<codeline lineno="107"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>src</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">*<sp/><sp/><sp/><sp/>Source<sp/>value<sp/>which<sp/>will<sp/>lose<sp/>the<sp/>ownership</highlight></codeline>
 <codeline lineno="108"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="109"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="110"><highlight class="comment">*<sp/><sp/><sp/><sp/>Size<sp/>in<sp/>bytes<sp/>of<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>dst</highlight></codeline>
+<codeline lineno="110"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destination<sp/>value<sp/>which<sp/>will<sp/>recieve<sp/>the<sp/>ownership</highlight></codeline>
 <codeline lineno="111"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a7ae2174cfa62b082dffbbded72900077" kindref="member">value_size</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="112" refid="reflect__value_8h_1af5d25763b65c455048fb2d7468000c73" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1af5d25763b65c455048fb2d7468000c73" kindref="member">value_move</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>src,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>dst);</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="114"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="115"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="116"><highlight class="comment">*<sp/><sp/><sp/><sp/>Increment<sp/>reference<sp/>count<sp/>of<sp/>a<sp/>value</highlight></codeline>
+<codeline lineno="116"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>the<sp/>size<sp/>of<sp/>the<sp/>value</highlight></codeline>
 <codeline lineno="117"><highlight class="comment">*</highlight></codeline>
 <codeline lineno="118"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
 <codeline lineno="119"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
-<codeline lineno="120"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1ac47ec011aa4afe1c51591d42bb5b2dde" kindref="member">value_ref_inc</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="123"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="124"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="125"><highlight class="comment">*<sp/><sp/><sp/><sp/>Decrement<sp/>reference<sp/>count<sp/>of<sp/>a<sp/>value</highlight></codeline>
-<codeline lineno="126"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="127"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
-<codeline lineno="128"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
-<codeline lineno="129"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a8762facffefdc699ff3a6d005d0bdb94" kindref="member">value_ref_dec</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="132"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="133"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="134"><highlight class="comment">*<sp/><sp/><sp/><sp/>Set<sp/>up<sp/>the<sp/>value<sp/>finalizer,<sp/>a<sp/>callback<sp/>that</highlight></codeline>
-<codeline lineno="135"><highlight class="comment">*<sp/><sp/><sp/><sp/>will<sp/>be<sp/>executed<sp/>when<sp/>the<sp/>value<sp/>life<sp/>ends</highlight></codeline>
-<codeline lineno="136"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="137"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
-<codeline lineno="138"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
-<codeline lineno="139"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="140"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>finalizer</highlight></codeline>
-<codeline lineno="141"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>callback</highlight></codeline>
-<codeline lineno="142"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="143"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>finalizer_data</highlight></codeline>
-<codeline lineno="144"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>additional<sp/>data<sp/>to<sp/>be<sp/>passed<sp/>when<sp/>the<sp/>finalizer<sp/>is<sp/>called</highlight></codeline>
-<codeline lineno="145"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a22b46168601daaacd8dca5186d60d6bd" kindref="member">value_finalizer</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/><ref refid="reflect__value_8h_1a9261a95d255b026c814b6cfbbd3f1e19" kindref="member">value_finalizer_cb</ref><sp/>finalizer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*finalizer_data);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="148"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="149"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="150"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>pointer<sp/>reference<sp/>to<sp/>value<sp/>data</highlight></codeline>
+<codeline lineno="120"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="121"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="122"><highlight class="comment">*<sp/><sp/><sp/><sp/>Size<sp/>in<sp/>bytes<sp/>of<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="123"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="reflect__value_8h_1a7ae2174cfa62b082dffbbded72900077" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a7ae2174cfa62b082dffbbded72900077" kindref="member">value_size</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="126"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">*<sp/><sp/><sp/><sp/>Increment<sp/>reference<sp/>count<sp/>of<sp/>a<sp/>value</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="130"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
+<codeline lineno="131"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="132"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="reflect__value_8h_1ac47ec011aa4afe1c51591d42bb5b2dde" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1ac47ec011aa4afe1c51591d42bb5b2dde" kindref="member">value_ref_inc</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="135"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="136"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">*<sp/><sp/><sp/><sp/>Decrement<sp/>reference<sp/>count<sp/>of<sp/>a<sp/>value</highlight></codeline>
+<codeline lineno="138"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
+<codeline lineno="140"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="141"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="reflect__value_8h_1a8762facffefdc699ff3a6d005d0bdb94" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a8762facffefdc699ff3a6d005d0bdb94" kindref="member">value_ref_dec</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="144"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="145"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="146"><highlight class="comment">*<sp/><sp/><sp/><sp/>Set<sp/>up<sp/>the<sp/>value<sp/>finalizer,<sp/>a<sp/>callback<sp/>that</highlight></codeline>
+<codeline lineno="147"><highlight class="comment">*<sp/><sp/><sp/><sp/>will<sp/>be<sp/>executed<sp/>when<sp/>the<sp/>value<sp/>life<sp/>ends</highlight></codeline>
+<codeline lineno="148"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="149"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
+<codeline lineno="150"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
 <codeline lineno="151"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="152"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
-<codeline lineno="153"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="152"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>finalizer</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>callback</highlight></codeline>
 <codeline lineno="154"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="155"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="156"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>writeable<sp/>memory<sp/>block<sp/>of<sp/>value<sp/>@v</highlight></codeline>
+<codeline lineno="155"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>finalizer_data</highlight></codeline>
+<codeline lineno="156"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>additional<sp/>data<sp/>to<sp/>be<sp/>passed<sp/>when<sp/>the<sp/>finalizer<sp/>is<sp/>called</highlight></codeline>
 <codeline lineno="157"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__value_8h_1a0e1a0503a81542c577c7086ffd269f2c" kindref="member">value_data</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="158" refid="reflect__value_8h_1a22b46168601daaacd8dca5186d60d6bd" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a22b46168601daaacd8dca5186d60d6bd" kindref="member">value_finalizer</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/><ref refid="reflect__value_8h_1a9261a95d255b026c814b6cfbbd3f1e19" kindref="member">value_finalizer_cb</ref><sp/>finalizer,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*finalizer_data);</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="160"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="161"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="162"><highlight class="comment">*<sp/><sp/><sp/><sp/>Convert<sp/>value<sp/>@v<sp/>to<sp/>memory<sp/>block<sp/>@data</highlight></codeline>
+<codeline lineno="162"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>pointer<sp/>reference<sp/>to<sp/>value<sp/>data</highlight></codeline>
 <codeline lineno="163"><highlight class="comment">*</highlight></codeline>
 <codeline lineno="164"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
 <codeline lineno="165"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
 <codeline lineno="166"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="167"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>data</highlight></codeline>
-<codeline lineno="168"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>memory<sp/>block<sp/>where<sp/>value<sp/>will<sp/>be<sp/>stored</highlight></codeline>
-<codeline lineno="169"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="170"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>bytes</highlight></codeline>
-<codeline lineno="171"><highlight class="comment">*<sp/><sp/><sp/><sp/>Size<sp/>in<sp/>bytes<sp/>of<sp/>the<sp/>memory<sp/>block<sp/>@data</highlight></codeline>
-<codeline lineno="172"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="173"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a0edca2b892c9757981a3418032f368d0" kindref="member">value_to</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="175"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="176"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="177"><highlight class="comment">*<sp/><sp/><sp/><sp/>Assing<sp/>memory<sp/>block<sp/>@data<sp/>to<sp/>value<sp/>@v</highlight></codeline>
+<codeline lineno="167"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="168"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>writeable<sp/>memory<sp/>block<sp/>of<sp/>value<sp/>@v</highlight></codeline>
+<codeline lineno="169"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="reflect__value_8h_1a0e1a0503a81542c577c7086ffd269f2c" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__value_8h_1a0e1a0503a81542c577c7086ffd269f2c" kindref="member">value_data</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="172"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="173"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="174"><highlight class="comment">*<sp/><sp/><sp/><sp/>Convert<sp/>value<sp/>@v<sp/>to<sp/>memory<sp/>block<sp/>@data</highlight></codeline>
+<codeline lineno="175"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="176"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
+<codeline lineno="177"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
 <codeline lineno="178"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="179"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
-<codeline lineno="180"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="179"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>data</highlight></codeline>
+<codeline lineno="180"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>memory<sp/>block<sp/>where<sp/>value<sp/>will<sp/>be<sp/>stored</highlight></codeline>
 <codeline lineno="181"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="182"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>data</highlight></codeline>
-<codeline lineno="183"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>memory<sp/>block<sp/>to<sp/>be<sp/>copied<sp/>into<sp/>@v</highlight></codeline>
-<codeline lineno="184"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="185"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>bytes</highlight></codeline>
-<codeline lineno="186"><highlight class="comment">*<sp/><sp/><sp/><sp/>Size<sp/>in<sp/>bytes<sp/>of<sp/>the<sp/>memory<sp/>block<sp/>@data</highlight></codeline>
-<codeline lineno="187"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="188"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="189"><highlight class="comment">*<sp/><sp/><sp/><sp/>Value<sp/>with<sp/>@data<sp/>of<sp/>size<sp/>@bytes<sp/>assigned<sp/>to<sp/>it</highlight></codeline>
-<codeline lineno="190"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="191"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1a06da8b687648cf10e92587cfbd22fa91" kindref="member">value_from</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="193"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="194"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="195"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>a<sp/>value<sp/>from<sp/>scope<sp/>stack</highlight></codeline>
+<codeline lineno="182"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>bytes</highlight></codeline>
+<codeline lineno="183"><highlight class="comment">*<sp/><sp/><sp/><sp/>Size<sp/>in<sp/>bytes<sp/>of<sp/>the<sp/>memory<sp/>block<sp/>@data</highlight></codeline>
+<codeline lineno="184"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="reflect__value_8h_1a0edca2b892c9757981a3418032f368d0" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a0edca2b892c9757981a3418032f368d0" kindref="member">value_to</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="187"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="188"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="189"><highlight class="comment">*<sp/><sp/><sp/><sp/>Assing<sp/>memory<sp/>block<sp/>@data<sp/>to<sp/>value<sp/>@v</highlight></codeline>
+<codeline lineno="190"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="191"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
+<codeline lineno="192"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="193"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="194"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>data</highlight></codeline>
+<codeline lineno="195"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>memory<sp/>block<sp/>to<sp/>be<sp/>copied<sp/>into<sp/>@v</highlight></codeline>
 <codeline lineno="196"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="197"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
-<codeline lineno="198"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
-<codeline lineno="199"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="200"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a75c11678a7edb92bbae645d6a9a65ef1" kindref="member">value_destroy</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_VALUE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="197"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>bytes</highlight></codeline>
+<codeline lineno="198"><highlight class="comment">*<sp/><sp/><sp/><sp/>Size<sp/>in<sp/>bytes<sp/>of<sp/>the<sp/>memory<sp/>block<sp/>@data</highlight></codeline>
+<codeline lineno="199"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="200"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="201"><highlight class="comment">*<sp/><sp/><sp/><sp/>Value<sp/>with<sp/>@data<sp/>of<sp/>size<sp/>@bytes<sp/>assigned<sp/>to<sp/>it</highlight></codeline>
+<codeline lineno="202"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="reflect__value_8h_1a06da8b687648cf10e92587cfbd22fa91" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__value_8h_1a06da8b687648cf10e92587cfbd22fa91" kindref="member">value_from</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="205"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="206"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="207"><highlight class="comment">*<sp/><sp/><sp/><sp/>Destroy<sp/>a<sp/>value<sp/>from<sp/>scope<sp/>stack</highlight></codeline>
+<codeline lineno="208"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="209"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>v</highlight></codeline>
+<codeline lineno="210"><highlight class="comment">*<sp/><sp/><sp/><sp/>Reference<sp/>to<sp/>the<sp/>value</highlight></codeline>
+<codeline lineno="211"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="reflect__value_8h_1a75c11678a7edb92bbae645d6a9a65ef1" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__value_8h_1a75c11678a7edb92bbae645d6a9a65ef1" kindref="member">value_destroy</ref>(<ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>v);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_VALUE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_value.h"/>
   </compounddef>

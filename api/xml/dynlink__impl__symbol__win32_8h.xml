@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dynlink__impl__symbol__win32_8h" kind="file" language="C++">
     <compoundname>dynlink_impl_symbol_win32.h</compoundname>
     <includes local="no">dynlink/dynlink_api.h</includes>
@@ -53,9 +53,9 @@
       <memberdef kind="define" id="dynlink__impl__symbol__win32_8h_1ac7c2e3794ef31f11c7743643f55000e6" prot="public" static="no">
         <name>DYNLINK_SYMBOL_EXPORT</name>
         <param><defname>name</defname></param>
-        <initializer>	DYNLINK_NO_EXPORT struct        \
-	{                               \
-		char name;                  \
+        <initializer>	DYNLINK_NO_EXPORT struct \
+	{ \
+		char name; \
 	} <ref refid="preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1" kindref="member">PREPROCESSOR_CONCAT</ref>(dynlink_no_export_, name)</initializer>
         <briefdescription>
         </briefdescription>
@@ -115,7 +115,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Dynamic<sp/>Link<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>dynamic<sp/>loading<sp/>and<sp/>linking<sp/>shared<sp/>objects<sp/>at<sp/>run-time.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -151,9 +151,9 @@
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Macros<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40" refid="dynlink__impl__symbol__win32_8h_1ac7c2e3794ef31f11c7743643f55000e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_SYMBOL_EXPORT(name)<sp/>\</highlight></codeline>
-<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DYNLINK_NO_EXPORT<sp/>struct<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
-<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>char<sp/>name;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DYNLINK_NO_EXPORT<sp/>struct<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>char<sp/>name;<sp/>\</highlight></codeline>
 <codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>PREPROCESSOR_CONCAT(dynlink_no_export_,<sp/>name)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
 <codeline lineno="46" refid="dynlink__impl__symbol__win32_8h_1a2103b1d11c0227b698826a7a7b2eb844" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_SYMBOL_GET(name)<sp/>name</highlight><highlight class="normal"></highlight></codeline>

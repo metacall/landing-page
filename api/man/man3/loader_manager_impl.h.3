@@ -1,0 +1,61 @@
+.TH "loader_manager_impl.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loader_manager_impl.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <loader/loader_api\&.h>\fP
+.br
+\fC#include <loader/loader_impl\&.h>\fP
+.br
+\fC#include <plugin/plugin_manager\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBloader_initialization_order\fP"
+.br
+.ti -1c
+.RI "struct \fBloader_manager_impl\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOADER_API loader_manager_impl \fBloader_manager_impl_initialize\fP (void)"
+.br
+.ti -1c
+.RI "LOADER_API plugin_manager_interface \fBloader_manager_impl_iface\fP (void)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_manager_impl_set_destroyed\fP (loader_manager_impl manager_impl, \fBloader_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_manager_impl_is_destroyed\fP (loader_manager_impl manager_impl, \fBloader_impl\fP impl)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_manager_impl_destroy\fP (loader_manager_impl manager_impl)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "LOADER_API loader_manager_impl loader_manager_impl_initialize (void)"
+
+.SS "LOADER_API plugin_manager_interface loader_manager_impl_iface (void)"
+
+.SS "LOADER_API void loader_manager_impl_set_destroyed (loader_manager_impl manager_impl, \fBloader_impl\fP impl)"
+
+.SS "LOADER_API int loader_manager_impl_is_destroyed (loader_manager_impl manager_impl, \fBloader_impl\fP impl)"
+
+.SS "LOADER_API void loader_manager_impl_destroy (loader_manager_impl manager_impl)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

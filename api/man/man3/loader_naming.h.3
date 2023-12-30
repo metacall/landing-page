@@ -1,4 +1,4 @@
-.TH "loader_naming.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "loader_naming.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,48 +8,50 @@ loader_naming.h
 .PP
 \fC#include <loader/loader_api\&.h>\fP
 .br
+\fC#include <portability/portability_path\&.h>\fP
+.br
 
 .SS "Macros"
 
 .in +1c
 .ti -1c
-.RI "#define \fBLOADER_NAMING_PATH_SIZE\fP   0x01FF"
+.RI "#define \fBLOADER_PATH_SIZE\fP   PORTABILITY_PATH_SIZE"
 .br
 .ti -1c
-.RI "#define \fBLOADER_NAMING_NAME_SIZE\fP   0xFF"
+.RI "#define \fBLOADER_NAME_SIZE\fP   0xFF"
 .br
 .ti -1c
-.RI "#define \fBLOADER_NAMING_TAG_SIZE\fP   0x40"
+.RI "#define \fBLOADER_TAG_SIZE\fP   0x40"
 .br
 .in -1c
 .SS "Typedefs"
 
 .in +1c
 .ti -1c
-.RI "typedef char \fBloader_naming_path\fP[\fBLOADER_NAMING_PATH_SIZE\fP]"
+.RI "typedef char \fBloader_path\fP[\fBLOADER_PATH_SIZE\fP]"
 .br
 .ti -1c
-.RI "typedef char \fBloader_naming_name\fP[\fBLOADER_NAMING_NAME_SIZE\fP]"
+.RI "typedef char \fBloader_name\fP[\fBLOADER_NAME_SIZE\fP]"
 .br
 .ti -1c
-.RI "typedef char \fBloader_naming_tag\fP[\fBLOADER_NAMING_TAG_SIZE\fP]"
+.RI "typedef char \fBloader_tag\fP[\fBLOADER_TAG_SIZE\fP]"
 .br
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define LOADER_NAMING_PATH_SIZE   0x01FF"
+.SS "#define LOADER_PATH_SIZE   PORTABILITY_PATH_SIZE"
 
-.SS "#define LOADER_NAMING_NAME_SIZE   0xFF"
+.SS "#define LOADER_NAME_SIZE   0xFF"
 
-.SS "#define LOADER_NAMING_TAG_SIZE   0x40"
+.SS "#define LOADER_TAG_SIZE   0x40"
 
 .SH "Typedef Documentation"
 .PP 
-.SS "typedef char loader_naming_path[\fBLOADER_NAMING_PATH_SIZE\fP]"
+.SS "typedef char loader_path[\fBLOADER_PATH_SIZE\fP]"
 
-.SS "typedef char loader_naming_name[\fBLOADER_NAMING_NAME_SIZE\fP]"
+.SS "typedef char loader_name[\fBLOADER_NAME_SIZE\fP]"
 
-.SS "typedef char loader_naming_tag[\fBLOADER_NAMING_TAG_SIZE\fP]"
+.SS "typedef char loader_tag[\fBLOADER_TAG_SIZE\fP]"
 
 .SH "Author"
 .PP 

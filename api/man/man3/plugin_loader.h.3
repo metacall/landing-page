@@ -1,0 +1,48 @@
+.TH "plugin_loader.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugin_loader.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <plugin/plugin_api\&.h>\fP
+.br
+\fC#include <plugin/plugin_impl\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct plugin_loader_type * \fBplugin_loader\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "PLUGIN_API \fBplugin_loader\fP \fBplugin_loader_create\fP (plugin_manager manager)"
+.br
+.ti -1c
+.RI "PLUGIN_API \fBplugin\fP \fBplugin_loader_load\fP (\fBplugin_loader\fP l, const char *name, void *impl, void(*dtor)(\fBplugin\fP))"
+.br
+.ti -1c
+.RI "PLUGIN_API void \fBplugin_loader_destroy\fP (\fBplugin_loader\fP l)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct plugin_loader_type* \fBplugin_loader\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "PLUGIN_API \fBplugin_loader\fP plugin_loader_create (plugin_manager manager)"
+
+.SS "PLUGIN_API \fBplugin\fP plugin_loader_load (\fBplugin_loader\fP l, const char * name, void * impl, void(*)(\fBplugin\fP) dtor)"
+
+.SS "PLUGIN_API void plugin_loader_destroy (\fBplugin_loader\fP l)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

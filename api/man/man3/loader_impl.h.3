@@ -1,4 +1,4 @@
-.TH "loader_impl.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "loader_impl.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,16 +10,13 @@ loader_impl.h
 .br
 \fC#include <loader/loader_impl_interface\&.h>\fP
 .br
-\fC#include <loader/loader_path\&.h>\fP
+\fC#include <loader/loader_naming\&.h>\fP
+.br
+\fC#include <plugin/plugin_impl\&.h>\fP
+.br
+\fC#include <plugin/plugin_manager\&.h>\fP
 .br
 
-.SS "Macros"
-
-.in +1c
-.ti -1c
-.RI "#define \fBLOADER_HOST_PROXY_NAME\fP   '__metacall_host__'"
-.br
-.in -1c
 .SS "Functions"
 
 .in +1c
@@ -27,19 +24,22 @@ loader_impl.h
 .RI "LOADER_API int \fBloader_impl_is_initialized\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
-.RI "LOADER_API \fBloader_impl\fP \fBloader_impl_create\fP (const char *path, const \fBloader_naming_tag\fP tag)"
+.RI "LOADER_API \fBloader_impl\fP \fBloader_impl_create\fP (const \fBloader_tag\fP tag)"
+.br
+.ti -1c
+.RI "LOADER_API \fBloader_impl\fP \fBloader_impl_create_host\fP (const \fBloader_tag\fP tag)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_impl_attach\fP (\fBloader_impl\fP impl, \fBplugin\fP p)"
+.br
+.ti -1c
+.RI "LOADER_API \fBplugin\fP \fBloader_impl_plugin\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
 .RI "LOADER_API \fBloader_impl_data\fP \fBloader_impl_get\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
 .RI "LOADER_API \fBvalue\fP \fBloader_impl_get_value\fP (\fBloader_impl\fP impl, const char *name)"
-.br
-.ti -1c
-.RI "LOADER_API loader_impl_interface \fBloader_impl_symbol\fP (\fBloader_impl\fP impl)"
-.br
-.ti -1c
-.RI "LOADER_API \fBloader_naming_tag\fP * \fBloader_impl_tag\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
 .RI "LOADER_API \fBcontext\fP \fBloader_impl_context\fP (\fBloader_impl\fP impl)"
@@ -51,16 +51,16 @@ loader_impl.h
 .RI "LOADER_API int \fBloader_impl_type_define\fP (\fBloader_impl\fP impl, const char *name, \fBtype\fP t)"
 .br
 .ti -1c
-.RI "LOADER_API int \fBloader_impl_execution_path\fP (\fBloader_impl\fP impl, const \fBloader_naming_path\fP path)"
+.RI "LOADER_API int \fBloader_impl_execution_path\fP (\fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP path)"
 .br
 .ti -1c
-.RI "LOADER_API int \fBloader_impl_load_from_file\fP (\fBloader_impl\fP impl, const \fBloader_naming_path\fP paths[], size_t size, void **handle_ptr)"
+.RI "LOADER_API int \fBloader_impl_load_from_file\fP (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP paths[], size_t size, void **handle_ptr)"
 .br
 .ti -1c
-.RI "LOADER_API int \fBloader_impl_load_from_memory\fP (\fBloader_impl\fP impl, const char *buffer, size_t size, void **handle_ptr)"
+.RI "LOADER_API int \fBloader_impl_load_from_memory\fP (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const char *buffer, size_t size, void **handle_ptr)"
 .br
 .ti -1c
-.RI "LOADER_API int \fBloader_impl_load_from_package\fP (\fBloader_impl\fP impl, const \fBloader_naming_path\fP path, void **handle_ptr)"
+.RI "LOADER_API int \fBloader_impl_load_from_package\fP (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP path, void **handle_ptr)"
 .br
 .ti -1c
 .RI "LOADER_API void * \fBloader_impl_get_handle\fP (\fBloader_impl\fP impl, const char *name)"
@@ -72,13 +72,19 @@ loader_impl.h
 .RI "LOADER_API void * \fBloader_impl_get_options\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
-.RI "const LOADER_API char * \fBloader_impl_handle_id\fP (void *handle)"
+.RI "LOADER_API const char * \fBloader_impl_handle_id\fP (void *handle)"
 .br
 .ti -1c
 .RI "LOADER_API \fBvalue\fP \fBloader_impl_handle_export\fP (void *handle)"
 .br
 .ti -1c
 .RI "LOADER_API \fBcontext\fP \fBloader_impl_handle_context\fP (void *handle)"
+.br
+.ti -1c
+.RI "LOADER_API void * \fBloader_impl_handle_container_of\fP (\fBloader_impl\fP impl, void *handle)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_impl_handle_validate\fP (void *handle)"
 .br
 .ti -1c
 .RI "LOADER_API \fBvalue\fP \fBloader_impl_metadata\fP (\fBloader_impl\fP impl)"
@@ -90,29 +96,30 @@ loader_impl.h
 .RI "LOADER_API void \fBloader_impl_destroy_objects\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
-.RI "LOADER_API void \fBloader_impl_destroy\fP (\fBloader_impl\fP impl)"
+.RI "LOADER_API void \fBloader_impl_destroy_deallocate\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
-.RI "LOADER_API \fBloader_impl\fP \fBloader_impl_create_proxy\fP (void)"
+.RI "LOADER_API void \fBloader_impl_destroy_dtor\fP (\fBplugin\fP p)"
+.br
+.ti -1c
+.RI "LOADER_API void \fBloader_impl_destroy\fP (\fBplugin\fP p, \fBloader_impl\fP impl)"
 .br
 .in -1c
-.SH "Macro Definition Documentation"
-.PP 
-.SS "#define LOADER_HOST_PROXY_NAME   '__metacall_host__'"
-
 .SH "Function Documentation"
 .PP 
 .SS "LOADER_API int loader_impl_is_initialized (\fBloader_impl\fP impl)"
 
-.SS "LOADER_API \fBloader_impl\fP loader_impl_create (const char * path, const \fBloader_naming_tag\fP tag)"
+.SS "LOADER_API \fBloader_impl\fP loader_impl_create (const \fBloader_tag\fP tag)"
+
+.SS "LOADER_API \fBloader_impl\fP loader_impl_create_host (const \fBloader_tag\fP tag)"
+
+.SS "LOADER_API void loader_impl_attach (\fBloader_impl\fP impl, \fBplugin\fP p)"
+
+.SS "LOADER_API \fBplugin\fP loader_impl_plugin (\fBloader_impl\fP impl)"
 
 .SS "LOADER_API \fBloader_impl_data\fP loader_impl_get (\fBloader_impl\fP impl)"
 
 .SS "LOADER_API \fBvalue\fP loader_impl_get_value (\fBloader_impl\fP impl, const char * name)"
-
-.SS "LOADER_API loader_impl_interface loader_impl_symbol (\fBloader_impl\fP impl)"
-
-.SS "LOADER_API \fBloader_naming_tag\fP* loader_impl_tag (\fBloader_impl\fP impl)"
 
 .SS "LOADER_API \fBcontext\fP loader_impl_context (\fBloader_impl\fP impl)"
 
@@ -120,13 +127,13 @@ loader_impl.h
 
 .SS "LOADER_API int loader_impl_type_define (\fBloader_impl\fP impl, const char * name, \fBtype\fP t)"
 
-.SS "LOADER_API int loader_impl_execution_path (\fBloader_impl\fP impl, const \fBloader_naming_path\fP path)"
+.SS "LOADER_API int loader_impl_execution_path (\fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP path)"
 
-.SS "LOADER_API int loader_impl_load_from_file (\fBloader_impl\fP impl, const \fBloader_naming_path\fP paths[], size_t size, void ** handle_ptr)"
+.SS "LOADER_API int loader_impl_load_from_file (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP paths[], size_t size, void ** handle_ptr)"
 
-.SS "LOADER_API int loader_impl_load_from_memory (\fBloader_impl\fP impl, const char * buffer, size_t size, void ** handle_ptr)"
+.SS "LOADER_API int loader_impl_load_from_memory (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const char * buffer, size_t size, void ** handle_ptr)"
 
-.SS "LOADER_API int loader_impl_load_from_package (\fBloader_impl\fP impl, const \fBloader_naming_path\fP path, void ** handle_ptr)"
+.SS "LOADER_API int loader_impl_load_from_package (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP path, void ** handle_ptr)"
 
 .SS "LOADER_API void* loader_impl_get_handle (\fBloader_impl\fP impl, const char * name)"
 
@@ -134,11 +141,15 @@ loader_impl.h
 
 .SS "LOADER_API void* loader_impl_get_options (\fBloader_impl\fP impl)"
 
-.SS "const LOADER_API char* loader_impl_handle_id (void * handle)"
+.SS "LOADER_API const char* loader_impl_handle_id (void * handle)"
 
 .SS "LOADER_API \fBvalue\fP loader_impl_handle_export (void * handle)"
 
 .SS "LOADER_API \fBcontext\fP loader_impl_handle_context (void * handle)"
+
+.SS "LOADER_API void* loader_impl_handle_container_of (\fBloader_impl\fP impl, void * handle)"
+
+.SS "LOADER_API int loader_impl_handle_validate (void * handle)"
 
 .SS "LOADER_API \fBvalue\fP loader_impl_metadata (\fBloader_impl\fP impl)"
 
@@ -146,9 +157,11 @@ loader_impl.h
 
 .SS "LOADER_API void loader_impl_destroy_objects (\fBloader_impl\fP impl)"
 
-.SS "LOADER_API void loader_impl_destroy (\fBloader_impl\fP impl)"
+.SS "LOADER_API void loader_impl_destroy_deallocate (\fBloader_impl\fP impl)"
 
-.SS "LOADER_API \fBloader_impl\fP loader_impl_create_proxy (void)"
+.SS "LOADER_API void loader_impl_destroy_dtor (\fBplugin\fP p)"
+
+.SS "LOADER_API void loader_impl_destroy (\fBplugin\fP p, \fBloader_impl\fP impl)"
 
 .SH "Author"
 .PP 

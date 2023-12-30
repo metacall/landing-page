@@ -1,0 +1,145 @@
+\doxysection{plugin\+\_\+interface.\+hpp File Reference}
+\label{plugin__interface_8hpp}\index{plugin\_interface.hpp@{plugin\_interface.hpp}}
+{\ttfamily \#include $<$preprocessor/preprocessor.\+h$>$}\newline
+{\ttfamily \#include $<$log/log.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect.\+h$>$}\newline
+{\ttfamily \#include $<$metacall/metacall.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for plugin\+\_\+interface.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plugin__interface_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ EXTENSION\+\_\+\+FUNCTION\+\_\+\+IMPL\+\_\+\+VOID}(ret,  name)
+\item 
+\#define \textbf{ EXTENSION\+\_\+\+FUNCTION\+\_\+\+IMPL}(ret,  name, ...)
+\item 
+\#define \textbf{ EXTENSION\+\_\+\+FUNCTION}(ret,  name, ...)
+\item 
+\#define \textbf{ EXTENSION\+\_\+\+FUNCTION\+\_\+\+THROW}(error)
+\item 
+\#define \textbf{ EXTENSION\+\_\+\+FUNCTION\+\_\+\+CHECK\+\_\+\+ITERATOR}(error,  iterator,  \textbf{ value})
+\item 
+\#define \textbf{ EXTENSION\+\_\+\+FUNCTION\+\_\+\+CHECK}(error, ...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{plugin__interface_8hpp_a91ac28c5c492c0c0c1a986bb50874f48}} 
+\index{plugin\_interface.hpp@{plugin\_interface.hpp}!EXTENSION\_FUNCTION\_IMPL\_VOID@{EXTENSION\_FUNCTION\_IMPL\_VOID}}
+\index{EXTENSION\_FUNCTION\_IMPL\_VOID@{EXTENSION\_FUNCTION\_IMPL\_VOID}!plugin\_interface.hpp@{plugin\_interface.hpp}}
+\doxysubsubsection{EXTENSION\_FUNCTION\_IMPL\_VOID}
+{\footnotesize\ttfamily \#define EXTENSION\+\_\+\+FUNCTION\+\_\+\+IMPL\+\_\+\+VOID(\begin{DoxyParamCaption}\item[{}]{ret,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        if (metacall\_register\_loaderv(loader, context, PREPROCESSOR\_STRINGIFY(name), name, ret, 0, NULL) != 0) \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{            log\_write(\textcolor{stringliteral}{"{}metacall"{}}, LOG\_LEVEL\_ERROR, \textcolor{stringliteral}{"{}Failed to register function: "{}} PREPROCESSOR\_STRINGIFY(name)); \(\backslash\)}
+\DoxyCodeLine{            return 1; \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\label{plugin__interface_8hpp_a6c17abaed3d41e86f7ba99664e6c82c3}} 
+\index{plugin\_interface.hpp@{plugin\_interface.hpp}!EXTENSION\_FUNCTION\_IMPL@{EXTENSION\_FUNCTION\_IMPL}}
+\index{EXTENSION\_FUNCTION\_IMPL@{EXTENSION\_FUNCTION\_IMPL}!plugin\_interface.hpp@{plugin\_interface.hpp}}
+\doxysubsubsection{EXTENSION\_FUNCTION\_IMPL}
+{\footnotesize\ttfamily \#define EXTENSION\+\_\+\+FUNCTION\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{ret,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        enum metacall\_value\_id arg\_types[] = \{ \_\_VA\_ARGS\_\_ \}; \(\backslash\)}
+\DoxyCodeLine{        if (metacall\_register\_loaderv(loader, context, PREPROCESSOR\_STRINGIFY(name), name, ret, PREPROCESSOR\_ARGS\_COUNT(\_\_VA\_ARGS\_\_), arg\_types) != 0) \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{            log\_write(\textcolor{stringliteral}{"{}metacall"{}}, LOG\_LEVEL\_ERROR, \textcolor{stringliteral}{"{}Failed to register function: "{}} PREPROCESSOR\_STRINGIFY(name)); \(\backslash\)}
+\DoxyCodeLine{            return 1; \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\label{plugin__interface_8hpp_a29a08a341120da17f5a5f8dfc8bc4385}} 
+\index{plugin\_interface.hpp@{plugin\_interface.hpp}!EXTENSION\_FUNCTION@{EXTENSION\_FUNCTION}}
+\index{EXTENSION\_FUNCTION@{EXTENSION\_FUNCTION}!plugin\_interface.hpp@{plugin\_interface.hpp}}
+\doxysubsubsection{EXTENSION\_FUNCTION}
+{\footnotesize\ttfamily \#define EXTENSION\+\_\+\+FUNCTION(\begin{DoxyParamCaption}\item[{}]{ret,  }\item[{}]{name,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    PREPROCESSOR\_IF(PREPROCESSOR\_ARGS\_EMPTY(\_\_VA\_ARGS\_\_), \(\backslash\)}
+\DoxyCodeLine{        EXTENSION\_FUNCTION\_IMPL\_VOID(ret, name), \(\backslash\)}
+\DoxyCodeLine{        EXTENSION\_FUNCTION\_IMPL(ret, name, \_\_VA\_ARGS\_\_))}
+
+\end{DoxyCode}
+\mbox{\label{plugin__interface_8hpp_a879122e13eac227389dac9ee5a3547f4}} 
+\index{plugin\_interface.hpp@{plugin\_interface.hpp}!EXTENSION\_FUNCTION\_THROW@{EXTENSION\_FUNCTION\_THROW}}
+\index{EXTENSION\_FUNCTION\_THROW@{EXTENSION\_FUNCTION\_THROW}!plugin\_interface.hpp@{plugin\_interface.hpp}}
+\doxysubsubsection{EXTENSION\_FUNCTION\_THROW}
+{\footnotesize\ttfamily \#define EXTENSION\+\_\+\+FUNCTION\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{error }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        \textcolor{comment}{/* log\_write("{}metacall"{}, LOG\_LEVEL\_ERROR, error); */} \(\backslash\)}
+\DoxyCodeLine{        exception ex = exception\_create\_const(error, \textcolor{stringliteral}{"{}PluginException"{}}, 0, \textcolor{stringliteral}{"{}"{}}); \(\backslash\)}
+\DoxyCodeLine{        throwable th = throwable\_create(value\_create\_exception(ex)); \(\backslash\)}
+\DoxyCodeLine{        return value\_create\_throwable(th); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\label{plugin__interface_8hpp_a41efb02583af86433ef503cb35cdb8c7}} 
+\index{plugin\_interface.hpp@{plugin\_interface.hpp}!EXTENSION\_FUNCTION\_CHECK\_ITERATOR@{EXTENSION\_FUNCTION\_CHECK\_ITERATOR}}
+\index{EXTENSION\_FUNCTION\_CHECK\_ITERATOR@{EXTENSION\_FUNCTION\_CHECK\_ITERATOR}!plugin\_interface.hpp@{plugin\_interface.hpp}}
+\doxysubsubsection{EXTENSION\_FUNCTION\_CHECK\_ITERATOR}
+{\footnotesize\ttfamily \#define EXTENSION\+\_\+\+FUNCTION\+\_\+\+CHECK\+\_\+\+ITERATOR(\begin{DoxyParamCaption}\item[{}]{error,  }\item[{}]{iterator,  }\item[{}]{\textbf{ value} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (metacall\_value\_id(args[iterator]) != value) \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        std::stringstream ss; \(\backslash\)}
+\DoxyCodeLine{        ss << error \textcolor{stringliteral}{"{}. The parameter number "{}} PREPROCESSOR\_STRINGIFY(PREPROCESSOR\_ARGS\_COUNT(iterator)) \textcolor{stringliteral}{"{} requires a value of type "{}} << metacall\_value\_id\_name(value) << \textcolor{stringliteral}{"{}, received: "{}} << metacall\_value\_type\_name(args[iterator]); \(\backslash\)}
+\DoxyCodeLine{        std::string error\_msg = ss.str(); \(\backslash\)}
+\DoxyCodeLine{        EXTENSION\_FUNCTION\_THROW(error\_msg.c\_str()); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\label{plugin__interface_8hpp_ae1652160f9ac24ba069540788d87de27}} 
+\index{plugin\_interface.hpp@{plugin\_interface.hpp}!EXTENSION\_FUNCTION\_CHECK@{EXTENSION\_FUNCTION\_CHECK}}
+\index{EXTENSION\_FUNCTION\_CHECK@{EXTENSION\_FUNCTION\_CHECK}!plugin\_interface.hpp@{plugin\_interface.hpp}}
+\doxysubsubsection{EXTENSION\_FUNCTION\_CHECK}
+{\footnotesize\ttfamily \#define EXTENSION\+\_\+\+FUNCTION\+\_\+\+CHECK(\begin{DoxyParamCaption}\item[{}]{error,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        (void)data; \textcolor{comment}{/* TODO: Do something with data */} \(\backslash\)}
+\DoxyCodeLine{        \textcolor{comment}{/* Disable warning on args when no args */} \(\backslash\)}
+\DoxyCodeLine{        PREPROCESSOR\_IF(PREPROCESSOR\_ARGS\_EMPTY(\_\_VA\_ARGS\_\_), \(\backslash\)}
+\DoxyCodeLine{                        (\textcolor{keywordtype}{void})args; \(\backslash\)}
+\DoxyCodeLine{                        , \(\backslash\)}
+\DoxyCodeLine{                        PREPROCESSOR\_EMPTY\_SYMBOL()) \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (argc != PREPROCESSOR\_ARGS\_COUNT(\_\_VA\_ARGS\_\_)) \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{            std::stringstream ss; \(\backslash\)}
+\DoxyCodeLine{            ss << error \textcolor{stringliteral}{"{}. The required number of argumens is "{}} PREPROCESSOR\_STRINGIFY(PREPROCESSOR\_ARGS\_COUNT(\_\_VA\_ARGS\_\_)) \textcolor{stringliteral}{"{}, received: "{}} << argc; \(\backslash\)}
+\DoxyCodeLine{            std::string error\_msg = ss.str(); \(\backslash\)}
+\DoxyCodeLine{            EXTENSION\_FUNCTION\_THROW(error\_msg.c\_str()); \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{        PREPROCESSOR\_FOR(EXTENSION\_FUNCTION\_CHECK\_ITERATOR, error, \_\_VA\_ARGS\_\_) \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}

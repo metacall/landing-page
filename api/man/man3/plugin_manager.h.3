@@ -1,0 +1,107 @@
+.TH "plugin_manager.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugin_manager.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <plugin/plugin_api\&.h>\fP
+.br
+\fC#include <plugin/plugin_impl\&.h>\fP
+.br
+\fC#include <plugin/plugin_loader\&.h>\fP
+.br
+\fC#include <adt/adt_set\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBplugin_manager\fP"
+.br
+.ti -1c
+.RI "struct \fBplugin_manager_interface\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBplugin_manager_declare\fP(name)   	struct \fBplugin_manager_type\fP name = { 0 }"
+.br
+.ti -1c
+.RI "#define \fBplugin_manager_impl_type\fP(manager,  \fBtype_name\fP)   	((\fBtype_name\fP)\fBplugin_manager_impl\fP(manager))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "PLUGIN_API int \fBplugin_manager_initialize\fP (plugin_manager manager, const char *name, const char *environment_library_path, const char *default_library_path, plugin_manager_interface iface, void *impl)"
+.br
+.ti -1c
+.RI "PLUGIN_API const char * \fBplugin_manager_name\fP (plugin_manager manager)"
+.br
+.ti -1c
+.RI "PLUGIN_API char * \fBplugin_manager_library_path\fP (plugin_manager manager)"
+.br
+.ti -1c
+.RI "PLUGIN_API void * \fBplugin_manager_impl\fP (plugin_manager manager)"
+.br
+.ti -1c
+.RI "PLUGIN_API size_t \fBplugin_manager_size\fP (plugin_manager manager)"
+.br
+.ti -1c
+.RI "PLUGIN_API int \fBplugin_manager_register\fP (plugin_manager manager, \fBplugin\fP p)"
+.br
+.ti -1c
+.RI "PLUGIN_API \fBplugin\fP \fBplugin_manager_create\fP (plugin_manager manager, const char *name, void *impl, void(*dtor)(\fBplugin\fP))"
+.br
+.ti -1c
+.RI "PLUGIN_API \fBplugin\fP \fBplugin_manager_get\fP (plugin_manager manager, const char *name)"
+.br
+.ti -1c
+.RI "PLUGIN_API void \fBplugin_manager_iterate\fP (plugin_manager manager, int(*iterator)(plugin_manager, \fBplugin\fP, void *), void *data)"
+.br
+.ti -1c
+.RI "PLUGIN_API int \fBplugin_manager_clear\fP (plugin_manager manager, \fBplugin\fP p)"
+.br
+.ti -1c
+.RI "PLUGIN_API void \fBplugin_manager_destroy\fP (plugin_manager manager)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define plugin_manager_declare(name)   	struct \fBplugin_manager_type\fP name = { 0 }"
+
+.SS "#define plugin_manager_impl_type(manager, \fBtype_name\fP)   	((\fBtype_name\fP)\fBplugin_manager_impl\fP(manager))"
+
+.SH "Function Documentation"
+.PP 
+.SS "PLUGIN_API int plugin_manager_initialize (plugin_manager manager, const char * name, const char * environment_library_path, const char * default_library_path, plugin_manager_interface iface, void * impl)"
+
+.SS "PLUGIN_API const char* plugin_manager_name (plugin_manager manager)"
+
+.SS "PLUGIN_API char* plugin_manager_library_path (plugin_manager manager)"
+
+.SS "PLUGIN_API void* plugin_manager_impl (plugin_manager manager)"
+
+.SS "PLUGIN_API size_t plugin_manager_size (plugin_manager manager)"
+
+.SS "PLUGIN_API int plugin_manager_register (plugin_manager manager, \fBplugin\fP p)"
+
+.SS "PLUGIN_API \fBplugin\fP plugin_manager_create (plugin_manager manager, const char * name, void * impl, void(*)(\fBplugin\fP) dtor)"
+
+.SS "PLUGIN_API \fBplugin\fP plugin_manager_get (plugin_manager manager, const char * name)"
+
+.SS "PLUGIN_API void plugin_manager_iterate (plugin_manager manager, int(*)(plugin_manager, \fBplugin\fP, void *) iterator, void * data)"
+
+.SS "PLUGIN_API int plugin_manager_clear (plugin_manager manager, \fBplugin\fP p)"
+
+.SS "PLUGIN_API void plugin_manager_destroy (plugin_manager manager)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

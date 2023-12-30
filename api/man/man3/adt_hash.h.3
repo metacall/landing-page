@@ -1,4 +1,4 @@
-.TH "adt_hash.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "adt_hash.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,12 +8,14 @@ adt_hash.h
 .PP
 \fC#include <adt/adt_api\&.h>\fP
 .br
+\fC#include <stdint\&.h>\fP
+.br
 
 .SS "Typedefs"
 
 .in +1c
 .ti -1c
-.RI "typedef unsigned int \fBhash\fP"
+.RI "typedef uintptr_t \fBhash\fP"
 .br
 .ti -1c
 .RI "typedef void * \fBhash_key\fP"
@@ -28,10 +30,13 @@ adt_hash.h
 .ti -1c
 .RI "ADT_API \fBhash\fP \fBhash_callback_str\fP (const \fBhash_key\fP key)"
 .br
+.ti -1c
+.RI "ADT_API \fBhash\fP \fBhash_callback_ptr\fP (const \fBhash_key\fP key)"
+.br
 .in -1c
 .SH "Typedef Documentation"
 .PP 
-.SS "typedef unsigned int \fBhash\fP"
+.SS "typedef uintptr_t \fBhash\fP"
 
 .SS "typedef void* \fBhash_key\fP"
 
@@ -40,6 +45,8 @@ adt_hash.h
 .SH "Function Documentation"
 .PP 
 .SS "ADT_API \fBhash\fP hash_callback_str (const \fBhash_key\fP key)"
+
+.SS "ADT_API \fBhash\fP hash_callback_ptr (const \fBhash_key\fP key)"
 
 .SH "Author"
 .PP 

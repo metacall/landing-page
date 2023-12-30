@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__map_8h">
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_log__map_8h" xml:lang="en-US">
 <title>log_map.h File Reference</title>
 <indexterm><primary>log_map.h</primary></indexterm>
 <programlisting>#include &lt;log/log_api.h&gt;
@@ -42,9 +42,9 @@
 </listitem>
             <listitem><para>LOG_API int <link linkend="_log__map_8h_1a45919aa5dc4f8d86a587688f31d8f21c">log_map_insert</link> (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>, const char *key, const void *<link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link>)</para>
 </listitem>
-            <listitem><para>const LOG_API void * <link linkend="_log__map_8h_1ad9b2193625cf0720ceb7c6f88747a41e">log_map_get</link> (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>, const char *key)</para>
+            <listitem><para>LOG_API const void * <link linkend="_log__map_8h_1a16f1e2ff84b885e80713525986e527c9">log_map_get</link> (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>, const char *key)</para>
 </listitem>
-            <listitem><para>const LOG_API void * <link linkend="_log__map_8h_1a75e4147fdf32fa0e85b3f92715f48bcf">log_map_remove</link> (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>, const char *key)</para>
+            <listitem><para>LOG_API const void * <link linkend="_log__map_8h_1ad66f3a9032a13a320eeea2e0b94b342a">log_map_remove</link> (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>, const char *key)</para>
 </listitem>
             <listitem><para>LOG_API int <link linkend="_log__map_8h_1a1cce62efc00f8725d0c98448afcc4d03">log_map_clear</link> (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>)</para>
 </listitem>
@@ -52,9 +52,9 @@
 </listitem>
             <listitem><para>LOG_API <link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> <link linkend="_log__map_8h_1a868fd9f4821e61dd5c256fa92be67483">log_map_iterator_begin</link> (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> <link linkend="_adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c">map</link>)</para>
 </listitem>
-            <listitem><para>const LOG_API char * <link linkend="_log__map_8h_1abe996fa9adc787155fe80220af1b86b9">log_map_iterator_key</link> (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</para>
+            <listitem><para>LOG_API const char * <link linkend="_log__map_8h_1a3b65c5d68b4e31e765c5d87c0c5a6056">log_map_iterator_key</link> (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</para>
 </listitem>
-            <listitem><para>const LOG_API void * <link linkend="_log__map_8h_1ad44b39000edc860f31d44c1f18617b02">log_map_iterator_value</link> (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</para>
+            <listitem><para>LOG_API const void * <link linkend="_log__map_8h_1af164cc8f451c59c65a10d0fee679cde5">log_map_iterator_value</link> (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</para>
 </listitem>
             <listitem><para>LOG_API int <link linkend="_log__map_8h_1a6b33590e86d50ce35920e7826b2ff0b1">log_map_iterator_next</link> (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</para>
 </listitem>
@@ -104,15 +104,15 @@
     <title>log_map_insert()</title>
 <indexterm><primary>log_map_insert</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_insert</secondary></indexterm>
-<para><computeroutput>LOG_API int log_map_insert (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map, const char * key, const void * value)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1ad9b2193625cf0720ceb7c6f88747a41e"/>    <section>
+<para><computeroutput>LOG_API int log_map_insert (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map, const char * key, const void * value)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1a16f1e2ff84b885e80713525986e527c9"/>    <section>
     <title>log_map_get()</title>
 <indexterm><primary>log_map_get</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_get</secondary></indexterm>
-<para><computeroutput>const LOG_API void* log_map_get (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map, const char * key)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1a75e4147fdf32fa0e85b3f92715f48bcf"/>    <section>
+<para><computeroutput>LOG_API const void* log_map_get (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map, const char * key)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1ad66f3a9032a13a320eeea2e0b94b342a"/>    <section>
     <title>log_map_remove()</title>
 <indexterm><primary>log_map_remove</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_remove</secondary></indexterm>
-<para><computeroutput>const LOG_API void* log_map_remove (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map, const char * key)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1a1cce62efc00f8725d0c98448afcc4d03"/>    <section>
+<para><computeroutput>LOG_API const void* log_map_remove (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map, const char * key)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1a1cce62efc00f8725d0c98448afcc4d03"/>    <section>
     <title>log_map_clear()</title>
 <indexterm><primary>log_map_clear</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_clear</secondary></indexterm>
@@ -124,15 +124,15 @@
     <title>log_map_iterator_begin()</title>
 <indexterm><primary>log_map_iterator_begin</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_iterator_begin</secondary></indexterm>
-<para><computeroutput>LOG_API <link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> log_map_iterator_begin (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1abe996fa9adc787155fe80220af1b86b9"/>    <section>
+<para><computeroutput>LOG_API <link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> log_map_iterator_begin (<link linkend="_log__map_8h_1a7b4ee73aca99f44b9191c6d2869cf6de">log_map</link> map)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1a3b65c5d68b4e31e765c5d87c0c5a6056"/>    <section>
     <title>log_map_iterator_key()</title>
 <indexterm><primary>log_map_iterator_key</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_iterator_key</secondary></indexterm>
-<para><computeroutput>const LOG_API char* log_map_iterator_key (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1ad44b39000edc860f31d44c1f18617b02"/>    <section>
+<para><computeroutput>LOG_API const char* log_map_iterator_key (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1af164cc8f451c59c65a10d0fee679cde5"/>    <section>
     <title>log_map_iterator_value()</title>
 <indexterm><primary>log_map_iterator_value</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_iterator_value</secondary></indexterm>
-<para><computeroutput>const LOG_API void* log_map_iterator_value (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1a6b33590e86d50ce35920e7826b2ff0b1"/>    <section>
+<para><computeroutput>LOG_API const void* log_map_iterator_value (<link linkend="_log__map_8h_1a5759f32622bbae31823849a72cb65278">log_map_iterator</link> iterator)</computeroutput></para>    </section><anchor xml:id="_log__map_8h_1a6b33590e86d50ce35920e7826b2ff0b1"/>    <section>
     <title>log_map_iterator_next()</title>
 <indexterm><primary>log_map_iterator_next</primary><secondary>log_map.h</secondary></indexterm>
 <indexterm><primary>log_map.h</primary><secondary>log_map_iterator_next</secondary></indexterm>

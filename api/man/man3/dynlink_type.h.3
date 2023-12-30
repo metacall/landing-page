@@ -1,4 +1,4 @@
-.TH "dynlink_type.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "dynlink_type.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,6 +8,8 @@ dynlink_type.h
 .PP
 \fC#include <dynlink/dynlink_api\&.h>\fP
 .br
+\fC#include <portability/portability_library_path\&.h>\fP
+.br
 
 .SS "Typedefs"
 
@@ -15,31 +17,30 @@ dynlink_type.h
 .ti -1c
 .RI "typedef struct dynlink_type * \fBdynlink\fP"
 .br
-.in -1c
-.SS "Variables"
-
-.in +1c
 .ti -1c
-.RI "const typedef char * \fBdynlink_path\fP"
+.RI "typedef const char * \fBdynlink_path\fP"
 .br
 .ti -1c
-.RI "const typedef char * \fBdynlink_name\fP"
+.RI "typedef const char * \fBdynlink_name\fP"
 .br
 .ti -1c
-.RI "const typedef char * \fBdynlink_symbol_name\fP"
+.RI "typedef const char * \fBdynlink_symbol_name\fP"
+.br
+.ti -1c
+.RI "typedef portability_library_path_str \fBdynlink_library_path_str\fP"
 .br
 .in -1c
 .SH "Typedef Documentation"
 .PP 
 .SS "typedef struct dynlink_type* \fBdynlink\fP"
 Dynamically linked shared object handle 
-.SH "Variable Documentation"
-.PP 
-.SS "const typedef char* dynlink_path"
+.SS "typedef const char* \fBdynlink_path\fP"
+Dynamically linked shared object path 
+.SS "typedef const char* \fBdynlink_name\fP"
 Dynamically linked shared object name 
-.SS "const typedef char* dynlink_name"
-Dynamically linked shared object name 
-.SS "const typedef char* dynlink_symbol_name"
+.SS "typedef const char* \fBdynlink_symbol_name\fP"
+Dynamically linked shared object symbol name 
+.SS "typedef portability_library_path_str \fBdynlink_library_path_str\fP"
 Dynamically linked shared object symbol name 
 .SH "Author"
 .PP 

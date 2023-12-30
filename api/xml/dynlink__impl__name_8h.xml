@@ -1,10 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dynlink__impl__name_8h" kind="file" language="C++">
     <compoundname>dynlink_impl_name.h</compoundname>
     <includes local="no">dynlink/dynlink_api.h</includes>
+    <includes local="no">portability/portability_path.h</includes>
     <includedby refid="dynlink__impl_8h" local="no">dynlink_impl.h</includedby>
     <incdepgraph>
+      <node id="3">
+        <label>portability/portability_path.h</label>
+      </node>
       <node id="2">
         <label>dynlink/dynlink_api.h</label>
       </node>
@@ -12,6 +16,8 @@
         <label>dynlink_impl_name.h</label>
         <link refid="dynlink__impl__name_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -33,25 +39,11 @@
         </childnode>
       </node>
     </invincdepgraph>
-      <sectiondef kind="define">
-      <memberdef kind="define" id="dynlink__impl__name_8h_1a77c06e6717650e4b46f878df15b3fb77" prot="public" static="no">
-        <name>DYNLINK_NAME_IMPL_SIZE</name>
-        <initializer>0xFF</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para>Dynamically linked shared object name size </para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_name.h" line="34" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_name.h" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="dynlink__impl__name_8h_1a809965dd1973359894e26ab3117c3a3b" prot="public" static="no">
+      <memberdef kind="typedef" id="dynlink__impl__name_8h_1ae1d8bf84ee2ad46a7513e6d4eb6782fb" prot="public" static="no">
         <type>char</type>
-        <definition>typedef char dynlink_name_impl[DYNLINK_NAME_IMPL_SIZE]</definition>
-        <argsstring>[DYNLINK_NAME_IMPL_SIZE]</argsstring>
+        <definition>typedef char dynlink_name_impl[PORTABILITY_PATH_SIZE]</definition>
+        <argsstring>[PORTABILITY_PATH_SIZE]</argsstring>
         <name>dynlink_name_impl</name>
         <briefdescription>
         </briefdescription>
@@ -60,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_name.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_name.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_name.h" line="36" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_name.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,7 +64,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Dynamic<sp/>Link<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>dynamic<sp/>loading<sp/>and<sp/>linking<sp/>shared<sp/>objects<sp/>at<sp/>run-time.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -95,23 +87,21 @@
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;portability/portability_path.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="dynlink__impl__name_8h_1a77c06e6717650e4b46f878df15b3fb77" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_NAME_IMPL_SIZE<sp/>0xFF<sp/></highlight><highlight class="comment">/**&lt;<sp/>Dynamically<sp/>linked<sp/>shared<sp/>object<sp/>name<sp/>size<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="dynlink__impl__name_8h_1ae1d8bf84ee2ad46a7513e6d4eb6782fb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl__name_8h_1ae1d8bf84ee2ad46a7513e6d4eb6782fb" kindref="member">dynlink_name_impl</ref>[PORTABILITY_PATH_SIZE];<sp/></highlight><highlight class="comment">/**&lt;<sp/>Allocated<sp/>copy<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="dynlink__impl__name_8h_1a809965dd1973359894e26ab3117c3a3b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl__name_8h_1a809965dd1973359894e26ab3117c3a3b" kindref="member">dynlink_name_impl</ref>[<ref refid="dynlink__impl__name_8h_1a77c06e6717650e4b46f878df15b3fb77" kindref="member">DYNLINK_NAME_IMPL_SIZE</ref>];<sp/></highlight><highlight class="comment">/**&lt;<sp/>Allocated<sp/>copy<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DYNLINK_IMPL_NAME_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DYNLINK_IMPL_NAME_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl_name.h"/>
   </compounddef>

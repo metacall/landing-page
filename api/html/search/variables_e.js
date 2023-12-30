@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['serialize_3291',['serialize',['../structlog__aspect__format__impl__type.html#a9dbbedbde82542c90640fc327fe17b56',1,'log_aspect_format_impl_type::serialize()'],['../structlog__policy__format__impl__type.html#ad226621c324a4b30d528f40455e3bf6c',1,'log_policy_format_impl_type::serialize()']]],
-  ['set_3292',['set',['../structobject__interface__type.html#a6bccf4b1614d9eaed72cfc5ff39a61a1',1,'object_interface_type']]],
-  ['size_3293',['size',['../structlog__aspect__format__impl__type.html#ab5a0b317c6a1f352027776c545f3fabf',1,'log_aspect_format_impl_type::size()'],['../structlog__policy__format__impl__type.html#ae146f1ce16a9fe00b745634a9cb39ebc',1,'log_policy_format_impl_type::size()'],['../structlog__policy__storage__batch__ctor__type.html#a99a46056b6c81cb859c6ac2d67d9ba21',1,'log_policy_storage_batch_ctor_type::size()'],['../structloader__descriptor__extension__type.html#ac76667bdb9ab60635c04692ad3ea9f3e',1,'loader_descriptor_extension_type::size()']]],
-  ['static_5fawait_3294',['static_await',['../structclass__interface__type.html#a7f9a3658ee909fb4fef289f7eb65879f',1,'class_interface_type']]],
-  ['static_5fget_3295',['static_get',['../structclass__interface__type.html#a4b1ce72c912434fc1a3eb1cd5c26f7c6',1,'class_interface_type']]],
-  ['static_5finvoke_3296',['static_invoke',['../structclass__interface__type.html#a5fee5fdfa79dadde04ffcc26cef8cf14',1,'class_interface_type']]],
-  ['static_5fset_3297',['static_set',['../structclass__interface__type.html#a5f46576c2194af3fc789f1c01be21956',1,'class_interface_type']]],
-  ['str_3298',['str',['../structloader__descriptor__version__type.html#a52116e1798fff99f3f7ab963b6f2537b',1,'loader_descriptor_version_type']]],
-  ['stream_3299',['stream',['../structlog__policy__stream__stdio__ctor__type.html#ab8302426f903eff6c88153597bba94f4',1,'log_policy_stream_stdio_ctor_type::stream()'],['../structmetacall__log__stdio__type.html#a8d17ffca28855e59d4611cf1f497305f',1,'metacall_log_stdio_type::stream()']]],
-  ['stream_5fflush_3300',['stream_flush',['../structlog__policy__stream__custom__ctor__type.html#a4c7f0ed8c486671eb05a572f867c8641',1,'log_policy_stream_custom_ctor_type::stream_flush()'],['../structmetacall__log__custom__type.html#af32bca8ec9096645211d24c1eac89117',1,'metacall_log_custom_type::stream_flush()']]],
-  ['stream_5fwrite_3301',['stream_write',['../structlog__policy__stream__custom__ctor__type.html#a936e1a577a14ea6aa8fd39cf6b4d6f2a',1,'log_policy_stream_custom_ctor_type::stream_write()'],['../structmetacall__log__custom__type.html#a18a9acf920af36aab3a375fe9a9bef69',1,'metacall_log_custom_type::stream_write()']]],
-  ['symbol_3302',['symbol',['../structdynlink__impl__interface__type.html#a7f826d29ec293c69985e86b34066d742',1,'dynlink_impl_interface_type::symbol()'],['../structdynlink__symbol__addr__beos__type.html#a1844ef60e6875e6e66e4d80264a64098',1,'dynlink_symbol_addr_beos_type::symbol()'],['../structdynlink__symbol__addr__macos__type.html#aabc5a1f4c561557dac660663ab0a015d',1,'dynlink_symbol_addr_macos_type::symbol()'],['../structdynlink__symbol__addr__unix__type.html#a14426b8acef466a77c71844eac3199fc',1,'dynlink_symbol_addr_unix_type::symbol()']]]
+  ['p_3440',['p',['../structloader__initialization__order__type.html#a3e185dd78ca52aaa7d0872230553ea8f',1,'loader_initialization_order_type']]],
+  ['pairs_3441',['pairs',['../structbucket__type.html#a3d278a534f92d4057875d7899a67e511',1,'bucket_type']]],
+  ['palloc_3442',['palloc',['../structmetacall__allocator__nginx__type.html#a6258023c8829aa98f76b3394ec7e94d5',1,'metacall_allocator_nginx_type']]],
+  ['patch_3443',['patch',['../structmetacall__version__type.html#af8c8496312dd920a33a91cf874908131',1,'metacall_version_type']]],
+  ['pcopy_3444',['pcopy',['../structmetacall__allocator__nginx__type.html#aa3db3d99ecc61b504646c8876f195096',1,'metacall_allocator_nginx_type']]],
+  ['pfree_3445',['pfree',['../structmetacall__allocator__nginx__type.html#aca3421d413a7ba4ac811d7e36ede192e',1,'metacall_allocator_nginx_type']]],
+  ['plugins_3446',['plugins',['../structplugin__manager__type.html#ae150e3478b7a1a2ff0ad30bffb69487e',1,'plugin_manager_type']]],
+  ['pool_3447',['pool',['../structmetacall__allocator__nginx__type.html#a4233f7c5d85faf3b8f14611b06670972',1,'metacall_allocator_nginx_type']]],
+  ['port_3448',['port',['../structlog__policy__stream__socket__ctor__type.html#ad443095b2af6b2f19acb92315323ea70',1,'log_policy_stream_socket_ctor_type::port()'],['../structmetacall__log__socket__type.html#a17be91c7a2e108cd44cb9614c9209dd6',1,'metacall_log_socket_type::port()']]]
 ];

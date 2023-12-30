@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_plugin__loader_8h" xml:lang="en-US">
+<title>plugin_loader.h File Reference</title>
+<indexterm><primary>plugin_loader.h</primary></indexterm>
+<programlisting>#include &lt;plugin/plugin_api.h&gt;
+#include &lt;plugin/plugin_impl.h&gt;
+</programlisting>Include dependency graph for plugin_loader.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="plugin__loader_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="plugin__loader_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct plugin_loader_type * <link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>PLUGIN_API <link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link> <link linkend="_plugin__loader_8h_1af354c31bd1e180daf1ee28f010c91fba">plugin_loader_create</link> (plugin_manager manager)</para>
+</listitem>
+            <listitem><para>PLUGIN_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> <link linkend="_plugin__loader_8h_1a409f92fcbabd0def4c26229b08fb4679">plugin_loader_load</link> (<link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link> l, const char *name, void *impl, void(*dtor)(<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link>))</para>
+</listitem>
+            <listitem><para>PLUGIN_API void <link linkend="_plugin__loader_8h_1ac6bf8273c19bfb801f2f9d4a7520b521">plugin_loader_destroy</link> (<link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link> l)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17"/>    <section>
+    <title>plugin_loader</title>
+<indexterm><primary>plugin_loader</primary><secondary>plugin_loader.h</secondary></indexterm>
+<indexterm><primary>plugin_loader.h</primary><secondary>plugin_loader</secondary></indexterm>
+<para><computeroutput>typedef struct plugin_loader_type* <link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_plugin__loader_8h_1af354c31bd1e180daf1ee28f010c91fba"/>    <section>
+    <title>plugin_loader_create()</title>
+<indexterm><primary>plugin_loader_create</primary><secondary>plugin_loader.h</secondary></indexterm>
+<indexterm><primary>plugin_loader.h</primary><secondary>plugin_loader_create</secondary></indexterm>
+<para><computeroutput>PLUGIN_API <link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link> plugin_loader_create (plugin_manager manager)</computeroutput></para>    </section><anchor xml:id="_plugin__loader_8h_1a409f92fcbabd0def4c26229b08fb4679"/>    <section>
+    <title>plugin_loader_load()</title>
+<indexterm><primary>plugin_loader_load</primary><secondary>plugin_loader.h</secondary></indexterm>
+<indexterm><primary>plugin_loader.h</primary><secondary>plugin_loader_load</secondary></indexterm>
+<para><computeroutput>PLUGIN_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> plugin_loader_load (<link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link> l, const char * name, void * impl, void(*)(<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link>) dtor)</computeroutput></para>    </section><anchor xml:id="_plugin__loader_8h_1ac6bf8273c19bfb801f2f9d4a7520b521"/>    <section>
+    <title>plugin_loader_destroy()</title>
+<indexterm><primary>plugin_loader_destroy</primary><secondary>plugin_loader.h</secondary></indexterm>
+<indexterm><primary>plugin_loader.h</primary><secondary>plugin_loader_destroy</secondary></indexterm>
+<para><computeroutput>PLUGIN_API void plugin_loader_destroy (<link linkend="_plugin__loader_8h_1a41d138c4d96b116063b678806f539c17">plugin_loader</link> l)</computeroutput></para></section>
+</section>
+</section>

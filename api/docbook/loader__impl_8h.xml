@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_loader__impl_8h">
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_loader__impl_8h" xml:lang="en-US">
 <title>loader_impl.h File Reference</title>
 <indexterm><primary>loader_impl.h</primary></indexterm>
 <programlisting>#include &lt;loader/loader_api.h&gt;
 #include &lt;loader/loader_impl_interface.h&gt;
-#include &lt;loader/loader_path.h&gt;
+#include &lt;loader/loader_naming.h&gt;
+#include &lt;plugin/plugin_impl.h&gt;
+#include &lt;plugin/plugin_manager.h&gt;
 </programlisting>Include dependency graph for loader_impl.h:<para>
     <informalfigure>
         <mediaobject>
@@ -24,26 +26,21 @@ This graph shows which files directly or indirectly include this file:<para>
     </informalfigure>
 </para>
 <simplesect>
-    <title>Macros    </title>
-        <itemizedlist>
-            <listitem><para>#define <link linkend="_loader__impl_8h_1a8ef9b4483d15ceb12658af43407fb8da">LOADER_HOST_PROXY_NAME</link>   &quot;__metacall_host__&quot;</para>
-</listitem>
-        </itemizedlist>
-</simplesect>
-<simplesect>
     <title>Functions    </title>
         <itemizedlist>
             <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1a3f2a7835ee2b99411b1f4af33ef5d4b2">loader_impl_is_initialized</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
-            <listitem><para>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> <link linkend="_loader__impl_8h_1a856e1c576e498383cb5db471f1f559d6">loader_impl_create</link> (const char *path, const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</para>
+            <listitem><para>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> <link linkend="_loader__impl_8h_1ad68d477fa1eccd2a26aabccd6e8c80c3">loader_impl_create</link> (const <link linkend="_loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e">loader_tag</link> tag)</para>
+</listitem>
+            <listitem><para>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> <link linkend="_loader__impl_8h_1a7225a152e1e19ec5d398c2360c004e89">loader_impl_create_host</link> (const <link linkend="_loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e">loader_tag</link> tag)</para>
+</listitem>
+            <listitem><para>LOADER_API void <link linkend="_loader__impl_8h_1a7872fe8c6bff10d3851dced4859287af">loader_impl_attach</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</para>
+</listitem>
+            <listitem><para>LOADER_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> <link linkend="_loader__impl_8h_1a5c96d10a4dd5bfe14641f16f62facbd3">loader_impl_plugin</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
             <listitem><para>LOADER_API <link linkend="_loader__impl__data_8h_1ab431d457f46d287723fd3922779f9c2c">loader_impl_data</link> <link linkend="_loader__impl_8h_1af0d21828a829732e62791a3941242d01">loader_impl_get</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
             <listitem><para>LOADER_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_loader__impl_8h_1a612796e92003f5325098db4b60e7f287">loader_impl_get_value</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char *name)</para>
-</listitem>
-            <listitem><para>LOADER_API loader_impl_interface <link linkend="_loader__impl_8h_1aa0b0eea1c7a428289665c675c622b091">loader_impl_symbol</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
-</listitem>
-            <listitem><para>LOADER_API <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> * <link linkend="_loader__impl_8h_1aabca7a1227c9447193f6b04171adae37">loader_impl_tag</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
             <listitem><para>LOADER_API <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> <link linkend="_loader__impl_8h_1acbe6beea3b8aa45da1b0b4d3f23cf03a">loader_impl_context</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
@@ -51,13 +48,13 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1a167299d624745a6c7d4b946f6bbbf8a8">loader_impl_type_define</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char *name, <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> t)</para>
 </listitem>
-            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1ae9e68606c3b0b8115cb981e01cda9369">loader_impl_execution_path</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path)</para>
+            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1a9cee63cd2230314fd19a5fba128b9f72">loader_impl_execution_path</link> (<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1a0c504454714715861c9a58fc48a8176c">loader_path</link> path)</para>
 </listitem>
-            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1af1482072a4fdb60e77afdf7a02503e96">loader_impl_load_from_file</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> paths[], size_t size, void **handle_ptr)</para>
+            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1ab347f85052cf82d066f88896b70fa99a">loader_impl_load_from_file</link> (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1a0c504454714715861c9a58fc48a8176c">loader_path</link> paths[], size_t size, void **handle_ptr)</para>
 </listitem>
-            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1acde0e72d18cc6ede9f200a099eff643c">loader_impl_load_from_memory</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char *buffer, size_t size, void **handle_ptr)</para>
+            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1a6395a1993caa91b6c0af647613b7d242">loader_impl_load_from_memory</link> (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char *buffer, size_t size, void **handle_ptr)</para>
 </listitem>
-            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1a59eb6cce42796b2bfabd4a0fd1539442">loader_impl_load_from_package</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path, void **handle_ptr)</para>
+            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1ae89cfe9b975d49a6394ea736d81f7566">loader_impl_load_from_package</link> (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1a0c504454714715861c9a58fc48a8176c">loader_path</link> path, void **handle_ptr)</para>
 </listitem>
             <listitem><para>LOADER_API void * <link linkend="_loader__impl_8h_1ae51eabce177ad3f740f54abed5085f79">loader_impl_get_handle</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char *name)</para>
 </listitem>
@@ -65,11 +62,15 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>LOADER_API void * <link linkend="_loader__impl_8h_1ab38c47aad274df78e047d04eff7b4ce9">loader_impl_get_options</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
-            <listitem><para>const LOADER_API char * <link linkend="_loader__impl_8h_1abc84e0552507a704d3dcdaa04a0dd3c2">loader_impl_handle_id</link> (void *handle)</para>
+            <listitem><para>LOADER_API const char * <link linkend="_loader__impl_8h_1a0c0545504b51df3a1b0de1c2068f4c60">loader_impl_handle_id</link> (void *handle)</para>
 </listitem>
             <listitem><para>LOADER_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_loader__impl_8h_1a7b8593fabd702e8bdb2552755128aa44">loader_impl_handle_export</link> (void *handle)</para>
 </listitem>
             <listitem><para>LOADER_API <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> <link linkend="_loader__impl_8h_1a0feed327b857033b702cf7c21fc0b88d">loader_impl_handle_context</link> (void *handle)</para>
+</listitem>
+            <listitem><para>LOADER_API void * <link linkend="_loader__impl_8h_1a18baa8c973288183e0393cf3c216e655">loader_impl_handle_container_of</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, void *handle)</para>
+</listitem>
+            <listitem><para>LOADER_API int <link linkend="_loader__impl_8h_1a27eb3f04e9de3df4db549aff83ad2f67">loader_impl_handle_validate</link> (void *handle)</para>
 </listitem>
             <listitem><para>LOADER_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> <link linkend="_loader__impl_8h_1a1533d375b2c0936275ea5d6b47a498c0">loader_impl_metadata</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
@@ -77,31 +78,37 @@ This graph shows which files directly or indirectly include this file:<para>
 </listitem>
             <listitem><para>LOADER_API void <link linkend="_loader__impl_8h_1a222684e3ae6d78eba758da03ea663023">loader_impl_destroy_objects</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
-            <listitem><para>LOADER_API void <link linkend="_loader__impl_8h_1a51e445d2aa93a560bb3f9a9e665612b1">loader_impl_destroy</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
+            <listitem><para>LOADER_API void <link linkend="_loader__impl_8h_1a67191758ada394d8b9571796a5181fe2">loader_impl_destroy_deallocate</link> (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
-            <listitem><para>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> <link linkend="_loader__impl_8h_1a86245fe7bbd8e7a710e754e883f15db4">loader_impl_create_proxy</link> (void)</para>
+            <listitem><para>LOADER_API void <link linkend="_loader__impl_8h_1a2e76b29aa6dd94d7d2cb3a1b8e47c914">loader_impl_destroy_dtor</link> (<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</para>
+</listitem>
+            <listitem><para>LOADER_API void <link linkend="_loader__impl_8h_1aa0630f1622261defddff9ad33f8c2c27">loader_impl_destroy</link> (<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
-<section>
-<title>Macro Definition Documentation</title>
-<anchor xml:id="_loader__impl_8h_1a8ef9b4483d15ceb12658af43407fb8da"/>    <section>
-    <title>LOADER_HOST_PROXY_NAME</title>
-<indexterm><primary>LOADER_HOST_PROXY_NAME</primary><secondary>loader_impl.h</secondary></indexterm>
-<indexterm><primary>loader_impl.h</primary><secondary>LOADER_HOST_PROXY_NAME</secondary></indexterm>
-<para><computeroutput>#define LOADER_HOST_PROXY_NAME   &quot;__metacall_host__&quot;</computeroutput></para></section>
-</section>
 <section>
 <title>Function Documentation</title>
 <anchor xml:id="_loader__impl_8h_1a3f2a7835ee2b99411b1f4af33ef5d4b2"/>    <section>
     <title>loader_impl_is_initialized()</title>
 <indexterm><primary>loader_impl_is_initialized</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_is_initialized</secondary></indexterm>
-<para><computeroutput>LOADER_API int loader_impl_is_initialized (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a856e1c576e498383cb5db471f1f559d6"/>    <section>
+<para><computeroutput>LOADER_API int loader_impl_is_initialized (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1ad68d477fa1eccd2a26aabccd6e8c80c3"/>    <section>
     <title>loader_impl_create()</title>
 <indexterm><primary>loader_impl_create</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_create</secondary></indexterm>
-<para><computeroutput>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> loader_impl_create (const char * path, const <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link> tag)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1af0d21828a829732e62791a3941242d01"/>    <section>
+<para><computeroutput>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> loader_impl_create (const <link linkend="_loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e">loader_tag</link> tag)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a7225a152e1e19ec5d398c2360c004e89"/>    <section>
+    <title>loader_impl_create_host()</title>
+<indexterm><primary>loader_impl_create_host</primary><secondary>loader_impl.h</secondary></indexterm>
+<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_create_host</secondary></indexterm>
+<para><computeroutput>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> loader_impl_create_host (const <link linkend="_loader__naming_8h_1acdc949191ac2655c54541e7f287e2c0e">loader_tag</link> tag)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a7872fe8c6bff10d3851dced4859287af"/>    <section>
+    <title>loader_impl_attach()</title>
+<indexterm><primary>loader_impl_attach</primary><secondary>loader_impl.h</secondary></indexterm>
+<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_attach</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_impl_attach (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a5c96d10a4dd5bfe14641f16f62facbd3"/>    <section>
+    <title>loader_impl_plugin()</title>
+<indexterm><primary>loader_impl_plugin</primary><secondary>loader_impl.h</secondary></indexterm>
+<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_plugin</secondary></indexterm>
+<para><computeroutput>LOADER_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> loader_impl_plugin (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1af0d21828a829732e62791a3941242d01"/>    <section>
     <title>loader_impl_get()</title>
 <indexterm><primary>loader_impl_get</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_get</secondary></indexterm>
@@ -109,15 +116,7 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>loader_impl_get_value()</title>
 <indexterm><primary>loader_impl_get_value</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_get_value</secondary></indexterm>
-<para><computeroutput>LOADER_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> loader_impl_get_value (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char * name)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1aa0b0eea1c7a428289665c675c622b091"/>    <section>
-    <title>loader_impl_symbol()</title>
-<indexterm><primary>loader_impl_symbol</primary><secondary>loader_impl.h</secondary></indexterm>
-<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_symbol</secondary></indexterm>
-<para><computeroutput>LOADER_API loader_impl_interface loader_impl_symbol (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1aabca7a1227c9447193f6b04171adae37"/>    <section>
-    <title>loader_impl_tag()</title>
-<indexterm><primary>loader_impl_tag</primary><secondary>loader_impl.h</secondary></indexterm>
-<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_tag</secondary></indexterm>
-<para><computeroutput>LOADER_API <link linkend="_loader__naming_8h_1a3e42cdc1524fee7d4dae2fd0aa997b28">loader_naming_tag</link>* loader_impl_tag (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1acbe6beea3b8aa45da1b0b4d3f23cf03a"/>    <section>
+<para><computeroutput>LOADER_API <link linkend="_reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a">value</link> loader_impl_get_value (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char * name)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1acbe6beea3b8aa45da1b0b4d3f23cf03a"/>    <section>
     <title>loader_impl_context()</title>
 <indexterm><primary>loader_impl_context</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_context</secondary></indexterm>
@@ -129,23 +128,23 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>loader_impl_type_define()</title>
 <indexterm><primary>loader_impl_type_define</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_type_define</secondary></indexterm>
-<para><computeroutput>LOADER_API int loader_impl_type_define (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char * name, <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> t)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1ae9e68606c3b0b8115cb981e01cda9369"/>    <section>
+<para><computeroutput>LOADER_API int loader_impl_type_define (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char * name, <link linkend="_reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac">type</link> t)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a9cee63cd2230314fd19a5fba128b9f72"/>    <section>
     <title>loader_impl_execution_path()</title>
 <indexterm><primary>loader_impl_execution_path</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_execution_path</secondary></indexterm>
-<para><computeroutput>LOADER_API int loader_impl_execution_path (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1af1482072a4fdb60e77afdf7a02503e96"/>    <section>
+<para><computeroutput>LOADER_API int loader_impl_execution_path (<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1a0c504454714715861c9a58fc48a8176c">loader_path</link> path)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1ab347f85052cf82d066f88896b70fa99a"/>    <section>
     <title>loader_impl_load_from_file()</title>
 <indexterm><primary>loader_impl_load_from_file</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_load_from_file</secondary></indexterm>
-<para><computeroutput>LOADER_API int loader_impl_load_from_file (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> paths[], size_t size, void ** handle_ptr)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1acde0e72d18cc6ede9f200a099eff643c"/>    <section>
+<para><computeroutput>LOADER_API int loader_impl_load_from_file (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1a0c504454714715861c9a58fc48a8176c">loader_path</link> paths[], size_t size, void ** handle_ptr)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a6395a1993caa91b6c0af647613b7d242"/>    <section>
     <title>loader_impl_load_from_memory()</title>
 <indexterm><primary>loader_impl_load_from_memory</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_load_from_memory</secondary></indexterm>
-<para><computeroutput>LOADER_API int loader_impl_load_from_memory (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char * buffer, size_t size, void ** handle_ptr)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a59eb6cce42796b2bfabd4a0fd1539442"/>    <section>
+<para><computeroutput>LOADER_API int loader_impl_load_from_memory (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const char * buffer, size_t size, void ** handle_ptr)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1ae89cfe9b975d49a6394ea736d81f7566"/>    <section>
     <title>loader_impl_load_from_package()</title>
 <indexterm><primary>loader_impl_load_from_package</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_load_from_package</secondary></indexterm>
-<para><computeroutput>LOADER_API int loader_impl_load_from_package (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a">loader_naming_path</link> path, void ** handle_ptr)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1ae51eabce177ad3f740f54abed5085f79"/>    <section>
+<para><computeroutput>LOADER_API int loader_impl_load_from_package (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, const <link linkend="_loader__naming_8h_1a0c504454714715861c9a58fc48a8176c">loader_path</link> path, void ** handle_ptr)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1ae51eabce177ad3f740f54abed5085f79"/>    <section>
     <title>loader_impl_get_handle()</title>
 <indexterm><primary>loader_impl_get_handle</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_get_handle</secondary></indexterm>
@@ -157,11 +156,11 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>loader_impl_get_options()</title>
 <indexterm><primary>loader_impl_get_options</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_get_options</secondary></indexterm>
-<para><computeroutput>LOADER_API void* loader_impl_get_options (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1abc84e0552507a704d3dcdaa04a0dd3c2"/>    <section>
+<para><computeroutput>LOADER_API void* loader_impl_get_options (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a0c0545504b51df3a1b0de1c2068f4c60"/>    <section>
     <title>loader_impl_handle_id()</title>
 <indexterm><primary>loader_impl_handle_id</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_handle_id</secondary></indexterm>
-<para><computeroutput>const LOADER_API char* loader_impl_handle_id (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a7b8593fabd702e8bdb2552755128aa44"/>    <section>
+<para><computeroutput>LOADER_API const char* loader_impl_handle_id (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a7b8593fabd702e8bdb2552755128aa44"/>    <section>
     <title>loader_impl_handle_export()</title>
 <indexterm><primary>loader_impl_handle_export</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_handle_export</secondary></indexterm>
@@ -169,7 +168,15 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>loader_impl_handle_context()</title>
 <indexterm><primary>loader_impl_handle_context</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_handle_context</secondary></indexterm>
-<para><computeroutput>LOADER_API <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> loader_impl_handle_context (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a1533d375b2c0936275ea5d6b47a498c0"/>    <section>
+<para><computeroutput>LOADER_API <link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link> loader_impl_handle_context (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a18baa8c973288183e0393cf3c216e655"/>    <section>
+    <title>loader_impl_handle_container_of()</title>
+<indexterm><primary>loader_impl_handle_container_of</primary><secondary>loader_impl.h</secondary></indexterm>
+<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_handle_container_of</secondary></indexterm>
+<para><computeroutput>LOADER_API void* loader_impl_handle_container_of (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl, void * handle)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a27eb3f04e9de3df4db549aff83ad2f67"/>    <section>
+    <title>loader_impl_handle_validate()</title>
+<indexterm><primary>loader_impl_handle_validate</primary><secondary>loader_impl.h</secondary></indexterm>
+<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_handle_validate</secondary></indexterm>
+<para><computeroutput>LOADER_API int loader_impl_handle_validate (void * handle)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a1533d375b2c0936275ea5d6b47a498c0"/>    <section>
     <title>loader_impl_metadata()</title>
 <indexterm><primary>loader_impl_metadata</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_metadata</secondary></indexterm>
@@ -181,14 +188,18 @@ This graph shows which files directly or indirectly include this file:<para>
     <title>loader_impl_destroy_objects()</title>
 <indexterm><primary>loader_impl_destroy_objects</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_destroy_objects</secondary></indexterm>
-<para><computeroutput>LOADER_API void loader_impl_destroy_objects (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a51e445d2aa93a560bb3f9a9e665612b1"/>    <section>
+<para><computeroutput>LOADER_API void loader_impl_destroy_objects (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a67191758ada394d8b9571796a5181fe2"/>    <section>
+    <title>loader_impl_destroy_deallocate()</title>
+<indexterm><primary>loader_impl_destroy_deallocate</primary><secondary>loader_impl.h</secondary></indexterm>
+<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_destroy_deallocate</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_impl_destroy_deallocate (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a2e76b29aa6dd94d7d2cb3a1b8e47c914"/>    <section>
+    <title>loader_impl_destroy_dtor()</title>
+<indexterm><primary>loader_impl_destroy_dtor</primary><secondary>loader_impl.h</secondary></indexterm>
+<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_destroy_dtor</secondary></indexterm>
+<para><computeroutput>LOADER_API void loader_impl_destroy_dtor (<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1aa0630f1622261defddff9ad33f8c2c27"/>    <section>
     <title>loader_impl_destroy()</title>
 <indexterm><primary>loader_impl_destroy</primary><secondary>loader_impl.h</secondary></indexterm>
 <indexterm><primary>loader_impl.h</primary><secondary>loader_impl_destroy</secondary></indexterm>
-<para><computeroutput>LOADER_API void loader_impl_destroy (<link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para>    </section><anchor xml:id="_loader__impl_8h_1a86245fe7bbd8e7a710e754e883f15db4"/>    <section>
-    <title>loader_impl_create_proxy()</title>
-<indexterm><primary>loader_impl_create_proxy</primary><secondary>loader_impl.h</secondary></indexterm>
-<indexterm><primary>loader_impl.h</primary><secondary>loader_impl_create_proxy</secondary></indexterm>
-<para><computeroutput>LOADER_API <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> loader_impl_create_proxy (void )</computeroutput></para></section>
+<para><computeroutput>LOADER_API void loader_impl_destroy (<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p, <link linkend="_loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e">loader_impl</link> impl)</computeroutput></para></section>
 </section>
 </section>

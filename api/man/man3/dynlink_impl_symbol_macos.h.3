@@ -1,4 +1,4 @@
-.TH "dynlink_impl_symbol_macos.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "dynlink_impl_symbol_macos.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,13 +20,13 @@ dynlink_impl_symbol_macos.h
 
 .in +1c
 .ti -1c
-.RI "#define \fBDYNLINK_SYMBOL_PREFIX\fP   dynlink_symbol_"
+.RI "#define \fBDYNLINK_SYMBOL_PREFIX\fP   	dynlink_symbol_"
 .br
 .ti -1c
 .RI "#define \fBDYNLINK_SYMBOL_EXPORT\fP(name)"
 .br
 .ti -1c
-.RI "#define \fBDYNLINK_SYMBOL_GET\fP(name)   ((dynlink_symbol_addr_macos)(name))\->symbol"
+.RI "#define \fBDYNLINK_SYMBOL_GET\fP(name)   	((dynlink_symbol_addr_macos)(name))\->symbol"
 .br
 .in -1c
 .SS "Typedefs"
@@ -41,17 +41,17 @@ dynlink_impl_symbol_macos.h
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define DYNLINK_SYMBOL_PREFIX   dynlink_symbol_"
+.SS "#define DYNLINK_SYMBOL_PREFIX   	dynlink_symbol_"
 
 .SS "#define DYNLINK_SYMBOL_EXPORT(name)"
 \fBValue:\fP
 .PP
 .nf
   DYNLINK_API struct dynlink_symbol_addr_macos_type DYNLINK_SYMBOL_NAME(name) = { \
-        (dynlink_symbol_addr_macos_impl)&name                                       \
+        (dynlink_symbol_addr_macos_impl)&name \
     }
 .fi
-.SS "#define DYNLINK_SYMBOL_GET(name)   ((dynlink_symbol_addr_macos)(name))\->symbol"
+.SS "#define DYNLINK_SYMBOL_GET(name)   	((dynlink_symbol_addr_macos)(name))\->symbol"
 
 .SH "Typedef Documentation"
 .PP 

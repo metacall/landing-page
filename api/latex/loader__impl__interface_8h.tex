@@ -20,7 +20,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{loader__impl__interface_8h__dep__incl}
+\includegraphics[width=264pt]{loader__impl__interface_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -35,13 +35,13 @@ typedef struct \textbf{ loader\+\_\+impl\+\_\+type} $\ast$ \textbf{ loader\+\_\+
 \item 
 typedef \textbf{ loader\+\_\+impl\+\_\+data}($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+initialize}) (\textbf{ loader\+\_\+impl}, configuration)
 \item 
-typedef int($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+execution\+\_\+path}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+path})
+typedef int($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+execution\+\_\+path}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+path})
 \item 
-typedef \textbf{ loader\+\_\+handle}($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+file}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+path}[$\,$], size\+\_\+t)
+typedef \textbf{ loader\+\_\+handle}($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+file}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+path}[$\,$], size\+\_\+t)
 \item 
-typedef \textbf{ loader\+\_\+handle}($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+memory}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+name}, const char $\ast$, size\+\_\+t)
+typedef \textbf{ loader\+\_\+handle}($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+memory}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+name}, const char $\ast$, size\+\_\+t)
 \item 
-typedef \textbf{ loader\+\_\+handle}($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+package}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+path})
+typedef \textbf{ loader\+\_\+handle}($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+package}) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+path})
 \item 
 typedef int($\ast$ \textbf{ loader\+\_\+impl\+\_\+interface\+\_\+clear}) (\textbf{ loader\+\_\+impl}, \textbf{ loader\+\_\+handle})
 \item 
@@ -66,29 +66,29 @@ typedef loader\+\_\+impl\+\_\+interface($\ast$ \textbf{ loader\+\_\+impl\+\_\+in
 \doxysubsubsection{loader\_impl\_interface\_initialize}
 {\footnotesize\ttfamily typedef \textbf{ loader\+\_\+impl\+\_\+data}($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+initialize) (\textbf{ loader\+\_\+impl}, configuration)}
 
-\mbox{\label{loader__impl__interface_8h_a8a066acded9646a90004f0839316966f}} 
+\mbox{\label{loader__impl__interface_8h_ab335bce9274992abc2521083f2b0d5a2}} 
 \index{loader\_impl\_interface.h@{loader\_impl\_interface.h}!loader\_impl\_interface\_execution\_path@{loader\_impl\_interface\_execution\_path}}
 \index{loader\_impl\_interface\_execution\_path@{loader\_impl\_interface\_execution\_path}!loader\_impl\_interface.h@{loader\_impl\_interface.h}}
 \doxysubsubsection{loader\_impl\_interface\_execution\_path}
-{\footnotesize\ttfamily typedef int($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+execution\+\_\+path) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+path})}
+{\footnotesize\ttfamily typedef int($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+execution\+\_\+path) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+path})}
 
-\mbox{\label{loader__impl__interface_8h_aaaac35a1bee063497f4ce0501b5890e3}} 
+\mbox{\label{loader__impl__interface_8h_a943c4ca9bb29f36786fff3a6091136b5}} 
 \index{loader\_impl\_interface.h@{loader\_impl\_interface.h}!loader\_impl\_interface\_load\_from\_file@{loader\_impl\_interface\_load\_from\_file}}
 \index{loader\_impl\_interface\_load\_from\_file@{loader\_impl\_interface\_load\_from\_file}!loader\_impl\_interface.h@{loader\_impl\_interface.h}}
 \doxysubsubsection{loader\_impl\_interface\_load\_from\_file}
-{\footnotesize\ttfamily typedef \textbf{ loader\+\_\+handle}($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+file) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+path}[$\,$], size\+\_\+t)}
+{\footnotesize\ttfamily typedef \textbf{ loader\+\_\+handle}($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+file) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+path}[$\,$], size\+\_\+t)}
 
-\mbox{\label{loader__impl__interface_8h_a40c34c6bbe454a2ecf197aa77f64df56}} 
+\mbox{\label{loader__impl__interface_8h_acb459e93e3ecf5cec591fb8e5043ac57}} 
 \index{loader\_impl\_interface.h@{loader\_impl\_interface.h}!loader\_impl\_interface\_load\_from\_memory@{loader\_impl\_interface\_load\_from\_memory}}
 \index{loader\_impl\_interface\_load\_from\_memory@{loader\_impl\_interface\_load\_from\_memory}!loader\_impl\_interface.h@{loader\_impl\_interface.h}}
 \doxysubsubsection{loader\_impl\_interface\_load\_from\_memory}
-{\footnotesize\ttfamily typedef \textbf{ loader\+\_\+handle}($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+memory) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+name}, const char $\ast$, size\+\_\+t)}
+{\footnotesize\ttfamily typedef \textbf{ loader\+\_\+handle}($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+memory) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+name}, const char $\ast$, size\+\_\+t)}
 
-\mbox{\label{loader__impl__interface_8h_af1eabf831d3e874c12d67ea0f0983675}} 
+\mbox{\label{loader__impl__interface_8h_aa191f00409097239367a73d6f2ac3de0}} 
 \index{loader\_impl\_interface.h@{loader\_impl\_interface.h}!loader\_impl\_interface\_load\_from\_package@{loader\_impl\_interface\_load\_from\_package}}
 \index{loader\_impl\_interface\_load\_from\_package@{loader\_impl\_interface\_load\_from\_package}!loader\_impl\_interface.h@{loader\_impl\_interface.h}}
 \doxysubsubsection{loader\_impl\_interface\_load\_from\_package}
-{\footnotesize\ttfamily typedef \textbf{ loader\+\_\+handle}($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+package) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+naming\+\_\+path})}
+{\footnotesize\ttfamily typedef \textbf{ loader\+\_\+handle}($\ast$ loader\+\_\+impl\+\_\+interface\+\_\+load\+\_\+from\+\_\+package) (\textbf{ loader\+\_\+impl}, const \textbf{ loader\+\_\+path})}
 
 \mbox{\label{loader__impl__interface_8h_ae3c43bdf00d7e9d5c352ff994fd12d44}} 
 \index{loader\_impl\_interface.h@{loader\_impl\_interface.h}!loader\_impl\_interface\_clear@{loader\_impl\_interface\_clear}}

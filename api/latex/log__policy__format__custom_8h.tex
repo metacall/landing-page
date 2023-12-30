@@ -3,12 +3,13 @@
 {\ttfamily \#include $<$log/log\+\_\+api.\+h$>$}\newline
 {\ttfamily \#include $<$log/log\+\_\+policy.\+h$>$}\newline
 {\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
 Include dependency graph for log\+\_\+policy\+\_\+format\+\_\+custom.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=234pt]{log__policy__format__custom_8h__incl}
+\includegraphics[width=296pt]{log__policy__format__custom_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -29,37 +30,37 @@ struct \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+ctor}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef size\+\_\+t($\ast$ \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr}) (void $\ast$, const char $\ast$, size\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)
+typedef size\+\_\+t($\ast$ \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr}) (void $\ast$, const char $\ast$, uint64\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)
 \item 
-typedef size\+\_\+t($\ast$ \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr}) (void $\ast$, void $\ast$, const size\+\_\+t, const char $\ast$, size\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)
+typedef size\+\_\+t($\ast$ \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr}) (void $\ast$, void $\ast$, const size\+\_\+t, const char $\ast$, uint64\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)
 \item 
-typedef size\+\_\+t($\ast$ \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr}) (void $\ast$, const void $\ast$, const size\+\_\+t, const char $\ast$, size\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)
+typedef size\+\_\+t($\ast$ \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr}) (void $\ast$, const void $\ast$, const size\+\_\+t, const char $\ast$, uint64\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+interface} (void)
+LOG\+\_\+\+API log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+interface} (void)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\label{log__policy__format__custom_8h_a719a0c26ebdb7eea45b16a67ebe30243}} 
+\mbox{\label{log__policy__format__custom_8h_aaf79835e3ef0a7343e0b71510220d568}} 
 \index{log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}!log\_policy\_format\_custom\_size\_ptr@{log\_policy\_format\_custom\_size\_ptr}}
 \index{log\_policy\_format\_custom\_size\_ptr@{log\_policy\_format\_custom\_size\_ptr}!log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}}
 \doxysubsubsection{log\_policy\_format\_custom\_size\_ptr}
-{\footnotesize\ttfamily typedef size\+\_\+t($\ast$ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr) (void $\ast$, const char $\ast$, size\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)}
+{\footnotesize\ttfamily typedef size\+\_\+t($\ast$ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr) (void $\ast$, const char $\ast$, uint64\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)}
 
-\mbox{\label{log__policy__format__custom_8h_a54d4075733047339a7252d890e452f22}} 
+\mbox{\label{log__policy__format__custom_8h_ab915d8a160627f645bbe5e44d9b4087f}} 
 \index{log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}!log\_policy\_format\_custom\_serialize\_ptr@{log\_policy\_format\_custom\_serialize\_ptr}}
 \index{log\_policy\_format\_custom\_serialize\_ptr@{log\_policy\_format\_custom\_serialize\_ptr}!log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}}
 \doxysubsubsection{log\_policy\_format\_custom\_serialize\_ptr}
-{\footnotesize\ttfamily typedef size\+\_\+t($\ast$ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr) (void $\ast$, void $\ast$, const size\+\_\+t, const char $\ast$, size\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)}
+{\footnotesize\ttfamily typedef size\+\_\+t($\ast$ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr) (void $\ast$, void $\ast$, const size\+\_\+t, const char $\ast$, uint64\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)}
 
-\mbox{\label{log__policy__format__custom_8h_a832db9264c0a4a03ff8ebe564450a834}} 
+\mbox{\label{log__policy__format__custom_8h_a35f6c2dbef904216c8d686688f91e6cb}} 
 \index{log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}!log\_policy\_format\_custom\_deserialize\_ptr@{log\_policy\_format\_custom\_deserialize\_ptr}}
 \index{log\_policy\_format\_custom\_deserialize\_ptr@{log\_policy\_format\_custom\_deserialize\_ptr}!log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}}
 \doxysubsubsection{log\_policy\_format\_custom\_deserialize\_ptr}
-{\footnotesize\ttfamily typedef size\+\_\+t($\ast$ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr) (void $\ast$, const void $\ast$, const size\+\_\+t, const char $\ast$, size\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)}
+{\footnotesize\ttfamily typedef size\+\_\+t($\ast$ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr) (void $\ast$, const void $\ast$, const size\+\_\+t, const char $\ast$, uint64\+\_\+t, size\+\_\+t, const char $\ast$, const char $\ast$, const char $\ast$, const char $\ast$, log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+va\+\_\+list)}
 
 
 
@@ -68,5 +69,5 @@ L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_
 \index{log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}!log\_policy\_format\_custom\_interface@{log\_policy\_format\_custom\_interface}}
 \index{log\_policy\_format\_custom\_interface@{log\_policy\_format\_custom\_interface}!log\_policy\_format\_custom.h@{log\_policy\_format\_custom.h}}
 \doxysubsubsection{log\_policy\_format\_custom\_interface()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+interface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+interface (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 

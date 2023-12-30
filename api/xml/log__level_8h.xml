@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="log__level_8h" kind="file" language="C++">
     <compoundname>log_level.h</compoundname>
     <includes local="no">log/log_api.h</includes>
@@ -23,22 +23,26 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="8">
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="9">
         <label>log_impl.h</label>
         <link refid="log__impl_8h"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>log_record.h</label>
         <link refid="log__record_8h"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -48,38 +52,40 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>log_aspect_format.h</label>
         <link refid="log__aspect__format_8h"/>
       </node>
-      <node id="10">
+      <node id="11">
         <label>log_policy_format.h</label>
         <link refid="log__policy__format_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>log_aspect_stream.h</label>
         <link refid="log__aspect__stream_8h"/>
       </node>
-      <node id="7">
+      <node id="8">
         <label>log_handle.h</label>
         <link refid="log__handle_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>log_aspect_storage.h</label>
         <link refid="log__aspect__storage_8h"/>
       </node>
-      <node id="11">
+      <node id="12">
         <label>log_policy_storage.h</label>
         <link refid="log__policy__storage_8h"/>
         <childnode refid="2" relation="include">
@@ -90,10 +96,10 @@
         <link refid="log__level_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>log_singleton.h</label>
         <link refid="log__singleton_8h"/>
       </node>
@@ -155,13 +161,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_level.h" line="37" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_level.h" bodystart="36" bodyend="45"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_level.h" line="36" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_level.h" bodystart="37" bodyend="45"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="log__level_8h_1a158abbda2c04d95eb409bffacb928e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const LOG_API char *</type>
-        <definition>const LOG_API char* log_level_to_string</definition>
+      <memberdef kind="function" id="log__level_8h_1a8da508462c6b071ee1589e6b3ba16416" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>LOG_API const char *</type>
+        <definition>LOG_API const char* log_level_to_string</definition>
         <argsstring>(enum log_level_id level)</argsstring>
         <name>log_level_to_string</name>
         <param>
@@ -207,7 +213,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -246,14 +252,14 @@
 <codeline lineno="41" refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f" kindref="member">LOG_LEVEL_ERROR</ref><sp/>=<sp/>0x03,</highlight></codeline>
 <codeline lineno="42" refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa0f747790672fa5c82fd781222463c35f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa0f747790672fa5c82fd781222463c35f" kindref="member">LOG_LEVEL_CRITICAL</ref><sp/>=<sp/>0x04,</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa84b2a1f01d4286c3f8dbede3993f6f54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa84b2a1f01d4286c3f8dbede3993f6f54" kindref="member">LOG_LEVEL_SIZE</ref></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa84b2a1f01d4286c3f8dbede3993f6f54" kindref="member">LOG_LEVEL_SIZE</ref></highlight></codeline>
+<codeline lineno="45" refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bdaa84b2a1f01d4286c3f8dbede3993f6f54" refkind="member"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="log__level_8h_1a158abbda2c04d95eb409bffacb928e62" kindref="member">log_level_to_string</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda" kindref="member">log_level_id</ref><sp/>level);</highlight></codeline>
+<codeline lineno="49" refid="log__level_8h_1a8da508462c6b071ee1589e6b3ba16416" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="log__level_8h_1a8da508462c6b071ee1589e6b3ba16416" kindref="member">log_level_to_string</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda" kindref="member">log_level_id</ref><sp/>level);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda" kindref="member">log_level_id</ref><sp/><ref refid="log__level_8h_1aac323543088c0ad535c4a11588a42718" kindref="member">log_level_to_enum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*level,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="51" refid="log__level_8h_1aac323543088c0ad535c4a11588a42718" refkind="member"><highlight class="normal">LOG_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="log__level_8h_1ab2136fe4c31ef76f47cf6bb67b2f6bda" kindref="member">log_level_id</ref><sp/><ref refid="log__level_8h_1aac323543088c0ad535c4a11588a42718" kindref="member">log_level_to_enum</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*level,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}</highlight></codeline>

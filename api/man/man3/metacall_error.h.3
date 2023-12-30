@@ -1,0 +1,76 @@
+.TH "metacall_error.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+metacall_error.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <metacall/metacall_api\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmetacall_exception\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "METACALL_API int \fBmetacall_error_from_value\fP (void *v, metacall_exception ex)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_error_last\fP (metacall_exception ex)"
+.br
+.ti -1c
+.RI "METACALL_API void \fBmetacall_error_clear\fP (void)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "METACALL_API int metacall_error_from_value (void * v, metacall_exception ex)"
+
+.PP
+Retrieve the exception from a value, it can be either a throwable value with an exception inside or an exception itself\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Value that represents the exception to be retrieved
+.br
+\fIex\fP Exception that will be used as out parameter, the lifetime of the struct fields is attached to @v
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_error_last (metacall_exception ex)"
+
+.PP
+Retrieve last error that has happened after a call to any API from MetaCall\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP Exception that will be used as out parameter, the lifetime of the struct fields is attached to the internal MetaCall exception
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if success, different from zero otherwise 
+.RE
+.PP
+
+.SS "METACALL_API void metacall_error_clear (void)"
+
+.PP
+Clear last error that has happened after a call to any API from MetaCall\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

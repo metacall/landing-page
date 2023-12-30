@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structloader__manager__impl__type" kind="struct" language="C++" prot="public">
+    <compoundname>loader_manager_impl_type</compoundname>
+    <includes refid="loader__manager__impl_8h" local="no">/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structloader__manager__impl__type_1a0c96348330a7c5ba07b795d4f734dc07" prot="public" static="no" mutable="no">
+        <type><ref refid="plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc" kindref="member">plugin</ref></type>
+        <definition>plugin loader_manager_impl::host</definition>
+        <argsstring></argsstring>
+        <name>host</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" line="51" column="8" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structloader__manager__impl__type_1a5cff6138405877e7487d7b3eb3b26bf3" prot="public" static="no" mutable="no">
+        <type><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+        <definition>vector loader_manager_impl::initialization_order</definition>
+        <argsstring></argsstring>
+        <name>initialization_order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" line="52" column="8" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structloader__manager__impl__type_1ac3c6774f1c00f679ae28bde6ed070f72" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t loader_manager_impl::init_thread_id</definition>
+        <argsstring></argsstring>
+        <name>init_thread_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" line="53" column="10" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structloader__manager__impl__type_1ae58be3d11e20bc1726e51ec98450c638" prot="public" static="no" mutable="no">
+        <type><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref></type>
+        <definition>vector loader_manager_impl::script_paths</definition>
+        <argsstring></argsstring>
+        <name>script_paths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" line="54" column="8" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structloader__manager__impl__type_1a9163240857ff86b9e1ea4dc210539453" prot="public" static="no" mutable="no">
+        <type><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref></type>
+        <definition>set loader_manager_impl::destroy_map</definition>
+        <argsstring></argsstring>
+        <name>destroy_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" line="55" column="5" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>uint64_t</label>
+      </node>
+      <node id="5">
+        <label>struct plugin_type *</label>
+      </node>
+      <node id="3">
+        <label>struct vector_type *</label>
+      </node>
+      <node id="4">
+        <label>struct set_type *</label>
+      </node>
+      <node id="1">
+        <label>loader_manager_impl</label>
+        <link refid="structloader__manager__impl__type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+init_thread_id</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+initialization_order</edgelabel>
+          <edgelabel>+script_paths</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+destroy_map</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+host</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" line="49" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_manager_impl.h" bodystart="50" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structloader__manager__impl__type_1a9163240857ff86b9e1ea4dc210539453" prot="public" virt="non-virtual"><scope>loader_manager_impl_type</scope><name>destroy_map</name></member>
+      <member refid="structloader__manager__impl__type_1a0c96348330a7c5ba07b795d4f734dc07" prot="public" virt="non-virtual"><scope>loader_manager_impl_type</scope><name>host</name></member>
+      <member refid="structloader__manager__impl__type_1ac3c6774f1c00f679ae28bde6ed070f72" prot="public" virt="non-virtual"><scope>loader_manager_impl_type</scope><name>init_thread_id</name></member>
+      <member refid="structloader__manager__impl__type_1a5cff6138405877e7487d7b3eb3b26bf3" prot="public" virt="non-virtual"><scope>loader_manager_impl_type</scope><name>initialization_order</name></member>
+      <member refid="structloader__manager__impl__type_1ae58be3d11e20bc1726e51ec98450c638" prot="public" virt="non-virtual"><scope>loader_manager_impl_type</scope><name>script_paths</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

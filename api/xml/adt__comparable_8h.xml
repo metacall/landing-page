@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="adt__comparable_8h" kind="file" language="C++">
     <compoundname>adt_comparable.h</compoundname>
     <includes local="no">adt/adt_api.h</includes>
@@ -20,13 +20,31 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="13">
         <label>filesystem.h</label>
         <link refid="filesystem_8h"/>
       </node>
       <node id="3">
         <label>adt_bucket.h</label>
         <link refid="adt__bucket_8h"/>
+      </node>
+      <node id="12">
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
+      </node>
+      <node id="6">
+        <label>plugin_manager.h</label>
+        <link refid="plugin__manager_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>detour.h</label>
+        <link refid="detour_8h"/>
       </node>
       <node id="2">
         <label>adt.h</label>
@@ -43,7 +61,7 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -51,16 +69,44 @@
         <link refid="adt__set_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
-      <node id="7">
+      <node id="14">
         <label>adt_trie.h</label>
         <link refid="adt__trie_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>plugin.h</label>
+        <link refid="plugin_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
       <node id="4">
         <label>adt_map.h</label>
         <link refid="adt__map_8h"/>
+      </node>
+      <node id="11">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
+      </node>
+      <node id="9">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>loader.h</label>
+        <link refid="loader_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
@@ -165,7 +211,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -194,11 +240,11 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32" refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="adt__comparable_8h_1a5dcf1fe750c3fff7451defd618853e79" kindref="member">comparable_callback</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref>);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1afc355bdf60cfec2fbc74e2705af5189b" kindref="member">comparable_callback_str</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>b);</highlight></codeline>
+<codeline lineno="34" refid="adt__comparable_8h_1afc355bdf60cfec2fbc74e2705af5189b" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1afc355bdf60cfec2fbc74e2705af5189b" kindref="member">comparable_callback_str</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>b);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1afffe1859af17b5c11c0df63ed057fa4b" kindref="member">comparable_callback_int</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>b);</highlight></codeline>
+<codeline lineno="36" refid="adt__comparable_8h_1afffe1859af17b5c11c0df63ed057fa4b" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1afffe1859af17b5c11c0df63ed057fa4b" kindref="member">comparable_callback_int</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>b);</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ac6e83e2e29020c04d0a5af8e0c0d0110" kindref="member">comparable_callback_ptr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>b);</highlight></codeline>
+<codeline lineno="38" refid="adt__comparable_8h_1ac6e83e2e29020c04d0a5af8e0c0d0110" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ac6e83e2e29020c04d0a5af8e0c0d0110" kindref="member">comparable_callback_ptr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/>b);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal">}</highlight></codeline>

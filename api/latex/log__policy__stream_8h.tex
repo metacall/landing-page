@@ -40,32 +40,32 @@ typedef int($\ast$ \textbf{ log\+\_\+policy\+\_\+stream\+\_\+flush}) (\textbf{ l
 \begin{DoxyCompactItemize}
 \item 
 enum \textbf{ log\+\_\+policy\+\_\+stream\+\_\+id} \{ \newline
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+F\+I\+LE} = 0x00, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+N\+G\+I\+NX} = 0x01, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+O\+C\+K\+ET} = 0x02, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+T\+D\+IO} = 0x03, 
-\newline
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+Y\+S\+L\+OG} = 0x04, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+C\+U\+S\+T\+OM} = 0x05, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+I\+ZE}
+\textbf{ LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+FILE} = 0x00
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+NGINX} = 0x01
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+SOCKET} = 0x02
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+STDIO} = 0x03
+, \newline
+\textbf{ LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+SYSLOG} = 0x04
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+CUSTOM} = 0x05
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+SIZE}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+stream} (const \textbf{ log\+\_\+policy\+\_\+id} policy\+\_\+stream\+\_\+id)
+LOG\+\_\+\+API log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+stream} (const \textbf{ log\+\_\+policy\+\_\+id} policy\+\_\+stream\+\_\+id)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+file} (const char $\ast$file\+\_\+name, const char $\ast$mode)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+file} (const char $\ast$file\+\_\+name, const char $\ast$mode)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+nginx} (\textbf{ ngx\+\_\+log\+\_\+t} $\ast$ngx\+\_\+log\+\_\+ptr, void($\ast$ngx\+\_\+error\+\_\+ptr)(), uint16\+\_\+t ngx\+\_\+log\+\_\+level)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+nginx} (\textbf{ ngx\+\_\+log\+\_\+t} $\ast$ngx\+\_\+log\+\_\+ptr, void($\ast$ngx\+\_\+error\+\_\+ptr)(void), uint16\+\_\+t ngx\+\_\+log\+\_\+level)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+socket} (const char $\ast$ip, uint16\+\_\+t port)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+socket} (const char $\ast$ip, uint16\+\_\+t port)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+stdio} (F\+I\+LE $\ast$stream)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+stdio} (FILE $\ast$stream)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+syslog} (const char $\ast$name)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+syslog} (const char $\ast$name)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+custom} (void $\ast$\textbf{ context}, int($\ast$stream\+\_\+write)(void $\ast$, const char $\ast$, const size\+\_\+t), int($\ast$stream\+\_\+flush)(void $\ast$))
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+stream\+\_\+custom} (void $\ast$\textbf{ context}, int($\ast$stream\+\_\+write)(void $\ast$, const char $\ast$, const size\+\_\+t), int($\ast$stream\+\_\+flush)(void $\ast$))
 \end{DoxyCompactItemize}
 
 
@@ -93,31 +93,31 @@ L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+str
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STREAM\_FILE@{LOG\_POLICY\_STREAM\_FILE}!log\_policy\_stream.h@{log\_policy\_stream.h}}\index{log\_policy\_stream.h@{log\_policy\_stream.h}!LOG\_POLICY\_STREAM\_FILE@{LOG\_POLICY\_STREAM\_FILE}}}\mbox{\label{log__policy__stream_8h_a26c02086d4e3a6d66e33071814e7a471a869135cbc9e7e3abdad3a384a74a2140}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+F\+I\+LE&\\
+LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+FILE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STREAM\_NGINX@{LOG\_POLICY\_STREAM\_NGINX}!log\_policy\_stream.h@{log\_policy\_stream.h}}\index{log\_policy\_stream.h@{log\_policy\_stream.h}!LOG\_POLICY\_STREAM\_NGINX@{LOG\_POLICY\_STREAM\_NGINX}}}\mbox{\label{log__policy__stream_8h_a26c02086d4e3a6d66e33071814e7a471a4169b88ca67bce89fc74d3c5dba356f1}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+N\+G\+I\+NX&\\
+LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+NGINX&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STREAM\_SOCKET@{LOG\_POLICY\_STREAM\_SOCKET}!log\_policy\_stream.h@{log\_policy\_stream.h}}\index{log\_policy\_stream.h@{log\_policy\_stream.h}!LOG\_POLICY\_STREAM\_SOCKET@{LOG\_POLICY\_STREAM\_SOCKET}}}\mbox{\label{log__policy__stream_8h_a26c02086d4e3a6d66e33071814e7a471aefe72199e3046c572f62ddafcfc6a3a3}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+O\+C\+K\+ET&\\
+LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+SOCKET&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STREAM\_STDIO@{LOG\_POLICY\_STREAM\_STDIO}!log\_policy\_stream.h@{log\_policy\_stream.h}}\index{log\_policy\_stream.h@{log\_policy\_stream.h}!LOG\_POLICY\_STREAM\_STDIO@{LOG\_POLICY\_STREAM\_STDIO}}}\mbox{\label{log__policy__stream_8h_a26c02086d4e3a6d66e33071814e7a471a56c93ad706604b4b86b24a35c0318677}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+T\+D\+IO&\\
+LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+STDIO&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STREAM\_SYSLOG@{LOG\_POLICY\_STREAM\_SYSLOG}!log\_policy\_stream.h@{log\_policy\_stream.h}}\index{log\_policy\_stream.h@{log\_policy\_stream.h}!LOG\_POLICY\_STREAM\_SYSLOG@{LOG\_POLICY\_STREAM\_SYSLOG}}}\mbox{\label{log__policy__stream_8h_a26c02086d4e3a6d66e33071814e7a471a79b2c6abb13c1d12d55fe7b263b1c071}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+Y\+S\+L\+OG&\\
+LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+SYSLOG&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STREAM\_CUSTOM@{LOG\_POLICY\_STREAM\_CUSTOM}!log\_policy\_stream.h@{log\_policy\_stream.h}}\index{log\_policy\_stream.h@{log\_policy\_stream.h}!LOG\_POLICY\_STREAM\_CUSTOM@{LOG\_POLICY\_STREAM\_CUSTOM}}}\mbox{\label{log__policy__stream_8h_a26c02086d4e3a6d66e33071814e7a471a3e85ea5a72c2d9ad9a245e0a844c012b}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+C\+U\+S\+T\+OM&\\
+LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+CUSTOM&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_STREAM\_SIZE@{LOG\_POLICY\_STREAM\_SIZE}!log\_policy\_stream.h@{log\_policy\_stream.h}}\index{log\_policy\_stream.h@{log\_policy\_stream.h}!LOG\_POLICY\_STREAM\_SIZE@{LOG\_POLICY\_STREAM\_SIZE}}}\mbox{\label{log__policy__stream_8h_a26c02086d4e3a6d66e33071814e7a471ac3ef5a0b5d4057eb88afc04a76f03bf2}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+I\+ZE&\\
+LOG\+\_\+\+POLICY\+\_\+\+STREAM\+\_\+\+SIZE&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -128,41 +128,41 @@ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+I\+ZE&\\
 \index{log\_policy\_stream.h@{log\_policy\_stream.h}!log\_policy\_stream@{log\_policy\_stream}}
 \index{log\_policy\_stream@{log\_policy\_stream}!log\_policy\_stream.h@{log\_policy\_stream.h}}
 \doxysubsubsection{log\_policy\_stream()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+stream (\begin{DoxyParamCaption}\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{policy\+\_\+stream\+\_\+id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+stream (\begin{DoxyParamCaption}\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{policy\+\_\+stream\+\_\+id }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__stream_8h_aa6f119bf6d8c99a0dc8cea500bbd78c0}} 
 \index{log\_policy\_stream.h@{log\_policy\_stream.h}!log\_policy\_stream\_file@{log\_policy\_stream\_file}}
 \index{log\_policy\_stream\_file@{log\_policy\_stream\_file}!log\_policy\_stream.h@{log\_policy\_stream.h}}
 \doxysubsubsection{log\_policy\_stream\_file()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{mode }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{const char $\ast$}]{mode }\end{DoxyParamCaption})}
 
-\mbox{\label{log__policy__stream_8h_a24e6abd5e2a37bc91d9619f39b859338}} 
+\mbox{\label{log__policy__stream_8h_a6c530d52ebb0e3c0ed67406bb9e7fb63}} 
 \index{log\_policy\_stream.h@{log\_policy\_stream.h}!log\_policy\_stream\_nginx@{log\_policy\_stream\_nginx}}
 \index{log\_policy\_stream\_nginx@{log\_policy\_stream\_nginx}!log\_policy\_stream.h@{log\_policy\_stream.h}}
 \doxysubsubsection{log\_policy\_stream\_nginx()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+nginx (\begin{DoxyParamCaption}\item[{\textbf{ ngx\+\_\+log\+\_\+t} $\ast$}]{ngx\+\_\+log\+\_\+ptr,  }\item[{void($\ast$)()}]{ngx\+\_\+error\+\_\+ptr,  }\item[{uint16\+\_\+t}]{ngx\+\_\+log\+\_\+level }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+nginx (\begin{DoxyParamCaption}\item[{\textbf{ ngx\+\_\+log\+\_\+t} $\ast$}]{ngx\+\_\+log\+\_\+ptr,  }\item[{void($\ast$)(void)}]{ngx\+\_\+error\+\_\+ptr,  }\item[{uint16\+\_\+t}]{ngx\+\_\+log\+\_\+level }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__stream_8h_a4b3fcc5ec7f59b7543e247dba2c0fae0}} 
 \index{log\_policy\_stream.h@{log\_policy\_stream.h}!log\_policy\_stream\_socket@{log\_policy\_stream\_socket}}
 \index{log\_policy\_stream\_socket@{log\_policy\_stream\_socket}!log\_policy\_stream.h@{log\_policy\_stream.h}}
 \doxysubsubsection{log\_policy\_stream\_socket()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+socket (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ip,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+socket (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ip,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__stream_8h_a4160d9d860af6eed0af334091305cb65}} 
 \index{log\_policy\_stream.h@{log\_policy\_stream.h}!log\_policy\_stream\_stdio@{log\_policy\_stream\_stdio}}
 \index{log\_policy\_stream\_stdio@{log\_policy\_stream\_stdio}!log\_policy\_stream.h@{log\_policy\_stream.h}}
 \doxysubsubsection{log\_policy\_stream\_stdio()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+stdio (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{stream }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+stdio (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{stream }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__stream_8h_a5fa6dd78edfe0a559501f90b3fdefba7}} 
 \index{log\_policy\_stream.h@{log\_policy\_stream.h}!log\_policy\_stream\_syslog@{log\_policy\_stream\_syslog}}
 \index{log\_policy\_stream\_syslog@{log\_policy\_stream\_syslog}!log\_policy\_stream.h@{log\_policy\_stream.h}}
 \doxysubsubsection{log\_policy\_stream\_syslog()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+syslog (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+syslog (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__stream_8h_ac0f8549ea7e00ba0eb2798d938696af7}} 
 \index{log\_policy\_stream.h@{log\_policy\_stream.h}!log\_policy\_stream\_custom@{log\_policy\_stream\_custom}}
 \index{log\_policy\_stream\_custom@{log\_policy\_stream\_custom}!log\_policy\_stream.h@{log\_policy\_stream.h}}
 \doxysubsubsection{log\_policy\_stream\_custom()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+custom (\begin{DoxyParamCaption}\item[{void $\ast$}]{context,  }\item[{int($\ast$)(void $\ast$, const char $\ast$, const size\+\_\+t)}]{stream\+\_\+write,  }\item[{int($\ast$)(void $\ast$)}]{stream\+\_\+flush }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+stream\+\_\+custom (\begin{DoxyParamCaption}\item[{void $\ast$}]{context,  }\item[{int($\ast$)(void $\ast$, const char $\ast$, const size\+\_\+t)}]{stream\+\_\+write,  }\item[{int($\ast$)(void $\ast$)}]{stream\+\_\+flush }\end{DoxyParamCaption})}
 

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__future_8h" kind="file" language="C++">
     <compoundname>reflect_future.h</compoundname>
     <includes refid="reflect__value_8h" local="no">reflect/reflect_value.h</includes>
@@ -29,6 +29,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="4">
         <label>reflect_value_type.h</label>
         <link refid="reflect__value__type_8h"/>
         <childnode refid="2" relation="include">
@@ -37,13 +41,15 @@
       <node id="2">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>reflect_future.h</label>
         <link refid="reflect__future_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -245,7 +251,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -270,9 +276,9 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">future_type;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">future_type;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref>;</highlight></codeline>
+<codeline lineno="32" refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref>;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34" refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">future_type<sp/>*<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref>;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
@@ -298,11 +304,11 @@
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56" refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>future_interface<sp/>(*<ref refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" kindref="member">future_impl_interface_singleton</ref>)(void);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/><ref refid="reflect__future_8h_1af11e513c084e86bc3560cbccca13aa88" kindref="member">future_create</ref>(<ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref><sp/>impl,<sp/><ref refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" kindref="member">future_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
+<codeline lineno="58" refid="reflect__future_8h_1af11e513c084e86bc3560cbccca13aa88" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/><ref refid="reflect__future_8h_1af11e513c084e86bc3560cbccca13aa88" kindref="member">future_create</ref>(<ref refid="reflect__future_8h_1a3a2d290a78fc88dba9171e3c44c99e87" kindref="member">future_impl</ref><sp/>impl,<sp/><ref refid="reflect__future_8h_1ab19bb006a90b0bef6a3fda98e29fdc83" kindref="member">future_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" kindref="member">future_return</ref><sp/><ref refid="reflect__future_8h_1a4c6bfdb1bc35c541b76f92784d352071" kindref="member">future_await</ref>(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/>f,<sp/><ref refid="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" kindref="member">future_resolve_callback</ref><sp/>resolve_callback,<sp/><ref refid="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" kindref="member">future_reject_callback</ref><sp/>reject_callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="60" refid="reflect__future_8h_1a4c6bfdb1bc35c541b76f92784d352071" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__future_8h_1adaf6af65439e8fcc4a9683f03399c3a8" kindref="member">future_return</ref><sp/><ref refid="reflect__future_8h_1a4c6bfdb1bc35c541b76f92784d352071" kindref="member">future_await</ref>(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/>f,<sp/><ref refid="reflect__future_8h_1ab044ff8f96557d985696052b7789bf14" kindref="member">future_resolve_callback</ref><sp/>resolve_callback,<sp/><ref refid="reflect__future_8h_1a5ad595667e827b7fd6b51f9fbddce7c0" kindref="member">future_reject_callback</ref><sp/>reject_callback,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__future_8h_1a637314f3ee2db826324fedb25f84db7e" kindref="member">future_destroy</ref>(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/>f);</highlight></codeline>
+<codeline lineno="62" refid="reflect__future_8h_1a637314f3ee2db826324fedb25f84db7e" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__future_8h_1a637314f3ee2db826324fedb25f84db7e" kindref="member">future_destroy</ref>(<ref refid="reflect__future_8h_1affb5f2dd6b9a45543e4c516cf243c919" kindref="member">future</ref><sp/>f);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal">}</highlight></codeline>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="log__policy__schedule_8h" kind="file" language="C++">
     <compoundname>log_policy_schedule.h</compoundname>
     <includes local="no">log/log_api.h</includes>
@@ -40,9 +40,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="2">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>log_policy_schedule.h</label>
@@ -85,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="25" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="24" bodyend="30"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" line="24" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_schedule.h" bodystart="25" bodyend="30"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -213,7 +219,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -239,16 +245,16 @@
 <codeline lineno="26" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a6c439eb016fff7a4c205df2277b3751b" kindref="member">LOG_POLICY_SCHEDULE_ASYNC</ref><sp/>=<sp/>0x00,</highlight></codeline>
 <codeline lineno="27" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a89b7ffc3fabdb139d8b8995c3988155a" kindref="member">LOG_POLICY_SCHEDULE_SYNC</ref><sp/>=<sp/>0x01,</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db" kindref="member">LOG_POLICY_SCHEDULE_SIZE</ref></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db" kindref="member">LOG_POLICY_SCHEDULE_SIZE</ref></highlight></codeline>
+<codeline lineno="30" refid="log__policy__schedule_8h_1a422def7d895a6043d9758d0e27e1ac25a7d7e9e70d9ed0b27062ad0621b3929db" refkind="member"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__schedule__impl__type" kindref="compound">log_policy_schedule_impl_type</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__schedule__impl__type" kindref="compound">log_policy_schedule_impl_type</ref>;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" kindref="member">log_policy_schedule_data</ref>;</highlight></codeline>
+<codeline lineno="38" refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="log__policy__schedule_8h_1aa49e60de567bd4ed16bc904a046cb048" kindref="member">log_policy_schedule_data</ref>;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__schedule__impl__type" kindref="compound">log_policy_schedule_impl_type</ref><sp/>*log_policy_schedule_impl;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
@@ -269,11 +275,11 @@
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__schedule_8h_1a1a457f64ce52cef20969cf64198642e3" kindref="member">log_policy_schedule</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref><sp/>policy_schedule_id);</highlight></codeline>
+<codeline lineno="59" refid="log__policy__schedule_8h_1a1a457f64ce52cef20969cf64198642e3" refkind="member"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__schedule_8h_1a1a457f64ce52cef20969cf64198642e3" kindref="member">log_policy_schedule</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="log__policy_8h_1a06c1e2a7cedb11c0772c1802d1685eb5" kindref="member">log_policy_id</ref><sp/>policy_schedule_id);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__schedule_8h_1ac9f8ff2ec3264e0b2271dbf22a4eb782" kindref="member">log_policy_schedule_async</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61" refid="log__policy__schedule_8h_1ac9f8ff2ec3264e0b2271dbf22a4eb782" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__schedule_8h_1ac9f8ff2ec3264e0b2271dbf22a4eb782" kindref="member">log_policy_schedule_async</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__schedule_8h_1a238989dd68646f238ee7ce2337bfe971" kindref="member">log_policy_schedule_sync</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63" refid="log__policy__schedule_8h_1a238989dd68646f238ee7ce2337bfe971" refkind="member"><highlight class="normal">LOG_API<sp/><ref refid="log__aspect_8h_1aefc5ba1d88f16647657e9a4416b1abfe" kindref="member">log_policy</ref><sp/><ref refid="log__policy__schedule_8h_1a238989dd68646f238ee7ce2337bfe971" kindref="member">log_policy_schedule_sync</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal">}</highlight></codeline>

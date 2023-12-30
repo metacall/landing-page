@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect_8h" kind="file" language="C++">
     <compoundname>reflect.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
@@ -18,6 +18,8 @@
     <includes refid="reflect__value__type__demotion_8h" local="no">reflect/reflect_value_type_demotion.h</includes>
     <includes refid="reflect__value__type__id__size_8h" local="no">reflect/reflect_value_type_id_size.h</includes>
     <includes refid="reflect__value__type__promotion_8h" local="no">reflect/reflect_value_type_promotion.h</includes>
+    <includes refid="reflect__memory__tracker_8h" local="no">reflect/reflect_memory_tracker.h</includes>
+    <includedby refid="plugin__interface_8hpp" local="no">plugin_interface.hpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>reflect/reflect_class.h</label>
@@ -83,7 +85,10 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="31">
+      <node id="30">
+        <label>stdint.h</label>
+      </node>
+      <node id="34">
         <label>reflect/reflect_value_type_id_size.h</label>
         <link refid="reflect__value__type__id__size_8h"/>
         <childnode refid="2" relation="include">
@@ -106,7 +111,7 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="33">
         <label>reflect/reflect_value_type_demotion.h</label>
         <link refid="reflect__value__type__demotion_8h"/>
         <childnode refid="2" relation="include">
@@ -134,6 +139,14 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
+      <node id="31">
+        <label>reflect/reflect_throwable.h</label>
+        <link refid="reflect__throwable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
       <node id="20">
         <label>reflect/reflect_method.h</label>
         <link refid="reflect__method_8h"/>
@@ -154,6 +167,14 @@
         <label>reflect/reflect_type_id.h</label>
         <link refid="reflect__type__id_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>reflect/reflect_exception.h</label>
+        <link refid="reflect__exception_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -195,6 +216,12 @@
         <label>reflect/reflect_attribute_decl.h</label>
         <link refid="reflect__attribute__decl_8h"/>
       </node>
+      <node id="36">
+        <label>reflect/reflect_memory_tracker.h</label>
+        <link refid="reflect__memory__tracker_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>reflect/reflect_api.h</label>
       </node>
@@ -219,20 +246,24 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="32">
         <label>reflect/reflect_value_type_cast.h</label>
         <link refid="reflect__value__type__cast_8h"/>
         <childnode refid="2" relation="include">
@@ -245,7 +276,7 @@
       <node id="16">
         <label>preprocessor/preprocessor_api.h</label>
       </node>
-      <node id="32">
+      <node id="35">
         <label>reflect/reflect_value_type_promotion.h</label>
         <link refid="reflect__value__type__promotion_8h"/>
         <childnode refid="2" relation="include">
@@ -302,13 +333,15 @@
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
         <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="22">
@@ -338,10 +371,22 @@
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="1">
+        <label>reflect.h</label>
+        <link refid="reflect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="reflect_8h_1a10ea3e4e85279b7a1d7f8959f67bfaf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const REFLECT_API char *</type>
-        <definition>const REFLECT_API char* reflect_print_info</definition>
+      <memberdef kind="function" id="reflect_8h_1a692d6c908c1e4c52715efc0ca011e15a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>REFLECT_API const char *</type>
+        <definition>REFLECT_API const char* reflect_print_info</definition>
         <argsstring>(void)</argsstring>
         <name>reflect_print_info</name>
         <param>
@@ -353,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect.h" line="46" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect.h" declline="46" declcolumn="24"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect.h" line="50" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect.h" declline="50" declcolumn="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -365,7 +410,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -402,17 +447,21 @@
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__value__type__id__size_8h" kindref="compound">reflect/reflect_value_type_id_size.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="reflect__value__type__promotion_8h" kindref="compound">reflect/reflect_value_type_promotion.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;<ref refid="reflect__memory__tracker_8h" kindref="compound">reflect/reflect_memory_tracker.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect_8h_1a10ea3e4e85279b7a1d7f8959f67bfaf9" kindref="member">reflect_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="reflect_8h_1a692d6c908c1e4c52715efc0ca011e15a" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect_8h_1a692d6c908c1e4c52715efc0ca011e15a" kindref="member">reflect_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>REFLECT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect.h"/>
   </compounddef>

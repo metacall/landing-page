@@ -1,4 +1,4 @@
-.TH "reflect_value.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "reflect_value.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,6 +36,9 @@ reflect_value.h
 .br
 .ti -1c
 .RI "REFLECT_API \fBvalue\fP \fBvalue_create\fP (const void *data, size_t bytes)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBvalue_validate\fP (\fBvalue\fP v)"
 .br
 .ti -1c
 .RI "REFLECT_API \fBvalue\fP \fBvalue_copy\fP (\fBvalue\fP v)"
@@ -111,6 +114,22 @@ Create a value from @data with size @bytes\&.
 \fBReturns\fP
 .RS 4
 Pointer to value if success, null otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int value_validate (\fBvalue\fP v)"
+
+.PP
+Check if the value @v is valid or the memory is corrupted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference of value to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero if the value is valid, null otherwhise 
 .RE
 .PP
 

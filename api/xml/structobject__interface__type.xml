@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="structobject__interface__type" kind="struct" language="C++" prot="public">
     <compoundname>object_interface_type</compoundname>
     <includes refid="reflect__object_8h" local="no">/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h</includes>
@@ -107,9 +107,6 @@
       <node id="4">
         <label>struct method_type *</label>
       </node>
-      <node id="11">
-        <label>int(*)(object, object_impl)</label>
-      </node>
       <node id="10">
         <label>void(*)(object, object_impl)</label>
       </node>
@@ -117,20 +114,23 @@
         <label>object_interface</label>
         <link refid="structobject__interface__type"/>
         <childnode refid="2" relation="usage">
-          <edgelabel>+set</edgelabel>
           <edgelabel>+get</edgelabel>
         </childnode>
         <childnode refid="9" relation="usage">
-          <edgelabel>+method_invoke</edgelabel>
           <edgelabel>+method_await</edgelabel>
+          <edgelabel>+method_invoke</edgelabel>
         </childnode>
         <childnode refid="10" relation="usage">
           <edgelabel>+destroy</edgelabel>
         </childnode>
         <childnode refid="11" relation="usage">
-          <edgelabel>+destructor</edgelabel>
           <edgelabel>+create</edgelabel>
+          <edgelabel>+destructor</edgelabel>
+          <edgelabel>+set</edgelabel>
         </childnode>
+      </node>
+      <node id="11">
+        <label>int</label>
       </node>
       <node id="2">
         <label>accessor_type</label>
@@ -170,7 +170,7 @@
         <label>struct constructor_type *</label>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="63" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="62" bodyend="72"/>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" line="62" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_object.h" bodystart="63" bodyend="72"/>
     <listofallmembers>
       <member refid="structobject__interface__type_1aab95e2d877dfa670b8126394a8427a2f" prot="public" virt="non-virtual"><scope>object_interface_type</scope><name>create</name></member>
       <member refid="structobject__interface__type_1ab410cf71d7915f5f5038b5cbdd74484c" prot="public" virt="non-virtual"><scope>object_interface_type</scope><name>destroy</name></member>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__method_8h" kind="file" language="C++">
     <compoundname>reflect_method.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
@@ -104,22 +104,26 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="2">
         <label>reflect_class.h</label>
         <link refid="reflect__class_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>reflect_object.h</label>
         <link refid="reflect__object_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -127,10 +131,10 @@
         <link refid="reflect__method_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>reflect_value_type.h</label>
         <link refid="reflect__value__type_8h"/>
         <childnode refid="3" relation="include">
@@ -139,6 +143,8 @@
       <node id="3">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -329,7 +335,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -362,23 +368,23 @@
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/><ref refid="reflect__method_8h_1a3f47cf8dc8702d839782af6f4abb3b4b" kindref="member">method_create</ref>(<ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/>cls,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>args_count,<sp/><ref refid="reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22" kindref="member">method_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b" kindref="member">class_visibility_id</ref><sp/>visibility,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref><sp/>async,<sp/><ref refid="reflect__method__decl_8h_1a404f71076eca66c871aa28c3ec7f51e6" kindref="member">method_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
+<codeline lineno="38" refid="reflect__method_8h_1a3f47cf8dc8702d839782af6f4abb3b4b" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/><ref refid="reflect__method_8h_1a3f47cf8dc8702d839782af6f4abb3b4b" kindref="member">method_create</ref>(<ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/>cls,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>args_count,<sp/><ref refid="reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22" kindref="member">method_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b" kindref="member">class_visibility_id</ref><sp/>visibility,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref><sp/>async,<sp/><ref refid="reflect__method__decl_8h_1a404f71076eca66c871aa28c3ec7f51e6" kindref="member">method_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/><ref refid="reflect__method_8h_1a9d51a01b9d2a89a044cbb40c0dcb60c7" kindref="member">method_class</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="40" refid="reflect__method_8h_1a9d51a01b9d2a89a044cbb40c0dcb60c7" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/><ref refid="reflect__method_8h_1a9d51a01b9d2a89a044cbb40c0dcb60c7" kindref="member">method_class</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__method_8h_1a9fbe596906113e1cb220229b44eec11a" kindref="member">method_name</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="42" refid="reflect__method_8h_1a9fbe596906113e1cb220229b44eec11a" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__method_8h_1a9fbe596906113e1cb220229b44eec11a" kindref="member">method_name</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/><ref refid="reflect__method_8h_1a3b2b59daa56c1be1b1d807afd80c6af7" kindref="member">method_signature</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="44" refid="reflect__method_8h_1a3b2b59daa56c1be1b1d807afd80c6af7" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__signature_8h_1a904c133c8548528df8a52a5a6baa0f44" kindref="member">signature</ref><sp/><ref refid="reflect__method_8h_1a3b2b59daa56c1be1b1d807afd80c6af7" kindref="member">method_signature</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22" kindref="member">method_impl</ref><sp/><ref refid="reflect__method_8h_1a1ead81f9a91885c59a64c6bc5b713bc6" kindref="member">method_data</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="46" refid="reflect__method_8h_1a1ead81f9a91885c59a64c6bc5b713bc6" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__method__decl_8h_1ab46197f395c1bd7bbaba9b3376e7eb22" kindref="member">method_impl</ref><sp/><ref refid="reflect__method_8h_1a1ead81f9a91885c59a64c6bc5b713bc6" kindref="member">method_data</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal">_visibility_id<sp/><ref refid="reflect__method_8h_1af8692f3fe5fc4b35fa58032831e7ebb9" kindref="member">method_visibility</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="48" refid="reflect__method_8h_1af8692f3fe5fc4b35fa58032831e7ebb9" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal">_visibility_id<sp/><ref refid="reflect__method_8h_1af8692f3fe5fc4b35fa58032831e7ebb9" kindref="member">method_visibility</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref><sp/><ref refid="reflect__method_8h_1ae2a3b59f69e4756e455cf80a45042fdc" kindref="member">method_async</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="50" refid="reflect__method_8h_1ae2a3b59f69e4756e455cf80a45042fdc" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__async_8h_1a00906375bbe7dbe8f9db5b3a3f8f8586" kindref="member">async_id</ref><sp/><ref refid="reflect__method_8h_1ae2a3b59f69e4756e455cf80a45042fdc" kindref="member">method_async</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__method_8h_1a8313c936afdc1d651a5d12cf86218cc1" kindref="member">method_metadata</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="52" refid="reflect__method_8h_1a8313c936afdc1d651a5d12cf86218cc1" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__method_8h_1a8313c936afdc1d651a5d12cf86218cc1" kindref="member">method_metadata</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__method_8h_1a508bdf711fefe65854bd2a0282d7d8b2" kindref="member">method_destroy</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
+<codeline lineno="54" refid="reflect__method_8h_1a508bdf711fefe65854bd2a0282d7d8b2" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__method_8h_1a508bdf711fefe65854bd2a0282d7d8b2" kindref="member">method_destroy</ref>(<ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/>m);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal">}</highlight></codeline>

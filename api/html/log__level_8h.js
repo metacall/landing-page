@@ -8,6 +8,6 @@ var log__level_8h =
       [ "LOG_LEVEL_CRITICAL", "log__level_8h.html#ab2136fe4c31ef76f47cf6bb67b2f6bdaa0f747790672fa5c82fd781222463c35f", null ],
       [ "LOG_LEVEL_SIZE", "log__level_8h.html#ab2136fe4c31ef76f47cf6bb67b2f6bdaa84b2a1f01d4286c3f8dbede3993f6f54", null ]
     ] ],
-    [ "log_level_to_string", "log__level_8h.html#a158abbda2c04d95eb409bffacb928e62", null ],
+    [ "log_level_to_string", "log__level_8h.html#a8da508462c6b071ee1589e6b3ba16416", null ],
     [ "log_level_to_enum", "log__level_8h.html#aac323543088c0ad535c4a11588a42718", null ]
 ];

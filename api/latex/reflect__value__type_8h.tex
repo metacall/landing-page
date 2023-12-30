@@ -2,9 +2,11 @@
 \label{reflect__value__type_8h}\index{reflect\_value\_type.h@{reflect\_value\_type.h}}
 {\ttfamily \#include $<$reflect/reflect\+\_\+api.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+class.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+exception.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+function.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+future.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+object.\+h$>$}\newline
+{\ttfamily \#include $<$reflect/reflect\+\_\+throwable.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+type\+\_\+id.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+value.\+h$>$}\newline
 {\ttfamily \#include $<$reflect/reflect\+\_\+value\+\_\+type\+\_\+cast.\+h$>$}\newline
@@ -21,127 +23,139 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=139pt]{reflect__value__type_8h__dep__incl}
+\includegraphics[width=140pt]{reflect__value__type_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+type\+\_\+create} (const void $\ast$data, size\+\_\+t bytes, \textbf{ type\+\_\+id} id)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+type\+\_\+create} (const void $\ast$data, size\+\_\+t bytes, \textbf{ type\+\_\+id} id)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+type\+\_\+copy} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+type\+\_\+copy} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ value\+\_\+type\+\_\+size} (\textbf{ value} v)
+REFLECT\+\_\+\+API size\+\_\+t \textbf{ value\+\_\+type\+\_\+size} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ value\+\_\+type\+\_\+count} (void $\ast$v)
+REFLECT\+\_\+\+API size\+\_\+t \textbf{ value\+\_\+type\+\_\+count} (void $\ast$v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+id} \textbf{ value\+\_\+type\+\_\+id} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ type\+\_\+id} \textbf{ value\+\_\+type\+\_\+id} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+bool} (\textbf{ boolean} b)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+bool} (\textbf{ boolean} b)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+char} (char c)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+char} (char c)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+short} (short s)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+short} (short s)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+int} (int i)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+int} (int i)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+long} (long l)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+long} (long l)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+float} (float f)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+float} (float f)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+double} (double d)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+double} (double d)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+string} (const char $\ast$str, size\+\_\+t length)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+string} (const char $\ast$str, size\+\_\+t length)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+buffer} (const void $\ast$buffer, size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+buffer} (const void $\ast$buffer, size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+array} (const \textbf{ value} $\ast$values, size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+array} (const \textbf{ value} $\ast$values, size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+map} (const \textbf{ value} $\ast$tuples, size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+map} (const \textbf{ value} $\ast$tuples, size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+ptr} (const void $\ast$ptr)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+ptr} (const void $\ast$ptr)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+future} (\textbf{ future} f)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+future} (\textbf{ future} f)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+function} (\textbf{ function} f)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+function} (\textbf{ function} f)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+function\+\_\+closure} (\textbf{ function} f, void $\ast$c)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+function\+\_\+closure} (\textbf{ function} f, void $\ast$c)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+null} (void)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+null} (void)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+class} (\textbf{ klass} c)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+class} (\textbf{ klass} c)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+create\+\_\+object} (\textbf{ object} o)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+object} (\textbf{ object} o)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ boolean} \textbf{ value\+\_\+to\+\_\+bool} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+exception} (\textbf{ exception} ex)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char \textbf{ value\+\_\+to\+\_\+char} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+create\+\_\+throwable} (\textbf{ throwable} th)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI short \textbf{ value\+\_\+to\+\_\+short} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ boolean} \textbf{ value\+\_\+to\+\_\+bool} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ value\+\_\+to\+\_\+int} (\textbf{ value} v)
+REFLECT\+\_\+\+API char \textbf{ value\+\_\+to\+\_\+char} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI long \textbf{ value\+\_\+to\+\_\+long} (\textbf{ value} v)
+REFLECT\+\_\+\+API short \textbf{ value\+\_\+to\+\_\+short} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI float \textbf{ value\+\_\+to\+\_\+float} (\textbf{ value} v)
+REFLECT\+\_\+\+API int \textbf{ value\+\_\+to\+\_\+int} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI double \textbf{ value\+\_\+to\+\_\+double} (\textbf{ value} v)
+REFLECT\+\_\+\+API long \textbf{ value\+\_\+to\+\_\+long} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ value\+\_\+to\+\_\+string} (\textbf{ value} v)
+REFLECT\+\_\+\+API float \textbf{ value\+\_\+to\+\_\+float} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+to\+\_\+buffer} (\textbf{ value} v)
+REFLECT\+\_\+\+API double \textbf{ value\+\_\+to\+\_\+double} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} $\ast$ \textbf{ value\+\_\+to\+\_\+array} (\textbf{ value} v)
+REFLECT\+\_\+\+API char $\ast$ \textbf{ value\+\_\+to\+\_\+string} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} $\ast$ \textbf{ value\+\_\+to\+\_\+map} (\textbf{ value} v)
+REFLECT\+\_\+\+API void $\ast$ \textbf{ value\+\_\+to\+\_\+buffer} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+to\+\_\+ptr} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} $\ast$ \textbf{ value\+\_\+to\+\_\+array} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future} \textbf{ value\+\_\+to\+\_\+future} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} $\ast$ \textbf{ value\+\_\+to\+\_\+map} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function} \textbf{ value\+\_\+to\+\_\+function} (\textbf{ value} v)
+REFLECT\+\_\+\+API void $\ast$ \textbf{ value\+\_\+to\+\_\+ptr} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ value\+\_\+to\+\_\+null} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ future} \textbf{ value\+\_\+to\+\_\+future} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} \textbf{ value\+\_\+to\+\_\+class} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ function} \textbf{ value\+\_\+to\+\_\+function} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} \textbf{ value\+\_\+to\+\_\+object} (\textbf{ value} v)
+REFLECT\+\_\+\+API void $\ast$ \textbf{ value\+\_\+to\+\_\+null} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+bool} (\textbf{ value} v, \textbf{ boolean} b)
+REFLECT\+\_\+\+API \textbf{ klass} \textbf{ value\+\_\+to\+\_\+class} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+char} (\textbf{ value} v, char c)
+REFLECT\+\_\+\+API \textbf{ object} \textbf{ value\+\_\+to\+\_\+object} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+short} (\textbf{ value} v, short s)
+REFLECT\+\_\+\+API \textbf{ exception} \textbf{ value\+\_\+to\+\_\+exception} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+int} (\textbf{ value} v, int i)
+REFLECT\+\_\+\+API \textbf{ throwable} \textbf{ value\+\_\+to\+\_\+throwable} (\textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+long} (\textbf{ value} v, long l)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+bool} (\textbf{ value} v, \textbf{ boolean} b)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+float} (\textbf{ value} v, float f)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+char} (\textbf{ value} v, char c)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+double} (\textbf{ value} v, double d)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+short} (\textbf{ value} v, short s)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+string} (\textbf{ value} v, const char $\ast$str, size\+\_\+t length)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+int} (\textbf{ value} v, int i)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+buffer} (\textbf{ value} v, const void $\ast$buffer, size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+long} (\textbf{ value} v, long l)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+array} (\textbf{ value} v, const \textbf{ value} $\ast$values, size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+float} (\textbf{ value} v, float f)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+map} (\textbf{ value} v, const \textbf{ value} $\ast$tuples, size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+double} (\textbf{ value} v, double d)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+ptr} (\textbf{ value} v, const void $\ast$ptr)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+string} (\textbf{ value} v, const char $\ast$str, size\+\_\+t length)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+future} (\textbf{ value} v, \textbf{ future} f)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+buffer} (\textbf{ value} v, const void $\ast$buffer, size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+function} (\textbf{ value} v, \textbf{ function} f)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+array} (\textbf{ value} v, const \textbf{ value} $\ast$values, size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+null} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+map} (\textbf{ value} v, const \textbf{ value} $\ast$tuples, size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+class} (\textbf{ value} v, \textbf{ klass} c)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+ptr} (\textbf{ value} v, const void $\ast$ptr)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ value\+\_\+from\+\_\+object} (\textbf{ value} v, \textbf{ object} o)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+future} (\textbf{ value} v, \textbf{ future} f)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+type\+\_\+destroy} (\textbf{ value} v)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+function} (\textbf{ value} v, \textbf{ function} f)
+\item 
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+null} (\textbf{ value} v)
+\item 
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+class} (\textbf{ value} v, \textbf{ klass} c)
+\item 
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+object} (\textbf{ value} v, \textbf{ object} o)
+\item 
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+exception} (\textbf{ value} v, \textbf{ exception} ex)
+\item 
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ value\+\_\+from\+\_\+throwable} (\textbf{ value} v, \textbf{ throwable} th)
+\item 
+REFLECT\+\_\+\+API void \textbf{ value\+\_\+type\+\_\+destroy} (\textbf{ value} v)
 \end{DoxyCompactItemize}
 
 
@@ -150,7 +164,7 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ value\+\_\+type\+\_\+destroy} (\t
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_create@{value\_type\_create}}
 \index{value\_type\_create@{value\_type\_create}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_type\_create()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+type\+\_\+create (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes,  }\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+type\+\_\+create (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{bytes,  }\item[{\textbf{ type\+\_\+id}}]{id }\end{DoxyParamCaption})}
 
 
 
@@ -172,7 +186,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_copy@{value\_type\_copy}}
 \index{value\_type\_copy@{value\_type\_copy}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_type\_copy()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+type\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+type\+\_\+copy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -190,7 +204,7 @@ Pointer to a deep copy of new value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_size@{value\_type\_size}}
 \index{value\_type\_size@{value\_type\_size}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_type\_size()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t value\+\_\+type\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API size\+\_\+t value\+\_\+type\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -208,7 +222,7 @@ Size in bytes of the value type
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_count@{value\_type\_count}}
 \index{value\_type\_count@{value\_type\_count}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_type\_count()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t value\+\_\+type\+\_\+count (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API size\+\_\+t value\+\_\+type\+\_\+count (\begin{DoxyParamCaption}\item[{void $\ast$}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -226,7 +240,7 @@ Number of values @v represents
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_id@{value\_type\_id}}
 \index{value\_type\_id@{value\_type\_id}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_type\_id()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ type\+\_\+id} value\+\_\+type\+\_\+id (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ type\+\_\+id} value\+\_\+type\+\_\+id (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -244,7 +258,7 @@ Return type id assigned to value
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_bool@{value\_create\_bool}}
 \index{value\_create\_bool@{value\_create\_bool}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_bool()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
 
 
 
@@ -262,7 +276,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_char@{value\_create\_char}}
 \index{value\_create\_char@{value\_create\_char}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_char()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
 
 
 
@@ -280,7 +294,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_short@{value\_create\_short}}
 \index{value\_create\_short@{value\_create\_short}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_short()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+short (\begin{DoxyParamCaption}\item[{short}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+short (\begin{DoxyParamCaption}\item[{short}]{s }\end{DoxyParamCaption})}
 
 
 
@@ -298,7 +312,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_int@{value\_create\_int}}
 \index{value\_create\_int@{value\_create\_int}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_int()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
 
 
 
@@ -316,7 +330,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_long@{value\_create\_long}}
 \index{value\_create\_long@{value\_create\_long}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_long()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+long (\begin{DoxyParamCaption}\item[{long}]{l }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+long (\begin{DoxyParamCaption}\item[{long}]{l }\end{DoxyParamCaption})}
 
 
 
@@ -334,7 +348,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_float@{value\_create\_float}}
 \index{value\_create\_float@{value\_create\_float}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_float()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+float (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+float (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
 
 
 
@@ -352,7 +366,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_double@{value\_create\_double}}
 \index{value\_create\_double@{value\_create\_double}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_double()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+double (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+double (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
 
 
 
@@ -370,7 +384,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_string@{value\_create\_string}}
 \index{value\_create\_string@{value\_create\_string}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_string()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
 
 
 
@@ -390,7 +404,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_buffer@{value\_create\_buffer}}
 \index{value\_create\_buffer@{value\_create\_buffer}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_buffer()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+buffer (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+buffer (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -410,7 +424,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_array@{value\_create\_array}}
 \index{value\_create\_array@{value\_create\_array}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_array()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+array (\begin{DoxyParamCaption}\item[{const \textbf{ value} $\ast$}]{values,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+array (\begin{DoxyParamCaption}\item[{const \textbf{ value} $\ast$}]{values,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -430,7 +444,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_map@{value\_create\_map}}
 \index{value\_create\_map@{value\_create\_map}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_map()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+map (\begin{DoxyParamCaption}\item[{const \textbf{ value} $\ast$}]{tuples,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+map (\begin{DoxyParamCaption}\item[{const \textbf{ value} $\ast$}]{tuples,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -450,7 +464,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_ptr@{value\_create\_ptr}}
 \index{value\_create\_ptr@{value\_create\_ptr}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_ptr()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+ptr (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+ptr (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
 
 
 
@@ -468,7 +482,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_future@{value\_create\_future}}
 \index{value\_create\_future@{value\_create\_future}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_future()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ future}}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ future}}]{f }\end{DoxyParamCaption})}
 
 
 
@@ -486,7 +500,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_function@{value\_create\_function}}
 \index{value\_create\_function@{value\_create\_function}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_function()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{f }\end{DoxyParamCaption})}
 
 
 
@@ -504,7 +518,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_function\_closure@{value\_create\_function\_closure}}
 \index{value\_create\_function\_closure@{value\_create\_function\_closure}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_function\_closure()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+function\+\_\+closure (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{f,  }\item[{void $\ast$}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+function\+\_\+closure (\begin{DoxyParamCaption}\item[{\textbf{ function}}]{f,  }\item[{void $\ast$}]{c }\end{DoxyParamCaption})}
 
 
 
@@ -524,7 +538,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_null@{value\_create\_null}}
 \index{value\_create\_null@{value\_create\_null}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_null()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+null (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -537,7 +551,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_class@{value\_create\_class}}
 \index{value\_create\_class@{value\_create\_class}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_class()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ klass}}]{c }\end{DoxyParamCaption})}
 
 
 
@@ -555,7 +569,7 @@ Pointer to value if success, null otherwhise
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_object@{value\_create\_object}}
 \index{value\_create\_object@{value\_create\_object}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_create\_object()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+create\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{o }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{o }\end{DoxyParamCaption})}
 
 
 
@@ -569,11 +583,47 @@ Create a value from object @o.
 \begin{DoxyReturn}{Returns}
 Pointer to value if success, null otherwhise 
 \end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a0fbfd806bd884e392910dfe361826973}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_exception@{value\_create\_exception}}
+\index{value\_create\_exception@{value\_create\_exception}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_exception()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+exception (\begin{DoxyParamCaption}\item[{\textbf{ exception}}]{ex }\end{DoxyParamCaption})}
+
+
+
+Create a value from exception @ex. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ex} & Pointer to exception will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a214a304d001a556a0695a73c09121dbc}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_create\_throwable@{value\_create\_throwable}}
+\index{value\_create\_throwable@{value\_create\_throwable}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_create\_throwable()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+create\+\_\+throwable (\begin{DoxyParamCaption}\item[{\textbf{ throwable}}]{th }\end{DoxyParamCaption})}
+
+
+
+Create a value from throwable @th. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em th} & Pointer to throwable will be copied into value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to value if success, null otherwhise 
+\end{DoxyReturn}
 \mbox{\label{reflect__value__type_8h_a22ec3aa0f4f44e1a46fdcbdb0c702f4d}} 
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_bool@{value\_to\_bool}}
 \index{value\_to\_bool@{value\_to\_bool}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_bool()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ boolean} value\+\_\+to\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ boolean} value\+\_\+to\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -591,7 +641,7 @@ Value converted to boolean
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_char@{value\_to\_char}}
 \index{value\_to\_char@{value\_to\_char}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_char()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char value\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API char value\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -609,7 +659,7 @@ Value converted to char
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_short@{value\_to\_short}}
 \index{value\_to\_short@{value\_to\_short}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_short()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI short value\+\_\+to\+\_\+short (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API short value\+\_\+to\+\_\+short (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -627,7 +677,7 @@ Value converted to short
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_int@{value\_to\_int}}
 \index{value\_to\_int@{value\_to\_int}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_int()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int value\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int value\+\_\+to\+\_\+int (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -645,7 +695,7 @@ Value converted to integer
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_long@{value\_to\_long}}
 \index{value\_to\_long@{value\_to\_long}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_long()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI long value\+\_\+to\+\_\+long (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API long value\+\_\+to\+\_\+long (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -663,7 +713,7 @@ Value converted to long integer
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_float@{value\_to\_float}}
 \index{value\_to\_float@{value\_to\_float}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_float()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI float value\+\_\+to\+\_\+float (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API float value\+\_\+to\+\_\+float (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -681,7 +731,7 @@ Value converted to float
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_double@{value\_to\_double}}
 \index{value\_to\_double@{value\_to\_double}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_double()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI double value\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API double value\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -699,7 +749,7 @@ Value converted to dobule
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_string@{value\_to\_string}}
 \index{value\_to\_string@{value\_to\_string}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_string()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ value\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API char$\ast$ value\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -717,7 +767,7 @@ Value converted to a C string (null terminated)
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_buffer@{value\_to\_buffer}}
 \index{value\_to\_buffer@{value\_to\_buffer}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_buffer()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void$\ast$ value\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -735,7 +785,7 @@ Value converted to memory block
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_array@{value\_to\_array}}
 \index{value\_to\_array@{value\_to\_array}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_array()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value}$\ast$ value\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value}$\ast$ value\+\_\+to\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -753,7 +803,7 @@ Value converted to array of values
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_map@{value\_to\_map}}
 \index{value\_to\_map@{value\_to\_map}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_map()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value}$\ast$ value\+\_\+to\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value}$\ast$ value\+\_\+to\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -771,7 +821,7 @@ Value converted to map (array of tuples (array of values))
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_ptr@{value\_to\_ptr}}
 \index{value\_to\_ptr@{value\_to\_ptr}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_ptr()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+to\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void$\ast$ value\+\_\+to\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -789,7 +839,7 @@ Value converted to pointer
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_future@{value\_to\_future}}
 \index{value\_to\_future@{value\_to\_future}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_future()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ future} value\+\_\+to\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ future} value\+\_\+to\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -807,7 +857,7 @@ Value converted to future
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_function@{value\_to\_function}}
 \index{value\_to\_function@{value\_to\_function}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_function()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ function} value\+\_\+to\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ function} value\+\_\+to\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -825,7 +875,7 @@ Value converted to function
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_null@{value\_to\_null}}
 \index{value\_to\_null@{value\_to\_null}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_null()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ value\+\_\+to\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void$\ast$ value\+\_\+to\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -843,7 +893,7 @@ Value converted to null
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_class@{value\_to\_class}}
 \index{value\_to\_class@{value\_to\_class}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_class()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ klass} value\+\_\+to\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ klass} value\+\_\+to\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -861,7 +911,7 @@ Value converted to class
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_object@{value\_to\_object}}
 \index{value\_to\_object@{value\_to\_object}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_to\_object()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} value\+\_\+to\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ object} value\+\_\+to\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -875,11 +925,47 @@ Convert value @v to object.
 \begin{DoxyReturn}{Returns}
 Value converted to object 
 \end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_ae0225356184d340da7501cc3be0cdee2}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_exception@{value\_to\_exception}}
+\index{value\_to\_exception@{value\_to\_exception}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_exception()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ exception} value\+\_\+to\+\_\+exception (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to exception. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to exception 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a7d85eacd33469911f94bf5067b9dd071}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_to\_throwable@{value\_to\_throwable}}
+\index{value\_to\_throwable@{value\_to\_throwable}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_to\_throwable()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ throwable} value\+\_\+to\+\_\+throwable (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+
+
+
+Convert value @v to throwable. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value converted to throwable 
+\end{DoxyReturn}
 \mbox{\label{reflect__value__type_8h_a4dcb4eba01ca47fbeb7a4bc19ddfe269}} 
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_bool@{value\_from\_bool}}
 \index{value\_from\_bool@{value\_from\_bool}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_bool()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+bool (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ boolean}}]{b }\end{DoxyParamCaption})}
 
 
 
@@ -899,7 +985,7 @@ Value with boolean {\bfseries{assigned}} to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_char@{value\_from\_char}}
 \index{value\_from\_char@{value\_from\_char}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_char()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{char}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+char (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{char}]{c }\end{DoxyParamCaption})}
 
 
 
@@ -919,7 +1005,7 @@ Value with char {\ttfamily assigned} to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_short@{value\_from\_short}}
 \index{value\_from\_short@{value\_from\_short}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_short()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+short (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{short}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+short (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{short}]{s }\end{DoxyParamCaption})}
 
 
 
@@ -939,7 +1025,7 @@ Value with short @s assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_int@{value\_from\_int}}
 \index{value\_from\_int@{value\_from\_int}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_int()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+int (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{int}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+int (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{int}]{i }\end{DoxyParamCaption})}
 
 
 
@@ -959,7 +1045,7 @@ Value with integer @i assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_long@{value\_from\_long}}
 \index{value\_from\_long@{value\_from\_long}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_long()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+long (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{long}]{l }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+long (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{long}]{l }\end{DoxyParamCaption})}
 
 
 
@@ -979,7 +1065,7 @@ Value with long @l assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_float@{value\_from\_float}}
 \index{value\_from\_float@{value\_from\_float}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_float()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+float (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{float}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+float (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{float}]{f }\end{DoxyParamCaption})}
 
 
 
@@ -999,7 +1085,7 @@ Value with float @f assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_double@{value\_from\_double}}
 \index{value\_from\_double@{value\_from\_double}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_double()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+double (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{double}]{d }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+double (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{double}]{d }\end{DoxyParamCaption})}
 
 
 
@@ -1019,7 +1105,7 @@ Value with double @d assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_string@{value\_from\_string}}
 \index{value\_from\_string@{value\_from\_string}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_string()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const char $\ast$}]{str,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
 
 
 
@@ -1041,7 +1127,7 @@ Value with string @str assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_buffer@{value\_from\_buffer}}
 \index{value\_from\_buffer@{value\_from\_buffer}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_buffer()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+buffer (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1063,7 +1149,7 @@ Value with array @buffer assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_array@{value\_from\_array}}
 \index{value\_from\_array@{value\_from\_array}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_array()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const \textbf{ value} $\ast$}]{values,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+array (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const \textbf{ value} $\ast$}]{values,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1085,7 +1171,7 @@ Value with array of values @values assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_map@{value\_from\_map}}
 \index{value\_from\_map@{value\_from\_map}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_map()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const \textbf{ value} $\ast$}]{tuples,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+map (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const \textbf{ value} $\ast$}]{tuples,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -1107,7 +1193,7 @@ Value with array of tuples @tuples assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_ptr@{value\_from\_ptr}}
 \index{value\_from\_ptr@{value\_from\_ptr}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_ptr()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+ptr (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{const void $\ast$}]{ptr }\end{DoxyParamCaption})}
 
 
 
@@ -1127,7 +1213,7 @@ Value with pointer @ptr assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_future@{value\_from\_future}}
 \index{value\_from\_future@{value\_from\_future}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_future()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ future}}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+future (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ future}}]{f }\end{DoxyParamCaption})}
 
 
 
@@ -1147,7 +1233,7 @@ Value with future @future assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_function@{value\_from\_function}}
 \index{value\_from\_function@{value\_from\_function}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_function()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ function}}]{f }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+function (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ function}}]{f }\end{DoxyParamCaption})}
 
 
 
@@ -1167,7 +1253,7 @@ Value with function @f assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_null@{value\_from\_null}}
 \index{value\_from\_null@{value\_from\_null}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_null()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+null (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -1185,7 +1271,7 @@ Value with null assigned to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_class@{value\_from\_class}}
 \index{value\_from\_class@{value\_from\_class}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_class()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ klass}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+class (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ klass}}]{c }\end{DoxyParamCaption})}
 
 
 
@@ -1205,7 +1291,7 @@ Value with class {\ttfamily assigned} to it
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_object@{value\_from\_object}}
 \index{value\_from\_object@{value\_from\_object}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_from\_object()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} value\+\_\+from\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ object}}]{o }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+object (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ object}}]{o }\end{DoxyParamCaption})}
 
 
 
@@ -1221,11 +1307,51 @@ Assign object reference @o to value @v.
 \begin{DoxyReturn}{Returns}
 Value with object @o assigned to it 
 \end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a4219a34c3fbc51e39f8452d250438996}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_exception@{value\_from\_exception}}
+\index{value\_from\_exception@{value\_from\_exception}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_exception()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+exception (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ exception}}]{ex }\end{DoxyParamCaption})}
+
+
+
+Assign exception reference @ex to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em ex} & Exception to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with exception @ex assigned to it 
+\end{DoxyReturn}
+\mbox{\label{reflect__value__type_8h_a8e405d38d7229ea2d4947386e6d74814}} 
+\index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_from\_throwable@{value\_from\_throwable}}
+\index{value\_from\_throwable@{value\_from\_throwable}!reflect\_value\_type.h@{reflect\_value\_type.h}}
+\doxysubsubsection{value\_from\_throwable()}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} value\+\_\+from\+\_\+throwable (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v,  }\item[{\textbf{ throwable}}]{th }\end{DoxyParamCaption})}
+
+
+
+Assign throwable reference @ex to value @v. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to the value\\
+\hline
+\mbox{\texttt{ in}}  & {\em th} & Throwable to be assigned to value @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value with throwable @th assigned to it 
+\end{DoxyReturn}
 \mbox{\label{reflect__value__type_8h_a89d30694c2d675c9d4077e9f999f95cf}} 
 \index{reflect\_value\_type.h@{reflect\_value\_type.h}!value\_type\_destroy@{value\_type\_destroy}}
 \index{value\_type\_destroy@{value\_type\_destroy}!reflect\_value\_type.h@{reflect\_value\_type.h}}
 \doxysubsubsection{value\_type\_destroy()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void value\+\_\+type\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void value\+\_\+type\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 
 

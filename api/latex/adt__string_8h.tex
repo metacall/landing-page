@@ -1,0 +1,37 @@
+\doxysection{adt\+\_\+string.\+h File Reference}
+\label{adt__string_8h}\index{adt\_string.h@{adt\_string.h}}
+{\ttfamily \#include $<$adt/adt\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for adt\+\_\+string.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{adt__string_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ string\+\_\+copy}(dest,  src,  dest\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{adt__string_8h_abe60b95a31ae1c7dcafd72ceed75bbed}} 
+\index{adt\_string.h@{adt\_string.h}!string\_copy@{string\_copy}}
+\index{string\_copy@{string\_copy}!adt\_string.h@{adt\_string.h}}
+\doxysubsubsection{string\_copy}
+{\footnotesize\ttfamily \#define string\+\_\+copy(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src,  }\item[{}]{dest\+\_\+size }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        size\_t \_\_string\_copy\_length = strnlen(src, dest\_size -\/ 1); \(\backslash\)}
+\DoxyCodeLine{        memcpy(dest, src, \_\_string\_copy\_length); \(\backslash\)}
+\DoxyCodeLine{        dest[\_\_string\_copy\_length] = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}

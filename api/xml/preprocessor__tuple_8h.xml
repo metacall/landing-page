@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="preprocessor__tuple_8h" kind="file" language="C++">
     <compoundname>preprocessor_tuple.h</compoundname>
     <includes local="no">preprocessor/preprocessor_api.h</includes>
@@ -18,52 +18,60 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="9">
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="10">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>preprocessor_detection.h</label>
         <link refid="preprocessor__detection_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>preprocessor.h</label>
         <link refid="preprocessor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>preprocessor_stringify.h</label>
         <link refid="preprocessor__stringify_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>preprocessor_comparison.h</label>
         <link refid="preprocessor__comparison_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>preprocessor_arguments.h</label>
         <link refid="preprocessor__arguments_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>preprocessor_for.h</label>
         <link refid="preprocessor__for_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -71,15 +79,15 @@
         <link refid="preprocessor__tuple_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>log_preprocessor.h</label>
         <link refid="log__preprocessor_8h"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -88,7 +96,7 @@
         <name>PREPROCESSOR_TUPLE_EXPAND_MACRO</name>
         <param><defname>macro</defname></param>
         <param><defname>...</defname></param>
-        <initializer>macro __VA_ARGS__</initializer>
+        <initializer>	macro __VA_ARGS__</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -100,7 +108,7 @@
       <memberdef kind="define" id="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" prot="public" static="no">
         <name>PREPROCESSOR_TUPLE_EXPAND</name>
         <param><defname>...</defname></param>
-        <initializer><ref refid="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" kindref="member">PREPROCESSOR_TUPLE_EXPAND_IMPL</ref> __VA_ARGS__</initializer>
+        <initializer>	<ref refid="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" kindref="member">PREPROCESSOR_TUPLE_EXPAND_IMPL</ref> __VA_ARGS__</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -112,7 +120,7 @@
       <memberdef kind="define" id="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" prot="public" static="no">
         <name>PREPROCESSOR_TUPLE_MAKE</name>
         <param><defname>...</defname></param>
-        <initializer>(<ref refid="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" kindref="member">PREPROCESSOR_TUPLE_EXPAND_IMPL</ref>(__VA_ARGS__))</initializer>
+        <initializer>	(<ref refid="preprocessor__tuple_8h_1a72a03674f35904c5b328b505c0a6bfdb" kindref="member">PREPROCESSOR_TUPLE_EXPAND_IMPL</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -137,7 +145,7 @@
         <name>PREPROCESSOR_TUPLE_PREPEND</name>
         <param><defname>expr</defname></param>
         <param><defname>tuple</defname></param>
-        <initializer><ref refid="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" kindref="member">PREPROCESSOR_TUPLE_MAKE</ref>(expr, <ref refid="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" kindref="member">PREPROCESSOR_TUPLE_EXPAND</ref>(tuple))</initializer>
+        <initializer>	<ref refid="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" kindref="member">PREPROCESSOR_TUPLE_MAKE</ref>(expr, <ref refid="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" kindref="member">PREPROCESSOR_TUPLE_EXPAND</ref>(tuple))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -150,7 +158,7 @@
         <name>PREPROCESSOR_TUPLE_APPEND</name>
         <param><defname>expr</defname></param>
         <param><defname>tuple</defname></param>
-        <initializer><ref refid="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" kindref="member">PREPROCESSOR_TUPLE_MAKE</ref>(<ref refid="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" kindref="member">PREPROCESSOR_TUPLE_EXPAND</ref>(tuple), expr)</initializer>
+        <initializer>	<ref refid="preprocessor__tuple_8h_1a00b81a900e15637f4b79402cac2989fd" kindref="member">PREPROCESSOR_TUPLE_MAKE</ref>(<ref refid="preprocessor__tuple_8h_1a81d15ff4ef164f19c4485b87bc197fe5" kindref="member">PREPROCESSOR_TUPLE_EXPAND</ref>(tuple), expr)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -169,7 +177,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Preprocessor<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>header-only<sp/>preprocessor<sp/>metaprogramming<sp/>library.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="metacall__allocator_8h" kind="file" language="C++">
     <compoundname>metacall_allocator.h</compoundname>
     <includes local="no">metacall/metacall_api.h</includes>
@@ -28,6 +28,10 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="1">
         <label>metacall_allocator.h</label>
         <link refid="metacall__allocator_8h"/>
@@ -37,6 +41,8 @@
       <node id="2">
         <label>metacall.h</label>
         <link refid="metacall_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structmetacall__allocator__std__type" prot="public">metacall_allocator_std_type</innerclass>
@@ -65,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" line="40" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" bodystart="39" bodyend="43"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" line="39" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_allocator.h" bodystart="40" bodyend="43"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -312,7 +318,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>MetaCall<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>providing<sp/>a<sp/>foreign<sp/>function<sp/>interface<sp/>calls.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -349,8 +355,8 @@
 <codeline lineno="39" refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0" kindref="member">metacall_allocator_id</ref></highlight></codeline>
 <codeline lineno="40"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="41" refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0a67cca764a74b77ad2020133cedebbccf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0a67cca764a74b77ad2020133cedebbccf" kindref="member">METACALL_ALLOCATOR_STD</ref>,</highlight></codeline>
-<codeline lineno="42" refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0af8fd4cad9e16d4eebc5d6b11f22ad660" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0af8fd4cad9e16d4eebc5d6b11f22ad660" kindref="member">METACALL_ALLOCATOR_NGINX</ref></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0af8fd4cad9e16d4eebc5d6b11f22ad660" kindref="member">METACALL_ALLOCATOR_NGINX</ref></highlight></codeline>
+<codeline lineno="43" refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0af8fd4cad9e16d4eebc5d6b11f22ad660" refkind="member"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
@@ -358,9 +364,9 @@
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__allocator__std__type" kindref="compound">metacall_allocator_std_type</ref><sp/>*metacall_allocator_std;</highlight></codeline>
+<codeline lineno="51" refid="metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__allocator__std__type" kindref="compound">metacall_allocator_std_type</ref><sp/>*metacall_allocator_std;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ngx_pool_s<sp/><ref refid="metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a" kindref="member">ngx_pool_t</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ngx_pool_s<sp/><ref refid="metacall__allocator_8h_1a96aefd58b7e35445b3ba850ae018129a" kindref="member">ngx_pool_t</ref>;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmetacall__allocator__nginx__type" kindref="compound">metacall_allocator_nginx_type</ref><sp/>*metacall_allocator_nginx;</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
@@ -396,7 +402,7 @@
 <codeline lineno="86"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="87"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>allocator<sp/>if<sp/>success,<sp/>null<sp/>otherwise</highlight></codeline>
 <codeline lineno="88"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="metacall__allocator_8h_1a80bcc59f9af8de1e83b2f3cd16331abf" kindref="member">metacall_allocator_create</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0" kindref="member">metacall_allocator_id</ref><sp/>allocator_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx);</highlight></codeline>
+<codeline lineno="89" refid="metacall__allocator_8h_1a80bcc59f9af8de1e83b2f3cd16331abf" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="metacall__allocator_8h_1a80bcc59f9af8de1e83b2f3cd16331abf" kindref="member">metacall_allocator_create</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="metacall__allocator_8h_1a09fc0fc3241414cee74f65e9d9b432a0" kindref="member">metacall_allocator_id</ref><sp/>allocator_id,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="91"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="92"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -411,7 +417,7 @@
 <codeline lineno="101"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="102"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>allocated<sp/>data<sp/>on<sp/>success,<sp/>null<sp/>otherwise</highlight></codeline>
 <codeline lineno="103"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="metacall__allocator_8h_1a11955bb72ecaeb55d744399c4873877a" kindref="member">metacall_allocator_alloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="104" refid="metacall__allocator_8h_1a11955bb72ecaeb55d744399c4873877a" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="metacall__allocator_8h_1a11955bb72ecaeb55d744399c4873877a" kindref="member">metacall_allocator_alloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="106"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="107"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -432,7 +438,7 @@
 <codeline lineno="122"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="123"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>new<sp/>reallocated<sp/>data<sp/>on<sp/>success,<sp/>null<sp/>otherwise</highlight></codeline>
 <codeline lineno="124"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="metacall__allocator_8h_1a86d28585e532c50bd40400a9e08c945e" kindref="member">metacall_allocator_realloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>new_size);</highlight></codeline>
+<codeline lineno="125" refid="metacall__allocator_8h_1a86d28585e532c50bd40400a9e08c945e" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="metacall__allocator_8h_1a86d28585e532c50bd40400a9e08c945e" kindref="member">metacall_allocator_realloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>new_size);</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="127"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="128"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -444,7 +450,7 @@
 <codeline lineno="134"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>data</highlight></codeline>
 <codeline lineno="135"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>data<sp/>to<sp/>be<sp/>freed</highlight></codeline>
 <codeline lineno="136"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="metacall__allocator_8h_1a8e5a017db2359ab0c61abf65e2ddbca8" kindref="member">metacall_allocator_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="137" refid="metacall__allocator_8h_1a8e5a017db2359ab0c61abf65e2ddbca8" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="metacall__allocator_8h_1a8e5a017db2359ab0c61abf65e2ddbca8" kindref="member">metacall_allocator_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="139"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="140"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -453,7 +459,7 @@
 <codeline lineno="143"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>allocator</highlight></codeline>
 <codeline lineno="144"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>allocator<sp/>instance</highlight></codeline>
 <codeline lineno="145"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="metacall__allocator_8h_1ac10be77104e59404e9f611eb0e8e830a" kindref="member">metacall_allocator_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator);</highlight></codeline>
+<codeline lineno="146" refid="metacall__allocator_8h_1ac10be77104e59404e9f611eb0e8e830a" refkind="member"><highlight class="normal">METACALL_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="metacall__allocator_8h_1ac10be77104e59404e9f611eb0e8e830a" kindref="member">metacall_allocator_destroy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*allocator);</highlight></codeline>
 <codeline lineno="147"><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal">}</highlight></codeline>

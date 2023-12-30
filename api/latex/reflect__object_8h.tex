@@ -19,7 +19,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=199pt]{reflect__object_8h__dep__incl}
+\includegraphics[width=216pt]{reflect__object_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -59,35 +59,35 @@ typedef object\+\_\+interface($\ast$ \textbf{ object\+\_\+impl\+\_\+interface\+\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} \textbf{ object\+\_\+create} (const char $\ast$name, enum \textbf{ accessor\+\_\+type\+\_\+id} accessor, \textbf{ object\+\_\+impl} impl, \textbf{ object\+\_\+impl\+\_\+interface\+\_\+singleton} singleton, \textbf{ klass} cls)
+REFLECT\+\_\+\+API \textbf{ object} \textbf{ object\+\_\+create} (const char $\ast$name, enum \textbf{ accessor\+\_\+type\+\_\+id} accessor, \textbf{ object\+\_\+impl} impl, \textbf{ object\+\_\+impl\+\_\+interface\+\_\+singleton} singleton, \textbf{ klass} cls)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ object\+\_\+increment\+\_\+reference} (\textbf{ object} obj)
+REFLECT\+\_\+\+API int \textbf{ object\+\_\+increment\+\_\+reference} (\textbf{ object} obj)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ object\+\_\+decrement\+\_\+reference} (\textbf{ object} obj)
+REFLECT\+\_\+\+API int \textbf{ object\+\_\+decrement\+\_\+reference} (\textbf{ object} obj)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object\+\_\+impl} \textbf{ object\+\_\+impl\+\_\+get} (\textbf{ object} obj)
+REFLECT\+\_\+\+API \textbf{ object\+\_\+impl} \textbf{ object\+\_\+impl\+\_\+get} (\textbf{ object} obj)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ object\+\_\+set} (\textbf{ object} obj, const char $\ast$key, \textbf{ value} v)
+REFLECT\+\_\+\+API int \textbf{ object\+\_\+set} (\textbf{ object} obj, const char $\ast$key, \textbf{ value} v)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ object\+\_\+get} (\textbf{ object} obj, const char $\ast$key)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ object\+\_\+get} (\textbf{ object} obj, const char $\ast$key)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ object\+\_\+call} (\textbf{ object} obj, \textbf{ method} m, \textbf{ object\+\_\+args} args, size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ object\+\_\+call} (\textbf{ object} obj, \textbf{ method} m, \textbf{ object\+\_\+args} args, size\+\_\+t size)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ object\+\_\+await} (\textbf{ object} obj, \textbf{ method} m, \textbf{ object\+\_\+args} args, size\+\_\+t size, \textbf{ object\+\_\+resolve\+\_\+callback} resolve\+\_\+callback, \textbf{ object\+\_\+reject\+\_\+callback} reject\+\_\+callback, void $\ast$\textbf{ context})
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ object\+\_\+await} (\textbf{ object} obj, \textbf{ method} m, \textbf{ object\+\_\+args} args, size\+\_\+t size, \textbf{ object\+\_\+resolve\+\_\+callback} resolve\+\_\+callback, \textbf{ object\+\_\+reject\+\_\+callback} reject\+\_\+callback, void $\ast$\textbf{ context})
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} \textbf{ object\+\_\+methods} (\textbf{ object} obj, const char $\ast$key)
+REFLECT\+\_\+\+API \textbf{ vector} \textbf{ object\+\_\+methods} (\textbf{ object} obj, const char $\ast$key)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ method} \textbf{ object\+\_\+method} (\textbf{ object} obj, const char $\ast$key, \textbf{ type\+\_\+id} ret, \textbf{ type\+\_\+id} args[$\,$], size\+\_\+t size)
+REFLECT\+\_\+\+API \textbf{ method} \textbf{ object\+\_\+method} (\textbf{ object} obj, const char $\ast$key, \textbf{ type\+\_\+id} ret, \textbf{ type\+\_\+id} args[$\,$], size\+\_\+t size)
 \item 
-const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char $\ast$ \textbf{ object\+\_\+name} (\textbf{ object} obj)
+REFLECT\+\_\+\+API const char $\ast$ \textbf{ object\+\_\+name} (\textbf{ object} obj)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ object\+\_\+metadata} (\textbf{ object} obj)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ object\+\_\+metadata} (\textbf{ object} obj)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ object\+\_\+delete} (\textbf{ object} obj)
+REFLECT\+\_\+\+API int \textbf{ object\+\_\+delete} (\textbf{ object} obj)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ object\+\_\+stats\+\_\+debug} (void)
+REFLECT\+\_\+\+API void \textbf{ object\+\_\+stats\+\_\+debug} (void)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ object\+\_\+destroy} (\textbf{ object} obj)
+REFLECT\+\_\+\+API void \textbf{ object\+\_\+destroy} (\textbf{ object} obj)
 \end{DoxyCompactItemize}
 
 
@@ -177,89 +177,89 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ object\+\_\+destroy} (\textbf{ ob
 \index{reflect\_object.h@{reflect\_object.h}!object\_create@{object\_create}}
 \index{object\_create@{object\_create}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_create()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object} object\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{enum \textbf{ accessor\+\_\+type\+\_\+id}}]{accessor,  }\item[{\textbf{ object\+\_\+impl}}]{impl,  }\item[{\textbf{ object\+\_\+impl\+\_\+interface\+\_\+singleton}}]{singleton,  }\item[{\textbf{ klass}}]{cls }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ object} object\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{enum \textbf{ accessor\+\_\+type\+\_\+id}}]{accessor,  }\item[{\textbf{ object\+\_\+impl}}]{impl,  }\item[{\textbf{ object\+\_\+impl\+\_\+interface\+\_\+singleton}}]{singleton,  }\item[{\textbf{ klass}}]{cls }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a695e8394c1e437a883ce7980496b78e7}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_increment\_reference@{object\_increment\_reference}}
 \index{object\_increment\_reference@{object\_increment\_reference}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_increment\_reference()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int object\+\_\+increment\+\_\+reference (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int object\+\_\+increment\+\_\+reference (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_ac555ebaddfeb6a2009fb8986c968cefb}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_decrement\_reference@{object\_decrement\_reference}}
 \index{object\_decrement\_reference@{object\_decrement\_reference}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_decrement\_reference()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int object\+\_\+decrement\+\_\+reference (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int object\+\_\+decrement\+\_\+reference (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a07818042e3061e39b0022f44415b8ab6}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_impl\_get@{object\_impl\_get}}
 \index{object\_impl\_get@{object\_impl\_get}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_impl\_get()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ object\+\_\+impl} object\+\_\+impl\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ object\+\_\+impl} object\+\_\+impl\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_ab831de3c942cec9093061d0b3995f7df}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_set@{object\_set}}
 \index{object\_set@{object\_set}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_set()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int object\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int object\+\_\+set (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ value}}]{v }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a859864a88ef134b9ce8f2a6f24ad0f37}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_get@{object\_get}}
 \index{object\_get@{object\_get}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_get()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} object\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} object\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a4937763985036958894130b73a21a4ce}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_call@{object\_call}}
 \index{object\_call@{object\_call}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_call()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} object\+\_\+call (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{\textbf{ method}}]{m,  }\item[{\textbf{ object\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} object\+\_\+call (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{\textbf{ method}}]{m,  }\item[{\textbf{ object\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_ad903e000318a9509ab91a553ff8e129a}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_await@{object\_await}}
 \index{object\_await@{object\_await}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_await()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} object\+\_\+await (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{\textbf{ method}}]{m,  }\item[{\textbf{ object\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size,  }\item[{\textbf{ object\+\_\+resolve\+\_\+callback}}]{resolve\+\_\+callback,  }\item[{\textbf{ object\+\_\+reject\+\_\+callback}}]{reject\+\_\+callback,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} object\+\_\+await (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{\textbf{ method}}]{m,  }\item[{\textbf{ object\+\_\+args}}]{args,  }\item[{size\+\_\+t}]{size,  }\item[{\textbf{ object\+\_\+resolve\+\_\+callback}}]{resolve\+\_\+callback,  }\item[{\textbf{ object\+\_\+reject\+\_\+callback}}]{reject\+\_\+callback,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a5e3bbe95840a2578e0bd2c2277eb4c9d}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_methods@{object\_methods}}
 \index{object\_methods@{object\_methods}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_methods()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ vector} object\+\_\+methods (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ vector} object\+\_\+methods (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a157904a36494774b740212b211de50b6}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_method@{object\_method}}
 \index{object\_method@{object\_method}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_method()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ method} object\+\_\+method (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ type\+\_\+id}}]{ret,  }\item[{\textbf{ type\+\_\+id}}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ method} object\+\_\+method (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ type\+\_\+id}}]{ret,  }\item[{\textbf{ type\+\_\+id}}]{args[$\,$],  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
-\mbox{\label{reflect__object_8h_ae6e9a3e287e0e3c26cfbcc03e4f75b58}} 
+\mbox{\label{reflect__object_8h_a14df035418c82f826bb6f6fed56776bd}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_name@{object\_name}}
 \index{object\_name@{object\_name}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_name()}
-{\footnotesize\ttfamily const R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI char$\ast$ object\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API const char$\ast$ object\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a1de46ee0378baeacc14ace5dbc05f8c5}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_metadata@{object\_metadata}}
 \index{object\_metadata@{object\_metadata}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_metadata()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} object\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} object\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a48e2ec3e04b9d511497b8c48a38614be}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_delete@{object\_delete}}
 \index{object\_delete@{object\_delete}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_delete()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int object\+\_\+delete (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int object\+\_\+delete (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_acc123ce75b86c2c586396a43db837397}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_stats\_debug@{object\_stats\_debug}}
 \index{object\_stats\_debug@{object\_stats\_debug}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_stats\_debug()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void object\+\_\+stats\+\_\+debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void object\+\_\+stats\+\_\+debug (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__object_8h_a3702f480c8b4f6093b9db0dfda3bfc08}} 
 \index{reflect\_object.h@{reflect\_object.h}!object\_destroy@{object\_destroy}}
 \index{object\_destroy@{object\_destroy}!reflect\_object.h@{reflect\_object.h}}
 \doxysubsubsection{object\_destroy()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void object\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void object\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{obj }\end{DoxyParamCaption})}
 

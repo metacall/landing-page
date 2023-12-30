@@ -29,35 +29,35 @@ typedef struct scope\+\_\+type $\ast$ \textbf{ scope}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ scope} \textbf{ scope\+\_\+create} (const char $\ast$name)
+REFLECT\+\_\+\+API \textbf{ scope} \textbf{ scope\+\_\+create} (const char $\ast$name)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t \textbf{ scope\+\_\+size} (\textbf{ scope} sp)
+REFLECT\+\_\+\+API size\+\_\+t \textbf{ scope\+\_\+size} (\textbf{ scope} sp)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ scope\+\_\+define} (\textbf{ scope} sp, const char $\ast$key, \textbf{ value} obj)
+REFLECT\+\_\+\+API int \textbf{ scope\+\_\+define} (\textbf{ scope} sp, const char $\ast$key, \textbf{ value} obj)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ scope\+\_\+metadata} (\textbf{ scope} sp)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ scope\+\_\+metadata} (\textbf{ scope} sp)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ scope\+\_\+export} (\textbf{ scope} sp)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ scope\+\_\+export} (\textbf{ scope} sp)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ scope\+\_\+get} (\textbf{ scope} sp, const char $\ast$key)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ scope\+\_\+get} (\textbf{ scope} sp, const char $\ast$key)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} \textbf{ scope\+\_\+undef} (\textbf{ scope} sp, const char $\ast$key)
+REFLECT\+\_\+\+API \textbf{ value} \textbf{ scope\+\_\+undef} (\textbf{ scope} sp, const char $\ast$key)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ scope\+\_\+append} (\textbf{ scope} dest, \textbf{ scope} src)
+REFLECT\+\_\+\+API int \textbf{ scope\+\_\+append} (\textbf{ scope} dest, \textbf{ scope} src)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ scope\+\_\+contains} (\textbf{ scope} dest, \textbf{ scope} src, char $\ast$$\ast$duplicated)
+REFLECT\+\_\+\+API int \textbf{ scope\+\_\+contains} (\textbf{ scope} dest, \textbf{ scope} src, char $\ast$$\ast$duplicated)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ scope\+\_\+remove} (\textbf{ scope} dest, \textbf{ scope} src)
+REFLECT\+\_\+\+API int \textbf{ scope\+\_\+remove} (\textbf{ scope} dest, \textbf{ scope} src)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t $\ast$ \textbf{ scope\+\_\+stack\+\_\+return} (\textbf{ scope} sp)
+REFLECT\+\_\+\+API size\+\_\+t $\ast$ \textbf{ scope\+\_\+stack\+\_\+return} (\textbf{ scope} sp)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ scope\+\_\+stack\+\_\+ptr} \textbf{ scope\+\_\+stack\+\_\+push} (\textbf{ scope} sp, size\+\_\+t bytes)
+REFLECT\+\_\+\+API \textbf{ scope\+\_\+stack\+\_\+ptr} \textbf{ scope\+\_\+stack\+\_\+push} (\textbf{ scope} sp, size\+\_\+t bytes)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void $\ast$ \textbf{ scope\+\_\+stack\+\_\+get} (\textbf{ scope} sp, \textbf{ scope\+\_\+stack\+\_\+ptr} stack\+\_\+ptr)
+REFLECT\+\_\+\+API void $\ast$ \textbf{ scope\+\_\+stack\+\_\+get} (\textbf{ scope} sp, \textbf{ scope\+\_\+stack\+\_\+ptr} stack\+\_\+ptr)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int \textbf{ scope\+\_\+stack\+\_\+pop} (\textbf{ scope} sp)
+REFLECT\+\_\+\+API int \textbf{ scope\+\_\+stack\+\_\+pop} (\textbf{ scope} sp)
 \item 
-R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ scope\+\_\+destroy} (\textbf{ scope} sp)
+REFLECT\+\_\+\+API void \textbf{ scope\+\_\+destroy} (\textbf{ scope} sp)
 \end{DoxyCompactItemize}
 
 
@@ -81,89 +81,89 @@ R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void \textbf{ scope\+\_\+destroy} (\textbf{ sco
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_create@{scope\_create}}
 \index{scope\_create@{scope\_create}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_create()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ scope} scope\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ scope} scope\+\_\+create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a8db2b76c0120e768fbcd8897beac921b}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_size@{scope\_size}}
 \index{scope\_size@{scope\_size}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_size()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t scope\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API size\+\_\+t scope\+\_\+size (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_acb69c1e8c0fbebf6380ffada174ffae1}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_define@{scope\_define}}
 \index{scope\_define@{scope\_define}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_define()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int scope\+\_\+define (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ value}}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int scope\+\_\+define (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{const char $\ast$}]{key,  }\item[{\textbf{ value}}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a41ebf1db1ed72d90642220ecf207592d}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_metadata@{scope\_metadata}}
 \index{scope\_metadata@{scope\_metadata}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_metadata()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} scope\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} scope\+\_\+metadata (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a6940f950718ce6aff233bd31554ab6d4}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_export@{scope\_export}}
 \index{scope\_export@{scope\_export}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_export()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} scope\+\_\+export (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} scope\+\_\+export (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a62a31f3ad2165a12bbdcc05e10523bd1}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_get@{scope\_get}}
 \index{scope\_get@{scope\_get}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_get()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} scope\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} scope\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a00928bfb641d3bcf921796e8be6d499d}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_undef@{scope\_undef}}
 \index{scope\_undef@{scope\_undef}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_undef()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ value} scope\+\_\+undef (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ value} scope\+\_\+undef (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_aa71ec5219689e685cd68866052bed4ae}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_append@{scope\_append}}
 \index{scope\_append@{scope\_append}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_append()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int scope\+\_\+append (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{dest,  }\item[{\textbf{ scope}}]{src }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int scope\+\_\+append (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{dest,  }\item[{\textbf{ scope}}]{src }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a5249538e9b82297881638fd5237c71ef}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_contains@{scope\_contains}}
 \index{scope\_contains@{scope\_contains}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_contains()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int scope\+\_\+contains (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{dest,  }\item[{\textbf{ scope}}]{src,  }\item[{char $\ast$$\ast$}]{duplicated }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int scope\+\_\+contains (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{dest,  }\item[{\textbf{ scope}}]{src,  }\item[{char $\ast$$\ast$}]{duplicated }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_aa64ec00c2fd85446628932eefda3a6bc}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_remove@{scope\_remove}}
 \index{scope\_remove@{scope\_remove}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_remove()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int scope\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{dest,  }\item[{\textbf{ scope}}]{src }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int scope\+\_\+remove (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{dest,  }\item[{\textbf{ scope}}]{src }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a43523b505351dc8055fe0415f954464b}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_stack\_return@{scope\_stack\_return}}
 \index{scope\_stack\_return@{scope\_stack\_return}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_stack\_return()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI size\+\_\+t$\ast$ scope\+\_\+stack\+\_\+return (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API size\+\_\+t$\ast$ scope\+\_\+stack\+\_\+return (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_ab3649f84906f0db25ecaf94a875e9c01}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_stack\_push@{scope\_stack\_push}}
 \index{scope\_stack\_push@{scope\_stack\_push}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_stack\_push()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI \textbf{ scope\+\_\+stack\+\_\+ptr} scope\+\_\+stack\+\_\+push (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API \textbf{ scope\+\_\+stack\+\_\+ptr} scope\+\_\+stack\+\_\+push (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a2771b27118b4eb1cda14626a89fd4a67}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_stack\_get@{scope\_stack\_get}}
 \index{scope\_stack\_get@{scope\_stack\_get}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_stack\_get()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void$\ast$ scope\+\_\+stack\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{\textbf{ scope\+\_\+stack\+\_\+ptr}}]{stack\+\_\+ptr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void$\ast$ scope\+\_\+stack\+\_\+get (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp,  }\item[{\textbf{ scope\+\_\+stack\+\_\+ptr}}]{stack\+\_\+ptr }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a729e7daa1a92497c2aa02a2f102f6a0d}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_stack\_pop@{scope\_stack\_pop}}
 \index{scope\_stack\_pop@{scope\_stack\_pop}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_stack\_pop()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI int scope\+\_\+stack\+\_\+pop (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API int scope\+\_\+stack\+\_\+pop (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
 
 \mbox{\label{reflect__scope_8h_a76de6b055280509d8009a65dc2f5a5dd}} 
 \index{reflect\_scope.h@{reflect\_scope.h}!scope\_destroy@{scope\_destroy}}
 \index{scope\_destroy@{scope\_destroy}!reflect\_scope.h@{reflect\_scope.h}}
 \doxysubsubsection{scope\_destroy()}
-{\footnotesize\ttfamily R\+E\+F\+L\+E\+C\+T\+\_\+\+A\+PI void scope\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily REFLECT\+\_\+\+API void scope\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ scope}}]{sp }\end{DoxyParamCaption})}
 

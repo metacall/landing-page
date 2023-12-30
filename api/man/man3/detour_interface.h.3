@@ -1,4 +1,4 @@
-.TH "detour_interface.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "detour_interface.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,8 +7,6 @@ detour_interface.h
 .br
 .PP
 \fC#include <detour/detour_api\&.h>\fP
-.br
-\fC#include <detour/detour_impl_handle\&.h>\fP
 .br
 
 .SS "Classes"
@@ -22,32 +20,12 @@ detour_interface.h
 
 .in +1c
 .ti -1c
-.RI "typedef \fBdetour_impl_handle\fP(* \fBdetour_interface_initialize\fP) (void)"
-.br
-.ti -1c
-.RI "typedef int(* \fBdetour_interface_install\fP) (\fBdetour_impl_handle\fP, void(**) (void), void(*) (void))"
-.br
-.ti -1c
-.RI "typedef int(* \fBdetour_interface_uninstall\fP) (\fBdetour_impl_handle\fP)"
-.br
-.ti -1c
-.RI "typedef int(* \fBdetour_interface_destroy\fP) (\fBdetour_impl_handle\fP)"
-.br
-.ti -1c
-.RI "typedef detour_interface(* \fBdetour_interface_singleton\fP) (void)"
+.RI "typedef void * \fBdetour_impl_handle\fP"
 .br
 .in -1c
 .SH "Typedef Documentation"
 .PP 
-.SS "typedef \fBdetour_impl_handle\fP(* detour_interface_initialize) (void)"
-
-.SS "typedef int(* detour_interface_install) (\fBdetour_impl_handle\fP, void(**)(void), void(*)(void))"
-
-.SS "typedef int(* detour_interface_uninstall) (\fBdetour_impl_handle\fP)"
-
-.SS "typedef int(* detour_interface_destroy) (\fBdetour_impl_handle\fP)"
-
-.SS "typedef detour_interface(* detour_interface_singleton) (void)"
+.SS "typedef void* \fBdetour_impl_handle\fP"
 
 .SH "Author"
 .PP 

@@ -1,94 +1,33 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="detour__interface_8h" kind="file" language="C++">
     <compoundname>detour_interface.h</compoundname>
     <includes local="no">detour/detour_api.h</includes>
-    <includes refid="detour__impl__handle_8h" local="no">detour/detour_impl_handle.h</includes>
     <incdepgraph>
       <node id="2">
         <label>detour/detour_api.h</label>
-      </node>
-      <node id="3">
-        <label>detour/detour_impl_handle.h</label>
-        <link refid="detour__impl__handle_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
       <node id="1">
         <label>detour_interface.h</label>
         <link refid="detour__interface_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <innerclass refid="structdetour__interface__type" prot="public">detour_interface_type</innerclass>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="detour__interface_8h_1a6ddded9b6d631882337980989b87df4a" prot="public" static="no">
-        <type><ref refid="detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>(*</type>
-        <definition>typedef detour_impl_handle(* detour_interface_initialize) (void)</definition>
-        <argsstring>)(void)</argsstring>
-        <name>detour_interface_initialize</name>
+      <memberdef kind="typedef" id="detour__interface_8h_1af561155897833a2ccb83169ed78de0a3" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* detour_impl_handle</definition>
+        <argsstring></argsstring>
+        <name>detour_impl_handle</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" line="40" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" bodystart="40" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="detour__interface_8h_1a0955afd4a99bf8893395709276d6ce35" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* detour_interface_install) (detour_impl_handle, void(**)(void), void(*)(void))</definition>
-        <argsstring>)(detour_impl_handle, void(**)(void), void(*)(void))</argsstring>
-        <name>detour_interface_install</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" line="42" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="detour__interface_8h_1a38c4b08bd20ed0d0027a5645c5775cc3" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* detour_interface_uninstall) (detour_impl_handle)</definition>
-        <argsstring>)(detour_impl_handle)</argsstring>
-        <name>detour_interface_uninstall</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" line="44" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" bodystart="44" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="detour__interface_8h_1a5f6bafd4dc6c0ae7653e06e54fb21ae2" prot="public" static="no">
-        <type>int(*</type>
-        <definition>typedef int(* detour_interface_destroy) (detour_impl_handle)</definition>
-        <argsstring>)(detour_impl_handle)</argsstring>
-        <name>detour_interface_destroy</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" line="46" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" bodystart="46" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="detour__interface_8h_1a6d17e1020d1e50d5028e2320cdfd196b" prot="public" static="no">
-        <type>detour_interface(*</type>
-        <definition>typedef detour_interface(* detour_interface_singleton) (void)</definition>
-        <argsstring>)(void)</argsstring>
-        <name>detour_interface_singleton</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" line="50" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -100,7 +39,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Detour<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>cross-platform<sp/>library<sp/>providing<sp/>detours,<sp/>function<sp/>hooks<sp/>and<sp/>trampolines.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -123,45 +62,34 @@
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;detour/detour_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="detour__impl__handle_8h" kindref="compound">detour/detour_impl_handle.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdetour__interface__type" kindref="compound">detour_interface_type</ref>;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdetour__interface__type" kindref="compound">detour_interface_type</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="detour__interface_8h_1a6ddded9b6d631882337980989b87df4a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref><sp/>(*<ref refid="detour__interface_8h_1a6ddded9b6d631882337980989b87df4a" kindref="member">detour_interface_initialize</ref>)(void);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="detour__interface_8h_1a0955afd4a99bf8893395709276d6ce35" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="detour__interface_8h_1a0955afd4a99bf8893395709276d6ce35" kindref="member">detour_interface_install</ref>)(<ref refid="detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>,<sp/>void<sp/>(**)(void),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(void));</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="detour__interface_8h_1a38c4b08bd20ed0d0027a5645c5775cc3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="detour__interface_8h_1a38c4b08bd20ed0d0027a5645c5775cc3" kindref="member">detour_interface_uninstall</ref>)(<ref refid="detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="detour__interface_8h_1a5f6bafd4dc6c0ae7653e06e54fb21ae2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="detour__interface_8h_1a5f6bafd4dc6c0ae7653e06e54fb21ae2" kindref="member">detour_interface_destroy</ref>)(<ref refid="detour__impl__handle_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdetour__interface__type" kindref="compound">detour_interface_type</ref><sp/>*detour_interface;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="detour__interface_8h_1a6d17e1020d1e50d5028e2320cdfd196b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>detour_interface<sp/>(*<ref refid="detour__interface_8h_1a6d17e1020d1e50d5028e2320cdfd196b" kindref="member">detour_interface_singleton</ref>)(void);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="structdetour__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdetour__interface__type" kindref="compound">detour_interface_type</ref></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="56" refid="structdetour__interface__type_1aec362b9b4bbadcb7dd8b291998c7295b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="detour__interface_8h_1a6ddded9b6d631882337980989b87df4a" kindref="member">detour_interface_initialize</ref><sp/><ref refid="structdetour__interface__type_1aec362b9b4bbadcb7dd8b291998c7295b" kindref="member">initialize</ref>;</highlight></codeline>
-<codeline lineno="57" refid="structdetour__interface__type_1ab8614a9391ebbf2de0649651823b7ab2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="detour__interface_8h_1a0955afd4a99bf8893395709276d6ce35" kindref="member">detour_interface_install</ref><sp/><ref refid="structdetour__interface__type_1ab8614a9391ebbf2de0649651823b7ab2" kindref="member">install</ref>;</highlight></codeline>
-<codeline lineno="58" refid="structdetour__interface__type_1a76d4ba9aac1e334513bbefe2bd5b5505" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="detour__interface_8h_1a38c4b08bd20ed0d0027a5645c5775cc3" kindref="member">detour_interface_uninstall</ref><sp/><ref refid="structdetour__interface__type_1a76d4ba9aac1e334513bbefe2bd5b5505" kindref="member">uninstall</ref>;</highlight></codeline>
-<codeline lineno="59" refid="structdetour__interface__type_1a922443598291e45d8831e3166556cd14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="detour__interface_8h_1a5f6bafd4dc6c0ae7653e06e54fb21ae2" kindref="member">detour_interface_destroy</ref><sp/><ref refid="structdetour__interface__type_1a922443598291e45d8831e3166556cd14" kindref="member">destroy</ref>;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DETOUR_INTERFACE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="38" refid="detour__interface_8h_1af561155897833a2ccb83169ed78de0a3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="detour__interface_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdetour__interface__type" kindref="compound">detour_interface_type</ref><sp/>*detour_interface;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structdetour__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdetour__interface__type" kindref="compound">detour_interface_type</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="structdetour__interface__type_1acb16b3a629f349310d7695e949948673" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="detour__interface_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref><sp/>(*<ref refid="structdetour__interface__type_1acb16b3a629f349310d7695e949948673" kindref="member">initialize</ref>)(void);</highlight></codeline>
+<codeline lineno="46" refid="structdetour__interface__type_1a6683de1a06c8e161d9d4ea28f868dd0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structdetour__interface__type_1a6683de1a06c8e161d9d4ea28f868dd0f" kindref="member">install</ref>)(<ref refid="detour__interface_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>,<sp/>void<sp/>(**)(void),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(void));</highlight></codeline>
+<codeline lineno="47" refid="structdetour__interface__type_1a7565f1847f77e145cb88227bc468718e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structdetour__interface__type_1a7565f1847f77e145cb88227bc468718e" kindref="member">uninstall</ref>)(<ref refid="detour__interface_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>);</highlight></codeline>
+<codeline lineno="48" refid="structdetour__interface__type_1ad849a47ecc5cad92a4cb60f23561a849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structdetour__interface__type_1ad849a47ecc5cad92a4cb60f23561a849" kindref="member">destroy</ref>)(<ref refid="detour__interface_8h_1af561155897833a2ccb83169ed78de0a3" kindref="member">detour_impl_handle</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DETOUR_INTERFACE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/detour/include/detour/detour_interface.h"/>
   </compounddef>

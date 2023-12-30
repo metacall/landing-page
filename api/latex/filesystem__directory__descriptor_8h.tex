@@ -21,7 +21,7 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE}~0x0200
+\#define \textbf{ DIRECTORY\+\_\+\+DESCRIPTOR\+\_\+\+PATH\+\_\+\+SIZE}~0x0200
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -31,15 +31,15 @@ typedef struct directory\+\_\+descriptor\+\_\+type $\ast$ \textbf{ directory\+\_
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} \textbf{ directory\+\_\+descriptor\+\_\+create} (\textbf{ directory\+\_\+descriptor} parent, const char $\ast$path)
+FILESYSTEM\+\_\+\+API \textbf{ directory\+\_\+descriptor} \textbf{ directory\+\_\+descriptor\+\_\+create} (\textbf{ directory\+\_\+descriptor} parent, const char $\ast$path)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} \textbf{ directory\+\_\+descriptor\+\_\+parent} (\textbf{ directory\+\_\+descriptor} d)
+FILESYSTEM\+\_\+\+API \textbf{ directory\+\_\+descriptor} \textbf{ directory\+\_\+descriptor\+\_\+parent} (\textbf{ directory\+\_\+descriptor} d)
 \item 
-const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char $\ast$ \textbf{ directory\+\_\+descriptor\+\_\+path} (\textbf{ directory\+\_\+descriptor} d)
+FILESYSTEM\+\_\+\+API const char $\ast$ \textbf{ directory\+\_\+descriptor\+\_\+path} (\textbf{ directory\+\_\+descriptor} d)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ vector} \textbf{ directory\+\_\+descriptor\+\_\+files} (\textbf{ directory\+\_\+descriptor} d)
+FILESYSTEM\+\_\+\+API \textbf{ vector} \textbf{ directory\+\_\+descriptor\+\_\+files} (\textbf{ directory\+\_\+descriptor} d)
 \item 
-F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void \textbf{ directory\+\_\+descriptor\+\_\+destroy} (\textbf{ directory\+\_\+descriptor} d)
+FILESYSTEM\+\_\+\+API void \textbf{ directory\+\_\+descriptor\+\_\+destroy} (\textbf{ directory\+\_\+descriptor} d)
 \end{DoxyCompactItemize}
 
 
@@ -48,7 +48,7 @@ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void \textbf{ directory\+\_\+descripto
 \index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!DIRECTORY\_DESCRIPTOR\_PATH\_SIZE@{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE}}
 \index{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE@{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
 \doxysubsubsection{DIRECTORY\_DESCRIPTOR\_PATH\_SIZE}
-{\footnotesize\ttfamily \#define D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+A\+T\+H\+\_\+\+S\+I\+ZE~0x0200}
+{\footnotesize\ttfamily \#define DIRECTORY\+\_\+\+DESCRIPTOR\+\_\+\+PATH\+\_\+\+SIZE~0x0200}
 
 
 
@@ -66,7 +66,7 @@ F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void \textbf{ directory\+\_\+descripto
 \index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_create@{directory\_descriptor\_create}}
 \index{directory\_descriptor\_create@{directory\_descriptor\_create}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
 \doxysubsubsection{directory\_descriptor\_create()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} directory\+\_\+descriptor\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{parent,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API \textbf{ directory\+\_\+descriptor} directory\+\_\+descriptor\+\_\+create (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{parent,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
 
 
 
@@ -86,7 +86,7 @@ A pointer to the directory descriptor if success, null pointer otherwhise
 \index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_parent@{directory\_descriptor\_parent}}
 \index{directory\_descriptor\_parent@{directory\_descriptor\_parent}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
 \doxysubsubsection{directory\_descriptor\_parent()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ directory\+\_\+descriptor} directory\+\_\+descriptor\+\_\+parent (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API \textbf{ directory\+\_\+descriptor} directory\+\_\+descriptor\+\_\+parent (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
 
 
 
@@ -100,11 +100,11 @@ Get the parent directory.
 \begin{DoxyReturn}{Returns}
 A pointer to the parent directory descriptor 
 \end{DoxyReturn}
-\mbox{\label{filesystem__directory__descriptor_8h_afc994cff2bc1f4a946dc3ef02a5c5b26}} 
+\mbox{\label{filesystem__directory__descriptor_8h_a0cef1b815faa7f9defc8ddcbf64066db}} 
 \index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_path@{directory\_descriptor\_path}}
 \index{directory\_descriptor\_path@{directory\_descriptor\_path}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
 \doxysubsubsection{directory\_descriptor\_path()}
-{\footnotesize\ttfamily const F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI char$\ast$ directory\+\_\+descriptor\+\_\+path (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API const char$\ast$ directory\+\_\+descriptor\+\_\+path (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
 
 
 
@@ -122,7 +122,7 @@ A constant string pointer to the path of @d
 \index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_files@{directory\_descriptor\_files}}
 \index{directory\_descriptor\_files@{directory\_descriptor\_files}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
 \doxysubsubsection{directory\_descriptor\_files()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI \textbf{ vector} directory\+\_\+descriptor\+\_\+files (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API \textbf{ vector} directory\+\_\+descriptor\+\_\+files (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
 
 
 
@@ -140,7 +140,7 @@ A vector of files contained in directory
 \index{filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}!directory\_descriptor\_destroy@{directory\_descriptor\_destroy}}
 \index{directory\_descriptor\_destroy@{directory\_descriptor\_destroy}!filesystem\_directory\_descriptor.h@{filesystem\_directory\_descriptor.h}}
 \doxysubsubsection{directory\_descriptor\_destroy()}
-{\footnotesize\ttfamily F\+I\+L\+E\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+PI void directory\+\_\+descriptor\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily FILESYSTEM\+\_\+\+API void directory\+\_\+descriptor\+\_\+destroy (\begin{DoxyParamCaption}\item[{\textbf{ directory\+\_\+descriptor}}]{d }\end{DoxyParamCaption})}
 
 
 

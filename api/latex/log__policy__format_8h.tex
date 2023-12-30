@@ -19,7 +19,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=138pt]{log__policy__format_8h__dep__incl}
+\includegraphics[width=140pt]{log__policy__format_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -39,24 +39,24 @@ typedef size\+\_\+t($\ast$ \textbf{ log\+\_\+policy\+\_\+format\+\_\+deserialize
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \textbf{ log\+\_\+policy\+\_\+format\+\_\+id} \{ \textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+B\+I\+N\+A\+RY} = 0x00, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+E\+XT} = 0x01, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+U\+S\+T\+OM} = 0x02, 
-\textbf{ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+I\+ZE}
+enum \textbf{ log\+\_\+policy\+\_\+format\+\_\+id} \{ \textbf{ LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+BINARY} = 0x00
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+TEXT} = 0x01
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+CUSTOM} = 0x02
+, \textbf{ LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+SIZE}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+format} (const \textbf{ log\+\_\+policy\+\_\+id} policy\+\_\+format\+\_\+id)
+LOG\+\_\+\+API log\+\_\+policy\+\_\+interface \textbf{ log\+\_\+policy\+\_\+format} (const \textbf{ log\+\_\+policy\+\_\+id} policy\+\_\+format\+\_\+id)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+binary} (void)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+binary} (void)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+text} (void)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+text} (void)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+text\+\_\+flags} (unsigned int flags)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+text\+\_\+flags} (unsigned int flags)
 \item 
-L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom} (void $\ast$\textbf{ context}, \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr} format\+\_\+size, \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr} format\+\_\+serialize, \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr} format\+\_\+deserialize)
+LOG\+\_\+\+API \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom} (void $\ast$\textbf{ context}, \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr} format\+\_\+size, \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr} format\+\_\+serialize, \textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr} format\+\_\+deserialize)
 \end{DoxyCompactItemize}
 
 
@@ -90,19 +90,19 @@ L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} \textbf{ log\+\_\+policy\+\_\+for
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_FORMAT\_BINARY@{LOG\_POLICY\_FORMAT\_BINARY}!log\_policy\_format.h@{log\_policy\_format.h}}\index{log\_policy\_format.h@{log\_policy\_format.h}!LOG\_POLICY\_FORMAT\_BINARY@{LOG\_POLICY\_FORMAT\_BINARY}}}\mbox{\label{log__policy__format_8h_aa9667a023d6866f32f0a15e8cea636ebad4bfb6095785124149165a116a287635}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+B\+I\+N\+A\+RY&\\
+LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+BINARY&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_FORMAT\_TEXT@{LOG\_POLICY\_FORMAT\_TEXT}!log\_policy\_format.h@{log\_policy\_format.h}}\index{log\_policy\_format.h@{log\_policy\_format.h}!LOG\_POLICY\_FORMAT\_TEXT@{LOG\_POLICY\_FORMAT\_TEXT}}}\mbox{\label{log__policy__format_8h_aa9667a023d6866f32f0a15e8cea636eba938cec0dd3f640455e8edda7bfe50356}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+E\+XT&\\
+LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+TEXT&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_FORMAT\_CUSTOM@{LOG\_POLICY\_FORMAT\_CUSTOM}!log\_policy\_format.h@{log\_policy\_format.h}}\index{log\_policy\_format.h@{log\_policy\_format.h}!LOG\_POLICY\_FORMAT\_CUSTOM@{LOG\_POLICY\_FORMAT\_CUSTOM}}}\mbox{\label{log__policy__format_8h_aa9667a023d6866f32f0a15e8cea636eba6256740be1ad8b828ff897a3bccdc84e}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+C\+U\+S\+T\+OM&\\
+LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+CUSTOM&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_POLICY\_FORMAT\_SIZE@{LOG\_POLICY\_FORMAT\_SIZE}!log\_policy\_format.h@{log\_policy\_format.h}}\index{log\_policy\_format.h@{log\_policy\_format.h}!LOG\_POLICY\_FORMAT\_SIZE@{LOG\_POLICY\_FORMAT\_SIZE}}}\mbox{\label{log__policy__format_8h_aa9667a023d6866f32f0a15e8cea636eba106ccc383a38891c4b9cc866b9ef967f}} 
-L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+I\+ZE&\\
+LOG\+\_\+\+POLICY\+\_\+\+FORMAT\+\_\+\+SIZE&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -113,29 +113,29 @@ L\+O\+G\+\_\+\+P\+O\+L\+I\+C\+Y\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+I\+ZE&\\
 \index{log\_policy\_format.h@{log\_policy\_format.h}!log\_policy\_format@{log\_policy\_format}}
 \index{log\_policy\_format@{log\_policy\_format}!log\_policy\_format.h@{log\_policy\_format.h}}
 \doxysubsubsection{log\_policy\_format()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+format (\begin{DoxyParamCaption}\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{policy\+\_\+format\+\_\+id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API log\+\_\+policy\+\_\+interface log\+\_\+policy\+\_\+format (\begin{DoxyParamCaption}\item[{const \textbf{ log\+\_\+policy\+\_\+id}}]{policy\+\_\+format\+\_\+id }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__format_8h_ad95c15ab087dc24b00de101d724462c1}} 
 \index{log\_policy\_format.h@{log\_policy\_format.h}!log\_policy\_format\_binary@{log\_policy\_format\_binary}}
 \index{log\_policy\_format\_binary@{log\_policy\_format\_binary}!log\_policy\_format.h@{log\_policy\_format.h}}
 \doxysubsubsection{log\_policy\_format\_binary()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+binary (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+binary (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__format_8h_a056c9fa86da3089f8e52955a37e95271}} 
 \index{log\_policy\_format.h@{log\_policy\_format.h}!log\_policy\_format\_text@{log\_policy\_format\_text}}
 \index{log\_policy\_format\_text@{log\_policy\_format\_text}!log\_policy\_format.h@{log\_policy\_format.h}}
 \doxysubsubsection{log\_policy\_format\_text()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+text (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+text (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__format_8h_a5d7ec06b267ffd3c687b3ab3d894d7aa}} 
 \index{log\_policy\_format.h@{log\_policy\_format.h}!log\_policy\_format\_text\_flags@{log\_policy\_format\_text\_flags}}
 \index{log\_policy\_format\_text\_flags@{log\_policy\_format\_text\_flags}!log\_policy\_format.h@{log\_policy\_format.h}}
 \doxysubsubsection{log\_policy\_format\_text\_flags()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+text\+\_\+flags (\begin{DoxyParamCaption}\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+text\+\_\+flags (\begin{DoxyParamCaption}\item[{unsigned int}]{flags }\end{DoxyParamCaption})}
 
 \mbox{\label{log__policy__format_8h_a8b222ae0ba2e8c1062a7a2824142f7f3}} 
 \index{log\_policy\_format.h@{log\_policy\_format.h}!log\_policy\_format\_custom@{log\_policy\_format\_custom}}
 \index{log\_policy\_format\_custom@{log\_policy\_format\_custom}!log\_policy\_format.h@{log\_policy\_format.h}}
 \doxysubsubsection{log\_policy\_format\_custom()}
-{\footnotesize\ttfamily L\+O\+G\+\_\+\+A\+PI \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+custom (\begin{DoxyParamCaption}\item[{void $\ast$}]{context,  }\item[{\textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr}}]{format\+\_\+size,  }\item[{\textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr}}]{format\+\_\+serialize,  }\item[{\textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr}}]{format\+\_\+deserialize }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOG\+\_\+\+API \textbf{ log\+\_\+policy} log\+\_\+policy\+\_\+format\+\_\+custom (\begin{DoxyParamCaption}\item[{void $\ast$}]{context,  }\item[{\textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+size\+\_\+ptr}}]{format\+\_\+size,  }\item[{\textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+serialize\+\_\+ptr}}]{format\+\_\+serialize,  }\item[{\textbf{ log\+\_\+policy\+\_\+format\+\_\+custom\+\_\+deserialize\+\_\+ptr}}]{format\+\_\+deserialize }\end{DoxyParamCaption})}
 

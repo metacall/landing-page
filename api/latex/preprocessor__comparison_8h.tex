@@ -25,11 +25,11 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+M\+PL}(left,  right)
+\#define \textbf{ PREPROCESSOR\+\_\+\+COMPARE\+\_\+\+IMPL}(left,  right)
 \item 
-\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL}(left,  right)
+\#define \textbf{ PREPROCESSOR\+\_\+\+NOT\+\_\+\+EQUAL}(left,  right)
 \item 
-\#define \textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+E\+Q\+U\+AL}(left,  right)~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+PL}(\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL}(left, right))
+\#define \textbf{ PREPROCESSOR\+\_\+\+EQUAL}(left,  right)~ \textbf{ PREPROCESSOR\+\_\+\+COMPL}(\textbf{ PREPROCESSOR\+\_\+\+NOT\+\_\+\+EQUAL}(left, right))
 \end{DoxyCompactItemize}
 
 
@@ -38,7 +38,7 @@ This graph shows which files directly or indirectly include this file\+:
 \index{preprocessor\_comparison.h@{preprocessor\_comparison.h}!PREPROCESSOR\_COMPARE\_IMPL@{PREPROCESSOR\_COMPARE\_IMPL}}
 \index{PREPROCESSOR\_COMPARE\_IMPL@{PREPROCESSOR\_COMPARE\_IMPL}!preprocessor\_comparison.h@{preprocessor\_comparison.h}}
 \doxysubsubsection{PREPROCESSOR\_COMPARE\_IMPL}
-{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+M\+PL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+COMPARE\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -50,7 +50,7 @@ This graph shows which files directly or indirectly include this file\+:
 \index{preprocessor\_comparison.h@{preprocessor\_comparison.h}!PREPROCESSOR\_NOT\_EQUAL@{PREPROCESSOR\_NOT\_EQUAL}}
 \index{PREPROCESSOR\_NOT\_EQUAL@{PREPROCESSOR\_NOT\_EQUAL}!preprocessor\_comparison.h@{preprocessor\_comparison.h}}
 \doxysubsubsection{PREPROCESSOR\_NOT\_EQUAL}
-{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+NOT\+\_\+\+EQUAL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -65,5 +65,5 @@ This graph shows which files directly or indirectly include this file\+:
 \index{preprocessor\_comparison.h@{preprocessor\_comparison.h}!PREPROCESSOR\_EQUAL@{PREPROCESSOR\_EQUAL}}
 \index{PREPROCESSOR\_EQUAL@{PREPROCESSOR\_EQUAL}!preprocessor\_comparison.h@{preprocessor\_comparison.h}}
 \doxysubsubsection{PREPROCESSOR\_EQUAL}
-{\footnotesize\ttfamily \#define P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})~\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+M\+PL}(\textbf{ P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL}(left, right))}
+{\footnotesize\ttfamily \#define PREPROCESSOR\+\_\+\+EQUAL(\begin{DoxyParamCaption}\item[{}]{left,  }\item[{}]{right }\end{DoxyParamCaption})~ \textbf{ PREPROCESSOR\+\_\+\+COMPL}(\textbf{ PREPROCESSOR\+\_\+\+NOT\+\_\+\+EQUAL}(left, right))}
 

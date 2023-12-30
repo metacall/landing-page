@@ -1,0 +1,145 @@
+\doxysection{plugin\+\_\+manager.\+h File Reference}
+\label{plugin__manager_8h}\index{plugin\_manager.h@{plugin\_manager.h}}
+{\ttfamily \#include $<$plugin/plugin\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$plugin/plugin\+\_\+impl.\+h$>$}\newline
+{\ttfamily \#include $<$plugin/plugin\+\_\+loader.\+h$>$}\newline
+{\ttfamily \#include $<$adt/adt\+\_\+set.\+h$>$}\newline
+Include dependency graph for plugin\+\_\+manager.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plugin__manager_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{plugin__manager_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ plugin\+\_\+manager}
+\item 
+struct \textbf{ plugin\+\_\+manager\+\_\+interface}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ plugin\+\_\+manager\+\_\+declare}(name)~ struct \textbf{ plugin\+\_\+manager\+\_\+type} name = \{ 0 \}
+\item 
+\#define \textbf{ plugin\+\_\+manager\+\_\+impl\+\_\+type}(manager,  \textbf{ type\+\_\+name})~ ((\textbf{ type\+\_\+name})\textbf{ plugin\+\_\+manager\+\_\+impl}(manager))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+PLUGIN\+\_\+\+API int \textbf{ plugin\+\_\+manager\+\_\+initialize} (plugin\+\_\+manager manager, const char $\ast$name, const char $\ast$environment\+\_\+library\+\_\+path, const char $\ast$default\+\_\+library\+\_\+path, plugin\+\_\+manager\+\_\+interface iface, void $\ast$impl)
+\item 
+PLUGIN\+\_\+\+API const char $\ast$ \textbf{ plugin\+\_\+manager\+\_\+name} (plugin\+\_\+manager manager)
+\item 
+PLUGIN\+\_\+\+API char $\ast$ \textbf{ plugin\+\_\+manager\+\_\+library\+\_\+path} (plugin\+\_\+manager manager)
+\item 
+PLUGIN\+\_\+\+API void $\ast$ \textbf{ plugin\+\_\+manager\+\_\+impl} (plugin\+\_\+manager manager)
+\item 
+PLUGIN\+\_\+\+API size\+\_\+t \textbf{ plugin\+\_\+manager\+\_\+size} (plugin\+\_\+manager manager)
+\item 
+PLUGIN\+\_\+\+API int \textbf{ plugin\+\_\+manager\+\_\+register} (plugin\+\_\+manager manager, \textbf{ plugin} p)
+\item 
+PLUGIN\+\_\+\+API \textbf{ plugin} \textbf{ plugin\+\_\+manager\+\_\+create} (plugin\+\_\+manager manager, const char $\ast$name, void $\ast$impl, void($\ast$dtor)(\textbf{ plugin}))
+\item 
+PLUGIN\+\_\+\+API \textbf{ plugin} \textbf{ plugin\+\_\+manager\+\_\+get} (plugin\+\_\+manager manager, const char $\ast$name)
+\item 
+PLUGIN\+\_\+\+API void \textbf{ plugin\+\_\+manager\+\_\+iterate} (plugin\+\_\+manager manager, int($\ast$iterator)(plugin\+\_\+manager, \textbf{ plugin}, void $\ast$), void $\ast$data)
+\item 
+PLUGIN\+\_\+\+API int \textbf{ plugin\+\_\+manager\+\_\+clear} (plugin\+\_\+manager manager, \textbf{ plugin} p)
+\item 
+PLUGIN\+\_\+\+API void \textbf{ plugin\+\_\+manager\+\_\+destroy} (plugin\+\_\+manager manager)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{plugin__manager_8h_a815f2890a31aad474e6daa86182edebb}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_declare@{plugin\_manager\_declare}}
+\index{plugin\_manager\_declare@{plugin\_manager\_declare}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_declare}
+{\footnotesize\ttfamily \#define plugin\+\_\+manager\+\_\+declare(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~ struct \textbf{ plugin\+\_\+manager\+\_\+type} name = \{ 0 \}}
+
+\mbox{\label{plugin__manager_8h_a8617c1237cf313264d15edaae863dd15}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_impl\_type@{plugin\_manager\_impl\_type}}
+\index{plugin\_manager\_impl\_type@{plugin\_manager\_impl\_type}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_impl\_type}
+{\footnotesize\ttfamily \#define plugin\+\_\+manager\+\_\+impl\+\_\+type(\begin{DoxyParamCaption}\item[{}]{manager,  }\item[{}]{\textbf{ type\+\_\+name} }\end{DoxyParamCaption})~ ((\textbf{ type\+\_\+name})\textbf{ plugin\+\_\+manager\+\_\+impl}(manager))}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{plugin__manager_8h_aca407528f98420cdddf9a0a53ebdaaaf}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_initialize@{plugin\_manager\_initialize}}
+\index{plugin\_manager\_initialize@{plugin\_manager\_initialize}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_initialize()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API int plugin\+\_\+manager\+\_\+initialize (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager,  }\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{environment\+\_\+library\+\_\+path,  }\item[{const char $\ast$}]{default\+\_\+library\+\_\+path,  }\item[{plugin\+\_\+manager\+\_\+interface}]{iface,  }\item[{void $\ast$}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_a8035a6fbd60d24cd90b9d9b23a6afa66}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_name@{plugin\_manager\_name}}
+\index{plugin\_manager\_name@{plugin\_manager\_name}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_name()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API const char$\ast$ plugin\+\_\+manager\+\_\+name (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_a35790a2e871ec970bf0cf0ea44c621c9}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_library\_path@{plugin\_manager\_library\_path}}
+\index{plugin\_manager\_library\_path@{plugin\_manager\_library\_path}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_library\_path()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API char$\ast$ plugin\+\_\+manager\+\_\+library\+\_\+path (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_a7b738de52ddf872e7d7d4f03154525ae}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_impl@{plugin\_manager\_impl}}
+\index{plugin\_manager\_impl@{plugin\_manager\_impl}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_impl()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void$\ast$ plugin\+\_\+manager\+\_\+impl (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_af2166ee6bdfbb5346011628f6a2e85fb}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_size@{plugin\_manager\_size}}
+\index{plugin\_manager\_size@{plugin\_manager\_size}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_size()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API size\+\_\+t plugin\+\_\+manager\+\_\+size (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_acb43b82ade732b709937f427232ac4bf}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_register@{plugin\_manager\_register}}
+\index{plugin\_manager\_register@{plugin\_manager\_register}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_register()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API int plugin\+\_\+manager\+\_\+register (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager,  }\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_a176d7718efcf4893c7e3e43c8792c6f0}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_create@{plugin\_manager\_create}}
+\index{plugin\_manager\_create@{plugin\_manager\_create}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_create()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API \textbf{ plugin} plugin\+\_\+manager\+\_\+create (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{impl,  }\item[{void($\ast$)(\textbf{ plugin})}]{dtor }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_a3f4e5c7e2a334dfcce788056336296b6}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_get@{plugin\_manager\_get}}
+\index{plugin\_manager\_get@{plugin\_manager\_get}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_get()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API \textbf{ plugin} plugin\+\_\+manager\+\_\+get (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_a8304becddc516569ddae965ae34166d3}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_iterate@{plugin\_manager\_iterate}}
+\index{plugin\_manager\_iterate@{plugin\_manager\_iterate}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_iterate()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void plugin\+\_\+manager\+\_\+iterate (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager,  }\item[{int($\ast$)(plugin\+\_\+manager, \textbf{ plugin}, void $\ast$)}]{iterator,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_ac7b40d2e915aa7abc8279e81383160d6}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_clear@{plugin\_manager\_clear}}
+\index{plugin\_manager\_clear@{plugin\_manager\_clear}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_clear()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API int plugin\+\_\+manager\+\_\+clear (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager,  }\item[{\textbf{ plugin}}]{p }\end{DoxyParamCaption})}
+
+\mbox{\label{plugin__manager_8h_a24557de15ae3f6b18386a3ba92e820bd}} 
+\index{plugin\_manager.h@{plugin\_manager.h}!plugin\_manager\_destroy@{plugin\_manager\_destroy}}
+\index{plugin\_manager\_destroy@{plugin\_manager\_destroy}!plugin\_manager.h@{plugin\_manager.h}}
+\doxysubsubsection{plugin\_manager\_destroy()}
+{\footnotesize\ttfamily PLUGIN\+\_\+\+API void plugin\+\_\+manager\+\_\+destroy (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager }\end{DoxyParamCaption})}
+

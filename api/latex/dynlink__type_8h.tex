@@ -1,12 +1,13 @@
 \doxysection{dynlink\+\_\+type.\+h File Reference}
 \label{dynlink__type_8h}\index{dynlink\_type.h@{dynlink\_type.h}}
 {\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$portability/portability\+\_\+library\+\_\+path.\+h$>$}\newline
 Include dependency graph for dynlink\+\_\+type.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=143pt]{dynlink__type_8h__incl}
+\includegraphics[width=258pt]{dynlink__type_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -14,22 +15,21 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=326pt]{dynlink__type_8h__dep__incl}
+\includegraphics[height=550pt]{dynlink__type_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct dynlink\+\_\+type $\ast$ \textbf{ dynlink}
-\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
 \item 
-const typedef char $\ast$ \textbf{ dynlink\+\_\+path}
+typedef const char $\ast$ \textbf{ dynlink\+\_\+path}
 \item 
-const typedef char $\ast$ \textbf{ dynlink\+\_\+name}
+typedef const char $\ast$ \textbf{ dynlink\+\_\+name}
 \item 
-const typedef char $\ast$ \textbf{ dynlink\+\_\+symbol\+\_\+name}
+typedef const char $\ast$ \textbf{ dynlink\+\_\+symbol\+\_\+name}
+\item 
+typedef portability\+\_\+library\+\_\+path\+\_\+str \textbf{ dynlink\+\_\+library\+\_\+path\+\_\+str}
 \end{DoxyCompactItemize}
 
 
@@ -40,25 +40,28 @@ const typedef char $\ast$ \textbf{ dynlink\+\_\+symbol\+\_\+name}
 \doxysubsubsection{dynlink}
 {\footnotesize\ttfamily typedef struct dynlink\+\_\+type$\ast$ \textbf{ dynlink}}
 
-Dynamically linked shared object handle 
-
-\doxysubsection{Variable Documentation}
-\mbox{\label{dynlink__type_8h_a4899e4ca7a9b827fdba6383a6031c01c}} 
+Dynamically linked shared object handle \mbox{\label{dynlink__type_8h_a8e2c4f432f3e87b96997514ab62cf2c2}} 
 \index{dynlink\_type.h@{dynlink\_type.h}!dynlink\_path@{dynlink\_path}}
 \index{dynlink\_path@{dynlink\_path}!dynlink\_type.h@{dynlink\_type.h}}
 \doxysubsubsection{dynlink\_path}
-{\footnotesize\ttfamily const typedef char$\ast$ dynlink\+\_\+path}
+{\footnotesize\ttfamily typedef const char$\ast$ \textbf{ dynlink\+\_\+path}}
 
-Dynamically linked shared object name \mbox{\label{dynlink__type_8h_a43fbb8bab83aba1c3a01ff0369613d3e}} 
+Dynamically linked shared object path \mbox{\label{dynlink__type_8h_a11b32b057aa8ea512ea863e185547cd0}} 
 \index{dynlink\_type.h@{dynlink\_type.h}!dynlink\_name@{dynlink\_name}}
 \index{dynlink\_name@{dynlink\_name}!dynlink\_type.h@{dynlink\_type.h}}
 \doxysubsubsection{dynlink\_name}
-{\footnotesize\ttfamily const typedef char$\ast$ dynlink\+\_\+name}
+{\footnotesize\ttfamily typedef const char$\ast$ \textbf{ dynlink\+\_\+name}}
 
-Dynamically linked shared object name \mbox{\label{dynlink__type_8h_a43b508d0bdeecf59fdc4ff8f7702ea41}} 
+Dynamically linked shared object name \mbox{\label{dynlink__type_8h_a3c96aed7c9128f3d4be1c9b2b75174c5}} 
 \index{dynlink\_type.h@{dynlink\_type.h}!dynlink\_symbol\_name@{dynlink\_symbol\_name}}
 \index{dynlink\_symbol\_name@{dynlink\_symbol\_name}!dynlink\_type.h@{dynlink\_type.h}}
 \doxysubsubsection{dynlink\_symbol\_name}
-{\footnotesize\ttfamily const typedef char$\ast$ dynlink\+\_\+symbol\+\_\+name}
+{\footnotesize\ttfamily typedef const char$\ast$ \textbf{ dynlink\+\_\+symbol\+\_\+name}}
+
+Dynamically linked shared object symbol name \mbox{\label{dynlink__type_8h_a1c4b6d7db5f1f2c3c881bca3c701e6ae}} 
+\index{dynlink\_type.h@{dynlink\_type.h}!dynlink\_library\_path\_str@{dynlink\_library\_path\_str}}
+\index{dynlink\_library\_path\_str@{dynlink\_library\_path\_str}!dynlink\_type.h@{dynlink\_type.h}}
+\doxysubsubsection{dynlink\_library\_path\_str}
+{\footnotesize\ttfamily typedef portability\+\_\+library\+\_\+path\+\_\+str \textbf{ dynlink\+\_\+library\+\_\+path\+\_\+str}}
 
 Dynamically linked shared object symbol name 

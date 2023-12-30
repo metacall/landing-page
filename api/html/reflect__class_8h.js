@@ -35,7 +35,7 @@ var reflect__class_8h =
     [ "class_register_attribute", "reflect__class_8h.html#a8ff2132c1c32a2fd3743823fd8f44f6f", null ],
     [ "class_static_call", "reflect__class_8h.html#af283c2acb0e15881917b28dbc9599819", null ],
     [ "class_static_await", "reflect__class_8h.html#acc5bce2551cc9f8d1323cf3ebb2ccf91", null ],
-    [ "class_name", "reflect__class_8h.html#a2fb9659f1662ca7d01adae0369ebc387", null ],
+    [ "class_name", "reflect__class_8h.html#a72914489bd2ce521989c0a43abe8c6fa", null ],
     [ "class_metadata", "reflect__class_8h.html#a7972d49956ba43a04c8b6a21f76e490c", null ],
     [ "class_stats_debug", "reflect__class_8h.html#a55ce61f55ab54a8617a4ee6f415894a7", null ],
     [ "class_destroy", "reflect__class_8h.html#a7d8d4d3d74c47d55f7201e917cc1b232", null ]

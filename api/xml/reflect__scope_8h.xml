@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__scope_8h" kind="file" language="C++">
     <compoundname>reflect_scope.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
@@ -78,24 +78,20 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="8">
-        <label>loader_impl_function.h</label>
-        <link refid="loader__impl__function_8h"/>
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
       </node>
-      <node id="10">
-        <label>loader_impl_export.h</label>
-        <link refid="loader__impl__export_8h"/>
+      <node id="9">
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
       </node>
-      <node id="4">
+      <node id="6">
         <label>loader_impl_interface.h</label>
         <link refid="loader__impl__interface_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -103,42 +99,44 @@
         <link refid="reflect__scope_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>loader_export.h</label>
-        <link refid="loader__export_8h"/>
+      <node id="5">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
       </node>
-      <node id="9">
-        <label>loader_impl_handle.h</label>
-        <link refid="loader__impl__handle_8h"/>
-      </node>
-      <node id="7">
+      <node id="8">
         <label>loader_impl.h</label>
         <link refid="loader__impl_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="7">
         <label>loader.h</label>
         <link refid="loader_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>reflect_context.h</label>
         <link refid="reflect__context_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
@@ -475,7 +473,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -503,41 +501,41 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scope_type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scope_type;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref>;</highlight></codeline>
+<codeline lineno="35" refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref>;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37" refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">scope_type<sp/>*<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref>;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/><ref refid="reflect__scope_8h_1adef5f947f919b3ff69a01542d3f3deeb" kindref="member">scope_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="39" refid="reflect__scope_8h_1adef5f947f919b3ff69a01542d3f3deeb" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/><ref refid="reflect__scope_8h_1adef5f947f919b3ff69a01542d3f3deeb" kindref="member">scope_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a8db2b76c0120e768fbcd8897beac921b" kindref="member">scope_size</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="41" refid="reflect__scope_8h_1a8db2b76c0120e768fbcd8897beac921b" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a8db2b76c0120e768fbcd8897beac921b" kindref="member">scope_size</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1acb69c1e8c0fbebf6380ffada174ffae1" kindref="member">scope_define</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>obj);</highlight></codeline>
+<codeline lineno="43" refid="reflect__scope_8h_1acb69c1e8c0fbebf6380ffada174ffae1" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1acb69c1e8c0fbebf6380ffada174ffae1" kindref="member">scope_define</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/>obj);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a41ebf1db1ed72d90642220ecf207592d" kindref="member">scope_metadata</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="45" refid="reflect__scope_8h_1a41ebf1db1ed72d90642220ecf207592d" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a41ebf1db1ed72d90642220ecf207592d" kindref="member">scope_metadata</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a6940f950718ce6aff233bd31554ab6d4" kindref="member">scope_export</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="47" refid="reflect__scope_8h_1a6940f950718ce6aff233bd31554ab6d4" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a6940f950718ce6aff233bd31554ab6d4" kindref="member">scope_export</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a62a31f3ad2165a12bbdcc05e10523bd1" kindref="member">scope_get</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="49" refid="reflect__scope_8h_1a62a31f3ad2165a12bbdcc05e10523bd1" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a62a31f3ad2165a12bbdcc05e10523bd1" kindref="member">scope_get</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a00928bfb641d3bcf921796e8be6d499d" kindref="member">scope_undef</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="51" refid="reflect__scope_8h_1a00928bfb641d3bcf921796e8be6d499d" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__scope_8h_1a00928bfb641d3bcf921796e8be6d499d" kindref="member">scope_undef</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae" kindref="member">scope_append</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
+<codeline lineno="53" refid="reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa71ec5219689e685cd68866052bed4ae" kindref="member">scope_append</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a5249538e9b82297881638fd5237c71ef" kindref="member">scope_contains</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**duplicated);</highlight></codeline>
+<codeline lineno="55" refid="reflect__scope_8h_1a5249538e9b82297881638fd5237c71ef" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a5249538e9b82297881638fd5237c71ef" kindref="member">scope_contains</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**duplicated);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc" kindref="member">scope_remove</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
+<codeline lineno="57" refid="reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1aa64ec00c2fd85446628932eefda3a6bc" kindref="member">scope_remove</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>dest,<sp/><ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>src);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*<ref refid="reflect__scope_8h_1a43523b505351dc8055fe0415f954464b" kindref="member">scope_stack_return</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="59" refid="reflect__scope_8h_1a43523b505351dc8055fe0415f954464b" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*<ref refid="reflect__scope_8h_1a43523b505351dc8055fe0415f954464b" kindref="member">scope_stack_return</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref><sp/><ref refid="reflect__scope_8h_1ab3649f84906f0db25ecaf94a875e9c01" kindref="member">scope_stack_push</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
+<codeline lineno="61" refid="reflect__scope_8h_1ab3649f84906f0db25ecaf94a875e9c01" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref><sp/><ref refid="reflect__scope_8h_1ab3649f84906f0db25ecaf94a875e9c01" kindref="member">scope_stack_push</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__scope_8h_1a2771b27118b4eb1cda14626a89fd4a67" kindref="member">scope_stack_get</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref><sp/>stack_ptr);</highlight></codeline>
+<codeline lineno="63" refid="reflect__scope_8h_1a2771b27118b4eb1cda14626a89fd4a67" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="reflect__scope_8h_1a2771b27118b4eb1cda14626a89fd4a67" kindref="member">scope_stack_get</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp,<sp/><ref refid="reflect__scope_8h_1ab4f5228875184e25e1b0fc47dd79e49d" kindref="member">scope_stack_ptr</ref><sp/>stack_ptr);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a729e7daa1a92497c2aa02a2f102f6a0d" kindref="member">scope_stack_pop</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="65" refid="reflect__scope_8h_1a729e7daa1a92497c2aa02a2f102f6a0d" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a729e7daa1a92497c2aa02a2f102f6a0d" kindref="member">scope_stack_pop</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a76de6b055280509d8009a65dc2f5a5dd" kindref="member">scope_destroy</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
+<codeline lineno="67" refid="reflect__scope_8h_1a76de6b055280509d8009a65dc2f5a5dd" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__scope_8h_1a76de6b055280509d8009a65dc2f5a5dd" kindref="member">scope_destroy</ref>(<ref refid="reflect__scope_8h_1a44871fe331e43a013adaa55f02da816b" kindref="member">scope</ref><sp/>sp);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal">}</highlight></codeline>

@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="adt__hash_8h" kind="file" language="C++">
     <compoundname>adt_hash.h</compoundname>
     <includes local="no">adt/adt_api.h</includes>
+    <includes local="no">stdint.h</includes>
     <includedby refid="adt_8h" local="no">adt.h</includedby>
     <includedby refid="adt__map_8h" local="no">adt_map.h</includedby>
     <includedby refid="adt__set_8h" local="no">adt_set.h</includedby>
@@ -13,13 +14,18 @@
         <link refid="adt__hash_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
       </node>
       <node id="2">
         <label>adt/adt_api.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="5">
+      <node id="12">
         <label>filesystem.h</label>
         <link refid="filesystem_8h"/>
       </node>
@@ -32,8 +38,26 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
+      </node>
+      <node id="5">
+        <label>plugin_manager.h</label>
+        <link refid="plugin__manager_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>detour.h</label>
+        <link refid="detour_8h"/>
       </node>
       <node id="2">
         <label>adt.h</label>
@@ -44,22 +68,50 @@
         <link refid="adt__set_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="13">
         <label>adt_trie.h</label>
         <link refid="adt__trie_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>plugin.h</label>
+        <link refid="plugin_8h"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="3">
         <label>adt_map.h</label>
         <link refid="adt__map_8h"/>
       </node>
+      <node id="10">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
+      </node>
+      <node id="8">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>loader.h</label>
+        <link refid="loader_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" prot="public" static="no">
-        <type>unsigned int</type>
-        <definition>typedef unsigned int hash</definition>
+      <memberdef kind="typedef" id="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" prot="public" static="no">
+        <type>uintptr_t</type>
+        <definition>typedef uintptr_t hash</definition>
         <argsstring></argsstring>
         <name>hash</name>
         <briefdescription>
@@ -68,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="32" column="22" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="36" column="19" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" prot="public" static="no">
         <type>void *</type>
@@ -81,10 +133,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="34" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="38" column="14" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" prot="public" static="no">
-        <type><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref>(*</type>
+        <type><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref>(*</type>
         <definition>typedef hash(* hash_callback) (const hash_key)</definition>
         <argsstring>)(const hash_key)</argsstring>
         <name>hash_callback</name>
@@ -94,12 +146,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="36" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="40" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="adt__hash_8h_1addd9f66a68ebee4315ea7cba69829415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>ADT_API <ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref></type>
+        <type>ADT_API <ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref></type>
         <definition>ADT_API hash hash_callback_str</definition>
         <argsstring>(const hash_key key)</argsstring>
         <name>hash_callback_str</name>
@@ -113,7 +165,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="40" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" declline="40" declcolumn="14"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="44" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" declline="44" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="adt__hash_8h_1ae24ccd93062b3fe72e526be0d37c8e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ADT_API <ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref></type>
+        <definition>ADT_API hash hash_callback_ptr</definition>
+        <argsstring>(const hash_key key)</argsstring>
+        <name>hash_callback_ptr</name>
+        <param>
+          <type>const <ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" line="46" column="14" declfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h" declline="46" declcolumn="14"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,7 +194,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -150,23 +219,29 @@
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref><sp/>(*<ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref>);</highlight></codeline>
+<codeline lineno="36" refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uintptr_t<sp/><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref>;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref>;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">ADT_API<sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref><sp/><ref refid="adt__hash_8h_1addd9f66a68ebee4315ea7cba69829415" kindref="member">hash_callback_str</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="40" refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref><sp/>(*<ref refid="adt__hash_8h_1a66b83a52cce0d0f18e7c2041d374d16b" kindref="member">hash_callback</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref>);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="adt__hash_8h_1addd9f66a68ebee4315ea7cba69829415" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref><sp/><ref refid="adt__hash_8h_1addd9f66a68ebee4315ea7cba69829415" kindref="member">hash_callback_str</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref><sp/>key);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ADT_HASH_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="46" refid="adt__hash_8h_1ae24ccd93062b3fe72e526be0d37c8e36" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref><sp/><ref refid="adt__hash_8h_1ae24ccd93062b3fe72e526be0d37c8e36" kindref="member">hash_callback_ptr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a0bda26faa9e664a526a82b454aa459f8" kindref="member">hash_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ADT_HASH_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_hash.h"/>
   </compounddef>

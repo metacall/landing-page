@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="loader__impl__interface_8h" kind="file" language="C++">
     <compoundname>loader_impl_interface.h</compoundname>
     <includes local="no">loader/loader_api.h</includes>
@@ -10,22 +10,23 @@
     <includes local="no">configuration/configuration.h</includes>
     <includes local="no">stdlib.h</includes>
     <includedby refid="loader_8h" local="no">loader.h</includedby>
-    <includedby refid="loader__export_8h" local="no">loader_export.h</includedby>
     <includedby refid="loader__impl_8h" local="no">loader_impl.h</includedby>
-    <includedby refid="loader__impl__export_8h" local="no">loader_impl_export.h</includedby>
     <incdepgraph>
       <node id="3">
         <label>loader/loader_handle.h</label>
         <link refid="loader__handle_8h"/>
       </node>
-      <node id="9">
+      <node id="6">
+        <label>portability/portability_path.h</label>
+      </node>
+      <node id="10">
         <label>reflect/reflect_function.h</label>
         <link refid="reflect__function_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -39,11 +40,11 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -51,30 +52,32 @@
         <link refid="loader__naming_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>stdlib.h</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>reflect/reflect_scope.h</label>
         <link refid="reflect__scope_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>reflect/reflect_type.h</label>
-        <link refid="reflect__type_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>reflect/reflect_type.h</label>
+        <link refid="reflect__type_8h"/>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -84,93 +87,83 @@
       <node id="2">
         <label>loader/loader_api.h</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>reflect/reflect_type_id.h</label>
         <link refid="reflect__type__id_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>reflect/reflect_value.h</label>
         <link refid="reflect__value_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>reflect/reflect_api.h</label>
+      </node>
+      <node id="17">
+        <label>configuration/configuration.h</label>
+      </node>
+      <node id="7">
+        <label>reflect/reflect_context.h</label>
+        <link refid="reflect__context_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>reflect/reflect_signature.h</label>
+        <link refid="reflect__signature_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>reflect/reflect_api.h</label>
-      </node>
-      <node id="16">
-        <label>configuration/configuration.h</label>
-      </node>
-      <node id="6">
-        <label>reflect/reflect_context.h</label>
-        <link refid="reflect__context_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
       <node id="11">
-        <label>reflect/reflect_signature.h</label>
-        <link refid="reflect__signature_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
         <label>reflect/reflect_async.h</label>
         <link refid="reflect__async_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="5">
-        <label>loader_impl_function.h</label>
-        <link refid="loader__impl__function_8h"/>
-      </node>
-      <node id="7">
-        <label>loader_impl_export.h</label>
-        <link refid="loader__impl__export_8h"/>
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
       </node>
       <node id="1">
         <label>loader_impl_interface.h</label>
         <link refid="loader__impl__interface_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>loader_export.h</label>
-        <link refid="loader__export_8h"/>
-      </node>
-      <node id="6">
-        <label>loader_impl_handle.h</label>
-        <link refid="loader__impl__handle_8h"/>
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
       </node>
       <node id="4">
         <label>loader_impl.h</label>
         <link refid="loader__impl_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>loader.h</label>
         <link refid="loader_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structloader__impl__interface__type" prot="public">loader_impl_interface_type</innerclass>
@@ -201,10 +194,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" line="44" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="loader__impl__interface_8h_1a8a066acded9646a90004f0839316966f" prot="public" static="no">
+      <memberdef kind="typedef" id="loader__impl__interface_8h_1ab335bce9274992abc2521083f2b0d5a2" prot="public" static="no">
         <type>int(*</type>
-        <definition>typedef int(* loader_impl_interface_execution_path) (loader_impl, const loader_naming_path)</definition>
-        <argsstring>)(loader_impl, const loader_naming_path)</argsstring>
+        <definition>typedef int(* loader_impl_interface_execution_path) (loader_impl, const loader_path)</definition>
+        <argsstring>)(loader_impl, const loader_path)</argsstring>
         <name>loader_impl_interface_execution_path</name>
         <briefdescription>
         </briefdescription>
@@ -214,10 +207,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" line="46" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" bodystart="46" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="loader__impl__interface_8h_1aaaac35a1bee063497f4ce0501b5890e3" prot="public" static="no">
+      <memberdef kind="typedef" id="loader__impl__interface_8h_1a943c4ca9bb29f36786fff3a6091136b5" prot="public" static="no">
         <type><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref>(*</type>
-        <definition>typedef loader_handle(* loader_impl_interface_load_from_file) (loader_impl, const loader_naming_path[], size_t)</definition>
-        <argsstring>)(loader_impl, const loader_naming_path[], size_t)</argsstring>
+        <definition>typedef loader_handle(* loader_impl_interface_load_from_file) (loader_impl, const loader_path[], size_t)</definition>
+        <argsstring>)(loader_impl, const loader_path[], size_t)</argsstring>
         <name>loader_impl_interface_load_from_file</name>
         <briefdescription>
         </briefdescription>
@@ -227,10 +220,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" line="48" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" bodystart="48" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="loader__impl__interface_8h_1a40c34c6bbe454a2ecf197aa77f64df56" prot="public" static="no">
+      <memberdef kind="typedef" id="loader__impl__interface_8h_1acb459e93e3ecf5cec591fb8e5043ac57" prot="public" static="no">
         <type><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref>(*</type>
-        <definition>typedef loader_handle(* loader_impl_interface_load_from_memory) (loader_impl, const loader_naming_name, const char *, size_t)</definition>
-        <argsstring>)(loader_impl, const loader_naming_name, const char *, size_t)</argsstring>
+        <definition>typedef loader_handle(* loader_impl_interface_load_from_memory) (loader_impl, const loader_name, const char *, size_t)</definition>
+        <argsstring>)(loader_impl, const loader_name, const char *, size_t)</argsstring>
         <name>loader_impl_interface_load_from_memory</name>
         <briefdescription>
         </briefdescription>
@@ -240,10 +233,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" line="50" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_impl_interface.h" bodystart="50" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="loader__impl__interface_8h_1af1eabf831d3e874c12d67ea0f0983675" prot="public" static="no">
+      <memberdef kind="typedef" id="loader__impl__interface_8h_1aa191f00409097239367a73d6f2ac3de0" prot="public" static="no">
         <type><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref>(*</type>
-        <definition>typedef loader_handle(* loader_impl_interface_load_from_package) (loader_impl, const loader_naming_path)</definition>
-        <argsstring>)(loader_impl, const loader_naming_path)</argsstring>
+        <definition>typedef loader_handle(* loader_impl_interface_load_from_package) (loader_impl, const loader_path)</definition>
+        <argsstring>)(loader_impl, const loader_path)</argsstring>
         <name>loader_impl_interface_load_from_package</name>
         <briefdescription>
         </briefdescription>
@@ -315,7 +308,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Loader<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>loading<sp/>executable<sp/>code<sp/>at<sp/>run-time<sp/>into<sp/>a<sp/>process.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -356,13 +349,13 @@
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44" refid="loader__impl__interface_8h_1afe897db109719ff73d52c69554beb85b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="loader__impl__data_8h_1ab431d457f46d287723fd3922779f9c2c" kindref="member">loader_impl_data</ref><sp/>(*<ref refid="loader__impl__interface_8h_1afe897db109719ff73d52c69554beb85b" kindref="member">loader_impl_interface_initialize</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/>configuration);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="loader__impl__interface_8h_1a8a066acded9646a90004f0839316966f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="loader__impl__interface_8h_1a8a066acded9646a90004f0839316966f" kindref="member">loader_impl_interface_execution_path</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref>);</highlight></codeline>
+<codeline lineno="46" refid="loader__impl__interface_8h_1ab335bce9274992abc2521083f2b0d5a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="loader__impl__interface_8h_1ab335bce9274992abc2521083f2b0d5a2" kindref="member">loader_impl_interface_execution_path</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref>);</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="loader__impl__interface_8h_1aaaac35a1bee063497f4ce0501b5890e3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref><sp/>(*<ref refid="loader__impl__interface_8h_1aaaac35a1bee063497f4ce0501b5890e3" kindref="member">loader_impl_interface_load_from_file</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref>[],<sp/>size_t);</highlight></codeline>
+<codeline lineno="48" refid="loader__impl__interface_8h_1a943c4ca9bb29f36786fff3a6091136b5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref><sp/>(*<ref refid="loader__impl__interface_8h_1a943c4ca9bb29f36786fff3a6091136b5" kindref="member">loader_impl_interface_load_from_file</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref>[],<sp/>size_t);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="loader__impl__interface_8h_1a40c34c6bbe454a2ecf197aa77f64df56" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref><sp/>(*<ref refid="loader__impl__interface_8h_1a40c34c6bbe454a2ecf197aa77f64df56" kindref="member">loader_impl_interface_load_from_memory</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1acd87beffca1d930544a80c0cb82ed249" kindref="member">loader_naming_name</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t);</highlight></codeline>
+<codeline lineno="50" refid="loader__impl__interface_8h_1acb459e93e3ecf5cec591fb8e5043ac57" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref><sp/>(*<ref refid="loader__impl__interface_8h_1acb459e93e3ecf5cec591fb8e5043ac57" kindref="member">loader_impl_interface_load_from_memory</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1af292613bc96ed3a05576a325595f76fb" kindref="member">loader_name</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="loader__impl__interface_8h_1af1eabf831d3e874c12d67ea0f0983675" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref><sp/>(*<ref refid="loader__impl__interface_8h_1af1eabf831d3e874c12d67ea0f0983675" kindref="member">loader_impl_interface_load_from_package</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1aa27055dfc9a7bd58b024fea91438099a" kindref="member">loader_naming_path</ref>);</highlight></codeline>
+<codeline lineno="52" refid="loader__impl__interface_8h_1aa191f00409097239367a73d6f2ac3de0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref><sp/>(*<ref refid="loader__impl__interface_8h_1aa191f00409097239367a73d6f2ac3de0" kindref="member">loader_impl_interface_load_from_package</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="loader__naming_8h_1a0c504454714715861c9a58fc48a8176c" kindref="member">loader_path</ref>);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54" refid="loader__impl__interface_8h_1ae3c43bdf00d7e9d5c352ff994fd12d44" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="loader__impl__interface_8h_1ae3c43bdf00d7e9d5c352ff994fd12d44" kindref="member">loader_impl_interface_clear</ref>)(<ref refid="loader__impl__interface_8h_1a92e542164f804b49f0c1d6149b1c045e" kindref="member">loader_impl</ref>,<sp/><ref refid="loader__handle_8h_1ace782110de5be5ecbc06f5fb7ad2f0f6" kindref="member">loader_handle</ref>);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
@@ -373,10 +366,10 @@
 <codeline lineno="60" refid="structloader__impl__interface__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structloader__impl__interface__type" kindref="compound">loader_impl_interface_type</ref></highlight></codeline>
 <codeline lineno="61"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="62" refid="structloader__impl__interface__type_1a601218998234ce0945ed38368b7d2ed5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1afe897db109719ff73d52c69554beb85b" kindref="member">loader_impl_interface_initialize</ref><sp/><ref refid="structloader__impl__interface__type_1a601218998234ce0945ed38368b7d2ed5" kindref="member">initialize</ref>;</highlight></codeline>
-<codeline lineno="63" refid="structloader__impl__interface__type_1a1ed9a2bb055bb705c2a0ed96021c46c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1a8a066acded9646a90004f0839316966f" kindref="member">loader_impl_interface_execution_path</ref><sp/><ref refid="structloader__impl__interface__type_1a1ed9a2bb055bb705c2a0ed96021c46c9" kindref="member">execution_path</ref>;</highlight></codeline>
-<codeline lineno="64" refid="structloader__impl__interface__type_1af7602378da2677f826bfb80fafab0df3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1aaaac35a1bee063497f4ce0501b5890e3" kindref="member">loader_impl_interface_load_from_file</ref><sp/><ref refid="structloader__impl__interface__type_1af7602378da2677f826bfb80fafab0df3" kindref="member">load_from_file</ref>;</highlight></codeline>
-<codeline lineno="65" refid="structloader__impl__interface__type_1a7c31ddb46b3b98a5e2e3b4a0a51c1c47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1a40c34c6bbe454a2ecf197aa77f64df56" kindref="member">loader_impl_interface_load_from_memory</ref><sp/><ref refid="structloader__impl__interface__type_1a7c31ddb46b3b98a5e2e3b4a0a51c1c47" kindref="member">load_from_memory</ref>;</highlight></codeline>
-<codeline lineno="66" refid="structloader__impl__interface__type_1a99887d300b5f5f83fab26420bbbfd3b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1af1eabf831d3e874c12d67ea0f0983675" kindref="member">loader_impl_interface_load_from_package</ref><sp/><ref refid="structloader__impl__interface__type_1a99887d300b5f5f83fab26420bbbfd3b0" kindref="member">load_from_package</ref>;</highlight></codeline>
+<codeline lineno="63" refid="structloader__impl__interface__type_1a1ed9a2bb055bb705c2a0ed96021c46c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1ab335bce9274992abc2521083f2b0d5a2" kindref="member">loader_impl_interface_execution_path</ref><sp/><ref refid="structloader__impl__interface__type_1a1ed9a2bb055bb705c2a0ed96021c46c9" kindref="member">execution_path</ref>;</highlight></codeline>
+<codeline lineno="64" refid="structloader__impl__interface__type_1af7602378da2677f826bfb80fafab0df3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1a943c4ca9bb29f36786fff3a6091136b5" kindref="member">loader_impl_interface_load_from_file</ref><sp/><ref refid="structloader__impl__interface__type_1af7602378da2677f826bfb80fafab0df3" kindref="member">load_from_file</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structloader__impl__interface__type_1a7c31ddb46b3b98a5e2e3b4a0a51c1c47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1acb459e93e3ecf5cec591fb8e5043ac57" kindref="member">loader_impl_interface_load_from_memory</ref><sp/><ref refid="structloader__impl__interface__type_1a7c31ddb46b3b98a5e2e3b4a0a51c1c47" kindref="member">load_from_memory</ref>;</highlight></codeline>
+<codeline lineno="66" refid="structloader__impl__interface__type_1a99887d300b5f5f83fab26420bbbfd3b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1aa191f00409097239367a73d6f2ac3de0" kindref="member">loader_impl_interface_load_from_package</ref><sp/><ref refid="structloader__impl__interface__type_1a99887d300b5f5f83fab26420bbbfd3b0" kindref="member">load_from_package</ref>;</highlight></codeline>
 <codeline lineno="67" refid="structloader__impl__interface__type_1abdd6513e9c976b76d1e623902c969e42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1ae3c43bdf00d7e9d5c352ff994fd12d44" kindref="member">loader_impl_interface_clear</ref><sp/><ref refid="structloader__impl__interface__type_1abdd6513e9c976b76d1e623902c969e42" kindref="member">clear</ref>;</highlight></codeline>
 <codeline lineno="68" refid="structloader__impl__interface__type_1a0a7dcfb407bbaa70de6acca1a0c29aaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1af0e9057d0ab856b3b5d4275351ec40a3" kindref="member">loader_impl_interface_discover</ref><sp/><ref refid="structloader__impl__interface__type_1a0a7dcfb407bbaa70de6acca1a0c29aaf" kindref="member">discover</ref>;</highlight></codeline>
 <codeline lineno="69" refid="structloader__impl__interface__type_1a3bee97fbd47bad1791c4847582435879" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="loader__impl__interface_8h_1a6b64c14456940134fcd2cb3cd648f77d" kindref="member">loader_impl_interface_destroy</ref><sp/><ref refid="structloader__impl__interface__type_1a3bee97fbd47bad1791c4847582435879" kindref="member">destroy</ref>;</highlight></codeline>

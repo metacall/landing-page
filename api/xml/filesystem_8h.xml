@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="filesystem_8h" kind="file" language="C++">
     <compoundname>filesystem.h</compoundname>
     <includes local="no">filesystem/filesystem_api.h</includes>
@@ -13,7 +13,7 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -21,11 +21,16 @@
         <link refid="adt__hash_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>filesystem/filesystem_api.h</label>
       </node>
       <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
         <label>stdlib.h</label>
       </node>
       <node id="5">
@@ -43,26 +48,26 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>adt/adt_api.h</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>adt/adt_vector.h</label>
         <link refid="adt__vector_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
     </incdepgraph>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cc" prot="public" static="no" strong="no">
+      <memberdef kind="enum" id="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0f" prot="public" static="no" strong="no">
         <type></type>
-        <name>filesystem_flags_enumeration</name>
-        <enumvalue id="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca5b7524837d6643f9725091842d013520" prot="public">
+        <name>filesystem_flags</name>
+        <enumvalue id="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa5b7524837d6643f9725091842d013520" prot="public">
           <name>FILESYSTEM_FLAGS_NONE</name>
           <initializer>= 0x00</initializer>
           <briefdescription>
@@ -70,7 +75,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92ccaca618ec1fd26cf4f747ac04be6ca3589" prot="public">
+        <enumvalue id="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0faca618ec1fd26cf4f747ac04be6ca3589" prot="public">
           <name>FILESYSTEM_FLAGS_LOAD_LAZY</name>
           <initializer>= 0x01 &lt;&lt; 0x00</initializer>
           <briefdescription>
@@ -78,7 +83,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca2cd5b792a29402c7bc2f980cd3e183d1" prot="public">
+        <enumvalue id="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa2cd5b792a29402c7bc2f980cd3e183d1" prot="public">
           <name>FILESYSTEM_FLAGS_WATCH_SYNC</name>
           <initializer>= 0x01 &lt;&lt; 0x01</initializer>
           <briefdescription>
@@ -86,7 +91,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca6f83a80620d031da43eaa0e3160c0156" prot="public">
+        <enumvalue id="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa6f83a80620d031da43eaa0e3160c0156" prot="public">
           <name>FILESYSTEM_FLAGS_READABLE</name>
           <initializer>= 0x01 &lt;&lt; 0x02</initializer>
           <briefdescription>
@@ -94,7 +99,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca33d09e1cac2bf4ea77ca65184d740778" prot="public">
+        <enumvalue id="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa33d09e1cac2bf4ea77ca65184d740778" prot="public">
           <name>FILESYSTEM_FLAGS_WRITEABLE</name>
           <initializer>= 0x01 &lt;&lt; 0x03</initializer>
           <briefdescription>
@@ -108,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem.h" line="45" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem.h" bodystart="44" bodyend="52"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem.h" line="44" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem.h" bodystart="45" bodyend="52"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -163,7 +168,7 @@
           <declname>root</declname>
         </param>
         <param>
-          <type>filesystem_flags</type>
+          <type><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0f" kindref="member">filesystem_flags</ref></type>
           <declname>flags</declname>
         </param>
         <briefdescription>
@@ -617,9 +622,9 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem.h" line="234" column="21" declfile="/home/runner/work/landing-page/landing-page/core/source/filesystem/include/filesystem/filesystem.h" declline="234" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="filesystem_8h_1a1298c6453dadaef5b73efcc3f1d1235a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const FILESYSTEM_API char *</type>
-        <definition>const FILESYSTEM_API char* filesystem_print_info</definition>
+      <memberdef kind="function" id="filesystem_8h_1a8d67c5a67eaa712b52a6d0d6bbf39323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILESYSTEM_API const char *</type>
+        <definition>FILESYSTEM_API const char* filesystem_print_info</definition>
         <argsstring>(void)</argsstring>
         <name>filesystem_print_info</name>
         <param>
@@ -647,7 +652,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>File<sp/>System<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>cross-platform<sp/>library<sp/>for<sp/>managing<sp/>file<sp/>system,<sp/>paths<sp/>and<sp/>files.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -686,15 +691,15 @@
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cc" kindref="member">filesystem_flags_enumeration</ref></highlight></codeline>
+<codeline lineno="44" refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>filesystem_flags_enumeration</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46" refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca5b7524837d6643f9725091842d013520" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca5b7524837d6643f9725091842d013520" kindref="member">FILESYSTEM_FLAGS_NONE</ref><sp/>=<sp/>0x00,</highlight></codeline>
-<codeline lineno="47" refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92ccaca618ec1fd26cf4f747ac04be6ca3589" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92ccaca618ec1fd26cf4f747ac04be6ca3589" kindref="member">FILESYSTEM_FLAGS_LOAD_LAZY</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x00,</highlight></codeline>
-<codeline lineno="48" refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca2cd5b792a29402c7bc2f980cd3e183d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca2cd5b792a29402c7bc2f980cd3e183d1" kindref="member">FILESYSTEM_FLAGS_WATCH_SYNC</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x01,</highlight></codeline>
-<codeline lineno="49" refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca6f83a80620d031da43eaa0e3160c0156" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca6f83a80620d031da43eaa0e3160c0156" kindref="member">FILESYSTEM_FLAGS_READABLE</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x02,</highlight></codeline>
-<codeline lineno="50" refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca33d09e1cac2bf4ea77ca65184d740778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a68eb9ad436cef83a7bff8bad8d0e92cca33d09e1cac2bf4ea77ca65184d740778" kindref="member">FILESYSTEM_FLAGS_WRITEABLE</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x03</highlight></codeline>
+<codeline lineno="46" refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa5b7524837d6643f9725091842d013520" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa5b7524837d6643f9725091842d013520" kindref="member">FILESYSTEM_FLAGS_NONE</ref><sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="47" refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0faca618ec1fd26cf4f747ac04be6ca3589" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0faca618ec1fd26cf4f747ac04be6ca3589" kindref="member">FILESYSTEM_FLAGS_LOAD_LAZY</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x00,</highlight></codeline>
+<codeline lineno="48" refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa2cd5b792a29402c7bc2f980cd3e183d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa2cd5b792a29402c7bc2f980cd3e183d1" kindref="member">FILESYSTEM_FLAGS_WATCH_SYNC</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x01,</highlight></codeline>
+<codeline lineno="49" refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa6f83a80620d031da43eaa0e3160c0156" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa6f83a80620d031da43eaa0e3160c0156" kindref="member">FILESYSTEM_FLAGS_READABLE</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x02,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa33d09e1cac2bf4ea77ca65184d740778" kindref="member">FILESYSTEM_FLAGS_WRITEABLE</ref><sp/>=<sp/>0x01<sp/>&lt;&lt;<sp/>0x03</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal">}<sp/>filesystem_flags;</highlight></codeline>
+<codeline lineno="52" refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0fa33d09e1cac2bf4ea77ca65184d740778" refkind="member"><highlight class="normal">}<sp/><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0f" kindref="member">filesystem_flags</ref>;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
@@ -724,7 +729,7 @@
 <codeline lineno="79"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="80"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>handle<sp/>to<sp/>file<sp/>system<sp/>if<sp/>success,<sp/>null<sp/>otherwhise</highlight></codeline>
 <codeline lineno="81"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal">FILESYSTEM_API<sp/><ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/><ref refid="filesystem_8h_1ab013cf437b8dd8b6c3029ddf68fd8dd2" kindref="member">filesystem_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*root,<sp/>filesystem_flags<sp/>flags);</highlight></codeline>
+<codeline lineno="82" refid="filesystem_8h_1ab013cf437b8dd8b6c3029ddf68fd8dd2" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/><ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/><ref refid="filesystem_8h_1ab013cf437b8dd8b6c3029ddf68fd8dd2" kindref="member">filesystem_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*root,<sp/><ref refid="filesystem_8h_1a7e22d59b12f4912e1371af5873c8cd0f" kindref="member">filesystem_flags</ref><sp/>flags);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="84"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="85"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -739,7 +744,7 @@
 <codeline lineno="94"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="95"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="96"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1ab04b8eb7b70e7a906f56acb13c376343" kindref="member">filesystem_add_file</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_path);</highlight></codeline>
+<codeline lineno="97" refid="filesystem_8h_1ab04b8eb7b70e7a906f56acb13c376343" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1ab04b8eb7b70e7a906f56acb13c376343" kindref="member">filesystem_add_file</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_path);</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="99"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="100"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -754,7 +759,7 @@
 <codeline lineno="109"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="110"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="111"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a6964dfeb817f5cd400556e9678a93362" kindref="member">filesystem_add_directory</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*directory_path);</highlight></codeline>
+<codeline lineno="112" refid="filesystem_8h_1a6964dfeb817f5cd400556e9678a93362" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a6964dfeb817f5cd400556e9678a93362" kindref="member">filesystem_add_directory</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*directory_path);</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="114"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="115"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -769,7 +774,7 @@
 <codeline lineno="124"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="125"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="126"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a271263e0bf36bc664631ce3e2d14cbec" kindref="member">filesystem_remove_file</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_path);</highlight></codeline>
+<codeline lineno="127" refid="filesystem_8h_1a271263e0bf36bc664631ce3e2d14cbec" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a271263e0bf36bc664631ce3e2d14cbec" kindref="member">filesystem_remove_file</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_path);</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="129"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="130"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -784,7 +789,7 @@
 <codeline lineno="139"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="140"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="141"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a707fdba44e6f96d0473449ff99edf523" kindref="member">filesystem_remove_directory</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*directory_path);</highlight></codeline>
+<codeline lineno="142" refid="filesystem_8h_1a707fdba44e6f96d0473449ff99edf523" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a707fdba44e6f96d0473449ff99edf523" kindref="member">filesystem_remove_directory</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*directory_path);</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="144"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="145"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -799,7 +804,7 @@
 <codeline lineno="154"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="155"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="156"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a1a45af96aa3c4d270d076a0fdded8bf9" kindref="member">filesystem_list_files</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>files);</highlight></codeline>
+<codeline lineno="157" refid="filesystem_8h_1a1a45af96aa3c4d270d076a0fdded8bf9" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a1a45af96aa3c4d270d076a0fdded8bf9" kindref="member">filesystem_list_files</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>files);</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="159"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="160"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -814,7 +819,7 @@
 <codeline lineno="169"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="170"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="171"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1acbace5df0b7256ac18f0b1ca8b20e2ee" kindref="member">filesystem_list_files_by_extension</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>files);</highlight></codeline>
+<codeline lineno="172" refid="filesystem_8h_1acbace5df0b7256ac18f0b1ca8b20e2ee" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1acbace5df0b7256ac18f0b1ca8b20e2ee" kindref="member">filesystem_list_files_by_extension</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="adt__set_8h_1af1b1dedbae3a63c77c18814c6080529f" kindref="member">set</ref><sp/>files);</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="174"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="175"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -829,7 +834,7 @@
 <codeline lineno="184"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="185"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="186"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1aaa4abaf100ec7d27218cba801de14a11" kindref="member">filesystem_list_directories</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>directories);</highlight></codeline>
+<codeline lineno="187" refid="filesystem_8h_1aaa4abaf100ec7d27218cba801de14a11" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1aaa4abaf100ec7d27218cba801de14a11" kindref="member">filesystem_list_directories</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>directories);</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="189"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="190"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -847,7 +852,7 @@
 <codeline lineno="202"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="203"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="204"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a5422eb105a55772c70a11188479536ff" kindref="member">filesystem_cannonical_path_from_file</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="filesystem_8h_1a1fea2a4514fa0a01c4fa0fe2d0f014de" kindref="member">file</ref><sp/>f,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>path);</highlight></codeline>
+<codeline lineno="205" refid="filesystem_8h_1a5422eb105a55772c70a11188479536ff" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a5422eb105a55772c70a11188479536ff" kindref="member">filesystem_cannonical_path_from_file</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="filesystem_8h_1a1fea2a4514fa0a01c4fa0fe2d0f014de" kindref="member">file</ref><sp/>f,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>path);</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="207"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="208"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -865,7 +870,7 @@
 <codeline lineno="220"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
 <codeline lineno="221"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>success,<sp/>different<sp/>from<sp/>zero<sp/>otherwhise</highlight></codeline>
 <codeline lineno="222"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="223"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a56786810f2431c262a1ac561b5e23f34" kindref="member">filesystem_cannonical_path_from_directory</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="filesystem_8h_1a2391b569a0e8ef3688d7ae5845ff1bc4" kindref="member">directory</ref><sp/>d,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>path);</highlight></codeline>
+<codeline lineno="223" refid="filesystem_8h_1a56786810f2431c262a1ac561b5e23f34" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a56786810f2431c262a1ac561b5e23f34" kindref="member">filesystem_cannonical_path_from_directory</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs,<sp/><ref refid="filesystem_8h_1a2391b569a0e8ef3688d7ae5845ff1bc4" kindref="member">directory</ref><sp/>d,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>path);</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"></highlight></codeline>
 <codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TODO:<sp/>filesystem_cannonical_path_to_string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
@@ -876,7 +881,7 @@
 <codeline lineno="231"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>fs</highlight></codeline>
 <codeline lineno="232"><highlight class="comment">*<sp/><sp/><sp/><sp/>Handle<sp/>referencing<sp/>the<sp/>file<sp/>system</highlight></codeline>
 <codeline lineno="233"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a696de751ede975d955d6be29ecdbb736" kindref="member">filesystem_destroy</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs);</highlight></codeline>
+<codeline lineno="234" refid="filesystem_8h_1a696de751ede975d955d6be29ecdbb736" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="filesystem_8h_1a696de751ede975d955d6be29ecdbb736" kindref="member">filesystem_destroy</ref>(<ref refid="filesystem_8h_1a81965a0147f5428b8d298f395157f49b" kindref="member">filesystem</ref><sp/>fs);</highlight></codeline>
 <codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="236"><highlight class="comment">/**</highlight></codeline>
 <codeline lineno="237"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
@@ -886,7 +891,7 @@
 <codeline lineno="241"><highlight class="comment">*<sp/><sp/><sp/><sp/>Static<sp/>string<sp/>containing<sp/>module<sp/>information</highlight></codeline>
 <codeline lineno="242"><highlight class="comment">*</highlight></codeline>
 <codeline lineno="243"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="filesystem_8h_1a1298c6453dadaef5b73efcc3f1d1235a" kindref="member">filesystem_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="244" refid="filesystem_8h_1a8d67c5a67eaa712b52a6d0d6bbf39323" refkind="member"><highlight class="normal">FILESYSTEM_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="filesystem_8h_1a8d67c5a67eaa712b52a6d0d6bbf39323" kindref="member">filesystem_print_info</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="245"><highlight class="normal"></highlight></codeline>
 <codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="247"><highlight class="normal">}</highlight></codeline>

@@ -1,4 +1,4 @@
-.TH "detour.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "detour.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,17 +8,16 @@ detour.h
 .PP
 \fC#include <detour/detour_api\&.h>\fP
 .br
-\fC#include <memory/memory\&.h>\fP
+\fC#include <detour/detour_handle\&.h>\fP
+.br
+\fC#include <plugin/plugin\&.h>\fP
 .br
 
 .SS "Typedefs"
 
 .in +1c
 .ti -1c
-.RI "typedef struct detour_type * \fBdetour\fP"
-.br
-.ti -1c
-.RI "typedef struct detour_handle_type * \fBdetour_handle\fP"
+.RI "typedef \fBplugin\fP \fBdetour\fP"
 .br
 .in -1c
 .SS "Functions"
@@ -48,7 +47,7 @@ Pointer to detour on correct initialization, null otherwise
 .RI "DETOUR_API \fBdetour\fP \fBdetour_create\fP (const char *name)"
 .br
 .ti -1c
-.RI "const DETOUR_API char * \fBdetour_name\fP (\fBdetour\fP d)"
+.RI "DETOUR_API const char * \fBdetour_name\fP (\fBdetour\fP d)"
 .br
 .ti -1c
 .RI "DETOUR_API \fBdetour_handle\fP \fBdetour_install\fP (\fBdetour\fP d, void(*target)(void), void(*hook)(void))"
@@ -63,14 +62,12 @@ Pointer to detour on correct initialization, null otherwise
 .RI "DETOUR_API void \fBdetour_destroy\fP (void)"
 .br
 .ti -1c
-.RI "const DETOUR_API char * \fBdetour_print_info\fP (void)"
+.RI "DETOUR_API const char * \fBdetour_print_info\fP (void)"
 .br
 .in -1c
 .SH "Typedef Documentation"
 .PP 
-.SS "typedef struct detour_type* \fBdetour\fP"
-
-.SS "typedef struct detour_handle_type* \fBdetour_handle\fP"
+.SS "typedef \fBplugin\fP \fBdetour\fP"
 
 .SH "Function Documentation"
 .PP 
@@ -87,7 +84,7 @@ Return zero correct initialization, distinct from zero otherwise
 
 .SS "DETOUR_API \fBdetour\fP detour_create (const char * name)"
 
-.SS "const DETOUR_API char* detour_name (\fBdetour\fP d)"
+.SS "DETOUR_API const char* detour_name (\fBdetour\fP d)"
 
 .PP
 Get name of detour\&. 
@@ -161,7 +158,7 @@ Return zero on correct destruction, different from zero otherwise
 
 .PP
 Destroy all detours\&. 
-.SS "const DETOUR_API char* detour_print_info (void)"
+.SS "DETOUR_API const char* detour_print_info (void)"
 
 .PP
 Provide the module information\&. 
@@ -174,7 +171,7 @@ Static string containing module information
 
 .SH "Variable Documentation"
 .PP 
-.SS "DETOUR_API void(*)(void) detour_trampoline(\fBdetour_handle\fP handle)"
+.SS "DETOUR_API void(*)(void) detour_trampoline(\fBdetour_handle\fP handle) (\fBdetour_handle\fP handle)"
 
 .PP
 Get trampoline of the detour\&. 

@@ -1,0 +1,40 @@
+.TH "loader_host.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+loader_host.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <loader/loader_api\&.h>\fP
+.br
+\fC#include <loader/loader\&.h>\fP
+.br
+\fC#include <loader/loader_impl\&.h>\fP
+.br
+\fC#include <reflect/reflect_context\&.h>\fP
+.br
+\fC#include <portability/portability_assert\&.h>\fP
+.br
+\fC#include <plugin/plugin_impl\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LOADER_API \fBplugin\fP \fBloader_host_initialize\fP (void)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_host_register\fP (\fBloader_impl\fP host, \fBcontext\fP ctx, const char *name, \fBloader_register_invoke\fP invoke, \fBfunction\fP *func, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "LOADER_API \fBplugin\fP loader_host_initialize (void)"
+
+.SS "LOADER_API int loader_host_register (\fBloader_impl\fP host, \fBcontext\fP ctx, const char * name, \fBloader_register_invoke\fP invoke, \fBfunction\fP * func, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaCall from the source code\&.

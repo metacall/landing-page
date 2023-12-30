@@ -8,7 +8,7 @@ var reflect__type_8h =
     [ "type_impl_interface_singleton", "reflect__type_8h.html#a7b3907ca7b27baed594c631ab82cc631", null ],
     [ "type_create", "reflect__type_8h.html#a7683f6ef2a040083621265d0a1c79e2b", null ],
     [ "type_index", "reflect__type_8h.html#af50924b7190a1d7777a0cf7ae75094cd", null ],
-    [ "type_name", "reflect__type_8h.html#a5427879e0f27f7cac779fe6cefb94623", null ],
+    [ "type_name", "reflect__type_8h.html#a67e5fbed79b56e6af024546da3d471fb", null ],
     [ "type_derived", "reflect__type_8h.html#afba531946394a5b0fa5af71c64fb3ae9", null ],
     [ "type_metadata", "reflect__type_8h.html#a19541fec33dcd6f5ed0904800650e24a", null ],
     [ "type_destroy", "reflect__type_8h.html#ae196cc48207fd9e7a909f18f0a7ad72e", null ]

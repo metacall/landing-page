@@ -7,7 +7,7 @@ Include dependency graph for dynlink\+\_\+symbol.\+h\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=185pt]{dynlink__symbol_8h__incl}
+\includegraphics[width=258pt]{dynlink__symbol_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -15,23 +15,23 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=240pt]{dynlink__symbol_8h__dep__incl}
+\includegraphics[width=350pt]{dynlink__symbol_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}~0x\+FF
+\#define \textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+NAME\+\_\+\+SIZE}~0x\+FF
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef char \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man}[\textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}]
+typedef char \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man}[\textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+NAME\+\_\+\+SIZE}]
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+mangle} (\textbf{ dynlink\+\_\+symbol\+\_\+name} symbol\+\_\+name, \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man} symbol\+\_\+mangled)
+DYNLINK\+\_\+\+API size\+\_\+t \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+mangle} (\textbf{ dynlink\+\_\+symbol\+\_\+name} symbol\+\_\+name, size\+\_\+t symbol\+\_\+name\+\_\+length, \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man} symbol\+\_\+mangled)
 \end{DoxyCompactItemize}
 
 
@@ -40,7 +40,7 @@ D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\
 \index{dynlink\_symbol.h@{dynlink\_symbol.h}!DYNLINK\_SYMBOL\_NAME\_SIZE@{DYNLINK\_SYMBOL\_NAME\_SIZE}}
 \index{DYNLINK\_SYMBOL\_NAME\_SIZE@{DYNLINK\_SYMBOL\_NAME\_SIZE}!dynlink\_symbol.h@{dynlink\_symbol.h}}
 \doxysubsubsection{DYNLINK\_SYMBOL\_NAME\_SIZE}
-{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE~0x\+FF}
+{\footnotesize\ttfamily \#define DYNLINK\+\_\+\+SYMBOL\+\_\+\+NAME\+\_\+\+SIZE~0x\+FF}
 
 
 
@@ -49,16 +49,16 @@ D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int \textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\
 \index{dynlink\_symbol.h@{dynlink\_symbol.h}!dynlink\_symbol\_name\_man@{dynlink\_symbol\_name\_man}}
 \index{dynlink\_symbol\_name\_man@{dynlink\_symbol\_name\_man}!dynlink\_symbol.h@{dynlink\_symbol.h}}
 \doxysubsubsection{dynlink\_symbol\_name\_man}
-{\footnotesize\ttfamily typedef char dynlink\+\_\+symbol\+\_\+name\+\_\+man[\textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}]}
+{\footnotesize\ttfamily typedef char dynlink\+\_\+symbol\+\_\+name\+\_\+man[\textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+NAME\+\_\+\+SIZE}]}
 
 
 
 \doxysubsection{Function Documentation}
-\mbox{\label{dynlink__symbol_8h_a8d837f4ac06c64c5d88fd54ea3370ab0}} 
+\mbox{\label{dynlink__symbol_8h_a4cf67dfe492f4e34b66c877688b4dc8e}} 
 \index{dynlink\_symbol.h@{dynlink\_symbol.h}!dynlink\_symbol\_name\_mangle@{dynlink\_symbol\_name\_mangle}}
 \index{dynlink\_symbol\_name\_mangle@{dynlink\_symbol\_name\_mangle}!dynlink\_symbol.h@{dynlink\_symbol.h}}
 \doxysubsubsection{dynlink\_symbol\_name\_mangle()}
-{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int dynlink\+\_\+symbol\+\_\+name\+\_\+mangle (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name}}]{symbol\+\_\+name,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man}}]{symbol\+\_\+mangled }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API size\+\_\+t dynlink\+\_\+symbol\+\_\+name\+\_\+mangle (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name}}]{symbol\+\_\+name,  }\item[{size\+\_\+t}]{symbol\+\_\+name\+\_\+length,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name\+\_\+man}}]{symbol\+\_\+mangled }\end{DoxyParamCaption})}
 
 
 

@@ -1,4 +1,4 @@
-.TH "dynlink_flags.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "dynlink_flags.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,7 +31,7 @@ dynlink_flags.h
 .RI "#define \fBDYNLINK_FLAGS_ADD\fP(flags,  flag)"
 .br
 .ti -1c
-.RI "#define \fBDYNLINK_FLAGS_CHECK\fP(flags,  flag)   (((flags) & (flag)) != 0)"
+.RI "#define \fBDYNLINK_FLAGS_CHECK\fP(flags,  flag)   	(((flags) & (flag)) != 0)"
 .br
 .in -1c
 .SS "Typedefs"
@@ -55,9 +55,9 @@ Public visibility bind flag
 \fBValue:\fP
 .PP
 .nf
-    do                                 \
-    {                                  \
-        flags = (flag);                \
+ do \
+    { \
+        flags = (flag); \
     } while (0)
 .fi
 .PP
@@ -77,9 +77,9 @@ Assign to the left operator the right literal\&. Using flag as a 0 resets the fl
 \fBValue:\fP
 .PP
 .nf
-  do                                 \
-    {                                  \
-        flags |= (flag);               \
+  do \
+    { \
+        flags |= (flag); \
     } while (0)
 .fi
 .PP
@@ -95,7 +95,7 @@ Append to the left operator the right literal\&. Using flag as a 0 does nothing\
 .RE
 .PP
 
-.SS "#define DYNLINK_FLAGS_CHECK(flags, flag)   (((flags) & (flag)) != 0)"
+.SS "#define DYNLINK_FLAGS_CHECK(flags, flag)   	(((flags) & (flag)) != 0)"
 
 .PP
 Check flags operator\&. This macro must be used as a conditional guard\&. Using flag as a 0 never enters to the guard\&. Combined flags can be passed to the macro\&. It can be used for generic and implementation flags\&.

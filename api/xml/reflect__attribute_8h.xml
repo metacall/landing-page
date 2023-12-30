@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__attribute_8h" kind="file" language="C++">
     <compoundname>reflect_attribute.h</compoundname>
     <includes local="no">reflect/reflect_api.h</includes>
@@ -85,22 +85,26 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="2">
         <label>reflect_class.h</label>
         <link refid="reflect__class_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>reflect_object.h</label>
         <link refid="reflect__object_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -108,10 +112,10 @@
         <link refid="reflect__attribute_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>reflect_value_type.h</label>
         <link refid="reflect__value__type_8h"/>
         <childnode refid="3" relation="include">
@@ -120,6 +124,8 @@
       <node id="3">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
@@ -289,7 +295,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -321,21 +327,21 @@
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/><ref refid="reflect__attribute_8h_1aa22afc61dff6c72e20d384366a5da691" kindref="member">attribute_create</ref>(<ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/>cls,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/>t,<sp/><ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b" kindref="member">class_visibility_id</ref><sp/>visibility,<sp/><ref refid="reflect__attribute__decl_8h_1a76563a235b0e955fbd4db3527e548082" kindref="member">attribute_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
+<codeline lineno="37" refid="reflect__attribute_8h_1aa22afc61dff6c72e20d384366a5da691" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/><ref refid="reflect__attribute_8h_1aa22afc61dff6c72e20d384366a5da691" kindref="member">attribute_create</ref>(<ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/>cls,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/>t,<sp/><ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref><sp/>impl,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__class__visibility_8h_1a9c1f4542578dfdde3d46db231b4ea37b" kindref="member">class_visibility_id</ref><sp/>visibility,<sp/><ref refid="reflect__attribute__decl_8h_1a76563a235b0e955fbd4db3527e548082" kindref="member">attribute_impl_interface_singleton</ref><sp/>singleton);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/><ref refid="reflect__attribute_8h_1ae3af81285d39502c872b389430573d05" kindref="member">attribute_class</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="39" refid="reflect__attribute_8h_1ae3af81285d39502c872b389430573d05" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__class__decl_8h_1ae0333cc8abac5fba6baa3bb523242fcc" kindref="member">klass</ref><sp/><ref refid="reflect__attribute_8h_1ae3af81285d39502c872b389430573d05" kindref="member">attribute_class</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__attribute_8h_1a36acca30c7ea846a7382001b8d8a52e5" kindref="member">attribute_name</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="41" refid="reflect__attribute_8h_1a36acca30c7ea846a7382001b8d8a52e5" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="reflect__attribute_8h_1a36acca30c7ea846a7382001b8d8a52e5" kindref="member">attribute_name</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/><ref refid="reflect__attribute_8h_1ab80731c450c9896e3ef36ea65b056e3d" kindref="member">attribute_type</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="43" refid="reflect__attribute_8h_1ab80731c450c9896e3ef36ea65b056e3d" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__type_8h_1a9989d3b49f04ce2227be1eedda3efaac" kindref="member">type</ref><sp/><ref refid="reflect__attribute_8h_1ab80731c450c9896e3ef36ea65b056e3d" kindref="member">attribute_type</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref><sp/><ref refid="reflect__attribute_8h_1a9f6678c047128551566a7e5ddd5e422d" kindref="member">attribute_data</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="45" refid="reflect__attribute_8h_1a9f6678c047128551566a7e5ddd5e422d" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__attribute__decl_8h_1a331a1fbbeb917cdf93eced1310e49643" kindref="member">attribute_impl</ref><sp/><ref refid="reflect__attribute_8h_1a9f6678c047128551566a7e5ddd5e422d" kindref="member">attribute_data</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal">_visibility_id<sp/><ref refid="reflect__attribute_8h_1acbed2fc23fea38fef4a7af663cbd8ef9" kindref="member">attribute_visibility</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="47" refid="reflect__attribute_8h_1acbed2fc23fea38fef4a7af663cbd8ef9" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal">_visibility_id<sp/><ref refid="reflect__attribute_8h_1acbed2fc23fea38fef4a7af663cbd8ef9" kindref="member">attribute_visibility</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__attribute_8h_1aa26bc3af9c5fc831869565f8d0a04e29" kindref="member">attribute_metadata</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="49" refid="reflect__attribute_8h_1aa26bc3af9c5fc831869565f8d0a04e29" refkind="member"><highlight class="normal">REFLECT_API<sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref><sp/><ref refid="reflect__attribute_8h_1aa26bc3af9c5fc831869565f8d0a04e29" kindref="member">attribute_metadata</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__attribute_8h_1af2af6fe518cf22802b0cb7829be412e9" kindref="member">attribute_destroy</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
+<codeline lineno="51" refid="reflect__attribute_8h_1af2af6fe518cf22802b0cb7829be412e9" refkind="member"><highlight class="normal">REFLECT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="reflect__attribute_8h_1af2af6fe518cf22802b0cb7829be412e9" kindref="member">attribute_destroy</ref>(<ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/>attr);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}</highlight></codeline>

@@ -21,11 +21,11 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX}
+\#define \textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+PREFIX}
 \item 
-\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT}(name)
+\#define \textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+EXPORT}(name)
 \item 
-\#define \textbf{ D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET}(name)~name
+\#define \textbf{ DYNLINK\+\_\+\+SYMBOL\+\_\+\+GET}(name)~name
 \end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -41,19 +41,19 @@ typedef \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+win32} \textbf{ dynlink\+\_\
 \index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}}
 \index{DYNLINK\_SYMBOL\_PREFIX@{DYNLINK\_SYMBOL\_PREFIX}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
 \doxysubsubsection{DYNLINK\_SYMBOL\_PREFIX}
-{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+P\+R\+E\+F\+IX}
+{\footnotesize\ttfamily \#define DYNLINK\+\_\+\+SYMBOL\+\_\+\+PREFIX}
 
 \mbox{\label{dynlink__impl__symbol__win32_8h_ac7c2e3794ef31f11c7743643f55000e6}} 
 \index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}}
 \index{DYNLINK\_SYMBOL\_EXPORT@{DYNLINK\_SYMBOL\_EXPORT}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
 \doxysubsubsection{DYNLINK\_SYMBOL\_EXPORT}
-{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+E\+X\+P\+O\+RT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define DYNLINK\+\_\+\+SYMBOL\+\_\+\+EXPORT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    DYNLINK\_NO\_EXPORT \textcolor{keyword}{struct        }\(\backslash\)}
-\DoxyCodeLine{    \{                               \(\backslash\)}
-\DoxyCodeLine{        char name;                  \(\backslash\)}
+\DoxyCodeLine{    DYNLINK\_NO\_EXPORT \textcolor{keyword}{struct }\(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        char name; \(\backslash\)}
 \DoxyCodeLine{    \} PREPROCESSOR\_CONCAT(dynlink\_no\_export\_, name)}
 
 \end{DoxyCode}
@@ -61,7 +61,7 @@ typedef \textbf{ dynlink\+\_\+symbol\+\_\+addr\+\_\+win32} \textbf{ dynlink\+\_\
 \index{dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}!DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}}
 \index{DYNLINK\_SYMBOL\_GET@{DYNLINK\_SYMBOL\_GET}!dynlink\_impl\_symbol\_win32.h@{dynlink\_impl\_symbol\_win32.h}}
 \doxysubsubsection{DYNLINK\_SYMBOL\_GET}
-{\footnotesize\ttfamily \#define D\+Y\+N\+L\+I\+N\+K\+\_\+\+S\+Y\+M\+B\+O\+L\+\_\+\+G\+ET(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~name}
+{\footnotesize\ttfamily \#define DYNLINK\+\_\+\+SYMBOL\+\_\+\+GET(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~name}
 
 
 

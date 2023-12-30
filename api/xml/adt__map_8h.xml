@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="adt__map_8h" kind="file" language="C++">
     <compoundname>adt_map.h</compoundname>
     <includes local="no">adt/adt_api.h</includes>
@@ -13,8 +13,13 @@
         <link refid="adt__hash_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
         <label>stdlib.h</label>
       </node>
       <node id="3">
@@ -35,17 +40,17 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>adt/adt_vector.h</label>
         <link refid="adt__vector_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -64,7 +69,7 @@
         <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" line="36" column="23" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_map.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" prot="public" static="no">
-        <type><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref></type>
+        <type><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref></type>
         <definition>typedef hash map_hash</definition>
         <argsstring></argsstring>
         <name>map_hash</name>
@@ -541,7 +546,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -576,7 +581,7 @@
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36" refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">map_type<sp/>*<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref>;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref><sp/><ref refid="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" kindref="member">map_hash</ref>;</highlight></codeline>
+<codeline lineno="38" refid="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref><sp/><ref refid="adt__map_8h_1ac4802d1cc3ceb437db92ba4040db679a" kindref="member">map_hash</ref>;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40" refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref>;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
@@ -594,41 +599,41 @@
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/><ref refid="adt__map_8h_1aa5ab2c5347ebe47e75b262f50e02ed02" kindref="member">map_create</ref>(<ref refid="adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282" kindref="member">map_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__map_8h_1aea474be520c211c6c35e391e4dbf5050" kindref="member">map_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
+<codeline lineno="56" refid="adt__map_8h_1aa5ab2c5347ebe47e75b262f50e02ed02" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/><ref refid="adt__map_8h_1aa5ab2c5347ebe47e75b262f50e02ed02" kindref="member">map_create</ref>(<ref refid="adt__map_8h_1aefb9d0a81d95621c3cef5e8300002282" kindref="member">map_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__map_8h_1aea474be520c211c6c35e391e4dbf5050" kindref="member">map_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a03c40d3bdc29209381454a148cb95eaa" kindref="member">map_size</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="58" refid="adt__map_8h_1a03c40d3bdc29209381454a148cb95eaa" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a03c40d3bdc29209381454a148cb95eaa" kindref="member">map_size</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1ae567f499d141dd6484b7024d8ce6b085" kindref="member">map_insert</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key,<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="60" refid="adt__map_8h_1ae567f499d141dd6484b7024d8ce6b085" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1ae567f499d141dd6484b7024d8ce6b085" kindref="member">map_insert</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key,<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a97232d474132c5915363ecc68c2f1dfb" kindref="member">map_insert_array</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>keys[],<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/>values[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="62" refid="adt__map_8h_1a97232d474132c5915363ecc68c2f1dfb" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a97232d474132c5915363ecc68c2f1dfb" kindref="member">map_insert_array</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>keys[],<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/>values[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">ADT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="adt__map_8h_1abce862b09db3c842e121fcafac5ead10" kindref="member">map_get</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="64" refid="adt__map_8h_1abce862b09db3c842e121fcafac5ead10" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="adt__map_8h_1abce862b09db3c842e121fcafac5ead10" kindref="member">map_get</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1af405aa3330b6c4dd56f21539fd64538f" kindref="member">map_contains</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="66" refid="adt__map_8h_1af405aa3330b6c4dd56f21539fd64538f" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1af405aa3330b6c4dd56f21539fd64538f" kindref="member">map_contains</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a060c9c2c0b0699ed924efb936ee8936e" kindref="member">map_contains_any</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>dest,<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>src);</highlight></codeline>
+<codeline lineno="68" refid="adt__map_8h_1a060c9c2c0b0699ed924efb936ee8936e" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a060c9c2c0b0699ed924efb936ee8936e" kindref="member">map_contains_any</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>dest,<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>src);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="adt__map_8h_1ab0eecd9e3bd9aeb80905f0905163b85c" kindref="member">map_remove</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="70" refid="adt__map_8h_1ab0eecd9e3bd9aeb80905f0905163b85c" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="adt__map_8h_1ab0eecd9e3bd9aeb80905f0905163b85c" kindref="member">map_remove</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal">ADT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="adt__map_8h_1a6291a04947b8e82d14b0fd39ea2b3908" kindref="member">map_remove_all</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="72" refid="adt__map_8h_1a6291a04947b8e82d14b0fd39ea2b3908" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/><ref refid="adt__map_8h_1a6291a04947b8e82d14b0fd39ea2b3908" kindref="member">map_remove_all</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/>key);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a07766545182d29afff29aad5f1dd2fda" kindref="member">map_iterate</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0" kindref="member">map_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" kindref="member">map_cb_iterate_args</ref><sp/>args);</highlight></codeline>
+<codeline lineno="74" refid="adt__map_8h_1a07766545182d29afff29aad5f1dd2fda" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a07766545182d29afff29aad5f1dd2fda" kindref="member">map_iterate</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m,<sp/><ref refid="adt__map_8h_1a6f4c546c7d3b2a45b5876ab1eed09ed0" kindref="member">map_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__map_8h_1a127721d107c1ac4a2823f6dd33d704cc" kindref="member">map_cb_iterate_args</ref><sp/>args);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a3d7bf2643d5c9f4d5f6ce6819dddd441" kindref="member">map_append</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>dest,<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>src);</highlight></codeline>
+<codeline lineno="76" refid="adt__map_8h_1a3d7bf2643d5c9f4d5f6ce6819dddd441" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a3d7bf2643d5c9f4d5f6ce6819dddd441" kindref="member">map_append</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>dest,<sp/><ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>src);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a1258c62b6f83f71dc29909d6fa106845" kindref="member">map_clear</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="78" refid="adt__map_8h_1a1258c62b6f83f71dc29909d6fa106845" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a1258c62b6f83f71dc29909d6fa106845" kindref="member">map_clear</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a85d85da136e73af850428e02bc359e01" kindref="member">map_destroy</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="80" refid="adt__map_8h_1a85d85da136e73af850428e02bc359e01" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a85d85da136e73af850428e02bc359e01" kindref="member">map_destroy</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/><ref refid="adt__map_8h_1a36ac6726113e9e51ee543f7e5c08437a" kindref="member">map_iterator_begin</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
+<codeline lineno="82" refid="adt__map_8h_1a36ac6726113e9e51ee543f7e5c08437a" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/><ref refid="adt__map_8h_1a36ac6726113e9e51ee543f7e5c08437a" kindref="member">map_iterator_begin</ref>(<ref refid="adt__map_8h_1a894ef97deeb054c79dd0043ce64d100c" kindref="member">map</ref><sp/>m);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/><ref refid="adt__map_8h_1a63ff72181734409b2a70e04cd42a0e0c" kindref="member">map_iterator_get_key</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="84" refid="adt__map_8h_1a63ff72181734409b2a70e04cd42a0e0c" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a9efd3202c32d772acc65e29e1fe62a81" kindref="member">map_key</ref><sp/><ref refid="adt__map_8h_1a63ff72181734409b2a70e04cd42a0e0c" kindref="member">map_iterator_get_key</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="adt__map_8h_1ae3d97f642ad6b305c9f0fffd61d7d977" kindref="member">map_iterator_get_value</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="86" refid="adt__map_8h_1ae3d97f642ad6b305c9f0fffd61d7d977" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__map_8h_1a457370f795b43c9c9c00f014d2f4817c" kindref="member">map_value</ref><sp/><ref refid="adt__map_8h_1ae3d97f642ad6b305c9f0fffd61d7d977" kindref="member">map_iterator_get_value</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a173825fc4f4cc21b8f55a1d8159bb4fe" kindref="member">map_iterator_next</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
+<codeline lineno="88" refid="adt__map_8h_1a173825fc4f4cc21b8f55a1d8159bb4fe" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a173825fc4f4cc21b8f55a1d8159bb4fe" kindref="member">map_iterator_next</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>it);</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a735796ebb72c13a828ff79a4f92f3252" kindref="member">map_iterator_end</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>*it);</highlight></codeline>
+<codeline lineno="90" refid="adt__map_8h_1a735796ebb72c13a828ff79a4f92f3252" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__map_8h_1a735796ebb72c13a828ff79a4f92f3252" kindref="member">map_iterator_end</ref>(<ref refid="adt__map_8h_1a2109cb4cae90391364858b706c616461" kindref="member">map_iterator</ref><sp/>*it);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal">}</highlight></codeline>

@@ -1,4 +1,4 @@
-.TH "dynlink_symbol.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "dynlink_symbol.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -29,7 +29,7 @@ dynlink_symbol.h
 
 .in +1c
 .ti -1c
-.RI "DYNLINK_API int \fBdynlink_symbol_name_mangle\fP (\fBdynlink_symbol_name\fP symbol_name, \fBdynlink_symbol_name_man\fP symbol_mangled)"
+.RI "DYNLINK_API size_t \fBdynlink_symbol_name_mangle\fP (\fBdynlink_symbol_name\fP symbol_name, size_t symbol_name_length, \fBdynlink_symbol_name_man\fP symbol_mangled)"
 .br
 .in -1c
 .SH "Macro Definition Documentation"
@@ -42,7 +42,7 @@ dynlink_symbol.h
 
 .SH "Function Documentation"
 .PP 
-.SS "DYNLINK_API int dynlink_symbol_name_mangle (\fBdynlink_symbol_name\fP symbol_name, \fBdynlink_symbol_name_man\fP symbol_mangled)"
+.SS "DYNLINK_API size_t dynlink_symbol_name_mangle (\fBdynlink_symbol_name\fP symbol_name, size_t symbol_name_length, \fBdynlink_symbol_name_man\fP symbol_mangled)"
 
 .PP
 Get convert a symbol to name mangled for cross-platform dynamic loading\&. 

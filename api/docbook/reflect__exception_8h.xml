@@ -1,13 +1,23 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__exception_8h">
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reflect__exception_8h" xml:lang="en-US">
 <title>reflect_exception.h File Reference</title>
 <indexterm><primary>reflect_exception.h</primary></indexterm>
 <programlisting>#include &lt;reflect/reflect_api.h&gt;
+#include &lt;stdint.h&gt;
 </programlisting>Include dependency graph for reflect_exception.h:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
                 <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__exception_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="reflect__exception_8h__dep__incl.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
@@ -22,15 +32,23 @@
 <simplesect>
     <title>Functions    </title>
         <itemizedlist>
-            <listitem><para>REFLECT_API <link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> <link linkend="_reflect__exception_8h_1a07cdd4a20290dcc70a0a20fd67ecc8f2">exception_create</link> (const char *message, const char *label, int code, const char *stacktrace)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> <link linkend="_reflect__exception_8h_1a31406433d18febe780c4b1080c27cbc7">exception_create</link> (char *message, char *label, int64_t code, char *stacktrace)</para>
 </listitem>
-            <listitem><para>const REFLECT_API char * <link linkend="_reflect__exception_8h_1ab9d4f0dc5fcee6e79a44b4613db00e2c">exception_message</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+            <listitem><para>REFLECT_API <link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> <link linkend="_reflect__exception_8h_1afb44879b0180bb6db7c8942a90bd8086">exception_create_const</link> (const char *message, const char *label, int64_t code, const char *stacktrace)</para>
 </listitem>
-            <listitem><para>const REFLECT_API char * <link linkend="_reflect__exception_8h_1a9c1a0c7cbd50a900ecb925402c8913e7">exception_label</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__exception_8h_1a7b8cb3a3d94b7538ece3e39a35b6d682">exception_increment_reference</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
 </listitem>
-            <listitem><para>REFLECT_API int <link linkend="_reflect__exception_8h_1a08a29a96f5adacf792e6fed986bd9672">exception_code</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+            <listitem><para>REFLECT_API int <link linkend="_reflect__exception_8h_1ae86ba3c102dd9a70f81be0bb0eaf4955">exception_decrement_reference</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
 </listitem>
-            <listitem><para>const REFLECT_API char * <link linkend="_reflect__exception_8h_1a9d38b99d2f5dcbf39ccacb37160db617">exception_stacktrace</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+            <listitem><para>REFLECT_API const char * <link linkend="_reflect__exception_8h_1af076c7751e00c3824eede474df149e10">exception_message</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+</listitem>
+            <listitem><para>REFLECT_API const char * <link linkend="_reflect__exception_8h_1a8e47aa53476291748ed792551cf64cff">exception_label</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+</listitem>
+            <listitem><para>REFLECT_API int64_t <link linkend="_reflect__exception_8h_1a088d663e4c3eb518e6af3d541cdf218d">exception_error_code</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+</listitem>
+            <listitem><para>REFLECT_API const char * <link linkend="_reflect__exception_8h_1a645300eee90443326e4109f9e4c04e99">exception_stacktrace</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
+</listitem>
+            <listitem><para>REFLECT_API void <link linkend="_reflect__exception_8h_1ad983a7a9a01aebde04aa4f865ec94e28">exception_stats_debug</link> (void)</para>
 </listitem>
             <listitem><para>REFLECT_API void <link linkend="_reflect__exception_8h_1a457c882270c27eacbadb1abcaf54f9ad">exception_destroy</link> (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</para>
 </listitem>
@@ -46,27 +64,43 @@
 </section>
 <section>
 <title>Function Documentation</title>
-<anchor xml:id="_reflect__exception_8h_1a07cdd4a20290dcc70a0a20fd67ecc8f2"/>    <section>
+<anchor xml:id="_reflect__exception_8h_1a31406433d18febe780c4b1080c27cbc7"/>    <section>
     <title>exception_create()</title>
 <indexterm><primary>exception_create</primary><secondary>reflect_exception.h</secondary></indexterm>
 <indexterm><primary>reflect_exception.h</primary><secondary>exception_create</secondary></indexterm>
-<para><computeroutput>REFLECT_API <link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> exception_create (const char * message, const char * label, int code, const char * stacktrace)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1ab9d4f0dc5fcee6e79a44b4613db00e2c"/>    <section>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> exception_create (char * message, char * label, int64_t code, char * stacktrace)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1afb44879b0180bb6db7c8942a90bd8086"/>    <section>
+    <title>exception_create_const()</title>
+<indexterm><primary>exception_create_const</primary><secondary>reflect_exception.h</secondary></indexterm>
+<indexterm><primary>reflect_exception.h</primary><secondary>exception_create_const</secondary></indexterm>
+<para><computeroutput>REFLECT_API <link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> exception_create_const (const char * message, const char * label, int64_t code, const char * stacktrace)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a7b8cb3a3d94b7538ece3e39a35b6d682"/>    <section>
+    <title>exception_increment_reference()</title>
+<indexterm><primary>exception_increment_reference</primary><secondary>reflect_exception.h</secondary></indexterm>
+<indexterm><primary>reflect_exception.h</primary><secondary>exception_increment_reference</secondary></indexterm>
+<para><computeroutput>REFLECT_API int exception_increment_reference (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1ae86ba3c102dd9a70f81be0bb0eaf4955"/>    <section>
+    <title>exception_decrement_reference()</title>
+<indexterm><primary>exception_decrement_reference</primary><secondary>reflect_exception.h</secondary></indexterm>
+<indexterm><primary>reflect_exception.h</primary><secondary>exception_decrement_reference</secondary></indexterm>
+<para><computeroutput>REFLECT_API int exception_decrement_reference (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1af076c7751e00c3824eede474df149e10"/>    <section>
     <title>exception_message()</title>
 <indexterm><primary>exception_message</primary><secondary>reflect_exception.h</secondary></indexterm>
 <indexterm><primary>reflect_exception.h</primary><secondary>exception_message</secondary></indexterm>
-<para><computeroutput>const REFLECT_API char* exception_message (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a9c1a0c7cbd50a900ecb925402c8913e7"/>    <section>
+<para><computeroutput>REFLECT_API const char* exception_message (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a8e47aa53476291748ed792551cf64cff"/>    <section>
     <title>exception_label()</title>
 <indexterm><primary>exception_label</primary><secondary>reflect_exception.h</secondary></indexterm>
 <indexterm><primary>reflect_exception.h</primary><secondary>exception_label</secondary></indexterm>
-<para><computeroutput>const REFLECT_API char* exception_label (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a08a29a96f5adacf792e6fed986bd9672"/>    <section>
-    <title>exception_code()</title>
-<indexterm><primary>exception_code</primary><secondary>reflect_exception.h</secondary></indexterm>
-<indexterm><primary>reflect_exception.h</primary><secondary>exception_code</secondary></indexterm>
-<para><computeroutput>REFLECT_API int exception_code (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a9d38b99d2f5dcbf39ccacb37160db617"/>    <section>
+<para><computeroutput>REFLECT_API const char* exception_label (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a088d663e4c3eb518e6af3d541cdf218d"/>    <section>
+    <title>exception_error_code()</title>
+<indexterm><primary>exception_error_code</primary><secondary>reflect_exception.h</secondary></indexterm>
+<indexterm><primary>reflect_exception.h</primary><secondary>exception_error_code</secondary></indexterm>
+<para><computeroutput>REFLECT_API int64_t exception_error_code (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a645300eee90443326e4109f9e4c04e99"/>    <section>
     <title>exception_stacktrace()</title>
 <indexterm><primary>exception_stacktrace</primary><secondary>reflect_exception.h</secondary></indexterm>
 <indexterm><primary>reflect_exception.h</primary><secondary>exception_stacktrace</secondary></indexterm>
-<para><computeroutput>const REFLECT_API char* exception_stacktrace (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a457c882270c27eacbadb1abcaf54f9ad"/>    <section>
+<para><computeroutput>REFLECT_API const char* exception_stacktrace (<link linkend="_reflect__exception_8h_1abed3148acaa207134261748c1eb175a7">exception</link> ex)</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1ad983a7a9a01aebde04aa4f865ec94e28"/>    <section>
+    <title>exception_stats_debug()</title>
+<indexterm><primary>exception_stats_debug</primary><secondary>reflect_exception.h</secondary></indexterm>
+<indexterm><primary>reflect_exception.h</primary><secondary>exception_stats_debug</secondary></indexterm>
+<para><computeroutput>REFLECT_API void exception_stats_debug (void )</computeroutput></para>    </section><anchor xml:id="_reflect__exception_8h_1a457c882270c27eacbadb1abcaf54f9ad"/>    <section>
     <title>exception_destroy()</title>
 <indexterm><primary>exception_destroy</primary><secondary>reflect_exception.h</secondary></indexterm>
 <indexterm><primary>reflect_exception.h</primary><secondary>exception_destroy</secondary></indexterm>

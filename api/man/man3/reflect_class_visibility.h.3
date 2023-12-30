@@ -1,4 +1,4 @@
-.TH "reflect_class_visibility.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "reflect_class_visibility.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,7 +20,7 @@ reflect_class_visibility.h
 .RI "#define \fBCLASS_VISIBILITY_X\fP(X)"
 .br
 .ti -1c
-.RI "#define \fBCLASS_VISIBILITY_ENUM\fP(name,  str,  id)   \fBPREPROCESSOR_CONCAT\fP(VISIBILITY_, name) = id"
+.RI "#define \fBCLASS_VISIBILITY_ENUM\fP(name,  str,  id)   	\fBPREPROCESSOR_CONCAT\fP(VISIBILITY_, name) = id"
 .br
 .in -1c
 .SS "Enumerations"
@@ -34,7 +34,7 @@ reflect_class_visibility.h
 
 .in +1c
 .ti -1c
-.RI "const REFLECT_API char * \fBclass_visibility_string\fP (enum \fBclass_visibility_id\fP visibility)"
+.RI "REFLECT_API const char * \fBclass_visibility_string\fP (enum \fBclass_visibility_id\fP visibility)"
 .br
 .ti -1c
 .RI "REFLECT_API \fBvalue\fP \fBclass_visibility_value\fP (enum \fBclass_visibility_id\fP visibility)"
@@ -49,11 +49,11 @@ reflect_class_visibility.h
 \fBValue:\fP
 .PP
 .nf
- X(PUBLIC, "public", 0),           \
+    X(PUBLIC, "public", 0), \
         X(PROTECTED, "protected", 1), \
         X(PRIVATE, "private", 2)
 .fi
-.SS "#define CLASS_VISIBILITY_ENUM(name, str, id)   \fBPREPROCESSOR_CONCAT\fP(VISIBILITY_, name) = id"
+.SS "#define CLASS_VISIBILITY_ENUM(name, str, id)   	\fBPREPROCESSOR_CONCAT\fP(VISIBILITY_, name) = id"
 
 .SH "Enumeration Type Documentation"
 .PP 
@@ -61,7 +61,7 @@ reflect_class_visibility.h
 
 .SH "Function Documentation"
 .PP 
-.SS "const REFLECT_API char* class_visibility_string (enum \fBclass_visibility_id\fP visibility)"
+.SS "REFLECT_API const char* class_visibility_string (enum \fBclass_visibility_id\fP visibility)"
 
 .SS "REFLECT_API \fBvalue\fP class_visibility_value (enum \fBclass_visibility_id\fP visibility)"
 

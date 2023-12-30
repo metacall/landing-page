@@ -1,4 +1,4 @@
-.TH "metacall_log_custom" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "metacall_log_custom" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,13 +15,13 @@ metacall_log_custom
 .RI "void * \fBcontext\fP"
 .br
 .ti -1c
-.RI "size_t(* \fBformat_size\fP )(void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
+.RI "size_t(* \fBformat_size\fP )(void *, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
 .br
 .ti -1c
-.RI "size_t(* \fBformat_serialize\fP )(void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
+.RI "size_t(* \fBformat_serialize\fP )(void *, void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
 .br
 .ti -1c
-.RI "size_t(* \fBformat_deserialize\fP )(void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
+.RI "size_t(* \fBformat_deserialize\fP )(void *, const void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
 .br
 .ti -1c
 .RI "int(* \fBstream_write\fP )(void *, const char *, const size_t)"
@@ -34,11 +34,11 @@ metacall_log_custom
 .PP 
 .SS "void* metacall_log_custom::context"
 
-.SS "size_t(* metacall_log_custom::format_size) (void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
+.SS "size_t(* metacall_log_custom::format_size) (void *, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
 
-.SS "size_t(* metacall_log_custom::format_serialize) (void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
+.SS "size_t(* metacall_log_custom::format_serialize) (void *, void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
 
-.SS "size_t(* metacall_log_custom::format_deserialize) (void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
+.SS "size_t(* metacall_log_custom::format_deserialize) (void *, const void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)"
 
 .SS "int(* metacall_log_custom::stream_write) (void *, const char *, const size_t)"
 

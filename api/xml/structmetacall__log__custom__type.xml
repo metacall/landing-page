@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="structmetacall__log__custom__type" kind="struct" language="C++" prot="public">
     <compoundname>metacall_log_custom_type</compoundname>
     <includes refid="metacall__log_8h" local="no">/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h</includes>
@@ -17,10 +17,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" line="120" column="6" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" bodystart="120" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structmetacall__log__custom__type_1a816d8616abfad31cca4d94e2feed5bca" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structmetacall__log__custom__type_1a66d543fcacb1c99899aae63311aa6efb" prot="public" static="no" mutable="no">
         <type>size_t(*</type>
-        <definition>size_t(* metacall_log_custom::format_size) (void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</definition>
-        <argsstring>)(void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</argsstring>
+        <definition>size_t(* metacall_log_custom::format_size) (void *, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</definition>
+        <argsstring>)(void *, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</argsstring>
         <name>format_size</name>
         <briefdescription>
         </briefdescription>
@@ -30,10 +30,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" line="121" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" bodystart="121" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structmetacall__log__custom__type_1ae038a92b1ba54e50a332b5386753be05" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structmetacall__log__custom__type_1abc387a7d75f6e53f15523895f7da8404" prot="public" static="no" mutable="no">
         <type>size_t(*</type>
-        <definition>size_t(* metacall_log_custom::format_serialize) (void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</definition>
-        <argsstring>)(void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</argsstring>
+        <definition>size_t(* metacall_log_custom::format_serialize) (void *, void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</definition>
+        <argsstring>)(void *, void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</argsstring>
         <name>format_serialize</name>
         <briefdescription>
         </briefdescription>
@@ -43,10 +43,10 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" line="122" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" bodystart="122" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structmetacall__log__custom__type_1af14b93bac186689152bbf9168a1df864" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="structmetacall__log__custom__type_1af621e7c3a8d6f59390106cca308ca5dc" prot="public" static="no" mutable="no">
         <type>size_t(*</type>
-        <definition>size_t(* metacall_log_custom::format_deserialize) (void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</definition>
-        <argsstring>)(void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</argsstring>
+        <definition>size_t(* metacall_log_custom::format_deserialize) (void *, const void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</definition>
+        <argsstring>)(void *, const void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</argsstring>
         <name>format_deserialize</name>
         <briefdescription>
         </briefdescription>
@@ -88,53 +88,38 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="4">
-        <label>int(*)(void *, const char *, const size_t)</label>
-      </node>
-      <node id="6">
-        <label>void *</label>
-      </node>
       <node id="2">
-        <label>size_t(*)(void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</label>
+        <label>size_t</label>
+      </node>
+      <node id="4">
+        <label>void *</label>
       </node>
       <node id="1">
         <label>metacall_log_custom</label>
         <link refid="structmetacall__log__custom__type"/>
         <childnode refid="2" relation="usage">
+          <edgelabel>+format_deserialize</edgelabel>
           <edgelabel>+format_serialize</edgelabel>
+          <edgelabel>+format_size</edgelabel>
         </childnode>
         <childnode refid="3" relation="usage">
           <edgelabel>+stream_flush</edgelabel>
-        </childnode>
-        <childnode refid="4" relation="usage">
           <edgelabel>+stream_write</edgelabel>
         </childnode>
-        <childnode refid="5" relation="usage">
-          <edgelabel>+format_size</edgelabel>
-        </childnode>
-        <childnode refid="6" relation="usage">
+        <childnode refid="4" relation="usage">
           <edgelabel>+context</edgelabel>
-        </childnode>
-        <childnode refid="7" relation="usage">
-          <edgelabel>+format_deserialize</edgelabel>
         </childnode>
       </node>
       <node id="3">
-        <label>int(*)(void *)</label>
-      </node>
-      <node id="5">
-        <label>size_t(*)(void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</label>
-      </node>
-      <node id="7">
-        <label>size_t(*)(void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, metacall_log_custom_va_list)</label>
+        <label>int</label>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" line="119" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" bodystart="118" bodyend="126"/>
+    <location file="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" line="118" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/metacall/include/metacall/metacall_log.h" bodystart="119" bodyend="126"/>
     <listofallmembers>
       <member refid="structmetacall__log__custom__type_1a8f7934d10447d2c13557ccd3c8b70dc0" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>context</name></member>
-      <member refid="structmetacall__log__custom__type_1af14b93bac186689152bbf9168a1df864" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>format_deserialize</name></member>
-      <member refid="structmetacall__log__custom__type_1ae038a92b1ba54e50a332b5386753be05" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>format_serialize</name></member>
-      <member refid="structmetacall__log__custom__type_1a816d8616abfad31cca4d94e2feed5bca" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>format_size</name></member>
+      <member refid="structmetacall__log__custom__type_1af621e7c3a8d6f59390106cca308ca5dc" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>format_deserialize</name></member>
+      <member refid="structmetacall__log__custom__type_1abc387a7d75f6e53f15523895f7da8404" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>format_serialize</name></member>
+      <member refid="structmetacall__log__custom__type_1a66d543fcacb1c99899aae63311aa6efb" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>format_size</name></member>
       <member refid="structmetacall__log__custom__type_1af32bca8ec9096645211d24c1eac89117" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>stream_flush</name></member>
       <member refid="structmetacall__log__custom__type_1a18a9acf920af36aab3a375fe9a9bef69" prot="public" virt="non-virtual"><scope>metacall_log_custom_type</scope><name>stream_write</name></member>
     </listofallmembers>

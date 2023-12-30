@@ -1,10 +1,10 @@
 \doxysection{dynlink.\+h File Reference}
 \label{dynlink_8h}\index{dynlink.h@{dynlink.h}}
 {\ttfamily \#include $<$dynlink/dynlink\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$dynlink/dynlink\+\_\+type.\+h$>$}\newline
 {\ttfamily \#include $<$dynlink/dynlink\+\_\+flags.\+h$>$}\newline
 {\ttfamily \#include $<$dynlink/dynlink\+\_\+interface.\+h$>$}\newline
 {\ttfamily \#include $<$dynlink/dynlink\+\_\+symbol.\+h$>$}\newline
-{\ttfamily \#include $<$dynlink/dynlink\+\_\+type.\+h$>$}\newline
 Include dependency graph for dynlink.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -18,36 +18,71 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=240pt]{dynlink_8h__dep__incl}
+\includegraphics[width=350pt]{dynlink_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char $\ast$ \textbf{ dynlink\+\_\+extension} (void)
+DYNLINK\+\_\+\+API const char $\ast$ \textbf{ dynlink\+\_\+extension} (void)
 \item 
-D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink} \textbf{ dynlink\+\_\+load} (\textbf{ dynlink\+\_\+path} path, \textbf{ dynlink\+\_\+name} name, \textbf{ dynlink\+\_\+flags} flags)
+DYNLINK\+\_\+\+API \textbf{ dynlink} \textbf{ dynlink\+\_\+load} (\textbf{ dynlink\+\_\+path} path, \textbf{ dynlink\+\_\+name} name, \textbf{ dynlink\+\_\+flags} flags)
 \item 
-D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} \textbf{ dynlink\+\_\+get\+\_\+name} (\textbf{ dynlink} handle)
+DYNLINK\+\_\+\+API \textbf{ dynlink\+\_\+name} \textbf{ dynlink\+\_\+get\+\_\+name} (\textbf{ dynlink} handle)
 \item 
-D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} \textbf{ dynlink\+\_\+get\+\_\+name\+\_\+impl} (\textbf{ dynlink} handle)
+DYNLINK\+\_\+\+API \textbf{ dynlink\+\_\+name} \textbf{ dynlink\+\_\+get\+\_\+name\+\_\+impl} (\textbf{ dynlink} handle)
 \item 
-D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+flags} \textbf{ dynlink\+\_\+get\+\_\+flags} (\textbf{ dynlink} handle)
+DYNLINK\+\_\+\+API \textbf{ dynlink\+\_\+flags} \textbf{ dynlink\+\_\+get\+\_\+flags} (\textbf{ dynlink} handle)
 \item 
-D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int \textbf{ dynlink\+\_\+symbol} (\textbf{ dynlink} handle, \textbf{ dynlink\+\_\+symbol\+\_\+name} symbol\+\_\+name, \textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$symbol\+\_\+address)
+DYNLINK\+\_\+\+API int \textbf{ dynlink\+\_\+symbol} (\textbf{ dynlink} handle, \textbf{ dynlink\+\_\+symbol\+\_\+name} symbol\+\_\+name, \textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$symbol\+\_\+address)
 \item 
-D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void \textbf{ dynlink\+\_\+unload} (\textbf{ dynlink} handle)
-\item 
-const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char $\ast$ \textbf{ dynlink\+\_\+print\+\_\+info} (void)
+DYNLINK\+\_\+\+API void \textbf{ dynlink\+\_\+unload} (\textbf{ dynlink} handle)
 \end{DoxyCompactItemize}
+\textbf{ }\par
+{\em Get the path to a library loaded in the process itself by
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the library that will be searched for the path (without platform dependant prefix, suffix or extension)\\
+\hline
+\mbox{\texttt{ out}}  & {\em path} & The path found (if any) with that library name\\
+\hline
+\mbox{\texttt{ out}}  & {\em length} & The length of the path found (if any)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns zero if it could find the path, different from zero if not found 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+DYNLINK\+\_\+\+API int \textbf{ dynlink\+\_\+library\+\_\+path} (\textbf{ dynlink\+\_\+name} name, \textbf{ dynlink\+\_\+library\+\_\+path\+\_\+str} path, size\+\_\+t $\ast$length)
+\end{DoxyCompactItemize}
+
+\begin{Indent}\textbf{ as a base for it}\par
+{\em Retrieve the library platform standard name by using
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the library that will be used for generating the platform dependant library name (i.\+e example)\\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & The resulting library name that will be generated (i.\+e libexample.\+so in Linux, or example.\+dll in Windows) \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+DYNLINK\+\_\+\+API void \textbf{ dynlink\+\_\+platform\+\_\+name} (\textbf{ dynlink\+\_\+name} name, \textbf{ dynlink\+\_\+name\+\_\+impl} result)
+\item 
+DYNLINK\+\_\+\+API const char $\ast$ \textbf{ dynlink\+\_\+print\+\_\+info} (void)
+\end{DoxyCompactItemize}
+\end{Indent}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\label{dynlink_8h_aec6120fac988249b0a6e4a537b6f97e0}} 
+\mbox{\label{dynlink_8h_acae6eace8be50dd724538af11d6f9b54}} 
 \index{dynlink.h@{dynlink.h}!dynlink\_extension@{dynlink\_extension}}
 \index{dynlink\_extension@{dynlink\_extension}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_extension()}
-{\footnotesize\ttfamily const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char$\ast$ dynlink\+\_\+extension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API const char$\ast$ dynlink\+\_\+extension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -60,7 +95,7 @@ A constant string pointer to the platform extension
 \index{dynlink.h@{dynlink.h}!dynlink\_load@{dynlink\_load}}
 \index{dynlink\_load@{dynlink\_load}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_load()}
-{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink} dynlink\+\_\+load (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+path}}]{path,  }\item[{\textbf{ dynlink\+\_\+name}}]{name,  }\item[{\textbf{ dynlink\+\_\+flags}}]{flags }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API \textbf{ dynlink} dynlink\+\_\+load (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+path}}]{path,  }\item[{\textbf{ dynlink\+\_\+name}}]{name,  }\item[{\textbf{ dynlink\+\_\+flags}}]{flags }\end{DoxyParamCaption})}
 
 
 
@@ -82,7 +117,7 @@ A handle to the dynamically linked shared object
 \index{dynlink.h@{dynlink.h}!dynlink\_get\_name@{dynlink\_get\_name}}
 \index{dynlink\_get\_name@{dynlink\_get\_name}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_get\_name()}
-{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} dynlink\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API \textbf{ dynlink\+\_\+name} dynlink\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -100,7 +135,7 @@ Reference to the name of the dynamically linked shared object
 \index{dynlink.h@{dynlink.h}!dynlink\_get\_name\_impl@{dynlink\_get\_name\_impl}}
 \index{dynlink\_get\_name\_impl@{dynlink\_get\_name\_impl}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_get\_name\_impl()}
-{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+name} dynlink\+\_\+get\+\_\+name\+\_\+impl (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API \textbf{ dynlink\+\_\+name} dynlink\+\_\+get\+\_\+name\+\_\+impl (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -118,7 +153,7 @@ Reference to the file name of the dynamically linked shared object
 \index{dynlink.h@{dynlink.h}!dynlink\_get\_flags@{dynlink\_get\_flags}}
 \index{dynlink\_get\_flags@{dynlink\_get\_flags}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_get\_flags()}
-{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI \textbf{ dynlink\+\_\+flags} dynlink\+\_\+get\+\_\+flags (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API \textbf{ dynlink\+\_\+flags} dynlink\+\_\+get\+\_\+flags (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -136,7 +171,7 @@ Linking flags of dynamically linked shared object
 \index{dynlink.h@{dynlink.h}!dynlink\_symbol@{dynlink\_symbol}}
 \index{dynlink\_symbol@{dynlink\_symbol}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_symbol()}
-{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI int dynlink\+\_\+symbol (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name}}]{symbol\+\_\+name,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$}]{symbol\+\_\+address }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API int dynlink\+\_\+symbol (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+name}}]{symbol\+\_\+name,  }\item[{\textbf{ dynlink\+\_\+symbol\+\_\+addr} $\ast$}]{symbol\+\_\+address }\end{DoxyParamCaption})}
 
 
 
@@ -158,7 +193,7 @@ Returns zero on correct dynamic linking, distinct from zero otherwise
 \index{dynlink.h@{dynlink.h}!dynlink\_unload@{dynlink\_unload}}
 \index{dynlink\_unload@{dynlink\_unload}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_unload()}
-{\footnotesize\ttfamily D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI void dynlink\+\_\+unload (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API void dynlink\+\_\+unload (\begin{DoxyParamCaption}\item[{\textbf{ dynlink}}]{handle }\end{DoxyParamCaption})}
 
 
 
@@ -169,11 +204,23 @@ Unloads a dynamically linked shared object by its handle.
 \mbox{\texttt{ in}}  & {\em handle} & Handle of dynamically linked shared object \\
 \hline
 \end{DoxyParams}
-\mbox{\label{dynlink_8h_a9c59d2b884ec3456b35fd263c0dcecb6}} 
+\mbox{\label{dynlink_8h_a944e8fcabefe9789b689229e27d8c54a}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_library\_path@{dynlink\_library\_path}}
+\index{dynlink\_library\_path@{dynlink\_library\_path}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_library\_path()}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API int dynlink\+\_\+library\+\_\+path (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+name}}]{name,  }\item[{\textbf{ dynlink\+\_\+library\+\_\+path\+\_\+str}}]{path,  }\item[{size\+\_\+t $\ast$}]{length }\end{DoxyParamCaption})}
+
+\mbox{\label{dynlink_8h_a39f7c492ed481320eb5be223cfb639c7}} 
+\index{dynlink.h@{dynlink.h}!dynlink\_platform\_name@{dynlink\_platform\_name}}
+\index{dynlink\_platform\_name@{dynlink\_platform\_name}!dynlink.h@{dynlink.h}}
+\doxysubsubsection{dynlink\_platform\_name()}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API void dynlink\+\_\+platform\+\_\+name (\begin{DoxyParamCaption}\item[{\textbf{ dynlink\+\_\+name}}]{name,  }\item[{\textbf{ dynlink\+\_\+name\+\_\+impl}}]{result }\end{DoxyParamCaption})}
+
+\mbox{\label{dynlink_8h_ab765b5a60456a7ca75e6e48c661f897f}} 
 \index{dynlink.h@{dynlink.h}!dynlink\_print\_info@{dynlink\_print\_info}}
 \index{dynlink\_print\_info@{dynlink\_print\_info}!dynlink.h@{dynlink.h}}
 \doxysubsubsection{dynlink\_print\_info()}
-{\footnotesize\ttfamily const D\+Y\+N\+L\+I\+N\+K\+\_\+\+A\+PI char$\ast$ dynlink\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily DYNLINK\+\_\+\+API const char$\ast$ dynlink\+\_\+print\+\_\+info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 

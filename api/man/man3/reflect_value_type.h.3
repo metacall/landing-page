@@ -1,4 +1,4 @@
-.TH "reflect_value_type.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "reflect_value_type.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -10,11 +10,15 @@ reflect_value_type.h
 .br
 \fC#include <reflect/reflect_class\&.h>\fP
 .br
+\fC#include <reflect/reflect_exception\&.h>\fP
+.br
 \fC#include <reflect/reflect_function\&.h>\fP
 .br
 \fC#include <reflect/reflect_future\&.h>\fP
 .br
 \fC#include <reflect/reflect_object\&.h>\fP
+.br
+\fC#include <reflect/reflect_throwable\&.h>\fP
 .br
 \fC#include <reflect/reflect_type_id\&.h>\fP
 .br
@@ -96,6 +100,12 @@ reflect_value_type.h
 .RI "REFLECT_API \fBvalue\fP \fBvalue_create_object\fP (\fBobject\fP o)"
 .br
 .ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBvalue_create_exception\fP (\fBexception\fP ex)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBvalue_create_throwable\fP (\fBthrowable\fP th)"
+.br
+.ti -1c
 .RI "REFLECT_API \fBboolean\fP \fBvalue_to_bool\fP (\fBvalue\fP v)"
 .br
 .ti -1c
@@ -147,6 +157,12 @@ reflect_value_type.h
 .RI "REFLECT_API \fBobject\fP \fBvalue_to_object\fP (\fBvalue\fP v)"
 .br
 .ti -1c
+.RI "REFLECT_API \fBexception\fP \fBvalue_to_exception\fP (\fBvalue\fP v)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBthrowable\fP \fBvalue_to_throwable\fP (\fBvalue\fP v)"
+.br
+.ti -1c
 .RI "REFLECT_API \fBvalue\fP \fBvalue_from_bool\fP (\fBvalue\fP v, \fBboolean\fP b)"
 .br
 .ti -1c
@@ -196,6 +212,12 @@ reflect_value_type.h
 .br
 .ti -1c
 .RI "REFLECT_API \fBvalue\fP \fBvalue_from_object\fP (\fBvalue\fP v, \fBobject\fP o)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBvalue_from_exception\fP (\fBvalue\fP v, \fBexception\fP ex)"
+.br
+.ti -1c
+.RI "REFLECT_API \fBvalue\fP \fBvalue_from_throwable\fP (\fBvalue\fP v, \fBthrowable\fP th)"
 .br
 .ti -1c
 .RI "REFLECT_API void \fBvalue_type_destroy\fP (\fBvalue\fP v)"
@@ -580,6 +602,38 @@ Pointer to value if success, null otherwhise
 .RE
 .PP
 
+.SS "REFLECT_API \fBvalue\fP value_create_exception (\fBexception\fP ex)"
+
+.PP
+Create a value from exception @ex\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIex\fP Pointer to exception will be copied into value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value if success, null otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API \fBvalue\fP value_create_throwable (\fBthrowable\fP th)"
+
+.PP
+Create a value from throwable @th\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIth\fP Pointer to throwable will be copied into value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to value if success, null otherwhise 
+.RE
+.PP
+
 .SS "REFLECT_API \fBboolean\fP value_to_bool (\fBvalue\fP v)"
 
 .PP
@@ -849,6 +903,38 @@ Convert value @v to object\&.
 \fBReturns\fP
 .RS 4
 Value converted to object 
+.RE
+.PP
+
+.SS "REFLECT_API \fBexception\fP value_to_exception (\fBvalue\fP v)"
+
+.PP
+Convert value @v to exception\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value converted to exception 
+.RE
+.PP
+
+.SS "REFLECT_API \fBthrowable\fP value_to_throwable (\fBvalue\fP v)"
+
+.PP
+Convert value @v to throwable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value converted to throwable 
 .RE
 .PP
 
@@ -1161,6 +1247,42 @@ Assign object reference @o to value @v\&.
 \fBReturns\fP
 .RS 4
 Value with object @o assigned to it 
+.RE
+.PP
+
+.SS "REFLECT_API \fBvalue\fP value_from_exception (\fBvalue\fP v, \fBexception\fP ex)"
+
+.PP
+Assign exception reference @ex to value @v\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.br
+\fIex\fP Exception to be assigned to value @v
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value with exception @ex assigned to it 
+.RE
+.PP
+
+.SS "REFLECT_API \fBvalue\fP value_from_throwable (\fBvalue\fP v, \fBthrowable\fP th)"
+
+.PP
+Assign throwable reference @ex to value @v\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Reference to the value
+.br
+\fIth\fP Throwable to be assigned to value @v
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Value with throwable @th assigned to it 
 .RE
 .PP
 

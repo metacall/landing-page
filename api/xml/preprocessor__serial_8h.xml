@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="preprocessor__serial_8h" kind="file" language="C++">
     <compoundname>preprocessor_serial.h</compoundname>
     <includes local="no">preprocessor/preprocessor_api.h</includes>
@@ -25,9 +25,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="2">
         <label>preprocessor.h</label>
         <link refid="preprocessor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>preprocessor_serial.h</label>
@@ -40,7 +46,7 @@
       <memberdef kind="define" id="preprocessor__serial_8h_1ae8ed2ed2fb4025b65ec95b907e759b41" prot="public" static="no">
         <name>PREPROCESSOR_SERIAL_ID_IMPL</name>
         <param><defname>expr</defname></param>
-        <initializer><ref refid="preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1" kindref="member">PREPROCESSOR_CONCAT</ref>(expr, __LINE__)</initializer>
+        <initializer>	<ref refid="preprocessor__concatenation_8h_1ab8632cfb0b9b4b00a80bd865f34223d1" kindref="member">PREPROCESSOR_CONCAT</ref>(expr, __LINE__)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -52,7 +58,7 @@
       <memberdef kind="define" id="preprocessor__serial_8h_1a1f269b15db05a79052fed5966eb53633" prot="public" static="no">
         <name>PREPROCESSOR_SERIAL_ID</name>
         <param><defname>expr</defname></param>
-        <initializer><ref refid="preprocessor__serial_8h_1ae8ed2ed2fb4025b65ec95b907e759b41" kindref="member">PREPROCESSOR_SERIAL_ID_IMPL</ref>(expr)</initializer>
+        <initializer>	<ref refid="preprocessor__serial_8h_1ae8ed2ed2fb4025b65ec95b907e759b41" kindref="member">PREPROCESSOR_SERIAL_ID_IMPL</ref>(expr)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -69,7 +75,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Preprocessor<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>header-only<sp/>preprocessor<sp/>metaprogramming<sp/>library.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>

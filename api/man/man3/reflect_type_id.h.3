@@ -1,4 +1,4 @@
-.TH "reflect_type_id.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "reflect_type_id.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -20,14 +20,14 @@ reflect_type_id.h
 
 .in +1c
 .ti -1c
-.RI "enum \fBtype_primitive_id\fP { \fBTYPE_BOOL\fP = 0, \fBTYPE_CHAR\fP = 1, \fBTYPE_SHORT\fP = 2, \fBTYPE_INT\fP = 3, \fBTYPE_LONG\fP = 4, \fBTYPE_FLOAT\fP = 5, \fBTYPE_DOUBLE\fP = 6, \fBTYPE_STRING\fP = 7, \fBTYPE_BUFFER\fP = 8, \fBTYPE_ARRAY\fP = 9, \fBTYPE_MAP\fP = 10, \fBTYPE_PTR\fP = 11, \fBTYPE_FUTURE\fP = 12, \fBTYPE_FUNCTION\fP = 13, \fBTYPE_NULL\fP = 14, \fBTYPE_CLASS\fP = 15, \fBTYPE_OBJECT\fP = 16, \fBTYPE_SIZE\fP, \fBTYPE_INVALID\fP }"
+.RI "enum \fBtype_primitive_id\fP { \fBTYPE_BOOL\fP = 0, \fBTYPE_CHAR\fP = 1, \fBTYPE_SHORT\fP = 2, \fBTYPE_INT\fP = 3, \fBTYPE_LONG\fP = 4, \fBTYPE_FLOAT\fP = 5, \fBTYPE_DOUBLE\fP = 6, \fBTYPE_STRING\fP = 7, \fBTYPE_BUFFER\fP = 8, \fBTYPE_ARRAY\fP = 9, \fBTYPE_MAP\fP = 10, \fBTYPE_PTR\fP = 11, \fBTYPE_FUTURE\fP = 12, \fBTYPE_FUNCTION\fP = 13, \fBTYPE_NULL\fP = 14, \fBTYPE_CLASS\fP = 15, \fBTYPE_OBJECT\fP = 16, \fBTYPE_EXCEPTION\fP = 17, \fBTYPE_THROWABLE\fP = 18, \fBTYPE_SIZE\fP, \fBTYPE_INVALID\fP }"
 .br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "const REFLECT_API char * \fBtype_id_name\fP (\fBtype_id\fP id)"
+.RI "REFLECT_API const char * \fBtype_id_name\fP (\fBtype_id\fP id)"
 .br
 .ti -1c
 .RI "REFLECT_API int \fBtype_id_boolean\fP (\fBtype_id\fP id)"
@@ -70,6 +70,12 @@ reflect_type_id.h
 .br
 .ti -1c
 .RI "REFLECT_API int \fBtype_id_object\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_exception\fP (\fBtype_id\fP id)"
+.br
+.ti -1c
+.RI "REFLECT_API int \fBtype_id_throwable\fP (\fBtype_id\fP id)"
 .br
 .ti -1c
 .RI "REFLECT_API int \fBtype_id_invalid\fP (\fBtype_id\fP id)"
@@ -121,12 +127,16 @@ reflect_type_id.h
 .TP
 \fB\fITYPE_OBJECT \fP\fP
 .TP
+\fB\fITYPE_EXCEPTION \fP\fP
+.TP
+\fB\fITYPE_THROWABLE \fP\fP
+.TP
 \fB\fITYPE_SIZE \fP\fP
 .TP
 \fB\fITYPE_INVALID \fP\fP
 .SH "Function Documentation"
 .PP 
-.SS "const REFLECT_API char* type_id_name (\fBtype_id\fP id)"
+.SS "REFLECT_API const char* type_id_name (\fBtype_id\fP id)"
 
 .PP
 Obtain a human readable form of the type id @id\&. 
@@ -363,6 +373,38 @@ Check if type id is object value (object)
 \fBReturns\fP
 .RS 4
 Returns zero if type is object, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_exception (\fBtype_id\fP id)"
+
+.PP
+Check if type id is exception value (error type) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is exception, different from zero otherwhise 
+.RE
+.PP
+
+.SS "REFLECT_API int type_id_throwable (\fBtype_id\fP id)"
+
+.PP
+Check if type id is throwable value (thrown type) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Type id to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if type is throwable, different from zero otherwhise 
 .RE
 .PP
 

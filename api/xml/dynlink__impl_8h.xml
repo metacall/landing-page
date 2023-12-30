@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dynlink__impl_8h" kind="file" language="C++">
     <compoundname>dynlink_impl.h</compoundname>
     <includes local="no">dynlink/dynlink_api.h</includes>
@@ -10,17 +10,23 @@
     <includes local="no">stdlib.h</includes>
     <includedby refid="dynlink__impl__interface_8h" local="no">dynlink_impl_interface.h</includedby>
     <incdepgraph>
-      <node id="5">
+      <node id="7">
         <label>dynlink/dynlink_impl_type.h</label>
         <link refid="dynlink__impl__type_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
+        <label>portability/portability_path.h</label>
+      </node>
+      <node id="9">
         <label>stdlib.h</label>
       </node>
-      <node id="6">
+      <node id="8">
         <label>dynlink/dynlink_interface.h</label>
+      </node>
+      <node id="4">
+        <label>portability/portability_library_path.h</label>
       </node>
       <node id="1">
         <label>dynlink_impl.h</label>
@@ -29,13 +35,13 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -46,11 +52,15 @@
         <link refid="dynlink__type_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>dynlink/dynlink_impl_name.h</label>
         <link refid="dynlink__impl__name_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -67,9 +77,9 @@
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="dynlink__impl_8h_1a52d2acf03830ce9be2fabeef54cbd0a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const DYNLINK_API char *</type>
-        <definition>const DYNLINK_API char* dynlink_impl_extension</definition>
+      <memberdef kind="function" id="dynlink__impl_8h_1aeeb8bf0e5c24f304e1d4515ffe3cde2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DYNLINK_API const char *</type>
+        <definition>DYNLINK_API const char* dynlink_impl_extension</definition>
         <argsstring>(void)</argsstring>
         <name>dynlink_impl_extension</name>
         <param>
@@ -85,24 +95,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="52" column="25" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="52" declcolumn="25"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="51" column="24" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="51" declcolumn="24"/>
       </memberdef>
-      <memberdef kind="function" id="dynlink__impl_8h_1a1bbeb8591d79107a1e16e45c3b844ac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="dynlink__impl_8h_1aad7c05b22fb50e68007cc43cd6095422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DYNLINK_API void</type>
         <definition>DYNLINK_API void dynlink_impl_get_name</definition>
-        <argsstring>(dynlink handle, dynlink_name_impl name_impl, size_t length)</argsstring>
+        <argsstring>(dynlink_name name, dynlink_name_impl name_impl, size_t size)</argsstring>
         <name>dynlink_impl_get_name</name>
         <param>
-          <type><ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref></type>
-          <declname>handle</declname>
+          <type><ref refid="dynlink__type_8h_1a11b32b057aa8ea512ea863e185547cd0" kindref="member">dynlink_name</ref></type>
+          <declname>name</declname>
         </param>
         <param>
-          <type><ref refid="dynlink__impl__name_8h_1a809965dd1973359894e26ab3117c3a3b" kindref="member">dynlink_name_impl</ref></type>
+          <type><ref refid="dynlink__impl__name_8h_1ae1d8bf84ee2ad46a7513e6d4eb6782fb" kindref="member">dynlink_name_impl</ref></type>
           <declname>name_impl</declname>
         </param>
         <param>
           <type>size_t</type>
-          <declname>length</declname>
+          <declname>size</declname>
         </param>
         <briefdescription>
 <para>Consturct the file name of dynamically linked shared object implementation. </para>
@@ -110,10 +120,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername direction="in">handle</parametername>
+<parametername direction="in">name</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Handle of dynamically linked shared object</para>
+<para>Name of dynamically linked shared object</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -121,7 +131,15 @@
 <parametername direction="out">name_impl</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pointer to the dynamically linked shared object handle </para>
+<para>Pointer to the dynamically linked shared object handle</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of string @name_impl </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -129,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="64" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="64" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="66" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="66" declcolumn="18"/>
       </memberdef>
       <memberdef kind="function" id="dynlink__impl_8h_1a9d497586d3460b347dc3f0e8ed9a63b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DYNLINK_API <ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref></type>
@@ -159,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="76" column="26" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="76" declcolumn="26"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="78" column="26" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="78" declcolumn="26"/>
       </memberdef>
       <memberdef kind="function" id="dynlink__impl_8h_1a7b9bd81c58d0d3ac45fadb8ef6c33ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DYNLINK_API int</type>
@@ -175,7 +193,7 @@
           <declname>impl</declname>
         </param>
         <param>
-          <type><ref refid="dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41" kindref="member">dynlink_symbol_name</ref></type>
+          <type><ref refid="dynlink__type_8h_1a3c96aed7c9128f3d4be1c9b2b75174c5" kindref="member">dynlink_symbol_name</ref></type>
           <declname>symbol_name</declname>
         </param>
         <param>
@@ -225,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="97" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="97" declcolumn="17"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="99" column="17" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="99" declcolumn="17"/>
       </memberdef>
       <memberdef kind="function" id="dynlink__impl_8h_1a2848bcd835206e7cb89c59b4b154ffe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>DYNLINK_API void</type>
@@ -265,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="109" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="109" declcolumn="18"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" line="111" column="18" declfile="/home/runner/work/landing-page/landing-page/core/source/dynlink/include/dynlink/dynlink_impl.h" declline="111" declcolumn="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -277,7 +295,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Dynamic<sp/>Link<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>dynamic<sp/>loading<sp/>and<sp/>linking<sp/>shared<sp/>objects<sp/>at<sp/>run-time.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -296,98 +314,98 @@
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DYNLINK_IMPL_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_IMPL_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__type_8h" kindref="compound">dynlink/dynlink_type.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__type_8h" kindref="compound">dynlink/dynlink_type.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__impl__name_8h" kindref="compound">dynlink/dynlink_impl_name.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__impl__type_8h" kindref="compound">dynlink/dynlink_impl_type.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_interface.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="45"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="46"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="47"><highlight class="comment">*<sp/><sp/><sp/><sp/>Dynamically<sp/>linked<sp/>shared<sp/>object<sp/>handle<sp/>extension<sp/>implementation</highlight></codeline>
-<codeline lineno="48"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="49"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="50"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>const<sp/>string<sp/>reference<sp/>to<sp/>the<sp/>extension<sp/>depending<sp/>on<sp/>the<sp/>OS<sp/>implementation</highlight></codeline>
-<codeline lineno="51"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="dynlink__impl_8h_1a52d2acf03830ce9be2fabeef54cbd0a3" kindref="member">dynlink_impl_extension</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="54"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="55"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="56"><highlight class="comment">*<sp/><sp/><sp/><sp/>Consturct<sp/>the<sp/>file<sp/>name<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
-<codeline lineno="57"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="58"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
-<codeline lineno="59"><highlight class="comment">*<sp/><sp/><sp/><sp/>Handle<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object</highlight></codeline>
-<codeline lineno="60"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="61"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>name_impl</highlight></codeline>
-<codeline lineno="62"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>handle</highlight></codeline>
-<codeline lineno="63"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl_8h_1a1bbeb8591d79107a1e16e45c3b844ac3" kindref="member">dynlink_impl_get_name</ref>(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref><sp/>handle,<sp/><ref refid="dynlink__impl__name_8h_1a809965dd1973359894e26ab3117c3a3b" kindref="member">dynlink_name_impl</ref><sp/>name_impl,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="66"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="67"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="68"><highlight class="comment">*<sp/><sp/><sp/><sp/>Load<sp/>a<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
-<codeline lineno="69"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="70"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>name</highlight></codeline>
-<codeline lineno="71"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>handle</highlight></codeline>
-<codeline lineno="72"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="73"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="74"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
-<codeline lineno="75"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal">DYNLINK_API<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref><sp/><ref refid="dynlink__impl_8h_1a9d497586d3460b347dc3f0e8ed9a63b2" kindref="member">dynlink_impl_load</ref>(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref><sp/>handle);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="78"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="79"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="80"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>a<sp/>symbol<sp/>address<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>by<sp/>name<sp/>implementation</highlight></codeline>
-<codeline lineno="81"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="82"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
-<codeline lineno="83"><highlight class="comment">*<sp/><sp/><sp/><sp/>Handle<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object</highlight></codeline>
-<codeline lineno="84"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="85"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>impl</highlight></codeline>
-<codeline lineno="86"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
-<codeline lineno="87"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="88"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>symbol_name</highlight></codeline>
-<codeline lineno="89"><highlight class="comment">*<sp/><sp/><sp/><sp/>Name<sp/>of<sp/>the<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>symbol</highlight></codeline>
-<codeline lineno="90"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="91"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>symbol_address</highlight></codeline>
-<codeline lineno="92"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>address<sp/>of<sp/>the<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>symbol</highlight></codeline>
-<codeline lineno="93"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="94"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
-<codeline lineno="95"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>correct<sp/>dynamic<sp/>linking,<sp/>distinct<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
-<codeline lineno="96"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl_8h_1a7b9bd81c58d0d3ac45fadb8ef6c33ac8" kindref="member">dynlink_impl_symbol</ref>(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref><sp/>handle,<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref><sp/>impl,<sp/><ref refid="dynlink__type_8h_1a43b508d0bdeecf59fdc4ff8f7702ea41" kindref="member">dynlink_symbol_name</ref><sp/>symbol_name,<sp/><ref refid="dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf" kindref="member">dynlink_symbol_addr</ref><sp/>*<sp/>symbol_address);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
-<codeline lineno="99"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="100"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
-<codeline lineno="101"><highlight class="comment">*<sp/><sp/><sp/><sp/>Unloads<sp/>a<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation<sp/>by<sp/>reference</highlight></codeline>
-<codeline lineno="102"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="103"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
-<codeline lineno="104"><highlight class="comment">*<sp/><sp/><sp/><sp/>Handle<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object</highlight></codeline>
-<codeline lineno="105"><highlight class="comment">*</highlight></codeline>
-<codeline lineno="106"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>impl</highlight></codeline>
-<codeline lineno="107"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
-<codeline lineno="108"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl_8h_1a2848bcd835206e7cb89c59b4b154ffe8" kindref="member">dynlink_impl_unload</ref>(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref><sp/>handle,<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref><sp/>impl);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clang-format<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__impl__name_8h" kindref="compound">dynlink/dynlink_impl_name.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dynlink__impl__type_8h" kindref="compound">dynlink/dynlink_impl_type.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dynlink/dynlink_interface.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Headers<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*<sp/><sp/><sp/><sp/>Dynamically<sp/>linked<sp/>shared<sp/>object<sp/>handle<sp/>extension<sp/>implementation</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>const<sp/>string<sp/>reference<sp/>to<sp/>the<sp/>extension<sp/>depending<sp/>on<sp/>the<sp/>OS<sp/>implementation</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="dynlink__impl_8h_1aeeb8bf0e5c24f304e1d4515ffe3cde2b" refkind="member"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="dynlink__impl_8h_1aeeb8bf0e5c24f304e1d4515ffe3cde2b" kindref="member">dynlink_impl_extension</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="53"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*<sp/><sp/><sp/><sp/>Consturct<sp/>the<sp/>file<sp/>name<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>name</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*<sp/><sp/><sp/><sp/>Name<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>name_impl</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>handle</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>size</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">*<sp/><sp/><sp/><sp/>Size<sp/>of<sp/>string<sp/>@name_impl</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="dynlink__impl_8h_1aad7c05b22fb50e68007cc43cd6095422" refkind="member"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl_8h_1aad7c05b22fb50e68007cc43cd6095422" kindref="member">dynlink_impl_get_name</ref>(<ref refid="dynlink__type_8h_1a11b32b057aa8ea512ea863e185547cd0" kindref="member">dynlink_name</ref><sp/>name,<sp/><ref refid="dynlink__impl__name_8h_1ae1d8bf84ee2ad46a7513e6d4eb6782fb" kindref="member">dynlink_name_impl</ref><sp/>name_impl,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="68"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*<sp/><sp/><sp/><sp/>Load<sp/>a<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>name</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>handle</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">*<sp/><sp/><sp/><sp/>A<sp/>pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="dynlink__impl_8h_1a9d497586d3460b347dc3f0e8ed9a63b2" refkind="member"><highlight class="normal">DYNLINK_API<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref><sp/><ref refid="dynlink__impl_8h_1a9d497586d3460b347dc3f0e8ed9a63b2" kindref="member">dynlink_impl_load</ref>(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="80"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">*<sp/><sp/><sp/><sp/>Get<sp/>a<sp/>symbol<sp/>address<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>by<sp/>name<sp/>implementation</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">*<sp/><sp/><sp/><sp/>Handle<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object</highlight></codeline>
+<codeline lineno="86"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>impl</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>symbol_name</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">*<sp/><sp/><sp/><sp/>Name<sp/>of<sp/>the<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>symbol</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">*<sp/><sp/>@param[out]<sp/>symbol_address</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>address<sp/>of<sp/>the<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>symbol</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">*<sp/><sp/>@return</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">*<sp/><sp/><sp/><sp/>Returns<sp/>zero<sp/>on<sp/>correct<sp/>dynamic<sp/>linking,<sp/>distinct<sp/>from<sp/>zero<sp/>otherwise</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="dynlink__impl_8h_1a7b9bd81c58d0d3ac45fadb8ef6c33ac8" refkind="member"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl_8h_1a7b9bd81c58d0d3ac45fadb8ef6c33ac8" kindref="member">dynlink_impl_symbol</ref>(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref><sp/>handle,<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref><sp/>impl,<sp/><ref refid="dynlink__type_8h_1a3c96aed7c9128f3d4be1c9b2b75174c5" kindref="member">dynlink_symbol_name</ref><sp/>symbol_name,<sp/><ref refid="dynlink__impl__symbol__beos_8h_1abedcfb8b256940cff900c9a92c628aaf" kindref="member">dynlink_symbol_addr</ref><sp/>*symbol_address);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
+<codeline lineno="101"><highlight class="comment">/**</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">*<sp/><sp/>@brief</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">*<sp/><sp/><sp/><sp/>Unloads<sp/>a<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation<sp/>by<sp/>reference</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>handle</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">*<sp/><sp/><sp/><sp/>Handle<sp/>of<sp/>dynamically<sp/>linked<sp/>shared<sp/>object</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="108"><highlight class="comment">*<sp/><sp/>@param[in]<sp/>impl</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">*<sp/><sp/><sp/><sp/>Pointer<sp/>to<sp/>the<sp/>dynamically<sp/>linked<sp/>shared<sp/>object<sp/>implementation</highlight></codeline>
+<codeline lineno="110"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="dynlink__impl_8h_1a2848bcd835206e7cb89c59b4b154ffe8" refkind="member"><highlight class="normal">DYNLINK_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dynlink__impl_8h_1a2848bcd835206e7cb89c59b4b154ffe8" kindref="member">dynlink_impl_unload</ref>(<ref refid="dynlink__type_8h_1a78848577adb8462475a9af5d06560873" kindref="member">dynlink</ref><sp/>handle,<sp/><ref refid="dynlink__impl__type_8h_1ac50870968e2343c8886b162515a122f1" kindref="member">dynlink_impl</ref><sp/>impl);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DYNLINK_IMPL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>

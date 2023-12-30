@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dynlink__impl__symbol__unix_8h" kind="file" language="C++">
     <compoundname>dynlink_impl_symbol_unix.h</compoundname>
     <includes local="no">dynlink/dynlink_api.h</includes>
@@ -31,7 +31,7 @@
       <sectiondef kind="define">
       <memberdef kind="define" id="dynlink__impl__symbol__unix_8h_1ac5d66723717583b0efbc7c23f9ccd059" prot="public" static="no">
         <name>DYNLINK_SYMBOL_PREFIX</name>
-        <initializer>dynlink_symbol_</initializer>
+        <initializer>	dynlink_symbol_</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -44,7 +44,7 @@
         <name>DYNLINK_SYMBOL_EXPORT</name>
         <param><defname>name</defname></param>
         <initializer>	DYNLINK_API struct <ref refid="structdynlink__symbol__addr__unix__type" kindref="compound">dynlink_symbol_addr_unix_type</ref> DYNLINK_SYMBOL_NAME(name) = { \
-		(<ref refid="dynlink__impl__symbol__unix_8h_1a5a2f66cc5f6deb576e5319c52a804472" kindref="member">dynlink_symbol_addr_unix_impl</ref>)&amp;name                                       \
+		(<ref refid="dynlink__impl__symbol__unix_8h_1a5a2f66cc5f6deb576e5319c52a804472" kindref="member">dynlink_symbol_addr_unix_impl</ref>)&amp;name \
 	}</initializer>
         <briefdescription>
         </briefdescription>
@@ -57,7 +57,7 @@
       <memberdef kind="define" id="dynlink__impl__symbol__unix_8h_1a2103b1d11c0227b698826a7a7b2eb844" prot="public" static="no">
         <name>DYNLINK_SYMBOL_GET</name>
         <param><defname>name</defname></param>
-        <initializer>((dynlink_symbol_addr_unix)(name))-&gt;symbol</initializer>
+        <initializer>	((dynlink_symbol_addr_unix)(name))-&gt;symbol</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -104,7 +104,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Dynamic<sp/>Link<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>dynamic<sp/>loading<sp/>and<sp/>linking<sp/>shared<sp/>objects<sp/>at<sp/>run-time.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -138,9 +138,9 @@
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Macros<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="dynlink__impl__symbol__unix_8h_1ac7c2e3794ef31f11c7743643f55000e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_SYMBOL_EXPORT(name)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39" refid="dynlink__impl__symbol__unix_8h_1ac7c2e3794ef31f11c7743643f55000e6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_SYMBOL_EXPORT(name)<sp/>\</highlight></codeline>
 <codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>DYNLINK_API<sp/>struct<sp/>dynlink_symbol_addr_unix_type<sp/>DYNLINK_SYMBOL_NAME(name)<sp/>=<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dynlink_symbol_addr_unix_impl)&amp;name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dynlink_symbol_addr_unix_impl)&amp;name<sp/>\</highlight></codeline>
 <codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44" refid="dynlink__impl__symbol__unix_8h_1a2103b1d11c0227b698826a7a7b2eb844" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNLINK_SYMBOL_GET(name)<sp/>\</highlight></codeline>

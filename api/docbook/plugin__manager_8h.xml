@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_plugin__manager_8h" xml:lang="en-US">
+<title>plugin_manager.h File Reference</title>
+<indexterm><primary>plugin_manager.h</primary></indexterm>
+<programlisting>#include &lt;plugin/plugin_api.h&gt;
+#include &lt;plugin/plugin_impl.h&gt;
+#include &lt;plugin/plugin_loader.h&gt;
+#include &lt;adt/adt_set.h&gt;
+</programlisting>Include dependency graph for plugin_manager.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="plugin__manager_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="plugin__manager_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structplugin__manager__type">plugin_manager</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structplugin__manager__interface__type">plugin_manager_interface</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_plugin__manager_8h_1a815f2890a31aad474e6daa86182edebb">plugin_manager_declare</link>(name)   	struct <link linkend="_structplugin__manager__type">plugin_manager_type</link> name = { 0 }</para>
+</listitem>
+            <listitem><para>#define <link linkend="_plugin__manager_8h_1a8617c1237cf313264d15edaae863dd15">plugin_manager_impl_type</link>(manager,  <link linkend="_reflect__type_8h_1a67e5fbed79b56e6af024546da3d471fb">type_name</link>)   	((<link linkend="_reflect__type_8h_1a67e5fbed79b56e6af024546da3d471fb">type_name</link>)<link linkend="_plugin__manager_8h_1a7b738de52ddf872e7d7d4f03154525ae">plugin_manager_impl</link>(manager))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>PLUGIN_API int <link linkend="_plugin__manager_8h_1aca407528f98420cdddf9a0a53ebdaaaf">plugin_manager_initialize</link> (plugin_manager manager, const char *name, const char *environment_library_path, const char *default_library_path, plugin_manager_interface iface, void *impl)</para>
+</listitem>
+            <listitem><para>PLUGIN_API const char * <link linkend="_plugin__manager_8h_1a8035a6fbd60d24cd90b9d9b23a6afa66">plugin_manager_name</link> (plugin_manager manager)</para>
+</listitem>
+            <listitem><para>PLUGIN_API char * <link linkend="_plugin__manager_8h_1a35790a2e871ec970bf0cf0ea44c621c9">plugin_manager_library_path</link> (plugin_manager manager)</para>
+</listitem>
+            <listitem><para>PLUGIN_API void * <link linkend="_plugin__manager_8h_1a7b738de52ddf872e7d7d4f03154525ae">plugin_manager_impl</link> (plugin_manager manager)</para>
+</listitem>
+            <listitem><para>PLUGIN_API size_t <link linkend="_plugin__manager_8h_1af2166ee6bdfbb5346011628f6a2e85fb">plugin_manager_size</link> (plugin_manager manager)</para>
+</listitem>
+            <listitem><para>PLUGIN_API int <link linkend="_plugin__manager_8h_1acb43b82ade732b709937f427232ac4bf">plugin_manager_register</link> (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</para>
+</listitem>
+            <listitem><para>PLUGIN_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> <link linkend="_plugin__manager_8h_1a176d7718efcf4893c7e3e43c8792c6f0">plugin_manager_create</link> (plugin_manager manager, const char *name, void *impl, void(*dtor)(<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link>))</para>
+</listitem>
+            <listitem><para>PLUGIN_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> <link linkend="_plugin__manager_8h_1a3f4e5c7e2a334dfcce788056336296b6">plugin_manager_get</link> (plugin_manager manager, const char *name)</para>
+</listitem>
+            <listitem><para>PLUGIN_API void <link linkend="_plugin__manager_8h_1a8304becddc516569ddae965ae34166d3">plugin_manager_iterate</link> (plugin_manager manager, int(*iterator)(plugin_manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link>, void *), void *data)</para>
+</listitem>
+            <listitem><para>PLUGIN_API int <link linkend="_plugin__manager_8h_1ac7b40d2e915aa7abc8279e81383160d6">plugin_manager_clear</link> (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</para>
+</listitem>
+            <listitem><para>PLUGIN_API void <link linkend="_plugin__manager_8h_1a24557de15ae3f6b18386a3ba92e820bd">plugin_manager_destroy</link> (plugin_manager manager)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_plugin__manager_8h_1a815f2890a31aad474e6daa86182edebb"/>    <section>
+    <title>plugin_manager_declare</title>
+<indexterm><primary>plugin_manager_declare</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_declare</secondary></indexterm>
+<para><computeroutput>#define plugin_manager_declare( name)   	struct <link linkend="_structplugin__manager__type">plugin_manager_type</link> name = { 0 }</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a8617c1237cf313264d15edaae863dd15"/>    <section>
+    <title>plugin_manager_impl_type</title>
+<indexterm><primary>plugin_manager_impl_type</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_impl_type</secondary></indexterm>
+<para><computeroutput>#define plugin_manager_impl_type( manager,  <link linkend="_reflect__type_8h_1a67e5fbed79b56e6af024546da3d471fb">type_name</link>)   	((<link linkend="_reflect__type_8h_1a67e5fbed79b56e6af024546da3d471fb">type_name</link>)<link linkend="_plugin__manager_8h_1a7b738de52ddf872e7d7d4f03154525ae">plugin_manager_impl</link>(manager))</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_plugin__manager_8h_1aca407528f98420cdddf9a0a53ebdaaaf"/>    <section>
+    <title>plugin_manager_initialize()</title>
+<indexterm><primary>plugin_manager_initialize</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_initialize</secondary></indexterm>
+<para><computeroutput>PLUGIN_API int plugin_manager_initialize (plugin_manager manager, const char * name, const char * environment_library_path, const char * default_library_path, plugin_manager_interface iface, void * impl)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a8035a6fbd60d24cd90b9d9b23a6afa66"/>    <section>
+    <title>plugin_manager_name()</title>
+<indexterm><primary>plugin_manager_name</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_name</secondary></indexterm>
+<para><computeroutput>PLUGIN_API const char* plugin_manager_name (plugin_manager manager)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a35790a2e871ec970bf0cf0ea44c621c9"/>    <section>
+    <title>plugin_manager_library_path()</title>
+<indexterm><primary>plugin_manager_library_path</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_library_path</secondary></indexterm>
+<para><computeroutput>PLUGIN_API char* plugin_manager_library_path (plugin_manager manager)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a7b738de52ddf872e7d7d4f03154525ae"/>    <section>
+    <title>plugin_manager_impl()</title>
+<indexterm><primary>plugin_manager_impl</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_impl</secondary></indexterm>
+<para><computeroutput>PLUGIN_API void* plugin_manager_impl (plugin_manager manager)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1af2166ee6bdfbb5346011628f6a2e85fb"/>    <section>
+    <title>plugin_manager_size()</title>
+<indexterm><primary>plugin_manager_size</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_size</secondary></indexterm>
+<para><computeroutput>PLUGIN_API size_t plugin_manager_size (plugin_manager manager)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1acb43b82ade732b709937f427232ac4bf"/>    <section>
+    <title>plugin_manager_register()</title>
+<indexterm><primary>plugin_manager_register</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_register</secondary></indexterm>
+<para><computeroutput>PLUGIN_API int plugin_manager_register (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a176d7718efcf4893c7e3e43c8792c6f0"/>    <section>
+    <title>plugin_manager_create()</title>
+<indexterm><primary>plugin_manager_create</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_create</secondary></indexterm>
+<para><computeroutput>PLUGIN_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> plugin_manager_create (plugin_manager manager, const char * name, void * impl, void(*)(<link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link>) dtor)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a3f4e5c7e2a334dfcce788056336296b6"/>    <section>
+    <title>plugin_manager_get()</title>
+<indexterm><primary>plugin_manager_get</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_get</secondary></indexterm>
+<para><computeroutput>PLUGIN_API <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> plugin_manager_get (plugin_manager manager, const char * name)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a8304becddc516569ddae965ae34166d3"/>    <section>
+    <title>plugin_manager_iterate()</title>
+<indexterm><primary>plugin_manager_iterate</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_iterate</secondary></indexterm>
+<para><computeroutput>PLUGIN_API void plugin_manager_iterate (plugin_manager manager, int(*)(plugin_manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link>, void *) iterator, void * data)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1ac7b40d2e915aa7abc8279e81383160d6"/>    <section>
+    <title>plugin_manager_clear()</title>
+<indexterm><primary>plugin_manager_clear</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_clear</secondary></indexterm>
+<para><computeroutput>PLUGIN_API int plugin_manager_clear (plugin_manager manager, <link linkend="_plugin__impl_8h_1af5672f8038c7c743f97c5e6fd31e3bdc">plugin</link> p)</computeroutput></para>    </section><anchor xml:id="_plugin__manager_8h_1a24557de15ae3f6b18386a3ba92e820bd"/>    <section>
+    <title>plugin_manager_destroy()</title>
+<indexterm><primary>plugin_manager_destroy</primary><secondary>plugin_manager.h</secondary></indexterm>
+<indexterm><primary>plugin_manager.h</primary><secondary>plugin_manager_destroy</secondary></indexterm>
+<para><computeroutput>PLUGIN_API void plugin_manager_destroy (plugin_manager manager)</computeroutput></para></section>
+</section>
+</section>

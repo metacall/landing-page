@@ -1,4 +1,4 @@
-.TH "dynlink.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "dynlink.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,20 +8,20 @@ dynlink.h
 .PP
 \fC#include <dynlink/dynlink_api\&.h>\fP
 .br
+\fC#include <dynlink/dynlink_type\&.h>\fP
+.br
 \fC#include <dynlink/dynlink_flags\&.h>\fP
 .br
 \fC#include <dynlink/dynlink_interface\&.h>\fP
 .br
 \fC#include <dynlink/dynlink_symbol\&.h>\fP
 .br
-\fC#include <dynlink/dynlink_type\&.h>\fP
-.br
 
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "const DYNLINK_API char * \fBdynlink_extension\fP (void)"
+.RI "DYNLINK_API const char * \fBdynlink_extension\fP (void)"
 .br
 .ti -1c
 .RI "DYNLINK_API \fBdynlink\fP \fBdynlink_load\fP (\fBdynlink_path\fP path, \fBdynlink_name\fP name, \fBdynlink_flags\fP flags)"
@@ -41,13 +41,62 @@ dynlink.h
 .ti -1c
 .RI "DYNLINK_API void \fBdynlink_unload\fP (\fBdynlink\fP handle)"
 .br
-.ti -1c
-.RI "const DYNLINK_API char * \fBdynlink_print_info\fP (void)"
+.in -1c
+.PP
+.RI "\fB\fP"
 .br
+Get the path to a library loaded in the process itself by
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the library that will be searched for the path (without platform dependant prefix, suffix or extension)
+.br
+\fIpath\fP The path found (if any) with that library name
+.br
+\fIlength\fP The length of the path found (if any)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns zero if it could find the path, different from zero if not found 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DYNLINK_API int \fBdynlink_library_path\fP (\fBdynlink_name\fP name, \fBdynlink_library_path_str\fP path, size_t *length)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBas a base for it\fP"
+.br
+Retrieve the library platform standard name by using
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Name of the library that will be used for generating the platform dependant library name (i\&.e example)
+.br
+\fIresult\fP The resulting library name that will be generated (i\&.e libexample\&.so in Linux, or example\&.dll in Windows) 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "DYNLINK_API void \fBdynlink_platform_name\fP (\fBdynlink_name\fP name, \fBdynlink_name_impl\fP result)"
+.br
+.ti -1c
+.RI "DYNLINK_API const char * \fBdynlink_print_info\fP (void)"
+.br
+.in -1c
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "const DYNLINK_API char* dynlink_extension (void)"
+.SS "DYNLINK_API const char* dynlink_extension (void)"
 
 .PP
 Get the library extension for specified platform\&. 
@@ -157,7 +206,11 @@ Unloads a dynamically linked shared object by its handle\&.
 .RE
 .PP
 
-.SS "const DYNLINK_API char* dynlink_print_info (void)"
+.SS "DYNLINK_API int dynlink_library_path (\fBdynlink_name\fP name, \fBdynlink_library_path_str\fP path, size_t * length)"
+
+.SS "DYNLINK_API void dynlink_platform_name (\fBdynlink_name\fP name, \fBdynlink_name_impl\fP result)"
+
+.SS "DYNLINK_API const char* dynlink_print_info (void)"
 
 .PP
 Provide the module information\&. 

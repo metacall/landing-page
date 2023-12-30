@@ -1,4 +1,4 @@
-.TH "dynlink_impl_interface.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "dynlink_impl_interface.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,6 +24,9 @@ dynlink_impl_interface.h
 
 .in +1c
 .ti -1c
+.RI "typedef const char *(* \fBdynlink_impl_interface_extension\fP) (void)"
+.br
+.ti -1c
 .RI "typedef \fBdynlink_impl\fP(* \fBdynlink_impl_interface_load\fP) (\fBdynlink\fP)"
 .br
 .ti -1c
@@ -36,15 +39,10 @@ dynlink_impl_interface.h
 .RI "typedef dynlink_impl_interface(* \fBdynlink_impl_interface_singleton\fP) (void)"
 .br
 .in -1c
-.SS "Variables"
-
-.in +1c
-.ti -1c
-.RI "const typedef char *(* \fBdynlink_impl_interface_extension\fP )(void)"
-.br
-.in -1c
 .SH "Typedef Documentation"
 .PP 
+.SS "typedef const char*(* dynlink_impl_interface_extension) (void)"
+
 .SS "typedef \fBdynlink_impl\fP(* dynlink_impl_interface_load) (\fBdynlink\fP)"
 
 .SS "typedef int(* dynlink_impl_interface_symbol) (\fBdynlink\fP, \fBdynlink_impl\fP, \fBdynlink_symbol_name\fP, \fBdynlink_symbol_addr\fP *)"
@@ -52,10 +50,6 @@ dynlink_impl_interface.h
 .SS "typedef int(* dynlink_impl_interface_unload) (\fBdynlink\fP, \fBdynlink_impl\fP)"
 
 .SS "typedef dynlink_impl_interface(* dynlink_impl_interface_singleton) (void)"
-
-.SH "Variable Documentation"
-.PP 
-.SS "const typedef char*(* dynlink_impl_interface_extension) (void)"
 
 .SH "Author"
 .PP 

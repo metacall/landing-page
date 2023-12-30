@@ -1,0 +1,85 @@
+\doxysection{metacall\+\_\+error.\+h File Reference}
+\label{metacall__error_8h}\index{metacall\_error.h@{metacall\_error.h}}
+{\ttfamily \#include $<$metacall/metacall\+\_\+api.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for metacall\+\_\+error.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{metacall__error_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{metacall__error_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ metacall\+\_\+exception}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+error\+\_\+from\+\_\+value} (void $\ast$v, metacall\+\_\+exception ex)
+\item 
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+error\+\_\+last} (metacall\+\_\+exception ex)
+\item 
+METACALL\+\_\+\+API void \textbf{ metacall\+\_\+error\+\_\+clear} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{metacall__error_8h_ad625b3c239283e3c12756f4771c29c02}} 
+\index{metacall\_error.h@{metacall\_error.h}!metacall\_error\_from\_value@{metacall\_error\_from\_value}}
+\index{metacall\_error\_from\_value@{metacall\_error\_from\_value}!metacall\_error.h@{metacall\_error.h}}
+\doxysubsubsection{metacall\_error\_from\_value()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+error\+\_\+from\+\_\+value (\begin{DoxyParamCaption}\item[{void $\ast$}]{v,  }\item[{metacall\+\_\+exception}]{ex }\end{DoxyParamCaption})}
+
+
+
+Retrieve the exception from a value, it can be either a throwable value with an exception inside or an exception itself. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Value that represents the exception to be retrieved\\
+\hline
+\mbox{\texttt{ out}}  & {\em ex} & Exception that will be used as out parameter, the lifetime of the struct fields is attached to @v\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall__error_8h_a274ab562da16a9a35c27d7b67f448fd2}} 
+\index{metacall\_error.h@{metacall\_error.h}!metacall\_error\_last@{metacall\_error\_last}}
+\index{metacall\_error\_last@{metacall\_error\_last}!metacall\_error.h@{metacall\_error.h}}
+\doxysubsubsection{metacall\_error\_last()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+error\+\_\+last (\begin{DoxyParamCaption}\item[{metacall\+\_\+exception}]{ex }\end{DoxyParamCaption})}
+
+
+
+Retrieve last error that has happened after a call to any API from Meta\+Call. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ex} & Exception that will be used as out parameter, the lifetime of the struct fields is attached to the internal Meta\+Call exception\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero if success, different from zero otherwise 
+\end{DoxyReturn}
+\mbox{\label{metacall__error_8h_a88937f1af9da6218448382ba9f0a2343}} 
+\index{metacall\_error.h@{metacall\_error.h}!metacall\_error\_clear@{metacall\_error\_clear}}
+\index{metacall\_error\_clear@{metacall\_error\_clear}!metacall\_error.h@{metacall\_error.h}}
+\doxysubsubsection{metacall\_error\_clear()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void metacall\+\_\+error\+\_\+clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clear last error that has happened after a call to any API from Meta\+Call. 
+

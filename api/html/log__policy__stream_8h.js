@@ -14,7 +14,7 @@ var log__policy__stream_8h =
     ] ],
     [ "log_policy_stream", "log__policy__stream_8h.html#a6ee12bc4a0fe41c624ff4330ca596f31", null ],
     [ "log_policy_stream_file", "log__policy__stream_8h.html#aa6f119bf6d8c99a0dc8cea500bbd78c0", null ],
-    [ "log_policy_stream_nginx", "log__policy__stream_8h.html#a24e6abd5e2a37bc91d9619f39b859338", null ],
+    [ "log_policy_stream_nginx", "log__policy__stream_8h.html#a6c530d52ebb0e3c0ed67406bb9e7fb63", null ],
     [ "log_policy_stream_socket", "log__policy__stream_8h.html#a4b3fcc5ec7f59b7543e247dba2c0fae0", null ],
     [ "log_policy_stream_stdio", "log__policy__stream_8h.html#a4160d9d860af6eed0af334091305cb65", null ],
     [ "log_policy_stream_syslog", "log__policy__stream_8h.html#a5fa6dd78edfe0a559501f90b3fdefba7", null ],

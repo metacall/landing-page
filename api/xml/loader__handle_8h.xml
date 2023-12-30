@@ -1,62 +1,46 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="loader__handle_8h" kind="file" language="C++">
     <compoundname>loader_handle.h</compoundname>
-    <includedby refid="loader__impl__function_8h" local="no">loader_impl_function.h</includedby>
-    <includedby refid="loader__impl__handle_8h" local="no">loader_impl_handle.h</includedby>
     <includedby refid="loader__impl__interface_8h" local="no">loader_impl_interface.h</includedby>
     <invincdepgraph>
-      <node id="2">
-        <label>loader_impl_function.h</label>
-        <link refid="loader__impl__function_8h"/>
-      </node>
-      <node id="8">
-        <label>loader_impl_export.h</label>
-        <link refid="loader__impl__export_8h"/>
-      </node>
       <node id="1">
         <label>loader_handle.h</label>
         <link refid="loader__handle_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+      </node>
+      <node id="6">
+        <label>loader_manager_impl.h</label>
+        <link refid="loader__manager__impl_8h"/>
+      </node>
+      <node id="2">
+        <label>loader_impl_interface.h</label>
+        <link refid="loader__impl__interface_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>loader_host.h</label>
+        <link refid="loader__host_8h"/>
+      </node>
+      <node id="5">
+        <label>loader_impl.h</label>
+        <link refid="loader__impl_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>loader_impl_interface.h</label>
-        <link refid="loader__impl__interface_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>loader_export.h</label>
-        <link refid="loader__export_8h"/>
       </node>
       <node id="3">
-        <label>loader_impl_handle.h</label>
-        <link refid="loader__impl__handle_8h"/>
-      </node>
-      <node id="7">
-        <label>loader_impl.h</label>
-        <link refid="loader__impl_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
         <label>loader.h</label>
         <link refid="loader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
@@ -84,7 +68,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Loader<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>loading<sp/>executable<sp/>code<sp/>at<sp/>run-time<sp/>into<sp/>a<sp/>process.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -117,7 +101,7 @@
 <codeline lineno="35"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOADER_IMPL_HANDLE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOADER_HANDLE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/loader/include/loader/loader_handle.h"/>
   </compounddef>

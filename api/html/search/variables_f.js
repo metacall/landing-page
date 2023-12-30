@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['tag_3303',['tag',['../structmetacall__initialize__configuration__type.html#a680492994486c2bf741d104c3a05a4f1',1,'metacall_initialize_configuration_type']]],
-  ['technology_3304',['technology',['../structloader__descriptor__type.html#a2f42f3e6add9bd464ada8f9d83688986',1,'loader_descriptor_type']]]
+  ['realloc_3449',['realloc',['../structmetacall__allocator__std__type.html#a5f42433a20d6179daef49874e45add39',1,'metacall_allocator_std_type']]],
+  ['reject_3450',['reject',['../structmetacall__await__callbacks.html#ac21351d9cb6d82c050377c87a160f155',1,'metacall_await_callbacks']]],
+  ['resolve_3451',['resolve',['../structmetacall__await__callbacks.html#aa6f87b03b8bde8c16a1e4c8136b1b4b7',1,'metacall_await_callbacks']]],
+  ['revision_3452',['revision',['../structmetacall__version__type.html#a293548989c234ad42acb5f1275e4f824',1,'metacall_version_type']]]
 ];

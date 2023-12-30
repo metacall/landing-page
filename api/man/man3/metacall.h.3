@@ -1,4 +1,4 @@
-.TH "metacall.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "metacall.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,11 +12,17 @@ metacall.h
 .br
 \fC#include <metacall/metacall_def\&.h>\fP
 .br
+\fC#include <metacall/metacall_error\&.h>\fP
+.br
 \fC#include <metacall/metacall_log\&.h>\fP
 .br
 \fC#include <metacall/metacall_value\&.h>\fP
 .br
+\fC#include <metacall/metacall_version\&.h>\fP
+.br
 \fC#include <stdarg\&.h>\fP
+.br
+\fC#include <stdint\&.h>\fP
 .br
 \fC#include <stdlib\&.h>\fP
 .br
@@ -28,7 +34,10 @@ metacall.h
 .RI "struct \fBmetacall_initialize_configuration_type\fP"
 .br
 .ti -1c
-.RI "struct \fBmetacall_await_callbacks_type\fP"
+.RI "struct \fBmetacall_await_callbacks\fP"
+.br
+.ti -1c
+.RI "struct \fBmetacall_version_type\fP"
 .br
 .in -1c
 .SS "Macros"
@@ -49,7 +58,7 @@ metacall.h
 
 .in +1c
 .ti -1c
-.RI "const METACALL_API char * \fBmetacall_serial\fP (void)"
+.RI "METACALL_API const char * \fBmetacall_serial\fP (void)"
 .br
 .ti -1c
 .RI "METACALL_API void \fBmetacall_log_null\fP (void)"
@@ -67,7 +76,7 @@ metacall.h
 .RI "METACALL_API void \fBmetacall_initialize_args\fP (int argc, char *argv[])"
 .br
 .ti -1c
-.RI "METACALL_API int \fBmetacall_argc\fP ()"
+.RI "METACALL_API int \fBmetacall_argc\fP (void)"
 .br
 .ti -1c
 .RI "METACALL_API char ** \fBmetacall_argv\fP (void)"
@@ -208,7 +217,7 @@ Handle reference, null if the function does not exist
 .RI "METACALL_API void * \fBmetacall_handle\fP (const char *tag, const char *name)"
 .br
 .ti -1c
-.RI "const METACALL_API char * \fBmetacall_handle_id\fP (void *handle)"
+.RI "METACALL_API const char * \fBmetacall_handle_id\fP (void *handle)"
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_handle_export\fP (void *handle)"
@@ -240,7 +249,7 @@ Register a function by name
 .PP
 \fBParameters\fP
 .RS 4
-\fIname\fP Name of the function
+\fIname\fP Name of the function (if it is NULL, function is not registered into host scope)
 .br
 \fIinvoke\fP Pointer to function invoke interface (argc, argv, data)
 .br
@@ -274,11 +283,13 @@ Register a function by name
 .PP
 \fBParameters\fP
 .RS 4
-\fIname\fP Name of the function
+\fIloader\fP Opaque pointer to the loader in which you want to register the function (this allows to register the function into a different loader than the host)
+.br
+\fIcontext\fP Opaque pointer to the context in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)
+.br
+\fIname\fP Name of the function (if it is NULL, function is not registered into host scope)
 .br
 \fIinvoke\fP Pointer to function invoke interface (argc, argv, data)
-.br
-\fIfunc\fP Will set the pointer to the function if the parameter is not null
 .br
 \fIreturn_type\fP Type of return value
 .br
@@ -300,6 +311,9 @@ Pointer to value containing the result of the call
 .RI "METACALL_API int \fBmetacall_registerv\fP (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
 .br
 .ti -1c
+.RI "METACALL_API int \fBmetacall_register_loaderv\fP (void *\fBloader\fP, void *\fBcontext\fP, const char *name, void *(*invoke)(size_t, void *[], void *), enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
+.br
+.ti -1c
 .RI "METACALL_API void * \fBmetacall_await\fP (const char *name, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
 .br
 .ti -1c
@@ -315,7 +329,7 @@ Pointer to value containing the result of the call
 .RI "METACALL_API void * \fBmetacallfv_await_s\fP (void *func, void *args[], size_t size, void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
 .br
 .ti -1c
-.RI "METACALL_API void * \fBmetacallfv_await_struct_s\fP (void *func, void *args[], size_t size, metacall_await_callbacks cb, void *data)"
+.RI "METACALL_API void * \fBmetacallfv_await_struct_s\fP (void *func, void *args[], size_t size, \fBmetacall_await_callbacks\fP cb, void *data)"
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacallfmv_await\fP (void *func, void *keys[], void *values[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
@@ -381,7 +395,13 @@ Class reference, null if the class does not exist
 .RI "METACALL_API int \fBmetacall_object_set\fP (void *obj, const char *key, void *v)"
 .br
 .ti -1c
+.RI "METACALL_API void * \fBmetacall_throwable_value\fP (void *th)"
+.br
+.ti -1c
 .RI "METACALL_API char * \fBmetacall_inspect\fP (size_t *size, void *allocator)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_inspect_value\fP (void)"
 .br
 .ti -1c
 .RI "METACALL_API char * \fBmetacall_serialize\fP (const char *name, void *v, size_t *size, void *allocator)"
@@ -393,10 +413,34 @@ Class reference, null if the class does not exist
 .RI "METACALL_API int \fBmetacall_clear\fP (void *handle)"
 .br
 .ti -1c
+.RI "METACALL_API void * \fBmetacall_plugin_extension\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API const char * \fBmetacall_plugin_path\fP (void)"
+.br
+.ti -1c
 .RI "METACALL_API int \fBmetacall_destroy\fP (void)"
 .br
 .ti -1c
-.RI "const METACALL_API char * \fBmetacall_print_info\fP (void)"
+.RI "METACALL_API const struct \fBmetacall_version_type\fP * \fBmetacall_version\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API uint32_t \fBmetacall_version_hex_make\fP (unsigned int major, unsigned int minor, unsigned int patch)"
+.br
+.ti -1c
+.RI "METACALL_API uint32_t \fBmetacall_version_hex\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API const char * \fBmetacall_version_str\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API const char * \fBmetacall_version_revision\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API const char * \fBmetacall_version_name\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API const char * \fBmetacall_print_info\fP (void)"
 .br
 .in -1c
 .in -1c
@@ -417,7 +461,7 @@ Class reference, null if the class does not exist
 
 .SH "Function Documentation"
 .PP 
-.SS "const METACALL_API char* metacall_serial (void)"
+.SS "METACALL_API const char* metacall_serial (void)"
 
 .PP
 Returns default serializer used by MetaCall\&. 
@@ -483,7 +527,7 @@ Initialize MetaCall application arguments\&.
 .RE
 .PP
 
-.SS "METACALL_API int metacall_argc ()"
+.SS "METACALL_API int metacall_argc (void)"
 
 .PP
 Get the number of arguments in which MetaCall was initialized\&. 
@@ -512,7 +556,7 @@ Check if script context is loaded by @tag\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fItag\fP Extension of the script
+\fItag\fP Extension of the script (if tag is NULL, it returns the status of the whole MetaCall instance)
 .RE
 .PP
 \fBReturns\fP
@@ -585,7 +629,7 @@ Loads a script from file specified by @path\&.
 .br
 \fIsize\fP Size of the array @paths
 .br
-\fIhandle\fP Optional pointer to reference of loaded handle
+\fIhandle\fP Optional pointer to reference of loaded handle\&. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i\&.e they will share the scope between all previously loaded files and they can collide)\&. Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle\&. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions)\&. The last case is if we pass an already allocated handle (i\&.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter\&.
 .RE
 .PP
 \fBReturns\fP
@@ -607,7 +651,7 @@ Loads a script from memory\&.
 .br
 \fIsize\fP Memory block representing the string of the script
 .br
-\fIhandle\fP Optional pointer to reference of loaded handle
+\fIhandle\fP Optional pointer to reference of loaded handle\&. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i\&.e they will share the scope between all previously loaded files and they can collide)\&. Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle\&. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions)\&. The last case is if we pass an already allocated handle (i\&.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter\&.
 .RE
 .PP
 \fBReturns\fP
@@ -627,7 +671,7 @@ Loads a package of scrips from file specified by @path into loader defined by @e
 .br
 \fIpath\fP Path of the package
 .br
-\fIhandle\fP Optional pointer to reference of loaded handle
+\fIhandle\fP Optional pointer to reference of loaded handle\&. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i\&.e they will share the scope between all previously loaded files and they can collide)\&. Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle\&. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions)\&. The last case is if we pass an already allocated handle (i\&.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter\&.
 .RE
 .PP
 \fBReturns\fP
@@ -645,7 +689,7 @@ Loads a a list of scrips from configuration specified by @path into loader with 
 .RS 4
 \fIpath\fP Path of the configuration
 .br
-\fIhandle\fP Optional pointer to reference of loaded handle
+\fIhandle\fP Optional pointer to reference of loaded handle\&. If the parameter is NULL, the symbols loaded are propagated to the loader scope (i\&.e they will share the scope between all previously loaded files and they can collide)\&. Otherwise, if we pass a void* pointer set to NULL, it will behave as output parameter, obtaining the reference to the created handle, which can be later on used for calling to functions of that handle\&. The symbols will not be propagated to the loader scope and they will be private (this prevents collisions)\&. The last case is if we pass an already allocated handle (i\&.e a void* pointer pointing to an previously loaded handle), then in this case, the symbols loaded will be propagated to the previously allocated handle, and it will behave as a in parameter\&.
 .br
 \fIallocator\fP Pointer to allocator will allocate the configuration
 .RE
@@ -896,7 +940,7 @@ Return 0 if it is syncrhonous, 1 if it is asynchronous and -1 if the function is
 
 .SS "METACALL_API void* metacall_handle (const char * tag, const char * name)"
 
-.SS "const METACALL_API char* metacall_handle_id (void * handle)"
+.SS "METACALL_API const char* metacall_handle_id (void * handle)"
 
 .PP
 Get name of a @handle\&. 
@@ -1049,6 +1093,8 @@ Pointer to value containing the result of the call
 .SS "METACALL_API int metacall_register (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum \fBmetacall_value_id\fP return_type, size_t size,  \&.\&.\&.)"
 
 .SS "METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
+
+.SS "METACALL_API int metacall_register_loaderv (void * loader, void * context, const char * name, void *(*)(size_t, void *[], void *) invoke, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
 
 .SS "METACALL_API void* metacall_await (const char * name, void * args[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
 
@@ -1232,7 +1278,7 @@ Pointer to value containing the result of the call returned by @resolve_callback
 .RE
 .PP
 
-.SS "METACALL_API void* metacallfv_await_struct_s (void * func, void * args[], size_t size, metacall_await_callbacks cb, void * data)"
+.SS "METACALL_API void* metacallfv_await_struct_s (void * func, void * args[], size_t size, \fBmetacall_await_callbacks\fP cb, void * data)"
 
 .PP
 Call an asynchronous function anonymously by value array @args and function @func (offered without function pointers for languages without support to function pointers) 
@@ -1606,6 +1652,22 @@ Non-zero integer if an error ocurred
 .RE
 .PP
 
+.SS "METACALL_API void* metacall_throwable_value (void * th)"
+
+.PP
+Get the value contained by throwable object @th\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIth\fP Pointer to the throwable object
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the value inside of the throwable or NULL in case of error 
+.RE
+.PP
+
 .SS "METACALL_API char* metacall_inspect (size_t * size, void * allocator)"
 
 .PP
@@ -1621,6 +1683,17 @@ Provide information about all loaded objects\&.
 \fBReturns\fP
 .RS 4
 String containing introspection information 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_inspect_value (void)"
+
+.PP
+Provide information about all loaded objects as a value\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Value containing introspection information 
 .RE
 .PP
 
@@ -1684,6 +1757,28 @@ Zero if success, different from zero otherwise
 .RE
 .PP
 
+.SS "METACALL_API void* metacall_plugin_extension (void)"
+
+.PP
+Get the plugin extension handle to be used for loading plugins\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the extension handle, or null if it failed to load 
+.RE
+.PP
+
+.SS "METACALL_API const char* metacall_plugin_path (void)"
+
+.PP
+Get the plugin extension path to be used for accessing the plugins folder\&. 
+.PP
+\fBReturns\fP
+.RS 4
+String containing the core plugin path, or null if it failed to load the plugin extension 
+.RE
+.PP
+
 .SS "METACALL_API int metacall_destroy (void)"
 
 .PP
@@ -1695,7 +1790,82 @@ Zero if success, different from zero otherwise
 .RE
 .PP
 
-.SS "const METACALL_API char* metacall_print_info (void)"
+.SS "METACALL_API const struct \fBmetacall_version_type\fP* metacall_version (void)"
+
+.PP
+Provide the module version struct\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static struct containing unpacked version 
+.RE
+.PP
+
+.SS "METACALL_API uint32_t metacall_version_hex_make (unsigned int major, unsigned int minor, unsigned int patch)"
+
+.PP
+Provide the module version hexadecimal value with format 0xMMIIPPPP where M is @major, I is @minor and P is @patch\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImajor\fP Unsigned integer representing major version
+.br
+\fIminor\fP Unsigned integer representing minor version
+.br
+\fIpatch\fP Unsigned integer representing patch version
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Hexadecimal integer containing packed version 
+.RE
+.PP
+
+.SS "METACALL_API uint32_t metacall_version_hex (void)"
+
+.PP
+Provide the module version hexadecimal value with format 0xMMIIPPPP where M is major, I is minor and P is patch\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Hexadecimal integer containing packed version 
+.RE
+.PP
+
+.SS "METACALL_API const char* metacall_version_str (void)"
+
+.PP
+Provide the module version string\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static string containing module version 
+.RE
+.PP
+
+.SS "METACALL_API const char* metacall_version_revision (void)"
+
+.PP
+Provide the module version revision string\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static string containing module version revision 
+.RE
+.PP
+
+.SS "METACALL_API const char* metacall_version_name (void)"
+
+.PP
+Provide the module version name\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Static string containing module version name 
+.RE
+.PP
+
+.SS "METACALL_API const char* metacall_print_info (void)"
 
 .PP
 Provide the module information\&. 
@@ -1708,7 +1878,7 @@ Static string containing module information
 
 .SH "Variable Documentation"
 .PP 
-.SS "METACALL_API void* metacall_null_args[1]"
+.SS "METACALL_API void* metacall_null_args[1]\fC [extern]\fP"
 
 .SH "Author"
 .PP 

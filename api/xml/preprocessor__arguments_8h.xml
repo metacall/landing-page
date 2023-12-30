@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="preprocessor__arguments_8h" kind="file" language="C++">
     <compoundname>preprocessor_arguments.h</compoundname>
     <includes local="no">preprocessor/preprocessor_api.h</includes>
@@ -96,29 +96,37 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="8">
+      <node id="3">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
+      <node id="9">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>preprocessor_detection.h</label>
         <link refid="preprocessor__detection_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>preprocessor.h</label>
         <link refid="preprocessor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>preprocessor_stringify.h</label>
         <link refid="preprocessor__stringify_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>preprocessor_comparison.h</label>
         <link refid="preprocessor__comparison_8h"/>
         <childnode refid="2" relation="include">
@@ -129,25 +137,25 @@
         <link refid="preprocessor__arguments_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>preprocessor_for.h</label>
         <link refid="preprocessor__for_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>log_preprocessor.h</label>
         <link refid="log__preprocessor_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -332,7 +340,7 @@
       <memberdef kind="define" id="preprocessor__arguments_8h_1aa37b728025c5926b9460c0de9b442188" prot="public" static="no">
         <name>PREPROCESSOR_ARGS_NOT_EMPTY_IMPL</name>
         <param><defname>...</defname></param>
-        <initializer><ref refid="preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949" kindref="member">PREPROCESSOR_ARGS_EMPTY</ref>(__VA_ARGS__)</initializer>
+        <initializer>	<ref refid="preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949" kindref="member">PREPROCESSOR_ARGS_EMPTY</ref>(__VA_ARGS__)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -344,7 +352,7 @@
       <memberdef kind="define" id="preprocessor__arguments_8h_1ae64e56c0edc8929c963355428b6a7d05" prot="public" static="no">
         <name>PREPROCESSOR_ARGS_NOT_EMPTY</name>
         <param><defname>...</defname></param>
-        <initializer><ref refid="preprocessor__boolean_8h_1a0fafbd8f5118311b9b879df31eaa3a32" kindref="member">PREPROCESSOR_NOT</ref>(<ref refid="preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949" kindref="member">PREPROCESSOR_ARGS_EMPTY</ref>(__VA_ARGS__))</initializer>
+        <initializer>	<ref refid="preprocessor__boolean_8h_1a0fafbd8f5118311b9b879df31eaa3a32" kindref="member">PREPROCESSOR_NOT</ref>(<ref refid="preprocessor__arguments_8h_1aa1141bebf0e4e41459354af76f572949" kindref="member">PREPROCESSOR_ARGS_EMPTY</ref>(__VA_ARGS__))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -371,7 +379,7 @@
         <param><defname>_2</defname></param>
         <param><defname>_3</defname></param>
         <param><defname>_4</defname></param>
-        <initializer>_0 ## _1 ## _2 ## _3 ## _4</initializer>
+        <initializer>	_0 ## _1 ## _2 ## _3 ## _4</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -386,7 +394,7 @@
         <param><defname>_1</defname></param>
         <param><defname>_2</defname></param>
         <param><defname>_3</defname></param>
-        <initializer>PREPROCESSOR_ARGS_COMMA(<ref refid="preprocessor__arguments_8h_1a1bd669a52a1eb4d3be63a86e1ccd0158" kindref="member">PREPROCESSOR_ARGS_EMPTY_CASE</ref>(PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_, _0, _1, _2, _3))</initializer>
+        <initializer>	PREPROCESSOR_ARGS_COMMA(<ref refid="preprocessor__arguments_8h_1a1bd669a52a1eb4d3be63a86e1ccd0158" kindref="member">PREPROCESSOR_ARGS_EMPTY_CASE</ref>(PREPROCESSOR_ARGS_EMPTY_CASE_IMPL_, _0, _1, _2, _3))</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -401,7 +409,7 @@
         <param><defname>_1</defname></param>
         <param><defname>_2</defname></param>
         <param><defname>_3</defname></param>
-        <initializer><ref refid="preprocessor__arguments_8h_1a634223e93424935af82e07ca2e6a85a6" kindref="member">PREPROCESSOR_ARGS_EMPTY_IMPL_I</ref>(_0, _1, _2, _3)</initializer>
+        <initializer>	<ref refid="preprocessor__arguments_8h_1a634223e93424935af82e07ca2e6a85a6" kindref="member">PREPROCESSOR_ARGS_EMPTY_IMPL_I</ref>(_0, _1, _2, _3)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -437,7 +445,7 @@
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Preprocessor<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>header-only<sp/>preprocessor<sp/>metaprogramming<sp/>library.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -539,7 +547,7 @@
 <codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_ARGS_COMMA(PREPROCESSOR_COMMA_VARIADIC<sp/>__VA_ARGS__<sp/>())<sp/>\</highlight></codeline>
 <codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)<sp/>||<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>PREPROCESSOR_ARGS_COUNT_IMPL(...)<sp/>\</highlight></codeline>
 <codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_ARGS_N_IMPL(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>PREPROCESSOR_ARGS_COUNT(...)<sp/>\</highlight></codeline>
@@ -625,7 +633,7 @@
 <codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>PREPROCESSOR_ARGS_COMMA(...)<sp/>\</highlight></codeline>
 <codeline lineno="191"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_ARGS_COUNT_IMPL(__VA_ARGS__,<sp/>PREPROCESSOR_ARGS_COMMA_SEQ_IMPL())</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>!defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>PREPROCESSOR_ARGS_COUNT_PREFIX__PREPROCESSOR_ARGS_COUNT_POSTFIX<sp/>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>PREPROCESSOR_ARGS_COUNT_IMPL(expr)<sp/>PREPROCESSOR_ARGS_N_IMPL<sp/>expr</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>PREPROCESSOR_ARGS_COUNT(...)<sp/>\</highlight></codeline>

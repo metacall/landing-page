@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="reflect__accessor_8h" kind="file" language="C++">
     <compoundname>reflect_accessor.h</compoundname>
     <includes refid="reflect__attribute__decl_8h" local="no">reflect/reflect_attribute_decl.h</includes>
@@ -32,22 +32,26 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="2">
         <label>reflect_class.h</label>
         <link refid="reflect__class_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>reflect_object.h</label>
         <link refid="reflect__object_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -55,10 +59,10 @@
         <link refid="reflect__accessor_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>reflect_value_type.h</label>
         <link refid="reflect__value__type_8h"/>
         <childnode refid="3" relation="include">
@@ -67,6 +71,8 @@
       <node id="3">
         <label>reflect.h</label>
         <link refid="reflect_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="structaccessor__type" prot="public">accessor_type</innerclass>
@@ -96,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_accessor.h" line="39" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_accessor.h" bodystart="38" bodyend="42"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_accessor.h" line="38" column="1" bodyfile="/home/runner/work/landing-page/landing-page/core/source/reflect/include/reflect/reflect_accessor.h" bodystart="39" bodyend="42"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -104,11 +110,11 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="1" refid="structaccessor__type_1a0dbd00c629ad9ddf112937170a4b23c8" refkind="member"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Reflect<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>library<sp/>for<sp/>provide<sp/>reflection<sp/>and<sp/>metadata<sp/>representation.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
 <codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
@@ -144,12 +150,12 @@
 <codeline lineno="38" refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913" kindref="member">accessor_type_id</ref></highlight></codeline>
 <codeline lineno="39"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="40" refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913a8d580ee7d45e70031027aed5ff8ca590" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913a8d580ee7d45e70031027aed5ff8ca590" kindref="member">ACCESSOR_TYPE_STATIC</ref><sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="41" refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913abd46b516a727a0eea19ba80e1ae2b37b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913abd46b516a727a0eea19ba80e1ae2b37b" kindref="member">ACCESSOR_TYPE_DYNAMIC</ref><sp/>=<sp/>1</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913abd46b516a727a0eea19ba80e1ae2b37b" kindref="member">ACCESSOR_TYPE_DYNAMIC</ref><sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="42" refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913abd46b516a727a0eea19ba80e1ae2b37b" refkind="member"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44" refid="structaccessor__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structaccessor__type" kindref="compound">accessor_type</ref></highlight></codeline>
 <codeline lineno="45"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46" refid="structaccessor__type_1a0dbd00c629ad9ddf112937170a4b23c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913" kindref="member">accessor_type_id</ref><sp/><ref refid="structaccessor__type_1a0dbd00c629ad9ddf112937170a4b23c8" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="reflect__accessor_8h_1ae34f7eff77ff1f0f939e4f2977aae913" kindref="member">accessor_type_id</ref><sp/><ref refid="structaccessor__type_1a0dbd00c629ad9ddf112937170a4b23c8" kindref="member">id</ref>;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>In<sp/>addition<sp/>to<sp/>attribute,<sp/>there<sp/>is<sp/>constructor<sp/>and<sp/>method</highlight></codeline>
@@ -161,7 +167,7 @@
 <codeline lineno="55" refid="structaccessor__type_1a34265faa8873f570dc73ad9a13b4f249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="reflect__constructor__decl_8h_1a9edf500bd9dfafb0cb414025ba049fc1" kindref="member">constructor</ref><sp/><ref refid="structaccessor__type_1a34265faa8873f570dc73ad9a13b4f249" kindref="member">ctor</ref>;</highlight></codeline>
 <codeline lineno="56" refid="structaccessor__type_1aef2469d1277fee2a69bb75069af53504" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="reflect__attribute__decl_8h_1a808d1f9077283c15d038d6776906739b" kindref="member">attribute</ref><sp/><ref refid="structaccessor__type_1aef2469d1277fee2a69bb75069af53504" kindref="member">attr</ref>;</highlight></codeline>
 <codeline lineno="57" refid="structaccessor__type_1ad1e7326b6736c3aaefdad0e25d0f6475" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="reflect__method__decl_8h_1ab9667ce29073b9704dc2c613c3ca3122" kindref="member">method</ref><sp/><ref refid="structaccessor__type_1ad1e7326b6736c3aaefdad0e25d0f6475" kindref="member">m</ref>;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structaccessor__type_1a35aa52c7018931a0dd94ec6981ba57d6" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="58" refid="structaccessor__type_1a35aa52c7018931a0dd94ec6981ba57d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structaccessor__type_1a35aa52c7018931a0dd94ec6981ba57d6" kindref="member">data</ref>;</highlight></codeline>
 <codeline lineno="59"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>

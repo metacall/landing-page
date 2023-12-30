@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_metacall__error_8h" xml:lang="en-US">
+<title>metacall_error.h File Reference</title>
+<indexterm><primary>metacall_error.h</primary></indexterm>
+<programlisting>#include &lt;metacall/metacall_api.h&gt;
+#include &lt;stdint.h&gt;
+</programlisting>Include dependency graph for metacall_error.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__error_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="metacall__error_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structmetacall__exception__type">metacall_exception</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>METACALL_API int <link linkend="_metacall__error_8h_1ad625b3c239283e3c12756f4771c29c02">metacall_error_from_value</link> (void *v, metacall_exception ex)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall__error_8h_1a274ab562da16a9a35c27d7b67f448fd2">metacall_error_last</link> (metacall_exception ex)</para>
+</listitem>
+            <listitem><para>METACALL_API void <link linkend="_metacall__error_8h_1a88937f1af9da6218448382ba9f0a2343">metacall_error_clear</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_metacall__error_8h_1ad625b3c239283e3c12756f4771c29c02"/>    <section>
+    <title>metacall_error_from_value()</title>
+<indexterm><primary>metacall_error_from_value</primary><secondary>metacall_error.h</secondary></indexterm>
+<indexterm><primary>metacall_error.h</primary><secondary>metacall_error_from_value</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_error_from_value (void * v, metacall_exception ex)</computeroutput></para><para>
+
+<para>Retrieve the exception from a value, it can be either a throwable value with an exception inside or an exception itself. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>v</entry>
+                                <entry>
+<para>Value that represents the exception to be retrieved</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>ex</entry>
+                                <entry>
+<para>Exception that will be used as out parameter, the lifetime of the struct fields is attached to @v</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__error_8h_1a274ab562da16a9a35c27d7b67f448fd2"/>    <section>
+    <title>metacall_error_last()</title>
+<indexterm><primary>metacall_error_last</primary><secondary>metacall_error.h</secondary></indexterm>
+<indexterm><primary>metacall_error.h</primary><secondary>metacall_error_last</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_error_last (metacall_exception ex)</computeroutput></para><para>
+
+<para>Retrieve last error that has happened after a call to any API from MetaCall. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>ex</entry>
+                                <entry>
+<para>Exception that will be used as out parameter, the lifetime of the struct fields is attached to the internal MetaCall exception</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero if success, different from zero otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall__error_8h_1a88937f1af9da6218448382ba9f0a2343"/>    <section>
+    <title>metacall_error_clear()</title>
+<indexterm><primary>metacall_error_clear</primary><secondary>metacall_error.h</secondary></indexterm>
+<indexterm><primary>metacall_error.h</primary><secondary>metacall_error_clear</secondary></indexterm>
+<para><computeroutput>METACALL_API void metacall_error_clear (void )</computeroutput></para><para>
+
+<para>Clear last error that has happened after a call to any API from MetaCall. </para>
+</para>
+</section>
+</section>
+</section>

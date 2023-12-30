@@ -1,4 +1,4 @@
-.TH "adt_vector.h" 3 "Tue Oct 26 2021" "Version 0.1.0.44b1ab3b98a6" "MetaCall" \" -*- nroff -*-
+.TH "adt_vector.h" 3 "Sat Dec 30 2023" "Version 0.7.5.34b28423138e" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -15,31 +15,31 @@ adt_vector.h
 
 .in +1c
 .ti -1c
-.RI "#define \fBvector_create_type\fP(\fBtype_name\fP)   \fBvector_create\fP(sizeof(\fBtype_name\fP))"
+.RI "#define \fBvector_create_type\fP(\fBtype_name\fP)   	\fBvector_create\fP(sizeof(\fBtype_name\fP))"
 .br
 .ti -1c
-.RI "#define \fBvector_create_reserve_type\fP(\fBtype_name\fP,  capacity)   \fBvector_create_reserve\fP(sizeof(\fBtype_name\fP), capacity)"
+.RI "#define \fBvector_create_reserve_type\fP(\fBtype_name\fP,  capacity)   	\fBvector_create_reserve\fP(sizeof(\fBtype_name\fP), capacity)"
 .br
 .ti -1c
-.RI "#define \fBvector_front_type\fP(v,  \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_front\fP(v)))"
+.RI "#define \fBvector_front_type\fP(v,  \fBtype_name\fP)   	(*((\fBtype_name\fP *)\fBvector_front\fP(v)))"
 .br
 .ti -1c
-.RI "#define \fBvector_back_type\fP(v,  \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_back\fP(v)))"
+.RI "#define \fBvector_back_type\fP(v,  \fBtype_name\fP)   	(*((\fBtype_name\fP *)\fBvector_back\fP(v)))"
 .br
 .ti -1c
-.RI "#define \fBvector_at_type\fP(v,  position,  \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_at\fP(v, position)))"
+.RI "#define \fBvector_at_type\fP(v,  position,  \fBtype_name\fP)   	(*((\fBtype_name\fP *)\fBvector_at\fP(v, position)))"
 .br
 .ti -1c
-.RI "#define \fBvector_set_var\fP(v,  position,  variable)   \fBvector_set\fP(v, position, &variable)"
+.RI "#define \fBvector_set_var\fP(v,  position,  variable)   	\fBvector_set\fP(v, position, &variable)"
 .br
 .ti -1c
-.RI "#define \fBvector_push_back_var\fP(v,  variable)   \fBvector_push_back\fP(v, &variable)"
+.RI "#define \fBvector_push_back_var\fP(v,  variable)   	\fBvector_push_back\fP(v, &variable)"
 .br
 .ti -1c
-.RI "#define \fBvector_push_front_var\fP(v,  variable)   \fBvector_push_front\fP(v, &variable)"
+.RI "#define \fBvector_push_front_var\fP(v,  variable)   	\fBvector_push_front\fP(v, &variable)"
 .br
 .ti -1c
-.RI "#define \fBvector_insert_var\fP(v,  position,  variable)   \fBvector_insert\fP(v, position, &variable)"
+.RI "#define \fBvector_insert_var\fP(v,  position,  variable)   	\fBvector_insert\fP(v, position, &variable)"
 .br
 .ti -1c
 .RI "#define \fBvector_set_const\fP(v,  position,  constant,  \fBtype_name\fP)"
@@ -136,7 +136,7 @@ adt_vector.h
 .in -1c
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define vector_create_type(\fBtype_name\fP)   \fBvector_create\fP(sizeof(\fBtype_name\fP))"
+.SS "#define vector_create_type(\fBtype_name\fP)   	\fBvector_create\fP(sizeof(\fBtype_name\fP))"
 
 .PP
 Create a vector in memory\&. 
@@ -152,7 +152,7 @@ A pointer to the vector memory block
 .RE
 .PP
 
-.SS "#define vector_create_reserve_type(\fBtype_name\fP, capacity)   \fBvector_create_reserve\fP(sizeof(\fBtype_name\fP), capacity)"
+.SS "#define vector_create_reserve_type(\fBtype_name\fP, capacity)   	\fBvector_create_reserve\fP(sizeof(\fBtype_name\fP), capacity)"
 
 .PP
 Create a vector with @capacity elements preallocated\&. 
@@ -170,7 +170,7 @@ A pointer to the vector memory block
 .RE
 .PP
 
-.SS "#define vector_front_type(v, \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_front\fP(v)))"
+.SS "#define vector_front_type(v, \fBtype_name\fP)   	(*((\fBtype_name\fP *)\fBvector_front\fP(v)))"
 
 .PP
 Access to the first element in vector\&. 
@@ -188,7 +188,7 @@ Pointer to the first element
 .RE
 .PP
 
-.SS "#define vector_back_type(v, \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_back\fP(v)))"
+.SS "#define vector_back_type(v, \fBtype_name\fP)   	(*((\fBtype_name\fP *)\fBvector_back\fP(v)))"
 
 .PP
 Access to the last element in vector\&. 
@@ -206,7 +206,7 @@ Pointer to the last element
 .RE
 .PP
 
-.SS "#define vector_at_type(v, position, \fBtype_name\fP)   (*((\fBtype_name\fP *)\fBvector_at\fP(v, position)))"
+.SS "#define vector_at_type(v, position, \fBtype_name\fP)   	(*((\fBtype_name\fP *)\fBvector_at\fP(v, position)))"
 
 .PP
 Access to object at @position where: [0 <= @position <= vector_size(v) - 1 ]\&. 
@@ -226,7 +226,7 @@ Pointer to the element at @position
 .RE
 .PP
 
-.SS "#define vector_set_var(v, position, variable)   \fBvector_set\fP(v, position, &variable)"
+.SS "#define vector_set_var(v, position, variable)   	\fBvector_set\fP(v, position, &variable)"
 
 .PP
 Sets a variable object at @position to the same object pointed by @element\&. 
@@ -243,7 +243,7 @@ Sets a variable object at @position to the same object pointed by @element\&.
 .RE
 .PP
 
-.SS "#define vector_push_back_var(v, variable)   \fBvector_push_back\fP(v, &variable)"
+.SS "#define vector_push_back_var(v, variable)   	\fBvector_push_back\fP(v, &variable)"
 
 .PP
 Adds a variable object at the end of vector (increments allocated memory if neccessary) 
@@ -258,7 +258,7 @@ Adds a variable object at the end of vector (increments allocated memory if necc
 .RE
 .PP
 
-.SS "#define vector_push_front_var(v, variable)   \fBvector_push_front\fP(v, &variable)"
+.SS "#define vector_push_front_var(v, variable)   	\fBvector_push_front\fP(v, &variable)"
 
 .PP
 Adds a variable object in first position of vector (increments allocated memory if neccessary) 
@@ -273,7 +273,7 @@ Adds a variable object in first position of vector (increments allocated memory 
 .RE
 .PP
 
-.SS "#define vector_insert_var(v, position, variable)   \fBvector_insert\fP(v, position, &variable)"
+.SS "#define vector_insert_var(v, position, variable)   	\fBvector_insert\fP(v, position, &variable)"
 
 .PP
 Adds a variable object in @position where: [ 0 <= @position <= vector_size(v) - 1 ] Tail objects from @position will be moved (increments allocated memory if neccessary) 
@@ -294,12 +294,10 @@ Adds a variable object in @position where: [ 0 <= @position <= vector_size(v) - 
 \fBValue:\fP
 .PP
 .nf
- do                                                            \
-    {                                                             \
-        type_name macro_vector_type_const_to_var = constant;      \\
-                                                                  \\
-		vector_set(v, position, &macro_vector_type_const_to_var); \
-                                                                  \
+ do \
+    { \
+        type_name macro_vector_type_const_to_var = constant; \
+        vector_set(v, position, &macro_vector_type_const_to_var); \
     } while (0)
 .fi
 .PP
@@ -321,12 +319,10 @@ Sets a constant object at @position to the same object pointed by @element\&.
 \fBValue:\fP
 .PP
 .nf
-  do                                                        \
-    {                                                         \
-        type_name macro_vector_type_const_to_var = constant;  \\
-                                                              \\
-		vector_push_back(v, &macro_vector_type_const_to_var); \
-                                                              \
+  do \
+    { \
+        type_name macro_vector_type_const_to_var = constant; \
+        vector_push_back(v, &macro_vector_type_const_to_var); \
     } while (0)
 .fi
 .PP
@@ -346,12 +342,10 @@ Adds a constant object at the end of vector (increments allocated memory if necc
 \fBValue:\fP
 .PP
 .nf
- do                                                         \
-    {                                                          \
-        type_name macro_vector_type_const_to_var = constant;   \\
-                                                               \\
-		vector_push_front(v, &macro_vector_type_const_to_var); \
-                                                               \
+ do \
+    { \
+        type_name macro_vector_type_const_to_var = constant; \
+        vector_push_front(v, &macro_vector_type_const_to_var); \
     } while (0)
 .fi
 .PP
@@ -371,12 +365,10 @@ Adds a constant object in first position of vector (increments allocated memory 
 \fBValue:\fP
 .PP
 .nf
-   do                                                               \
-    {                                                                \
-        type_name macro_vector_type_const_to_var = constant;         \\
-                                                                     \\
-		vector_insert(v, position, &macro_vector_type_const_to_var); \
-                                                                     \
+   do \
+    { \
+        type_name macro_vector_type_const_to_var = constant; \
+        vector_insert(v, position, &macro_vector_type_const_to_var); \
     } while (0)
 .fi
 .PP

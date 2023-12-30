@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="adt__trie_8h" kind="file" language="C++">
     <compoundname>adt_trie.h</compoundname>
     <includes local="no">adt/adt_api.h</includes>
@@ -14,8 +14,13 @@
         <link refid="adt__hash_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
         <label>stdlib.h</label>
       </node>
       <node id="3">
@@ -33,20 +38,20 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>adt/adt_api.h</label>
       </node>
-      <node id="5">
+      <node id="6">
         <label>adt/adt_vector.h</label>
         <link refid="adt__vector_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -77,7 +82,7 @@
         <location file="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" line="34" column="24" bodyfile="/home/runner/work/landing-page/landing-page/core/source/adt/include/adt/adt_trie.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" prot="public" static="no">
-        <type><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref></type>
+        <type><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref></type>
         <definition>typedef hash trie_hash</definition>
         <argsstring></argsstring>
         <name>trie_hash</name>
@@ -483,7 +488,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Abstract<sp/>Data<sp/>Type<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>abstract<sp/>data<sp/>type<sp/>library<sp/>providing<sp/>generic<sp/>containers.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -516,7 +521,7 @@
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34" refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">trie_type<sp/>*<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref>;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a07b56df155aa9542aae3f8a285b2f9e6" kindref="member">hash</ref><sp/><ref refid="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" kindref="member">trie_hash</ref>;</highlight></codeline>
+<codeline lineno="36" refid="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__hash_8h_1a985e7c56889019873a304444f88c8d6a" kindref="member">hash</ref><sp/><ref refid="adt__trie_8h_1ab8c8392df0a62886d7d670908aca7dac" kindref="member">trie_hash</ref>;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38" refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="adt__comparable_8h_1ab14572a2d774175f7248ef53459b45ef" kindref="member">comparable</ref><sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref>;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
@@ -532,33 +537,33 @@
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1ace480faefba0d60a456e5488cbbe34ea" kindref="member">trie_create</ref>(<ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
+<codeline lineno="52" refid="adt__trie_8h_1ace480faefba0d60a456e5488cbbe34ea" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1ace480faefba0d60a456e5488cbbe34ea" kindref="member">trie_create</ref>(<ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1acd742e8bd78713c67222448135134e5a" kindref="member">trie_create_reserve</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>capacity,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>key_limit,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>depth_limit,<sp/><ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
+<codeline lineno="54" refid="adt__trie_8h_1acd742e8bd78713c67222448135134e5a" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1acd742e8bd78713c67222448135134e5a" kindref="member">trie_create_reserve</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>capacity,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>key_limit,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>depth_limit,<sp/><ref refid="adt__trie_8h_1aa74044b4a37abcba9705e137201de7a4" kindref="member">trie_cb_hash</ref><sp/>hash_cb,<sp/><ref refid="adt__trie_8h_1a5042b2f6f945ad840719384c2f0e677f" kindref="member">trie_cb_compare</ref><sp/>compare_cb);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1aa459e92fd29efa3b108fd43e24ad86a9" kindref="member">trie_size</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="56" refid="adt__trie_8h_1aa459e92fd29efa3b108fd43e24ad86a9" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1aa459e92fd29efa3b108fd43e24ad86a9" kindref="member">trie_size</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a9e53e530c646d5036ab451d5cfe19b69" kindref="member">trie_capacity</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="58" refid="adt__trie_8h_1a9e53e530c646d5036ab451d5cfe19b69" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a9e53e530c646d5036ab451d5cfe19b69" kindref="member">trie_capacity</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1ab3a999ef9a696b8bcba287bba844df75" kindref="member">trie_insert</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys,<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="60" refid="adt__trie_8h_1ab3a999ef9a696b8bcba287bba844df75" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1ab3a999ef9a696b8bcba287bba844df75" kindref="member">trie_insert</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys,<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="reflect__value_8h_1a54c528809d1b8a4d229f655f96b2433a" kindref="member">value</ref>);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="adt__trie_8h_1af73239b8dee66757d5ecbc5ff8110d5a" kindref="member">trie_get</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys);</highlight></codeline>
+<codeline lineno="62" refid="adt__trie_8h_1af73239b8dee66757d5ecbc5ff8110d5a" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="adt__trie_8h_1af73239b8dee66757d5ecbc5ff8110d5a" kindref="member">trie_get</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="adt__trie_8h_1ab88d59d5c24291946b62c6e53f90cf4e" kindref="member">trie_remove</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys);</highlight></codeline>
+<codeline lineno="64" refid="adt__trie_8h_1ab88d59d5c24291946b62c6e53f90cf4e" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1ada14186252ab60115e4dc0017ede3ce9" kindref="member">trie_value</ref><sp/><ref refid="adt__trie_8h_1ab88d59d5c24291946b62c6e53f90cf4e" kindref="member">trie_remove</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>keys);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a83ec8301fa64e2f07de788362cab315b" kindref="member">trie_iterate_recursive</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref><sp/>args);</highlight></codeline>
+<codeline lineno="66" refid="adt__trie_8h_1a83ec8301fa64e2f07de788362cab315b" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a83ec8301fa64e2f07de788362cab315b" kindref="member">trie_iterate_recursive</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref><sp/>args);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a4780dad91d0124f849781a7c9677842b" kindref="member">trie_iterate</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref><sp/>args);</highlight></codeline>
+<codeline lineno="68" refid="adt__trie_8h_1a4780dad91d0124f849781a7c9677842b" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a4780dad91d0124f849781a7c9677842b" kindref="member">trie_iterate</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1adb0189e8df46e679519fe15a269e4130" kindref="member">trie_cb_iterate</ref><sp/>iterate_cb,<sp/><ref refid="adt__trie_8h_1af24c089862b5865cee995d834accbb9a" kindref="member">trie_cb_iterate_args</ref><sp/>args);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a96afe437e9e3f50a6b7736d2efb63781" kindref="member">trie_append</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>dest,<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>src);</highlight></codeline>
+<codeline lineno="70" refid="adt__trie_8h_1a96afe437e9e3f50a6b7736d2efb63781" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a96afe437e9e3f50a6b7736d2efb63781" kindref="member">trie_append</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>dest,<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>src);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a7b7cea299acb515f25ba560f5d9ce077" kindref="member">trie_clear</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="72" refid="adt__trie_8h_1a7b7cea299acb515f25ba560f5d9ce077" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a7b7cea299acb515f25ba560f5d9ce077" kindref="member">trie_clear</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a931493cfc03d05321988116ed51f1ef7" kindref="member">trie_prefixes</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref><sp/>key,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>prefixes);</highlight></codeline>
+<codeline lineno="74" refid="adt__trie_8h_1a931493cfc03d05321988116ed51f1ef7" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a931493cfc03d05321988116ed51f1ef7" kindref="member">trie_prefixes</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref><sp/>key,<sp/><ref refid="adt__vector_8h_1addb8a5a5ce3ff4924de759607f4a7a8f" kindref="member">vector</ref><sp/>prefixes);</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1a70a6d5ed35e9bf656a677785866cddde" kindref="member">trie_suffixes</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref><sp/>key);</highlight></codeline>
+<codeline lineno="76" refid="adt__trie_8h_1a70a6d5ed35e9bf656a677785866cddde" refkind="member"><highlight class="normal">ADT_API<sp/><ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/><ref refid="adt__trie_8h_1a70a6d5ed35e9bf656a677785866cddde" kindref="member">trie_suffixes</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t,<sp/><ref refid="adt__trie_8h_1a915a87e1342541e40a567f8abea11b44" kindref="member">trie_key</ref><sp/>key);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a0f224cfe6db8901ab71a9992eb7a09fc" kindref="member">trie_destroy</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
+<codeline lineno="78" refid="adt__trie_8h_1a0f224cfe6db8901ab71a9992eb7a09fc" refkind="member"><highlight class="normal">ADT_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="adt__trie_8h_1a0f224cfe6db8901ab71a9992eb7a09fc" kindref="member">trie_destroy</ref>(<ref refid="adt__trie_8h_1a9ec8df0516e6be2086a47876aa3c23ea" kindref="member">trie</ref><sp/>t);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal">}</highlight></codeline>

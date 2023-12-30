@@ -1,14 +1,18 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="log__policy__format__custom_8h" kind="file" language="C++">
     <compoundname>log_policy_format_custom.h</compoundname>
     <includes local="no">log/log_api.h</includes>
     <includes refid="log__policy_8h" local="no">log/log_policy.h</includes>
     <includes local="no">stdarg.h</includes>
+    <includes local="no">stdint.h</includes>
     <includedby refid="log__policy__format_8h" local="no">log_policy_format.h</includedby>
     <incdepgraph>
       <node id="6">
         <label>stdarg.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
       </node>
       <node id="5">
         <label>stdlib.h</label>
@@ -43,12 +47,20 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>plugin_interface.hpp</label>
+        <link refid="plugin__interface_8hpp"/>
+      </node>
       <node id="3">
         <label>log.h</label>
         <link refid="log_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>log_policy_format.h</label>
@@ -66,24 +78,11 @@
     <innerclass refid="structlog__policy__format__custom__va__list__type" prot="public">log_policy_format_custom_va_list_type</innerclass>
     <innerclass refid="structlog__policy__format__custom__ctor__type" prot="public">log_policy_format_custom_ctor_type</innerclass>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="log__policy__format__custom_8h_1a719a0c26ebdb7eea45b16a67ebe30243" prot="public" static="no">
+      <memberdef kind="typedef" id="log__policy__format__custom_8h_1aaf79835e3ef0a7343e0b71510220d568" prot="public" static="no">
         <type>size_t(*</type>
-        <definition>typedef size_t(* log_policy_format_custom_size_ptr) (void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</definition>
-        <argsstring>)(void *, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</argsstring>
+        <definition>typedef size_t(* log_policy_format_custom_size_ptr) (void *, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</definition>
+        <argsstring>)(void *, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</argsstring>
         <name>log_policy_format_custom_size_ptr</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" line="34" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="log__policy__format__custom_8h_1a54d4075733047339a7252d890e452f22" prot="public" static="no">
-        <type>size_t(*</type>
-        <definition>typedef size_t(* log_policy_format_custom_serialize_ptr) (void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</definition>
-        <argsstring>)(void *, void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</argsstring>
-        <name>log_policy_format_custom_serialize_ptr</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -92,11 +91,11 @@
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" line="35" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" bodystart="35" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="log__policy__format__custom_8h_1a832db9264c0a4a03ff8ebe564450a834" prot="public" static="no">
+      <memberdef kind="typedef" id="log__policy__format__custom_8h_1ab915d8a160627f645bbe5e44d9b4087f" prot="public" static="no">
         <type>size_t(*</type>
-        <definition>typedef size_t(* log_policy_format_custom_deserialize_ptr) (void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</definition>
-        <argsstring>)(void *, const void *, const size_t, const char *, size_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</argsstring>
-        <name>log_policy_format_custom_deserialize_ptr</name>
+        <definition>typedef size_t(* log_policy_format_custom_serialize_ptr) (void *, void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</definition>
+        <argsstring>)(void *, void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</argsstring>
+        <name>log_policy_format_custom_serialize_ptr</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -104,6 +103,19 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" line="36" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__policy__format__custom_8h_1a35f6c2dbef904216c8d686688f91e6cb" prot="public" static="no">
+        <type>size_t(*</type>
+        <definition>typedef size_t(* log_policy_format_custom_deserialize_ptr) (void *, const void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</definition>
+        <argsstring>)(void *, const void *, const size_t, const char *, uint64_t, size_t, const char *, const char *, const char *, const char *, log_policy_format_custom_va_list)</argsstring>
+        <name>log_policy_format_custom_deserialize_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" line="37" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -121,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" line="55" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" declline="55" declcolumn="30"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" line="56" column="30" declfile="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h" declline="56" declcolumn="30"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -131,7 +143,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Logger<sp/>Library<sp/>by<sp/>Parra<sp/>Studios</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2021<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2016<sp/>-<sp/>2022<sp/>Vicente<sp/>Eduardo<sp/>Ferrer<sp/>Garcia<sp/>&lt;vic798@gmail.com&gt;</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>A<sp/>generic<sp/>logger<sp/>library<sp/>providing<sp/>application<sp/>execution<sp/>reports.</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -147,49 +159,50 @@
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="log__policy_8h" kindref="compound">log/log_policy.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__ctor__type" kindref="compound">log_policy_format_custom_ctor_type</ref>;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__va__list__type" kindref="compound">log_policy_format_custom_va_list_type</ref>;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__ctor__type" kindref="compound">log_policy_format_custom_ctor_type</ref><sp/>*log_policy_format_custom_ctor;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__va__list__type" kindref="compound">log_policy_format_custom_va_list_type</ref><sp/>*log_policy_format_custom_va_list;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="log__policy__format__custom_8h_1a719a0c26ebdb7eea45b16a67ebe30243" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>size_t<sp/>(*<ref refid="log__policy__format__custom_8h_1a719a0c26ebdb7eea45b16a67ebe30243" kindref="member">log_policy_format_custom_size_ptr</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>log_policy_format_custom_va_list);</highlight></codeline>
-<codeline lineno="35" refid="log__policy__format__custom_8h_1a54d4075733047339a7252d890e452f22" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>size_t<sp/>(*<ref refid="log__policy__format__custom_8h_1a54d4075733047339a7252d890e452f22" kindref="member">log_policy_format_custom_serialize_ptr</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>log_policy_format_custom_va_list);</highlight></codeline>
-<codeline lineno="36" refid="log__policy__format__custom_8h_1a832db9264c0a4a03ff8ebe564450a834" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>size_t<sp/>(*<ref refid="log__policy__format__custom_8h_1a832db9264c0a4a03ff8ebe564450a834" kindref="member">log_policy_format_custom_deserialize_ptr</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>size_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>log_policy_format_custom_va_list);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="structlog__policy__format__custom__va__list__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__va__list__type" kindref="compound">log_policy_format_custom_va_list_type</ref></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42" refid="structlog__policy__format__custom__va__list__type_1a4dc563ad83b6685384d25625ac06c100" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/><ref refid="structlog__policy__format__custom__va__list__type_1a4dc563ad83b6685384d25625ac06c100" kindref="member">va</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="structlog__policy__format__custom__ctor__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__ctor__type" kindref="compound">log_policy_format_custom_ctor_type</ref></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="47" refid="structlog__policy__format__custom__ctor__type_1af3c4b0fad42319c720e1a37155abd51c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structlog__policy__format__custom__ctor__type_1af3c4b0fad42319c720e1a37155abd51c" kindref="member">context</ref>;</highlight></codeline>
-<codeline lineno="48" refid="structlog__policy__format__custom__ctor__type_1a932bb77b804e0e921f6264e571d8fd00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__format__custom_8h_1a719a0c26ebdb7eea45b16a67ebe30243" kindref="member">log_policy_format_custom_size_ptr</ref><sp/><ref refid="structlog__policy__format__custom__ctor__type_1a932bb77b804e0e921f6264e571d8fd00" kindref="member">format_size</ref>;</highlight></codeline>
-<codeline lineno="49" refid="structlog__policy__format__custom__ctor__type_1a3e3f4c4e480e8939979668c11baa87ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__format__custom_8h_1a54d4075733047339a7252d890e452f22" kindref="member">log_policy_format_custom_serialize_ptr</ref><sp/><ref refid="structlog__policy__format__custom__ctor__type_1a3e3f4c4e480e8939979668c11baa87ec" kindref="member">format_serialize</ref>;</highlight></codeline>
-<codeline lineno="50" refid="structlog__policy__format__custom__ctor__type_1aabf50893bb0567799b6308c44b8a4d40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__format__custom_8h_1a832db9264c0a4a03ff8ebe564450a834" kindref="member">log_policy_format_custom_deserialize_ptr</ref><sp/><ref refid="structlog__policy__format__custom__ctor__type_1aabf50893bb0567799b6308c44b8a4d40" kindref="member">format_deserialize</ref>;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__format__custom_8h_1ae674265b627149eeb37ad6af66a93973" kindref="member">log_policy_format_custom_interface</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_POLICY_FORMAT_CUSTOM_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Forward<sp/>Declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__ctor__type" kindref="compound">log_policy_format_custom_ctor_type</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__va__list__type" kindref="compound">log_policy_format_custom_va_list_type</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Type<sp/>Definitions<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__ctor__type" kindref="compound">log_policy_format_custom_ctor_type</ref><sp/>*log_policy_format_custom_ctor;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__va__list__type" kindref="compound">log_policy_format_custom_va_list_type</ref><sp/>*log_policy_format_custom_va_list;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="log__policy__format__custom_8h_1aaf79835e3ef0a7343e0b71510220d568" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>size_t<sp/>(*<ref refid="log__policy__format__custom_8h_1aaf79835e3ef0a7343e0b71510220d568" kindref="member">log_policy_format_custom_size_ptr</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>uint64_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>log_policy_format_custom_va_list);</highlight></codeline>
+<codeline lineno="36" refid="log__policy__format__custom_8h_1ab915d8a160627f645bbe5e44d9b4087f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>size_t<sp/>(*<ref refid="log__policy__format__custom_8h_1ab915d8a160627f645bbe5e44d9b4087f" kindref="member">log_policy_format_custom_serialize_ptr</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>uint64_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>log_policy_format_custom_va_list);</highlight></codeline>
+<codeline lineno="37" refid="log__policy__format__custom_8h_1a35f6c2dbef904216c8d686688f91e6cb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>size_t<sp/>(*<ref refid="log__policy__format__custom_8h_1a35f6c2dbef904216c8d686688f91e6cb" kindref="member">log_policy_format_custom_deserialize_ptr</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>uint64_t,<sp/>size_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>log_policy_format_custom_va_list);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Member<sp/>Data<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structlog__policy__format__custom__va__list__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__va__list__type" kindref="compound">log_policy_format_custom_va_list_type</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43" refid="structlog__policy__format__custom__va__list__type_1a4dc563ad83b6685384d25625ac06c100" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>va_list<sp/><ref refid="structlog__policy__format__custom__va__list__type_1a4dc563ad83b6685384d25625ac06c100" kindref="member">va</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structlog__policy__format__custom__ctor__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlog__policy__format__custom__ctor__type" kindref="compound">log_policy_format_custom_ctor_type</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="structlog__policy__format__custom__ctor__type_1af3c4b0fad42319c720e1a37155abd51c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structlog__policy__format__custom__ctor__type_1af3c4b0fad42319c720e1a37155abd51c" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structlog__policy__format__custom__ctor__type_1a932bb77b804e0e921f6264e571d8fd00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__format__custom_8h_1aaf79835e3ef0a7343e0b71510220d568" kindref="member">log_policy_format_custom_size_ptr</ref><sp/><ref refid="structlog__policy__format__custom__ctor__type_1a932bb77b804e0e921f6264e571d8fd00" kindref="member">format_size</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structlog__policy__format__custom__ctor__type_1a3e3f4c4e480e8939979668c11baa87ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__format__custom_8h_1ab915d8a160627f645bbe5e44d9b4087f" kindref="member">log_policy_format_custom_serialize_ptr</ref><sp/><ref refid="structlog__policy__format__custom__ctor__type_1a3e3f4c4e480e8939979668c11baa87ec" kindref="member">format_serialize</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structlog__policy__format__custom__ctor__type_1aabf50893bb0567799b6308c44b8a4d40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log__policy__format__custom_8h_1a35f6c2dbef904216c8d686688f91e6cb" kindref="member">log_policy_format_custom_deserialize_ptr</ref><sp/><ref refid="structlog__policy__format__custom__ctor__type_1aabf50893bb0567799b6308c44b8a4d40" kindref="member">format_deserialize</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Methods<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="log__policy__format__custom_8h_1ae674265b627149eeb37ad6af66a93973" refkind="member"><highlight class="normal">LOG_API<sp/>log_policy_interface<sp/><ref refid="log__policy__format__custom_8h_1ae674265b627149eeb37ad6af66a93973" kindref="member">log_policy_format_custom_interface</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LOG_POLICY_FORMAT_CUSTOM_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/log/include/log/log_policy_format_custom.h"/>
   </compounddef>
