@@ -11,7 +11,7 @@ Here is a table that would help you to find out the currently available projects
 | Project       | Skills                                       | Repository                                                          | Documentation                               |
 | ------------- | -------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------- |
 | core          | C, C++, Python, Javascript, Typescript, Ruby | [metacall/core](https://github.com/metacall/core)                   | [docs](/docs/docs.md)                       |
-| upload        | Typescript, Javascript                       | [metacall/upload](upload)                                           | [upload](upload.md)                         |
+| upload        | Typescript, Javascript                       | [metacall/deploy](https://github.com/metacall/deploy)               | [deploy](/docs/deploy.md)                         |
 | install       | BASH                                         | [metacall/install](https://github.com/metacall/install)             | [install](/docs/install.md)                 |
 | dlang-port    | D                                            | [metacall/dlang-port](https://github.com/metacall/dlang-port)       | [dlang-port](/docs/dlang-port.md)           |
 | php-port      | PHP                                          | [metacall/php-port](https://github.com/metacall/php-port)           | [php-port](/docs/php-port.md)               |
