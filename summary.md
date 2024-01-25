@@ -20,6 +20,10 @@
 
 - [Community](/docs/community.md)
 
+---
+
+- [**FAQ**](/docs/faq.md)
+
 <!-- ---
 
 - [Changelog](changelog.md)
