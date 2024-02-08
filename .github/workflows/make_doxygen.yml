@@ -25,10 +25,11 @@ jobs:
           git clone https://github.com/metacall/core.git
           mkdir core/build && cd core/build
           cmake -DOPTION_BUILD_DOCS=ON ..
-          make api-docs
+          make -j$(nproc) api-docs
       - name: Moving Files
         run: |
           mv ./core/build/docs/api-docs ./api
+          rm -rf ./core
 
       # Deploy to GitHub Pages
       - name: Deploy
