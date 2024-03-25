@@ -600,7 +600,7 @@
     <member refid="loader_8h_1ae36a62ebfae6681c99dc94290d814415" kind="function"><name>loader_initialize</name></member>
     <member refid="loader_8h_1a9e4dc5b479a109af9be7e2d107958e69" kind="function"><name>loader_is_initialized</name></member>
     <member refid="loader_8h_1a42860cc3bb2c50fac1424579e158a83b" kind="function"><name>loader_register</name></member>
-    <member refid="loader_8h_1ab25663640bf8f58db25f06c75c65f674" kind="function"><name>loader_register_impl</name></member>
+    <member refid="loader_8h_1afa191e8e31b87079e99b0850ea365d85" kind="function"><name>loader_register_impl</name></member>
     <member refid="loader_8h_1aa6b4ba7e573b47e7f7a96d9aab5c6cf7" kind="function"><name>loader_library_path</name></member>
     <member refid="loader_8h_1a8d5306a5d328ebaeffe13b224fc7644a" kind="function"><name>loader_execution_path</name></member>
     <member refid="loader_8h_1a08ea2360d46beb74c5ac7f348b77e600" kind="function"><name>loader_load_from_file</name></member>
@@ -612,9 +612,11 @@
     <member refid="loader_8h_1a7bd109dbad8229149b66b0561bcbaf90" kind="function"><name>loader_get_handle</name></member>
     <member refid="loader_8h_1a991a559588a353edb414b4e3ebe0506a" kind="function"><name>loader_set_options</name></member>
     <member refid="loader_8h_1ab9ca71b78829829b8299d37dfcd7d483" kind="function"><name>loader_get_options</name></member>
+    <member refid="loader_8h_1a46b681ac6f6abe0a9fc280ae74b78353" kind="function"><name>loader_handle_initialize</name></member>
     <member refid="loader_8h_1ac837bc325c34ef87852aa7f3eb961fff" kind="function"><name>loader_handle_id</name></member>
     <member refid="loader_8h_1a3dd119a750e2f56d2198270bb29ec0ff" kind="function"><name>loader_handle_export</name></member>
     <member refid="loader_8h_1a945db9c2048ac8d35c9b9e9d028c83de" kind="function"><name>loader_handle_get</name></member>
+    <member refid="loader_8h_1a8157e66a32b7880e99a60e99dd009d47" kind="function"><name>loader_handle_populate</name></member>
     <member refid="loader_8h_1af0267882166a3ab6e011e9e9c4c8826a" kind="function"><name>loader_metadata</name></member>
     <member refid="loader_8h_1a50281bf1571a363c0b9b198c4e3e3a6e" kind="function"><name>loader_clear</name></member>
     <member refid="loader_8h_1a9fe053d874d8af26bc3f97b56a994d8c" kind="function"><name>loader_is_destroyed</name></member>
@@ -648,6 +650,8 @@
     <member refid="loader__impl_8h_1ae51eabce177ad3f740f54abed5085f79" kind="function"><name>loader_impl_get_handle</name></member>
     <member refid="loader__impl_8h_1ab0a5e979f9e63c12c08e029f36994461" kind="function"><name>loader_impl_set_options</name></member>
     <member refid="loader__impl_8h_1ab38c47aad274df78e047d04eff7b4ce9" kind="function"><name>loader_impl_get_options</name></member>
+    <member refid="loader__impl_8h_1ac7c0d3b76bfd440f5b012ae77f97244f" kind="function"><name>loader_impl_handle_initialize</name></member>
+    <member refid="loader__impl_8h_1a993df828c6ea2b2c1c9bf2141978e5aa" kind="function"><name>loader_impl_handle_populated</name></member>
     <member refid="loader__impl_8h_1a0c0545504b51df3a1b0de1c2068f4c60" kind="function"><name>loader_impl_handle_id</name></member>
     <member refid="loader__impl_8h_1a7b8593fabd702e8bdb2552755128aa44" kind="function"><name>loader_impl_handle_export</name></member>
     <member refid="loader__impl_8h_1a0feed327b857033b702cf7c21fc0b88d" kind="function"><name>loader_impl_handle_context</name></member>
@@ -974,6 +978,8 @@
   </compound>
   <compound refid="metacall_8h" kind="file"><name>metacall.h</name>
     <member refid="metacall_8h_1a137dbf351f620ac5c1daebf1564f099b" kind="function"><name>metacall_function</name></member>
+    <member refid="metacall_8h_1a792c94a85654f6463e924250acd9c72b" kind="function"><name>metacall_handle_initialize</name></member>
+    <member refid="metacall_8h_1a201abde4e06b9405ee6dd27c4c2f6d6c" kind="function"><name>metacall_handle_populate</name></member>
     <member refid="metacall_8h_1a0733570d83d6daf0e421e3e414547566" kind="function"><name>metacall_handle_function</name></member>
     <member refid="metacall_8h_1a26ff10520ec45fc6dc56e6b731f7cd98" kind="function"><name>metacall_function_parameter_type</name></member>
     <member refid="metacall_8h_1a391f6f382c453d8903889a910f59bf4c" kind="function"><name>metacall_function_return_type</name></member>
@@ -990,7 +996,8 @@
     <member refid="metacall_8h_1ae381876c35f6b194c96c19a9b808e313" kind="function"><name>metacallfms</name></member>
     <member refid="metacall_8h_1a810ca74b8efef842df8ea7baf2b87e67" kind="function"><name>metacall_register</name></member>
     <member refid="metacall_8h_1ae0f575287847cd57f5a549b2b211db1d" kind="function"><name>metacall_registerv</name></member>
-    <member refid="metacall_8h_1afc4e32dfcccfefd3fec11b80f7edd10a" kind="function"><name>metacall_register_loaderv</name></member>
+    <member refid="metacall_8h_1a5defaa7768a7d70a141930a5d7d8d4bf" kind="function"><name>metacall_loader</name></member>
+    <member refid="metacall_8h_1a4d4b136ce9d1890593050e544f8bd59f" kind="function"><name>metacall_register_loaderv</name></member>
     <member refid="metacall_8h_1a52ef2927638d958c6e76555fc49a765b" kind="function"><name>metacall_await</name></member>
     <member refid="metacall_8h_1a5f24de215645b2728c80e20685cb5525" kind="function"><name>metacall_await_future</name></member>
     <member refid="metacall_8h_1a698f9b1a031af836302d2634e3194f75" kind="function"><name>metacall_await_s</name></member>
@@ -1018,6 +1025,7 @@
     <member refid="metacall_8h_1a0d45c99a4491e8bbad9d66aa8e719e54" kind="function"><name>metacall_deserialize</name></member>
     <member refid="metacall_8h_1ae1f35c9c5cd2b375e8fb00b9d8c5890c" kind="function"><name>metacall_clear</name></member>
     <member refid="metacall_8h_1a57ecb3af9057cf7c9457bab16b0958ac" kind="function"><name>metacall_plugin_extension</name></member>
+    <member refid="metacall_8h_1a101e7feb381df9da2026bd1fb2505161" kind="function"><name>metacall_plugin_core</name></member>
     <member refid="metacall_8h_1aa2add9c2e53f0bbd664392ada75cd5b0" kind="function"><name>metacall_plugin_path</name></member>
     <member refid="metacall_8h_1aca8745a9f261bc3d37ee9156b991296f" kind="function"><name>metacall_destroy</name></member>
     <member refid="metacall_8h_1a1193b3c37aee3b2f5ed49b1e08784ffd" kind="function"><name>metacall_version</name></member>

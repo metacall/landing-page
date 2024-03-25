@@ -1,4 +1,4 @@
-.TH "loader_impl.h" 3 "Thu Feb 8 2024" "Version 0.7.7.251ee5582288" "MetaCall" \" -*- nroff -*-
+.TH "loader_impl.h" 3 "Mon Mar 25 2024" "Version 0.7.11.12f31bd02db2" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -72,6 +72,12 @@ loader_impl.h
 .RI "LOADER_API void * \fBloader_impl_get_options\fP (\fBloader_impl\fP impl)"
 .br
 .ti -1c
+.RI "LOADER_API int \fBloader_impl_handle_initialize\fP (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP name, void **handle_ptr)"
+.br
+.ti -1c
+.RI "LOADER_API \fBvector\fP \fBloader_impl_handle_populated\fP (void *handle)"
+.br
+.ti -1c
 .RI "LOADER_API const char * \fBloader_impl_handle_id\fP (void *handle)"
 .br
 .ti -1c
@@ -140,6 +146,10 @@ loader_impl.h
 .SS "LOADER_API void loader_impl_set_options (\fBloader_impl\fP impl, void * options)"
 
 .SS "LOADER_API void* loader_impl_get_options (\fBloader_impl\fP impl)"
+
+.SS "LOADER_API int loader_impl_handle_initialize (plugin_manager manager, \fBplugin\fP p, \fBloader_impl\fP impl, const \fBloader_path\fP name, void ** handle_ptr)"
+
+.SS "LOADER_API \fBvector\fP loader_impl_handle_populated (void * handle)"
 
 .SS "LOADER_API const char* loader_impl_handle_id (void * handle)"
 

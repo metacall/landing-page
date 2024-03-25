@@ -881,7 +881,7 @@
         <param><defname>name</defname></param>
         <initializer>	do \
 	{ \
-		if (<ref refid="metacall_8h_1afc4e32dfcccfefd3fec11b80f7edd10a" kindref="member">metacall_register_loaderv</ref>(<ref refid="loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5" kindref="member">loader</ref>, <ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>, <ref refid="preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b" kindref="member">PREPROCESSOR_STRINGIFY</ref>(name), name, ret, 0, NULL) != 0) \
+		if (<ref refid="metacall_8h_1a4d4b136ce9d1890593050e544f8bd59f" kindref="member">metacall_register_loaderv</ref>(<ref refid="loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5" kindref="member">loader</ref>, handle, <ref refid="preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b" kindref="member">PREPROCESSOR_STRINGIFY</ref>(name), name, ret, 0, NULL) != 0) \
 		{ \
 			<ref refid="log__preprocessor_8h_1acd881977fd7c7e2d7b6cbef677084348" kindref="member">log_write</ref>(&quot;metacall&quot;, LOG_LEVEL_ERROR, &quot;Failed to register function: &quot; PREPROCESSOR_STRINGIFY(name)); \
 			return 1; \
@@ -903,7 +903,7 @@
         <initializer>	do \
 	{ \
 		enum <ref refid="metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d" kindref="member">metacall_value_id</ref> arg_types[] = { __VA_ARGS__ }; \
-		if (<ref refid="metacall_8h_1afc4e32dfcccfefd3fec11b80f7edd10a" kindref="member">metacall_register_loaderv</ref>(<ref refid="loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5" kindref="member">loader</ref>, <ref refid="reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b" kindref="member">context</ref>, <ref refid="preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b" kindref="member">PREPROCESSOR_STRINGIFY</ref>(name), name, ret, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), arg_types) != 0) \
+		if (<ref refid="metacall_8h_1a4d4b136ce9d1890593050e544f8bd59f" kindref="member">metacall_register_loaderv</ref>(<ref refid="loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5" kindref="member">loader</ref>, handle, <ref refid="preprocessor__stringify_8h_1a687b07489efaaf2b4a03568c2117d32b" kindref="member">PREPROCESSOR_STRINGIFY</ref>(name), name, ret, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), arg_types) != 0) \
 		{ \
 			<ref refid="log__preprocessor_8h_1acd881977fd7c7e2d7b6cbef677084348" kindref="member">log_write</ref>(&quot;metacall&quot;, LOG_LEVEL_ERROR, &quot;Failed to register function: &quot; PREPROCESSOR_STRINGIFY(name)); \
 			return 1; \
@@ -938,7 +938,6 @@
         <param><defname>error</defname></param>
         <initializer>	do \
 	{ \
-		/* <ref refid="log__preprocessor_8h_1acd881977fd7c7e2d7b6cbef677084348" kindref="member">log_write</ref>(&quot;metacall&quot;, LOG_LEVEL_ERROR, error); */ \
 		<ref refid="reflect__exception_8h_1abed3148acaa207134261748c1eb175a7" kindref="member">exception</ref> ex = <ref refid="reflect__exception_8h_1afb44879b0180bb6db7c8942a90bd8086" kindref="member">exception_create_const</ref>(error, &quot;PluginException&quot;, 0, &quot;&quot;); \
 		throwable th = <ref refid="reflect__throwable_8h_1aa686c060b2d755a0d62dfcba1e0f2aac" kindref="member">throwable_create</ref>(<ref refid="reflect__value__type_8h_1a0fbfd806bd884e392910dfe361826973" kindref="member">value_create_exception</ref>(ex)); \
 		return <ref refid="reflect__value__type_8h_1a214a304d001a556a0695a73c09121dbc" kindref="member">value_create_throwable</ref>(th); \
@@ -949,7 +948,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" line="65" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" bodystart="65" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" line="64" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="plugin__interface_8hpp_1a41efb02583af86433ef503cb35cdb8c7" prot="public" static="no">
         <name>EXTENSION_FUNCTION_CHECK_ITERATOR</name>
@@ -969,7 +968,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" line="74" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" bodystart="74" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" line="72" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="plugin__interface_8hpp_1ae1652160f9ac24ba069540788d87de27" prot="public" static="no">
         <name>EXTENSION_FUNCTION_CHECK</name>
@@ -998,7 +997,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" line="83" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" bodystart="83" bodyend="-1"/>
+        <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" line="81" column="9" bodyfile="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp" bodystart="81" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1046,7 +1045,7 @@
 <codeline lineno="38" refid="plugin__interface_8hpp_1a91ac28c5c492c0c0c1a986bb50874f48" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSION_FUNCTION_IMPL_VOID(ret,<sp/>name)<sp/>\</highlight></codeline>
 <codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>\</highlight></codeline>
 <codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(metacall_register_loaderv(loader,<sp/>context,<sp/>PREPROCESSOR_STRINGIFY(name),<sp/>name,<sp/>ret,<sp/>0,<sp/>NULL)<sp/>!=<sp/>0)<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(metacall_register_loaderv(loader,<sp/>handle,<sp/>PREPROCESSOR_STRINGIFY(name),<sp/>name,<sp/>ret,<sp/>0,<sp/>NULL)<sp/>!=<sp/>0)<sp/>\</highlight></codeline>
 <codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log_write(&quot;metacall&quot;</highlight><highlight class="normal">,<sp/>LOG_LEVEL_ERROR,<sp/>&quot;Failed<sp/>to<sp/>register<sp/>function:<sp/>&quot;<sp/>PREPROCESSOR_STRINGIFY(name));<sp/>\</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>1;<sp/>\</highlight></codeline>
@@ -1057,7 +1056,7 @@
 <codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>\</highlight></codeline>
 <codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enum<sp/>metacall_value_id<sp/>arg_types[]<sp/>=<sp/>{<sp/>__VA_ARGS__<sp/>};<sp/>\</highlight></codeline>
-<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(metacall_register_loaderv(loader,<sp/>context,<sp/>PREPROCESSOR_STRINGIFY(name),<sp/>name,<sp/>ret,<sp/>PREPROCESSOR_ARGS_COUNT(__VA_ARGS__),<sp/>arg_types)<sp/>!=<sp/>0)<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(metacall_register_loaderv(loader,<sp/>handle,<sp/>PREPROCESSOR_STRINGIFY(name),<sp/>name,<sp/>ret,<sp/>PREPROCESSOR_ARGS_COUNT(__VA_ARGS__),<sp/>arg_types)<sp/>!=<sp/>0)<sp/>\</highlight></codeline>
 <codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log_write(&quot;metacall&quot;</highlight><highlight class="normal">,<sp/>LOG_LEVEL_ERROR,<sp/>&quot;Failed<sp/>to<sp/>register<sp/>function:<sp/>&quot;<sp/>PREPROCESSOR_STRINGIFY(name));<sp/>\</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>1;<sp/>\</highlight></codeline>
@@ -1069,45 +1068,43 @@
 <codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EXTENSION_FUNCTION_IMPL_VOID(ret,<sp/>name),<sp/>\</highlight></codeline>
 <codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EXTENSION_FUNCTION_IMPL(ret,<sp/>name,<sp/>__VA_ARGS__))</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TODO:<sp/>Move<sp/>the<sp/>log_write<sp/>outside<sp/>into<sp/>the<sp/>CLI<sp/>or<sp/>similar<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="plugin__interface_8hpp_1a879122e13eac227389dac9ee5a3547f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSION_FUNCTION_THROW(error)<sp/>\</highlight></codeline>
-<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>\</highlight></codeline>
-<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>log_write(&quot;metacall&quot;,<sp/>LOG_LEVEL_ERROR,<sp/>error);<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
-<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exception<sp/>ex<sp/>=<sp/>exception_create_const(error,<sp/>&quot;PluginException&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>&quot;&quot;);<sp/>\</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>throwable<sp/>th<sp/>=<sp/>throwable_create(value_create_exception(ex));<sp/>\</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>value_create_throwable(th);<sp/>\</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="plugin__interface_8hpp_1a41efb02583af86433ef503cb35cdb8c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSION_FUNCTION_CHECK_ITERATOR(error,<sp/>iterator,<sp/>value)<sp/>\</highlight></codeline>
-<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(metacall_value_id(args[iterator])<sp/>!=<sp/>value)<sp/>\</highlight></codeline>
-<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;<sp/>\</highlight></codeline>
-<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>error<sp/>&quot;.<sp/>The<sp/>parameter<sp/>number<sp/>&quot;</highlight><highlight class="normal"><sp/>PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(iterator))<sp/>&quot;<sp/>requires<sp/>a<sp/>value<sp/>of<sp/>type<sp/>&quot;<sp/>&lt;&lt;<sp/>metacall_value_id_name(value)<sp/>&lt;&lt;<sp/>&quot;,<sp/>received:<sp/>&quot;<sp/>&lt;&lt;<sp/>metacall_value_type_name(args[iterator]);<sp/>\</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>error_msg<sp/>=<sp/>ss.str();<sp/>\</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EXTENSION_FUNCTION_THROW(error_msg.c_str());<sp/>\</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83" refid="plugin__interface_8hpp_1ae1652160f9ac24ba069540788d87de27" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSION_FUNCTION_CHECK(error,<sp/>...)<sp/>\</highlight></codeline>
-<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>\</highlight></codeline>
-<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)data;<sp/></highlight><highlight class="comment">/*<sp/>TODO:<sp/>Do<sp/>something<sp/>with<sp/>data<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
-<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Disable<sp/>warning<sp/>on<sp/>args<sp/>when<sp/>no<sp/>args<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
-<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_IF(PREPROCESSOR_ARGS_EMPTY(__VA_ARGS__),<sp/>\</highlight></codeline>
-<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)args;<sp/>\</highlight></codeline>
-<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>\</highlight></codeline>
-<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_EMPTY_SYMBOL())<sp/>\</highlight></codeline>
-<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(argc<sp/>!=<sp/>PREPROCESSOR_ARGS_COUNT(__VA_ARGS__))<sp/>\</highlight></codeline>
-<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;<sp/>\</highlight></codeline>
-<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>error<sp/>&quot;.<sp/>The<sp/>required<sp/>number<sp/>of<sp/>argumens<sp/>is<sp/>&quot;</highlight><highlight class="normal"><sp/>PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(__VA_ARGS__))<sp/>&quot;,<sp/>received:<sp/>&quot;<sp/>&lt;&lt;<sp/>argc;<sp/>\</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>error_msg<sp/>=<sp/>ss.str();<sp/>\</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EXTENSION_FUNCTION_THROW(error_msg.c_str());<sp/>\</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_FOR(EXTENSION_FUNCTION_CHECK_ITERATOR,<sp/>error,<sp/>__VA_ARGS__)<sp/>\</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PLUGIN_INTERFACE_HPP<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="64" refid="plugin__interface_8hpp_1a879122e13eac227389dac9ee5a3547f4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSION_FUNCTION_THROW(error)<sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exception<sp/>ex<sp/>=<sp/>exception_create_const(error,<sp/>&quot;PluginException&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>&quot;&quot;);<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>throwable<sp/>th<sp/>=<sp/>throwable_create(value_create_exception(ex));<sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>value_create_throwable(th);<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="plugin__interface_8hpp_1a41efb02583af86433ef503cb35cdb8c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSION_FUNCTION_CHECK_ITERATOR(error,<sp/>iterator,<sp/>value)<sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(metacall_value_id(args[iterator])<sp/>!=<sp/>value)<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;<sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>error<sp/>&quot;.<sp/>The<sp/>parameter<sp/>number<sp/>&quot;</highlight><highlight class="normal"><sp/>PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(iterator))<sp/>&quot;<sp/>requires<sp/>a<sp/>value<sp/>of<sp/>type<sp/>&quot;<sp/>&lt;&lt;<sp/>metacall_value_id_name(value)<sp/>&lt;&lt;<sp/>&quot;,<sp/>received:<sp/>&quot;<sp/>&lt;&lt;<sp/>metacall_value_type_name(args[iterator]);<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>error_msg<sp/>=<sp/>ss.str();<sp/>\</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EXTENSION_FUNCTION_THROW(error_msg.c_str());<sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="plugin__interface_8hpp_1ae1652160f9ac24ba069540788d87de27" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTENSION_FUNCTION_CHECK(error,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)data;<sp/></highlight><highlight class="comment">/*<sp/>TODO:<sp/>Do<sp/>something<sp/>with<sp/>data<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Disable<sp/>warning<sp/>on<sp/>args<sp/>when<sp/>no<sp/>args<sp/>*/</highlight><highlight class="preprocessor"><sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_IF(PREPROCESSOR_ARGS_EMPTY(__VA_ARGS__),<sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)args;<sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_EMPTY_SYMBOL())<sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(argc<sp/>!=<sp/>PREPROCESSOR_ARGS_COUNT(__VA_ARGS__))<sp/>\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;<sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>error<sp/>&quot;.<sp/>The<sp/>required<sp/>number<sp/>of<sp/>argumens<sp/>is<sp/>&quot;</highlight><highlight class="normal"><sp/>PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(__VA_ARGS__))<sp/>&quot;,<sp/>received:<sp/>&quot;<sp/>&lt;&lt;<sp/>argc;<sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>error_msg<sp/>=<sp/>ss.str();<sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EXTENSION_FUNCTION_THROW(error_msg.c_str());<sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PREPROCESSOR_FOR(EXTENSION_FUNCTION_CHECK_ITERATOR,<sp/>error,<sp/>__VA_ARGS__)<sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PLUGIN_INTERFACE_HPP<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/landing-page/landing-page/core/source/plugin/include/plugin/plugin_interface.hpp"/>
   </compounddef>

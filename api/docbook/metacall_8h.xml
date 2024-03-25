@@ -144,6 +144,56 @@ Parameters                    </title>
 </listitem>
         </itemizedlist>
 </simplesect>
+<simplesect><title></title>
+
+<para>Create an empty handler into a loader with name</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>loader</entry>
+                                <entry>
+<para>Pointer to the loader which the handle belongs to</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>Name of the handle</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>handle_ptr</entry>
+                                <entry>
+<para>On success, returns the pointer to the handle created, otherwise NULL</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return zero on success, different from zero on error </para>
+</formalpara>
+</para>
+        <itemizedlist>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a792c94a85654f6463e924250acd9c72b">metacall_handle_initialize</link> (void *<link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link>, const char *name, void **handle_ptr)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a201abde4e06b9405ee6dd27c4c2f6d6c">metacall_handle_populate</link> (void *handle_dest, void *handle_src)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
 <simplesect><title>from @handle</title>
 
 <para>Get the function by</para>
@@ -340,9 +390,9 @@ Parameters                    </title>
 </entry>
                             </row>
                             <row>
-                                <entry>in                                </entry>                                <entry>context</entry>
+                                <entry>in                                </entry>                                <entry>handle</entry>
                                 <entry>
-<para>Opaque pointer to the context in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)</para>
+<para>Opaque pointer to the handle in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)</para>
 </entry>
                             </row>
                             <row>
@@ -382,13 +432,15 @@ Parameters                    </title>
                 </formalpara>
                 <formalpara><title>Returns</title>
 
-<para>Pointer to value containing the result of the call </para>
+<para>Zero if the function was registered properly, distinct from zero otherwise </para>
 </formalpara>
 </para>
         <itemizedlist>
             <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ae0f575287847cd57f5a549b2b211db1d">metacall_registerv</link> (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</para>
 </listitem>
-            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1afc4e32dfcccfefd3fec11b80f7edd10a">metacall_register_loaderv</link> (void *<link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link>, void *<link linkend="_reflect__context_8h_1ab01e2b1d8e268430d5c2d3d1d870251b">context</link>, const char *name, void *(*invoke)(size_t, void *[], void *), enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</para>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a5defaa7768a7d70a141930a5d7d8d4bf">metacall_loader</link> (const char *tag)</para>
+</listitem>
+            <listitem><para>METACALL_API int <link linkend="_metacall_8h_1a4d4b136ce9d1890593050e544f8bd59f">metacall_register_loaderv</link> (void *<link linkend="_loader_8h_1ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</link>, void *handle, const char *name, void *(*invoke)(size_t, void *[], void *), enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b">metacall_await</link> (const char *name, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)</para>
 </listitem>
@@ -477,6 +529,8 @@ Parameters                    </title>
             <listitem><para>METACALL_API int <link linkend="_metacall_8h_1ae1f35c9c5cd2b375e8fb00b9d8c5890c">metacall_clear</link> (void *handle)</para>
 </listitem>
             <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a57ecb3af9057cf7c9457bab16b0958ac">metacall_plugin_extension</link> (void)</para>
+</listitem>
+            <listitem><para>METACALL_API void * <link linkend="_metacall_8h_1a101e7feb381df9da2026bd1fb2505161">metacall_plugin_core</link> (void)</para>
 </listitem>
             <listitem><para>METACALL_API const char * <link linkend="_metacall_8h_1aa2add9c2e53f0bbd664392ada75cd5b0">metacall_plugin_path</link> (void)</para>
 </listitem>
@@ -1445,7 +1499,53 @@ Parameters                    </title>
     <title>metacall_function()</title>
 <indexterm><primary>metacall_function</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_function</secondary></indexterm>
-<para><computeroutput>METACALL_API void* metacall_function (const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a0733570d83d6daf0e421e3e414547566"/>    <section>
+<para><computeroutput>METACALL_API void* metacall_function (const char * name)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a792c94a85654f6463e924250acd9c72b"/>    <section>
+    <title>metacall_handle_initialize()</title>
+<indexterm><primary>metacall_handle_initialize</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_handle_initialize</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_handle_initialize (void * loader, const char * name, void ** handle_ptr)</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a201abde4e06b9405ee6dd27c4c2f6d6c"/>    <section>
+    <title>metacall_handle_populate()</title>
+<indexterm><primary>metacall_handle_populate</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_handle_populate</secondary></indexterm>
+<para><computeroutput>METACALL_API int metacall_handle_populate (void * handle_dest, void * handle_src)</computeroutput></para><para>
+
+<para>Populate the objects of @handle_src into @handle_dest. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in,out                                </entry>                                <entry>handle_dest</entry>
+                                <entry>
+<para>Handle where the objects from @handle_src will be stored</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>handle_src</entry>
+                                <entry>
+<para>Handle from where the objects will be copied</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Return zero on success, different from zero on error </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a0733570d83d6daf0e421e3e414547566"/>    <section>
     <title>metacall_handle_function()</title>
 <indexterm><primary>metacall_handle_function</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_handle_function</secondary></indexterm>
@@ -1977,11 +2077,47 @@ Parameters                    </title>
     <title>metacall_registerv()</title>
 <indexterm><primary>metacall_registerv</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_registerv</secondary></indexterm>
-<para><computeroutput>METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1afc4e32dfcccfefd3fec11b80f7edd10a"/>    <section>
+<para><computeroutput>METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a5defaa7768a7d70a141930a5d7d8d4bf"/>    <section>
+    <title>metacall_loader()</title>
+<indexterm><primary>metacall_loader</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_loader</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_loader (const char * tag)</computeroutput></para><para>
+
+<para>Obtain the loader instance by @tag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>tag</entry>
+                                <entry>
+<para>Tag in which the loader is identified, normally it is the extension of the script</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer the loader by @tag </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a4d4b136ce9d1890593050e544f8bd59f"/>    <section>
     <title>metacall_register_loaderv()</title>
 <indexterm><primary>metacall_register_loaderv</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_register_loaderv</secondary></indexterm>
-<para><computeroutput>METACALL_API int metacall_register_loaderv (void * loader, void * context, const char * name, void *(*)(size_t, void *[], void *) invoke, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b"/>    <section>
+<para><computeroutput>METACALL_API int metacall_register_loaderv (void * loader, void * handle, const char * name, void *(*)(size_t, void *[], void *) invoke, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> return_type, size_t size, enum <link linkend="_metacall__value_8h_1a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</link> types[])</computeroutput></para>    </section><anchor xml:id="_metacall_8h_1a52ef2927638d958c6e76555fc49a765b"/>    <section>
     <title>metacall_await()</title>
 <indexterm><primary>metacall_await</primary><secondary>metacall.h</secondary></indexterm>
 <indexterm><primary>metacall.h</primary><secondary>metacall_await</secondary></indexterm>
@@ -3631,6 +3767,20 @@ Parameters                    </title>
 <para><formalpara><title>Returns</title>
 
 <para>Pointer to the extension handle, or null if it failed to load </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_metacall_8h_1a101e7feb381df9da2026bd1fb2505161"/>    <section>
+    <title>metacall_plugin_core()</title>
+<indexterm><primary>metacall_plugin_core</primary><secondary>metacall.h</secondary></indexterm>
+<indexterm><primary>metacall.h</primary><secondary>metacall_plugin_core</secondary></indexterm>
+<para><computeroutput>METACALL_API void* metacall_plugin_core (void )</computeroutput></para><para>
+
+<para>Get the handle containing all the functionality of the plugins from core. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to the core plugin handle, or null if it failed to load </para>
 </formalpara>
 </para>
     </section><anchor xml:id="_metacall_8h_1aa2add9c2e53f0bbd664392ada75cd5b0"/>    <section>

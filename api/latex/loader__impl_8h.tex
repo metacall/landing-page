@@ -58,6 +58,10 @@ LOADER\+\_\+\+API void \textbf{ loader\+\_\+impl\+\_\+set\+\_\+options} (\textbf
 \item 
 LOADER\+\_\+\+API void $\ast$ \textbf{ loader\+\_\+impl\+\_\+get\+\_\+options} (\textbf{ loader\+\_\+impl} impl)
 \item 
+LOADER\+\_\+\+API int \textbf{ loader\+\_\+impl\+\_\+handle\+\_\+initialize} (plugin\+\_\+manager manager, \textbf{ plugin} p, \textbf{ loader\+\_\+impl} impl, const \textbf{ loader\+\_\+path} name, void $\ast$$\ast$handle\+\_\+ptr)
+\item 
+LOADER\+\_\+\+API \textbf{ vector} \textbf{ loader\+\_\+impl\+\_\+handle\+\_\+populated} (void $\ast$handle)
+\item 
 LOADER\+\_\+\+API const char $\ast$ \textbf{ loader\+\_\+impl\+\_\+handle\+\_\+id} (void $\ast$handle)
 \item 
 LOADER\+\_\+\+API \textbf{ value} \textbf{ loader\+\_\+impl\+\_\+handle\+\_\+export} (void $\ast$handle)
@@ -184,6 +188,18 @@ LOADER\+\_\+\+API void \textbf{ loader\+\_\+impl\+\_\+destroy} (\textbf{ plugin}
 \index{loader\_impl\_get\_options@{loader\_impl\_get\_options}!loader\_impl.h@{loader\_impl.h}}
 \doxysubsubsection{loader\_impl\_get\_options()}
 {\footnotesize\ttfamily LOADER\+\_\+\+API void$\ast$ loader\+\_\+impl\+\_\+get\+\_\+options (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_ac7c0d3b76bfd440f5b012ae77f97244f}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_handle\_initialize@{loader\_impl\_handle\_initialize}}
+\index{loader\_impl\_handle\_initialize@{loader\_impl\_handle\_initialize}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_handle\_initialize()}
+{\footnotesize\ttfamily LOADER\+\_\+\+API int loader\+\_\+impl\+\_\+handle\+\_\+initialize (\begin{DoxyParamCaption}\item[{plugin\+\_\+manager}]{manager,  }\item[{\textbf{ plugin}}]{p,  }\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const \textbf{ loader\+\_\+path}}]{name,  }\item[{void $\ast$$\ast$}]{handle\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\label{loader__impl_8h_a993df828c6ea2b2c1c9bf2141978e5aa}} 
+\index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_handle\_populated@{loader\_impl\_handle\_populated}}
+\index{loader\_impl\_handle\_populated@{loader\_impl\_handle\_populated}!loader\_impl.h@{loader\_impl.h}}
+\doxysubsubsection{loader\_impl\_handle\_populated()}
+{\footnotesize\ttfamily LOADER\+\_\+\+API \textbf{ vector} loader\+\_\+impl\+\_\+handle\+\_\+populated (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle }\end{DoxyParamCaption})}
 
 \mbox{\label{loader__impl_8h_a0c0545504b51df3a1b0de1c2068f4c60}} 
 \index{loader\_impl.h@{loader\_impl.h}!loader\_impl\_handle\_id@{loader\_impl\_handle\_id}}

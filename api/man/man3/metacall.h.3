@@ -1,4 +1,4 @@
-.TH "metacall.h" 3 "Thu Feb 8 2024" "Version 0.7.7.251ee5582288" "MetaCall" \" -*- nroff -*-
+.TH "metacall.h" 3 "Mon Mar 25 2024" "Version 0.7.11.12f31bd02db2" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -155,6 +155,37 @@ Function reference, null if the function does not exist
 .in -1c
 .in -1c
 .PP
+.RI "\fB\fP"
+.br
+Create an empty handler into a loader with name
+.PP
+\fBParameters\fP
+.RS 4
+\fIloader\fP Pointer to the loader which the handle belongs to
+.br
+\fIname\fP Name of the handle
+.br
+\fIhandle_ptr\fP On success, returns the pointer to the handle created, otherwise NULL
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return zero on success, different from zero on error 
+.RE
+.PP
+
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "METACALL_API int \fBmetacall_handle_initialize\fP (void *\fBloader\fP, const char *name, void **handle_ptr)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_handle_populate\fP (void *handle_dest, void *handle_src)"
+.br
+.in -1c
+.in -1c
+.PP
 .RI "\fBfrom @handle\fP"
 .br
 Get the function by
@@ -285,7 +316,7 @@ Register a function by name
 .RS 4
 \fIloader\fP Opaque pointer to the loader in which you want to register the function (this allows to register the function into a different loader than the host)
 .br
-\fIcontext\fP Opaque pointer to the context in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)
+\fIhandle\fP Opaque pointer to the handle in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)
 .br
 \fIname\fP Name of the function (if it is NULL, function is not registered into host scope)
 .br
@@ -300,7 +331,7 @@ Register a function by name
 .PP
 \fBReturns\fP
 .RS 4
-Pointer to value containing the result of the call 
+Zero if the function was registered properly, distinct from zero otherwise 
 .RE
 .PP
 
@@ -311,7 +342,10 @@ Pointer to value containing the result of the call
 .RI "METACALL_API int \fBmetacall_registerv\fP (const char *name, void *(*invoke)(size_t, void *[], void *), void **func, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
 .br
 .ti -1c
-.RI "METACALL_API int \fBmetacall_register_loaderv\fP (void *\fBloader\fP, void *\fBcontext\fP, const char *name, void *(*invoke)(size_t, void *[], void *), enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
+.RI "METACALL_API void * \fBmetacall_loader\fP (const char *tag)"
+.br
+.ti -1c
+.RI "METACALL_API int \fBmetacall_register_loaderv\fP (void *\fBloader\fP, void *handle, const char *name, void *(*invoke)(size_t, void *[], void *), enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_await\fP (const char *name, void *args[], void *(*resolve_callback)(void *, void *), void *(*reject_callback)(void *, void *), void *data)"
@@ -414,6 +448,9 @@ Class reference, null if the class does not exist
 .br
 .ti -1c
 .RI "METACALL_API void * \fBmetacall_plugin_extension\fP (void)"
+.br
+.ti -1c
+.RI "METACALL_API void * \fBmetacall_plugin_core\fP (void)"
 .br
 .ti -1c
 .RI "METACALL_API const char * \fBmetacall_plugin_path\fP (void)"
@@ -866,6 +903,26 @@ Pointer to value containing the result of the call
 
 .SS "METACALL_API void* metacall_function (const char * name)"
 
+.SS "METACALL_API int metacall_handle_initialize (void * loader, const char * name, void ** handle_ptr)"
+
+.SS "METACALL_API int metacall_handle_populate (void * handle_dest, void * handle_src)"
+
+.PP
+Populate the objects of @handle_src into @handle_dest\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle_dest\fP Handle where the objects from @handle_src will be stored
+.br
+\fIhandle_src\fP Handle from where the objects will be copied
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return zero on success, different from zero on error 
+.RE
+.PP
+
 .SS "METACALL_API void* metacall_handle_function (void * handle, const char * name)"
 
 .SS "METACALL_API int metacall_function_parameter_type (void * func, size_t parameter, enum \fBmetacall_value_id\fP * id)"
@@ -1094,7 +1151,23 @@ Pointer to value containing the result of the call
 
 .SS "METACALL_API int metacall_registerv (const char * name, void *(*)(size_t, void *[], void *) invoke, void ** func, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
 
-.SS "METACALL_API int metacall_register_loaderv (void * loader, void * context, const char * name, void *(*)(size_t, void *[], void *) invoke, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
+.SS "METACALL_API void* metacall_loader (const char * tag)"
+
+.PP
+Obtain the loader instance by @tag\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItag\fP Tag in which the loader is identified, normally it is the extension of the script
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer the loader by @tag 
+.RE
+.PP
+
+.SS "METACALL_API int metacall_register_loaderv (void * loader, void * handle, const char * name, void *(*)(size_t, void *[], void *) invoke, enum \fBmetacall_value_id\fP return_type, size_t size, enum \fBmetacall_value_id\fP types[])"
 
 .SS "METACALL_API void* metacall_await (const char * name, void * args[], void *(*)(void *, void *) resolve_callback, void *(*)(void *, void *) reject_callback, void * data)"
 
@@ -1765,6 +1838,17 @@ Get the plugin extension handle to be used for loading plugins\&.
 \fBReturns\fP
 .RS 4
 Pointer to the extension handle, or null if it failed to load 
+.RE
+.PP
+
+.SS "METACALL_API void* metacall_plugin_core (void)"
+
+.PP
+Get the handle containing all the functionality of the plugins from core\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the core plugin handle, or null if it failed to load 
 .RE
 .PP
 

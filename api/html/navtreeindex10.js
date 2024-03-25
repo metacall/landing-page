@@ -1,5 +1,13 @@
 var NAVTREEINDEX10 =
 {
+"structdetour__interface__type.html#ad849a47ecc5cad92a4cb60f23561a849":[0,0,4,3],
+"structdynlink__impl__interface__type.html":[0,0,5],
+"structdynlink__impl__interface__type.html#a698d01a172ce9891cb59afb9ec5fda67":[0,0,5,1],
+"structdynlink__impl__interface__type.html#a7f826d29ec293c69985e86b34066d742":[0,0,5,2],
+"structdynlink__impl__interface__type.html#ac46a0c862aae9427569633c6398f92f4":[0,0,5,0],
+"structdynlink__impl__interface__type.html#afa6b8f501ce50e73db4279b87bd6de25":[0,0,5,3],
+"structdynlink__symbol__addr__beos__type.html":[0,0,6],
+"structdynlink__symbol__addr__beos__type.html#a1844ef60e6875e6e66e4d80264a64098":[0,0,6,0],
 "structdynlink__symbol__addr__macos__type.html":[0,0,7],
 "structdynlink__symbol__addr__macos__type.html#aabc5a1f4c561557dac660663ab0a015d":[0,0,7,0],
 "structdynlink__symbol__addr__unix__type.html":[0,0,8],

@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MetaCall
-   &#160;<span id="projectnumber">0.7.7.251ee5582288</span>
+   &#160;<span id="projectnumber">0.7.11.12f31bd02db2</span>
    </div>
    <div id="projectbrief">A library for providing inter-language foreign function interface calls</div>
   </td>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('plugin__interface_8hpp_source.html',''
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="plugin__interface_8hpp.html#a91ac28c5c492c0c0c1a986bb50874f48">   38</a></span>&#160;<span class="preprocessor">#define EXTENSION_FUNCTION_IMPL_VOID(ret, name) \</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">    do \</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">    { \</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">        if (metacall_register_loaderv(loader, context, PREPROCESSOR_STRINGIFY(name), name, ret, 0, NULL) != 0) \</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">        if (metacall_register_loaderv(loader, handle, PREPROCESSOR_STRINGIFY(name), name, ret, 0, NULL) != 0) \</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">        { \</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">            log_write(&quot;metacall&quot;</span>, LOG_LEVEL_ERROR, &quot;Failed to register function: &quot; PREPROCESSOR_STRINGIFY(name)); \</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            return 1; \</div>
@@ -139,7 +139,7 @@ $(document).ready(function(){initNavTree('plugin__interface_8hpp_source.html',''
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">    do \</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">    { \</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">        enum metacall_value_id arg_types[] = { __VA_ARGS__ }; \</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        if (metacall_register_loaderv(loader, context, PREPROCESSOR_STRINGIFY(name), name, ret, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), arg_types) != 0) \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        if (metacall_register_loaderv(loader, handle, PREPROCESSOR_STRINGIFY(name), name, ret, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), arg_types) != 0) \</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">        { \</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">            log_write(&quot;metacall&quot;</span>, LOG_LEVEL_ERROR, &quot;Failed to register function: &quot; PREPROCESSOR_STRINGIFY(name)); \</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            return 1; \</div>
@@ -151,45 +151,43 @@ $(document).ready(function(){initNavTree('plugin__interface_8hpp_source.html',''
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">        EXTENSION_FUNCTION_IMPL_VOID(ret, name), \</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">        EXTENSION_FUNCTION_IMPL(ret, name, __VA_ARGS__))</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">/* TODO: Move the log_write outside into the CLI or similar */</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="plugin__interface_8hpp.html#a879122e13eac227389dac9ee5a3547f4">   65</a></span>&#160;<span class="preprocessor">#define EXTENSION_FUNCTION_THROW(error) \</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">    do \</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    { \</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">        </span><span class="comment">/* log_write(&quot;metacall&quot;, LOG_LEVEL_ERROR, error); */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">        exception ex = exception_create_const(error, &quot;PluginException&quot;</span>, 0, &quot;&quot;); \</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        throwable th = throwable_create(value_create_exception(ex)); \</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        return value_create_throwable(th); \</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    } while (0)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="plugin__interface_8hpp.html#a41efb02583af86433ef503cb35cdb8c7">   74</a></span>&#160;<span class="preprocessor">#define EXTENSION_FUNCTION_CHECK_ITERATOR(error, iterator, value) \</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">    if (metacall_value_id(args[iterator]) != value) \</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">    { \</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">        std::stringstream ss; \</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">        ss &lt;&lt; error &quot;. The parameter number &quot;</span> PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(iterator)) &quot; requires a value of type &quot; &lt;&lt; metacall_value_id_name(value) &lt;&lt; &quot;, received: &quot; &lt;&lt; metacall_value_type_name(args[iterator]); \</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::string error_msg = ss.str(); \</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        EXTENSION_FUNCTION_THROW(error_msg.c_str()); \</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="plugin__interface_8hpp.html#ae1652160f9ac24ba069540788d87de27">   83</a></span>&#160;<span class="preprocessor">#define EXTENSION_FUNCTION_CHECK(error, ...) \</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">    do \</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">    { \</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">        (void)data; </span><span class="comment">/* TODO: Do something with data */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">        </span><span class="comment">/* Disable warning on args when no args */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">        PREPROCESSOR_IF(PREPROCESSOR_ARGS_EMPTY(__VA_ARGS__), \</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">                        (void)args; \</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">                        , \</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">                        PREPROCESSOR_EMPTY_SYMBOL()) \</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">        if (argc != PREPROCESSOR_ARGS_COUNT(__VA_ARGS__)) \</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">        { \</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">            std::stringstream ss; \</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">            ss &lt;&lt; error &quot;. The required number of argumens is &quot;</span> PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(__VA_ARGS__)) &quot;, received: &quot; &lt;&lt; argc; \</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            std::string error_msg = ss.str(); \</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            EXTENSION_FUNCTION_THROW(error_msg.c_str()); \</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        } \</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        PREPROCESSOR_FOR(EXTENSION_FUNCTION_CHECK_ITERATOR, error, __VA_ARGS__) \</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    } while (0)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PLUGIN_INTERFACE_HPP */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="plugin__interface_8hpp.html#a879122e13eac227389dac9ee5a3547f4">   64</a></span>&#160;<span class="preprocessor">#define EXTENSION_FUNCTION_THROW(error) \</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">    do \</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">    { \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">        exception ex = exception_create_const(error, &quot;PluginException&quot;</span>, 0, &quot;&quot;); \</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        throwable th = throwable_create(value_create_exception(ex)); \</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        return value_create_throwable(th); \</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    } while (0)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="plugin__interface_8hpp.html#a41efb02583af86433ef503cb35cdb8c7">   72</a></span>&#160;<span class="preprocessor">#define EXTENSION_FUNCTION_CHECK_ITERATOR(error, iterator, value) \</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">    if (metacall_value_id(args[iterator]) != value) \</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">    { \</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">        std::stringstream ss; \</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">        ss &lt;&lt; error &quot;. The parameter number &quot;</span> PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(iterator)) &quot; requires a value of type &quot; &lt;&lt; metacall_value_id_name(value) &lt;&lt; &quot;, received: &quot; &lt;&lt; metacall_value_type_name(args[iterator]); \</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::string error_msg = ss.str(); \</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        EXTENSION_FUNCTION_THROW(error_msg.c_str()); \</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="plugin__interface_8hpp.html#ae1652160f9ac24ba069540788d87de27">   81</a></span>&#160;<span class="preprocessor">#define EXTENSION_FUNCTION_CHECK(error, ...) \</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">    do \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">    { \</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">        (void)data; </span><span class="comment">/* TODO: Do something with data */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">        </span><span class="comment">/* Disable warning on args when no args */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">        PREPROCESSOR_IF(PREPROCESSOR_ARGS_EMPTY(__VA_ARGS__), \</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">                        (void)args; \</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">                        , \</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">                        PREPROCESSOR_EMPTY_SYMBOL()) \</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">        if (argc != PREPROCESSOR_ARGS_COUNT(__VA_ARGS__)) \</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">        { \</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">            std::stringstream ss; \</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">            ss &lt;&lt; error &quot;. The required number of argumens is &quot;</span> PREPROCESSOR_STRINGIFY(PREPROCESSOR_ARGS_COUNT(__VA_ARGS__)) &quot;, received: &quot; &lt;&lt; argc; \</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            std::string error_msg = ss.str(); \</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            EXTENSION_FUNCTION_THROW(error_msg.c_str()); \</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        } \</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        PREPROCESSOR_FOR(EXTENSION_FUNCTION_CHECK_ITERATOR, error, __VA_ARGS__) \</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    } while (0)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PLUGIN_INTERFACE_HPP */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="alog_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div></div>
 <div class="ttc" id="ametacall_8h_html"><div class="ttname"><a href="metacall_8h.html">metacall.h</a></div></div>
 <div class="ttc" id="apreprocessor_8h_html"><div class="ttname"><a href="preprocessor_8h.html">preprocessor.h</a></div></div>
@@ -200,7 +198,7 @@ $(document).ready(function(){initNavTree('plugin__interface_8hpp_source.html',''
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ad32454e5db4b90df0e3d3d2adf11013.html">plugin</a></li><li class="navelem"><a class="el" href="dir_956645c04b5aefcd1f90b82a61015a9f.html">include</a></li><li class="navelem"><a class="el" href="dir_cc0a3159c3b0c217005c671751f49963.html">plugin</a></li><li class="navelem"><a class="el" href="plugin__interface_8hpp.html">plugin_interface.hpp</a></li>
-    <li class="footer">Generated on Thu Feb 8 2024 10:17:42 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Mar 25 2024 21:24:51 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

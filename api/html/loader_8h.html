@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MetaCall
-   &#160;<span id="projectnumber">0.7.7.251ee5582288</span>
+   &#160;<span id="projectnumber">0.7.11.12f31bd02db2</span>
    </div>
    <div id="projectbrief">A library for providing inter-language foreign function interface calls</div>
   </td>
@@ -174,8 +174,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9e4dc5b479a109af9be7e2d107958e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42860cc3bb2c50fac1424579e158a83b"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a42860cc3bb2c50fac1424579e158a83b">loader_register</a> (const char *name, <a class="el" href="loader_8h.html#a0c56e5ef778aefaa4587573667a35945">loader_register_invoke</a> invoke, <a class="el" href="reflect__function_8h.html#a953b9b92e7e0b17b663e13f2e92177aa">function</a> *func, <a class="el" href="reflect__type__id_8h.html#a63f97c5b1281063207c427df64d28950">type_id</a> return_type, size_t arg_size, <a class="el" href="reflect__type__id_8h.html#a63f97c5b1281063207c427df64d28950">type_id</a> args_type_id[])</td></tr>
 <tr class="separator:a42860cc3bb2c50fac1424579e158a83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab25663640bf8f58db25f06c75c65f674"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#ab25663640bf8f58db25f06c75c65f674">loader_register_impl</a> (void *impl, void *ctx, const char *name, <a class="el" href="loader_8h.html#a0c56e5ef778aefaa4587573667a35945">loader_register_invoke</a> invoke, <a class="el" href="reflect__type__id_8h.html#a63f97c5b1281063207c427df64d28950">type_id</a> return_type, size_t arg_size, <a class="el" href="reflect__type__id_8h.html#a63f97c5b1281063207c427df64d28950">type_id</a> args_type_id[])</td></tr>
-<tr class="separator:ab25663640bf8f58db25f06c75c65f674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa191e8e31b87079e99b0850ea365d85"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#afa191e8e31b87079e99b0850ea365d85">loader_register_impl</a> (void *impl, void *handle, const char *name, <a class="el" href="loader_8h.html#a0c56e5ef778aefaa4587573667a35945">loader_register_invoke</a> invoke, <a class="el" href="reflect__type__id_8h.html#a63f97c5b1281063207c427df64d28950">type_id</a> return_type, size_t arg_size, <a class="el" href="reflect__type__id_8h.html#a63f97c5b1281063207c427df64d28950">type_id</a> args_type_id[])</td></tr>
+<tr class="separator:afa191e8e31b87079e99b0850ea365d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6b4ba7e573b47e7f7a96d9aab5c6cf7"><td class="memItemLeft" align="right" valign="top">LOADER_API const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#aa6b4ba7e573b47e7f7a96d9aab5c6cf7">loader_library_path</a> (void)</td></tr>
 <tr class="separator:aa6b4ba7e573b47e7f7a96d9aab5c6cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5306a5d328ebaeffe13b224fc7644a"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a8d5306a5d328ebaeffe13b224fc7644a">loader_execution_path</a> (const <a class="el" href="loader__naming_8h.html#acdc949191ac2655c54541e7f287e2c0e">loader_tag</a> tag, const <a class="el" href="loader__naming_8h.html#a0c504454714715861c9a58fc48a8176c">loader_path</a> path)</td></tr>
@@ -198,12 +198,16 @@ Functions</h2></td></tr>
 <tr class="separator:a991a559588a353edb414b4e3ebe0506a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9ca71b78829829b8299d37dfcd7d483"><td class="memItemLeft" align="right" valign="top">LOADER_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#ab9ca71b78829829b8299d37dfcd7d483">loader_get_options</a> (const <a class="el" href="loader__naming_8h.html#acdc949191ac2655c54541e7f287e2c0e">loader_tag</a> tag)</td></tr>
 <tr class="separator:ab9ca71b78829829b8299d37dfcd7d483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b681ac6f6abe0a9fc280ae74b78353"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a46b681ac6f6abe0a9fc280ae74b78353">loader_handle_initialize</a> (<a class="el" href="loader__impl__interface_8h.html#a92e542164f804b49f0c1d6149b1c045e">loader_impl</a> impl, const <a class="el" href="loader__naming_8h.html#a0c504454714715861c9a58fc48a8176c">loader_path</a> name, void **handle_ptr)</td></tr>
+<tr class="separator:a46b681ac6f6abe0a9fc280ae74b78353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac837bc325c34ef87852aa7f3eb961fff"><td class="memItemLeft" align="right" valign="top">LOADER_API const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#ac837bc325c34ef87852aa7f3eb961fff">loader_handle_id</a> (void *handle)</td></tr>
 <tr class="separator:ac837bc325c34ef87852aa7f3eb961fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dd119a750e2f56d2198270bb29ec0ff"><td class="memItemLeft" align="right" valign="top">LOADER_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a3dd119a750e2f56d2198270bb29ec0ff">loader_handle_export</a> (void *handle)</td></tr>
 <tr class="separator:a3dd119a750e2f56d2198270bb29ec0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a945db9c2048ac8d35c9b9e9d028c83de"><td class="memItemLeft" align="right" valign="top">LOADER_API <a class="el" href="loader_8h.html#a23baef561ce24e04bc23d02fa16656a6">loader_data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a945db9c2048ac8d35c9b9e9d028c83de">loader_handle_get</a> (void *handle, const char *name)</td></tr>
 <tr class="separator:a945db9c2048ac8d35c9b9e9d028c83de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8157e66a32b7880e99a60e99dd009d47"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a8157e66a32b7880e99a60e99dd009d47">loader_handle_populate</a> (void *handle_dest, void *handle_src)</td></tr>
+<tr class="separator:a8157e66a32b7880e99a60e99dd009d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0267882166a3ab6e011e9e9c4c8826a"><td class="memItemLeft" align="right" valign="top">LOADER_API <a class="el" href="reflect__value_8h.html#a54c528809d1b8a4d229f655f96b2433a">value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#af0267882166a3ab6e011e9e9c4c8826a">loader_metadata</a> (void)</td></tr>
 <tr class="separator:af0267882166a3ab6e011e9e9c4c8826a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50281bf1571a363c0b9b198c4e3e3a6e"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader_8h.html#a50281bf1571a363c0b9b198c4e3e3a6e">loader_clear</a> (void *handle)</td></tr>
@@ -369,8 +373,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab25663640bf8f58db25f06c75c65f674"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab25663640bf8f58db25f06c75c65f674">&#9670;&nbsp;</a></span>loader_register_impl()</h2>
+<a id="afa191e8e31b87079e99b0850ea365d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa191e8e31b87079e99b0850ea365d85">&#9670;&nbsp;</a></span>loader_register_impl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -385,7 +389,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>, </td>
+          <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -731,6 +735,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a46b681ac6f6abe0a9fc280ae74b78353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b681ac6f6abe0a9fc280ae74b78353">&#9670;&nbsp;</a></span>loader_handle_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOADER_API int loader_handle_initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="loader__impl__interface_8h.html#a92e542164f804b49f0c1d6149b1c045e">loader_impl</a>&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="loader__naming_8h.html#a0c504454714715861c9a58fc48a8176c">loader_path</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>handle_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac837bc325c34ef87852aa7f3eb961fff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac837bc325c34ef87852aa7f3eb961fff">&#9670;&nbsp;</a></span>loader_handle_id()</h2>
 
@@ -784,6 +822,34 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8157e66a32b7880e99a60e99dd009d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8157e66a32b7880e99a60e99dd009d47">&#9670;&nbsp;</a></span>loader_handle_populate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOADER_API int loader_handle_populate </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle_dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle_src</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -927,7 +993,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_22c957fb592bb7dd0a39292df71c0dbc.html">loader</a></li><li class="navelem"><a class="el" href="dir_5c361d91932ade207a97c66a27ff23d2.html">include</a></li><li class="navelem"><a class="el" href="dir_d50ae27ce1e25427d19ce4c25c05a71d.html">loader</a></li><li class="navelem"><a class="el" href="loader_8h.html">loader.h</a></li>
-    <li class="footer">Generated on Thu Feb 8 2024 10:17:42 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Mar 25 2024 21:24:51 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

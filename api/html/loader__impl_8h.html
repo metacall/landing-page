@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MetaCall
-   &#160;<span id="projectnumber">0.7.7.251ee5582288</span>
+   &#160;<span id="projectnumber">0.7.11.12f31bd02db2</span>
    </div>
    <div id="projectbrief">A library for providing inter-language foreign function interface calls</div>
   </td>
@@ -191,6 +191,10 @@ Functions</h2></td></tr>
 <tr class="separator:ab0a5e979f9e63c12c08e029f36994461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab38c47aad274df78e047d04eff7b4ce9"><td class="memItemLeft" align="right" valign="top">LOADER_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader__impl_8h.html#ab38c47aad274df78e047d04eff7b4ce9">loader_impl_get_options</a> (<a class="el" href="loader__impl__interface_8h.html#a92e542164f804b49f0c1d6149b1c045e">loader_impl</a> impl)</td></tr>
 <tr class="separator:ab38c47aad274df78e047d04eff7b4ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c0d3b76bfd440f5b012ae77f97244f"><td class="memItemLeft" align="right" valign="top">LOADER_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader__impl_8h.html#ac7c0d3b76bfd440f5b012ae77f97244f">loader_impl_handle_initialize</a> (plugin_manager manager, <a class="el" href="plugin__impl_8h.html#af5672f8038c7c743f97c5e6fd31e3bdc">plugin</a> p, <a class="el" href="loader__impl__interface_8h.html#a92e542164f804b49f0c1d6149b1c045e">loader_impl</a> impl, const <a class="el" href="loader__naming_8h.html#a0c504454714715861c9a58fc48a8176c">loader_path</a> name, void **handle_ptr)</td></tr>
+<tr class="separator:ac7c0d3b76bfd440f5b012ae77f97244f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993df828c6ea2b2c1c9bf2141978e5aa"><td class="memItemLeft" align="right" valign="top">LOADER_API <a class="el" href="adt__vector_8h.html#addb8a5a5ce3ff4924de759607f4a7a8f">vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader__impl_8h.html#a993df828c6ea2b2c1c9bf2141978e5aa">loader_impl_handle_populated</a> (void *handle)</td></tr>
+<tr class="separator:a993df828c6ea2b2c1c9bf2141978e5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c0545504b51df3a1b0de1c2068f4c60"><td class="memItemLeft" align="right" valign="top">LOADER_API const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader__impl_8h.html#a0c0545504b51df3a1b0de1c2068f4c60">loader_impl_handle_id</a> (void *handle)</td></tr>
 <tr class="separator:a0c0545504b51df3a1b0de1c2068f4c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8593fabd702e8bdb2552755128aa44"><td class="memItemLeft" align="right" valign="top">LOADER_API <a class="el" href="reflect__value_8h.html#a54c528809d1b8a4d229f655f96b2433a">value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="loader__impl_8h.html#a7b8593fabd702e8bdb2552755128aa44">loader_impl_handle_export</a> (void *handle)</td></tr>
@@ -699,6 +703,70 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac7c0d3b76bfd440f5b012ae77f97244f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c0d3b76bfd440f5b012ae77f97244f">&#9670;&nbsp;</a></span>loader_impl_handle_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOADER_API int loader_impl_handle_initialize </td>
+          <td>(</td>
+          <td class="paramtype">plugin_manager&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="plugin__impl_8h.html#af5672f8038c7c743f97c5e6fd31e3bdc">plugin</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="loader__impl__interface_8h.html#a92e542164f804b49f0c1d6149b1c045e">loader_impl</a>&#160;</td>
+          <td class="paramname"><em>impl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="loader__naming_8h.html#a0c504454714715861c9a58fc48a8176c">loader_path</a>&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>handle_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a993df828c6ea2b2c1c9bf2141978e5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993df828c6ea2b2c1c9bf2141978e5aa">&#9670;&nbsp;</a></span>loader_impl_handle_populated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOADER_API <a class="el" href="adt__vector_8h.html#addb8a5a5ce3ff4924de759607f4a7a8f">vector</a> loader_impl_handle_populated </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0c0545504b51df3a1b0de1c2068f4c60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c0545504b51df3a1b0de1c2068f4c60">&#9670;&nbsp;</a></span>loader_impl_handle_id()</h2>
 
@@ -923,7 +991,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_22c957fb592bb7dd0a39292df71c0dbc.html">loader</a></li><li class="navelem"><a class="el" href="dir_5c361d91932ade207a97c66a27ff23d2.html">include</a></li><li class="navelem"><a class="el" href="dir_d50ae27ce1e25427d19ce4c25c05a71d.html">loader</a></li><li class="navelem"><a class="el" href="loader__impl_8h.html">loader_impl.h</a></li>
-    <li class="footer">Generated on Thu Feb 8 2024 10:17:42 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Mar 25 2024 21:24:51 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

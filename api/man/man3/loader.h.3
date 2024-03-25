@@ -1,4 +1,4 @@
-.TH "loader.h" 3 "Thu Feb 8 2024" "Version 0.7.7.251ee5582288" "MetaCall" \" -*- nroff -*-
+.TH "loader.h" 3 "Mon Mar 25 2024" "Version 0.7.11.12f31bd02db2" "MetaCall" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -46,7 +46,7 @@ loader.h
 .RI "LOADER_API int \fBloader_register\fP (const char *name, \fBloader_register_invoke\fP invoke, \fBfunction\fP *func, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
 .br
 .ti -1c
-.RI "LOADER_API int \fBloader_register_impl\fP (void *impl, void *ctx, const char *name, \fBloader_register_invoke\fP invoke, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
+.RI "LOADER_API int \fBloader_register_impl\fP (void *impl, void *handle, const char *name, \fBloader_register_invoke\fP invoke, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
 .br
 .ti -1c
 .RI "LOADER_API const char * \fBloader_library_path\fP (void)"
@@ -82,6 +82,9 @@ loader.h
 .RI "LOADER_API void * \fBloader_get_options\fP (const \fBloader_tag\fP tag)"
 .br
 .ti -1c
+.RI "LOADER_API int \fBloader_handle_initialize\fP (\fBloader_impl\fP impl, const \fBloader_path\fP name, void **handle_ptr)"
+.br
+.ti -1c
 .RI "LOADER_API const char * \fBloader_handle_id\fP (void *handle)"
 .br
 .ti -1c
@@ -89,6 +92,9 @@ loader.h
 .br
 .ti -1c
 .RI "LOADER_API \fBloader_data\fP \fBloader_handle_get\fP (void *handle, const char *name)"
+.br
+.ti -1c
+.RI "LOADER_API int \fBloader_handle_populate\fP (void *handle_dest, void *handle_src)"
 .br
 .ti -1c
 .RI "LOADER_API \fBvalue\fP \fBloader_metadata\fP (void)"
@@ -130,7 +136,7 @@ loader.h
 
 .SS "LOADER_API int loader_register (const char * name, \fBloader_register_invoke\fP invoke, \fBfunction\fP * func, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
 
-.SS "LOADER_API int loader_register_impl (void * impl, void * ctx, const char * name, \fBloader_register_invoke\fP invoke, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
+.SS "LOADER_API int loader_register_impl (void * impl, void * handle, const char * name, \fBloader_register_invoke\fP invoke, \fBtype_id\fP return_type, size_t arg_size, \fBtype_id\fP args_type_id[])"
 
 .SS "LOADER_API const char* loader_library_path (void)"
 
@@ -154,11 +160,15 @@ loader.h
 
 .SS "LOADER_API void* loader_get_options (const \fBloader_tag\fP tag)"
 
+.SS "LOADER_API int loader_handle_initialize (\fBloader_impl\fP impl, const \fBloader_path\fP name, void ** handle_ptr)"
+
 .SS "LOADER_API const char* loader_handle_id (void * handle)"
 
 .SS "LOADER_API void* loader_handle_export (void * handle)"
 
 .SS "LOADER_API \fBloader_data\fP loader_handle_get (void * handle, const char * name)"
+
+.SS "LOADER_API int loader_handle_populate (void * handle_dest, void * handle_src)"
 
 .SS "LOADER_API \fBvalue\fP loader_metadata (void)"
 

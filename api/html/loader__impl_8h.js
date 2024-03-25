@@ -17,6 +17,8 @@ var loader__impl_8h =
     [ "loader_impl_get_handle", "loader__impl_8h.html#ae51eabce177ad3f740f54abed5085f79", null ],
     [ "loader_impl_set_options", "loader__impl_8h.html#ab0a5e979f9e63c12c08e029f36994461", null ],
     [ "loader_impl_get_options", "loader__impl_8h.html#ab38c47aad274df78e047d04eff7b4ce9", null ],
+    [ "loader_impl_handle_initialize", "loader__impl_8h.html#ac7c0d3b76bfd440f5b012ae77f97244f", null ],
+    [ "loader_impl_handle_populated", "loader__impl_8h.html#a993df828c6ea2b2c1c9bf2141978e5aa", null ],
     [ "loader_impl_handle_id", "loader__impl_8h.html#a0c0545504b51df3a1b0de1c2068f4c60", null ],
     [ "loader_impl_handle_export", "loader__impl_8h.html#a7b8593fabd702e8bdb2552755128aa44", null ],
     [ "loader_impl_handle_context", "loader__impl_8h.html#a0feed327b857033b702cf7c21fc0b88d", null ],

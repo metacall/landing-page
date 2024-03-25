@@ -112,6 +112,28 @@ Function reference, null if the function does not exist
 METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+function} (const char $\ast$name)
 \end{DoxyCompactItemize}
 
+\textbf{ }\par
+{\em Create an empty handler into a loader with name
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em loader} & Pointer to the loader which the handle belongs to\\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Name of the handle\\
+\hline
+\mbox{\texttt{ out}}  & {\em handle\+\_\+ptr} & On success, returns the pointer to the handle created, otherwise NULL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return zero on success, different from zero on error 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+handle\+\_\+initialize} (void $\ast$\textbf{ loader}, const char $\ast$name, void $\ast$$\ast$handle\+\_\+ptr)
+\item 
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+handle\+\_\+populate} (void $\ast$handle\+\_\+dest, void $\ast$handle\+\_\+src)
+\end{DoxyCompactItemize}
+
 \begin{Indent}\textbf{ from @handle}\par
 {\em Get the function by
 
@@ -205,7 +227,7 @@ METACALL\+\_\+\+API int \textbf{ metacall\+\_\+register} (const char $\ast$name,
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em loader} & Opaque pointer to the loader in which you want to register the function (this allows to register the function into a different loader than the host)\\
 \hline
-\mbox{\texttt{ in}}  & {\em context} & Opaque pointer to the context in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)\\
+\mbox{\texttt{ in}}  & {\em handle} & Opaque pointer to the handle in which you want to register the function (if it is NULL, it will be defined on the global scope of the loader)\\
 \hline
 \mbox{\texttt{ in}}  & {\em name} & Name of the function (if it is NULL, function is not registered into host scope)\\
 \hline
@@ -219,13 +241,15 @@ METACALL\+\_\+\+API int \textbf{ metacall\+\_\+register} (const char $\ast$name,
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Pointer to value containing the result of the call 
+Zero if the function was registered properly, distinct from zero otherwise 
 \end{DoxyReturn}
 }\begin{DoxyCompactItemize}
 \item 
 METACALL\+\_\+\+API int \textbf{ metacall\+\_\+registerv} (const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), void $\ast$$\ast$func, enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size, enum \textbf{ metacall\+\_\+value\+\_\+id} types[$\,$])
 \item 
-METACALL\+\_\+\+API int \textbf{ metacall\+\_\+register\+\_\+loaderv} (void $\ast$\textbf{ loader}, void $\ast$\textbf{ context}, const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size, enum \textbf{ metacall\+\_\+value\+\_\+id} types[$\,$])
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+loader} (const char $\ast$tag)
+\item 
+METACALL\+\_\+\+API int \textbf{ metacall\+\_\+register\+\_\+loaderv} (void $\ast$\textbf{ loader}, void $\ast$handle, const char $\ast$name, void $\ast$($\ast$invoke)(size\+\_\+t, void $\ast$[$\,$], void $\ast$), enum \textbf{ metacall\+\_\+value\+\_\+id} return\+\_\+type, size\+\_\+t size, enum \textbf{ metacall\+\_\+value\+\_\+id} types[$\,$])
 \item 
 METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+await} (const char $\ast$name, void $\ast$args[$\,$], void $\ast$($\ast$resolve\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$($\ast$reject\+\_\+callback)(void $\ast$, void $\ast$), void $\ast$data)
 \item 
@@ -294,6 +318,8 @@ METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+deserialize} (const char 
 METACALL\+\_\+\+API int \textbf{ metacall\+\_\+clear} (void $\ast$handle)
 \item 
 METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+plugin\+\_\+extension} (void)
+\item 
+METACALL\+\_\+\+API void $\ast$ \textbf{ metacall\+\_\+plugin\+\_\+core} (void)
 \item 
 METACALL\+\_\+\+API const char $\ast$ \textbf{ metacall\+\_\+plugin\+\_\+path} (void)
 \item 
@@ -805,6 +831,32 @@ Pointer to value containing the result of the call
 \doxysubsubsection{metacall\_function()}
 {\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+function (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
 
+\mbox{\label{metacall_8h_a792c94a85654f6463e924250acd9c72b}} 
+\index{metacall.h@{metacall.h}!metacall\_handle\_initialize@{metacall\_handle\_initialize}}
+\index{metacall\_handle\_initialize@{metacall\_handle\_initialize}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_handle\_initialize()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+handle\+\_\+initialize (\begin{DoxyParamCaption}\item[{void $\ast$}]{loader,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$$\ast$}]{handle\+\_\+ptr }\end{DoxyParamCaption})}
+
+\mbox{\label{metacall_8h_a201abde4e06b9405ee6dd27c4c2f6d6c}} 
+\index{metacall.h@{metacall.h}!metacall\_handle\_populate@{metacall\_handle\_populate}}
+\index{metacall\_handle\_populate@{metacall\_handle\_populate}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_handle\_populate()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+handle\+\_\+populate (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle\+\_\+dest,  }\item[{void $\ast$}]{handle\+\_\+src }\end{DoxyParamCaption})}
+
+
+
+Populate the objects of @handle\+\_\+src into @handle\+\_\+dest. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em handle\+\_\+dest} & Handle where the objects from @handle\+\_\+src will be stored\\
+\hline
+\mbox{\texttt{ in}}  & {\em handle\+\_\+src} & Handle from where the objects will be copied\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return zero on success, different from zero on error 
+\end{DoxyReturn}
 \mbox{\label{metacall_8h_a0733570d83d6daf0e421e3e414547566}} 
 \index{metacall.h@{metacall.h}!metacall\_handle\_function@{metacall\_handle\_function}}
 \index{metacall\_handle\_function@{metacall\_handle\_function}!metacall.h@{metacall.h}}
@@ -1073,11 +1125,29 @@ Pointer to value containing the result of the call
 \doxysubsubsection{metacall\_registerv()}
 {\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+registerv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{void $\ast$$\ast$}]{func,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{types[$\,$] }\end{DoxyParamCaption})}
 
-\mbox{\label{metacall_8h_afc4e32dfcccfefd3fec11b80f7edd10a}} 
+\mbox{\label{metacall_8h_a5defaa7768a7d70a141930a5d7d8d4bf}} 
+\index{metacall.h@{metacall.h}!metacall\_loader@{metacall\_loader}}
+\index{metacall\_loader@{metacall\_loader}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_loader()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+loader (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tag }\end{DoxyParamCaption})}
+
+
+
+Obtain the loader instance by @tag. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tag} & Tag in which the loader is identified, normally it is the extension of the script\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer the loader by @tag 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a4d4b136ce9d1890593050e544f8bd59f}} 
 \index{metacall.h@{metacall.h}!metacall\_register\_loaderv@{metacall\_register\_loaderv}}
 \index{metacall\_register\_loaderv@{metacall\_register\_loaderv}!metacall.h@{metacall.h}}
 \doxysubsubsection{metacall\_register\_loaderv()}
-{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+register\+\_\+loaderv (\begin{DoxyParamCaption}\item[{void $\ast$}]{loader,  }\item[{void $\ast$}]{context,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{types[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily METACALL\+\_\+\+API int metacall\+\_\+register\+\_\+loaderv (\begin{DoxyParamCaption}\item[{void $\ast$}]{loader,  }\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$($\ast$)(size\+\_\+t, void $\ast$[$\,$], void $\ast$)}]{invoke,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{size,  }\item[{enum \textbf{ metacall\+\_\+value\+\_\+id}}]{types[$\,$] }\end{DoxyParamCaption})}
 
 \mbox{\label{metacall_8h_a52ef2927638d958c6e76555fc49a765b}} 
 \index{metacall.h@{metacall.h}!metacall\_await@{metacall\_await}}
@@ -1788,6 +1858,19 @@ Get the plugin extension handle to be used for loading plugins.
 
 \begin{DoxyReturn}{Returns}
 Pointer to the extension handle, or null if it failed to load 
+\end{DoxyReturn}
+\mbox{\label{metacall_8h_a101e7feb381df9da2026bd1fb2505161}} 
+\index{metacall.h@{metacall.h}!metacall\_plugin\_core@{metacall\_plugin\_core}}
+\index{metacall\_plugin\_core@{metacall\_plugin\_core}!metacall.h@{metacall.h}}
+\doxysubsubsection{metacall\_plugin\_core()}
+{\footnotesize\ttfamily METACALL\+\_\+\+API void$\ast$ metacall\+\_\+plugin\+\_\+core (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the handle containing all the functionality of the plugins from core. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the core plugin handle, or null if it failed to load 
 \end{DoxyReturn}
 \mbox{\label{metacall_8h_aa2add9c2e53f0bbd664392ada75cd5b0}} 
 \index{metacall.h@{metacall.h}!metacall\_plugin\_path@{metacall\_plugin\_path}}

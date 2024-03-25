@@ -41,7 +41,7 @@ LOADER\+\_\+\+API int \textbf{ loader\+\_\+is\+\_\+initialized} (const \textbf{ 
 \item 
 LOADER\+\_\+\+API int \textbf{ loader\+\_\+register} (const char $\ast$name, \textbf{ loader\+\_\+register\+\_\+invoke} invoke, \textbf{ function} $\ast$func, \textbf{ type\+\_\+id} return\+\_\+type, size\+\_\+t arg\+\_\+size, \textbf{ type\+\_\+id} args\+\_\+type\+\_\+id[$\,$])
 \item 
-LOADER\+\_\+\+API int \textbf{ loader\+\_\+register\+\_\+impl} (void $\ast$impl, void $\ast$ctx, const char $\ast$name, \textbf{ loader\+\_\+register\+\_\+invoke} invoke, \textbf{ type\+\_\+id} return\+\_\+type, size\+\_\+t arg\+\_\+size, \textbf{ type\+\_\+id} args\+\_\+type\+\_\+id[$\,$])
+LOADER\+\_\+\+API int \textbf{ loader\+\_\+register\+\_\+impl} (void $\ast$impl, void $\ast$handle, const char $\ast$name, \textbf{ loader\+\_\+register\+\_\+invoke} invoke, \textbf{ type\+\_\+id} return\+\_\+type, size\+\_\+t arg\+\_\+size, \textbf{ type\+\_\+id} args\+\_\+type\+\_\+id[$\,$])
 \item 
 LOADER\+\_\+\+API const char $\ast$ \textbf{ loader\+\_\+library\+\_\+path} (void)
 \item 
@@ -65,11 +65,15 @@ LOADER\+\_\+\+API void \textbf{ loader\+\_\+set\+\_\+options} (const \textbf{ lo
 \item 
 LOADER\+\_\+\+API void $\ast$ \textbf{ loader\+\_\+get\+\_\+options} (const \textbf{ loader\+\_\+tag} tag)
 \item 
+LOADER\+\_\+\+API int \textbf{ loader\+\_\+handle\+\_\+initialize} (\textbf{ loader\+\_\+impl} impl, const \textbf{ loader\+\_\+path} name, void $\ast$$\ast$handle\+\_\+ptr)
+\item 
 LOADER\+\_\+\+API const char $\ast$ \textbf{ loader\+\_\+handle\+\_\+id} (void $\ast$handle)
 \item 
 LOADER\+\_\+\+API void $\ast$ \textbf{ loader\+\_\+handle\+\_\+export} (void $\ast$handle)
 \item 
 LOADER\+\_\+\+API \textbf{ loader\+\_\+data} \textbf{ loader\+\_\+handle\+\_\+get} (void $\ast$handle, const char $\ast$name)
+\item 
+LOADER\+\_\+\+API int \textbf{ loader\+\_\+handle\+\_\+populate} (void $\ast$handle\+\_\+dest, void $\ast$handle\+\_\+src)
 \item 
 LOADER\+\_\+\+API \textbf{ value} \textbf{ loader\+\_\+metadata} (void)
 \item 
@@ -133,11 +137,11 @@ LOADER\+\_\+\+API const char $\ast$ \textbf{ loader\+\_\+print\+\_\+info} (void)
 \doxysubsubsection{loader\_register()}
 {\footnotesize\ttfamily LOADER\+\_\+\+API int loader\+\_\+register (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\textbf{ loader\+\_\+register\+\_\+invoke}}]{invoke,  }\item[{\textbf{ function} $\ast$}]{func,  }\item[{\textbf{ type\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{arg\+\_\+size,  }\item[{\textbf{ type\+\_\+id}}]{args\+\_\+type\+\_\+id[$\,$] }\end{DoxyParamCaption})}
 
-\mbox{\label{loader_8h_ab25663640bf8f58db25f06c75c65f674}} 
+\mbox{\label{loader_8h_afa191e8e31b87079e99b0850ea365d85}} 
 \index{loader.h@{loader.h}!loader\_register\_impl@{loader\_register\_impl}}
 \index{loader\_register\_impl@{loader\_register\_impl}!loader.h@{loader.h}}
 \doxysubsubsection{loader\_register\_impl()}
-{\footnotesize\ttfamily LOADER\+\_\+\+API int loader\+\_\+register\+\_\+impl (\begin{DoxyParamCaption}\item[{void $\ast$}]{impl,  }\item[{void $\ast$}]{ctx,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ loader\+\_\+register\+\_\+invoke}}]{invoke,  }\item[{\textbf{ type\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{arg\+\_\+size,  }\item[{\textbf{ type\+\_\+id}}]{args\+\_\+type\+\_\+id[$\,$] }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily LOADER\+\_\+\+API int loader\+\_\+register\+\_\+impl (\begin{DoxyParamCaption}\item[{void $\ast$}]{impl,  }\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name,  }\item[{\textbf{ loader\+\_\+register\+\_\+invoke}}]{invoke,  }\item[{\textbf{ type\+\_\+id}}]{return\+\_\+type,  }\item[{size\+\_\+t}]{arg\+\_\+size,  }\item[{\textbf{ type\+\_\+id}}]{args\+\_\+type\+\_\+id[$\,$] }\end{DoxyParamCaption})}
 
 \mbox{\label{loader_8h_aa6b4ba7e573b47e7f7a96d9aab5c6cf7}} 
 \index{loader.h@{loader.h}!loader\_library\_path@{loader\_library\_path}}
@@ -205,6 +209,12 @@ LOADER\+\_\+\+API const char $\ast$ \textbf{ loader\+\_\+print\+\_\+info} (void)
 \doxysubsubsection{loader\_get\_options()}
 {\footnotesize\ttfamily LOADER\+\_\+\+API void$\ast$ loader\+\_\+get\+\_\+options (\begin{DoxyParamCaption}\item[{const \textbf{ loader\+\_\+tag}}]{tag }\end{DoxyParamCaption})}
 
+\mbox{\label{loader_8h_a46b681ac6f6abe0a9fc280ae74b78353}} 
+\index{loader.h@{loader.h}!loader\_handle\_initialize@{loader\_handle\_initialize}}
+\index{loader\_handle\_initialize@{loader\_handle\_initialize}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_handle\_initialize()}
+{\footnotesize\ttfamily LOADER\+\_\+\+API int loader\+\_\+handle\+\_\+initialize (\begin{DoxyParamCaption}\item[{\textbf{ loader\+\_\+impl}}]{impl,  }\item[{const \textbf{ loader\+\_\+path}}]{name,  }\item[{void $\ast$$\ast$}]{handle\+\_\+ptr }\end{DoxyParamCaption})}
+
 \mbox{\label{loader_8h_ac837bc325c34ef87852aa7f3eb961fff}} 
 \index{loader.h@{loader.h}!loader\_handle\_id@{loader\_handle\_id}}
 \index{loader\_handle\_id@{loader\_handle\_id}!loader.h@{loader.h}}
@@ -222,6 +232,12 @@ LOADER\+\_\+\+API const char $\ast$ \textbf{ loader\+\_\+print\+\_\+info} (void)
 \index{loader\_handle\_get@{loader\_handle\_get}!loader.h@{loader.h}}
 \doxysubsubsection{loader\_handle\_get()}
 {\footnotesize\ttfamily LOADER\+\_\+\+API \textbf{ loader\+\_\+data} loader\+\_\+handle\+\_\+get (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\label{loader_8h_a8157e66a32b7880e99a60e99dd009d47}} 
+\index{loader.h@{loader.h}!loader\_handle\_populate@{loader\_handle\_populate}}
+\index{loader\_handle\_populate@{loader\_handle\_populate}!loader.h@{loader.h}}
+\doxysubsubsection{loader\_handle\_populate()}
+{\footnotesize\ttfamily LOADER\+\_\+\+API int loader\+\_\+handle\+\_\+populate (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle\+\_\+dest,  }\item[{void $\ast$}]{handle\+\_\+src }\end{DoxyParamCaption})}
 
 \mbox{\label{loader_8h_af0267882166a3ab6e011e9e9c4c8826a}} 
 \index{loader.h@{loader.h}!loader\_metadata@{loader\_metadata}}

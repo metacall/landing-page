@@ -27,7 +27,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MetaCall
-   &#160;<span id="projectnumber">0.7.7.251ee5582288</span>
+   &#160;<span id="projectnumber">0.7.11.12f31bd02db2</span>
    </div>
    <div id="projectbrief">A library for providing inter-language foreign function interface calls</div>
   </td>
@@ -201,7 +201,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> \</div>
 <div class="line">    { \</div>
-<div class="line">        if (<a class="code" href="metacall_8h.html#afc4e32dfcccfefd3fec11b80f7edd10a">metacall_register_loaderv</a>(<a class="code" href="loader_8h.html#ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</a>, <a class="code" href="reflect__context_8h.html#ab01e2b1d8e268430d5c2d3d1d870251b">context</a>, <a class="code" href="preprocessor__stringify_8h.html#a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</a>(name), name, ret, 0, NULL) != 0) \</div>
+<div class="line">        if (<a class="code" href="metacall_8h.html#a4d4b136ce9d1890593050e544f8bd59f">metacall_register_loaderv</a>(<a class="code" href="loader_8h.html#ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</a>, handle, <a class="code" href="preprocessor__stringify_8h.html#a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</a>(name), name, ret, 0, NULL) != 0) \</div>
 <div class="line">        { \</div>
 <div class="line">            log_write(<span class="stringliteral">&quot;metacall&quot;</span>, <a class="code" href="log__level_8h.html#ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a>, <span class="stringliteral">&quot;Failed to register function: &quot;</span> <a class="code" href="preprocessor__stringify_8h.html#a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</a>(name)); \</div>
 <div class="line">            return 1; \</div>
@@ -209,9 +209,8 @@ Macros</h2></td></tr>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
 <div class="ttc" id="aloader_8h_html_ae460ed5a03319c8ef3c08f3cd7ecc9d5"><div class="ttname"><a href="loader_8h.html#ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</a></div><div class="ttdeci">struct loader_type * loader</div><div class="ttdef"><b>Definition:</b> loader.h:50</div></div>
 <div class="ttc" id="alog__level_8h_html_ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f"><div class="ttname"><a href="log__level_8h.html#ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a></div><div class="ttdeci">@ LOG_LEVEL_ERROR</div><div class="ttdef"><b>Definition:</b> log_level.h:41</div></div>
-<div class="ttc" id="ametacall_8h_html_afc4e32dfcccfefd3fec11b80f7edd10a"><div class="ttname"><a href="metacall_8h.html#afc4e32dfcccfefd3fec11b80f7edd10a">metacall_register_loaderv</a></div><div class="ttdeci">METACALL_API int metacall_register_loaderv(void *loader, void *context, const char *name, void *(*invoke)(size_t, void *[], void *), enum metacall_value_id return_type, size_t size, enum metacall_value_id types[])</div></div>
+<div class="ttc" id="ametacall_8h_html_a4d4b136ce9d1890593050e544f8bd59f"><div class="ttname"><a href="metacall_8h.html#a4d4b136ce9d1890593050e544f8bd59f">metacall_register_loaderv</a></div><div class="ttdeci">METACALL_API int metacall_register_loaderv(void *loader, void *handle, const char *name, void *(*invoke)(size_t, void *[], void *), enum metacall_value_id return_type, size_t size, enum metacall_value_id types[])</div></div>
 <div class="ttc" id="apreprocessor__stringify_8h_html_a687b07489efaaf2b4a03568c2117d32b"><div class="ttname"><a href="preprocessor__stringify_8h.html#a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</a></div><div class="ttdeci">#define PREPROCESSOR_STRINGIFY(expr)</div><div class="ttdef"><b>Definition:</b> preprocessor_stringify.h:34</div></div>
-<div class="ttc" id="areflect__context_8h_html_ab01e2b1d8e268430d5c2d3d1d870251b"><div class="ttname"><a href="reflect__context_8h.html#ab01e2b1d8e268430d5c2d3d1d870251b">context</a></div><div class="ttdeci">struct context_type * context</div><div class="ttdef"><b>Definition:</b> reflect_context.h:34</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -249,7 +248,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> \</div>
 <div class="line">    { \</div>
 <div class="line">        enum <a class="code" href="metacall__value_8h.html#a09df370b94fa034a58dc8048e14ed34d">metacall_value_id</a> arg_types[] = { __VA_ARGS__ }; \</div>
-<div class="line">        if (<a class="code" href="metacall_8h.html#afc4e32dfcccfefd3fec11b80f7edd10a">metacall_register_loaderv</a>(<a class="code" href="loader_8h.html#ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</a>, <a class="code" href="reflect__context_8h.html#ab01e2b1d8e268430d5c2d3d1d870251b">context</a>, <a class="code" href="preprocessor__stringify_8h.html#a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</a>(name), name, ret, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), arg_types) != 0) \</div>
+<div class="line">        if (<a class="code" href="metacall_8h.html#a4d4b136ce9d1890593050e544f8bd59f">metacall_register_loaderv</a>(<a class="code" href="loader_8h.html#ae460ed5a03319c8ef3c08f3cd7ecc9d5">loader</a>, handle, <a class="code" href="preprocessor__stringify_8h.html#a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</a>(name), name, ret, PREPROCESSOR_ARGS_COUNT(__VA_ARGS__), arg_types) != 0) \</div>
 <div class="line">        { \</div>
 <div class="line">            log_write(<span class="stringliteral">&quot;metacall&quot;</span>, <a class="code" href="log__level_8h.html#ab2136fe4c31ef76f47cf6bb67b2f6bdaa5b40f003febbc3b535649d63f4b8a44f">LOG_LEVEL_ERROR</a>, <span class="stringliteral">&quot;Failed to register function: &quot;</span> <a class="code" href="preprocessor__stringify_8h.html#a687b07489efaaf2b4a03568c2117d32b">PREPROCESSOR_STRINGIFY</a>(name)); \</div>
 <div class="line">            return 1; \</div>
@@ -317,7 +316,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> \</div>
 <div class="line">    { \</div>
-<div class="line">        <span class="comment">/* log_write(&quot;metacall&quot;, LOG_LEVEL_ERROR, error); */</span> \</div>
 <div class="line">        exception ex = <a class="code" href="reflect__exception_8h.html#afb44879b0180bb6db7c8942a90bd8086">exception_create_const</a>(error, <span class="stringliteral">&quot;PluginException&quot;</span>, 0, <span class="stringliteral">&quot;&quot;</span>); \</div>
 <div class="line">        throwable th = <a class="code" href="reflect__throwable_8h.html#aa686c060b2d755a0d62dfcba1e0f2aac">throwable_create</a>(<a class="code" href="reflect__value__type_8h.html#a0fbfd806bd884e392910dfe361826973">value_create_exception</a>(ex)); \</div>
 <div class="line">        return <a class="code" href="reflect__value__type_8h.html#a214a304d001a556a0695a73c09121dbc">value_create_throwable</a>(th); \</div>
@@ -415,7 +413,7 @@ Macros</h2></td></tr>
 <div class="line">        } \</div>
 <div class="line">        PREPROCESSOR_FOR(<a class="code" href="plugin__interface_8hpp.html#a41efb02583af86433ef503cb35cdb8c7">EXTENSION_FUNCTION_CHECK_ITERATOR</a>, error, __VA_ARGS__) \</div>
 <div class="line">    } <span class="keywordflow">while</span> (0)</div>
-<div class="ttc" id="aplugin__interface_8hpp_html_a41efb02583af86433ef503cb35cdb8c7"><div class="ttname"><a href="plugin__interface_8hpp.html#a41efb02583af86433ef503cb35cdb8c7">EXTENSION_FUNCTION_CHECK_ITERATOR</a></div><div class="ttdeci">#define EXTENSION_FUNCTION_CHECK_ITERATOR(error, iterator, value)</div><div class="ttdef"><b>Definition:</b> plugin_interface.hpp:74</div></div>
+<div class="ttc" id="aplugin__interface_8hpp_html_a41efb02583af86433ef503cb35cdb8c7"><div class="ttname"><a href="plugin__interface_8hpp.html#a41efb02583af86433ef503cb35cdb8c7">EXTENSION_FUNCTION_CHECK_ITERATOR</a></div><div class="ttdeci">#define EXTENSION_FUNCTION_CHECK_ITERATOR(error, iterator, value)</div><div class="ttdef"><b>Definition:</b> plugin_interface.hpp:72</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -425,7 +423,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_ad32454e5db4b90df0e3d3d2adf11013.html">plugin</a></li><li class="navelem"><a class="el" href="dir_956645c04b5aefcd1f90b82a61015a9f.html">include</a></li><li class="navelem"><a class="el" href="dir_cc0a3159c3b0c217005c671751f49963.html">plugin</a></li><li class="navelem"><a class="el" href="plugin__interface_8hpp.html">plugin_interface.hpp</a></li>
-    <li class="footer">Generated on Thu Feb 8 2024 10:17:43 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Mar 25 2024 21:24:51 for MetaCall by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

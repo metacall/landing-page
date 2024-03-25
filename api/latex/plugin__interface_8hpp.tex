@@ -42,7 +42,7 @@ Include dependency graph for plugin\+\_\+interface.\+hpp\+:
 \begin{DoxyCode}{0}
 \DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
 \DoxyCodeLine{    \{ \(\backslash\)}
-\DoxyCodeLine{        if (metacall\_register\_loaderv(loader, context, PREPROCESSOR\_STRINGIFY(name), name, ret, 0, NULL) != 0) \(\backslash\)}
+\DoxyCodeLine{        if (metacall\_register\_loaderv(loader, handle, PREPROCESSOR\_STRINGIFY(name), name, ret, 0, NULL) != 0) \(\backslash\)}
 \DoxyCodeLine{        \{ \(\backslash\)}
 \DoxyCodeLine{            log\_write(\textcolor{stringliteral}{"{}metacall"{}}, LOG\_LEVEL\_ERROR, \textcolor{stringliteral}{"{}Failed to register function: "{}} PREPROCESSOR\_STRINGIFY(name)); \(\backslash\)}
 \DoxyCodeLine{            return 1; \(\backslash\)}
@@ -61,7 +61,7 @@ Include dependency graph for plugin\+\_\+interface.\+hpp\+:
 \DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
 \DoxyCodeLine{    \{ \(\backslash\)}
 \DoxyCodeLine{        enum metacall\_value\_id arg\_types[] = \{ \_\_VA\_ARGS\_\_ \}; \(\backslash\)}
-\DoxyCodeLine{        if (metacall\_register\_loaderv(loader, context, PREPROCESSOR\_STRINGIFY(name), name, ret, PREPROCESSOR\_ARGS\_COUNT(\_\_VA\_ARGS\_\_), arg\_types) != 0) \(\backslash\)}
+\DoxyCodeLine{        if (metacall\_register\_loaderv(loader, handle, PREPROCESSOR\_STRINGIFY(name), name, ret, PREPROCESSOR\_ARGS\_COUNT(\_\_VA\_ARGS\_\_), arg\_types) != 0) \(\backslash\)}
 \DoxyCodeLine{        \{ \(\backslash\)}
 \DoxyCodeLine{            log\_write(\textcolor{stringliteral}{"{}metacall"{}}, LOG\_LEVEL\_ERROR, \textcolor{stringliteral}{"{}Failed to register function: "{}} PREPROCESSOR\_STRINGIFY(name)); \(\backslash\)}
 \DoxyCodeLine{            return 1; \(\backslash\)}
@@ -92,7 +92,6 @@ Include dependency graph for plugin\+\_\+interface.\+hpp\+:
 \begin{DoxyCode}{0}
 \DoxyCodeLine{    \textcolor{keywordflow}{do} \(\backslash\)}
 \DoxyCodeLine{    \{ \(\backslash\)}
-\DoxyCodeLine{        \textcolor{comment}{/* log\_write("{}metacall"{}, LOG\_LEVEL\_ERROR, error); */} \(\backslash\)}
 \DoxyCodeLine{        exception ex = exception\_create\_const(error, \textcolor{stringliteral}{"{}PluginException"{}}, 0, \textcolor{stringliteral}{"{}"{}}); \(\backslash\)}
 \DoxyCodeLine{        throwable th = throwable\_create(value\_create\_exception(ex)); \(\backslash\)}
 \DoxyCodeLine{        return value\_create\_throwable(th); \(\backslash\)}
